@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(curl -s \"http://127.0.0.1:3456/index.html\")",
+      "Bash(curl -s \"http://127.0.0.1:3456/\")",
+      "Bash(python3 -c \"import sys; content = sys.stdin.read\\(\\); print\\(''logo.png'' in content, ''about-card-logo'' in content\\)\")",
+      "Bash(python3 -c \"import sys; d=sys.stdin.read\\(\\); print\\(repr\\(d[:200]\\)\\)\")",
+      "Bash(lsof -i :3456)",
+      "Bash(curl -v \"http://127.0.0.1:3456/index.html\")",
+      "Bash(/tmp/serve_law.py:*)",
+      "Bash(python3:*)"
+    ]
+  }
+}
