@@ -119,8 +119,8 @@
 <a class="nav-logo" href="index.html">
 <img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png"/>
 <div>
-<div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
-<div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
+<div class="nav-firm-name" data-i18n="firm_name">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub" data-i18n="firm_sub">للمحاماة والاستشارات القانونية</div>
 </div>
 </a>
 <ul class="nav-links">
@@ -142,7 +142,7 @@
 <button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
 </div>
 </div>
-<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
+<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank"><span data-i18n="nav_cta">احجز استشارة</span></a>
 <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
 <span></span><span></span><span></span>
 </div>
@@ -166,7 +166,7 @@
 <div class="page-breadcrumb">
 <a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
 <span>←</span>
-<span>التوظيف</span>
+<span data-i18n="breadcrumb_careers">التوظيف</span>
 </div>
 <h1 data-i18n="hero_h1">انضم إلى <em>فريقنا</em></h1>
 <p class="page-hero-desc" data-i18n="p_0">نبحث دائماً عن كفاءات قانونية متميزة تؤمن بالعدالة والاحترافية. إذا كنت تمتلك الشغف والكفاءة، نسعد بانضمامك لعائلة مشاري بندر بن جلوي للمحاماة.</p>
@@ -175,7 +175,7 @@
 <!-- WHY JOIN -->
 <section class="why-section">
 <div class="section-header">
-<div class="tag">لماذا تنضم إلينا؟</div>
+<div class="tag" data-i18n="careers_tag">لماذا تنضم إلينا؟</div>
 <h2 class="section-title" data-i18n="h2_0">بيئة عمل احترافية ومحفّزة</h2>
 <div class="gold-bar"></div>
 </div>
@@ -232,47 +232,47 @@
 <div class="form-group">
 <label data-i18n="label_4" for="position">الوظيفة المطلوبة <span class="required">*</span></label>
 <select id="position" name="position" required="">
-<option disabled="" selected="" value="">— اختر الوظيفة —</option>
-<option value="محامٍ / محامية مرخّص(ة)">محامٍ / محامية مرخّص(ة)</option>
-<option value="مستشار / مستشارة قانونية">مستشار / مستشارة قانونية</option>
-<option value="باحث(ة) قانوني">باحث(ة) قانوني</option>
-<option value="متدرب(ة) قانوني">متدرب(ة) قانوني</option>
-<option value="سكرتير(ة) قانوني">سكرتير(ة) قانوني</option>
-<option value="مسؤول(ة) خدمة العملاء">مسؤول(ة) خدمة العملاء</option>
-<option value="أخرى">أخرى</option>
+<option data-i18n="opt_اختر_الوظيفة" disabled="" selected="" value="">— اختر الوظيفة —</option>
+<option data-i18n="opt_محام___محامية_مرخصة" value="محامٍ / محامية مرخّص(ة)">محامٍ / محامية مرخّص(ة)</option>
+<option data-i18n="opt_مستشار___مستشارة_قانونية" value="مستشار / مستشارة قانونية">مستشار / مستشارة قانونية</option>
+<option data-i18n="opt_باحثة_قانوني" value="باحث(ة) قانوني">باحث(ة) قانوني</option>
+<option data-i18n="opt_متدربة_قانوني" value="متدرب(ة) قانوني">متدرب(ة) قانوني</option>
+<option data-i18n="opt_سكرتيرة_قانوني" value="سكرتير(ة) قانوني">سكرتير(ة) قانوني</option>
+<option data-i18n="opt_مسؤولة_خدمة_العملاء" value="مسؤول(ة) خدمة العملاء">مسؤول(ة) خدمة العملاء</option>
+<option data-i18n="opt_أخرى" value="أخرى">أخرى</option>
 </select>
 </div>
 <div class="form-row">
 <div class="form-group">
 <label data-i18n="label_5" for="education">المؤهل العلمي <span class="required">*</span></label>
 <select id="education" name="education" required="">
-<option disabled="" selected="" value="">— اختر —</option>
-<option value="بكالوريوس قانون">بكالوريوس قانون</option>
-<option value="بكالوريوس شريعة">بكالوريوس شريعة</option>
-<option value="ماجستير قانون">ماجستير قانون</option>
-<option value="دكتوراه قانون">دكتوراه قانون</option>
-<option value="تخصص آخر">تخصص آخر</option>
+<option data-i18n="select_placeholder_0" disabled="" selected="" value="">— اختر —</option>
+<option data-i18n="opt_بكالوريوس_قانون" value="بكالوريوس قانون">بكالوريوس قانون</option>
+<option data-i18n="opt_بكالوريوس_شريعة" value="بكالوريوس شريعة">بكالوريوس شريعة</option>
+<option data-i18n="opt_ماجستير_قانون" value="ماجستير قانون">ماجستير قانون</option>
+<option data-i18n="opt_دكتوراه_قانون" value="دكتوراه قانون">دكتوراه قانون</option>
+<option data-i18n="opt_تخصص_آخر" value="تخصص آخر">تخصص آخر</option>
 </select>
 </div>
 <div class="form-group">
 <label data-i18n="label_6" for="experience">سنوات الخبرة <span class="required">*</span></label>
 <select id="experience" name="experience" required="">
-<option disabled="" selected="" value="">— اختر —</option>
-<option value="بدون خبرة (حديث التخرج)">بدون خبرة (حديث التخرج)</option>
-<option value="أقل من سنة">أقل من سنة</option>
-<option value="1-3 سنوات">1-3 سنوات</option>
-<option value="3-5 سنوات">3-5 سنوات</option>
-<option value="أكثر من 5 سنوات">أكثر من 5 سنوات</option>
+<option data-i18n="select_placeholder_1" disabled="" selected="" value="">— اختر —</option>
+<option data-i18n="opt_بدون_خبرة_حديث_التخرج" value="بدون خبرة (حديث التخرج)">بدون خبرة (حديث التخرج)</option>
+<option data-i18n="opt_أقل_من_سنة" value="أقل من سنة">أقل من سنة</option>
+<option data-i18n="opt_1-3_سنوات" value="1-3 سنوات">1-3 سنوات</option>
+<option data-i18n="opt_3-5_سنوات" value="3-5 سنوات">3-5 سنوات</option>
+<option data-i18n="opt_أكثر_من_5_سنوات" value="أكثر من 5 سنوات">أكثر من 5 سنوات</option>
 </select>
 </div>
 </div>
 <div class="form-group">
 <label data-i18n="label_7" for="licensed">هل أنت محامٍ / محامية مرخّص(ة)؟</label>
 <select id="licensed" name="licensed">
-<option disabled="" selected="" value="">— اختر —</option>
-<option value="نعم، مرخّص(ة) لدى هيئة المحامين">نعم، مرخّص(ة) لدى هيئة المحامين</option>
-<option value="قيد الإجراءات">قيد الإجراءات</option>
-<option value="لا">لا</option>
+<option data-i18n="select_placeholder_2" disabled="" selected="" value="">— اختر —</option>
+<option data-i18n="opt_نعم،_مرخصة_لدى_هيئة_المحا" value="نعم، مرخّص(ة) لدى هيئة المحامين">نعم، مرخّص(ة) لدى هيئة المحامين</option>
+<option data-i18n="opt_قيد_الإجراءات" value="قيد الإجراءات">قيد الإجراءات</option>
+<option data-i18n="opt_لا" value="لا">لا</option>
 </select>
 </div>
 <div class="form-group">
@@ -283,16 +283,16 @@
 <label data-i18n="label_9" for="message">نبذة عنك ودوافعك للانضمام <span class="required">*</span></label>
 <textarea id="message" name="message" placeholder="اكتب باختصار عن نفسك، خبراتك، وسبب رغبتك في الانضمام لشركتنا..." required=""></textarea>
 </div>
-<div class="form-note">
+<div class="form-note" data-i18n="form_note">
                     📧 سيتم إرسال طلبك مباشرةً إلى إدارة الموارد البشرية، وسنتواصل معك خلال 3-5 أيام عمل.
                 </div>
-<button class="submit-btn" type="submit">
+<button class="submit-btn" data-i18n="submit_btn" type="submit">
 <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
 <line x1="22" x2="11" y1="2" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
 </svg>
                     إرسال الطلب
                 </button>
-<div class="success-msg" id="successMsg">
+<div class="success-msg" data-i18n="success_msg" id="successMsg">
                     ✅ تم إرسال طلبك بنجاح! سنتواصل معك قريباً.
                 </div>
 </form>
@@ -332,14 +332,14 @@ const pageTranslations = {
     h2_0: {0: "بيئة عمل احترافية ومحفّزة", 1: "Professional and Motivating Work Environment", 2: "专业和激励的工作环境"},
     h2_1: {0: "انضم إلى فريقنا", 1: "Join Our Team", 2: "加入我们的团队"},
     h4_0: {0: "قضايا متنوعة ومثرية", 1: "Diverse and Enriching Cases", 2: "多样化和丰富的案件"},
-    h4_1: {0: "فريق متعاون ومحترف", 1: "Cooperative and Professional Team", 2: "合作和专业的团队"},
+    h4_1: {0: "نمو وتطوير مهني", 1: "Professional Growth & Development", 2: "职业成长与发展"},
     label_0: {0: "الاسم الكامل", 1: "Full Name", 2: "全名"},
     label_1: {0: "البريد الإلكتروني", 1: "Email Address", 2: "电子邮件地址"},
     label_2: {0: "رقم الجوال", 1: "Phone Number", 2: "电话号码"},
     p_0: {0: "نبحث دائماً عن كفاءات قانونية متميزة", 1: "We are always looking for outstanding legal talents", 2: "我们一直在寻找杰出的法律人才"},
-    p_1: {0: "توفر شركتنا بيئة عمل ديناميكية", 1: "Our firm provides a dynamic work environment", 2: "我们的律师事务所提供动态工作环境"},
-  h4_2: {0: 'فريق متماسك وداعم', 1: 'A Cohesive and Supportive Team', 2: '紧密合作且相互支持的团队'},
-  h4_3: {0: 'سمعة راسخة', 1: 'Solid Reputation', 2: '稳固的声誉'},
+    p_1: {0: "ستتعامل مع قضايا في مختلف التخصصات القانونية مما يعزز خبرتك المهنية باستمرار.", 1: "You will handle cases across various legal specializations, continuously enhancing your professional expertise.", 2: "您将处理各个法律专业领域的案件，持续提升您的专业能力。"},
+  h4_2: {0: "فريق متماسك وداعم", 1: "Cohesive & Supportive Team", 2: "凝聚力强的支持团队"},
+  h4_3: {0: "سمعة راسخة", 1: "Established Reputation", 2: "良好的声誉"},
   hero_h1: {0: 'انضم إلى فريقنا', 1: 'Join Our Team', 2: '加入我们的团队'},
   label_3: {0: 'البريد الإلكتروني *', 1: 'Email Address *', 2: '电子邮件地址 *'},
   label_4: {0: 'الوظيفة المطلوبة *', 1: 'Position Applied For *', 2: '申请职位 *'},
@@ -349,10 +349,66 @@ const pageTranslations = {
   label_8: {0: 'رابط السيرة الذاتية (اختياري)', 1: 'CV Link (Optional)', 2: '简历链接（可选）'},
   label_9: {0: 'نبذة عنك ودوافعك للانضمام *', 1: 'About You and Your Motivation to Join *', 2: '关于您及您加入的动机 *'},
   li_0: {0: 'التوظيف', 1: 'Careers', 2: '招聘'},
-  p_2: {0: 'نوفر بيئة تشجع على التعلم المستمر والنمو القانوني من خلال الخبرة الميدانية والتدريب.', 1: 'We provide an environment that encourages continuous learning and legal growth through hands-on experience and training.', 2: '我们提供一个通过实践经验和培训鼓励持续学习和法律成长的环境。'},
-  p_3: {0: 'ستنضم لفريق يعمل بروح جماعية ويدعم أعضاءه في مختلف المراحل المهنية.', 1: 'You will join a team that works with a team spirit and supports its members at various career stages.', 2: '您将加入一个以团队精神工作并在各个职业阶段支持其成员的团队。'},
-  p_4: {0: 'انضم لشركة محاماة ذات سمعة مهنية مرموقة ومعروفة بالاحترافية والنزاهة.', 1: 'Join a law firm with a distinguished professional reputation known for its professionalism and integrity.', 2: '加入一家以专业性和诚信著称、具有杰出专业声誉的律师事务所。'},
+  p_2: {0: "ستنضم لفريق يعمل بروح جماعية ويدعم أعضاءه في مختلف المراحل المهنية.", 1: "You will join a team that works with a collaborative spirit and supports its members at all stages of their careers.", 2: "您将加入一个具有团队精神并在各个职业阶段支持成员的团队。"},
+  p_3: {0: "انضم لشركة محاماة ذات سمعة مهنية مرموقة ومعروفة بالاحترافية والنزاهة.", 1: "Join a law firm with a distinguished professional reputation known for its professionalism and integrity.", 2: "加入一家以专业精神和诚信著称的知名律师事务所。"},
+  p_4: {0: "انضم لشركة محاماة ذات سمعة مهنية مرموقة ومعروفة بالاحترافية والنزاهة.", 1: "Join a law firm with a distinguished professional reputation known for its professionalism and integrity.", 2: "加入一家以专业精神和诚信著称的知名律师事务所。"},
   p_5: {0: 'أكمل النموذج أدناه وسيتواصل معك فريق الموارد البشرية في أقرب وقت ممكن للتحقق من أهليتك والخطوات التالية.', 1: 'Complete the form below and our HR team will contact you as soon as possible to verify your eligibility and discuss the next steps.', 2: '填写以下表格，我们的人力资源团队将尽快与您联系，以核实您的资格并讨论后续步骤。'},
+
+  opt_اختر_الوظيفة: {0: "— اختر الوظيفة —", 1: "— Select Position —", 2: "— 选择职位 —"},
+
+  opt_محام___محامية_مرخصة: {0: "محامٍ / محامية مرخّص(ة)", 1: "Licensed Attorney", 2: "持牌律师"},
+
+  opt_مستشار___مستشارة_قانونية: {0: "مستشار / مستشارة قانونية", 1: "Legal Consultant", 2: "法律顾问"},
+
+  opt_باحثة_قانوني: {0: "باحث(ة) قانوني", 1: "Legal Researcher", 2: "法律研究员"},
+
+  opt_متدربة_قانوني: {0: "متدرب(ة) قانوني", 1: "Legal Intern", 2: "法律实习生"},
+
+  opt_سكرتيرة_قانوني: {0: "سكرتير(ة) قانوني", 1: "Legal Secretary", 2: "法律秘书"},
+
+  opt_مسؤولة_خدمة_العملاء: {0: "مسؤول(ة) خدمة العملاء", 1: "Customer Service Officer", 2: "客户服务专员"},
+
+  opt_أخرى: {0: "أخرى", 1: "Other", 2: "其他"},
+
+  select_placeholder_0: {0: "— اختر —", 1: "— Select —", 2: "— 选择 —"},
+
+  opt_بكالوريوس_قانون: {0: "بكالوريوس قانون", 1: "Bachelor of Law", 2: "法学学士"},
+
+  opt_بكالوريوس_شريعة: {0: "بكالوريوس شريعة", 1: "Bachelor of Sharia", 2: "伊斯兰法学学士"},
+
+  opt_ماجستير_قانون: {0: "ماجستير قانون", 1: "Master of Law", 2: "法学硕士"},
+
+  opt_دكتوراه_قانون: {0: "دكتوراه قانون", 1: "Doctorate of Law", 2: "法学博士"},
+
+  opt_تخصص_آخر: {0: "تخصص آخر", 1: "Other Specialization", 2: "其他专业"},
+
+  select_placeholder_1: {0: "— اختر —", 1: "— Select —", 2: "— 选择 —"},
+
+  opt_بدون_خبرة_حديث_التخرج: {0: "بدون خبرة (حديث التخرج)", 1: "No Experience (Fresh Graduate)", 2: "无经验（应届毕业生）"},
+
+  opt_أقل_من_سنة: {0: "أقل من سنة", 1: "Less than 1 year", 2: "不足1年"},
+
+  opt_1-3_سنوات: {0: "1-3 سنوات", 1: "1-3 years", 2: "1-3年"},
+
+  opt_3-5_سنوات: {0: "3-5 سنوات", 1: "3-5 years", 2: "3-5年"},
+
+  opt_أكثر_من_5_سنوات: {0: "أكثر من 5 سنوات", 1: "More than 5 years", 2: "5年以上"},
+
+  select_placeholder_2: {0: "— اختر —", 1: "— Select —", 2: "— 选择 —"},
+
+  opt_نعم،_مرخصة_لدى_هيئة_المحا: {0: "نعم، مرخّص(ة) لدى هيئة المحامين", 1: "Yes, licensed by the Bar Association", 2: "是，已获律师协会执照"},
+
+  opt_قيد_الإجراءات: {0: "قيد الإجراءات", 1: "In Progress", 2: "办理中"},
+
+  opt_لا: {0: "لا", 1: "No", 2: "否"},
+
+  breadcrumb_careers: {0: "التوظيف", 1: "Careers", 2: "招聘"},
+
+  form_note: {0: "📧 سيتم إرسال طلبك مباشرةً إلى إدارة الموارد البشرية، وسنتواصل معك خلال 3-5 أيام عمل.", 1: "📧 Your application will be sent directly to the Human Resources department, and we will contact you within 3-5 business days.", 2: "📧 您的申请将直接发送至人力资源部，我们将在3-5个工作日内与您联系。"},
+
+  submit_btn: {0: "إرسال الطلب", 1: "Submit Application", 2: "提交申请"},
+
+  success_msg: {0: "✅ تم إرسال طلبك بنجاح! سنتواصل معك قريباً.", 1: "✅ Your application has been submitted successfully! We will contact you soon.", 2: "✅ 您的申请已成功提交！我们将很快与您联系。"},
 };
 
 </script>

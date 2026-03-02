@@ -100,8 +100,8 @@
 <a class="nav-logo" href="index.html">
 <img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png"/>
 <div>
-<div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
-<div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
+<div class="nav-firm-name" data-i18n="firm_name">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub" data-i18n="firm_sub">للمحاماة والاستشارات القانونية</div>
 </div>
 </a>
 <ul class="nav-links">
@@ -123,7 +123,7 @@
 <button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
 </div>
 </div>
-<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
+<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank"><span data-i18n="nav_cta">احجز استشارة</span></a>
 <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
 <span></span><span></span><span></span>
 </div>
@@ -140,7 +140,7 @@
 <li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
 <li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
 <li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
-<li><a href="https://wa.me/966533532153">احجز استشارة</a></li>
+<li><a data-i18n="nav_cta" href="https://wa.me/966533532153">احجز استشارة</a></li>
 </ul>
 </div>
 <div class="page-hero">
@@ -211,7 +211,7 @@
 </div>
 <div class="section-pad">
 <div class="article-body">
-<h2 style="margin-top:0">خطوات الإجراء في النزاعات المصرفية</h2>
+<h2 data-i18n="h2_steps" style="margin-top:0">خطوات الإجراء في النزاعات المصرفية</h2>
 <div class="steps-grid">
 <div class="step-card">
 <div class="step-num">1</div>
@@ -311,6 +311,8 @@ const pageTranslations = {
   step_p_3: {0: 'قد تؤدي الإجراءات إلى تسوية ودية أو صدور حكم قضائي يتم تنفيذه من قبل جهات التنفيذ.', 1: 'The procedures may lead to an amicable settlement or a court judgment enforced by enforcement authorities.', 2: '该程序可能导致友好和解或由执行机关执行的法院判决。'},
   cta_h2: {0: 'احصل على استشارة قانونية متخصصة', 1: 'Get Specialized Legal Consultation', 2: '获取专业法律咨询'},
   cta_p: {0: 'فريقنا المتخصص في القضايا المصرفية والمالية جاهز لحماية حقوقك أمام البنوك وبنك السعودية المركزي والمحاكم.', 1: 'Our team specialized in banking and financial cases is ready to protect your rights before banks, SAMA, and the courts.', 2: '我们专业的银行和金融案件团队随时准备在银行、SAMA和法院维护您的权利。'},
+
+  h2_steps: {0: "خطوات الإجراء في النزاعات المصرفية", 1: "Banking Dispute Procedure Steps", 2: "银行纠纷程序步骤"},
 };
 </script>
 <script src="lang.js"></script>

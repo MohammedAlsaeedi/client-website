@@ -1,15 +1,16 @@
 <!DOCTYPE html>
+
 <html dir="rtl" lang="ar">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
    القضايا الإدارية — شركة مشاري بندر بن جلوي للمحاماة
   </title>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-  <style>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
    :root { --navy:#1B2C6B; --navy-dark:#111d4a; --navy-mid:#223580; --gold:#B8935A; --gold-light:#d4aa72; --gold-pale:#f5ede0; --white:#ffffff; --off-white:#f8f6f2; --gray:#6b7280; --gray-dark:#374151; --border:#e5e1d9; }
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
         html{scroll-behavior:smooth;overflow-x:hidden}
@@ -94,419 +95,413 @@
         .lang-drop-menu button { background: none; border: none; cursor: pointer; font-size: 1rem; padding: 6px 10px; border-radius: 6px; text-align: right; color: #fff; white-space: nowrap; font-family: inherit; transition: background .15s; }
         .lang-drop-menu button:hover { background: rgba(184,147,90,.2); }
   </style>
- </head>
- <body>
-  <nav class="navbar">
-   <div class="nav-inner">
-    <a class="nav-logo" href="index.html">
-     <img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png"/>
-     <div>
-      <div class="nav-firm-name">
-       شركة مشاري بندر بن جلوي
-      </div>
-      <div class="nav-firm-sub">
-       للمحاماة والاستشارات القانونية
-      </div>
-     </div>
-    </a>
-    <ul class="nav-links">
-     <li>
-      <a data-i18n="nav_services" href="index.html#services">
+</head>
+<body>
+<nav class="navbar">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">
+<img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png"/>
+<div>
+<div class="nav-firm-name" data-i18n="firm_name">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub" data-i18n="firm_sub">للمحاماة والاستشارات القانونية</div>
+</div>
+</a>
+<ul class="nav-links">
+<li>
+<a data-i18n="nav_services" href="index.html#services">
        خدماتنا
       </a>
-     </li>
-     <li>
-      <a data-i18n="nav_contracts" href="contracts.html">
+</li>
+<li>
+<a data-i18n="nav_contracts" href="contracts.html">
        عقود الشركات
       </a>
-     </li>
-     <li>
-      <a data-i18n="nav_faq" href="faq.html">
+</li>
+<li>
+<a data-i18n="nav_faq" href="faq.html">
        الأسئلة الشائعة
       </a>
-     </li>
-     <li>
-      <a data-i18n="nav_team" href="team.html">
+</li>
+<li>
+<a data-i18n="nav_team" href="team.html">
        فريقنا
       </a>
-     </li>
-     <li>
-      <a data-i18n="nav_blog" href="blog.html">
+</li>
+<li>
+<a data-i18n="nav_blog" href="blog.html">
        المدونة
       </a>
-     </li>
-     <li>
-      <a data-i18n="nav_eservices" href="e-services.html">
+</li>
+<li>
+<a data-i18n="nav_eservices" href="e-services.html">
        الخدمات الإلكترونية
       </a>
-     </li>
-     <li>
-      <a data-i18n="nav_careers" href="careers.html">
+</li>
+<li>
+<a data-i18n="nav_careers" href="careers.html">
        التوظيف
       </a>
-     </li>
-     <li>
-      <a data-i18n="nav_contact" href="index.html#booking">
+</li>
+<li>
+<a data-i18n="nav_contact" href="index.html#booking">
        تواصل معنا
       </a>
-     </li>
-    </ul>
-    <div style="display:flex;align-items:center;gap:10px;">
-     <div class="lang-drop" id="langDrop">
-      <button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">
+</li>
+</ul>
+<div style="display:flex;align-items:center;gap:10px;">
+<div class="lang-drop" id="langDrop">
+<button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">
        🇸🇦
       </button>
-      <div class="lang-drop-menu" id="langDropMenu">
-       <button data-lang="0" onclick="setLang(0);toggleLangDrop()">
+<div class="lang-drop-menu" id="langDropMenu">
+<button data-lang="0" onclick="setLang(0);toggleLangDrop()">
         🇸🇦 العربية
        </button>
-       <button data-lang="1" onclick="setLang(1);toggleLangDrop()">
+<button data-lang="1" onclick="setLang(1);toggleLangDrop()">
         🇬🇧 English
        </button>
-       <button data-lang="2" onclick="setLang(2);toggleLangDrop()">
+<button data-lang="2" onclick="setLang(2);toggleLangDrop()">
         🇨🇳 中文
        </button>
-      </div>
-     </div>
-     <a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">
-      احجز استشارة
-     </a>
-     <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
-      <span>
-      </span>
-      <span>
-      </span>
-      <span>
-      </span>
-     </div>
-    </div>
-   </div>
-  </nav>
-  <div class="mobile-drawer" id="drawer">
-   <ul>
-    <li>
-     <a data-i18n="nav_services" href="index.html#services">
+</div>
+</div>
+<a class="nav-cta" data-i18n="nav_cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
+<div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
+<span>
+</span>
+<span>
+</span>
+<span>
+</span>
+</div>
+</div>
+</div>
+</nav>
+<div class="mobile-drawer" id="drawer">
+<ul>
+<li>
+<a data-i18n="nav_services" href="index.html#services">
       خدماتنا
      </a>
-    </li>
-    <li>
-     <a data-i18n="nav_contracts" href="contracts.html">
+</li>
+<li>
+<a data-i18n="nav_contracts" href="contracts.html">
       عقود الشركات
      </a>
-    </li>
-    <li>
-     <a data-i18n="nav_faq" href="faq.html">
+</li>
+<li>
+<a data-i18n="nav_faq" href="faq.html">
       الأسئلة الشائعة
      </a>
-    </li>
-    <li>
-     <a data-i18n="nav_team" href="team.html">
+</li>
+<li>
+<a data-i18n="nav_team" href="team.html">
       فريقنا
      </a>
-    </li>
-    <li>
-     <a data-i18n="nav_blog" href="blog.html">
+</li>
+<li>
+<a data-i18n="nav_blog" href="blog.html">
       المدونة
      </a>
-    </li>
-    <li>
-     <a data-i18n="nav_eservices" href="e-services.html">
+</li>
+<li>
+<a data-i18n="nav_eservices" href="e-services.html">
       الخدمات الإلكترونية
      </a>
-    </li>
-    <li>
-     <a data-i18n="nav_careers" href="careers.html">
+</li>
+<li>
+<a data-i18n="nav_careers" href="careers.html">
       التوظيف
      </a>
-    </li>
-    <li>
-     <a data-i18n="nav_contact" href="index.html#booking">
+</li>
+<li>
+<a data-i18n="nav_contact" href="index.html#booking">
       تواصل معنا
      </a>
-    </li>
-    <li>
-     <a href="https://wa.me/966533532153">
+</li>
+<li>
+<a data-i18n="nav_cta" href="https://wa.me/966533532153">
       احجز استشارة
      </a>
-    </li>
-   </ul>
-  </div>
-  <div class="page-hero">
-   <div class="page-hero-content">
-    <div class="page-breadcrumb">
-     <a data-i18n="breadcrumb_home" href="index.html">
+</li>
+</ul>
+</div>
+<div class="page-hero">
+<div class="page-hero-content">
+<div class="page-breadcrumb">
+<a data-i18n="breadcrumb_home" href="index.html">
       الرئيسية
      </a>
-     <span>
+<span>
       &gt;
      </span>
-     <a data-i18n="breadcrumb_cases" href="#">
+<a data-i18n="breadcrumb_cases" href="#">
       القضايا القانونية
      </a>
-     <span>
+<span>
       &gt;
      </span>
-     <span data-i18n="breadcrumb_current">
+<span data-i18n="breadcrumb_current">
       القضايا الإدارية
      </span>
-    </div>
-    <h1 data-i18n="hero_h1">
+</div>
+<h1 data-i18n="hero_h1">
      القضايا
      <em>
       الإدارية
      </em>
-    </h1>
-    <p class="page-hero-desc" data-i18n="hero_p">
+</h1>
+<p class="page-hero-desc" data-i18n="hero_p">
      دفاع قانوني متخصص في القضايا الإدارية والطعن في قرارات الجهات الحكومية والهيئات الرقابية
     </p>
-   </div>
-  </div>
-  <div class="section-pad">
-   <article class="article-body">
-    <h2 data-i18n="art_h2_1">
+</div>
+</div>
+<div class="section-pad">
+<article class="article-body">
+<h2 data-i18n="art_h2_1">
      نظرة عامة على القضايا الإدارية في السعودية
     </h2>
-    <p data-i18n="art_p_1">
+<p data-i18n="art_p_1">
      تمثل القضايا الإدارية أحد أهم مجالات الاختصاص بالنسبة للأفراد والشركات على حد سواء، حيث تعالج الطعن في القرارات والتصرفات الإدارية للجهات الحكومية والهيئات الرقابية التي قد تؤثر بشكل مباشر على حقوقهم وحرياتهم ومصالحهم الاقتصادية. يوفر نظام ديوان المظالم حماية قانونية شاملة ضد الأعمال الإدارية غير القانونية أو المجحفة.
     </p>
-    <p data-i18n="art_p_2">
+<p data-i18n="art_p_2">
      يتمتع الأفراد والشركات بحق قانوني أساسي في الطعن أمام المحاكم الإدارية في أي قرار أو تصرف إداري يعتقدون أنه انتهك حقوقهم أو تجاوز حدود السلطة المعطاة للجهة الحكومية. تحتاج هذه القضايا إلى فهم عميق للقانون الإداري والإجراءات الخاصة بديوان المظالم والمتطلبات الشكلية المعقدة.
     </p>
-    <h2 data-i18n="art_h2_2">
+<h2 data-i18n="art_h2_2">
      أنواع القضايا الإدارية
     </h2>
-    <h3 data-i18n="art_h3_1">
+<h3 data-i18n="art_h3_1">
      الطعن في قرارات الجهات الحكومية
     </h3>
-    <p data-i18n="art_p_3">
+<p data-i18n="art_p_3">
      تشمل هذه الفئة الطعن في القرارات الإدارية التي تصدرها الوزارات والهيئات الحكومية، مثل قرارات الفصل من العمل، أو رفض التراخيص، أو إلغاء العقود الحكومية. يجب أن يثبت الطاعن أن القرار كان تعسفياً أو انتهك القانون أو تجاوز حدود الاختصاص.
     </p>
-    <h3 data-i18n="art_h3_2">
+<h3 data-i18n="art_h3_2">
      قضايا التعيين والفصل الحكومي
     </h3>
-    <p data-i18n="art_p_4">
+<p data-i18n="art_p_4">
      تتعلق هذه القضايا بقرارات التعيين والترقية والفصل من الخدمة المدنية، حيث قد يحتج الموظف بعدم احترام الإجراءات النظامية أو بأن القرار تعسفي أو قائم على معايير تمييزية. يتطلب الدفاع في هذه القضايا إثبات انتهاك القانون أو الإجراءات الإدارية.
     </p>
-    <h3 data-i18n="art_h3_3">
+<h3 data-i18n="art_h3_3">
      النزاعات مع الجهات التنظيمية
     </h3>
-    <p data-i18n="art_p_5">
+<p data-i18n="art_p_5">
      تشمل النزاعات مع الهيئات الرقابية المتخصصة مثل هيئة الاتصالات وتقنية المعلومات، وهيئة حماية المستهلك، ووزارة الصحة وغيرها. غالباً ما تتعلق هذه القضايا برفض المتطلبات النظامية أو فرض عقوبات إدارية أو تعليق التراخيص.
     </p>
-    <h3 data-i18n="art_h3_4">
+<h3 data-i18n="art_h3_4">
      قضايا المناقصات الحكومية
     </h3>
-    <p data-i18n="art_p_6">
+<p data-i18n="art_p_6">
      تشمل الطعن في نتائج المناقصات والعطاءات الحكومية، حيث قد يدعي المتقدم عدم احترام الإجراءات أو وجود خطأ في التقييم أو عدم المساواة في المعاملة. تتطلب هذه القضايا خبرة عميقة في قانون المشتريات الحكومية والمعايير المالية والفنية.
     </p>
-    <h3 data-i18n="art_h3_5">
+<h3 data-i18n="art_h3_5">
      التعويض عن القرارات الإدارية الضارة
     </h3>
-    <p data-i18n="art_p_7">
+<p data-i18n="art_p_7">
      يحق للفرد أو الشركة المتضررة من قرار إداري غير قانوني أن يطالب بالتعويض عن الأضرار التي لحقت بهم نتيجة هذا القرار. قد يشمل التعويض الأضرار المالية المباشرة والخسائر الفعلية والأرباح المفقودة.
     </p>
-    <h2 data-i18n="art_h2_3">
+<h2 data-i18n="art_h2_3">
      الأساس القانوني والنظامي
     </h2>
-    <p data-i18n="art_p_8">
+<p data-i18n="art_p_8">
      تستند القضايا الإدارية على عدة أطر قانونية حديثة:
     </p>
-    <ul>
-     <li data-i18n="art_li_1">
-      <strong>
+<ul>
+<li data-i18n="art_li_1">
+<strong>
        نظام ديوان المظالم 1435هـ:
       </strong>
       يعتبر الإطار الأساسي لتنظيم القضاء الإداري وتحديد اختصاصات ديوان المظالم والمحاكم الإدارية والإجراءات المتبعة.
      </li>
-     <li data-i18n="art_li_2">
-      <strong>
+<li data-i18n="art_li_2">
+<strong>
        نظام مكافحة الفساد:
       </strong>
       يتعلق بالقضايا التي تنطوي على تجاوزات إدارية وفساد، وتوفر آليات لمحاسبة الموظفين العموميين.
      </li>
-     <li data-i18n="art_li_3">
-      <strong>
+<li data-i18n="art_li_3">
+<strong>
        نظام المنافسات والمشتريات الحكومية:
       </strong>
       يحكم عمليات العطاءات والمناقصات الحكومية وينص على حقوق المتقدمين والجهات الحكومية.
      </li>
-     <li data-i18n="art_li_4">
-      <strong>
+<li data-i18n="art_li_4">
+<strong>
        نظام الخدمة المدنية:
       </strong>
       ينظم العلاقة بين الموظفين والجهات الحكومية ويحدد حقوقهم والتزاماتهم.
      </li>
-    </ul>
-    <h2 data-i18n="art_h2_4">
+</ul>
+<h2 data-i18n="art_h2_4">
      اختصاص محاكم الإدارية
     </h2>
-    <p data-i18n="art_p_9">
+<p data-i18n="art_p_9">
      تختص محاكم ديوان المظالم بنظر جميع النزاعات الإدارية التي تنشأ بين الأفراد والشركات من جهة والجهات الحكومية والهيئات الرقابية من جهة أخرى. يشمل الاختصاص الطعن في القرارات الإدارية ودعاوى الإلغاء والتعويض والقضايا المتعلقة بالعقود الإدارية.
     </p>
-    <p data-i18n="art_p_10">
+<p data-i18n="art_p_10">
      للدعوى الإدارية متطلبات شكلية وموضوعية محددة، منها أن تكون الدعوى موجهة ضد قرار إداري نهائي، وأن تقام أمام المحكمة الإدارية المختصة خلال المدد المحددة، وأن يكون للمدعي مصلحة قانونية مباشرة في الدعوى.
     </p>
-    <h2 data-i18n="art_h2_5">
+<h2 data-i18n="art_h2_5">
      الإجراءات والآجال الزمنية
     </h2>
-    <p data-i18n="art_p_11">
+<p data-i18n="art_p_11">
      يجب على المدعي الالتزام بالإجراءات والآجال الزمنية المحددة في نظام ديوان المظالم:
     </p>
-    <ul>
-     <li data-i18n="art_li_5">
-      <strong>
+<ul>
+<li data-i18n="art_li_5">
+<strong>
        مدة رفع الدعوى:
       </strong>
       عادة ما تكون هناك مدة معينة لرفع الدعوى من تاريخ الإبلاغ بالقرار الإداري، وتختلف حسب نوع القضية.
      </li>
-     <li data-i18n="art_li_6">
-      <strong>
+<li data-i18n="art_li_6">
+<strong>
        الإجراءات الأولية:
       </strong>
       يجب استنفاد سبل الإنصاف الإدارية الأخرى قبل اللجوء للقضاء في بعض الحالات.
      </li>
-     <li data-i18n="art_li_7">
-      <strong>
+<li data-i18n="art_li_7">
+<strong>
        الآجال الإجرائية:
       </strong>
       يجب الالتزام بمواعيد تقديم المذكرات والرد على الطلبات والحضور للجلسات المحددة من قبل المحكمة.
      </li>
-    </ul>
-    <h2 data-i18n="art_h2_6">
+</ul>
+<h2 data-i18n="art_h2_6">
      أهمية التمثيل القانوني المتخصص
     </h2>
-    <p data-i18n="art_p_12">
+<p data-i18n="art_p_12">
      تتطلب القضايا الإدارية محامياً متخصصاً ملماً بقانون ديوان المظالم والأنظمة الإدارية الحديثة والإجراءات المعقدة. يجب على المحامي فهم السلطات المعطاة للجهات الحكومية والحدود التي ينبغي عدم تجاوزها، وكذلك الدفاعات القانونية المتاحة والأدلة التي تثبت عدم شرعية القرار الإداري.
     </p>
-    <p data-i18n="art_p_13">
+<p data-i18n="art_p_13">
      كما يجب أن يكون قادراً على صياغة الدعوى بشكل احترافي مع تقديم جميع المستندات المؤيدة والحجج القانونية بوضوح والدفاع عن حقوق موكله بفعالية في جلسات المحاكم الإدارية.
     </p>
-    <h2 data-i18n="art_h2_7">
+<h2 data-i18n="art_h2_7">
      العقوبات والتعويضات
     </h2>
-    <p data-i18n="art_p_14">
+<p data-i18n="art_p_14">
      في حالة إذا ما قررت المحكمة الإدارية أن القرار الإداري المطعون فيه غير قانوني أو تعسفي، قد تصدر حكماً بإلغاء القرار أو إلغاء جزء منه. كما يمكن للمحكمة أن تقضي بالتعويض عن الأضرار المادية والمعنوية التي لحقت بالمدعي نتيجة القرار غير القانوني، وقد يشمل ذلك الفائدة على المبلغ المستحق.
     </p>
-   </article>
-  </div>
-  <div class="section-pad alt">
-   <div class="article-body">
-    <h2 data-i18n="section_h2_0" style="margin-top:0">
+</article>
+</div>
+<div class="section-pad alt">
+<div class="article-body">
+<h2 data-i18n="section_h2_0" style="margin-top:0">
      الأطر التنظيمية الرئيسية
     </h2>
-    <div class="info-box">
-     <h3 data-i18n="infobox_h3">
+<div class="info-box">
+<h3 data-i18n="infobox_h3">
       النصوص القانونية والنظامية
      </h3>
-     <ul>
-      <li data-i18n="li_0">
+<ul>
+<li data-i18n="li_0">
        نظام ديوان المظالم 1435هـ (القضاء الإداري)
       </li>
-      <li data-i18n="li_1">
+<li data-i18n="li_1">
        نظام المنافسات والمشتريات الحكومية
       </li>
-      <li data-i18n="li_2">
+<li data-i18n="li_2">
        نظام الخدمة المدنية والقوانين المتعلقة به
       </li>
-      <li data-i18n="li_3">
+<li data-i18n="li_3">
        نظام مكافحة الفساد وقرارات النيابة العامة
       </li>
-      <li data-i18n="li_4">
+<li data-i18n="li_4">
        اللوائح التنفيذية للجهات الحكومية المختلفة
       </li>
-      <li data-i18n="li_5">
+<li data-i18n="li_5">
        قرارات مجلس الوزراء المتعلقة بالقضايا الإدارية
       </li>
-     </ul>
-    </div>
-   </div>
-  </div>
-  <div class="section-pad">
-   <div class="article-body">
-    <h2 style="margin-top:0">
+</ul>
+</div>
+</div>
+</div>
+<div class="section-pad">
+<div class="article-body">
+<h2 data-i18n="h2_steps" style="margin-top:0">
      خطوات الإجراء الإداري والقضائي
     </h2>
-    <div class="steps-grid">
-     <div class="step-card">
-      <div class="step-num">
+<div class="steps-grid">
+<div class="step-card">
+<div class="step-num">
        1
       </div>
-      <h4 data-i18n="step_h4_0">
+<h4 data-i18n="step_h4_0">
        مراجعة القرار وتوثيقه
       </h4>
-      <p data-i18n="step_p_0">
+<p data-i18n="step_p_0">
        يتم جمع جميع الوثائق المتعلقة بالقرار الإداري وتحليل أساسه القانوني والإجرائي وتحديد أوجه عدم الشرعية.
       </p>
-     </div>
-     <div class="step-card">
-      <div class="step-num">
+</div>
+<div class="step-card">
+<div class="step-num">
        2
       </div>
-      <h4 data-i18n="step_h4_1">
+<h4 data-i18n="step_h4_1">
        التظلم الإداري الأولي
       </h4>
-      <p data-i18n="step_p_1">
+<p data-i18n="step_p_1">
        قد تكون هناك آلية تظلم إدارية داخل الجهة الحكومية يجب استنفاذها أولاً، حيث يتم تقديم طلب إعادة النظر في القرار.
       </p>
-     </div>
-     <div class="step-card">
-      <div class="step-num">
+</div>
+<div class="step-card">
+<div class="step-num">
        3
       </div>
-      <h4 data-i18n="step_h4_2">
+<h4 data-i18n="step_h4_2">
        رفع الدعوى أمام ديوان المظالم
       </h4>
-      <p data-i18n="step_p_2">
+<p data-i18n="step_p_2">
        يتم رفع دعوى قضائية أمام محكمة ديوان المظالم المختصة مع تقديم جميع المستندات الداعمة والحجج القانونية.
       </p>
-     </div>
-     <div class="step-card">
-      <div class="step-num">
+</div>
+<div class="step-card">
+<div class="step-num">
        4
       </div>
-      <h4 data-i18n="step_h4_3">
+<h4 data-i18n="step_h4_3">
        الاستئناف والتنفيذ
       </h4>
-      <p data-i18n="step_p_3">
+<p data-i18n="step_p_3">
        يجوز الطعن في حكم المحكمة الإدارية أمام محكمة الاستئناف الإدارية، وعند الحصول على حكم نهائي يتم تنفيذه بالجبر.
       </p>
-     </div>
-    </div>
-   </div>
-  </div>
-  <div class="cta-section">
-   <h2 data-i18n="cta_h2">
+</div>
+</div>
+</div>
+</div>
+<div class="cta-section">
+<h2 data-i18n="cta_h2">
     احصل على استشارة قانونية متخصصة
    </h2>
-   <p data-i18n="cta_p">
+<p data-i18n="cta_p">
     فريقنا المتخصص في القضايا الإدارية جاهز لمساعدتك في الدفاع عن حقوقك أمام ديوان المظالم والمحاكم الإدارية.
    </p>
-   <div class="cta-btns">
-    <a class="btn-gold" data-i18n="cta_btn1" href="https://wa.me/966533532153" rel="noopener" target="_blank">
+<div class="cta-btns">
+<a class="btn-gold" data-i18n="cta_btn1" href="https://wa.me/966533532153" rel="noopener" target="_blank">
      تواصل معنا عبر واتساب
     </a>
-    <a class="btn-outline" data-i18n="cta_btn2" href="index.html#booking">
+<a class="btn-outline" data-i18n="cta_btn2" href="index.html#booking">
      احجز استشارة قانونية
     </a>
-   </div>
-  </div>
-  <footer>
-   <p data-i18n="footer_copyright">
+</div>
+</div>
+<footer>
+<p data-i18n="footer_copyright">
     © 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة
    </p>
-   <p style="margin-top:8px;">
-    <a data-i18n="footer_home" href="index.html">
+<p style="margin-top:8px;">
+<a data-i18n="footer_home" href="index.html">
      الرئيسية
     </a>
-   </p>
-  </footer>
-  <a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank" title="تواصل عبر واتساب">
-   <svg fill="white" height="28" viewbox="0 0 24 24" width="28">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z">
-    </path>
-   </svg>
-  </a>
-  <script>
+</p>
+</footer>
+<a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank" title="تواصل عبر واتساب">
+<svg fill="white" height="28" viewbox="0 0 24 24" width="28">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z">
+</path>
+</svg>
+</a>
+<script>
    const pageTranslations = {
   breadcrumb_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
   breadcrumb_cases: {0: 'القضايا القانونية', 1: 'Legal Cases', 2: '法律案件'},
@@ -568,9 +563,11 @@
   step_p_3: {0: 'يجوز الطعن في حكم المحكمة الإدارية أمام محكمة الاستئناف الإدارية، وعند الحصول على حكم نهائي يتم تنفيذه.', 1: 'The administrative court ruling may be challenged before the Administrative Court of Appeal, and upon obtaining a final judgment it is enforced.', 2: '行政法院裁决可以在行政上诉法院提出异议，获得终局判决后予以执行。'},
   cta_h2: {0: 'احصل على استشارة قانونية متخصصة', 1: 'Get Specialized Legal Consultation', 2: '获取专业法律咨询'},
   cta_p: {0: 'فريقنا المتخصص في القضايا الإدارية جاهز لمساعدتك في الدفاع عن حقوقك أمام ديوان المظالم والمحاكم الإدارية.', 1: 'Our team specialized in administrative cases is ready to help you defend your rights before the Board of Grievances and administrative courts.', 2: '我们专业的行政案件团队随时准备帮助您在申诉委员会和行政法院维护您的权利。'},
+
+  h2_steps: {0: "خطوات الإجراء الإداري والقضائي", 1: "Administrative & Judicial Procedure Steps", 2: "行政和司法程序步骤"},
 };
   </script>
-  <script src="lang.js">
-  </script>
- </body>
+<script src="lang.js">
+</script>
+</body>
 </html>

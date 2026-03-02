@@ -100,8 +100,8 @@
 <a class="nav-logo" href="index.html">
 <img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png"/>
 <div>
-<div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
-<div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
+<div class="nav-firm-name" data-i18n="firm_name">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub" data-i18n="firm_sub">للمحاماة والاستشارات القانونية</div>
 </div>
 </a>
 <ul class="nav-links">
@@ -123,7 +123,7 @@
 <button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
 </div>
 </div>
-<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
+<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank"><span data-i18n="nav_cta">احجز استشارة</span></a>
 <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
 <span></span><span></span><span></span>
 </div>
@@ -140,7 +140,7 @@
 <li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
 <li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
 <li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
-<li><a href="https://wa.me/966533532153">احجز استشارة</a></li>
+<li><a data-i18n="nav_cta" href="https://wa.me/966533532153">احجز استشارة</a></li>
 </ul>
 </div>
 <div class="page-hero">
@@ -212,7 +212,7 @@
 </div>
 <div class="section-pad">
 <div class="article-body">
-<h2 style="margin-top:0">خطوات العملية الإجرائية</h2>
+<h2 data-i18n="h2_steps" style="margin-top:0">خطوات العملية الإجرائية</h2>
 <div class="steps-grid">
 <div class="step-card">
 <div class="step-num">1</div>
@@ -311,6 +311,8 @@ const pageTranslations = {
   cta_h2: {0: 'احصل على استشارة قانونية متخصصة', 1: 'Get Specialized Legal Consultation', 2: '获取专业法律咨询'},
   cta_p: {0: 'فريقنا المتخصص في قضايا سوق المال جاهز للدفاع عن حقوقك أمام هيئة السوق المالية ولجان الفصل.', 1: 'Our team specialized in capital market cases is ready to defend your rights before the Capital Market Authority and adjudication committees.', 2: '我们专业的资本市场案件团队随时准备在资本市场局和裁决委员会前维护您的权利。'},
   art_li_7: {0: 'اللجنة الاستئنافية: إذا لم يرتضِ الطرف الحكم الأول يمكنه الطعن أمام اللجنة الاستئنافية لسوق المال.', 1: 'Appeals Committee: If the party is not satisfied with the first ruling, they can challenge it before the Capital Market Appeals Committee.', 2: '上诉委员会：如果当事方对第一次裁决不满意，可向资本市场上诉委员会提出质疑。'},
+
+  h2_steps: {0: "خطوات العملية الإجرائية", 1: "Procedural Process Steps", 2: "程序流程步骤"},
 };
 </script>
 <script src="lang.js"></script>

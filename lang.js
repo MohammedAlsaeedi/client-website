@@ -13,32 +13,45 @@ const langFlags = ['🇸🇦', '🇬🇧', '🇨🇳'];
 
 // Common translations (shared across all pages)
 const commonTranslations = {
-  // Navbar links
-  navHome: { ar: 'الرئيسية', en: 'Home', zh: '主页' },
-  navServices: { ar: 'الخدمات', en: 'Services', zh: '服务' },
-  navTeam: { ar: 'فريقنا', en: 'Our Team', zh: '我们的团队' },
-  navPackages: { ar: 'الخطط', en: 'Packages', zh: '套餐' },
-  navContracts: { ar: 'العقود', en: 'Contracts', zh: '合同' },
-  navFAQ: { ar: 'الأسئلة الشائعة', en: 'FAQ', zh: '常见问题' },
-  navBlog: { ar: 'المدونة', en: 'Blog', zh: '博客' },
-  navEServices: { ar: 'الخدمات الإلكترونية', en: 'E-Services', zh: '电子服务' },
-  navCareers: { ar: 'الوظائف', en: 'Careers', zh: '招聘' },
-  navContact: { ar: 'تواصل معنا', en: 'Contact Us', zh: '联系我们' },
+  // Navbar links (matching data-i18n values in HTML)
+  nav_services: {0: 'خدماتنا', 1: 'Services', 2: '服务'},
+  nav_contracts: {0: 'عقود الشركات', 1: 'Corporate Contracts', 2: '公司合同'},
+  nav_faq: {0: 'الأسئلة الشائعة', 1: 'FAQ', 2: '常见问题'},
+  nav_team: {0: 'فريقنا', 1: 'Our Team', 2: '我们的团队'},
+  nav_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
+  nav_eservices: {0: 'الخدمات الإلكترونية', 1: 'E-Services', 2: '电子服务'},
+  nav_careers: {0: 'التوظيف', 1: 'Careers', 2: '招聘'},
+  nav_contact: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
+  nav_cta: {0: 'احجز استشارة', 1: 'Book Consultation', 2: '预约咨询'},
+
+  // Company identity
+  firm_name: {0: 'شركة مشاري بندر بن جلوي', 1: 'Meshary Bin Bandar Bin Jaloui', 2: '美沙里·本·班达尔·本·贾卢伊'},
+  firm_sub: {0: 'للمحاماة والاستشارات القانونية', 1: 'Law Firm & Legal Consultations', 2: '律师事务所与法律咨询'},
+
+  // Breadcrumb common
+  breadcrumb_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
+  breadcrumb_legal: {0: 'القضايا القانونية', 1: 'Legal Cases', 2: '法律案件'},
+  breadcrumb_packages: {0: 'باقات الخدمات', 1: 'Service Packages', 2: '服务套餐'},
 
   // Footer
-  footerCopyright: { ar: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', en: '© 2025 Almashary Law Firm — All rights reserved', zh: '© 2025 阿尔玛沙里律师事务所 — 版权所有' },
-  footerHome: { ar: 'الرئيسية', en: 'Home', zh: '主页' },
-  footerDescription: { ar: 'شركة متخصصة في الاستشارات القانونية والتوثيق', en: 'Specialized in legal consultations and documentation', zh: '专业从事法律咨询和文件认证' },
+  footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Meshary Bin Bandar Bin Jaloui Law Firm and Legal Consultations — All rights reserved', 2: '© 2025 美沙里·本·班达尔·本·贾卢伊律师事务所和法律咨询——版权所有'},
+  footer_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
 
-  // WhatsApp button
-  whatsappButton: { ar: 'تواصل عبر واتساب', en: 'Contact via WhatsApp', zh: '通过WhatsApp联系' },
 
+  // Section tags (shared)
+  faq_tag: {0: 'مركز المعرفة القانونية', 1: 'Legal Knowledge Center', 2: '法律知识中心'},
+  blog_tag: {0: 'آخر المقالات', 1: 'Latest Articles', 2: '最新文章'},
+  eservices_tag: {0: 'الخدمات الرقمية', 1: 'Digital Services', 2: '数字服务'},
+  eservices_coming_soon: {0: 'قريباً', 1: 'Coming Soon', 2: '即将推出'},
+  careers_tag: {0: 'لماذا تنضم إلينا؟', 1: 'Why Join Us?', 2: '为什么加入我们？'},
+  contracts_tag: {0: 'عقودنا القانونية', 1: 'Our Legal Contracts', 2: '我们的法律合同'},
+  contracts_why_tag: {0: 'لماذا نحن؟', 1: 'Why Us?', 2: '为什么选择我们？'},
+  pkg_tag: {0: 'ما تشمله الباقة', 1: "What's Included", 2: '套餐包含内容'},
+
+  // Shared case page headings
+  h2_legal_basis: {0: 'الأساس القانوني والأنظمة ذات الصلة', 1: 'Legal Basis & Relevant Regulations', 2: '法律依据与相关法规'},
   // General UI
-  readMore: { ar: 'اقرأ المزيد', en: 'Read More', zh: '阅读更多' },
-  learnMore: { ar: 'تعرّف على المزيد', en: 'Learn More', zh: '了解更多' },
-  getStarted: { ar: 'ابدأ الآن', en: 'Get Started', zh: '现在开始' },
-  contactUs: { ar: 'تواصل معنا', en: 'Contact Us', zh: '联系我们' },
-  backToHome: { ar: 'العودة للرئيسية', en: 'Back to Home', zh: '返回主页' },
+  whatsapp_button: {0: 'تواصل عبر واتساب', 1: 'Contact via WhatsApp', 2: '通过WhatsApp联系'},
 };
 
 /**

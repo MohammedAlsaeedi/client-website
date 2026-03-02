@@ -111,13 +111,13 @@
 <a class="nav-logo" href="index.html">
 <img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png"/>
 <div>
-<div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
-<div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
+<div class="nav-firm-name" data-i18n="firm_name">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub" data-i18n="firm_sub">للمحاماة والاستشارات القانونية</div>
 </div>
 </a>
 <ul class="nav-links">
 <li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
-<li><a href="index.html#packages">الباقات</a></li>
+<li><a data-i18n="breadcrumb_packages_link" href="index.html#packages">الباقات</a></li>
 <li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
 <li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
 <li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
@@ -132,7 +132,7 @@
 <button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
 </div>
 </div>
-<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
+<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank"><span data-i18n="nav_cta">احجز استشارة</span></a>
 <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
 <span></span><span></span><span></span>
 </div>
@@ -142,12 +142,12 @@
 <div class="mobile-drawer" id="drawer">
 <ul>
 <li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
-<li><a href="index.html#packages">الباقات</a></li>
+<li><a data-i18n="breadcrumb_packages_link" href="index.html#packages">الباقات</a></li>
 <li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
 <li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
 <li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
 <li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
-<li><a href="https://wa.me/966533532153">احجز استشارة</a></li>
+<li><a data-i18n="nav_cta" href="https://wa.me/966533532153">احجز استشارة</a></li>
 </ul>
 </div>
 <!-- HERO SECTION -->
@@ -167,7 +167,7 @@
 </section>
 <!-- FEATURES SECTION -->
 <section class="section-pad">
-<span class="tag">ما تشمله الباقة</span>
+<span class="tag" data-i18n="pkg_tag">ما تشمله الباقة</span>
 <h2 class="sec-title" data-i18n="section_title_0">مزايا الباقة الأساسية</h2>
 <div class="gold-bar"></div>
 <div class="feat-grid">
@@ -346,6 +346,8 @@ const pageTranslations = {
   cta_btn_1: {0: 'عرض جميع الباقات', 1: 'View All Packages', 2: '查看所有套餐'},
   footer_home: {0: '← العودة للباقات', 1: '← Back to Packages', 2: '← 返回套餐'},
   cta_btn_0: {0: 'ابدأ الآن عبر واتساب', 1: 'Start Now via WhatsApp', 2: '立即通过WhatsApp开始'},
+
+  breadcrumb_packages_link: {0: "الباقات", 1: "Packages", 2: "套餐"},
 };
 
 </script>
