@@ -83,7 +83,15 @@
         .flag-btn{background:none;border:2px solid rgba(255,255,255,.2);border-radius:7px;cursor:pointer;font-size:1.2rem;line-height:1;padding:3px 5px;transition:all .2s;display:flex;align-items:center}
         .flag-btn:hover{border-color:var(--gold-light);transform:scale(1.08)}
         .flag-btn.active{border-color:var(--gold);background:rgba(184,147,90,.2)}
-    </style>
+    /* Language Dropdown */
+        .lang-drop { position: relative; display: flex; align-items: center; }
+        .lang-drop-btn { background: none; border: 2px solid rgba(255,255,255,.25); border-radius: 10px; cursor: pointer; font-size: 1.4rem; line-height: 1; padding: 4px 8px; transition: all .2s; color: #fff; }
+        .lang-drop-btn:hover { border-color: var(--gold); transform: scale(1.05); }
+        .lang-drop-menu { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--navy); border: 1px solid var(--gold); border-radius: 10px; padding: 6px; display: none; flex-direction: column; gap: 4px; min-width: 130px; z-index: 9999; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+        .lang-drop-menu.open { display: flex; }
+        .lang-drop-menu button { background: none; border: none; cursor: pointer; font-size: 1rem; padding: 6px 10px; border-radius: 6px; text-align: right; color: #fff; white-space: nowrap; font-family: inherit; transition: background .15s; }
+        .lang-drop-menu button:hover { background: rgba(184,147,90,.2); }
+        </style>
 </head>
 <body>
     <nav class="navbar">
@@ -96,20 +104,23 @@
                 </div>
             </a>
             <ul class="nav-links">
-                <li><a href="index.html#services">خدماتنا</a></li>
-                <li><a href="contracts.html">عقود الشركات</a></li>
-                <li><a href="faq.html">الأسئلة الشائعة</a></li>
-                <li><a href="team.html">فريقنا</a></li>
-                <li><a href="blog.html">المدونة</a></li>
-                <li><a href="e-services.html">الخدمات الإلكترونية</a></li>
-                <li><a href="careers.html">التوظيف</a></li>
-                <li><a href="index.html#booking">تواصل معنا</a></li>
+                <li><a href="index.html#services" data-i18n="nav_services">خدماتنا</a></li>
+                <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
+                <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
+                <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
+                <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
+                <li><a href="e-services.html" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
+                <li><a href="careers.html" data-i18n="nav_careers">التوظيف</a></li>
+                <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
             </ul>
             <div style="display:flex;align-items:center;gap:10px;">
-                <div class="lang-switcher">
-                    <button class="flag-btn active" onclick="subSetLang(0)" id="flagAR" title="العربية">🇸🇦</button>
-                    <button class="flag-btn" onclick="subSetLang(1)" id="flagEN" title="English">🇬🇧</button>
-                    <button class="flag-btn" onclick="subSetLang(2)" id="flagZH" title="中文">🇨🇳</button>
+                <div class="lang-drop" id="langDrop">
+                    <button class="lang-drop-btn" onclick="toggleLangDrop()" id="langDropBtn">🇸🇦</button>
+                    <div class="lang-drop-menu" id="langDropMenu">
+                        <button onclick="setLang(0);toggleLangDrop()" data-lang="0">🇸🇦 العربية</button>
+                        <button onclick="setLang(1);toggleLangDrop()" data-lang="1">🇬🇧 English</button>
+                        <button onclick="setLang(2);toggleLangDrop()" data-lang="2">🇨🇳 中文</button>
+                    </div>
                 </div>
                 <a href="https://wa.me/966533532153" target="_blank" rel="noopener" class="nav-cta">احجز استشارة</a>
                 <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
@@ -120,14 +131,14 @@
     </nav>
     <div class="mobile-drawer" id="drawer">
         <ul>
-            <li><a href="index.html#services">خدماتنا</a></li>
-            <li><a href="contracts.html">عقود الشركات</a></li>
-            <li><a href="faq.html">الأسئلة الشائعة</a></li>
-            <li><a href="team.html">فريقنا</a></li>
-            <li><a href="blog.html">المدونة</a></li>
-            <li><a href="e-services.html">الخدمات الإلكترونية</a></li>
-            <li><a href="careers.html">التوظيف</a></li>
-            <li><a href="index.html#booking">تواصل معنا</a></li>
+            <li><a href="index.html#services" data-i18n="nav_services" data-i18n="nav_services">خدماتنا</a></li>
+            <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
+            <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
+            <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
+            <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
+            <li><a href="e-services.html" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
+            <li><a href="careers.html" data-i18n="nav_careers">التوظيف</a></li>
+            <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
             <li><a href="https://wa.me/966533532153">احجز استشارة</a></li>
         </ul>
     </div>
@@ -246,8 +257,8 @@
     </section>
 
     <footer>
-        <p>© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
-        <p style="margin-top:8px;"><a href="index.html">الرئيسية</a></p>
+        <p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+        <p style="margin-top:8px;"><a href="index.html" data-i18n="footer_home">الرئيسية</a></p>
     </footer>
     <a href="https://wa.me/966533532153" class="whatsapp-fab" target="_blank" rel="noopener" title="تواصل عبر واتساب">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
@@ -255,25 +266,30 @@
 
 
     <script>
-    // ─── LANGUAGE SWITCHER (Sub-page) ─────────────────────────
-    const subLangDirs = ['rtl','ltr','ltr'];
-    const subLangCodes = ['ar','en','zh'];
-    function subSetLang(l) {
-        localStorage.setItem('siteLang', l);
-        document.documentElement.lang = subLangCodes[l];
-        document.documentElement.dir = subLangDirs[l];
-        ['flagAR','flagEN','flagZH'].forEach((id,i)=>{
-            const b=document.getElementById(id);
-            if(b) b.classList.toggle('active', i===l);
-        });
-        // Redirect to home if switching language (so full translation applies)
-        if(l !== parseInt(localStorage.getItem('prevLang')||'0')) {
-            localStorage.setItem('prevLang', l);
-        }
-    }
-    // Apply saved language on load
-    const _sl = parseInt(localStorage.getItem('siteLang')||'0');
-    if(_sl !== 0) subSetLang(_sl);
-    </script>
-</body>
+const pageTranslations = {
+  breadcrumb_current: {0: 'القضايا الضريبية', 1: 'Tax Cases', 2: '税务案件'},
+  breadcrumb_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
+  breadcrumb_services: {0: 'الخدمات', 1: 'Services', 2: '服务'},
+  cta_button: {0: 'استشر معنا الآن', 1: 'Consult Now', 2: '现在咨询'},
+  footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Mashary Bandar Bin Jalawi Law Firm — All rights reserved', 2: '© 2025 玛沙里·班达尔·本·贾劳伊律师事务所 — 版权所有'},
+  footer_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
+  hero_desc: {0: 'متخصصون في قضايا الضرائب والجمارك والعلاقات مع الهيئات الحكومية بخبرة واسعة.', 1: 'Specialized in tax and customs cases and relations with government authorities with extensive experience.', 2: '专门从事税务和海关案件以及与政府机构的关系。'},
+  hero_title_first: {0: 'قضايا', 1: 'Tax', 2: '税务'},
+  hero_title_last: {0: 'ضريبية', 1: 'Cases', 2: '案件'},
+  learnmore_button: {0: 'تعرف على المزيد', 1: 'Learn More', 2: '了解更多'},
+  nav_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
+  nav_careers: {0: 'التوظيف', 1: 'Careers', 2: '招聘'},
+  nav_contact: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
+  nav_contracts: {0: 'عقود الشركات', 1: 'Company Contracts', 2: '公司合同'},
+  nav_eservices: {0: 'الخدمات الإلكترونية', 1: 'E-Services', 2: '电子服务'},
+  nav_faq: {0: 'الأسئلة الشائعة', 1: 'FAQ', 2: '常见问题'},
+  nav_services: {0: 'خدماتنا', 1: 'Our Services', 2: '我们的服务'},
+  nav_team: {0: 'فريقنا', 1: 'Our Team', 2: '我们的团队'},
+  section_1_desc: {0: 'تقديم استشارات ضريبية متخصصة ومتابعة القضايا الضريبية مع الجهات المختصة.', 1: 'Providing specialized tax consultations and following up on tax cases with competent authorities.', 2: '提供专业的税务咨询和跟进税务案件。'},
+  section_1_title: {0: 'الاستشارات الضريبية المتقدمة', 1: 'Advanced Tax Consultations', 2: '高级税务咨询'},
+  whatsapp_button: {0: 'تواصل عبر واتساب', 1: 'Contact via WhatsApp', 2: '通过WhatsApp联系'},
+};
+</script>
+<script src="lang.js"></script>
+    </body>
 </html>

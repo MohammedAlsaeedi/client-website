@@ -241,7 +241,14 @@
             font-weight: 700;
             transition: all .2s;
         }
-        .lang-switcher { display: flex; align-items: center; gap: 6px; }
+        /* Language Dropdown */
+        .lang-drop { position: relative; display: flex; align-items: center; }
+        .lang-drop-btn { background: none; border: 2px solid rgba(255,255,255,.25); border-radius: 10px; cursor: pointer; font-size: 1.4rem; line-height: 1; padding: 4px 8px; transition: all .2s; color: #fff; }
+        .lang-drop-btn:hover { border-color: var(--gold); transform: scale(1.05); }
+        .lang-drop-menu { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--navy); border: 1px solid var(--gold); border-radius: 10px; padding: 6px; display: none; flex-direction: column; gap: 4px; min-width: 130px; z-index: 9999; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+        .lang-drop-menu.open { display: flex; }
+        .lang-drop-menu button { background: none; border: none; cursor: pointer; font-size: 1rem; padding: 6px 10px; border-radius: 6px; text-align: right; color: #fff; white-space: nowrap; font-family: inherit; transition: background .15s; }
+        .lang-drop-menu button:hover { background: rgba(184,147,90,.2); }
         .flag-btn {
             background: none;
             border: 2px solid rgba(255,255,255,.2);
@@ -2266,11 +2273,14 @@
 
             <!-- Controls -->
             <div class="nav-controls">
-                <div class="lang-switcher">
-    <button class="flag-btn active" onclick="setLang(0)" id="flagAR" title="العربية">🇸🇦</button>
-    <button class="flag-btn" onclick="setLang(1)" id="flagEN" title="English">🇬🇧</button>
-    <button class="flag-btn" onclick="setLang(2)" id="flagZH" title="中文">🇨🇳</button>
-</div>
+                <div class="lang-drop" id="langDrop">
+                    <button class="lang-drop-btn" onclick="toggleLangDrop()" id="langDropBtn">🇸🇦</button>
+                    <div class="lang-drop-menu" id="langDropMenu">
+                        <button onclick="setLang(0);toggleLangDrop()" data-lang="0">🇸🇦 العربية</button>
+                        <button onclick="setLang(1);toggleLangDrop()" data-lang="1">🇬🇧 English</button>
+                        <button onclick="setLang(2);toggleLangDrop()" data-lang="2">🇨🇳 中文</button>
+                    </div>
+                </div>
                 <a href="https://wa.me/966533532153" target="_blank" rel="noopener" class="nav-cta"
                     data-key="navCta">احجز استشارة</a>
                 <div class="hamburger" onclick="toggleMenu()">
@@ -3501,12 +3511,6 @@
             document.body.classList.remove('lang-ar', 'lang-en', 'lang-zh');
             document.body.classList.add(['lang-ar','lang-en','lang-zh'][l]);
 
-            // Update flag buttons
-            ['flagAR','flagEN','flagZH'].forEach((id, i) => {
-                const btn = document.getElementById(id);
-                if (btn) btn.classList.toggle('active', i === l);
-            });
-
             // Translate all data-key elements
             document.querySelectorAll('[data-key]').forEach(el => {
                 const key = el.dataset.key;
@@ -3535,6 +3539,9 @@
                 if (gs) gs.style.color = 'var(--gold-light)';
             }
 
+            // Update dropdown button
+            updateLangDropButton(l);
+            
             // Chart labels
             drawChart();
         }
@@ -3635,6 +3642,28 @@
             }, 3000);
         }
     </script>
-</body>
+    <script>
+        // ─── DROPDOWN LANGUAGE SWITCHER HELPERS ──────────────────────
+        const langFlags = ['🇸🇦', '🇬🇧', '🇨🇳'];
+        const langNames = ['العربية', 'English', '中文'];
+        function updateLangDropButton(langIndex) {
+            const btn = document.getElementById('langDropBtn');
+            if (btn) { btn.textContent = langFlags[langIndex]; btn.title = langNames[langIndex]; }
+        }
+        function toggleLangDrop() {
+            document.getElementById('langDropMenu').classList.toggle('open');
+        }
+        document.addEventListener('click', function(e) {
+            var d = document.getElementById('langDrop');
+            if (d && !d.contains(e.target)) {
+                var m = document.getElementById('langDropMenu');
+                if (m) m.classList.remove('open');
+            }
+        });
+        // Initialize dropdown button on load
+        var _initL = parseInt(localStorage.getItem('siteLang') || '0');
+        updateLangDropButton(_initL);
+    </script>
+    </body>
 
 </html>

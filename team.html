@@ -117,7 +117,15 @@
         .flag-btn{background:none;border:2px solid rgba(255,255,255,.2);border-radius:7px;cursor:pointer;font-size:1.2rem;line-height:1;padding:3px 5px;transition:all .2s;display:flex;align-items:center}
         .flag-btn:hover{border-color:var(--gold-light);transform:scale(1.08)}
         .flag-btn.active{border-color:var(--gold);background:rgba(184,147,90,.2)}
-    </style>
+    /* Language Dropdown */
+        .lang-drop { position: relative; display: flex; align-items: center; }
+        .lang-drop-btn { background: none; border: 2px solid rgba(255,255,255,.25); border-radius: 10px; cursor: pointer; font-size: 1.4rem; line-height: 1; padding: 4px 8px; transition: all .2s; color: #fff; }
+        .lang-drop-btn:hover { border-color: var(--gold); transform: scale(1.05); }
+        .lang-drop-menu { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--navy); border: 1px solid var(--gold); border-radius: 10px; padding: 6px; display: none; flex-direction: column; gap: 4px; min-width: 130px; z-index: 9999; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+        .lang-drop-menu.open { display: flex; }
+        .lang-drop-menu button { background: none; border: none; cursor: pointer; font-size: 1rem; padding: 6px 10px; border-radius: 6px; text-align: right; color: #fff; white-space: nowrap; font-family: inherit; transition: background .15s; }
+        .lang-drop-menu button:hover { background: rgba(184,147,90,.2); }
+        </style>
 </head>
 <body>
 
@@ -131,20 +139,23 @@
                 </div>
             </a>
             <ul class="nav-links">
-                <li><a href="index.html#services">خدماتنا</a></li>
-                <li><a href="contracts.html">عقود الشركات</a></li>
-                <li><a href="faq.html">الأسئلة الشائعة</a></li>
-                <li><a href="team.html" class="active">فريقنا</a></li>
-                <li><a href="blog.html">المدونة</a></li>
-                <li><a href="e-services.html">الخدمات الإلكترونية</a></li>
-                <li><a href="careers.html">التوظيف</a></li>
-                <li><a href="index.html#booking">تواصل معنا</a></li>
+                <li><a href="index.html#services" data-i18n="nav_services">خدماتنا</a></li>
+                <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
+                <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
+                <li><a href="team.html" class="active" data-i18n="nav_team">فريقنا</a></li>
+                <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
+                <li><a href="e-services.html" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
+                <li><a href="careers.html" data-i18n="nav_careers">التوظيف</a></li>
+                <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
             </ul>
             <div style="display:flex;align-items:center;gap:10px;">
-                <div class="lang-switcher">
-                    <button class="flag-btn active" onclick="subSetLang(0)" id="flagAR" title="العربية">🇸🇦</button>
-                    <button class="flag-btn" onclick="subSetLang(1)" id="flagEN" title="English">🇬🇧</button>
-                    <button class="flag-btn" onclick="subSetLang(2)" id="flagZH" title="中文">🇨🇳</button>
+                <div class="lang-drop" id="langDrop">
+                    <button class="lang-drop-btn" onclick="toggleLangDrop()" id="langDropBtn">🇸🇦</button>
+                    <div class="lang-drop-menu" id="langDropMenu">
+                        <button onclick="setLang(0);toggleLangDrop()" data-lang="0">🇸🇦 العربية</button>
+                        <button onclick="setLang(1);toggleLangDrop()" data-lang="1">🇬🇧 English</button>
+                        <button onclick="setLang(2);toggleLangDrop()" data-lang="2">🇨🇳 中文</button>
+                    </div>
                 </div>
                 <a href="https://wa.me/966533532153" target="_blank" rel="noopener" class="nav-cta">احجز استشارة</a>
                 <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
@@ -156,13 +167,13 @@
 
     <div class="mobile-drawer" id="drawer">
         <ul>
-            <li><a href="index.html#services">خدماتنا</a></li>
-            <li><a href="contracts.html">عقود الشركات</a></li>
-            <li><a href="faq.html">الأسئلة الشائعة</a></li>
+            <li><a href="index.html#services" data-i18n="nav_services">خدماتنا</a></li>
+            <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
+            <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
             <li><a href="team.html">فريقنا</a></li>
-            <li><a href="blog.html">المدونة</a></li>
-            <li><a href="e-services.html">الخدمات الإلكترونية</a></li>
-            <li><a href="careers.html">التوظيف</a></li>
+            <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
+            <li><a href="e-services.html" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
+            <li><a href="careers.html" data-i18n="nav_careers">التوظيف</a></li>
             <li><a href="index.html#booking">تواصل معنا</a></li>
         </ul>
     </div>
@@ -171,20 +182,20 @@
     <div class="page-hero">
         <div class="page-hero-content">
             <div class="page-breadcrumb">
-                <a href="index.html">الرئيسية</a>
+                <a href="index.html" data-i18n="breadcrumb_home">الرئيسية</a>
                 <span>←</span>
-                <span>فريقنا</span>
+                <span data-i18n="breadcrumb_current">فريقنا</span>
             </div>
-            <h1>فريقنا <em>القانوني</em></h1>
-            <p class="page-hero-desc">نخبة من المحامين والمستشارين القانونيين المرخّصين، يجمعهم الشغف بالعدالة والالتزام بتحقيق أفضل النتائج لكل عميل.</p>
+            <h1><span data-i18n="hero_title_first">فريقنا</span> <em data-i18n="hero_title_last">القانوني</em></h1>
+            <p class="page-hero-desc" data-i18n="hero_desc">نخبة من المحامين والمستشارين القانونيين المرخّصين، يجمعهم الشغف بالعدالة والالتزام بتحقيق أفضل النتائج لكل عميل.</p>
         </div>
     </div>
 
     <!-- ══ DIRECTOR ══ -->
     <section class="director-section">
         <div class="section-header">
-            <div class="tag">المؤسس والمدير</div>
-            <h2 class="section-title" style="color:var(--navy);">قيادة الشركة</h2>
+            <div class="tag" data-i18n="director_tag">المؤسس والمدير</div>
+            <h2 class="section-title" style="color:var(--navy);" data-i18n="director_heading">قيادة الشركة</h2>
             <div class="gold-bar"></div>
         </div>
         <div class="director-wrap">
@@ -200,18 +211,18 @@
                 </div>
             </div>
             <div class="director-info">
-                <div class="director-label">المؤسس والمدير العام</div>
-                <div class="director-name">مشاري بندر بن جلوي</div>
-                <div class="director-title">محامٍ مرخّص · مستشار قانوني</div>
+                <div class="director-label" data-i18n="director_label">المؤسس والمدير العام</div>
+                <div class="director-name" data-i18n="director_name">مشاري بندر بن جلوي</div>
+                <div class="director-title" data-i18n="director_title">محامٍ مرخّص · مستشار قانوني</div>
                 <p class="director-desc">
                     محامٍ سعودي مرخّص يحمل خبرة واسعة في القضايا التجارية والمدنية والجنائية. مؤسس الشركة ومحركها الرئيسي، يرتكز في عمله على الأمانة والاحترافية وتحقيق أفضل النتائج لعملائه في كافة مراحل التقاضي والاستشارة.
                 </p>
                 <div class="director-badges">
-                    <span class="dir-badge">محامٍ مرخّص</span>
-                    <span class="dir-badge">قضايا تجارية</span>
-                    <span class="dir-badge">عقود الشركات</span>
-                    <span class="dir-badge">ترافع قضائي</span>
-                    <span class="dir-badge">استشارات قانونية</span>
+                    <span class="dir-badge" data-i18n="director_badge_1">محامٍ مرخّص</span>
+                    <span class="dir-badge" data-i18n="director_badge_2">قضايا تجارية</span>
+                    <span class="dir-badge" data-i18n="director_badge_3">عقود الشركات</span>
+                    <span class="dir-badge" data-i18n="director_badge_4">ترافع قضائي</span>
+                    <span class="dir-badge" data-i18n="director_badge_5">استشارات قانونية</span>
                 </div>
             </div>
         </div>
@@ -220,8 +231,8 @@
     <!-- ══ TEAM ══ -->
     <section class="team-section">
         <div class="section-header">
-            <div class="tag">أعضاء الفريق</div>
-            <h2 class="section-title">كوادرنا القانونية</h2>
+            <div class="tag" data-i18n="team_tag">أعضاء الفريق</div>
+            <h2 class="section-title" data-i18n="team_heading">كوادرنا القانونية</h2>
             <div class="gold-bar"></div>
         </div>
         <div class="team-grid">
@@ -237,13 +248,13 @@
                         </svg>
                     </div>
                 </div>
-                <div class="team-name">رغد علي الرشيد</div>
-                <div class="team-title">محامية مرخّصة</div>
-                <p class="team-desc">متخصصة في قضايا الأحوال الشخصية والعمالية، تتميز بالدقة القانونية والالتزام بحقوق موكليها.</p>
+                <div class="team-name" data-i18n="team_1_name">رغد علي الرشيد</div>
+                <div class="team-title" data-i18n="team_1_title">محامية مرخّصة</div>
+                <p class="team-desc" data-i18n="team_1_desc">متخصصة في قضايا الأحوال الشخصية والعمالية، تتميز بالدقة القانونية والالتزام بحقوق موكليها.</p>
                 <div class="team-badges">
-                    <span class="team-badge">محامية مرخّصة</span>
-                    <span class="team-badge">أحوال شخصية</span>
-                    <span class="team-badge">قضايا عمالية</span>
+                    <span class="team-badge" data-i18n="team_1_badge_1">محامية مرخّصة</span>
+                    <span class="team-badge" data-i18n="team_1_badge_2">أحوال شخصية</span>
+                    <span class="team-badge" data-i18n="team_1_badge_3">قضايا عمالية</span>
                 </div>
             </div>
 
@@ -258,13 +269,13 @@
                         </svg>
                     </div>
                 </div>
-                <div class="team-name">المها يوسف الطحيني</div>
-                <div class="team-title">محامية مرخّصة</div>
-                <p class="team-desc">خلفية قانونية راسخة في القضايا التجارية والعقارية، تقدم خدماتها بمهنية عالية واهتمام دقيق بكل التفاصيل.</p>
+                <div class="team-name" data-i18n="team_2_name">المها يوسف الطحيني</div>
+                <div class="team-title" data-i18n="team_1_title">محامية مرخّصة</div>
+                <p class="team-desc" data-i18n="team_2_desc">خلفية قانونية راسخة في القضايا التجارية والعقارية، تقدم خدماتها بمهنية عالية واهتمام دقيق بكل التفاصيل.</p>
                 <div class="team-badges">
-                    <span class="team-badge">محامية مرخّصة</span>
-                    <span class="team-badge">قضايا تجارية</span>
-                    <span class="team-badge">قضايا عقارية</span>
+                    <span class="team-badge" data-i18n="team_2_badge_1">محامية مرخّصة</span>
+                    <span class="team-badge" data-i18n="team_2_badge_2">قضايا تجارية</span>
+                    <span class="team-badge" data-i18n="team_2_badge_3">قضايا عقارية</span>
                 </div>
             </div>
 
@@ -278,12 +289,12 @@
                         </svg>
                     </div>
                 </div>
-                <div class="team-name">خالد إبراهيم السبيعي</div>
-                <div class="team-title">مستشار قانوني</div>
-                <p class="team-desc">متخصص في قضايا الشركات والعقود التجارية، يمتلك خبرة واسعة في صياغة العقود وحل النزاعات التجارية.</p>
+                <div class="team-name" data-i18n="team_3_name">خالد إبراهيم السبيعي</div>
+                <div class="team-title" data-i18n="team_3_title">مستشار قانوني</div>
+                <p class="team-desc" data-i18n="team_3_desc">متخصص في قضايا الشركات والعقود التجارية، يمتلك خبرة واسعة في صياغة العقود وحل النزاعات التجارية.</p>
                 <div class="team-badges">
-                    <span class="team-badge">استشارات قانونية</span>
-                    <span class="team-badge">عقود تجارية</span>
+                    <span class="team-badge" data-i18n="team_3_badge_1">استشارات قانونية</span>
+                    <span class="team-badge" data-i18n="team_3_badge_2">عقود تجارية</span>
                 </div>
             </div>
 
@@ -297,12 +308,12 @@
                         </svg>
                     </div>
                 </div>
-                <div class="team-name">سلطان فهد العنزي</div>
-                <div class="team-title">باحث قانوني</div>
-                <p class="team-desc">يدعم فريق الترافع بالبحث والتوثيق ومتابعة المستجدات التشريعية والقضائية في المملكة العربية السعودية.</p>
+                <div class="team-name" data-i18n="team_4_name">سلطان فهد العنزي</div>
+                <div class="team-title" data-i18n="team_4_title">باحث قانوني</div>
+                <p class="team-desc" data-i18n="team_4_desc">يدعم فريق الترافع بالبحث والتوثيق ومتابعة المستجدات التشريعية والقضائية في المملكة العربية السعودية.</p>
                 <div class="team-badges">
-                    <span class="team-badge">بحث قانوني</span>
-                    <span class="team-badge">توثيق</span>
+                    <span class="team-badge" data-i18n="team_4_badge_1">بحث قانوني</span>
+                    <span class="team-badge" data-i18n="team_4_badge_2">توثيق</span>
                 </div>
             </div>
 
@@ -317,12 +328,12 @@
                         </svg>
                     </div>
                 </div>
-                <div class="team-name">نورة عبدالعزيز المطيري</div>
-                <div class="team-title">مسؤولة خدمة العملاء</div>
-                <p class="team-desc">تتولى استقبال الموكلين وتنسيق مواعيد الاستشارات وضمان حصول كل عميل على تجربة مهنية سلسة واحترافية.</p>
+                <div class="team-name" data-i18n="team_5_name">نورة عبدالعزيز المطيري</div>
+                <div class="team-title" data-i18n="team_5_title">مسؤولة خدمة العملاء</div>
+                <p class="team-desc" data-i18n="team_5_desc">تتولى استقبال الموكلين وتنسيق مواعيد الاستشارات وضمان حصول كل عميل على تجربة مهنية سلسة واحترافية.</p>
                 <div class="team-badges">
-                    <span class="team-badge">خدمة العملاء</span>
-                    <span class="team-badge">تنسيق المواعيد</span>
+                    <span class="team-badge" data-i18n="team_5_badge_1">خدمة العملاء</span>
+                    <span class="team-badge" data-i18n="team_5_badge_2">تنسيق المواعيد</span>
                 </div>
             </div>
 
@@ -336,13 +347,13 @@
                         </svg>
                     </div>
                 </div>
-                <div class="team-name">فيصل محمد الدوسري</div>
-                <div class="team-title">محامٍ مرخّص</div>
-                <p class="team-desc">محامٍ متخصص في القضايا الجنائية والجزائية، يمتلك سجلاً حافلاً في الدفاع أمام المحاكم الابتدائية ومحاكم الاستئناف.</p>
+                <div class="team-name" data-i18n="team_6_name">فيصل محمد الدوسري</div>
+                <div class="team-title" data-i18n="team_6_title">محامٍ مرخّص</div>
+                <p class="team-desc" data-i18n="team_6_desc">محامٍ متخصص في القضايا الجنائية والجزائية، يمتلك سجلاً حافلاً في الدفاع أمام المحاكم الابتدائية ومحاكم الاستئناف.</p>
                 <div class="team-badges">
-                    <span class="team-badge">محامٍ مرخّص</span>
-                    <span class="team-badge">قضايا جنائية</span>
-                    <span class="team-badge">ترافع قضائي</span>
+                    <span class="team-badge" data-i18n="team_6_badge_1">محامٍ مرخّص</span>
+                    <span class="team-badge" data-i18n="team_6_badge_2">قضايا جنائية</span>
+                    <span class="team-badge" data-i18n="team_6_badge_3">ترافع قضائي</span>
                 </div>
             </div>
 
@@ -357,13 +368,13 @@
                         </svg>
                     </div>
                 </div>
-                <div class="team-name">لمى عبدالرحمن الحربي</div>
-                <div class="team-title">مستشارة قانونية</div>
-                <p class="team-desc">مستشارة قانونية متخصصة في قضايا الملكية الفكرية وعقود التقنية، تقدم حلولاً قانونية دقيقة للشركات الناشئة والمنشآت التقنية.</p>
+                <div class="team-name" data-i18n="team_7_name">لمى عبدالرحمن الحربي</div>
+                <div class="team-title" data-i18n="team_7_title">مستشارة قانونية</div>
+                <p class="team-desc" data-i18n="team_7_desc">مستشارة قانونية متخصصة في قضايا الملكية الفكرية وعقود التقنية، تقدم حلولاً قانونية دقيقة للشركات الناشئة والمنشآت التقنية.</p>
                 <div class="team-badges">
-                    <span class="team-badge">ملكية فكرية</span>
-                    <span class="team-badge">عقود تقنية</span>
-                    <span class="team-badge">شركات ناشئة</span>
+                    <span class="team-badge" data-i18n="team_7_badge_1">ملكية فكرية</span>
+                    <span class="team-badge" data-i18n="team_7_badge_2">عقود تقنية</span>
+                    <span class="team-badge" data-i18n="team_7_badge_3">شركات ناشئة</span>
                 </div>
             </div>
 
@@ -377,13 +388,13 @@
                         </svg>
                     </div>
                 </div>
-                <div class="team-name">عبدالله ناصر الشمري</div>
-                <div class="team-title">مستشار عقاري وتجاري</div>
-                <p class="team-desc">متخصص في المنازعات العقارية وعقود البيع والإيجار التجاري، يُقدّم استشارات محكمة تحمي حقوق الأطراف وتُسرّع حلّ النزاعات.</p>
+                <div class="team-name" data-i18n="team_8_name">عبدالله ناصر الشمري</div>
+                <div class="team-title" data-i18n="team_8_title">مستشار عقاري وتجاري</div>
+                <p class="team-desc" data-i18n="team_8_desc">متخصص في المنازعات العقارية وعقود البيع والإيجار التجاري، يُقدّم استشارات محكمة تحمي حقوق الأطراف وتُسرّع حلّ النزاعات.</p>
                 <div class="team-badges">
-                    <span class="team-badge">قضايا عقارية</span>
-                    <span class="team-badge">عقود إيجار</span>
-                    <span class="team-badge">نزاعات تجارية</span>
+                    <span class="team-badge" data-i18n="team_8_badge_1">قضايا عقارية</span>
+                    <span class="team-badge" data-i18n="team_8_badge_2">عقود إيجار</span>
+                    <span class="team-badge" data-i18n="team_8_badge_3">نزاعات تجارية</span>
                 </div>
             </div>
 
@@ -398,13 +409,13 @@
                         </svg>
                     </div>
                 </div>
-                <div class="team-name">ريم سعد القحطاني</div>
-                <div class="team-title">باحثة قانونية</div>
-                <p class="team-desc">باحثة قانونية دقيقة تدعم فريق القضايا بالبحث التشريعي والسوابق القضائية وإعداد المذكرات القانونية بأعلى مستويات الجودة.</p>
+                <div class="team-name" data-i18n="team_9_name">ريم سعد القحطاني</div>
+                <div class="team-title" data-i18n="team_9_title">باحثة قانونية</div>
+                <p class="team-desc" data-i18n="team_9_desc">باحثة قانونية دقيقة تدعم فريق القضايا بالبحث التشريعي والسوابق القضائية وإعداد المذكرات القانونية بأعلى مستويات الجودة.</p>
                 <div class="team-badges">
-                    <span class="team-badge">بحث قانوني</span>
-                    <span class="team-badge">مذكرات قضائية</span>
-                    <span class="team-badge">سوابق قضائية</span>
+                    <span class="team-badge" data-i18n="team_9_badge_1">بحث قانوني</span>
+                    <span class="team-badge" data-i18n="team_9_badge_2">مذكرات قضائية</span>
+                    <span class="team-badge" data-i18n="team_9_badge_3">سوابق قضائية</span>
                 </div>
             </div>
 
@@ -418,13 +429,13 @@
                         </svg>
                     </div>
                 </div>
-                <div class="team-name">وليد عمر الغامدي</div>
-                <div class="team-title">مدير الشؤون الإدارية</div>
-                <p class="team-desc">يُشرف على سير العمليات الإدارية داخل الشركة ويُنسّق بين فريق المحامين والموكلين، مما يضمن تجربة خدمية متكاملة وسلسة.</p>
+                <div class="team-name" data-i18n="team_10_name">وليد عمر الغامدي</div>
+                <div class="team-title" data-i18n="team_10_title">مدير الشؤون الإدارية</div>
+                <p class="team-desc" data-i18n="team_10_desc">يُشرف على سير العمليات الإدارية داخل الشركة ويُنسّق بين فريق المحامين والموكلين، مما يضمن تجربة خدمية متكاملة وسلسة.</p>
                 <div class="team-badges">
-                    <span class="team-badge">إدارة العمليات</span>
-                    <span class="team-badge">تنسيق الفريق</span>
-                    <span class="team-badge">خدمة الموكلين</span>
+                    <span class="team-badge" data-i18n="team_10_badge_1">إدارة العمليات</span>
+                    <span class="team-badge" data-i18n="team_10_badge_2">تنسيق الفريق</span>
+                    <span class="team-badge" data-i18n="team_10_badge_3">خدمة الموكلين</span>
                 </div>
             </div>
 
@@ -432,8 +443,8 @@
     </section>
 
     <footer>
-        <p>© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
-        <p style="margin-top:8px;"><a href="index.html">الرئيسية</a></p>
+        <p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+        <p style="margin-top:8px;"><a href="index.html" data-i18n="breadcrumb_home">الرئيسية</a></p>
     </footer>
 
     <a href="https://wa.me/966533532153" class="whatsapp-fab" target="_blank" rel="noopener" title="تواصل عبر واتساب">
@@ -442,26 +453,96 @@
 
 
 
-    <script>
-    // ─── LANGUAGE SWITCHER (Sub-page) ─────────────────────────
-    const subLangDirs = ['rtl','ltr','ltr'];
-    const subLangCodes = ['ar','en','zh'];
-    function subSetLang(l) {
-        localStorage.setItem('siteLang', l);
-        document.documentElement.lang = subLangCodes[l];
-        document.documentElement.dir = subLangDirs[l];
-        ['flagAR','flagEN','flagZH'].forEach((id,i)=>{
-            const b=document.getElementById(id);
-            if(b) b.classList.toggle('active', i===l);
-        });
-        // Redirect to home if switching language (so full translation applies)
-        if(l !== parseInt(localStorage.getItem('prevLang')||'0')) {
-            localStorage.setItem('prevLang', l);
-        }
-    }
-    // Apply saved language on load
-    const _sl = parseInt(localStorage.getItem('siteLang')||'0');
-    if(_sl !== 0) subSetLang(_sl);
-    </script>
-</body>
+<script>
+const pageTranslations = {
+  breadcrumb_current: {0: 'فريقنا', 1: 'Our Team', 2: '我们的团队'},
+  breadcrumb_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
+  director_badge_1: {0: 'محامٍ مرخّص', 1: 'Licensed Attorney', 2: '执业律师'},
+  director_badge_2: {0: 'قضايا تجارية', 1: 'Commercial Cases', 2: '商业案件'},
+  director_badge_3: {0: 'عقود الشركات', 1: 'Corporate Contracts', 2: '公司合同'},
+  director_badge_4: {0: 'ترافع قضائي', 1: 'Court Advocacy', 2: '法庭辩护'},
+  director_badge_5: {0: 'استشارات قانونية', 1: 'Legal Consultations', 2: '法律咨询'},
+  director_desc: {0: 'محامٍ سعودي مرخّص يحمل خبرة واسعة في القضايا التجارية والمدنية والجنائية. مؤسس الشركة ومحركها الرئيسي، يرتكز في عمله على الأمانة والاحترافية وتحقيق أفضل النتائج لعملائه في كافة مراحل التقاضي والاستشارة.', 1: 'A licensed Saudi attorney with extensive experience in commercial, civil, and criminal cases. Founder and driving force of the firm, he bases his work on integrity, professionalism, and achieving the best results for clients throughout all litigation and consultation phases.', 2: '持证沙特律师，在商业、民事和刑事案件方面拥有丰富经验。公司创始人和主要推动力，他的工作基于诚信、专业性和为客户实现最佳结果。'},
+  director_heading: {0: 'قيادة الشركة', 1: 'Firm Leadership', 2: '公司领导'},
+  director_label: {0: 'المؤسس والمدير العام', 1: 'Founder & Managing Director', 2: '创始人兼首席执行官'},
+  director_name: {0: 'مشاري بندر بن جلوي', 1: 'Mashary Bandar Bin Jalawi', 2: '玛沙里·班达尔·本·贾劳伊'},
+  director_tag: {0: 'المؤسس والمدير', 1: 'Founder & Director', 2: '创始人及总监'},
+  director_title: {0: 'محامٍ مرخّص · مستشار قانوني', 1: 'Licensed Attorney · Legal Consultant', 2: '执业律师·法律顾问'},
+  footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Mashary Bandar Bin Jalawi Law Firm — All rights reserved', 2: '© 2025 玛沙里·班达尔·本·贾劳伊律师事务所 — 版权所有'},
+  footer_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
+  hero_desc: {0: 'نخبة من المحامين والمستشارين القانونيين المرخّصين، يجمعهم الشغف بالعدالة والالتزام بتحقيق أفضل النتائج لكل عميل.', 1: 'An elite group of licensed lawyers and legal consultants, united by passion for justice and commitment to achieving the best results for every client.', 2: '由持证律师和法律顾问组成的精英团队，以对正义的热情和对每个客户最佳结果的承诺而团结在一起。'},
+  hero_title_first: {0: 'فريقنا', 1: 'Our Team', 2: '我们的'},
+  hero_title_last: {0: 'القانوني', 1: 'Legal Team', 2: '法律团队'},
+  nav_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
+  nav_careers: {0: 'التوظيف', 1: 'Careers', 2: '招聘'},
+  nav_contact: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
+  nav_contracts: {0: 'عقود الشركات', 1: 'Company Contracts', 2: '公司合同'},
+  nav_eservices: {0: 'الخدمات الإلكترونية', 1: 'E-Services', 2: '电子服务'},
+  nav_faq: {0: 'الأسئلة الشائعة', 1: 'FAQ', 2: '常见问题'},
+  nav_services: {0: 'خدماتنا', 1: 'Our Services', 2: '我们的服务'},
+  nav_team: {0: 'فريقنا', 1: 'Our Team', 2: '我们的团队'},
+  team_10_badge_1: {0: 'إدارة العمليات', 1: 'Operations Management', 2: '运营管理'},
+  team_10_badge_2: {0: 'تنسيق الفريق', 1: 'Team Coordination', 2: '团队协调'},
+  team_10_badge_3: {0: 'خدمة الموكلين', 1: 'Client Service', 2: '客户服务'},
+  team_10_desc: {0: 'يُشرف على سير العمليات الإدارية داخل الشركة ويُنسّق بين فريق المحامين والموكلين، مما يضمن تجربة خدمية متكاملة وسلسة.', 1: 'Oversees firm operations and coordinates between the legal team and clients, ensuring a seamless and integrated service experience.', 2: '监督公司运营并协调法律团队与客户之间的关系，确保无缝和综合的服务体验。'},
+  team_10_name: {0: 'وليد عمر الغامدي', 1: 'Waleed Omar Al-Ghamdi', 2: '瓦利德·奥马尔·阿尔-加迪'},
+  team_10_title: {0: 'مدير الشؤون الإدارية', 1: 'Operations Manager', 2: '运营经理'},
+  team_1_badge_1: {0: 'محامية مرخّصة', 1: 'Licensed Attorney', 2: '执业律师'},
+  team_1_badge_2: {0: 'أحوال شخصية', 1: 'Personal Status', 2: '个人身份'},
+  team_1_badge_3: {0: 'قضايا عمالية', 1: 'Labor Cases', 2: '劳动案件'},
+  team_1_desc: {0: 'متخصصة في قضايا الأحوال الشخصية والعمالية، تتميز بالدقة القانونية والالتزام بحقوق موكليها.', 1: 'Specialized in personal status and labor cases, distinguished by legal precision and commitment to clients\' rights.', 2: '专门从事个人身份和劳动案件，以法律精准和对客户权益的承诺而著称。'},
+  team_1_name: {0: 'رغد علي الرشيد', 1: 'Raghad Ali Al-Rasheed', 2: '拉格德·阿里·阿尔-拉希德'},
+  team_1_title: {0: 'محامية مرخّصة', 1: 'Licensed Attorney', 2: '执业律师'},
+  team_2_badge_1: {0: 'محامية مرخّصة', 1: 'Licensed Attorney', 2: '执业律师'},
+  team_2_badge_2: {0: 'قضايا تجارية', 1: 'Commercial Cases', 2: '商业案件'},
+  team_2_badge_3: {0: 'قضايا عقارية', 1: 'Real Estate Cases', 2: '房地产案件'},
+  team_2_desc: {0: 'خلفية قانونية راسخة في القضايا التجارية والعقارية، تقدم خدماتها بمهنية عالية واهتمام دقيق بكل التفاصيل.', 1: 'Strong legal background in commercial and real estate cases, providing services with high professionalism and meticulous attention to detail.', 2: '在商业和房地产案件方面具有强大的法律背景，提供高度专业的服务和对细节的细致关注。'},
+  team_2_name: {0: 'المها يوسف الطحيني', 1: 'Al-Moha Yousef Al-Tahani', 2: '穆哈·尤素夫·阿尔-塔哈尼'},
+  team_2_title: {0: 'محامية مرخّصة', 1: 'Licensed Attorney', 2: '执业律师'},
+  team_3_badge_1: {0: 'استشارات قانونية', 1: 'Legal Consultations', 2: '法律咨询'},
+  team_3_badge_2: {0: 'عقود تجارية', 1: 'Commercial Contracts', 2: '商业合同'},
+  team_3_desc: {0: 'متخصص في قضايا الشركات والعقود التجارية، يمتلك خبرة واسعة في صياغة العقود وحل النزاعات التجارية.', 1: 'Specialized in corporate cases and commercial contracts, with extensive experience in contract drafting and commercial dispute resolution.', 2: '专门从事公司案件和商业合同，在合同草拟和商业纠纷解决方面拥有丰富经验。'},
+  team_3_name: {0: 'خالد إبراهيم السبيعي', 1: 'Khaled Ibrahim Al-Subaiei', 2: '哈立德·易卜拉欣·阿尔-苏贝艾'},
+  team_3_title: {0: 'مستشار قانوني', 1: 'Legal Consultant', 2: '法律顾问'},
+  team_4_badge_1: {0: 'بحث قانوني', 1: 'Legal Research', 2: '法律研究'},
+  team_4_badge_2: {0: 'توثيق', 1: 'Documentation', 2: '文件记录'},
+  team_4_desc: {0: 'يدعم فريق الترافع بالبحث والتوثيق ومتابعة المستجدات التشريعية والقضائية في المملكة العربية السعودية.', 1: 'Supports the litigation team with research, documentation, and monitoring of legislative and judicial developments in Saudi Arabia.', 2: '通过研究、文件记录和监测沙特阿拉伯的立法和司法发展来支持诉讼团队。'},
+  team_4_name: {0: 'سلطان فهد العنزي', 1: 'Sultan Fahad Al-Enazi', 2: '苏尔坦·法赫德·阿尔-恩扎兹'},
+  team_4_title: {0: 'باحث قانوني', 1: 'Legal Researcher', 2: '法律研究员'},
+  team_5_badge_1: {0: 'خدمة العملاء', 1: 'Client Service', 2: '客户服务'},
+  team_5_badge_2: {0: 'تنسيق المواعيد', 1: 'Schedule Coordination', 2: '日程协调'},
+  team_5_desc: {0: 'تتولى استقبال الموكلين وتنسيق مواعيد الاستشارات وضمان حصول كل عميل على تجربة مهنية سلسة واحترافية.', 1: 'Manages client reception, coordinates consultation schedules, and ensures each client receives a smooth and professional experience.', 2: '管理客户接待，协调咨询日程，确保每位客户获得顺畅和专业的体验。'},
+  team_5_name: {0: 'نورة عبدالعزيز المطيري', 1: 'Noura Abdulaziz Al-Motairi', 2: '努拉·阿卜杜勒-阿齐兹·阿尔-莫泰里'},
+  team_5_title: {0: 'مسؤولة خدمة العملاء', 1: 'Client Service Manager', 2: '客户服务经理'},
+  team_6_badge_1: {0: 'محامٍ مرخّص', 1: 'Licensed Attorney', 2: '执业律师'},
+  team_6_badge_2: {0: 'قضايا جنائية', 1: 'Criminal Cases', 2: '刑事案件'},
+  team_6_badge_3: {0: 'ترافع قضائي', 1: 'Court Advocacy', 2: '法庭辩护'},
+  team_6_desc: {0: 'محامٍ متخصص في القضايا الجنائية والجزائية، يمتلك سجلاً حافلاً في الدفاع أمام المحاكم الابتدائية ومحاكم الاستئناف.', 1: 'Specialized in criminal cases, with an impressive record of defense before primary and appellate courts.', 2: '专门从事刑事案件，在初审法院和上诉法院的辩护记录卓越。'},
+  team_6_name: {0: 'فيصل محمد الدوسري', 1: 'Faisal Muhammad Al-Dosari', 2: '费萨尔·穆罕默德·阿尔-多萨里'},
+  team_6_title: {0: 'محامٍ مرخّص', 1: 'Licensed Attorney', 2: '执业律师'},
+  team_7_badge_1: {0: 'ملكية فكرية', 1: 'Intellectual Property', 2: '知识产权'},
+  team_7_badge_2: {0: 'عقود تقنية', 1: 'Tech Contracts', 2: '技术合同'},
+  team_7_badge_3: {0: 'شركات ناشئة', 1: 'Startups', 2: '初创公司'},
+  team_7_desc: {0: 'مستشارة قانونية متخصصة في قضايا الملكية الفكرية وعقود التقنية، تقدم حلولاً قانونية دقيقة للشركات الناشئة والمنشآت التقنية.', 1: 'Legal consultant specializing in intellectual property and tech contracts, providing precise legal solutions for startups and tech enterprises.', 2: '专门从事知识产权和技术合同的法律顾问，为初创公司和技术企业提供精确的法律解决方案。'},
+  team_7_name: {0: 'لمى عبدالرحمن الحربي', 1: 'Lama Abdulrahman Al-Harbi', 2: '拉玛·阿卜杜勒-拉赫曼·阿尔-哈比'},
+  team_7_title: {0: 'مستشارة قانونية', 1: 'Legal Consultant', 2: '法律顾问'},
+  team_8_badge_1: {0: 'قضايا عقارية', 1: 'Real Estate Cases', 2: '房地产案件'},
+  team_8_badge_2: {0: 'عقود إيجار', 1: 'Lease Agreements', 2: '租赁协议'},
+  team_8_badge_3: {0: 'نزاعات تجارية', 1: 'Commercial Disputes', 2: '商业纠纷'},
+  team_8_desc: {0: 'متخصص في المنازعات العقارية وعقود البيع والإيجار التجاري، يُقدّم استشارات محكمة تحمي حقوق الأطراف وتُسرّع حلّ النزاعات.', 1: 'Specialized in real estate disputes and commercial lease agreements, providing sound legal advice that protects parties\' rights and expedites dispute resolution.', 2: '专门从事房地产纠纷和商业租赁协议，提供保护各方权益和加快纠纷解决的法律建议。'},
+  team_8_name: {0: 'عبدالله ناصر الشمري', 1: 'Abdullah Nasser Al-Shammari', 2: '阿卜杜拉·纳塞尔·阿尔-沙马里'},
+  team_8_title: {0: 'مستشار عقاري وتجاري', 1: 'Real Estate & Commercial Advisor', 2: '房地产及商业顾问'},
+  team_9_badge_1: {0: 'بحث قانوني', 1: 'Legal Research', 2: '法律研究'},
+  team_9_badge_2: {0: 'مذكرات قضائية', 1: 'Court Memoranda', 2: '法庭备忘录'},
+  team_9_badge_3: {0: 'سوابق قضائية', 1: 'Case Precedents', 2: '案例先例'},
+  team_9_desc: {0: 'باحثة قانونية دقيقة تدعم فريق القضايا بالبحث التشريعي والسوابق القضائية وإعداد المذكرات القانونية بأعلى مستويات الجودة.', 1: 'Meticulous legal researcher supporting the litigation team with legislative research, case precedents, and legal memoranda of the highest quality.', 2: '细致的法律研究员，通过立法研究、案例先例和最高质量的法律备忘录支持诉讼团队。'},
+  team_9_name: {0: 'ريم سعد القحطاني', 1: 'Reem Saad Al-Qahtani', 2: '里姆·萨阿德·阿尔-卡赫塔尼'},
+  team_9_title: {0: 'باحثة قانونية', 1: 'Legal Researcher', 2: '法律研究员'},
+  team_heading: {0: 'كوادرنا القانونية', 1: 'Our Legal Team', 2: '我们的法律团队'},
+  team_tag: {0: 'أعضاء الفريق', 1: 'Team Members', 2: '团队成员'},
+  whatsapp_button: {0: 'تواصل عبر واتساب', 1: 'Contact via WhatsApp', 2: '通过WhatsApp联系'},
+};
+</script>
+<script src="lang.js"></script>
+    </body>
 </html>
