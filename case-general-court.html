@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+
+<html dir="rtl" lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قضايا المحكمة العامة — شركة مشاري بندر بن جلوي للمحاماة</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>قضايا المحكمة العامة — شركة مشاري بندر بن جلوي للمحاماة</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
         :root { --navy:#1B2C6B; --navy-dark:#111d4a; --navy-mid:#223580; --gold:#B8935A; --gold-light:#d4aa72; --gold-pale:#f5ede0; --white:#ffffff; --off-white:#f8f6f2; --gray:#6b7280; --gray-dark:#374151; --border:#e5e1d9; }
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
         html{scroll-behavior:smooth;overflow-x:hidden}
@@ -94,206 +95,236 @@
         </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="logo.png" alt="شعار شركة مشاري بندر بن جلوي">
-                <div>
-                    <div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
-                    <div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
-                </div>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html#services" data-i18n="nav_services">خدماتنا</a></li>
-                <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
-                <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-                <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
-                <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
-                <li><a href="e-services.html" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
-                <li><a href="careers.html" data-i18n="nav_careers">التوظيف</a></li>
-                <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
-            </ul>
-            <div style="display:flex;align-items:center;gap:10px;">
-                <div class="lang-drop" id="langDrop">
-                    <button class="lang-drop-btn" onclick="toggleLangDrop()" id="langDropBtn">🇸🇦</button>
-                    <div class="lang-drop-menu" id="langDropMenu">
-                        <button onclick="setLang(0);toggleLangDrop()" data-lang="0">🇸🇦 العربية</button>
-                        <button onclick="setLang(1);toggleLangDrop()" data-lang="1">🇬🇧 English</button>
-                        <button onclick="setLang(2);toggleLangDrop()" data-lang="2">🇨🇳 中文</button>
-                    </div>
-                </div>
-                <a href="https://wa.me/966533532153" target="_blank" rel="noopener" class="nav-cta">احجز استشارة</a>
-                <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div class="mobile-drawer" id="drawer">
-        <ul>
-            <li><a href="index.html#services" data-i18n="nav_services" data-i18n="nav_services">خدماتنا</a></li>
-            <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
-            <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-            <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
-            <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
-            <li><a href="e-services.html" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
-            <li><a href="careers.html" data-i18n="nav_careers">التوظيف</a></li>
-            <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
-            <li><a href="https://wa.me/966533532153">احجز استشارة</a></li>
-        </ul>
-    </div>
-
-    <section class="page-hero">
-        <div class="page-hero-content">
-            <div class="page-breadcrumb">
-                <a href="index.html">الرئيسية</a>
-                <span>/</span>
-                <a href="#">القضايا القانونية</a>
-                <span>/</span>
-                <span>المحكمة العامة</span>
-            </div>
-            <h1>قضايا <em>المحكمة العامة</em></h1>
-            <p class="page-hero-desc">تمثيل قانوني أمام المحاكم العامة في القضايا المدنية والحقوقية وقضايا الديون والإيجارات</p>
-        </div>
-    </section>
-
-    <section class="section-pad">
-        <div class="article-body">
-            <h2>مقدمة عن قضايا المحكمة العامة</h2>
-            <p>تعتبر المحاكم العامة بمثابة الجهات القضائية الأساسية للنظر في القضايا المدنية والحقوقية في المملكة العربية السعودية. هذه المحاكم تتولى النظر في مختلف أنواع النزاعات التي تحدث بين الأفراد والشركات والجهات الحكومية في الأمور المدنية. تتمتع المحاكم العامة باختصاص واسع وتغطي جميع القضايا المدنية التي لم تُعط اختصاصاً محددaً لمحاكم متخصصة أخرى.</p>
-            <p>شركة مشاري بندر بن جلوي للمحاماة توفر خدمات قانونية متكاملة في القضايا المدنية أمام المحاكم العامة، حيث يمتلك فريقنا خبرة عملية واسعة في التعامل مع أنواع مختلفة من النزاعات المدنية والحقوقية بكفاءة واحترافية عالية.</p>
-
-            <h2>أنواع القضايا المدنية أمام المحاكم العامة</h2>
-            <p>تتعدد أنواع القضايا التي تنظر فيها المحاكم العامة:</p>
-            <h3>قضايا الديون والمطالبات المالية</h3>
-            <p>تشمل جميع النزاعات المتعلقة بالديون والمطالبات المالية بين الأفراد والشركات. قد تتعلق بقروض بنكية أو مبالغ مالية مستحقة أو مطالبات تجارية. هذه النوعية من القضايا تتطلب إثباتاً قوياً من خلال عقود أو تحويلات بنكية أو شيكات.</p>
-            <h3>قضايا الإيجارات السكنية والتجارية</h3>
-            <p>تتعلق بالنزاعات بين المالك والمستأجر حول دفع الإيجار أو إنهاء عقد الإيجار. القانون السعودي يحمي حقوق كل من المالك والمستأجر ويحدد الالتزامات والحقوق المتبادلة بينهما.</p>
-            <h3>قضايا الضمان والكفالة</h3>
-            <p>تشمل النزاعات المتعلقة بالكفالات والضمانات في العقود المختلفة. قد يحتاج الدائن إلى المطالبة بتنفيذ الضمان في حالة عدم استيفاء الدين من المدين الأساسي.</p>
-            <h3>الدعاوى المدنية العامة</h3>
-            <p>تشمل جميع أنواع الدعاوى المدنية الأخرى التي لم تُعط اختصاصاً محددaً لمحاكم متخصصة، مثل دعاوى المسؤولية المدنية والتعويضات عن الأضرار.</p>
-            <h3>قضايا إثبات الحقوق والملكية</h3>
-            <p>تتعلق بإثبات ملكية العقارات أو المنقولات أو حقوق معينة. تتطلب هذه القضايا وثائق وأدلة قوية تثبت الملكية أو الحق المطالب به.</p>
-
-            <h2>الأساس القانوني</h2>
-            <p>تستند قضايا المحاكم العامة على عدة أنظمة وتشريعات:</p>
-            <ul>
-                <li><strong>نظام المرافعات الشرعية:</strong> يحدد الإجراءات والقواعس الواجب اتباعها في الدعاوى المدنية</li>
-                <li><strong>نظام التحكيم (1433هـ):</strong> يوفر خياراً بديلاً للتقاضي من خلال التحكيم</li>
-                <li><strong>نظام تسجيل العقارات:</strong> ينظم إجراءات تسجيل العقارات والحقوق العينية</li>
-                <li><strong>نظام إثبات الحقوق:</strong> يحدد طرق وأدلة الإثبات في الدعاوى المدنية</li>
-            </ul>
-
-            <h2>أهمية الاستعانة بمحام متخصص</h2>
-            <p>إن الاستعانة بمحام متخصص في القضايا المدنية أمر حتمي لضمان حماية حقوقك. المحامي المتخصص يمكنه تقييم قوة قضيتك وتحديد أفضل استراتيجية للدفاع عنها. كما أن إعداد الأوراق القانونية والمذكرات يتطلب دقة عالية وخبرة في الصياغة القانونية، والمحامي الكفء يضمن أن جميع الإجراءات تتم وفقاً للقانون دون أخطاء قد تؤثر على القضية.</p>
-
-            <h2>إجراءات التقاضي أمام المحاكم العامة</h2>
-            <p>تتبع القضايا المدنية إجراءات محددة يجب اتباعها بدقة:</p>
-            <p>تبدأ بإعداد صحيفة الدعوى الموثقة مع جميع المستندات والأدلة الداعمة. يجب أن تكون صحيفة الدعوى واضحة ومفصلة وتحدد بدقة المطالبة والأسباب القانونية لها.</p>
-            <p>يتم تسجيل الدعوى لدى المحكمة المختصة مع دفع الرسوم المقررة. تحدد المحكمة موعداً للجلسة الأولى وتبلغ الطرف الآخر بالدعوى.</p>
-            <p>في جلسات المحكمة، يتم تبادل المذكرات والأدلة بين الطرفين. قد يطلب من الطرفين تقديم مستندات إضافية أو شهود، وقد تستدعي المحكمة خبراء للإدلاء برأيهم في بعض المسائل الفنية.</p>
-            <p>بعد انتهاء المرافعة، تصدر المحكمة حكماً في الموضوع. يحق لأي من الطرفين المتضرر من الحكم استئنافه أمام محكمة الاستئناف خلال مدة محددة.</p>
-
-            <h2>خدمات شركة مشاري بندر بن جلوي</h2>
-            <p>توفر شركتنا خدمات شاملة في القضايا المدنية:</p>
-            <ul>
-                <li>الاستشارات القانونية المتخصصة في القضايا المدنية المختلفة</li>
-                <li>إعداد صحائف الدعاوى والمذكرات القانونية بدقة واحترافية</li>
-                <li>التمثيل الكامل أمام المحاكم العامة في جميع مراحل التقاضي</li>
-                <li>متابعة القضايا وتنسيق الإجراءات مع المحكمة</li>
-                <li>استئناف الأحكام والطعن فيها بالطرق القانونية المتاحة</li>
-                <li>تنفيذ الأحكام واستيفاء الحقوق المقررة</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="section-pad alt">
-        <div class="article-body">
-            <h2 style="text-align:center;margin-bottom:32px;">الأساس القانوني والأنظمة ذات الصلة</h2>
-            <div class="info-box">
-                <h3>الأنظمة والتشريعات الرئيسية</h3>
-                <ul>
-                    <li>نظام المرافعات الشرعية والإجراءات المدنية</li>
-                    <li>نظام التحكيم الصادر 1433هـ</li>
-                    <li>نظام تسجيل العقارات والحقوق العينية</li>
-                    <li>نظام إثبات الحقوق والأدلة القانونية</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-pad">
-        <div class="article-body">
-            <h2 style="text-align:center;margin-bottom:32px;">مراحل الإجراءات المدنية</h2>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-num">1</div>
-                    <h4>إعداد صحيفة الدعوى والوثائق</h4>
-                    <p>تحضير صحيفة دعوى موثقة وصحيحة مع جميع المستندات والأدلة الداعمة لمطالبتك بدقة عالية.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">2</div>
-                    <h4>تسجيل الدعوى ودفع الرسوم</h4>
-                    <p>تسجيل الدعوى لدى المحكمة المختصة ودفع الرسوم القضائية المقررة والحصول على رقم الدعوى.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">3</div>
-                    <h4>المرافعة وتبادل المذكرات</h4>
-                    <p>حضور جلسات المحكمة وتقديم الحجج والأدلة والمذكرات القانونية والرد على دفوع الخصم.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">4</div>
-                    <h4>الحكم والتنفيذ</h4>
-                    <p>صدور الحكم من المحكمة وتنفيذه، مع إمكانية الاستئناف إذا كان هناك ظلم من الحكم.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <h2>هل لديك قضية مدنية أمام المحكمة العامة؟</h2>
-        <p>فريقنا المتخصص في القضايا المدنية يوفر لك تمثيلاً قانونياً قوياً وفعالاً</p>
-        <div class="cta-btns">
-            <a href="https://wa.me/966533532153" class="btn-gold" target="_blank" rel="noopener">استشارة قانونية مدنية</a>
-            <a href="index.html#booking" class="btn-outline">تواصل معنا</a>
-        </div>
-    </section>
-
-    <footer>
-        <p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
-        <p style="margin-top:8px;"><a href="index.html" data-i18n="footer_home">الرئيسية</a></p>
-    </footer>
-    <a href="https://wa.me/966533532153" class="whatsapp-fab" target="_blank" rel="noopener" title="تواصل عبر واتساب">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-    </a>
-
-
-    <script>
+<nav class="navbar">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">
+<img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png"/>
+<div>
+<div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
+</div>
+</a>
+<ul class="nav-links">
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+<div style="display:flex;align-items:center;gap:10px;">
+<div class="lang-drop" id="langDrop">
+<button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
+<div class="lang-drop-menu" id="langDropMenu">
+<button data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦 العربية</button>
+<button data-lang="1" onclick="setLang(1);toggleLangDrop()">🇬🇧 English</button>
+<button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
+</div>
+</div>
+<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
+<div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
+<span></span><span></span><span></span>
+</div>
+</div>
+</div>
+</nav>
+<div class="mobile-drawer" id="drawer">
+<ul>
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+<li><a href="https://wa.me/966533532153">احجز استشارة</a></li>
+</ul>
+</div>
+<section class="page-hero">
+<div class="page-hero-content">
+<div class="page-breadcrumb">
+<a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
+<span>/</span>
+<a data-i18n="breadcrumb_legal" href="#">القضايا القانونية</a>
+<span>/</span>
+<span data-i18n="breadcrumb_current">المحكمة العامة</span>
+</div>
+<h1 data-i18n="hero_h1">قضايا <em>المحكمة العامة</em></h1>
+<p class="page-hero-desc" data-i18n="hero_desc">تمثيل قانوني أمام المحاكم العامة في القضايا المدنية والحقوقية وقضايا الديون والإيجارات</p>
+</div>
+</section>
+<section class="section-pad">
+<div class="article-body">
+<h2 data-i18n="section_h2_0">مقدمة عن قضايا المحكمة العامة</h2>
+<p data-i18n="p_0">تعتبر المحاكم العامة بمثابة الجهات القضائية الأساسية للنظر في القضايا المدنية والحقوقية في المملكة العربية السعودية. هذه المحاكم تتولى النظر في مختلف أنواع النزاعات التي تحدث بين الأفراد والشركات والجهات الحكومية في الأمور المدنية. تتمتع المحاكم العامة باختصاص واسع وتغطي جميع القضايا المدنية التي لم تُعط اختصاصاً محددaً لمحاكم متخصصة أخرى.</p>
+<p data-i18n="p_1">شركة مشاري بندر بن جلوي للمحاماة توفر خدمات قانونية متكاملة في القضايا المدنية أمام المحاكم العامة، حيث يمتلك فريقنا خبرة عملية واسعة في التعامل مع أنواع مختلفة من النزاعات المدنية والحقوقية بكفاءة واحترافية عالية.</p>
+<h2 data-i18n="section_h2_1">أنواع القضايا المدنية أمام المحاكم العامة</h2>
+<p data-i18n="p_2">تتعدد أنواع القضايا التي تنظر فيها المحاكم العامة:</p>
+<h3 data-i18n="section_h3_0">قضايا الديون والمطالبات المالية</h3>
+<p data-i18n="p_3">تشمل جميع النزاعات المتعلقة بالديون والمطالبات المالية بين الأفراد والشركات. قد تتعلق بقروض بنكية أو مبالغ مالية مستحقة أو مطالبات تجارية. هذه النوعية من القضايا تتطلب إثباتاً قوياً من خلال عقود أو تحويلات بنكية أو شيكات.</p>
+<h3 data-i18n="section_h3_1">قضايا الإيجارات السكنية والتجارية</h3>
+<p data-i18n="p_4">تتعلق بالنزاعات بين المالك والمستأجر حول دفع الإيجار أو إنهاء عقد الإيجار. القانون السعودي يحمي حقوق كل من المالك والمستأجر ويحدد الالتزامات والحقوق المتبادلة بينهما.</p>
+<h3 data-i18n="section_h3_2">قضايا الضمان والكفالة</h3>
+<p data-i18n="p_5">تشمل النزاعات المتعلقة بالكفالات والضمانات في العقود المختلفة. قد يحتاج الدائن إلى المطالبة بتنفيذ الضمان في حالة عدم استيفاء الدين من المدين الأساسي.</p>
+<h3 data-i18n="section_h3_3">الدعاوى المدنية العامة</h3>
+<p data-i18n="p_6">تشمل جميع أنواع الدعاوى المدنية الأخرى التي لم تُعط اختصاصاً محددaً لمحاكم متخصصة، مثل دعاوى المسؤولية المدنية والتعويضات عن الأضرار.</p>
+<h3 data-i18n="section_h3_4">قضايا إثبات الحقوق والملكية</h3>
+<p data-i18n="p_7">تتعلق بإثبات ملكية العقارات أو المنقولات أو حقوق معينة. تتطلب هذه القضايا وثائق وأدلة قوية تثبت الملكية أو الحق المطالب به.</p>
+<h2 data-i18n="section_h2_2">الأساس القانوني</h2>
+<p data-i18n="p_8">تستند قضايا المحاكم العامة على عدة أنظمة وتشريعات:</p>
+<ul>
+<li data-i18n="li_0"><strong>نظام المرافعات الشرعية:</strong> يحدد الإجراءات والقواعس الواجب اتباعها في الدعاوى المدنية</li>
+<li data-i18n="li_1"><strong>نظام التحكيم (1433هـ):</strong> يوفر خياراً بديلاً للتقاضي من خلال التحكيم</li>
+<li data-i18n="li_2"><strong>نظام تسجيل العقارات:</strong> ينظم إجراءات تسجيل العقارات والحقوق العينية</li>
+<li data-i18n="li_3"><strong>نظام إثبات الحقوق:</strong> يحدد طرق وأدلة الإثبات في الدعاوى المدنية</li>
+</ul>
+<h2 data-i18n="section_h2_3">أهمية الاستعانة بمحام متخصص</h2>
+<p data-i18n="p_9">إن الاستعانة بمحام متخصص في القضايا المدنية أمر حتمي لضمان حماية حقوقك. المحامي المتخصص يمكنه تقييم قوة قضيتك وتحديد أفضل استراتيجية للدفاع عنها. كما أن إعداد الأوراق القانونية والمذكرات يتطلب دقة عالية وخبرة في الصياغة القانونية، والمحامي الكفء يضمن أن جميع الإجراءات تتم وفقاً للقانون دون أخطاء قد تؤثر على القضية.</p>
+<h2 data-i18n="section_h2_4">إجراءات التقاضي أمام المحاكم العامة</h2>
+<p data-i18n="p_10">تتبع القضايا المدنية إجراءات محددة يجب اتباعها بدقة:</p>
+<p data-i18n="p_11">تبدأ بإعداد صحيفة الدعوى الموثقة مع جميع المستندات والأدلة الداعمة. يجب أن تكون صحيفة الدعوى واضحة ومفصلة وتحدد بدقة المطالبة والأسباب القانونية لها.</p>
+<p data-i18n="p_12">يتم تسجيل الدعوى لدى المحكمة المختصة مع دفع الرسوم المقررة. تحدد المحكمة موعداً للجلسة الأولى وتبلغ الطرف الآخر بالدعوى.</p>
+<p data-i18n="p_13">في جلسات المحكمة، يتم تبادل المذكرات والأدلة بين الطرفين. قد يطلب من الطرفين تقديم مستندات إضافية أو شهود، وقد تستدعي المحكمة خبراء للإدلاء برأيهم في بعض المسائل الفنية.</p>
+<p data-i18n="p_14">بعد انتهاء المرافعة، تصدر المحكمة حكماً في الموضوع. يحق لأي من الطرفين المتضرر من الحكم استئنافه أمام محكمة الاستئناف خلال مدة محددة.</p>
+<h2 data-i18n="section_h2_5">خدمات شركة مشاري بندر بن جلوي</h2>
+<p data-i18n="p_15">توفر شركتنا خدمات شاملة في القضايا المدنية:</p>
+<ul>
+<li data-i18n="li_4">الاستشارات القانونية المتخصصة في القضايا المدنية المختلفة</li>
+<li data-i18n="li_5">إعداد صحائف الدعاوى والمذكرات القانونية بدقة واحترافية</li>
+<li data-i18n="li_6">التمثيل الكامل أمام المحاكم العامة في جميع مراحل التقاضي</li>
+<li data-i18n="li_7">متابعة القضايا وتنسيق الإجراءات مع المحكمة</li>
+<li data-i18n="li_8">استئناف الأحكام والطعن فيها بالطرق القانونية المتاحة</li>
+<li data-i18n="li_9">تنفيذ الأحكام واستيفاء الحقوق المقررة</li>
+</ul>
+</div>
+</section>
+<section class="section-pad alt">
+<div class="article-body">
+<h2 style="text-align:center;margin-bottom:32px;">الأساس القانوني والأنظمة ذات الصلة</h2>
+<div class="info-box">
+<h3 data-i18n="infobox_h3">الأنظمة والتشريعات الرئيسية</h3>
+<ul>
+<li data-i18n="infobox_li_0">نظام المرافعات الشرعية والإجراءات المدنية</li>
+<li data-i18n="infobox_li_1">نظام التحكيم الصادر 1433هـ</li>
+<li data-i18n="infobox_li_2">نظام تسجيل العقارات والحقوق العينية</li>
+<li data-i18n="infobox_li_3">نظام إثبات الحقوق والأدلة القانونية</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="section-pad">
+<div class="article-body">
+<h2 style="text-align:center;margin-bottom:32px;">مراحل الإجراءات المدنية</h2>
+<div class="steps-grid">
+<div class="step-card">
+<div class="step-num">1</div>
+<h4 data-i18n="step_h4_0">إعداد صحيفة الدعوى والوثائق</h4>
+<p data-i18n="step_p_0">تحضير صحيفة دعوى موثقة وصحيحة مع جميع المستندات والأدلة الداعمة لمطالبتك بدقة عالية.</p>
+</div>
+<div class="step-card">
+<div class="step-num">2</div>
+<h4 data-i18n="step_h4_1">تسجيل الدعوى ودفع الرسوم</h4>
+<p data-i18n="step_p_1">تسجيل الدعوى لدى المحكمة المختصة ودفع الرسوم القضائية المقررة والحصول على رقم الدعوى.</p>
+</div>
+<div class="step-card">
+<div class="step-num">3</div>
+<h4 data-i18n="step_h4_2">المرافعة وتبادل المذكرات</h4>
+<p data-i18n="step_p_2">حضور جلسات المحكمة وتقديم الحجج والأدلة والمذكرات القانونية والرد على دفوع الخصم.</p>
+</div>
+<div class="step-card">
+<div class="step-num">4</div>
+<h4 data-i18n="step_h4_3">الحكم والتنفيذ</h4>
+<p data-i18n="step_p_3">صدور الحكم من المحكمة وتنفيذه، مع إمكانية الاستئناف إذا كان هناك ظلم من الحكم.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="cta-section">
+<h2 data-i18n="cta_h2">هل لديك قضية مدنية أمام المحكمة العامة؟</h2>
+<p data-i18n="cta_p">فريقنا المتخصص في القضايا المدنية يوفر لك تمثيلاً قانونياً قوياً وفعالاً</p>
+<div class="cta-btns">
+<a class="btn-gold" data-i18n="cta_btn_0" href="https://wa.me/966533532153" rel="noopener" target="_blank">استشارة قانونية مدنية</a>
+<a class="btn-outline" data-i18n="cta_btn_1" href="index.html#booking">تواصل معنا</a>
+</div>
+</section>
+<footer>
+<p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+<p style="margin-top:8px;"><a data-i18n="footer_home" href="index.html">الرئيسية</a></p>
+</footer>
+<a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank" title="تواصل عبر واتساب">
+<svg fill="white" height="28" viewbox="0 0 24 24" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path></svg>
+</a>
+ <script>
 const pageTranslations = {
-  breadcrumb_current: {0: 'قضايا المحكمة العامة', 1: 'General Court Cases', 2: '普通法院案件'},
   breadcrumb_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  breadcrumb_services: {0: 'الخدمات', 1: 'Services', 2: '服务'},
-  cta_button: {0: 'استشر معنا الآن', 1: 'Consult Now', 2: '现在咨询'},
-  footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Mashary Bandar Bin Jalawi Law Firm — All rights reserved', 2: '© 2025 玛沙里·班达尔·本·贾劳伊律师事务所 — 版权所有'},
+  breadcrumb_legal: {0: 'القضايا القانونية', 1: 'Legal Cases', 2: '法律案件'},
+  breadcrumb_current: {0: 'المحكمة العامة', 1: 'General Court', 2: '普通法院'},
+  hero_h1: {0: 'قضايا المحكمة العامة', 1: 'General Court Cases', 2: '普通法院案件'},
+  hero_desc: {0: 'تمثيل قانوني أمام المحاكم العامة في القضايا المدنية والحقوقية وقضايا الديون والإيجارات', 1: 'Legal representation before general courts in civil, rights, debt, and tenancy cases', 2: '在普通法院就民事、权利、债务和租赁案件提供法律代理'},
+  section_h2_0: {0: 'مقدمة عن قضايا المحكمة العامة', 1: 'Introduction to General Court Cases', 2: '普通法院案件简介'},
+  p_0: {0: 'تعتبر المحاكم العامة بمثابة الجهات القضائية الأساسية للنظر في القضايا المدنية والحقوقية في المملكة العربية السعودية.', 1: 'General courts serve as the primary judicial authority for hearing civil and rights cases in Saudi Arabia.', 2: '普通法院是沙特阿拉伯审理民事和权利案件的主要司法机构。'},
+  p_1: {0: 'شركة مشاري بندر بن جلوي للمحاماة توفر خدمات قانونية متكاملة في القضايا المدنية أمام المحاكم العامة.', 1: 'Meshary Bin Bandar Bin Jaloui Law Firm provides integrated legal services in civil cases before general courts.', 2: '美沙里·本·班达尔·本·贾卢伊律师事务所在普通法院的民事案件中提供全面的法律服务。'},
+  section_h2_1: {0: 'أنواع القضايا المدنية أمام المحاكم العامة', 1: 'Types of Civil Cases Before General Courts', 2: '普通法院的民事案件类型'},
+  p_2: {0: 'تتعدد أنواع القضايا التي تنظر فيها المحاكم العامة.', 1: 'General courts handle many types of cases.', 2: '普通法院处理多种类型的案件。'},
+  section_h3_0: {0: 'قضايا الديون والمطالبات المالية', 1: 'Debt and Financial Claims Cases', 2: '债务和财务索赔案件'},
+  p_3: {0: 'تشمل جميع النزاعات المتعلقة بالديون والمطالبات المالية بين الأفراد والشركات. قد تتعلق بقروض أو عقود أو التزامات مالية لم يتم الوفاء بها.', 1: 'These include all disputes related to debts and financial claims between individuals and companies. They may relate to loans, contracts, or unfulfilled financial obligations.', 2: '这包括个人和公司之间所有与债务和财务索赔相关的争议，可能涉及贷款、合同或未履行的财务义务。'},
+  section_h3_1: {0: 'قضايا الإيجارات السكنية والتجارية', 1: 'Residential and Commercial Tenancy Cases', 2: '住宅和商业租赁案件'},
+  p_4: {0: 'تتعلق بالنزاعات بين المالك والمستأجر حول دفع الإيجار أو إنهاء عقد الإيجار. القانون السعودي ينظم هذه العلاقات بشكل واضح وعادل.', 1: 'These relate to disputes between landlords and tenants over rent payment or lease termination. Saudi law regulates these relationships in a clear and fair manner.', 2: '这涉及房东和租户之间关于租金支付或终止租约的争议。沙特法律以清晰公正的方式规范这些关系。'},
+  section_h3_2: {0: 'قضايا الضمان والكفالة', 1: 'Guarantee and Surety Cases', 2: '担保和保证案件'},
+  p_5: {0: 'تشمل النزاعات المتعلقة بالكفالات والضمانات في العقود المختلفة. قد يحتاج الدائن إلى المطالبة بالكفيل لاستيفاء الدين.', 1: 'These include disputes related to guarantees and sureties in various contracts. A creditor may need to pursue the guarantor to collect the debt.', 2: '这包括与各种合同中的担保和保证相关的争议。债权人可能需要追索担保人以收回债务。'},
+  section_h3_3: {0: 'الدعاوى المدنية العامة', 1: 'General Civil Lawsuits', 2: '一般民事诉讼'},
+  p_6: {0: 'تشمل جميع أنواع الدعاوى المدنية الأخرى التي لم تُعط اختصاصاً محددًا لمحاكم متخصصة، مثل دعاوى المسؤولية المدنية والضرر.', 1: 'These include all other types of civil lawsuits not assigned to specialized courts, such as civil liability and tort claims.', 2: '这包括未分配给专业法庭的所有其他类型的民事诉讼，如民事责任和侵权索赔。'},
+  section_h3_4: {0: 'قضايا إثبات الحقوق والملكية', 1: 'Rights and Ownership Proof Cases', 2: '权利和所有权证明案件'},
+  p_7: {0: 'تتعلق بإثبات ملكية العقارات أو المنقولات أو حقوق معينة. تتطلب هذه القضايا وثائق وأدلة قوية ومحامياً متخصصاً.', 1: 'These relate to proving ownership of real estate, movables, or specific rights. These cases require strong documents, evidence, and a specialized lawyer.', 2: '这涉及证明不动产、动产或特定权利的所有权。这些案件需要有力的文件、证据和专业律师。'},
+  section_h2_2: {0: 'الأساس القانوني', 1: 'Legal Basis', 2: '法律基础'},
+  p_8: {0: 'تستند قضايا المحاكم العامة على عدة أنظمة وتشريعات مهمة.', 1: 'General court cases are based on several important regulations and laws.', 2: '普通法院案件以几部重要法规和法律为基础。'},
+  li_0: {0: 'نظام المرافعات الشرعية: يحدد الإجراءات والقواعد الواجب اتباعها في الدعاوى المدنية', 1: 'Sharia Litigation Procedure Law: Defines the procedures and rules to be followed in civil lawsuits', 2: '伊斯兰诉讼程序法：规定民事诉讼中应遵循的程序和规则'},
+  li_1: {0: 'نظام التحكيم (1433هـ): يوفر خياراً بديلاً للتقاضي من خلال التحكيم', 1: 'Arbitration Law (1433H): Provides an alternative to litigation through arbitration', 2: '仲裁法（1433H）：通过仲裁提供诉讼的替代方案'},
+  li_2: {0: 'نظام تسجيل العقارات: ينظم إجراءات تسجيل العقارات والحقوق العينية', 1: 'Real Estate Registration Law: Regulates real estate and real rights registration procedures', 2: '不动产登记法：规范不动产和物权登记程序'},
+  li_3: {0: 'نظام إثبات الحقوق: يحدد طرق وأدلة الإثبات في الدعاوى المدنية', 1: 'Rights Proof Law: Defines methods and evidence of proof in civil lawsuits', 2: '权利证明法：规定民事诉讼中的证明方法和证据'},
+  section_h2_3: {0: 'أهمية الاستعانة بمحام متخصص', 1: 'The Importance of Hiring a Specialized Lawyer', 2: '聘请专业律师的重要性'},
+  p_9: {0: 'إن الاستعانة بمحام متخصص في القضايا المدنية أمر حتمي لضمان حماية حقوقك. المحامي المتخصص يمتلك المعرفة والخبرة اللازمة للتنقل في الإجراءات القضائية المعقدة.', 1: 'Hiring a specialized civil lawyer is essential to ensure the protection of your rights. A specialized lawyer possesses the knowledge and experience necessary to navigate complex judicial procedures.', 2: '聘请专业民事律师对确保保护您的权利至关重要。专业律师具备驾驭复杂司法程序所需的知识和经验。'},
+  section_h2_4: {0: 'إجراءات التقاضي أمام المحاكم العامة', 1: 'Litigation Procedures Before General Courts', 2: '普通法院诉讼程序'},
+  p_10: {0: 'تتبع القضايا المدنية إجراءات محددة يجب اتباعها بدقة.', 1: 'Civil cases follow specific procedures that must be followed precisely.', 2: '民事案件遵循必须精确遵守的特定程序。'},
+  p_11: {0: 'تبدأ بإعداد صحيفة الدعوى الموثقة مع جميع المستندات والأدلة الداعمة. يجب أن تكون صحيفة الدعوى واضحة ومحددة وتتضمن جميع العناصر القانونية اللازمة.', 1: 'It begins with preparing a documented statement of claim with all supporting documents and evidence. The statement of claim must be clear, specific, and include all necessary legal elements.', 2: '从准备有据可查的起诉书开始，并附上所有支持文件和证据。起诉书必须清晰、具体，并包含所有必要的法律要素。'},
+  p_12: {0: 'يتم تسجيل الدعوى لدى المحكمة المختصة مع دفع الرسوم المقررة. تحدد المحكمة موعداً للجلسة الأولى وتبلغ جميع الأطراف.', 1: 'The case is registered with the competent court along with payment of prescribed fees. The court sets a date for the first session and notifies all parties.', 2: '案件在主管法院登记并缴纳规定费用。法庭确定第一次庭审日期并通知所有各方。'},
+  p_13: {0: 'في جلسات المحكمة، يتم تبادل المذكرات والأدلة بين الطرفين. قد يطلب من الطرفين تقديم مستندات إضافية أو إثبات ادعاءاتهم.', 1: 'In court sessions, memoranda and evidence are exchanged between the parties. The parties may be asked to submit additional documents or prove their claims.', 2: '在法庭庭审中，双方交换备忘录和证据。双方可能被要求提交额外文件或证明其主张。'},
+  p_14: {0: 'بعد انتهاء المرافعة، تصدر المحكمة حكماً في الموضوع. يحق لأي من الطرفين المتضرر من الحكم استئنافه أمام محكمة الاستئناف.', 1: 'After pleadings conclude, the court issues a verdict on the merits. Either party aggrieved by the verdict has the right to appeal before the Court of Appeal.', 2: '辩论结束后，法庭对案件实质作出裁决。对裁决感到受损的任一方有权向上诉法院提起上诉。'},
+  section_h2_5: {0: 'خدمات شركة مشاري بندر بن جلوي', 1: 'Services of Meshary Bin Bandar Bin Jaloui Firm', 2: '美沙里·本·班达尔·本·贾卢伊律师事务所服务'},
+  p_15: {0: 'توفر شركتنا خدمات شاملة في القضايا المدنية:', 1: 'Our firm provides comprehensive services in civil cases:', 2: '我们的律师事务所提供全面的民事案件服务：'},
+  li_4: {0: 'الاستشارات القانونية المتخصصة في القضايا المدنية المختلفة', 1: 'Specialized legal consultations in various civil cases', 2: '各类民事案件的专业法律咨询'},
+  li_5: {0: 'إعداد صحائف الدعاوى والمذكرات القانونية بدقة واحترافية', 1: 'Preparing statements of claim and legal memoranda with precision and professionalism', 2: '以精确性和专业性准备起诉书和法律备忘录'},
+  li_6: {0: 'التمثيل الكامل أمام المحاكم العامة في جميع مراحل التقاضي', 1: 'Full representation before general courts in all stages of litigation', 2: '在所有诉讼阶段在普通法院前的全面代理'},
+  li_7: {0: 'متابعة القضايا وتنسيق الإجراءات مع المحكمة', 1: 'Following up on cases and coordinating procedures with the court', 2: '跟进案件并与法庭协调程序'},
+  li_8: {0: 'استئناف الأحكام والطعن فيها بالطرق القانونية المتاحة', 1: 'Appealing judgments and challenging them through available legal means', 2: '通过可用的法律手段对判决提出上诉和质疑'},
+  li_9: {0: 'تنفيذ الأحكام واستيفاء الحقوق المقررة', 1: 'Enforcing judgments and claiming legally established rights', 2: '执行判决并主张依法确立的权利'},
+  infobox_h3: {0: 'الأنظمة والتشريعات الرئيسية', 1: 'Key Laws and Regulations', 2: '主要法律法规'},
+  infobox_li_0: {0: 'نظام المرافعات الشرعية والإجراءات المدنية', 1: 'Sharia Litigation and Civil Procedures Law', 2: '伊斯兰诉讼和民事程序法'},
+  infobox_li_1: {0: 'نظام التحكيم الصادر 1433هـ', 1: 'Arbitration Law issued 1433H', 2: '1433H颁布的仲裁法'},
+  infobox_li_2: {0: 'نظام تسجيل العقارات والحقوق العينية', 1: 'Real Estate and Real Rights Registration Law', 2: '不动产和物权登记法'},
+  infobox_li_3: {0: 'نظام إثبات الحقوق والأدلة القانونية', 1: 'Rights Proof and Legal Evidence Law', 2: '权利证明和法律证据法'},
+  step_h4_0: {0: 'إعداد صحيفة الدعوى والوثائق', 1: 'Preparing the Statement of Claim and Documents', 2: '准备起诉书和文件'},
+  step_p_0: {0: 'تحضير صحيفة دعوى موثقة وصحيحة مع جميع المستندات والأدلة الداعمة لمطالبتك بدقة عالية.', 1: 'Preparing a documented and accurate statement of claim with all supporting documents and evidence for your claim with high precision.', 2: '以高度精确性准备有据可查且准确的起诉书，并附上您主张的所有支持文件和证据。'},
+  step_h4_1: {0: 'تسجيل الدعوى ودفع الرسوم', 1: 'Registering the Case and Paying Fees', 2: '登记案件并缴纳费用'},
+  step_p_1: {0: 'تسجيل الدعوى لدى المحكمة المختصة ودفع الرسوم القضائية المقررة والحصول على رقم الدعوى.', 1: 'Registering the case with the competent court, paying the prescribed court fees, and obtaining the case number.', 2: '在主管法院登记案件，缴纳规定的法院费用，并获取案件编号。'},
+  step_h4_2: {0: 'المرافعة وتبادل المذكرات', 1: 'Pleading and Exchanging Memoranda', 2: '辩论和交换备忘录'},
+  step_p_2: {0: 'حضور جلسات المحكمة وتقديم الحجج والأدلة والمذكرات القانونية والرد على دفوع الخصم.', 1: 'Attending court sessions, presenting arguments, evidence, and legal memoranda, and responding to the opposing party\'s defenses.', 2: '出席法庭庭审，提交论据、证据和法律备忘录，并回应对方的辩护。'},
+  step_h4_3: {0: 'الحكم والتنفيذ', 1: 'Judgment and Enforcement', 2: '判决和执行'},
+  step_p_3: {0: 'صدور الحكم من المحكمة وتنفيذه، مع إمكانية الاستئناف إذا كان هناك ظلم من الحكم.', 1: 'The court issues the judgment and it is enforced, with the possibility of appeal if there is injustice in the verdict.', 2: '法庭作出判决并予以执行，如判决存在不公正，则可提起上诉。'},
+  cta_h2: {0: 'هل لديك قضية مدنية أمام المحكمة العامة؟', 1: 'Do You Have a Civil Case Before the General Court?', 2: '您有普通法院的民事案件吗？'},
+  cta_p: {0: 'فريقنا المتخصص في القضايا المدنية يوفر لك تمثيلاً قانونياً قوياً وفعالاً', 1: 'Our specialized civil team provides you with strong and effective legal representation', 2: '我们专业的民事团队为您提供强有力且高效的法律代理'},
+  cta_btn_0: {0: 'استشارة قانونية مدنية', 1: 'Civil Legal Consultation', 2: '民事法律咨询'},
+  cta_btn_1: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
+  footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Meshary Bin Bandar Bin Jaloui Law Firm and Legal Consultations — All rights reserved', 2: '© 2025 美沙里·本·班达尔·本·贾卢伊律师事务所和法律咨询——版权所有'},
   footer_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  hero_desc: {0: 'نمثل عملائنا في جميع درجات المحاكم العامة بكفاءة واحترافية عالية.', 1: 'We represent our clients in all levels of general courts with high efficiency and professionalism.', 2: '我们以高效和专业的方式代理客户出现在各级普通法院。'},
-  hero_title_first: {0: 'قضايا', 1: 'General', 2: '普通'},
-  hero_title_last: {0: 'محكمة', 1: 'Court', 2: '法院'},
-  learnmore_button: {0: 'تعرف على المزيد', 1: 'Learn More', 2: '了解更多'},
-  nav_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
-  nav_careers: {0: 'التوظيف', 1: 'Careers', 2: '招聘'},
-  nav_contact: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
-  nav_contracts: {0: 'عقود الشركات', 1: 'Company Contracts', 2: '公司合同'},
-  nav_eservices: {0: 'الخدمات الإلكترونية', 1: 'E-Services', 2: '电子服务'},
-  nav_faq: {0: 'الأسئلة الشائعة', 1: 'FAQ', 2: '常见问题'},
-  nav_services: {0: 'خدماتنا', 1: 'Our Services', 2: '我们的服务'},
-  nav_team: {0: 'فريقنا', 1: 'Our Team', 2: '我们的团队'},
-  section_1_desc: {0: 'توفير خدمات قانونية متكاملة في جميع درجات المحاكم من الابتدائية إلى الاستئناف والنقض.', 1: 'Providing integrated legal services in all court levels from primary courts to appeals and cassation courts.', 2: '在所有法院级别提供综合法律服务。'},
-  section_1_title: {0: 'التمثيل أمام المحاكم العامة', 1: 'Representation Before General Courts', 2: '在普通法院的代理'},
-  whatsapp_button: {0: 'تواصل عبر واتساب', 1: 'Contact via WhatsApp', 2: '通过WhatsApp联系'},
 };
 </script>
+
+
+
 <script src="lang.js"></script>
-    </body>
+</body>
 </html>

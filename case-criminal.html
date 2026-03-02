@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+
+<html dir="rtl" lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>القضايا الجنائية — شركة مشاري بندر بن جلوي للمحاماة</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>القضايا الجنائية — شركة مشاري بندر بن جلوي للمحاماة</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
         :root { --navy:#1B2C6B; --navy-dark:#111d4a; --navy-mid:#223580; --gold:#B8935A; --gold-light:#d4aa72; --gold-pale:#f5ede0; --white:#ffffff; --off-white:#f8f6f2; --gray:#6b7280; --gray-dark:#374151; --border:#e5e1d9; }
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
         html{scroll-behavior:smooth;overflow-x:hidden}
@@ -94,207 +95,236 @@
         </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="logo.png" alt="شعار شركة مشاري بندر بن جلوي">
-                <div>
-                    <div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
-                    <div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
-                </div>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html#services" data-i18n="nav_services">خدماتنا</a></li>
-                <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
-                <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-                <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
-                <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
-                <li><a href="e-services.html" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
-                <li><a href="careers.html" data-i18n="nav_careers">التوظيف</a></li>
-                <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
-            </ul>
-            <div style="display:flex;align-items:center;gap:10px;">
-                <div class="lang-drop" id="langDrop">
-                    <button class="lang-drop-btn" onclick="toggleLangDrop()" id="langDropBtn">🇸🇦</button>
-                    <div class="lang-drop-menu" id="langDropMenu">
-                        <button onclick="setLang(0);toggleLangDrop()" data-lang="0">🇸🇦 العربية</button>
-                        <button onclick="setLang(1);toggleLangDrop()" data-lang="1">🇬🇧 English</button>
-                        <button onclick="setLang(2);toggleLangDrop()" data-lang="2">🇨🇳 中文</button>
-                    </div>
-                </div>
-                <a href="https://wa.me/966533532153" target="_blank" rel="noopener" class="nav-cta">احجز استشارة</a>
-                <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div class="mobile-drawer" id="drawer">
-        <ul>
-            <li><a href="index.html#services" data-i18n="nav_services" data-i18n="nav_services">خدماتنا</a></li>
-            <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
-            <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-            <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
-            <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
-            <li><a href="e-services.html" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
-            <li><a href="careers.html" data-i18n="nav_careers">التوظيف</a></li>
-            <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
-            <li><a href="https://wa.me/966533532153">احجز استشارة</a></li>
-        </ul>
-    </div>
-
-    <section class="page-hero">
-        <div class="page-hero-content">
-            <div class="page-breadcrumb">
-                <a href="index.html">الرئيسية</a>
-                <span>/</span>
-                <a href="#">القضايا القانونية</a>
-                <span>/</span>
-                <span>القضايا الجنائية</span>
-            </div>
-            <h1>القضايا <em>الجنائية</em></h1>
-            <p class="page-hero-desc">دفاع قانوني محترف في القضايا الجنائية والجزائية بما يضمن حقوق الموكلين أمام المحاكم الجزائية</p>
-        </div>
-    </section>
-
-    <section class="section-pad">
-        <div class="article-body">
-            <h2>مقدمة عن القضايا الجنائية في المملكة</h2>
-            <p>تمثل القضايا الجنائية جزءاً حساساً وحيوياً من النظام القانوني السعودي، حيث تتعامل مع أخطر الانتهاكات القانونية التي تؤثر على أمن وسلامة المجتمع. القانون الجنائي السعودي يستمد أساسه من الفقه الإسلامي والأنظمة الحديثة، ويهدف إلى حماية المجتمع من الجرائم مع ضمان حقوق المتهمين والمدانين وفقاً لأسس العدالة والإنصاف.</p>
-            <p>الدفاع عن الموكلين في القضايا الجنائية يتطلب دراية عميقة بقوانين الإجراءات الجزائية وحقوق الإنسان، بالإضافة إلى خبرة عملية واسعة في التعامل مع السلطات الأمنية والقضائية. فريق محاماتنا المتخصص يضمن الدفاع القوي والفعال عن حقوق موكليه في كل مراحل الخصومة الجنائية.</p>
-
-            <h2>أنواع الجرائم والقضايا الجنائية</h2>
-            <p>ينقسم القانون الجنائي السعودي إلى عدة فئات من الجرائم بناءً على طبيعتها والعقوبة المترتبة عليها:</p>
-            <h3>جرائم الحدود</h3>
-            <p>تشمل الجرائم التي حدد الشرع الإسلامي لها عقوبة محددة، مثل السرقة والزنا والشرب والردة. هذه الجرائم لها إجراءات خاصة وتتطلب إثباتاً قانونياً دقيقاً وفقاً لأحكام الشريعة الإسلامية والنظام الجزائي السعودي.</p>
-            <h3>جرائم القصاص والدية</h3>
-            <p>تتعلق بالاعتداءات على الأنفس والأعراض والأموال، مثل جرائم القتل والإصابة والجرح. تتطلب هذه الجرائم إثباتاً قوياً وقد تؤدي إلى عقوبات صارمة تصل إلى الإعدام في حالات القتل العمد.</p>
-            <h3>جرائم التعزير</h3>
-            <p>وهي الجرائم التي لم يحدد الشرع أو النظام عقوبة محددة لها، ويكون للقاضي سلطة تقديرية في تحديد العقوبة المناسبة. تشمل معظم الجرائم الحديثة مثل تزوير المستندات والاحتيال والجرائم المعلوماتية.</p>
-
-            <h2>الأنظمة والقوانين الحاكمة</h2>
-            <p>يستند النظام الجنائي السعودي على عدة أنظمة وتشريعات حديثة تحافظ على حقوق الفرد والمجتمع:</p>
-            <ul>
-                <li><strong>نظام الإجراءات الجزائية (1435هـ):</strong> يحدد الإجراءات التي تتبع في التحقيق والمحاكمة الجنائية وحقوق المتهم والمجني عليه</li>
-                <li><strong>نظام الأحداث:</strong> ينظم معاملة الأحداث والقاصرين في القضايا الجنائية بطريقة خاصة تركز على الإصلاح والتأهيل</li>
-                <li><strong>نظام مكافحة الجرائم المعلوماتية:</strong> يجرم الاستخدام الضار للتقنيات والإنترنت والجرائم الإلكترونية</li>
-                <li><strong>نظام مكافحة الفساد:</strong> يتعامل مع الجرائم المتعلقة بالفساد الإداري والرشوة والاختلاس</li>
-            </ul>
-
-            <h2>حقوق المتهم في الإجراءات الجنائية</h2>
-            <p>القانون السعودي يضمن عدة حقوق أساسية للمتهم خلال الإجراءات الجنائية. أولاً، للمتهم الحق في الاستشارة مع محام منذ بدء التحقيق معه، وهذا حق أساسي لا يمكن انتهاكه. ثانياً، للمتهم الحق في معرفة الاتهام الموجه إليه بوضوح والاطلاع على الأدلة ضده. ثالثاً، للمتهم الحق في الدفاع عن نفسه وتقديم أدلة براءته.</p>
-            <p>بالإضافة إلى ذلك، يجب أن تكون جميع الإجراءات التحقيقية قانونية وموثقة، ولا يمكن اعتماد أي اعترافات تم الحصول عليها تحت التعذيب أو الإكراه. المتهم له أيضاً الحق في الاستئناف والطعن في الأحكام الصادرة ضده.</p>
-
-            <h2>مراحل الإجراءات الجنائية</h2>
-            <p>تمر الدعوى الجنائية بعدة مراحل محددة تبدأ بالتحقيق الأولي ثم الفصل في القضية:</p>
-            <p>تبدأ بالاستدعاء أو التوقيف من قبل الجهات الأمنية، وفي هذه المرحلة يحق للمتهم طلب محام فوراً. يجب إبلاغ المتهم بحقوقه وبطبيعة الاتهام الموجه إليه، والبدء في التحقيق وفقاً لإجراءات قانونية صحيحة.</p>
-            <p>تأتي مرحلة التحقيق الأولي حيث يقوم المحقق بسماع أقوال المتهم والشهود وجمع الأدلة. خلال هذه المرحلة يجب أن يكون المحامي حاضراً لتمثيل الموكل ومراقبة سلامة الإجراءات.</p>
-            <p>بعد انتهاء التحقيق الأولي، تُحال الدعوى إلى المحكمة الجنائية للمحاكمة حيث يتم تقديم الأدلة والحجج من الطرفين. في هذه المرحلة يكون الدفاع القوي عن الموكل حاسماً في نتيجة القضية.</p>
-            <p>بعد انتهاء المحاكمة، تصدر المحكمة حكماً قد يكون بالإدانة أو البراءة. للمحكوم عليه الحق في استئناف الحكم أمام محكمة الاستئناف خلال مدة محددة قانوناً.</p>
-
-            <h2>أهمية وجود محام متخصص</h2>
-            <p>وجود محام متخصص في القضايا الجنائية يعتبر ضرورة حتمية لعدة أسباب. المحامي المتخصص يفهم تعقيدات الإجراءات الجنائية والقوانين المتعلقة بها، ويمكنه تقديم دفاع قوي يحمي حقوق موكله. بالإضافة إلى ذلك، المحامي ذو الخبرة يمكنه تقييم قوة الأدلة ضد الموكل واستخراج الثغرات في الاتهام والدفاع عن حقوق الموكل بفعالية.</p>
-            <p>المحامي يقف بجانب الموكل من أول استدعاء ويرافقه في جميع مراحل التحقيق والمحاكمة، مما يضمن عدم انتهاك أي من حقوقه القانونية، ويسعى إلى تقليل العقوبة أو الوصول إلى براءته.</p>
-
-            <h2>خدمات شركة مشاري بندر بن جلوي في القضايا الجنائية</h2>
-            <p>توفر شركتنا خدمات شاملة في مجال الدفاع الجنائي:</p>
-            <ul>
-                <li>الاستشارة الفورية عند الاستدعاء من قبل السلطات الأمنية</li>
-                <li>التمثيل الكامل خلال التحقيق الأولي والاستجواب</li>
-                <li>الحضور والدفاع أمام المحاكم الجنائية في جميع الجلسات</li>
-                <li>دراسة ملف القضية وتحضير استراتيجية دفاع قوية</li>
-                <li>استئناف الأحكام والطعن فيها بالطرق القانونية المتاحة</li>
-                <li>تمثيل المجني عليهم في القضايا الجنائية</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="section-pad alt">
-        <div class="article-body">
-            <h2 style="text-align:center;margin-bottom:32px;">الأساس القانوني والأنظمة ذات الصلة</h2>
-            <div class="info-box">
-                <h3>الأنظمة والتشريعات الرئيسية</h3>
-                <ul>
-                    <li>نظام الإجراءات الجزائية الصادر 1435هـ</li>
-                    <li>نظام الأحداث والمعاملة الخاصة للقاصرين</li>
-                    <li>نظام مكافحة الجرائم المعلوماتية</li>
-                    <li>نظام مكافحة الفساد والجرائم ذات الصلة</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-pad">
-        <div class="article-body">
-            <h2 style="text-align:center;margin-bottom:32px;">مراحل الإجراءات الجنائية</h2>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-num">1</div>
-                    <h4>الاستشارة الفورية عند الاستدعاء</h4>
-                    <p>التواصل الفوري مع المحامي عند استدعائك من قبل الجهات الأمنية والحصول على استشارة قانونية فوراً لحماية حقوقك الأساسية.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">2</div>
-                    <h4>متابعة التحقيق والتوقيف</h4>
-                    <p>حضور المحامي معك في جميع جلسات التحقيق والاستجواب، مراقبة سلامة الإجراءات، وتقديم الدفاع المناسب خلال هذه المرحلة الحرجة.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">3</div>
-                    <h4>المرافعة أمام المحكمة الجزائية</h4>
-                    <p>تقديم دفاع قوي أمام المحكمة الجنائية بعد انتهاء التحقيق، حيث يتم الاستماع للأدلة والحجج من الطرفين وإصدار الحكم.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">4</div>
-                    <h4>الاستئناف وتخفيف العقوبة</h4>
-                    <p>استئناف الأحكام الجائرة أمام محكمة الاستئناف والسعي لتخفيف العقوبة أو تحقيق براءة الموكل بناءً على أدلة قانونية قوية.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <h2>هل تواجه قضية جنائية؟</h2>
-        <p>فريقنا المتخصص في القضايا الجنائية جاهز لتقديم دفاع قوي وحماية حقوقك منذ اللحظة الأولى</p>
-        <div class="cta-btns">
-            <a href="https://wa.me/966533532153" class="btn-gold" target="_blank" rel="noopener">استشارة جنائية فوراً</a>
-            <a href="index.html#booking" class="btn-outline">تواصل معنا</a>
-        </div>
-    </section>
-
-    <footer>
-        <p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
-        <p style="margin-top:8px;"><a href="index.html" data-i18n="footer_home">الرئيسية</a></p>
-    </footer>
-    <a href="https://wa.me/966533532153" class="whatsapp-fab" target="_blank" rel="noopener" title="تواصل عبر واتساب">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-    </a>
-
-
-    <script>
+<nav class="navbar">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">
+<img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png"/>
+<div>
+<div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
+</div>
+</a>
+<ul class="nav-links">
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+<div style="display:flex;align-items:center;gap:10px;">
+<div class="lang-drop" id="langDrop">
+<button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
+<div class="lang-drop-menu" id="langDropMenu">
+<button data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦 العربية</button>
+<button data-lang="1" onclick="setLang(1);toggleLangDrop()">🇬🇧 English</button>
+<button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
+</div>
+</div>
+<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
+<div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
+<span></span><span></span><span></span>
+</div>
+</div>
+</div>
+</nav>
+<div class="mobile-drawer" id="drawer">
+<ul>
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+<li><a href="https://wa.me/966533532153">احجز استشارة</a></li>
+</ul>
+</div>
+<section class="page-hero">
+<div class="page-hero-content">
+<div class="page-breadcrumb">
+<a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
+<span>/</span>
+<a data-i18n="breadcrumb_legal" href="#">القضايا القانونية</a>
+<span>/</span>
+<span data-i18n="breadcrumb_current">القضايا الجنائية</span>
+</div>
+<h1 data-i18n="hero_h1">القضايا <em>الجنائية</em></h1>
+<p class="page-hero-desc" data-i18n="hero_desc">دفاع قانوني محترف في القضايا الجنائية والجزائية بما يضمن حقوق الموكلين أمام المحاكم الجزائية</p>
+</div>
+</section>
+<section class="section-pad">
+<div class="article-body">
+<h2 data-i18n="section_h2_0">مقدمة عن القضايا الجنائية في المملكة</h2>
+<p data-i18n="p_0">تمثل القضايا الجنائية جزءاً حساساً وحيوياً من النظام القانوني السعودي، حيث تتعامل مع أخطر الانتهاكات القانونية التي تؤثر على أمن وسلامة المجتمع. القانون الجنائي السعودي يستمد أساسه من الفقه الإسلامي والأنظمة الحديثة، ويهدف إلى حماية المجتمع من الجرائم مع ضمان حقوق المتهمين والمدانين وفقاً لأسس العدالة والإنصاف.</p>
+<p data-i18n="p_1">الدفاع عن الموكلين في القضايا الجنائية يتطلب دراية عميقة بقوانين الإجراءات الجزائية وحقوق الإنسان، بالإضافة إلى خبرة عملية واسعة في التعامل مع السلطات الأمنية والقضائية. فريق محاماتنا المتخصص يضمن الدفاع القوي والفعال عن حقوق موكليه في كل مراحل الخصومة الجنائية.</p>
+<h2 data-i18n="section_h2_1">أنواع الجرائم والقضايا الجنائية</h2>
+<p data-i18n="p_2">ينقسم القانون الجنائي السعودي إلى عدة فئات من الجرائم بناءً على طبيعتها والعقوبة المترتبة عليها:</p>
+<h3 data-i18n="section_h3_0">جرائم الحدود</h3>
+<p data-i18n="p_3">تشمل الجرائم التي حدد الشرع الإسلامي لها عقوبة محددة، مثل السرقة والزنا والشرب والردة. هذه الجرائم لها إجراءات خاصة وتتطلب إثباتاً قانونياً دقيقاً وفقاً لأحكام الشريعة الإسلامية والنظام الجزائي السعودي.</p>
+<h3 data-i18n="section_h3_1">جرائم القصاص والدية</h3>
+<p data-i18n="p_4">تتعلق بالاعتداءات على الأنفس والأعراض والأموال، مثل جرائم القتل والإصابة والجرح. تتطلب هذه الجرائم إثباتاً قوياً وقد تؤدي إلى عقوبات صارمة تصل إلى الإعدام في حالات القتل العمد.</p>
+<h3 data-i18n="section_h3_2">جرائم التعزير</h3>
+<p data-i18n="p_5">وهي الجرائم التي لم يحدد الشرع أو النظام عقوبة محددة لها، ويكون للقاضي سلطة تقديرية في تحديد العقوبة المناسبة. تشمل معظم الجرائم الحديثة مثل تزوير المستندات والاحتيال والجرائم المعلوماتية.</p>
+<h2 data-i18n="section_h2_2">الأنظمة والقوانين الحاكمة</h2>
+<p data-i18n="p_6">يستند النظام الجنائي السعودي على عدة أنظمة وتشريعات حديثة تحافظ على حقوق الفرد والمجتمع:</p>
+<ul>
+<li data-i18n="li_0"><strong>نظام الإجراءات الجزائية (1435هـ):</strong> يحدد الإجراءات التي تتبع في التحقيق والمحاكمة الجنائية وحقوق المتهم والمجني عليه</li>
+<li data-i18n="li_1"><strong>نظام الأحداث:</strong> ينظم معاملة الأحداث والقاصرين في القضايا الجنائية بطريقة خاصة تركز على الإصلاح والتأهيل</li>
+<li data-i18n="li_2"><strong>نظام مكافحة الجرائم المعلوماتية:</strong> يجرم الاستخدام الضار للتقنيات والإنترنت والجرائم الإلكترونية</li>
+<li data-i18n="li_3"><strong>نظام مكافحة الفساد:</strong> يتعامل مع الجرائم المتعلقة بالفساد الإداري والرشوة والاختلاس</li>
+</ul>
+<h2 data-i18n="section_h2_3">حقوق المتهم في الإجراءات الجنائية</h2>
+<p data-i18n="p_7">القانون السعودي يضمن عدة حقوق أساسية للمتهم خلال الإجراءات الجنائية. أولاً، للمتهم الحق في الاستشارة مع محام منذ بدء التحقيق معه، وهذا حق أساسي لا يمكن انتهاكه. ثانياً، للمتهم الحق في معرفة الاتهام الموجه إليه بوضوح والاطلاع على الأدلة ضده. ثالثاً، للمتهم الحق في الدفاع عن نفسه وتقديم أدلة براءته.</p>
+<p data-i18n="p_8">بالإضافة إلى ذلك، يجب أن تكون جميع الإجراءات التحقيقية قانونية وموثقة، ولا يمكن اعتماد أي اعترافات تم الحصول عليها تحت التعذيب أو الإكراه. المتهم له أيضاً الحق في الاستئناف والطعن في الأحكام الصادرة ضده.</p>
+<h2 data-i18n="section_h2_4">مراحل الإجراءات الجنائية</h2>
+<p data-i18n="p_9">تمر الدعوى الجنائية بعدة مراحل محددة تبدأ بالتحقيق الأولي ثم الفصل في القضية:</p>
+<p data-i18n="p_10">تبدأ بالاستدعاء أو التوقيف من قبل الجهات الأمنية، وفي هذه المرحلة يحق للمتهم طلب محام فوراً. يجب إبلاغ المتهم بحقوقه وبطبيعة الاتهام الموجه إليه، والبدء في التحقيق وفقاً لإجراءات قانونية صحيحة.</p>
+<p data-i18n="p_11">تأتي مرحلة التحقيق الأولي حيث يقوم المحقق بسماع أقوال المتهم والشهود وجمع الأدلة. خلال هذه المرحلة يجب أن يكون المحامي حاضراً لتمثيل الموكل ومراقبة سلامة الإجراءات.</p>
+<p data-i18n="p_12">بعد انتهاء التحقيق الأولي، تُحال الدعوى إلى المحكمة الجنائية للمحاكمة حيث يتم تقديم الأدلة والحجج من الطرفين. في هذه المرحلة يكون الدفاع القوي عن الموكل حاسماً في نتيجة القضية.</p>
+<p data-i18n="p_13">بعد انتهاء المحاكمة، تصدر المحكمة حكماً قد يكون بالإدانة أو البراءة. للمحكوم عليه الحق في استئناف الحكم أمام محكمة الاستئناف خلال مدة محددة قانوناً.</p>
+<h2 data-i18n="section_h2_5">أهمية وجود محام متخصص</h2>
+<p data-i18n="p_14">وجود محام متخصص في القضايا الجنائية يعتبر ضرورة حتمية لعدة أسباب. المحامي المتخصص يفهم تعقيدات الإجراءات الجنائية والقوانين المتعلقة بها، ويمكنه تقديم دفاع قوي يحمي حقوق موكله. بالإضافة إلى ذلك، المحامي ذو الخبرة يمكنه تقييم قوة الأدلة ضد الموكل واستخراج الثغرات في الاتهام والدفاع عن حقوق الموكل بفعالية.</p>
+<p data-i18n="p_15">المحامي يقف بجانب الموكل من أول استدعاء ويرافقه في جميع مراحل التحقيق والمحاكمة، مما يضمن عدم انتهاك أي من حقوقه القانونية، ويسعى إلى تقليل العقوبة أو الوصول إلى براءته.</p>
+<h2 data-i18n="section_h2_6">خدمات شركة مشاري بندر بن جلوي في القضايا الجنائية</h2>
+<p data-i18n="p_16">توفر شركتنا خدمات شاملة في مجال الدفاع الجنائي:</p>
+<ul>
+<li data-i18n="li_4">الاستشارة الفورية عند الاستدعاء من قبل السلطات الأمنية</li>
+<li data-i18n="li_5">التمثيل الكامل خلال التحقيق الأولي والاستجواب</li>
+<li data-i18n="li_6">الحضور والدفاع أمام المحاكم الجنائية في جميع الجلسات</li>
+<li data-i18n="li_7">دراسة ملف القضية وتحضير استراتيجية دفاع قوية</li>
+<li data-i18n="li_8">استئناف الأحكام والطعن فيها بالطرق القانونية المتاحة</li>
+<li data-i18n="li_9">تمثيل المجني عليهم في القضايا الجنائية</li>
+</ul>
+</div>
+</section>
+<section class="section-pad alt">
+<div class="article-body">
+<h2 style="text-align:center;margin-bottom:32px;">الأساس القانوني والأنظمة ذات الصلة</h2>
+<div class="info-box">
+<h3 data-i18n="infobox_h3">الأنظمة والتشريعات الرئيسية</h3>
+<ul>
+<li data-i18n="infobox_li_0">نظام الإجراءات الجزائية الصادر 1435هـ</li>
+<li data-i18n="infobox_li_1">نظام الأحداث والمعاملة الخاصة للقاصرين</li>
+<li data-i18n="infobox_li_2">نظام مكافحة الجرائم المعلوماتية</li>
+<li data-i18n="infobox_li_3">نظام مكافحة الفساد والجرائم ذات الصلة</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="section-pad">
+<div class="article-body">
+<h2 style="text-align:center;margin-bottom:32px;">مراحل الإجراءات الجنائية</h2>
+<div class="steps-grid">
+<div class="step-card">
+<div class="step-num">1</div>
+<h4 data-i18n="step_h4_0">الاستشارة الفورية عند الاستدعاء</h4>
+<p data-i18n="step_p_0">التواصل الفوري مع المحامي عند استدعائك من قبل الجهات الأمنية والحصول على استشارة قانونية فوراً لحماية حقوقك الأساسية.</p>
+</div>
+<div class="step-card">
+<div class="step-num">2</div>
+<h4 data-i18n="step_h4_1">متابعة التحقيق والتوقيف</h4>
+<p data-i18n="step_p_1">حضور المحامي معك في جميع جلسات التحقيق والاستجواب، مراقبة سلامة الإجراءات، وتقديم الدفاع المناسب خلال هذه المرحلة الحرجة.</p>
+</div>
+<div class="step-card">
+<div class="step-num">3</div>
+<h4 data-i18n="step_h4_2">المرافعة أمام المحكمة الجزائية</h4>
+<p data-i18n="step_p_2">تقديم دفاع قوي أمام المحكمة الجنائية بعد انتهاء التحقيق، حيث يتم الاستماع للأدلة والحجج من الطرفين وإصدار الحكم.</p>
+</div>
+<div class="step-card">
+<div class="step-num">4</div>
+<h4 data-i18n="step_h4_3">الاستئناف وتخفيف العقوبة</h4>
+<p data-i18n="step_p_3">استئناف الأحكام الجائرة أمام محكمة الاستئناف والسعي لتخفيف العقوبة أو تحقيق براءة الموكل بناءً على أدلة قانونية قوية.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="cta-section">
+<h2 data-i18n="cta_h2">هل تواجه قضية جنائية؟</h2>
+<p data-i18n="cta_p">فريقنا المتخصص في القضايا الجنائية جاهز لتقديم دفاع قوي وحماية حقوقك منذ اللحظة الأولى</p>
+<div class="cta-btns">
+<a class="btn-gold" data-i18n="cta_btn_0" href="https://wa.me/966533532153" rel="noopener" target="_blank">استشارة جنائية فوراً</a>
+<a class="btn-outline" data-i18n="cta_btn_1" href="index.html#booking">تواصل معنا</a>
+</div>
+</section>
+<footer>
+<p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+<p style="margin-top:8px;"><a data-i18n="footer_home" href="index.html">الرئيسية</a></p>
+</footer>
+<a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank" title="تواصل عبر واتساب">
+<svg fill="white" height="28" viewbox="0 0 24 24" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path></svg>
+</a>
+ <script>
 const pageTranslations = {
-  breadcrumb_current: {0: 'القضايا الجنائية', 1: 'Criminal Cases', 2: '刑事案件'},
   breadcrumb_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  breadcrumb_services: {0: 'الخدمات', 1: 'Services', 2: '服务'},
-  cta_button: {0: 'استشر معنا الآن', 1: 'Consult Now', 2: '现在咨询'},
-  footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Mashary Bandar Bin Jalawi Law Firm — All rights reserved', 2: '© 2025 玛沙里·班达尔·本·贾劳伊律师事务所 — 版权所有'},
+  breadcrumb_legal: {0: 'القضايا القانونية', 1: 'Legal Cases', 2: '法律案件'},
+  breadcrumb_current: {0: 'القضايا الجنائية', 1: 'Criminal Cases', 2: '刑事案件'},
+  hero_h1: {0: 'القضايا الجنائية', 1: 'Criminal Cases', 2: '刑事案件'},
+  hero_desc: {0: 'دفاع قانوني محترف في القضايا الجنائية والجزائية بما يضمن حقوق الموكلين أمام المحاكم الجزائية', 1: 'Professional legal defense in criminal and penal cases to guarantee clients\' rights before criminal courts', 2: '在刑事和刑罚案件中提供专业的法律辩护，确保当事人在刑事法庭上的权利'},
+  section_h2_0: {0: 'مقدمة عن القضايا الجنائية في المملكة', 1: 'Introduction to Criminal Cases in Saudi Arabia', 2: '沙特阿拉伯刑事案件简介'},
+  p_0: {0: 'تمثل القضايا الجنائية جزءاً حساساً وحيوياً من النظام القانوني السعودي، حيث تتعامل مع أخطر القضايا التي تمس حرية الفرد وكرامته وأمن المجتمع.', 1: 'Criminal cases represent a sensitive and vital part of the Saudi legal system, dealing with the most serious matters affecting individual liberty, dignity, and public security.', 2: '刑事案件是沙特法律体系中敏感而至关重要的一部分，涉及影响个人自由、尊严和公共安全的最严重事项。'},
+  p_1: {0: 'الدفاع عن الموكلين في القضايا الجنائية يتطلب دراية عميقة بقوانين الإجراءات الجزائية وحقوق المتهم والمجني عليه في النظام القانوني السعودي.', 1: 'Defending clients in criminal cases requires deep knowledge of criminal procedure law and the rights of both the accused and the victim under the Saudi legal system.', 2: '在刑事案件中为当事人辩护需要对沙特法律体系中的刑事诉讼法以及被告和受害者的权利有深入了解。'},
+  section_h2_1: {0: 'أنواع الجرائم والقضايا الجنائية', 1: 'Types of Crimes and Criminal Cases', 2: '犯罪和刑事案件类型'},
+  p_2: {0: 'ينقسم القانون الجنائي السعودي إلى عدة فئات من الجرائم بناءً على طبيعتها والعقوبة المترتبة عليها.', 1: 'Saudi criminal law is divided into several categories of crimes based on their nature and the penalties they carry.', 2: '沙特刑法根据犯罪的性质及其刑罚，将犯罪分为几个类别。'},
+  section_h3_0: {0: 'جرائم الحدود', 1: 'Hadd Crimes', 2: '固定刑罚犯罪'},
+  p_3: {0: 'تشمل الجرائم التي حدد الشرع الإسلامي لها عقوبة محددة، مثل السرقة والزنا والشرب والردة. هذه الجرائم تتطلب درجة عالية من الإثبات.', 1: 'These include crimes for which Islamic law prescribes a fixed punishment, such as theft, adultery, and apostasy. These crimes require a very high standard of proof.', 2: '这些包括伊斯兰法律规定固定刑罚的犯罪，如盗窃、通奸和叛教。这些犯罪需要极高的证明标准。'},
+  section_h3_1: {0: 'جرائم القصاص والدية', 1: 'Qisas and Diyah Crimes', 2: '同态复仇和血钱犯罪'},
+  p_4: {0: 'تتعلق بالاعتداءات على الأنفس والأعراض والأموال، مثل جرائم القتل والإصابة والجرح. تتطلب هذه القضايا التنسيق مع أسر المجني عليهم.', 1: 'These relate to offenses against persons and property, such as homicide and bodily harm. These cases require coordination with the victims\' families.', 2: '这些涉及对人身和财产的侵犯，如杀人和人身伤害。这些案件需要与受害者家属协调。'},
+  section_h3_2: {0: 'جرائم التعزير', 1: 'Ta\'zir Crimes', 2: '酌定刑罚犯罪'},
+  p_5: {0: 'وهي الجرائم التي لم يحدد الشرع أو النظام عقوبة محددة لها، ويكون للقاضي سلطة تقديرية في تحديد العقوبة المناسبة بما لا يتجاوز الحد الأقصى المقرر.', 1: 'These are crimes for which neither Islamic law nor civil regulations specify a fixed punishment, and the judge has discretionary authority to determine the appropriate sentence within prescribed maximums.', 2: '这些是伊斯兰法律和民法法规都未规定固定刑罚的犯罪，法官有酌情决定适当刑罚的权力，但不得超过规定的最高限度。'},
+  section_h2_2: {0: 'الأنظمة والقوانين الحاكمة', 1: 'Governing Laws and Regulations', 2: '适用法律和法规'},
+  p_6: {0: 'يستند النظام الجنائي السعودي على عدة أنظمة وتشريعات حديثة تحافظ على حقوق الفرد والمجتمع.', 1: 'The Saudi criminal system is based on several modern laws and regulations that protect the rights of individuals and society.', 2: '沙特刑事体系以几部保护个人和社会权利的现代法律法规为基础。'},
+  li_0: {0: 'نظام الإجراءات الجزائية (1435هـ): يحدد الإجراءات التي تتبع في التحقيق والمحاكمة الجنائية وحقوق المتهم والمجني عليه', 1: 'Criminal Procedure Law (1435H): Defines procedures for criminal investigation and trial, and the rights of the accused and victim', 2: '刑事诉讼法（1435H）：规定刑事调查和审判程序，以及被告和受害者的权利'},
+  li_1: {0: 'نظام الأحداث: ينظم معاملة الأحداث والقاصرين في القضايا الجنائية بطريقة خاصة تركز على الإصلاح والتأهيل', 1: 'Juvenile Law: Regulates the treatment of juveniles and minors in criminal cases with a focus on rehabilitation', 2: '少年法：以专注于改造和康复的特殊方式规范刑事案件中青少年和未成年人的处置'},
+  li_2: {0: 'نظام مكافحة الجرائم المعلوماتية: يجرم الاستخدام الضار للتقنيات والإنترنت والجرائم الإلكترونية', 1: 'Anti-Cybercrime Law: Criminalizes the harmful use of technology, the internet, and electronic crimes', 2: '反网络犯罪法：将有害使用技术、互联网及电子犯罪定为刑事罪行'},
+  li_3: {0: 'نظام مكافحة الفساد: يتعامل مع الجرائم المتعلقة بالفساد الإداري والرشوة والاختلاس', 1: 'Anti-Corruption Law: Addresses crimes related to administrative corruption, bribery, and embezzlement', 2: '反腐败法：处理涉及行政腐败、贿赂和挪用公款的犯罪'},
+  section_h2_3: {0: 'حقوق المتهم في الإجراءات الجنائية', 1: 'Accused Person\'s Rights in Criminal Proceedings', 2: '刑事诉讼中被告的权利'},
+  p_7: {0: 'القانون السعودي يضمن عدة حقوق أساسية للمتهم خلال الإجراءات الجنائية. أولاً، للمتهم الحق في الاستعانة بمحامٍ في جميع مراحل التحقيق والمحاكمة.', 1: 'Saudi law guarantees several fundamental rights for the accused during criminal proceedings. First, the accused has the right to legal representation at all stages of investigation and trial.', 2: '沙特法律在刑事诉讼期间保障被告的几项基本权利。首先，被告有权在调查和审判的所有阶段获得法律代理。'},
+  p_8: {0: 'بالإضافة إلى ذلك، يجب أن تكون جميع الإجراءات التحقيقية قانونية وموثقة، ولا يمكن اعتماد أي اعتراف انتُزع تحت الإكراه.', 1: 'Furthermore, all investigative procedures must be lawful and documented, and no confession obtained under coercion can be accepted.', 2: '此外，所有调查程序必须合法并有据可查，任何在胁迫下获得的供词都不得采用。'},
+  section_h2_4: {0: 'مراحل الإجراءات الجنائية', 1: 'Stages of Criminal Proceedings', 2: '刑事诉讼阶段'},
+  p_9: {0: 'تمر الدعوى الجنائية بعدة مراحل محددة تبدأ بالتحقيق الأولي ثم الفصل في القضية.', 1: 'A criminal case goes through several specific stages, starting with the preliminary investigation and then adjudication.', 2: '刑事案件要经过几个特定阶段，从初步调查开始，然后进行裁决。'},
+  p_10: {0: 'تبدأ بالاستدعاء أو التوقيف من قبل الجهات الأمنية، وفي هذه المرحلة يحق للمتهم طلب محام فوراً.', 1: 'It begins with a summons or arrest by security authorities; at this stage, the accused has the right to immediately request a lawyer.', 2: '从安全部门的传唤或逮捕开始；在此阶段，被告有权立即要求律师。'},
+  p_11: {0: 'تأتي مرحلة التحقيق الأولي حيث يقوم المحقق بسماع أقوال المتهم والشهود وجمع الأدلة. خلال هذه المرحلة يجب أن يكون المحامي حاضراً.', 1: 'The preliminary investigation stage follows, where the investigator hears the accused and witnesses and collects evidence. The lawyer must be present during this stage.', 2: '接下来是初步调查阶段，调查员听取被告和证人的陈述并收集证据。律师必须在此阶段在场。'},
+  p_12: {0: 'بعد انتهاء التحقيق الأولي، تُحال الدعوى إلى المحكمة الجنائية للمحاكمة حيث يتم تقديم الأدلة والحجج.', 1: 'After the preliminary investigation, the case is referred to the criminal court for trial where evidence and arguments are presented.', 2: '初步调查结束后，案件被移交至刑事法院进行审判，届时提交证据和论据。'},
+  p_13: {0: 'بعد انتهاء المحاكمة، تصدر المحكمة حكماً قد يكون بالإدانة أو البراءة. للمحكوم عليه الحق في الاستئناف أمام محكمة الاستئناف.', 1: 'After the trial concludes, the court issues a verdict of conviction or acquittal. The convicted party has the right to appeal before the Court of Appeal.', 2: '审判结束后，法院作出定罪或无罪裁决。被定罪方有权向上诉法院提起上诉。'},
+  section_h2_5: {0: 'أهمية وجود محام متخصص', 1: 'The Importance of a Specialized Lawyer', 2: '专业律师的重要性'},
+  p_14: {0: 'وجود محام متخصص في القضايا الجنائية يعتبر ضرورة حتمية لعدة أسباب. المحامي المتخصص يفهم تعقيدات القانون الجنائي السعودي ويستطيع بناء استراتيجية دفاع فعالة.', 1: 'Having a specialized criminal lawyer is an absolute necessity for several reasons. A specialized lawyer understands the complexities of Saudi criminal law and can build an effective defense strategy.', 2: '拥有专业刑事律师出于多种原因是绝对必要的。专业律师了解沙特刑法的复杂性，能够制定有效的辩护策略。'},
+  p_15: {0: 'المحامي يقف بجانب الموكل من أول استدعاء ويرافقه في جميع مراحل التحقيق والمحاكمة، مما يضمن احترام حقوقه القانونية.', 1: 'The lawyer stands by the client from the very first summons and accompanies them through all stages of investigation and trial, ensuring their legal rights are respected.', 2: '律师从第一次传唤起就站在当事人一边，陪伴他们经历调查和审判的所有阶段，确保其法律权利得到尊重。'},
+  section_h2_6: {0: 'خدمات شركة مشاري بندر بن جلوي في القضايا الجنائية', 1: 'Services of Meshary Bin Bandar Bin Jaloui Firm in Criminal Cases', 2: '美沙里·本·班达尔·本·贾卢伊律师事务所的刑事案件服务'},
+  p_16: {0: 'توفر شركتنا خدمات شاملة في مجال الدفاع الجنائي:', 1: 'Our firm provides comprehensive services in criminal defense:', 2: '我们的律师事务所提供全面的刑事辩护服务：'},
+  li_4: {0: 'الاستشارة الفورية عند الاستدعاء من قبل السلطات الأمنية', 1: 'Immediate consultation upon summons by security authorities', 2: '安全部门传唤时的即时咨询'},
+  li_5: {0: 'التمثيل الكامل خلال التحقيق الأولي والاستجواب', 1: 'Full representation during preliminary investigation and interrogation', 2: '初步调查和审讯期间的全面代理'},
+  li_6: {0: 'الحضور والدفاع أمام المحاكم الجنائية في جميع الجلسات', 1: 'Attendance and defense before criminal courts in all sessions', 2: '出庭并在所有庭审中为当事人辩护'},
+  li_7: {0: 'دراسة ملف القضية وتحضير استراتيجية دفاع قوية', 1: 'Studying the case file and preparing a strong defense strategy', 2: '研究案件档案并准备强有力的辩护策略'},
+  li_8: {0: 'استئناف الأحكام والطعن فيها بالطرق القانونية المتاحة', 1: 'Appealing judgments and challenging them through available legal means', 2: '通过可用的法律手段对判决提出上诉和质疑'},
+  li_9: {0: 'تمثيل المجني عليهم في القضايا الجنائية', 1: 'Representing victims in criminal cases', 2: '在刑事案件中代理受害者'},
+  infobox_h3: {0: 'الأنظمة والتشريعات الرئيسية', 1: 'Key Laws and Regulations', 2: '主要法律法规'},
+  infobox_li_0: {0: 'نظام الإجراءات الجزائية الصادر 1435هـ', 1: 'Criminal Procedure Law issued 1435H', 2: '1435H颁布的刑事诉讼法'},
+  infobox_li_1: {0: 'نظام الأحداث والمعاملة الخاصة للقاصرين', 1: 'Juvenile Law and Special Treatment of Minors', 2: '少年法及未成年人特殊待遇'},
+  infobox_li_2: {0: 'نظام مكافحة الجرائم المعلوماتية', 1: 'Anti-Cybercrime Law', 2: '反网络犯罪法'},
+  infobox_li_3: {0: 'نظام مكافحة الفساد والجرائم ذات الصلة', 1: 'Anti-Corruption Law and Related Crimes', 2: '反腐败法及相关犯罪'},
+  step_h4_0: {0: 'الاستشارة الفورية عند الاستدعاء', 1: 'Immediate Consultation Upon Summons', 2: '传唤时的即时咨询'},
+  step_p_0: {0: 'التواصل الفوري مع المحامي عند استدعائك من قبل الجهات الأمنية والحصول على استشارة قانونية فورية لحماية حقوقك منذ اللحظة الأولى.', 1: 'Immediately contacting a lawyer when summoned by security authorities and receiving immediate legal advice to protect your rights from the very first moment.', 2: '被安全部门传唤时立即联系律师，获得即时法律建议，从第一时刻起保护您的权利。'},
+  step_h4_1: {0: 'متابعة التحقيق والتوقيف', 1: 'Follow-up on Investigation and Detention', 2: '跟进调查和羁押'},
+  step_p_1: {0: 'حضور المحامي معك في جميع جلسات التحقيق والاستجواب، مراقبة سلامة الإجراءات، وتقديم الدفاع المناسب.', 1: 'The lawyer attends all your investigation and interrogation sessions, monitors procedural integrity, and presents the appropriate defense.', 2: '律师出席您所有的调查和审讯会议，监督程序合规性，并提出适当的辩护。'},
+  step_h4_2: {0: 'المرافعة أمام المحكمة الجزائية', 1: 'Pleading Before the Criminal Court', 2: '在刑事法院出庭辩护'},
+  step_p_2: {0: 'تقديم دفاع قوي أمام المحكمة الجنائية بعد انتهاء التحقيق، حيث يتم الاستماع للأدلة والحجج من كلا الطرفين.', 1: 'Presenting a strong defense before the criminal court after the investigation ends, where evidence and arguments from both sides are heard.', 2: '调查结束后在刑事法院提出强有力的辩护，双方证据和论据均将被听取。'},
+  step_h4_3: {0: 'الاستئناف وتخفيف العقوبة', 1: 'Appeal and Sentence Reduction', 2: '上诉和减刑'},
+  step_p_3: {0: 'استئناف الأحكام الجائرة أمام محكمة الاستئناف والسعي لتخفيف العقوبة أو تحقيق براءة الموكل بكل الوسائل القانونية المتاحة.', 1: 'Appealing unjust verdicts before the Court of Appeal and seeking to reduce the sentence or achieve the client\'s acquittal by all available legal means.', 2: '向上诉法院对不公正判决提起上诉，通过所有可用的法律手段寻求减刑或使当事人获得无罪裁决。'},
+  cta_h2: {0: 'هل تواجه قضية جنائية؟', 1: 'Facing a Criminal Case?', 2: '面临刑事案件？'},
+  cta_p: {0: 'فريقنا المتخصص في القضايا الجنائية جاهز لتقديم دفاع قوي وحماية حقوقك منذ اللحظة الأولى', 1: 'Our specialized criminal team is ready to provide a strong defense and protect your rights from the very first moment', 2: '我们专业的刑事团队随时准备从第一时刻起提供强有力的辩护并保护您的权利'},
+  cta_btn_0: {0: 'استشارة جنائية فوراً', 1: 'Criminal Consultation Now', 2: '立即获得刑事咨询'},
+  cta_btn_1: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
+  footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Meshary Bin Bandar Bin Jaloui Law Firm and Legal Consultations — All rights reserved', 2: '© 2025 美沙里·本·班达尔·本·贾卢伊律师事务所和法律咨询——版权所有'},
   footer_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  hero_desc: {0: 'فريقنا يتمتع بخبرة واسعة في الدفاع الجنائي وتمثيل الموكلين أمام المحاكم الجنائية بكفاءة عالية.', 1: 'Our team has extensive experience in criminal defense and representing clients before criminal courts with high efficiency.', 2: '我们的团队在刑事辩护和代理客户出庭方面拥有丰富经验。'},
-  hero_title_first: {0: 'قضايا', 1: 'Criminal', 2: '刑事'},
-  hero_title_last: {0: 'جنائية', 1: 'Cases', 2: '案件'},
-  learnmore_button: {0: 'تعرف على المزيد', 1: 'Learn More', 2: '了解更多'},
-  nav_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
-  nav_careers: {0: 'التوظيف', 1: 'Careers', 2: '招聘'},
-  nav_contact: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
-  nav_contracts: {0: 'عقود الشركات', 1: 'Company Contracts', 2: '公司合同'},
-  nav_eservices: {0: 'الخدمات الإلكترونية', 1: 'E-Services', 2: '电子服务'},
-  nav_faq: {0: 'الأسئلة الشائعة', 1: 'FAQ', 2: '常见问题'},
-  nav_services: {0: 'خدماتنا', 1: 'Our Services', 2: '我们的服务'},
-  nav_team: {0: 'فريقنا', 1: 'Our Team', 2: '我们的团队'},
-  section_1_desc: {0: 'نوفر دفاعاً قانونياً قوياً في جميع القضايا الجنائية من الجرائم الاقتصادية إلى الجرائم الشخصية.', 1: 'We provide strong legal defense in all criminal cases from economic crimes to personal crimes.', 2: '我们在所有刑事案件中提供强有力的法律辩护。'},
-  section_1_title: {0: 'الدفاع الجنائي المتخصص', 1: 'Specialized Criminal Defense', 2: '专业刑事辩护'},
-  whatsapp_button: {0: 'تواصل عبر واتساب', 1: 'Contact via WhatsApp', 2: '通过WhatsApp联系'},
 };
 </script>
+
+
+
 <script src="lang.js"></script>
-    </body>
+</body>
 </html>

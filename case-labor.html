@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+
+<html dir="rtl" lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>القضايا العمالية — شركة مشاري بندر بن جلوي للمحاماة</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>القضايا العمالية — شركة مشاري بندر بن جلوي للمحاماة</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
         :root { --navy:#1B2C6B; --navy-dark:#111d4a; --navy-mid:#223580; --gold:#B8935A; --gold-light:#d4aa72; --gold-pale:#f5ede0; --white:#ffffff; --off-white:#f8f6f2; --gray:#6b7280; --gray-dark:#374151; --border:#e5e1d9; }
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
         html{scroll-behavior:smooth;overflow-x:hidden}
@@ -94,207 +95,238 @@
         </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="logo.png" alt="شعار شركة مشاري بندر بن جلوي">
-                <div>
-                    <div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
-                    <div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
-                </div>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html#services" data-i18n="nav_services">خدماتنا</a></li>
-                <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
-                <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-                <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
-                <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
-                <li><a href="e-services.html" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
-                <li><a href="careers.html" data-i18n="nav_careers">التوظيف</a></li>
-                <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
-            </ul>
-            <div style="display:flex;align-items:center;gap:10px;">
-                <div class="lang-drop" id="langDrop">
-                    <button class="lang-drop-btn" onclick="toggleLangDrop()" id="langDropBtn">🇸🇦</button>
-                    <div class="lang-drop-menu" id="langDropMenu">
-                        <button onclick="setLang(0);toggleLangDrop()" data-lang="0">🇸🇦 العربية</button>
-                        <button onclick="setLang(1);toggleLangDrop()" data-lang="1">🇬🇧 English</button>
-                        <button onclick="setLang(2);toggleLangDrop()" data-lang="2">🇨🇳 中文</button>
-                    </div>
-                </div>
-                <a href="https://wa.me/966533532153" target="_blank" rel="noopener" class="nav-cta">احجز استشارة</a>
-                <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div class="mobile-drawer" id="drawer">
-        <ul>
-            <li><a href="index.html#services" data-i18n="nav_services" data-i18n="nav_services">خدماتنا</a></li>
-            <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
-            <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-            <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
-            <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
-            <li><a href="e-services.html" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
-            <li><a href="careers.html" data-i18n="nav_careers">التوظيف</a></li>
-            <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
-            <li><a href="https://wa.me/966533532153">احجز استشارة</a></li>
-        </ul>
-    </div>
-
-    <section class="page-hero">
-        <div class="page-hero-content">
-            <div class="page-breadcrumb">
-                <a href="index.html">الرئيسية</a>
-                <span>/</span>
-                <a href="#">القضايا القانونية</a>
-                <span>/</span>
-                <span>القضايا العمالية</span>
-            </div>
-            <h1>القضايا <em>العمالية</em></h1>
-            <p class="page-hero-desc">حماية حقوق العمال وأصحاب العمل أمام المحاكم العمالية والهيئات المختصة في المملكة</p>
-        </div>
-    </section>
-
-    <section class="section-pad">
-        <div class="article-body">
-            <h2>مقدمة عن القضايا العمالية</h2>
-            <p>تعتبر القضايا العمالية من أهم المجالات القانونية في المملكة العربية السعودية نظراً لأهميتها في حماية حقوق العاملين والعاملات وأصحاب العمل. نظام العمل السعودي يهدف إلى تحقيق التوازن بين حقوق العمال والعاملات وحقوق أصحاب العمل، مع ضمان توفير بيئة عمل آمنة وصحية وعادلة. المحاكم العمالية المتخصصة في المملكة تتولى النظر في جميع المنازعات التي تنشأ بين العمال والعاملات وأصحاب العمل بسرعة وفعالية.</p>
-            <p>شركة مشاري بندر بن جلوي للمحاماة توفر خدمات متكاملة في الدفاع عن حقوق العمال والعاملات وكذلك حقوق أصحاب العمل، حيث يمتلك فريقنا خبرة عملية واسعة في التعامل مع جميع أنواع منازعات العمل والتوصل إلى حلول عادلة.</p>
-
-            <h2>أنواع القضايا العمالية</h2>
-            <p>تتنوع القضايا العمالية بحسب طبيعة المنازعة والحقوق المتنازع عليها:</p>
-            <h3>قضايا الفصل التعسفي</h3>
-            <p>تحدث عندما يقوم صاحب العمل بإنهاء عقد العمل بشكل تعسفي أو بغير أسباب مشروعة. القانون السعودي يحمي العاملين من الفصل التعسفي ويضمن حقهم في التعويض العادل. هذه النوعية من القضايا تتطلب إثباتاً قوياً لتعسفية الفصل.</p>
-            <h3>قضايا الرواتب والمستحقات المالية</h3>
-            <p>تشمل الخلافات حول الرواتب المتأخرة والعلاوات والحوافز والبدلات التي لم يتم دفعها للعامل. تعتبر المطالبة بالحقوق المالية من أكثر أنواع القضايا العمالية شيوعاً وتتطلب وثائق وأدلة قوية.</p>
-            <h3>قضايا إصابات العمل والأمراض المهنية</h3>
-            <p>تتعلق بالإصابات والأمراض التي يتعرض لها العامل أثناء أداء عمله، والتعويضات المستحقة عن هذه الإصابات. القانون السعودي يلزم صاحب العمل بتوفير بيئة عمل آمنة والتأمين على العاملين.</p>
-            <h3>منازعات عقود العمل والشروط</h3>
-            <p>تشمل الخلافات حول شروط العقد أو الالتزامات المتبادلة بين العامل وصاحب العمل. قد تتعلق بأيام الراحة أو ساعات العمل أو نوع العمل المتفق عليه.</p>
-            <h3>قضايا مكافأة نهاية الخدمة</h3>
-            <p>توفر القوانين السعودية للعمال الحق في مكافأة نهاية الخدمة عند انتهاء عقد العمل بشرط استيفاء شروط معينة. كثيراً ما تحدث نزاعات حول طريقة حساب المكافأة أو عدم دفعها.</p>
-
-            <h2>الأساس القانوني للقضايا العمالية</h2>
-            <p>يستند الحق العمالي السعودي على عدة أنظمة وقوانين مهمة:</p>
-            <ul>
-                <li><strong>نظام العمل السعودي (1426هـ):</strong> القانون الأساسي الذي ينظم العلاقات بين العمال والعاملات وأصحاب العمل وحقوق والتزامات كل طرف</li>
-                <li><strong>لائحة الفصل التعسفي:</strong> تحدد معايير تقيم ما إذا كان الفصل تعسفياً وتحدد التعويضات المستحقة</li>
-                <li><strong>نظام التأمينات الاجتماعية:</strong> يوفر حماية اجتماعية للعمال والعاملات في حالة البطالة أو الإصابة</li>
-                <li><strong>نظام ساند:</strong> برنامج تأمين للعاطلين عن العمل يوفر دعماً مالياً مؤقتاً</li>
-            </ul>
-
-            <h2>نظام الحماية من الفصل التعسفي</h2>
-            <p>أقرت المملكة نظاماً متقدماً لحماية العمال والعاملات من الفصل التعسفي. يعتبر الفصل تعسفياً إذا تم بدون سبب حقيقي مشروع أو بطريقة تتنافى مع العدل والإنصاف. في هذه الحالة يحق للعامل المطالبة بالتعويض الذي قد يصل إلى عدة أشهر من الراتب.</p>
-            <p>القانون يحمي العمال من الفصل لأسباب تمييزية أو انتقامية أو لممارسة حقهم في الحق النقابي. صاحب العمل ملزم بتقديم أسباب مشروعة وموثقة للفصل، والفشل في ذلك يجعل الفصل عرضة للطعن أمام المحكمة.</p>
-
-            <h2>إجراءات التقاضي في القضايا العمالية</h2>
-            <p>تتبع القضايا العمالية إجراءات خاصة أسرع وأيسر من الإجراءات المدنية العادية:</p>
-            <p>تبدأ بتقديم شكوى رسمية إلى المحكمة العمالية المختصة مع المستندات الداعمة مثل العقد والرسائل والتحويلات البنكية. يجب أن تكون الشكوى واضحة وتحدد بدقة المطالبة والأسباب.</p>
-            <p>بعد التقديم، توجه المحكمة تحقيقاً ودياً لجمع الطرفين محاولة للتوصل إلى تسوية ودية. إذا فشلت محاولة الصلح، تنتقل القضية إلى جلسات التحقيق والمرافعة.</p>
-            <p>في جلسات التحقيق، يقدم كل طرف أدلته والوثائق الداعمة له. قد تستدعي المحكمة شهوداً أو تطلب خبرة فنية حسب طبيعة النزاع.</p>
-            <p>بعد انتهاء المرافعة، تصدر المحكمة حكماً في الموضوع. يحق لأي من الطرفين المتضررين من الحكم استئنافه خلال مدة محددة.</p>
-
-            <h2>خدمات شركة مشاري بندر بن جلوي في القضايا العمالية</h2>
-            <p>توفر شركتنا خدمات شاملة في مجال القضايا العمالية:</p>
-            <ul>
-                <li>الاستشارات القانونية للعمال والعاملات حول حقوقهم القانونية</li>
-                <li>الاستشارات لأصحاب العمل حول نظام العمل والالتزامات</li>
-                <li>تمثيل كامل أمام المحاكم العمالية في جميع مراحل التقاضي</li>
-                <li>إعداد الشكاوى والمذكرات القانونية بكفاءة عالية</li>
-                <li>متابعة قضايا التعويضات والمستحقات المالية</li>
-                <li>تسوية النزاعات العمالية بطرق ودية أو قضائية</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="section-pad alt">
-        <div class="article-body">
-            <h2 style="text-align:center;margin-bottom:32px;">الأساس القانوني والأنظمة ذات الصلة</h2>
-            <div class="info-box">
-                <h3>الأنظمة والتشريعات الرئيسية</h3>
-                <ul>
-                    <li>نظام العمل الصادر بالمرسوم الملكي م/51 لعام 1426هـ وتعديلاته</li>
-                    <li>لائحة الفصل التعسفي وحقوق العمال</li>
-                    <li>نظام التأمينات الاجتماعية للعاملين</li>
-                    <li>نظام ساند لدعم العاطلين عن العمل</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-pad">
-        <div class="article-body">
-            <h2 style="text-align:center;margin-bottom:32px;">مراحل الإجراءات العمالية</h2>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-num">1</div>
-                    <h4>تقديم الشكوى للمحكمة العمالية</h4>
-                    <p>تقديم شكوى رسمية موثقة إلى المحكمة العمالية المختصة مع جميع المستندات والأدلة الداعمة لمطالبتك.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">2</div>
-                    <h4>جلسة الصلح والتسوية</h4>
-                    <p>محاولة التوصل إلى تسوية ودية بين الطرفين في حضور المحكمة، قد تؤدي هذه المحاولة إلى حل الخلاف بدون تقاضي.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">3</div>
-                    <h4>التقاضي وتقديم المذكرات</h4>
-                    <p>إذا فشلت التسوية، تبدأ مرحلة التقاضي حيث يتم تبادل المذكرات والأدلة وسماع الشهود وإصدار الحكم.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">4</div>
-                    <h4>تنفيذ الحكم واستيفاء الحقوق</h4>
-                    <p>بعد صدور الحكم، يتم تنفيذه فوراً. يحق للمتضرر استئناف الحكم أو استيفاء حقوقه المقررة.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <h2>هل لديك منازعة عمالية؟</h2>
-        <p>فريقنا المتخصص في القضايا العمالية يدافع عن حقوقك بكل قوة وفعالية</p>
-        <div class="cta-btns">
-            <a href="https://wa.me/966533532153" class="btn-gold" target="_blank" rel="noopener">استشارة عمالية متخصصة</a>
-            <a href="index.html#booking" class="btn-outline">تواصل معنا</a>
-        </div>
-    </section>
-
-    <footer>
-        <p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
-        <p style="margin-top:8px;"><a href="index.html" data-i18n="footer_home">الرئيسية</a></p>
-    </footer>
-    <a href="https://wa.me/966533532153" class="whatsapp-fab" target="_blank" rel="noopener" title="تواصل عبر واتساب">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-    </a>
-
-
-    <script>
+<nav class="navbar">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">
+<img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png"/>
+<div>
+<div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
+</div>
+</a>
+<ul class="nav-links">
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+<div style="display:flex;align-items:center;gap:10px;">
+<div class="lang-drop" id="langDrop">
+<button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
+<div class="lang-drop-menu" id="langDropMenu">
+<button data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦 العربية</button>
+<button data-lang="1" onclick="setLang(1);toggleLangDrop()">🇬🇧 English</button>
+<button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
+</div>
+</div>
+<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
+<div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
+<span></span><span></span><span></span>
+</div>
+</div>
+</div>
+</nav>
+<div class="mobile-drawer" id="drawer">
+<ul>
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+<li><a href="https://wa.me/966533532153">احجز استشارة</a></li>
+</ul>
+</div>
+<section class="page-hero">
+<div class="page-hero-content">
+<div class="page-breadcrumb">
+<a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
+<span>/</span>
+<a data-i18n="breadcrumb_legal" href="#">القضايا القانونية</a>
+<span>/</span>
+<span data-i18n="breadcrumb_current">القضايا العمالية</span>
+</div>
+<h1 data-i18n="hero_h1">القضايا <em>العمالية</em></h1>
+<p class="page-hero-desc" data-i18n="hero_desc">حماية حقوق العمال وأصحاب العمل أمام المحاكم العمالية والهيئات المختصة في المملكة</p>
+</div>
+</section>
+<section class="section-pad">
+<div class="article-body">
+<h2 data-i18n="section_h2_0">مقدمة عن القضايا العمالية</h2>
+<p data-i18n="p_0">تعتبر القضايا العمالية من أهم المجالات القانونية في المملكة العربية السعودية نظراً لأهميتها في حماية حقوق العاملين والعاملات وأصحاب العمل. نظام العمل السعودي يهدف إلى تحقيق التوازن بين حقوق العمال والعاملات وحقوق أصحاب العمل، مع ضمان توفير بيئة عمل آمنة وصحية وعادلة. المحاكم العمالية المتخصصة في المملكة تتولى النظر في جميع المنازعات التي تنشأ بين العمال والعاملات وأصحاب العمل بسرعة وفعالية.</p>
+<p data-i18n="p_1">شركة مشاري بندر بن جلوي للمحاماة توفر خدمات متكاملة في الدفاع عن حقوق العمال والعاملات وكذلك حقوق أصحاب العمل، حيث يمتلك فريقنا خبرة عملية واسعة في التعامل مع جميع أنواع منازعات العمل والتوصل إلى حلول عادلة.</p>
+<h2 data-i18n="section_h2_1">أنواع القضايا العمالية</h2>
+<p data-i18n="p_2">تتنوع القضايا العمالية بحسب طبيعة المنازعة والحقوق المتنازع عليها:</p>
+<h3 data-i18n="section_h3_0">قضايا الفصل التعسفي</h3>
+<p data-i18n="p_3">تحدث عندما يقوم صاحب العمل بإنهاء عقد العمل بشكل تعسفي أو بغير أسباب مشروعة. القانون السعودي يحمي العاملين من الفصل التعسفي ويضمن حقهم في التعويض العادل. هذه النوعية من القضايا تتطلب إثباتاً قوياً لتعسفية الفصل.</p>
+<h3 data-i18n="section_h3_1">قضايا الرواتب والمستحقات المالية</h3>
+<p data-i18n="p_4">تشمل الخلافات حول الرواتب المتأخرة والعلاوات والحوافز والبدلات التي لم يتم دفعها للعامل. تعتبر المطالبة بالحقوق المالية من أكثر أنواع القضايا العمالية شيوعاً وتتطلب وثائق وأدلة قوية.</p>
+<h3 data-i18n="section_h3_2">قضايا إصابات العمل والأمراض المهنية</h3>
+<p data-i18n="p_5">تتعلق بالإصابات والأمراض التي يتعرض لها العامل أثناء أداء عمله، والتعويضات المستحقة عن هذه الإصابات. القانون السعودي يلزم صاحب العمل بتوفير بيئة عمل آمنة والتأمين على العاملين.</p>
+<h3 data-i18n="section_h3_3">منازعات عقود العمل والشروط</h3>
+<p data-i18n="p_6">تشمل الخلافات حول شروط العقد أو الالتزامات المتبادلة بين العامل وصاحب العمل. قد تتعلق بأيام الراحة أو ساعات العمل أو نوع العمل المتفق عليه.</p>
+<h3 data-i18n="section_h3_4">قضايا مكافأة نهاية الخدمة</h3>
+<p data-i18n="p_7">توفر القوانين السعودية للعمال الحق في مكافأة نهاية الخدمة عند انتهاء عقد العمل بشرط استيفاء شروط معينة. كثيراً ما تحدث نزاعات حول طريقة حساب المكافأة أو عدم دفعها.</p>
+<h2 data-i18n="section_h2_2">الأساس القانوني للقضايا العمالية</h2>
+<p data-i18n="p_8">يستند الحق العمالي السعودي على عدة أنظمة وقوانين مهمة:</p>
+<ul>
+<li data-i18n="li_0"><strong>نظام العمل السعودي (1426هـ):</strong> القانون الأساسي الذي ينظم العلاقات بين العمال والعاملات وأصحاب العمل وحقوق والتزامات كل طرف</li>
+<li data-i18n="li_1"><strong>لائحة الفصل التعسفي:</strong> تحدد معايير تقيم ما إذا كان الفصل تعسفياً وتحدد التعويضات المستحقة</li>
+<li data-i18n="li_2"><strong>نظام التأمينات الاجتماعية:</strong> يوفر حماية اجتماعية للعمال والعاملات في حالة البطالة أو الإصابة</li>
+<li data-i18n="li_3"><strong>نظام ساند:</strong> برنامج تأمين للعاطلين عن العمل يوفر دعماً مالياً مؤقتاً</li>
+</ul>
+<h2 data-i18n="section_h2_3">نظام الحماية من الفصل التعسفي</h2>
+<p data-i18n="p_9">أقرت المملكة نظاماً متقدماً لحماية العمال والعاملات من الفصل التعسفي. يعتبر الفصل تعسفياً إذا تم بدون سبب حقيقي مشروع أو بطريقة تتنافى مع العدل والإنصاف. في هذه الحالة يحق للعامل المطالبة بالتعويض الذي قد يصل إلى عدة أشهر من الراتب.</p>
+<p data-i18n="p_10">القانون يحمي العمال من الفصل لأسباب تمييزية أو انتقامية أو لممارسة حقهم في الحق النقابي. صاحب العمل ملزم بتقديم أسباب مشروعة وموثقة للفصل، والفشل في ذلك يجعل الفصل عرضة للطعن أمام المحكمة.</p>
+<h2 data-i18n="section_h2_4">إجراءات التقاضي في القضايا العمالية</h2>
+<p data-i18n="p_11">تتبع القضايا العمالية إجراءات خاصة أسرع وأيسر من الإجراءات المدنية العادية:</p>
+<p data-i18n="p_12">تبدأ بتقديم شكوى رسمية إلى المحكمة العمالية المختصة مع المستندات الداعمة مثل العقد والرسائل والتحويلات البنكية. يجب أن تكون الشكوى واضحة وتحدد بدقة المطالبة والأسباب.</p>
+<p data-i18n="p_13">بعد التقديم، توجه المحكمة تحقيقاً ودياً لجمع الطرفين محاولة للتوصل إلى تسوية ودية. إذا فشلت محاولة الصلح، تنتقل القضية إلى جلسات التحقيق والمرافعة.</p>
+<p data-i18n="p_14">في جلسات التحقيق، يقدم كل طرف أدلته والوثائق الداعمة له. قد تستدعي المحكمة شهوداً أو تطلب خبرة فنية حسب طبيعة النزاع.</p>
+<p data-i18n="p_15">بعد انتهاء المرافعة، تصدر المحكمة حكماً في الموضوع. يحق لأي من الطرفين المتضررين من الحكم استئنافه خلال مدة محددة.</p>
+<h2 data-i18n="section_h2_5">خدمات شركة مشاري بندر بن جلوي في القضايا العمالية</h2>
+<p data-i18n="p_16">توفر شركتنا خدمات شاملة في مجال القضايا العمالية:</p>
+<ul>
+<li data-i18n="li_4">الاستشارات القانونية للعمال والعاملات حول حقوقهم القانونية</li>
+<li data-i18n="li_5">الاستشارات لأصحاب العمل حول نظام العمل والالتزامات</li>
+<li data-i18n="li_6">تمثيل كامل أمام المحاكم العمالية في جميع مراحل التقاضي</li>
+<li data-i18n="li_7">إعداد الشكاوى والمذكرات القانونية بكفاءة عالية</li>
+<li data-i18n="li_8">متابعة قضايا التعويضات والمستحقات المالية</li>
+<li data-i18n="li_9">تسوية النزاعات العمالية بطرق ودية أو قضائية</li>
+</ul>
+</div>
+</section>
+<section class="section-pad alt">
+<div class="article-body">
+<h2 style="text-align:center;margin-bottom:32px;">الأساس القانوني والأنظمة ذات الصلة</h2>
+<div class="info-box">
+<h3 data-i18n="infobox_h3">الأنظمة والتشريعات الرئيسية</h3>
+<ul>
+<li data-i18n="infobox_li_0">نظام العمل الصادر بالمرسوم الملكي م/51 لعام 1426هـ وتعديلاته</li>
+<li data-i18n="infobox_li_1">لائحة الفصل التعسفي وحقوق العمال</li>
+<li data-i18n="infobox_li_2">نظام التأمينات الاجتماعية للعاملين</li>
+<li data-i18n="infobox_li_3">نظام ساند لدعم العاطلين عن العمل</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="section-pad">
+<div class="article-body">
+<h2 style="text-align:center;margin-bottom:32px;">مراحل الإجراءات العمالية</h2>
+<div class="steps-grid">
+<div class="step-card">
+<div class="step-num">1</div>
+<h4 data-i18n="step_h4_0">تقديم الشكوى للمحكمة العمالية</h4>
+<p data-i18n="step_p_0">تقديم شكوى رسمية موثقة إلى المحكمة العمالية المختصة مع جميع المستندات والأدلة الداعمة لمطالبتك.</p>
+</div>
+<div class="step-card">
+<div class="step-num">2</div>
+<h4 data-i18n="step_h4_1">جلسة الصلح والتسوية</h4>
+<p data-i18n="step_p_1">محاولة التوصل إلى تسوية ودية بين الطرفين في حضور المحكمة، قد تؤدي هذه المحاولة إلى حل الخلاف بدون تقاضي.</p>
+</div>
+<div class="step-card">
+<div class="step-num">3</div>
+<h4 data-i18n="step_h4_2">التقاضي وتقديم المذكرات</h4>
+<p data-i18n="step_p_2">إذا فشلت التسوية، تبدأ مرحلة التقاضي حيث يتم تبادل المذكرات والأدلة وسماع الشهود وإصدار الحكم.</p>
+</div>
+<div class="step-card">
+<div class="step-num">4</div>
+<h4 data-i18n="step_h4_3">تنفيذ الحكم واستيفاء الحقوق</h4>
+<p data-i18n="step_p_3">بعد صدور الحكم، يتم تنفيذه فوراً. يحق للمتضرر استئناف الحكم أو استيفاء حقوقه المقررة.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="cta-section">
+<h2 data-i18n="cta_h2">هل لديك منازعة عمالية؟</h2>
+<p data-i18n="cta_p">فريقنا المتخصص في القضايا العمالية يدافع عن حقوقك بكل قوة وفعالية</p>
+<div class="cta-btns">
+<a class="btn-gold" data-i18n="cta_btn_0" href="https://wa.me/966533532153" rel="noopener" target="_blank">استشارة عمالية متخصصة</a>
+<a class="btn-outline" data-i18n="cta_btn_1" href="index.html#booking">تواصل معنا</a>
+</div>
+</section>
+<footer>
+<p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+<p style="margin-top:8px;"><a data-i18n="footer_home" href="index.html">الرئيسية</a></p>
+</footer>
+<a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank" title="تواصل عبر واتساب">
+<svg fill="white" height="28" viewbox="0 0 24 24" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path></svg>
+</a>
+ <script>
 const pageTranslations = {
-  breadcrumb_current: {0: 'القضايا العمالية', 1: 'Labor Cases', 2: '劳动案件'},
   breadcrumb_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  breadcrumb_services: {0: 'الخدمات', 1: 'Services', 2: '服务'},
-  cta_button: {0: 'استشر معنا الآن', 1: 'Consult Now', 2: '现在咨询'},
-  footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Mashary Bandar Bin Jalawi Law Firm — All rights reserved', 2: '© 2025 玛沙里·班达尔·本·贾劳伊律师事务所 — 版权所有'},
+  breadcrumb_legal: {0: 'القضايا القانونية', 1: 'Legal Cases', 2: '法律案件'},
+  breadcrumb_current: {0: 'القضايا العمالية', 1: 'Labor Cases', 2: '劳动案件'},
+  hero_h1: {0: 'القضايا العمالية', 1: 'Labor Cases', 2: '劳动案件'},
+  hero_desc: {0: 'حماية حقوق العمال وأصحاب العمل أمام المحاكم العمالية والهيئات المختصة في المملكة', 1: 'Protecting the rights of workers and employers before labor courts and competent authorities in Saudi Arabia', 2: '在沙特阿拉伯的劳动法庭和主管机构面前保护工人和雇主的权利'},
+  section_h2_0: {0: 'مقدمة عن القضايا العمالية', 1: 'Introduction to Labor Cases', 2: '劳动案件简介'},
+  p_0: {0: 'تعتبر القضايا العمالية من أهم المجالات القانونية في المملكة العربية السعودية نظراً لأهميتها الكبيرة في حماية حقوق العمال وتنظيم علاقات العمل.', 1: 'Labor cases are among the most important legal areas in Saudi Arabia due to their critical importance in protecting workers\' rights and regulating employment relationships.', 2: '劳动案件是沙特阿拉伯最重要的法律领域之一，因为它们在保护工人权利和规范劳动关系方面具有极其重要的意义。'},
+  p_1: {0: 'شركة مشاري بندر بن جلوي للمحاماة توفر خدمات متكاملة في الدفاع عن حقوق العمال والعاملات وكذلك تقديم الاستشارات لأصحاب العمل.', 1: 'Meshary Bin Bandar Bin Jaloui Law Firm provides integrated services in defending workers\' rights as well as providing consultations for employers.', 2: '美沙里·本·班达尔·本·贾卢伊律师事务所提供全面的工人权益辩护服务以及为雇主提供咨询服务。'},
+  section_h2_1: {0: 'أنواع القضايا العمالية', 1: 'Types of Labor Cases', 2: '劳动案件类型'},
+  p_2: {0: 'تتنوع القضايا العمالية بحسب طبيعة المنازعة والحقوق المتنازع عليها.', 1: 'Labor cases vary according to the nature of the dispute and the rights in question.', 2: '劳动案件因争议的性质和涉及的权利而异。'},
+  section_h3_0: {0: 'قضايا الفصل التعسفي', 1: 'Wrongful Termination Cases', 2: '不当解雇案件'},
+  p_3: {0: 'تحدث عندما يقوم صاحب العمل بإنهاء عقد العمل بشكل تعسفي أو بغير أسباب مشروعة. القانون السعودي يحمي العمال من الفصل التعسفي ويضمن لهم التعويض المناسب.', 1: 'These occur when an employer terminates an employment contract arbitrarily or without legitimate reasons. Saudi law protects workers from wrongful termination and guarantees them appropriate compensation.', 2: '当雇主任意或无合法理由终止劳动合同时发生。沙特法律保护工人免遭不当解雇，并保障他们获得适当补偿。'},
+  section_h3_1: {0: 'قضايا الرواتب والمستحقات المالية', 1: 'Salary and Financial Entitlements Cases', 2: '薪资和财务权益案件'},
+  p_4: {0: 'تشمل الخلافات حول الرواتب المتأخرة والعلاوات والحوافز والبدلات التي لم يتم دفعها للعامل. تضمن الأنظمة السعودية حق العامل في تلقي راتبه كاملاً في الوقت المحدد.', 1: 'These include disputes over delayed salaries, bonuses, incentives, and allowances not paid to the worker. Saudi regulations guarantee the worker\'s right to receive their full salary on time.', 2: '这包括关于延迟工资、奖金、激励和未支付给工人的津贴的争议。沙特法规保障工人按时领取全额工资的权利。'},
+  section_h3_2: {0: 'قضايا إصابات العمل والأمراض المهنية', 1: 'Work Injury and Occupational Disease Cases', 2: '工伤和职业病案件'},
+  p_5: {0: 'تتعلق بالإصابات والأمراض التي يتعرض لها العامل أثناء أداء عمله، والتعويضات المستحقة عن هذه الإصابات.', 1: 'These relate to injuries and diseases suffered by workers during the performance of their duties, and the compensation owed for such injuries.', 2: '这涉及工人在执行工作期间所遭受的伤害和疾病，以及因此产生的应得赔偿。'},
+  section_h3_3: {0: 'منازعات عقود العمل والشروط', 1: 'Employment Contract and Terms Disputes', 2: '劳动合同和条款争议'},
+  p_6: {0: 'تشمل الخلافات حول شروط العقد أو الالتزامات المتبادلة بين العامل وصاحب العمل. قد تتعلق بأيام الإجازة أو ساعات العمل أو ظروف العمل.', 1: 'These include disputes over contract terms or mutual obligations between the worker and employer, potentially related to vacation days, working hours, or working conditions.', 2: '这包括关于合同条款或工人与雇主之间相互义务的争议，可能涉及假期、工作时间或工作条件。'},
+  section_h3_4: {0: 'قضايا مكافأة نهاية الخدمة', 1: 'End-of-Service Gratuity Cases', 2: '离职金案件'},
+  p_7: {0: 'توفر القوانين السعودية للعمال الحق في مكافأة نهاية الخدمة عند انتهاء عقد العمل بشرط استيفاء الشروط المحددة.', 1: 'Saudi laws provide workers with the right to an end-of-service gratuity upon termination of the employment contract, subject to meeting specified conditions.', 2: '沙特法律规定，工人在劳动合同终止时有权获得离职金，但须满足特定条件。'},
+  section_h2_2: {0: 'الأساس القانوني للقضايا العمالية', 1: 'Legal Basis for Labor Cases', 2: '劳动案件的法律基础'},
+  p_8: {0: 'يستند الحق العمالي السعودي على عدة أنظمة وقوانين مهمة.', 1: 'Saudi labor law is based on several important regulations and laws.', 2: '沙特劳动权利以几部重要的法规和法律为基础。'},
+  li_0: {0: 'نظام العمل السعودي (1426هـ): القانون الأساسي الذي ينظم العلاقات بين العمال والعاملات وأصحاب العمل', 1: 'Saudi Labor Law (1426H): The fundamental law governing relationships between workers and employers', 2: '沙特劳动法（1426H）：规范工人与雇主关系的基本法律'},
+  li_1: {0: 'لائحة الفصل التعسفي: تحدد معايير تقيم ما إذا كان الفصل تعسفياً وتحدد التعويضات المستحقة', 1: 'Wrongful Termination Regulation: Defines criteria for evaluating whether termination was wrongful and specifies due compensation', 2: '不当解雇法规：规定评估解雇是否为不当解雇的标准并明确应得赔偿'},
+  li_2: {0: 'نظام التأمينات الاجتماعية: يوفر حماية اجتماعية للعمال والعاملات في حالة البطالة أو الإصابة', 1: 'Social Insurance Law: Provides social protection for workers in cases of unemployment or injury', 2: '社会保险法：为工人在失业或受伤情况下提供社会保障'},
+  li_3: {0: 'نظام ساند: برنامج تأمين للعاطلين عن العمل يوفر دعماً مالياً مؤقتاً', 1: 'SANED Program: An unemployment insurance program providing temporary financial support', 2: 'SANED计划：为失业工人提供临时财务支持的失业保险计划'},
+  section_h2_3: {0: 'نظام الحماية من الفصل التعسفي', 1: 'Protection Against Wrongful Termination System', 2: '不当解雇保护制度'},
+  p_9: {0: 'أقرت المملكة نظاماً متقدماً لحماية العمال والعاملات من الفصل التعسفي. يعتبر الفصل تعسفياً إذا تم لأسباب غير مشروعة أو بدون اتباع الإجراءات القانونية.', 1: 'Saudi Arabia has established an advanced system to protect workers from wrongful termination. Termination is considered wrongful if it is carried out for illegitimate reasons or without following legal procedures.', 2: '沙特阿拉伯建立了先进的制度来保护工人免遭不当解雇。如果解雇出于非法理由或未遵循法律程序，则视为不当解雇。'},
+  p_10: {0: 'القانون يحمي العمال من الفصل لأسباب تمييزية أو انتقامية أو لممارسة حقهم في الحق النقابي.', 1: 'The law protects workers from termination for discriminatory or retaliatory reasons, or for exercising their union rights.', 2: '法律保护工人免遭因歧视性或报复性原因或行使工会权利而被解雇。'},
+  section_h2_4: {0: 'إجراءات التقاضي في القضايا العمالية', 1: 'Litigation Procedures in Labor Cases', 2: '劳动案件诉讼程序'},
+  p_11: {0: 'تتبع القضايا العمالية إجراءات خاصة أسرع وأيسر من الإجراءات المدنية العادية.', 1: 'Labor cases follow special procedures that are faster and simpler than ordinary civil procedures.', 2: '劳动案件遵循比普通民事程序更快速、更简便的特殊程序。'},
+  p_12: {0: 'تبدأ بتقديم شكوى رسمية إلى المحكمة العمالية المختصة مع المستندات الداعمة مثل العقد والرسائل والسجلات.', 1: 'It begins with filing a formal complaint with the competent labor court along with supporting documents such as the contract, correspondence, and records.', 2: '从向主管劳动法庭提交正式投诉开始，并附上合同、往来信函和记录等支持文件。'},
+  p_13: {0: 'بعد التقديم، توجه المحكمة تحقيقاً ودياً لجمع الطرفين محاولة للتوصل إلى تسوية ودية. إذا فشل الصلح تبدأ المرحلة القضائية.', 1: 'After filing, the court conducts a conciliation hearing to bring both parties together in an attempt to reach an amicable settlement. If conciliation fails, the judicial phase begins.', 2: '提交后，法庭进行调解听证，将双方聚集在一起尝试达成友好和解。如果调解失败，则开始司法阶段。'},
+  p_14: {0: 'في جلسات التحقيق، يقدم كل طرف أدلته والوثائق الداعمة له. قد تستدعي المحكمة شهوداً أو تطلب تقارير خبراء.', 1: 'In investigation sessions, each party presents their evidence and supporting documents. The court may summon witnesses or request expert reports.', 2: '在调查庭中，各方提交其证据和支持文件。法庭可能传唤证人或要求专家报告。'},
+  p_15: {0: 'بعد انتهاء المرافعة، تصدر المحكمة حكماً في الموضوع. يحق لأي من الطرفين المتضررين من الحكم الاستئناف أمام محكمة الاستئناف العمالية.', 1: 'After pleadings conclude, the court issues a verdict on the merits. Either party aggrieved by the verdict has the right to appeal before the Labor Court of Appeal.', 2: '辩论结束后，法庭对案件实质作出裁决。对裁决感到受损的任一方有权向劳动上诉法庭提起上诉。'},
+  section_h2_5: {0: 'خدمات شركة مشاري بندر بن جلوي في القضايا العمالية', 1: 'Services of Meshary Bin Bandar Bin Jaloui Firm in Labor Cases', 2: '美沙里·本·班达尔·本·贾卢伊律师事务所的劳动案件服务'},
+  p_16: {0: 'توفر شركتنا خدمات شاملة في مجال القضايا العمالية:', 1: 'Our firm provides comprehensive services in the field of labor cases:', 2: '我们的律师事务所提供全面的劳动案件服务：'},
+  li_4: {0: 'الاستشارات القانونية للعمال والعاملات حول حقوقهم القانونية', 1: 'Legal consultations for workers on their legal rights', 2: '为工人提供有关其法律权利的法律咨询'},
+  li_5: {0: 'الاستشارات لأصحاب العمل حول نظام العمل والالتزامات', 1: 'Consultations for employers on labor regulations and obligations', 2: '为雇主提供有关劳动法规和义务的咨询'},
+  li_6: {0: 'تمثيل كامل أمام المحاكم العمالية في جميع مراحل التقاضي', 1: 'Full representation before labor courts in all stages of litigation', 2: '在所有诉讼阶段在劳动法庭前的全面代理'},
+  li_7: {0: 'إعداد الشكاوى والمذكرات القانونية بكفاءة عالية', 1: 'Preparing complaints and legal memoranda with high efficiency', 2: '高效准备投诉和法律备忘录'},
+  li_8: {0: 'متابعة قضايا التعويضات والمستحقات المالية', 1: 'Following up on compensation and financial entitlement cases', 2: '跟进赔偿和财务权益案件'},
+  li_9: {0: 'تسوية النزاعات العمالية بطرق ودية أو قضائية', 1: 'Settling labor disputes through amicable or judicial means', 2: '通过友好或司法方式解决劳动争议'},
+  infobox_h3: {0: 'الأنظمة والتشريعات الرئيسية', 1: 'Key Laws and Regulations', 2: '主要法律法规'},
+  infobox_li_0: {0: 'نظام العمل الصادر بالمرسوم الملكي م/51 لعام 1426هـ وتعديلاته', 1: 'Labor Law issued by Royal Decree M/51 for 1426H and its amendments', 2: '1426H颁布的劳动法（皇家法令M/51）及其修订案'},
+  infobox_li_1: {0: 'لائحة الفصل التعسفي وحقوق العمال', 1: 'Wrongful Termination Regulation and Workers\' Rights', 2: '不当解雇法规和工人权利'},
+  infobox_li_2: {0: 'نظام التأمينات الاجتماعية للعاملين', 1: 'Social Insurance Law for Workers', 2: '工人社会保险法'},
+  infobox_li_3: {0: 'نظام ساند لدعم العاطلين عن العمل', 1: 'SANED System for Unemployed Support', 2: 'SANED失业支持系统'},
+  step_h4_0: {0: 'تقديم الشكوى للمحكمة العمالية', 1: 'Filing a Complaint with the Labor Court', 2: '向劳动法庭提出投诉'},
+  step_p_0: {0: 'تقديم شكوى رسمية موثقة إلى المحكمة العمالية المختصة مع جميع المستندات والأدلة الداعمة لمطالبتك.', 1: 'Filing a documented formal complaint with the competent labor court along with all supporting documents and evidence for your claim.', 2: '向主管劳动法庭提交有据可查的正式投诉，并附上所有支持您主张的文件和证据。'},
+  step_h4_1: {0: 'جلسة الصلح والتسوية', 1: 'Conciliation and Settlement Session', 2: '调解和和解庭'},
+  step_p_1: {0: 'محاولة التوصل إلى تسوية ودية بين الطرفين في حضور المحكمة، قد تؤدي هذه المحاولة إلى حل الخلاف بسرعة وتجنب التقاضي المطول.', 1: 'Attempting to reach an amicable settlement between the parties in the presence of the court; this attempt may lead to quickly resolving the dispute and avoiding prolonged litigation.', 2: '在法庭在场的情况下尝试达成双方友好和解；这一尝试可能快速解决争议，避免旷日持久的诉讼。'},
+  step_h4_2: {0: 'التقاضي وتقديم المذكرات', 1: 'Litigation and Submission of Memoranda', 2: '诉讼和提交备忘录'},
+  step_p_2: {0: 'إذا فشلت التسوية، تبدأ مرحلة التقاضي حيث يتم تبادل المذكرات والأدلة وسماع الشهود وإصدار الأحكام.', 1: 'If settlement fails, the litigation phase begins where memoranda and evidence are exchanged, witnesses are heard, and judgments are issued.', 2: '如果和解失败，诉讼阶段开始，届时交换备忘录和证据，听取证人陈述并作出判决。'},
+  step_h4_3: {0: 'تنفيذ الحكم واستيفاء الحقوق', 1: 'Enforcing the Judgment and Claiming Rights', 2: '执行判决和主张权利'},
+  step_p_3: {0: 'بعد صدور الحكم، يتم تنفيذه فوراً. يحق للمتضرر استئناف الحكم أو استيفاء حقوقه المقررة.', 1: 'After the verdict is issued, it is enforced immediately. The aggrieved party has the right to appeal the verdict or claim their legally established rights.', 2: '判决作出后立即执行。受损方有权对判决提出上诉或主张其依法确立的权利。'},
+  cta_h2: {0: 'هل لديك منازعة عمالية؟', 1: 'Do You Have a Labor Dispute?', 2: '您有劳动争议吗？'},
+  cta_p: {0: 'فريقنا المتخصص في القضايا العمالية يدافع عن حقوقك بكل قوة وفعالية', 1: 'Our specialized labor team defends your rights with full force and effectiveness', 2: '我们专业的劳动团队以全力和高效为您的权益辩护'},
+  cta_btn_0: {0: 'استشارة عمالية متخصصة', 1: 'Specialized Labor Consultation', 2: '专业劳动咨询'},
+  cta_btn_1: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
+  footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Meshary Bin Bandar Bin Jaloui Law Firm and Legal Consultations — All rights reserved', 2: '© 2025 美沙里·本·班达尔·本·贾卢伊律师事务所和法律咨询——版权所有'},
   footer_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  hero_desc: {0: 'نحمي حقوق العمال والموظفين أمام محاكم العمل ونتعامل مع جميع منازعات التوظيف والعمل.', 1: 'We protect the rights of workers and employees before labor courts and handle all employment and labor disputes.', 2: '我们在劳动法庭保护工人和雇员的权利，处理所有雇佣和劳动纠纷。'},
-  hero_title_first: {0: 'قضايا', 1: 'Labor', 2: '劳动'},
-  hero_title_last: {0: 'عمالية', 1: 'Cases', 2: '案件'},
-  learnmore_button: {0: 'تعرف على المزيد', 1: 'Learn More', 2: '了解更多'},
-  nav_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
-  nav_careers: {0: 'التوظيف', 1: 'Careers', 2: '招聘'},
-  nav_contact: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
-  nav_contracts: {0: 'عقود الشركات', 1: 'Company Contracts', 2: '公司合同'},
-  nav_eservices: {0: 'الخدمات الإلكترونية', 1: 'E-Services', 2: '电子服务'},
-  nav_faq: {0: 'الأسئلة الشائعة', 1: 'FAQ', 2: '常见问题'},
-  nav_services: {0: 'خدماتنا', 1: 'Our Services', 2: '我们的服务'},
-  nav_team: {0: 'فريقنا', 1: 'Our Team', 2: '我们的团队'},
-  section_1_desc: {0: 'نوفر استشارات قانونية شاملة لحماية حقوق العمال بموجب القانون السعودي ونظام العمل الموحد.', 1: 'We provide comprehensive legal consultations to protect workers\' rights under Saudi law and unified labor regulations.', 2: '我们提供全面的法律咨询，根据沙特法律保护工人权利。'},
-  section_1_title: {0: 'حقوق العمل والعمال', 1: 'Labor Rights and Protections', 2: '劳动权利和保护'},
-  whatsapp_button: {0: 'تواصل عبر واتساب', 1: 'Contact via WhatsApp', 2: '通过WhatsApp联系'},
 };
 </script>
+
+
+
 <script src="lang.js"></script>
-    </body>
+</body>
 </html>

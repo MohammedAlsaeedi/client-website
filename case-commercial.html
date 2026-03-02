@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+
+<html dir="rtl" lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>القضايا التجارية — شركة مشاري بندر بن جلوي للمحاماة</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        :root { --navy:#1B2C6B; --navy-dark:#111d4a; --navy-mid:#223580; --gold:#B8935A; --gold-light:#d4aa72; --gold-pale:#f5ede0; --white:#ffffff; --off-white:#f8f6f2; --gray:#6b7280; --gray-dark:#374151; --border:#e5e1d9; }
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
+   القضايا التجارية — شركة مشاري بندر بن جلوي للمحاماة
+  </title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
+   :root { --navy:#1B2C6B; --navy-dark:#111d4a; --navy-mid:#223580; --gold:#B8935A; --gold-light:#d4aa72; --gold-pale:#f5ede0; --white:#ffffff; --off-white:#f8f6f2; --gray:#6b7280; --gray-dark:#374151; --border:#e5e1d9; }
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
         html{scroll-behavior:smooth;overflow-x:hidden}
         body{font-family:'Cairo',sans-serif;color:var(--gray-dark);background:var(--white);overflow-x:hidden;line-height:1.7}
@@ -91,209 +94,489 @@
         .lang-drop-menu.open { display: flex; }
         .lang-drop-menu button { background: none; border: none; cursor: pointer; font-size: 1rem; padding: 6px 10px; border-radius: 6px; text-align: right; color: #fff; white-space: nowrap; font-family: inherit; transition: background .15s; }
         .lang-drop-menu button:hover { background: rgba(184,147,90,.2); }
-        </style>
+  </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="logo.png" alt="شعار شركة مشاري بندر بن جلوي">
-                <div>
-                    <div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
-                    <div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
-                </div>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html#services" data-i18n="nav_services">خدماتنا</a></li>
-                <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
-                <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-                <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
-                <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
-                <li><a href="e-services.html" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
-                <li><a href="careers.html" data-i18n="nav_careers">التوظيف</a></li>
-                <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
-            </ul>
-            <div style="display:flex;align-items:center;gap:10px;">
-                <div class="lang-drop" id="langDrop">
-                    <button class="lang-drop-btn" onclick="toggleLangDrop()" id="langDropBtn">🇸🇦</button>
-                    <div class="lang-drop-menu" id="langDropMenu">
-                        <button onclick="setLang(0);toggleLangDrop()" data-lang="0">🇸🇦 العربية</button>
-                        <button onclick="setLang(1);toggleLangDrop()" data-lang="1">🇬🇧 English</button>
-                        <button onclick="setLang(2);toggleLangDrop()" data-lang="2">🇨🇳 中文</button>
-                    </div>
-                </div>
-                <a href="https://wa.me/966533532153" target="_blank" rel="noopener" class="nav-cta">احجز استشارة</a>
-                <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div class="mobile-drawer" id="drawer">
-        <ul>
-            <li><a href="index.html#services" data-i18n="nav_services" data-i18n="nav_services">خدماتنا</a></li>
-            <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
-            <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-            <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
-            <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
-            <li><a href="e-services.html" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
-            <li><a href="careers.html" data-i18n="nav_careers">التوظيف</a></li>
-            <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
-            <li><a href="https://wa.me/966533532153">احجز استشارة</a></li>
-        </ul>
-    </div>
-
-    <section class="page-hero">
-        <div class="page-hero-content">
-            <div class="page-breadcrumb">
-                <a href="index.html">الرئيسية</a>
-                <span>/</span>
-                <a href="#">القضايا القانونية</a>
-                <span>/</span>
-                <span>القضايا التجارية</span>
-            </div>
-            <h1>القضايا <em>التجارية</em></h1>
-            <p class="page-hero-desc">خبرة عميقة في قضايا الشركات والعقود والمنازعات التجارية أمام المحاكم التجارية السعودية</p>
-        </div>
-    </section>
-
-    <section class="section-pad">
-        <div class="article-body">
-            <h2>مقدمة عن القضايا التجارية في المملكة</h2>
-            <p>تُعتبر القضايا التجارية من أهم أنواع النزاعات القانونية في المملكة العربية السعودية، حيث تتعامل مع العديد من المعاملات التجارية والاقتصادية التي تشهدها المملكة بوصفها قوة اقتصادية إقليمية رائدة. المحاكم التجارية السعودية متخصصة في النظر في جميع القضايا المتعلقة بالعلاقات التجارية بين الشركات والأفراد، وتتطلب هذه القضايا خبرة قانونية عميقة وفهماً شاملاً للأنظمة التجارية السعودية والدولية.</p>
-            <p>شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية توفر خدمات متكاملة في مجال القضايا التجارية، حيث يمتلك فريق المحامين فيها خبرة عملية واسعة في التعامل مع أنواع مختلفة من المنازعات التجارية والعقدية، ويسعى دائماً إلى تحقيق أفضل النتائج لموكليه.</p>
-
-            <h2>أنواع القضايا التجارية</h2>
-            <p>تتنوع القضايا التجارية بحسب طبيعة النزاع والأطراف المتنازعة، وفيما يلي أهم أنواعها:</p>
-            <h3>منازعات بين الشركات والمؤسسات</h3>
-            <p>تتضمن جميع النزاعات التي تحدث بين شركتين أو أكثر بشأن العقود التجارية أو الشراكات أو حقوق الملكية الفكرية أو المنتجات والخدمات المقدمة. تحتاج هذه النزاعات إلى تحليل قانوني دقيق للعقود وفهم عميق للعلاقات التجارية المعقدة.</p>
-            <h3>منازعات العقود والاتفاقيات</h3>
-            <p>تُعتبر منازعات العقود من أكثر أنواع القضايا التجارية شيوعاً، وتشمل الخلافات حول تنفيذ العقد أو عدم الالتزام بشروطه أو مطالبات التعويض عن الأضرار الناجمة من عدم التنفيذ. كل عقد يتطلب دراسة معمقة لشروطه والظروف المحيطة بنشوء النزاع.</p>
-            <h3>منازعات الوكالة التجارية</h3>
-            <p>تنشأ عندما يحدث خلاف بين الموكل والوكيل التجاري حول حقوقهما والتزاماتهما المحددة في عقد الوكالة. قد تتعلق هذه المنازعات بعدم الالتزام بالشروط أو انتهاء الوكالة بشروط غير عادلة.</p>
-            <h3>منازعات المنافسة غير العادلة</h3>
-            <p>تشمل جميع الأفعال التي تؤثر على حقوق التاجر أو الشركة بطريقة غير قانونية أو غير عادلة، مثل استقطاب العملاء بطرق احتيالية أو نشر معلومات كاذبة عن المنتجات، أو انتهاك الأسرار التجارية.</p>
-            <h3>قضايا الإفلاس والتصفية</h3>
-            <p>يتعلق بحالات عجز الشركات عن سداد التزاماتها المالية. نظام الإفلاس السعودي يوفر آليات قانونية لحماية حقوق الدائنين والمدينين، وتتطلب هذه القضايا متابعة دقيقة من محام متخصص.</p>
-
-            <h2>الأساس القانوني للقضايا التجارية</h2>
-            <p>يستند نظام القضايا التجارية في المملكة العربية السعودية على عدة أنظمة وتشريعات رئيسية:</p>
-            <ul>
-                <li><strong>نظام المحاكم التجارية (1441هـ):</strong> يحدد اختصاصات المحاكم التجارية والإجراءات الواجب اتباعها في النزاعات التجارية</li>
-                <li><strong>نظام الشركات (1437هـ):</strong> ينظم تأسيس الشركات وإدارتها والتزاماتها والحقوق والمسؤوليات المترتبة عليها</li>
-                <li><strong>نظام الإفلاس (1439هـ):</strong> يحكم إجراءات الإفلاس والتصفية والحماية من الإفلاس</li>
-                <li><strong>نظام التجارة الإلكترونية:</strong> ينظم العقود والمعاملات الإلكترونية والتوقيع الرقمي</li>
-            </ul>
-
-            <h2>إجراءات التقاضي في القضايا التجارية</h2>
-            <p>يتبع التقاضي في القضايا التجارية مراحل محددة يجب اتباعها بدقة:</p>
-            <p>تبدأ الإجراءات برفع الدعوى أمام المحكمة التجارية المختصة، حيث يجب تقديم صحيفة الدعوى بشكل صحيح مع جميع المستندات الداعمة والتي تثبت مطالبتك. تتطلب هذه المرحلة إعداداً دقيقاً للمستندات والأدلة.</p>
-            <p>بعد تقديم الدعوى، تُجرى جلسات التحضير والتحقيق حيث يتم تبادل المذكرات بين الأطراف وتقديم الأدلة والمستندات. في هذه المرحلة قد يكون هناك فرصة للتسوية بين الأطراف.</p>
-            <p>تأتي المرافعة النهائية حيث يقدم كل طرف حجاجه والأدلة أمام المحكمة، وبعدها تصدر المحكمة حكماً ابتدائياً في الموضوع.</p>
-            <p>للطرف المتضرر من الحكم الابتدائي الحق في الاستئناف أمام محكمة الاستئناف خلال مدة محددة، وعند تأييد الحكم أو تعديله، يكون لصاحب الحكم الحق في تنفيذه من خلال إجراءات التنفيذ.</p>
-
-            <h2>أهمية الاستعانة بمحام متخصص</h2>
-            <p>يعتبر الاستعانة بمحام متخصص في القضايا التجارية أمراً حتمياً لعدة أسباب. أولاً، القوانين التجارية معقدة وتتطلب فهماً عميقاً لتطبيقاتها والأحكام القضائية الصادرة فيها. ثانياً، إعداد الأوراق والمذكرات القانونية يتطلب دقة عالية وخبرة في صياغتها بطريقة تخدم مصالح الموكل. ثالثاً، يمكن للمحامي المتخصص تقديم استشارات استراتيجية حول أفضل الطرق لحل النزاع سواء بالتسوية أو التقاضي.</p>
-
-            <h2>خدمات شركة مشاري بندر بن جلوي في القضايا التجارية</h2>
-            <p>توفر شركتنا خدمات شاملة في مجال القضايا التجارية تشمل:</p>
-            <ul>
-                <li>الاستشارات القانونية المتخصصة في العقود والاتفاقيات التجارية</li>
-                <li>إعداد وصياغة العقود التجارية بكفاءة عالية</li>
-                <li>التمثيل الكامل أمام المحاكم التجارية في جميع مراحل التقاضي</li>
-                <li>معالجة منازعات الشركات والتسوية بين الأطراف</li>
-                <li>متابعة قضايا الإفلاس والتصفية</li>
-                <li>الدفاع عن حقوق الموكل في قضايا المنافسة غير العادلة</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="section-pad alt">
-        <div class="article-body">
-            <h2 style="text-align:center;margin-bottom:32px;">الأساس القانوني والأنظمة ذات الصلة</h2>
-            <div class="info-box">
-                <h3>الأنظمة والتشريعات الرئيسية</h3>
-                <ul>
-                    <li>نظام المحاكم التجارية الصادر 1441هـ</li>
-                    <li>نظام الشركات الصادر 1437هـ</li>
-                    <li>نظام الإفلاس الصادر 1439هـ</li>
-                    <li>نظام التجارة الإلكترونية</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-pad">
-        <div class="article-body">
-            <h2 style="text-align:center;margin-bottom:32px;">مراحل الإجراءات القانونية</h2>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-num">1</div>
-                    <h4>رفع الدعوى وتقديم المستندات</h4>
-                    <p>تقديم صحيفة الدعوى الموثقة مع جميع المستندات الداعمة والأدلة التي تثبت الحق للمحكمة التجارية المختصة.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">2</div>
-                    <h4>جلسات التحضير والتحقيق</h4>
-                    <p>تبادل المذكرات بين الأطراف وتقديم الأدلة والمستندات مع محاولات التسوية والصلح بين الأطراف المتنازعة.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">3</div>
-                    <h4>المرافعة والحكم الابتدائي</h4>
-                    <p>الحضور أمام المحكمة وتقديم الحجج والأدلة النهائية، ثم إصدار المحكمة للحكم الابتدائي في القضية.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">4</div>
-                    <h4>الاستئناف والتنفيذ</h4>
-                    <p>حق الطرف المتضرر في استئناف الحكم أمام محكمة الاستئناف، وبعد تأييده البدء بإجراءات تنفيذ الحكم.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <h2>هل لديك قضية تجارية تحتاج للاستشارة؟</h2>
-        <p>فريق محاماتنا المتخصص جاهز لمساعدتك والدفاع عن حقوقك بكفاءة واحترافية عالية</p>
-        <div class="cta-btns">
-            <a href="https://wa.me/966533532153" class="btn-gold" target="_blank" rel="noopener">احجز استشارة مباشرة</a>
-            <a href="index.html#booking" class="btn-outline">تواصل معنا</a>
-        </div>
-    </section>
-
-    <footer>
-        <p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
-        <p style="margin-top:8px;"><a href="index.html" data-i18n="footer_home">الرئيسية</a></p>
-    </footer>
-    <a href="https://wa.me/966533532153" class="whatsapp-fab" target="_blank" rel="noopener" title="تواصل عبر واتساب">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+<nav class="navbar">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">
+<img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png"/>
+<div>
+<div class="nav-firm-name">
+       شركة مشاري بندر بن جلوي
+      </div>
+<div class="nav-firm-sub">
+       للمحاماة والاستشارات القانونية
+      </div>
+</div>
+</a>
+<ul class="nav-links">
+<li>
+<a data-i18n="nav_services" href="index.html#services">
+       خدماتنا
+      </a>
+</li>
+<li>
+<a data-i18n="nav_contracts" href="contracts.html">
+       عقود الشركات
+      </a>
+</li>
+<li>
+<a data-i18n="nav_faq" href="faq.html">
+       الأسئلة الشائعة
+      </a>
+</li>
+<li>
+<a data-i18n="nav_team" href="team.html">
+       فريقنا
+      </a>
+</li>
+<li>
+<a data-i18n="nav_blog" href="blog.html">
+       المدونة
+      </a>
+</li>
+<li>
+<a data-i18n="nav_eservices" href="e-services.html">
+       الخدمات الإلكترونية
+      </a>
+</li>
+<li>
+<a data-i18n="nav_careers" href="careers.html">
+       التوظيف
+      </a>
+</li>
+<li>
+<a data-i18n="nav_contact" href="index.html#booking">
+       تواصل معنا
+      </a>
+</li>
+</ul>
+<div style="display:flex;align-items:center;gap:10px;">
+<div class="lang-drop" id="langDrop">
+<button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">
+       🇸🇦
+      </button>
+<div class="lang-drop-menu" id="langDropMenu">
+<button data-lang="0" onclick="setLang(0);toggleLangDrop()">
+        🇸🇦 العربية
+       </button>
+<button data-lang="1" onclick="setLang(1);toggleLangDrop()">
+        🇬🇧 English
+       </button>
+<button data-lang="2" onclick="setLang(2);toggleLangDrop()">
+        🇨🇳 中文
+       </button>
+</div>
+</div>
+<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">
+      احجز استشارة
+     </a>
+<div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
+<span>
+</span>
+<span>
+</span>
+<span>
+</span>
+</div>
+</div>
+</div>
+</nav>
+<div class="mobile-drawer" id="drawer">
+<ul>
+<li>
+<a data-i18n="nav_services" href="index.html#services">
+      خدماتنا
+     </a>
+</li>
+<li>
+<a data-i18n="nav_contracts" href="contracts.html">
+      عقود الشركات
+     </a>
+</li>
+<li>
+<a data-i18n="nav_faq" href="faq.html">
+      الأسئلة الشائعة
+     </a>
+</li>
+<li>
+<a data-i18n="nav_team" href="team.html">
+      فريقنا
+     </a>
+</li>
+<li>
+<a data-i18n="nav_blog" href="blog.html">
+      المدونة
+     </a>
+</li>
+<li>
+<a data-i18n="nav_eservices" href="e-services.html">
+      الخدمات الإلكترونية
+     </a>
+</li>
+<li>
+<a data-i18n="nav_careers" href="careers.html">
+      التوظيف
+     </a>
+</li>
+<li>
+<a data-i18n="nav_contact" href="index.html#booking">
+      تواصل معنا
+     </a>
+</li>
+<li>
+<a href="https://wa.me/966533532153">
+      احجز استشارة
+     </a>
+</li>
+</ul>
+</div>
+<section class="page-hero">
+<div class="page-hero-content">
+<div class="page-breadcrumb">
+<a data-i18n="breadcrumb_home" href="index.html">
+      الرئيسية
+     </a>
+<span>
+      /
+     </span>
+<a data-i18n="breadcrumb_legal" href="#">
+      القضايا القانونية
+     </a>
+<span>
+      /
+     </span>
+<span data-i18n="commercial_breadcrumb_2">
+      القضايا التجارية
+     </span>
+</div>
+<h1 data-i18n="commercial_hero_h1">
+     القضايا
+     <em>
+      التجارية
+     </em>
+</h1>
+<p class="page-hero-desc" data-i18n="commercial_hero_desc">
+     خبرة عميقة في قضايا الشركات والعقود والمنازعات التجارية أمام المحاكم التجارية السعودية
+    </p>
+</div>
+</section>
+<section class="section-pad">
+<div class="article-body">
+<h2 data-i18n="section_h2_0">
+     مقدمة عن القضايا التجارية في المملكة
+    </h2>
+<p data-i18n="section_p_0">
+     تُعتبر القضايا التجارية من أهم أنواع النزاعات القانونية في المملكة العربية السعودية، حيث تتعامل مع العديد من المعاملات التجارية والاقتصادية التي تشهدها المملكة بوصفها قوة اقتصادية إقليمية رائدة. المحاكم التجارية السعودية متخصصة في النظر في جميع القضايا المتعلقة بالعلاقات التجارية بين الشركات والأفراد، وتتطلب هذه القضايا خبرة قانونية عميقة وفهماً شاملاً للأنظمة التجارية السعودية والدولية.
+    </p>
+<p data-i18n="section_p_1">
+     شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية توفر خدمات متكاملة في مجال القضايا التجارية، حيث يمتلك فريق المحامين فيها خبرة عملية واسعة في التعامل مع أنواع مختلفة من المنازعات التجارية والعقدية، ويسعى دائماً إلى تحقيق أفضل النتائج لموكليه.
+    </p>
+<h2 data-i18n="section_h2_1">
+     أنواع القضايا التجارية
+    </h2>
+<p data-i18n="section_p_2">
+     تتنوع القضايا التجارية بحسب طبيعة النزاع والأطراف المتنازعة، وفيما يلي أهم أنواعها:
+    </p>
+<h3 data-i18n="section_h3_0">
+     منازعات بين الشركات والمؤسسات
+    </h3>
+<p data-i18n="section_p_3">
+     تتضمن جميع النزاعات التي تحدث بين شركتين أو أكثر بشأن العقود التجارية أو الشراكات أو حقوق الملكية الفكرية أو المنتجات والخدمات المقدمة. تحتاج هذه النزاعات إلى تحليل قانوني دقيق للعقود وفهم عميق للعلاقات التجارية المعقدة.
+    </p>
+<h3 data-i18n="section_h3_1">
+     منازعات العقود والاتفاقيات
+    </h3>
+<p data-i18n="section_p_4">
+     تُعتبر منازعات العقود من أكثر أنواع القضايا التجارية شيوعاً، وتشمل الخلافات حول تنفيذ العقد أو عدم الالتزام بشروطه أو مطالبات التعويض عن الأضرار الناجمة من عدم التنفيذ. كل عقد يتطلب دراسة معمقة لشروطه والظروف المحيطة بنشوء النزاع.
+    </p>
+<h3 data-i18n="section_h3_2">
+     منازعات الوكالة التجارية
+    </h3>
+<p data-i18n="section_p_5">
+     تنشأ عندما يحدث خلاف بين الموكل والوكيل التجاري حول حقوقهما والتزاماتهما المحددة في عقد الوكالة. قد تتعلق هذه المنازعات بعدم الالتزام بالشروط أو انتهاء الوكالة بشروط غير عادلة.
+    </p>
+<h3 data-i18n="section_h3_3">
+     منازعات المنافسة غير العادلة
+    </h3>
+<p data-i18n="section_p_6">
+     تشمل جميع الأفعال التي تؤثر على حقوق التاجر أو الشركة بطريقة غير قانونية أو غير عادلة، مثل استقطاب العملاء بطرق احتيالية أو نشر معلومات كاذبة عن المنتجات، أو انتهاك الأسرار التجارية.
+    </p>
+<h3 data-i18n="section_h3_4">
+     قضايا الإفلاس والتصفية
+    </h3>
+<p data-i18n="section_p_7">
+     يتعلق بحالات عجز الشركات عن سداد التزاماتها المالية. نظام الإفلاس السعودي يوفر آليات قانونية لحماية حقوق الدائنين والمدينين، وتتطلب هذه القضايا متابعة دقيقة من محام متخصص.
+    </p>
+<h2 data-i18n="section_h2_2">
+     الأساس القانوني للقضايا التجارية
+    </h2>
+<p data-i18n="section_p_8">
+     يستند نظام القضايا التجارية في المملكة العربية السعودية على عدة أنظمة وتشريعات رئيسية:
+    </p>
+<ul>
+<li data-i18n="section_li_0">
+<strong>
+       نظام المحاكم التجارية (1441هـ):
+      </strong>
+      يحدد اختصاصات المحاكم التجارية والإجراءات الواجب اتباعها في النزاعات التجارية
+     </li>
+<li data-i18n="section_li_1">
+<strong>
+       نظام الشركات (1437هـ):
+      </strong>
+      ينظم تأسيس الشركات وإدارتها والتزاماتها والحقوق والمسؤوليات المترتبة عليها
+     </li>
+<li data-i18n="section_li_2">
+<strong>
+       نظام الإفلاس (1439هـ):
+      </strong>
+      يحكم إجراءات الإفلاس والتصفية والحماية من الإفلاس
+     </li>
+<li data-i18n="section_li_3">
+<strong>
+       نظام التجارة الإلكترونية:
+      </strong>
+      ينظم العقود والمعاملات الإلكترونية والتوقيع الرقمي
+     </li>
+</ul>
+<h2 data-i18n="section_h2_3">
+     إجراءات التقاضي في القضايا التجارية
+    </h2>
+<p data-i18n="section_p_9">
+     يتبع التقاضي في القضايا التجارية مراحل محددة يجب اتباعها بدقة:
+    </p>
+<p data-i18n="section_p_10">
+     تبدأ الإجراءات برفع الدعوى أمام المحكمة التجارية المختصة، حيث يجب تقديم صحيفة الدعوى بشكل صحيح مع جميع المستندات الداعمة والتي تثبت مطالبتك. تتطلب هذه المرحلة إعداداً دقيقاً للمستندات والأدلة.
+    </p>
+<p data-i18n="section_p_11">
+     بعد تقديم الدعوى، تُجرى جلسات التحضير والتحقيق حيث يتم تبادل المذكرات بين الأطراف وتقديم الأدلة والمستندات. في هذه المرحلة قد يكون هناك فرصة للتسوية بين الأطراف.
+    </p>
+<p data-i18n="section_p_12">
+     تأتي المرافعة النهائية حيث يقدم كل طرف حجاجه والأدلة أمام المحكمة، وبعدها تصدر المحكمة حكماً ابتدائياً في الموضوع.
+    </p>
+<p data-i18n="section_p_13">
+     للطرف المتضرر من الحكم الابتدائي الحق في الاستئناف أمام محكمة الاستئناف خلال مدة محددة، وعند تأييد الحكم أو تعديله، يكون لصاحب الحكم الحق في تنفيذه من خلال إجراءات التنفيذ.
+    </p>
+<h2 data-i18n="section_h2_4">
+     أهمية الاستعانة بمحام متخصص
+    </h2>
+<p data-i18n="section_p_14">
+     يعتبر الاستعانة بمحام متخصص في القضايا التجارية أمراً حتمياً لعدة أسباب. أولاً، القوانين التجارية معقدة وتتطلب فهماً عميقاً لتطبيقاتها والأحكام القضائية الصادرة فيها. ثانياً، إعداد الأوراق والمذكرات القانونية يتطلب دقة عالية وخبرة في صياغتها بطريقة تخدم مصالح الموكل. ثالثاً، يمكن للمحامي المتخصص تقديم استشارات استراتيجية حول أفضل الطرق لحل النزاع سواء بالتسوية أو التقاضي.
+    </p>
+<h2 data-i18n="section_h2_5">
+     خدمات شركة مشاري بندر بن جلوي في القضايا التجارية
+    </h2>
+<p data-i18n="section_p_15">
+     توفر شركتنا خدمات شاملة في مجال القضايا التجارية تشمل:
+    </p>
+<ul>
+<li data-i18n="section_li_4">
+      الاستشارات القانونية المتخصصة في العقود والاتفاقيات التجارية
+     </li>
+<li data-i18n="section_li_5">
+      إعداد وصياغة العقود التجارية بكفاءة عالية
+     </li>
+<li data-i18n="section_li_6">
+      التمثيل الكامل أمام المحاكم التجارية في جميع مراحل التقاضي
+     </li>
+<li data-i18n="section_li_7">
+      معالجة منازعات الشركات والتسوية بين الأطراف
+     </li>
+<li data-i18n="section_li_8">
+      متابعة قضايا الإفلاس والتصفية
+     </li>
+<li data-i18n="section_li_9">
+      الدفاع عن حقوق الموكل في قضايا المنافسة غير العادلة
+     </li>
+</ul>
+</div>
+</section>
+<section class="section-pad alt">
+<div class="article-body">
+<h2 style="text-align:center;margin-bottom:32px;">
+     الأساس القانوني والأنظمة ذات الصلة
+    </h2>
+<div class="info-box">
+<h3 data-i18n="infobox_h3">
+      الأنظمة والتشريعات الرئيسية
+     </h3>
+<ul>
+<li data-i18n="infobox_li_0">
+       نظام المحاكم التجارية الصادر 1441هـ
+      </li>
+<li data-i18n="infobox_li_1">
+       نظام الشركات الصادر 1437هـ
+      </li>
+<li data-i18n="infobox_li_2">
+       نظام الإفلاس الصادر 1439هـ
+      </li>
+<li data-i18n="infobox_li_3">
+       نظام التجارة الإلكترونية
+      </li>
+</ul>
+</div>
+</div>
+</section>
+<section class="section-pad">
+<div class="article-body">
+<h2 style="text-align:center;margin-bottom:32px;">
+     مراحل الإجراءات القانونية
+    </h2>
+<div class="steps-grid">
+<div class="step-card">
+<div class="step-num">
+       1
+      </div>
+<h4 data-i18n="step_h4_0">
+       رفع الدعوى وتقديم المستندات
+      </h4>
+<p data-i18n="step_p_0">
+       تقديم صحيفة الدعوى الموثقة مع جميع المستندات الداعمة والأدلة التي تثبت الحق للمحكمة التجارية المختصة.
+      </p>
+</div>
+<div class="step-card">
+<div class="step-num">
+       2
+      </div>
+<h4 data-i18n="step_h4_1">
+       جلسات التحضير والتحقيق
+      </h4>
+<p data-i18n="step_p_1">
+       تبادل المذكرات بين الأطراف وتقديم الأدلة والمستندات مع محاولات التسوية والصلح بين الأطراف المتنازعة.
+      </p>
+</div>
+<div class="step-card">
+<div class="step-num">
+       3
+      </div>
+<h4 data-i18n="step_h4_2">
+       المرافعة والحكم الابتدائي
+      </h4>
+<p data-i18n="step_p_2">
+       الحضور أمام المحكمة وتقديم الحجج والأدلة النهائية، ثم إصدار المحكمة للحكم الابتدائي في القضية.
+      </p>
+</div>
+<div class="step-card">
+<div class="step-num">
+       4
+      </div>
+<h4 data-i18n="step_h4_3">
+       الاستئناف والتنفيذ
+      </h4>
+<p data-i18n="step_p_3">
+       حق الطرف المتضرر في استئناف الحكم أمام محكمة الاستئناف، وبعد تأييده البدء بإجراءات تنفيذ الحكم.
+      </p>
+</div>
+</div>
+</div>
+</section>
+<section class="cta-section">
+<h2 data-i18n="cta_h2">
+    هل لديك قضية تجارية تحتاج للاستشارة؟
+   </h2>
+<p data-i18n="cta_p">
+    فريق محاماتنا المتخصص جاهز لمساعدتك والدفاع عن حقوقك بكفاءة واحترافية عالية
+   </p>
+<div class="cta-btns">
+<a class="btn-gold" data-i18n="cta_btn_0" href="https://wa.me/966533532153" rel="noopener" target="_blank">
+     احجز استشارة مباشرة
     </a>
-
-
-    <script>
+<a class="btn-outline" data-i18n="cta_btn_1" href="index.html#booking">
+     تواصل معنا
+    </a>
+</div>
+</section>
+<footer>
+<p data-i18n="footer_copyright">
+    © 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة
+   </p>
+<p style="margin-top:8px;">
+<a data-i18n="footer_home" href="index.html">
+     الرئيسية
+    </a>
+</p>
+</footer>
+<a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank" title="تواصل عبر واتساب">
+<svg fill="white" height="28" viewbox="0 0 24 24" width="28">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z">
+</path>
+</svg>
+</a>
+<script>
 const pageTranslations = {
-  breadcrumb_current: {0: 'القضايا التجارية', 1: 'Commercial Cases', 2: '商业案件'},
-  breadcrumb_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  breadcrumb_services: {0: 'الخدمات', 1: 'Services', 2: '服务'},
-  cta_button: {0: 'استشر معنا الآن', 1: 'Consult Now', 2: '现在咨询'},
-  footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Mashary Bandar Bin Jalawi Law Firm — All rights reserved', 2: '© 2025 玛沙里·班达尔·本·贾劳伊律师事务所 — 版权所有'},
+    breadcrumb_home: {0: "الرئيسية", 1: "Home", 2: "主页"},
+    breadcrumb_legal: {0: "القضايا القانونية", 1: "Legal Cases", 2: "法律案件"},
+    commercial_breadcrumb_2: {0: "القضايا التجارية", 1: "Commercial Cases", 2: "商业案件"},
+    cta_btn_0: {0: "احجز استشارة مباشرة", 1: "Book Direct Consultation", 2: "预订直接咨询"},
+    cta_btn_1: {0: "تواصل معنا", 1: "Contact Us", 2: "联系我们"},
+    cta_h2: {0: "هل لديك قضية تجارية تحتاج للاستشارة؟", 1: "Do You Have a Commercial Case That Needs Consultation?", 2: "您是否有需要咨询的商业案件？"},
+    cta_p: {0: "فريق محاماتنا المتخصص جاهز لمساعدتك والدفاع عن حقوقك بكفاءة واحترافية عالية", 1: "Our specialized team of attorneys is ready to help you and defend your rights with high efficiency and professionalism", 2: "我们的专业律师团队随时准备帮助您并以高效率和专业精神维护您的权利"},
+    footer_copyright: {0: "© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة", 1: "© 2025 Al Meshary Bin Bandar Bin Jaloui Law Firm and Legal Consultations — All rights reserved", 2: "© 2025 美沙里·本·班达尔·本·贾卢伊律师事务所和法律咨询——版权所有"},
+    hero_desc: {0: "خبرة عميقة في قضايا الشركات والعقود والمنازعات التجارية أمام المحاكم التجارية السعودية", 1: "Deep expertise in corporate cases, contracts, and commercial disputes before Saudi commercial courts", 2: "在沙特商业法院处理企业案件、合同和商业纠纷方面拥有深厚专业知识"},
+    hero_h1: {0: "القضايا التجارية", 1: "Commercial Cases", 2: "商业案件"},
+    infobox_h3: {0: "الأنظمة والتشريعات الرئيسية", 1: "Main Regulations and Legislations", 2: "主要法规和立法"},
+    infobox_li_0: {0: "نظام المحاكم التجارية الصادر 1441هـ", 1: "Commercial Courts System issued 1441 AH", 2: "1441年颁布的商业法院制度"},
+    infobox_li_1: {0: "نظام الشركات الصادر 1437هـ", 1: "Companies System issued 1437 AH", 2: "1437年颁布的公司制度"},
+    infobox_li_2: {0: "نظام الإفلاس الصادر 1439هـ", 1: "Bankruptcy System issued 1439 AH", 2: "1439年颁布的破产制度"},
+    infobox_li_3: {0: "نظام التجارة الإلكترونية", 1: "E-Commerce System", 2: "电子商务制度"},
+    section_h2_0: {0: "مقدمة عن القضايا التجارية في المملكة", 1: "Introduction to Commercial Cases in Saudi Arabia", 2: "沙特阿拉伯商业案件介绍"},
+    section_h2_1: {0: "أنواع القضايا التجارية", 1: "Types of Commercial Cases", 2: "商业案件类型"},
+    section_h2_2: {0: "الأساس القانوني للقضايا التجارية", 1: "Legal Basis for Commercial Cases", 2: "商业案件的法律基础"},
+    section_h2_3: {0: "إجراءات التقاضي في القضايا التجارية", 1: "Litigation Procedures in Commercial Cases", 2: "商业案件诉讼程序"},
+    section_h2_4: {0: "أهمية الاستعانة بمحام متخصص", 1: "Importance of Hiring a Specialized Attorney", 2: "聘请专业律师的重要性"},
+    section_h2_5: {0: "خدمات شركة مشاري بندر بن جلوي في القضايا التجارية", 1: "Al Meshary Bin Bandar Bin Jaloui Law Firm Services in Commercial Cases", 2: "美沙里·本·班达尔·本·贾卢伊律师事务所商业案件服务"},
+    section_h3_0: {0: "منازعات بين الشركات والمؤسسات", 1: "Disputes Between Companies and Institutions", 2: "公司和机构之间的纠纷"},
+    section_h3_1: {0: "منازعات العقود والاتفاقيات", 1: "Contract and Agreement Disputes", 2: "合同和协议纠纷"},
+    section_h3_2: {0: "منازعات الوكالة التجارية", 1: "Commercial Agency Disputes", 2: "商业代理纠纷"},
+    section_h3_3: {0: "منازعات المنافسة غير العادلة", 1: "Unfair Competition Disputes", 2: "不公平竞争纠纷"},
+    section_h3_4: {0: "قضايا الإفلاس والتصفية", 1: "Bankruptcy and Liquidation Cases", 2: "破产和清算案件"},
+    section_li_0: {0: "نظام المحاكم التجارية (1441هـ): يحدد اختصاصات المحاكم التجارية والإجراءات الواجب اتباعها في النزاعات التجارية", 1: "Commercial Courts System (1441 AH): Defines the jurisdictions of commercial courts and procedures to be followed in commercial disputes", 2: "商业法院制度（1441年）：规定了商业法院的管辖权和商业纠纷中应遵循的程序"},
+    section_li_1: {0: "نظام الشركات (1437هـ): ينظم تأسيس الشركات وإدارتها والتزاماتها والحقوق والمسؤوليات المترتبة عليها", 1: "Companies System (1437 AH): Regulates the establishment and management of companies and their obligations, rights and responsibilities", 2: "公司制度（1437年）：规范公司的成立和管理及其义务、权利和责任"},
+    section_li_2: {0: "نظام الإفلاس (1439هـ): يحكم إجراءات الإفلاس والتصفية والحماية من الإفلاس", 1: "Bankruptcy System (1439 AH): Governs bankruptcy procedures, liquidation, and bankruptcy protection", 2: "破产制度（1439年）：规范破产程序、清算和破产保护"},
+    section_li_3: {0: "نظام التجارة الإلكترونية: ينظم العقود والمعاملات الإلكترونية والتوقيع الرقمي", 1: "E-Commerce System: Regulates electronic contracts, transactions, and digital signatures", 2: "电子商务制度：规范电子合同、交易和数字签名"},
+    section_li_4: {0: "الاستشارات القانونية المتخصصة في العقود والاتفاقيات التجارية", 1: "Specialized legal advice on commercial contracts and agreements", 2: "关于商业合同和协议的专业法律咨询"},
+    section_li_5: {0: "إعداد وصياغة العقود التجارية بكفاءة عالية", 1: "Preparation and drafting of commercial contracts with high efficiency", 2: "商业合同的准备和起草，效率高"},
+    section_li_6: {0: "التمثيل الكامل أمام المحاكم التجارية في جميع مراحل التقاضي", 1: "Full representation before commercial courts at all stages of litigation", 2: "在诉讼的所有阶段代表商业法院"},
+    section_li_7: {0: "معالجة منازعات الشركات والتسوية بين الأطراف", 1: "Handling corporate disputes and settlement between parties", 2: "处理企业纠纷和各方之间的和解"},
+    section_li_8: {0: "متابعة قضايا الإفلاس والتصفية", 1: "Follow-up of bankruptcy and liquidation cases", 2: "破产和清算案件的跟进"},
+    section_li_9: {0: "الدفاع عن حقوق الموكل في قضايا المنافسة غير العادلة", 1: "Defense of client rights in unfair competition cases", 2: "维护客户在不公平竞争案件中的权利"},
+    section_p_0: {0: "تُعتبر القضايا التجارية من أهم أنواع النزاعات القانونية في المملكة العربية السعودية، حيث تتعامل مع العديد من المعاملات التجارية والاقتصادية التي تشهدها المملكة بوصفها قوة اقتصادية إقليمية رائدة. المحاكم التجارية السعودية متخصصة في النظر في جميع القضايا المتعلقة بالعلاقات التجارية بين الشركات والأفراد، وتتطلب هذه القضايا خبرة قانونية عميقة وفهماً شاملاً للأنظمة التجارية السعودية والدولية.", 1: "Commercial cases are among the most important types of legal disputes in the Kingdom of Saudi Arabia, dealing with numerous commercial and economic transactions witnessed by the Kingdom as a leading regional economic power. Saudi commercial courts are specialized in examining all cases related to commercial relationships between companies and individuals, requiring deep legal expertise and comprehensive understanding of Saudi and international commercial systems.", 2: "商业案件是沙特阿拉伯最重要的法律纠纷类型之一，涉及王国作为领先的区域经济大国所见证的众多商业和经济交易。沙特商业法院专门处理与公司和个人之间商业关系相关的所有案件，需要深厚的法律专业知识和对沙特及国际商业体系的全面了解。"},
+    section_p_1: {0: "شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية توفر خدمات متكاملة في مجال القضايا التجارية، حيث يمتلك فريق المحامين فيها خبرة عملية واسعة في التعامل مع أنواع مختلفة من المنازعات التجارية والعقدية، ويسعى دائماً إلى تحقيق أفضل النتائج لموكليه.", 1: "Al Meshary Bin Bandar Bin Jaloui Law Firm provides comprehensive services in the field of commercial cases. Our team of attorneys has extensive practical experience dealing with various types of commercial and contractual disputes, always striving to achieve the best results for our clients.", 2: "美沙里·本·班达尔·本·贾卢伊律师事务所在商业案件领域提供综合服务。我们的律师团队拥有处理各种商业和合同纠纷的丰富实践经验，始终致力于为客户获得最佳结果。"},
+    section_p_10: {0: "تبدأ الإجراءات برفع الدعوى أمام المحكمة التجارية المختصة، حيث يجب تقديم صحيفة الدعوى بشكل صحيح مع جميع المستندات الداعمة والتي تثبت مطالبتك. تتطلب هذه المرحلة إعداداً دقيقاً للمستندات والأدلة.", 1: "Procedures begin with filing a case before the competent commercial court, where the complaint must be properly submitted with all supporting documents proving your claim. This phase requires careful preparation of documents and evidence.", 2: "程序始于向主管商业法院提交案件，其中必须正确提交申诉状并附上证明您主张的所有支持文件。此阶段需要仔细准备文件和证据。"},
+    section_p_11: {0: "بعد تقديم الدعوى، تُجرى جلسات التحضير والتحقيق حيث يتم تبادل المذكرات بين الأطراف وتقديم الأدلة والمستندات. في هذه المرحلة قد يكون هناك فرصة للتسوية بين الأطراف.", 1: "After filing the case, preparatory and investigation sessions are held where memoranda are exchanged between parties and evidence and documents are presented. At this stage, there may be an opportunity for settlement between the parties.", 2: "提交案件后，举行准备和调查会议，在会议中各方交换备忘录并提交证据和文件。在这个阶段，各方可能有机会和解。"},
+    section_p_12: {0: "تأتي المرافعة النهائية حيث يقدم كل طرف حجاجه والأدلة أمام المحكمة، وبعدها تصدر المحكمة حكماً ابتدائياً في الموضوع.", 1: "Final pleadings follow where each party presents its arguments and evidence before the court, after which the court issues a first instance judgment on the matter.", 2: "最后的辩论随之而来，各方在法院前陈述其论点和证据，之后法院就该事项作出初审判决。"},
+    section_p_13: {0: "للطرف المتضرر من الحكم الابتدائي الحق في الاستئناف أمام محكمة الاستئناف خلال مدة محددة، وعند تأييد الحكم أو تعديله، يكون لصاحب الحكم الحق في تنفيذه من خلال إجراءات التنفيذ.", 1: "The party injured by the first instance judgment has the right to appeal before the Court of Appeal within a specified period. Upon confirmation or modification of the judgment, the winning party has the right to enforce it through enforcement procedures.", 2: "受初审判决伤害的一方有权在规定期限内向上诉法院上诉。在确认或修改判决后，胜诉方有权通过执行程序强制执行该判决。"},
+    section_p_14: {0: "يعتبر الاستعانة بمحام متخصص في القضايا التجارية أمراً حتمياً لعدة أسباب. أولاً، القوانين التجارية معقدة وتتطلب فهماً عميقاً لتطبيقاتها والأحكام القضائية الصادرة فيها. ثانياً، إعداد الأوراق والمذكرات القانونية يتطلب دقة عالية وخبرة في صياغتها بطريقة تخدم مصالح الموكل. ثالثاً، يمكن للمحامي المتخصص تقديم استشارات استراتيجية حول أفضل الطرق لحل النزاع سواء بالتسوية أو التقاضي.", 1: "Hiring a specialized attorney in commercial cases is essential for several reasons. First, commercial laws are complex and require deep understanding of their applications and judicial precedents. Second, preparing legal documents and memoranda requires high accuracy and expertise in drafting them in a way that serves the client's interests. Third, a specialized attorney can provide strategic advice on the best ways to resolve disputes, whether through settlement or litigation.", 2: "聘请专业的商业律师对于几个原因是必不可少的。首先，商业法律很复杂，需要对其应用和司法判例有深刻的理解。其次，准备法律文件和备忘录需要高度的准确性和以服务于客户利益的方式起草它们的专业知识。第三，专业律师可以就解决纠纷的最佳方式（无论是通过和解还是诉讼）提供战略建议。"},
+    section_p_15: {0: "توفر شركتنا خدمات شاملة في مجال القضايا التجارية تشمل:", 1: "Our firm provides comprehensive services in the field of commercial cases including:", 2: "我们的律师事务所在商业案件领域提供综合服务，包括："},
+    section_p_2: {0: "تتنوع القضايا التجارية بحسب طبيعة النزاع والأطراف المتنازعة، وفيما يلي أهم أنواعها:", 1: "Commercial cases vary based on the nature of the dispute and the disputing parties. The following are the main types:", 2: "商业案件因纠纷的性质和争议方而异。以下是主要类型："},
+    section_p_3: {0: "تتضمن جميع النزاعات التي تحدث بين شركتين أو أكثر بشأن العقود التجارية أو الشراكات أو حقوق الملكية الفكرية أو المنتجات والخدمات المقدمة. تحتاج هذه النزاعات إلى تحليل قانوني دقيق للعقود وفهم عميق للعلاقات التجارية المعقدة.", 1: "These include all disputes occurring between two or more companies regarding commercial contracts, partnerships, intellectual property rights, or products and services provided. These disputes require careful legal analysis of contracts and deep understanding of complex commercial relationships.", 2: "这些包括两个或多个公司之间关于商业合同、合伙关系、知识产权或提供的产品和服务的所有纠纷。这些纠纷需要对合同进行仔细的法律分析和对复杂商业关系的深刻理解。"},
+    section_p_4: {0: "تُعتبر منازعات العقود من أكثر أنواع القضايا التجارية شيوعاً، وتشمل الخلافات حول تنفيذ العقد أو عدم الالتزام بشروطه أو مطالبات التعويض عن الأضرار الناجمة من عدم التنفيذ. كل عقد يتطلب دراسة معمقة لشروطه والظروف المحيطة بنشوء النزاع.", 1: "Contract disputes are among the most common types of commercial cases, including disagreements over contract performance, non-compliance with its terms, or claims for damages resulting from non-performance. Each contract requires an in-depth study of its terms and the circumstances surrounding the dispute.", 2: "合同纠纷是最常见的商业案件类型之一，包括关于合同履行、不遵守其条款或因不履行而造成的损害赔偿索赔的分歧。每份合同都需要对其条款和纠纷产生的背景环境进行深入研究。"},
+    section_p_5: {0: "تنشأ عندما يحدث خلاف بين الموكل والوكيل التجاري حول حقوقهما والتزاماتهما المحددة في عقد الوكالة. قد تتعلق هذه المنازعات بعدم الالتزام بالشروط أو انتهاء الوكالة بشروط غير عادلة.", 1: "These arise when disputes occur between the principal and the commercial agent regarding their rights and obligations as defined in the agency contract. These disputes may relate to non-compliance with terms or termination of the agency under unfair conditions.", 2: "当委托人与商业代理之间就代理合同中规定的权利和义务发生纠纷时，就会产生这些纠纷。这些纠纷可能涉及不遵守条款或在不公平条件下终止代理关系。"},
+    section_p_6: {0: "تشمل جميع الأفعال التي تؤثر على حقوق التاجر أو الشركة بطريقة غير قانونية أو غير عادلة، مثل استقطاب العملاء بطرق احتيالية أو نشر معلومات كاذبة عن المنتجات، أو انتهاك الأسرار التجارية.", 1: "These include all acts that affect the rights of a merchant or company in an unlawful or unfair manner, such as soliciting customers through fraudulent means, publishing false information about products, or violating trade secrets.", 2: "这些包括以非法或不公平方式影响商人或公司权利的所有行为，例如通过欺诈手段招揽客户、发布关于产品的虚假信息或泄露商业秘密。"},
+    section_p_7: {0: "يتعلق بحالات عجز الشركات عن سداد التزاماتها المالية. نظام الإفلاس السعودي يوفر آليات قانونية لحماية حقوق الدائنين والمدينين، وتتطلب هذه القضايا متابعة دقيقة من محام متخصص.", 1: "This concerns cases of companies' inability to pay their financial obligations. The Saudi bankruptcy system provides legal mechanisms to protect the rights of creditors and debtors, requiring careful follow-up by a specialized attorney.", 2: "这涉及公司无法支付其财务义务的情况。沙特破产制度为保护债权人和债务人的权利提供了法律机制，需要专业律师进行仔细跟进。"},
+    section_p_8: {0: "يستند نظام القضايا التجارية في المملكة العربية السعودية على عدة أنظمة وتشريعات رئيسية:", 1: "The commercial cases system in the Kingdom of Saudi Arabia is based on several main regulations and legislations:", 2: "沙特阿拉伯王国的商业案件制度以若干主要法规和立法为基础："},
+    section_p_9: {0: "يتبع التقاضي في القضايا التجارية مراحل محددة يجب اتباعها بدقة:", 1: "Litigation in commercial cases follows specific phases that must be followed precisely:", 2: "商业案件诉讼遵循必须精确遵循的特定阶段："},
+    step_h4_0: {0: "رفع الدعوى وتقديم المستندات", 1: "Filing the Case and Submitting Documents", 2: "提交案件和提交文件"},
+    step_h4_1: {0: "جلسات التحضير والتحقيق", 1: "Preparatory and Investigation Sessions", 2: "准备和调查会议"},
+    step_h4_2: {0: "المرافعة والحكم الابتدائي", 1: "Pleadings and First Instance Judgment", 2: "辩论和初审判决"},
+    step_h4_3: {0: "الاستئناف والتنفيذ", 1: "Appeal and Enforcement", 2: "上诉和执行"},
+    step_p_0: {0: "تقديم صحيفة الدعوى الموثقة مع جميع المستندات الداعمة والأدلة التي تثبت الحق للمحكمة التجارية المختصة.", 1: "Submitting the certified complaint with all supporting documents and evidence proving your rights to the competent commercial court.", 2: "向主管商业法院提交经认证的申诉状，并附上所有支持文件和证明您权利的证据。"},
+    step_p_1: {0: "تبادل المذكرات بين الأطراف وتقديم الأدلة والمستندات مع محاولات التسوية والصلح بين الأطراف المتنازعة.", 1: "Exchange of memoranda between parties and presentation of evidence and documents with attempts to settle and reconcile disputes between parties.", 2: "各方之间交换备忘录，提交证据和文件，以及就争议各方之间的解决和调解进行尝试。"},
+    step_p_2: {0: "الحضور أمام المحكمة وتقديم الحجج والأدلة النهائية، ثم إصدار المحكمة للحكم الابتدائي في القضية.", 1: "Appearance before the court and presentation of final arguments and evidence, then the court issues a first instance judgment in the case.", 2: "出庭并提交最终论点和证据，然后法院对案件作出初审判决。"},
+    step_p_3: {0: "حق الطرف المتضرر في استئناف الحكم أمام محكمة الاستئناف، وبعد تأييده البدء بإجراءات تنفيذ الحكم.", 1: "The injured party's right to appeal the judgment before the Court of Appeal, and after confirmation, begin enforcement procedures.", 2: "受伤害方有权向上诉法院上诉判决，确认后开始执行程序。"},
+  commercial_hero_desc: {0: 'خبرة عميقة في قضايا الشركات والعقود والمنازعات التجارية أمام المحاكم التجارية السعودية', 1: 'Deep expertise in corporate, contract, and commercial dispute cases before Saudi commercial courts', 2: '在沙特商业法庭的公司、合同和商业争议案件方面具有深厚专业知识'},
+  commercial_hero_h1: {0: 'القضايا التجارية', 1: 'Commercial Cases', 2: '商业案件'},
   footer_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  hero_desc: {0: 'نتخصص في القضايا التجارية المعقدة وحماية مصالح عملائنا في النزاعات التجارية والعقودية.', 1: 'We specialize in complex commercial cases and protecting our clients\' interests in commercial and contractual disputes.', 2: '我们专门处理复杂的商业案件，保护客户在商业和合同纠纷中的利益。'},
-  hero_title_first: {0: 'قضايا', 1: 'Commercial', 2: '商业'},
-  hero_title_last: {0: 'تجارية', 1: 'Cases', 2: '案件'},
-  learnmore_button: {0: 'تعرف على المزيد', 1: 'Learn More', 2: '了解更多'},
-  nav_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
-  nav_careers: {0: 'التوظيف', 1: 'Careers', 2: '招聘'},
-  nav_contact: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
-  nav_contracts: {0: 'عقود الشركات', 1: 'Company Contracts', 2: '公司合同'},
-  nav_eservices: {0: 'الخدمات الإلكترونية', 1: 'E-Services', 2: '电子服务'},
-  nav_faq: {0: 'الأسئلة الشائعة', 1: 'FAQ', 2: '常见问题'},
-  nav_services: {0: 'خدماتنا', 1: 'Our Services', 2: '我们的服务'},
-  nav_team: {0: 'فريقنا', 1: 'Our Team', 2: '我们的团队'},
-  section_1_desc: {0: 'القضايا التجارية تشمل جميع النزاعات الناشئة عن التعاملات التجارية والعقود بين التجار والشركات. تتطلب فهماً عميقاً للقانون التجاري والعادات التجارية.', 1: 'Commercial cases encompass all disputes arising from commercial transactions and contracts between traders and companies. They require deep understanding of commercial law and business practices.', 2: '商业案件包括商人和公司之间商业交易和合同引起的所有纠纷。它们需要对商业法和商业惯例的深入了解。'},
-  section_1_title: {0: 'ماهية القضايا التجارية', 1: 'Understanding Commercial Cases', 2: '了解商业案件'},
-  whatsapp_button: {0: 'تواصل عبر واتساب', 1: 'Contact via WhatsApp', 2: '通过WhatsApp联系'},
 };
+
+</script>
+
+
+
+<script src="lang.js">
 </script>
 <script src="lang.js"></script>
-    </body>
+</body>
 </html>

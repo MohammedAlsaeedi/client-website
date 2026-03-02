@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+
+<html dir="rtl" lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قضايا الأحوال الشخصية — شركة مشاري بندر بن جلوي للمحاماة</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>قضايا الأحوال الشخصية — شركة مشاري بندر بن جلوي للمحاماة</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
         :root { --navy:#1B2C6B; --navy-dark:#111d4a; --navy-mid:#223580; --gold:#B8935A; --gold-light:#d4aa72; --gold-pale:#f5ede0; --white:#ffffff; --off-white:#f8f6f2; --gray:#6b7280; --gray-dark:#374151; --border:#e5e1d9; }
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
         html{scroll-behavior:smooth;overflow-x:hidden}
@@ -94,204 +95,232 @@
         </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="logo.png" alt="شعار شركة مشاري بندر بن جلوي">
-                <div>
-                    <div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
-                    <div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
-                </div>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html#services" data-i18n="nav_services">خدماتنا</a></li>
-                <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
-                <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-                <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
-                <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
-                <li><a href="e-services.html" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
-                <li><a href="careers.html" data-i18n="nav_careers">التوظيف</a></li>
-                <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
-            </ul>
-            <div style="display:flex;align-items:center;gap:10px;">
-                <div class="lang-drop" id="langDrop">
-                    <button class="lang-drop-btn" onclick="toggleLangDrop()" id="langDropBtn">🇸🇦</button>
-                    <div class="lang-drop-menu" id="langDropMenu">
-                        <button onclick="setLang(0);toggleLangDrop()" data-lang="0">🇸🇦 العربية</button>
-                        <button onclick="setLang(1);toggleLangDrop()" data-lang="1">🇬🇧 English</button>
-                        <button onclick="setLang(2);toggleLangDrop()" data-lang="2">🇨🇳 中文</button>
-                    </div>
-                </div>
-                <a href="https://wa.me/966533532153" target="_blank" rel="noopener" class="nav-cta">احجز استشارة</a>
-                <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div class="mobile-drawer" id="drawer">
-        <ul>
-            <li><a href="index.html#services" data-i18n="nav_services" data-i18n="nav_services">خدماتنا</a></li>
-            <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
-            <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-            <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
-            <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
-            <li><a href="e-services.html" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
-            <li><a href="careers.html" data-i18n="nav_careers">التوظيف</a></li>
-            <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
-            <li><a href="https://wa.me/966533532153">احجز استشارة</a></li>
-        </ul>
-    </div>
-
-    <section class="page-hero">
-        <div class="page-hero-content">
-            <div class="page-breadcrumb">
-                <a href="index.html">الرئيسية</a>
-                <span>/</span>
-                <a href="#">القضايا القانونية</a>
-                <span>/</span>
-                <span>الأحوال الشخصية</span>
-            </div>
-            <h1>قضايا <em>الأحوال الشخصية</em></h1>
-            <p class="page-hero-desc">تمثيل قانوني رفيع المستوى في قضايا الأسرة والطلاق والحضانة والنفقة وفق الفقه الإسلامي والأنظمة السعودية</p>
-        </div>
-    </section>
-
-    <section class="section-pad">
-        <div class="article-body">
-            <h2>مقدمة عن قضايا الأحوال الشخصية</h2>
-            <p>تعتبر قضايا الأحوال الشخصية من أكثر القضايا حساسية وتأثيراً على حياة الأفراد والأسر في المملكة العربية السعودية. تشمل هذه القضايا مختلف جوانب العلاقات الأسرية من الزواج والطلاق والحضانة والنفقة إلى الإرث وتقسيم التركات. النظام السعودي يستند في هذه القضايا على الفقه الإسلامي المستمد من الكتاب والسنة، بالإضافة إلى الأنظمة الحديثة التي توفر حماية شاملة لجميع أطراف الأسرة وخاصة الأطفال والنساء.</p>
-            <p>المحاكم الأسرية المتخصصة في المملكة تتولى النظر في هذه القضايا بطريقة إنسانية وعادلة. شركة مشاري بندر بن جلوي للمحاماة تقدم خدمات متخصصة وحساسة في مجال قضايا الأحوال الشخصية، مع ضمان الحفاظ على السرية والكرامة الشخصية للموكلين.</p>
-
-            <h2>أنواع قضايا الأحوال الشخصية</h2>
-            <p>تتعدد أنواع قضايا الأحوال الشخصية التي تنظر فيها المحاكم الأسرية المتخصصة:</p>
-            <h3>قضايا الطلاق والفسخ</h3>
-            <p>تشمل الطلاق بأنواعه المختلفة سواء كان من قبل الزوج أو من قبل الزوجة من خلال الخلع. نظام الأحوال الشخصية الجديد وفر حقوقاً متساوية للزوج والزوجة في طلب الطلاق مع ضمان حقوق كل طرف.</p>
-            <h3>قضايا الحضانة والرعاية</h3>
-            <p>تتعلق بتحديد من له حق حضانة الأطفال ورعايتهم بعد انفصال الوالدين. المحاكم تأخذ في الاعتبار مصلحة الطفل العليا وقدرة كل من الوالدين على توفير الرعاية المناسبة.</p>
-            <h3>قضايا النفقة والمستحقات المالية</h3>
-            <p>تشمل النفقة على الزوجة والأطفال بعد الطلاق والتعويضات المالية المختلفة. النظام يضمن حقوق الزوجة والأطفال في الحصول على نفقة عادلة من الزوج.</p>
-            <h3>قضايا المهر والصداق</h3>
-            <p>تتعلق بحقوق الزوجة في المهر وضمان دفعه كاملاً. النظام يحمي حق الزوجة في المهر وجعله التزاماً واجباً على الزوج.</p>
-            <h3>قضايا إثبات النسب والنسيب</h3>
-            <p>تتناول إثبات علاقات القرابة والنسب والآثار القانونية الناشئة عن ذلك. هذه القضايا حساسة وتتطلب حكماً قضائياً واضحاً.</p>
-            <h3>قضايا الإرث وتقسيم التركات</h3>
-            <p>تشمل توزيع التركة على الورثة وفقاً لأحكام الشريعة الإسلامية والقانون. تتطلب هذه القضايا دقة في الحسابات والفهم العميق لأحكام الوصايا والإرث.</p>
-
-            <h2>الأساس القانوني</h2>
-            <p>يستند نظام الأحوال الشخصية السعودي على عدة مصادر ومراجع:</p>
-            <ul>
-                <li><strong>نظام الأحوال الشخصية (1443هـ):</strong> نظام حديث يجمع بين الفقه الإسلامي والأنظمة العصرية ويوفر حماية شاملة لجميع أطراف الأسرة</li>
-                <li><strong>نظام المحاكم الشرعية:</strong> ينظم عمل المحاكم الشرعية والإجراءات المتبعة فيها</li>
-                <li><strong>ضوابط الحضانة والنفقة:</strong> توضح الشروط والضوابط المتعلقة بحقوق الحضانة والنفقة</li>
-                <li><strong>تنظيم المحكمة الأسرية:</strong> محاكم متخصصة في قضايا الأسرة تتمتع بخبرة عالية</li>
-            </ul>
-
-            <h2>حقوق المرأة في الأحوال الشخصية</h2>
-            <p>حرصت الأنظمة السعودية على حماية حقوق المرأة في قضايا الأحوال الشخصية. للمرأة الحق في الموافقة على الزواج برضاها الكامل، وللزوجة الحق في طلب الطلاق أو الخلع إذا لم ترغب في استمرار العلاقة الزوجية. كما أن للمرأة الحق في الحفاظ على أموالها الخاصة والتصرف فيها دون وصاية من أحد. كذلك، للزوجة الحق في النفقة والرعاية من الزوج، وللأم الحق في حضانة أطفالها في السنوات الأولى من أعمارهم.</p>
-
-            <h2>نظام المحكمة الأسرية المتخصصة</h2>
-            <p>أنشأت المملكة محاكم متخصصة للنظر في قضايا الأسرة تتمتع بخبرة عالية في التعامل مع هذا النوع من القضايا. هذه المحاكم تتبع إجراءات خاصة تركز على الوساطة والإصلاح بين الأطراف قبل اللجوء إلى الحكم. القضاة المتخصصون في هذه المحاكم يفهمون الحساسية النفسية والاجتماعية لقضايا الأسرة ويسعون إلى إيجاد حلول عادلة تحافظ على كرامة الأسرة وتحمي حقوق الأطفال.</p>
-
-            <h2>خدمات شركة مشاري بندر بن جلوي في قضايا الأحوال الشخصية</h2>
-            <p>توفر شركتنا خدمات متخصصة وحساسة في مجال قضايا الأحوال الشخصية:</p>
-            <ul>
-                <li>الاستشارات الأسرية السرية والموثوقة في جميع قضايا الأحوال الشخصية</li>
-                <li>تمثيل كامل أمام المحاكم الأسرية المتخصصة</li>
-                <li>إعداد المذكرات والأوراق القانونية بدقة واحترافية عالية</li>
-                <li>المساعدة في التسوية الودية والوساطة بين الأطراف</li>
-                <li>متابعة قضايا النفقة والحضانة والإرث</li>
-                <li>تمثيل حقوق الأطفال والدفاع عن مصالحهم العليا</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="section-pad alt">
-        <div class="article-body">
-            <h2 style="text-align:center;margin-bottom:32px;">الأساس القانوني والأنظمة ذات الصلة</h2>
-            <div class="info-box">
-                <h3>الأنظمة والتشريعات الرئيسية</h3>
-                <ul>
-                    <li>نظام الأحوال الشخصية الصادر بالمرسوم الملكي 1443هـ</li>
-                    <li>نظام المحاكم الشرعية وإجراءاتها</li>
-                    <li>ضوابط الحضانة والنفقة والولاية</li>
-                    <li>تنظيم المحكمة الأسرية المتخصصة</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-pad">
-        <div class="article-body">
-            <h2 style="text-align:center;margin-bottom:32px;">مراحل الإجراءات الأسرية</h2>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-num">1</div>
-                    <h4>الاستشارة الأسرية السرية</h4>
-                    <p>تقديم استشارة سرية وموثوقة حول حقوقك والخيارات المتاحة أمامك مع ضمان الحفاظ على السرية الكاملة.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">2</div>
-                    <h4>تقديم الدعوى للمحكمة الأسرية</h4>
-                    <p>تقديم الدعوى الموثقة إلى المحكمة الأسرية المختصة مع جميع المستندات الداعمة والأدلة اللازمة.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">3</div>
-                    <h4>جلسات الإصلاح والوساطة</h4>
-                    <p>محاولة التوصل إلى تسوية ودية بين الطرفين برعاية المحكمة، مع التركيز على مصلحة الأسرة والأطفال.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">4</div>
-                    <h4>إصدار الحكم وتنفيذه</h4>
-                    <p>إصدار حكم عادل وتنفيذه وفقاً للقانون، مع ضمان حماية حقوق جميع الأطراف خاصة الأطفال.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <h2>تحتاج استشارة أسرية موثوقة؟</h2>
-        <p>فريقنا المتخصص يقدم استشارات سرية وموثوقة وحلول عادلة لجميع قضايا الأحوال الشخصية</p>
-        <div class="cta-btns">
-            <a href="https://wa.me/966533532153" class="btn-gold" target="_blank" rel="noopener">استشارة سرية متخصصة</a>
-            <a href="index.html#booking" class="btn-outline">تواصل معنا</a>
-        </div>
-    </section>
-
-    <footer>
-        <p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
-        <p style="margin-top:8px;"><a href="index.html" data-i18n="footer_home">الرئيسية</a></p>
-    </footer>
-    <a href="https://wa.me/966533532153" class="whatsapp-fab" target="_blank" rel="noopener" title="تواصل عبر واتساب">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-    </a>
-
-
-    <script>
+<nav class="navbar">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">
+<img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png"/>
+<div>
+<div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
+</div>
+</a>
+<ul class="nav-links">
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+<div style="display:flex;align-items:center;gap:10px;">
+<div class="lang-drop" id="langDrop">
+<button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
+<div class="lang-drop-menu" id="langDropMenu">
+<button data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦 العربية</button>
+<button data-lang="1" onclick="setLang(1);toggleLangDrop()">🇬🇧 English</button>
+<button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
+</div>
+</div>
+<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
+<div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
+<span></span><span></span><span></span>
+</div>
+</div>
+</div>
+</nav>
+<div class="mobile-drawer" id="drawer">
+<ul>
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+<li><a href="https://wa.me/966533532153">احجز استشارة</a></li>
+</ul>
+</div>
+<section class="page-hero">
+<div class="page-hero-content">
+<div class="page-breadcrumb">
+<a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
+<span>/</span>
+<a data-i18n="breadcrumb_legal" href="#">القضايا القانونية</a>
+<span>/</span>
+<span data-i18n="breadcrumb_current">الأحوال الشخصية</span>
+</div>
+<h1 data-i18n="hero_h1">قضايا <em>الأحوال الشخصية</em></h1>
+<p class="page-hero-desc" data-i18n="hero_desc">تمثيل قانوني رفيع المستوى في قضايا الأسرة والطلاق والحضانة والنفقة وفق الفقه الإسلامي والأنظمة السعودية</p>
+</div>
+</section>
+<section class="section-pad">
+<div class="article-body">
+<h2 data-i18n="section_h2_0">مقدمة عن قضايا الأحوال الشخصية</h2>
+<p data-i18n="p_0">تعتبر قضايا الأحوال الشخصية من أكثر القضايا حساسية وتأثيراً على حياة الأفراد والأسر في المملكة العربية السعودية. تشمل هذه القضايا مختلف جوانب العلاقات الأسرية من الزواج والطلاق والحضانة والنفقة إلى الإرث وتقسيم التركات. النظام السعودي يستند في هذه القضايا على الفقه الإسلامي المستمد من الكتاب والسنة، بالإضافة إلى الأنظمة الحديثة التي توفر حماية شاملة لجميع أطراف الأسرة وخاصة الأطفال والنساء.</p>
+<p data-i18n="p_1">المحاكم الأسرية المتخصصة في المملكة تتولى النظر في هذه القضايا بطريقة إنسانية وعادلة. شركة مشاري بندر بن جلوي للمحاماة تقدم خدمات متخصصة وحساسة في مجال قضايا الأحوال الشخصية، مع ضمان الحفاظ على السرية والكرامة الشخصية للموكلين.</p>
+<h2 data-i18n="section_h2_1">أنواع قضايا الأحوال الشخصية</h2>
+<p data-i18n="p_2">تتعدد أنواع قضايا الأحوال الشخصية التي تنظر فيها المحاكم الأسرية المتخصصة:</p>
+<h3 data-i18n="section_h3_0">قضايا الطلاق والفسخ</h3>
+<p data-i18n="p_3">تشمل الطلاق بأنواعه المختلفة سواء كان من قبل الزوج أو من قبل الزوجة من خلال الخلع. نظام الأحوال الشخصية الجديد وفر حقوقاً متساوية للزوج والزوجة في طلب الطلاق مع ضمان حقوق كل طرف.</p>
+<h3 data-i18n="section_h3_1">قضايا الحضانة والرعاية</h3>
+<p data-i18n="p_4">تتعلق بتحديد من له حق حضانة الأطفال ورعايتهم بعد انفصال الوالدين. المحاكم تأخذ في الاعتبار مصلحة الطفل العليا وقدرة كل من الوالدين على توفير الرعاية المناسبة.</p>
+<h3 data-i18n="section_h3_2">قضايا النفقة والمستحقات المالية</h3>
+<p data-i18n="p_5">تشمل النفقة على الزوجة والأطفال بعد الطلاق والتعويضات المالية المختلفة. النظام يضمن حقوق الزوجة والأطفال في الحصول على نفقة عادلة من الزوج.</p>
+<h3 data-i18n="section_h3_3">قضايا المهر والصداق</h3>
+<p data-i18n="p_6">تتعلق بحقوق الزوجة في المهر وضمان دفعه كاملاً. النظام يحمي حق الزوجة في المهر وجعله التزاماً واجباً على الزوج.</p>
+<h3 data-i18n="section_h3_4">قضايا إثبات النسب والنسيب</h3>
+<p data-i18n="p_7">تتناول إثبات علاقات القرابة والنسب والآثار القانونية الناشئة عن ذلك. هذه القضايا حساسة وتتطلب حكماً قضائياً واضحاً.</p>
+<h3 data-i18n="section_h3_5">قضايا الإرث وتقسيم التركات</h3>
+<p data-i18n="p_8">تشمل توزيع التركة على الورثة وفقاً لأحكام الشريعة الإسلامية والقانون. تتطلب هذه القضايا دقة في الحسابات والفهم العميق لأحكام الوصايا والإرث.</p>
+<h2 data-i18n="section_h2_2">الأساس القانوني</h2>
+<p data-i18n="p_9">يستند نظام الأحوال الشخصية السعودي على عدة مصادر ومراجع:</p>
+<ul>
+<li data-i18n="li_0"><strong>نظام الأحوال الشخصية (1443هـ):</strong> نظام حديث يجمع بين الفقه الإسلامي والأنظمة العصرية ويوفر حماية شاملة لجميع أطراف الأسرة</li>
+<li data-i18n="li_1"><strong>نظام المحاكم الشرعية:</strong> ينظم عمل المحاكم الشرعية والإجراءات المتبعة فيها</li>
+<li data-i18n="li_2"><strong>ضوابط الحضانة والنفقة:</strong> توضح الشروط والضوابط المتعلقة بحقوق الحضانة والنفقة</li>
+<li data-i18n="li_3"><strong>تنظيم المحكمة الأسرية:</strong> محاكم متخصصة في قضايا الأسرة تتمتع بخبرة عالية</li>
+</ul>
+<h2 data-i18n="section_h2_3">حقوق المرأة في الأحوال الشخصية</h2>
+<p data-i18n="p_10">حرصت الأنظمة السعودية على حماية حقوق المرأة في قضايا الأحوال الشخصية. للمرأة الحق في الموافقة على الزواج برضاها الكامل، وللزوجة الحق في طلب الطلاق أو الخلع إذا لم ترغب في استمرار العلاقة الزوجية. كما أن للمرأة الحق في الحفاظ على أموالها الخاصة والتصرف فيها دون وصاية من أحد. كذلك، للزوجة الحق في النفقة والرعاية من الزوج، وللأم الحق في حضانة أطفالها في السنوات الأولى من أعمارهم.</p>
+<h2 data-i18n="section_h2_4">نظام المحكمة الأسرية المتخصصة</h2>
+<p data-i18n="p_11">أنشأت المملكة محاكم متخصصة للنظر في قضايا الأسرة تتمتع بخبرة عالية في التعامل مع هذا النوع من القضايا. هذه المحاكم تتبع إجراءات خاصة تركز على الوساطة والإصلاح بين الأطراف قبل اللجوء إلى الحكم. القضاة المتخصصون في هذه المحاكم يفهمون الحساسية النفسية والاجتماعية لقضايا الأسرة ويسعون إلى إيجاد حلول عادلة تحافظ على كرامة الأسرة وتحمي حقوق الأطفال.</p>
+<h2 data-i18n="section_h2_5">خدمات شركة مشاري بندر بن جلوي في قضايا الأحوال الشخصية</h2>
+<p data-i18n="p_12">توفر شركتنا خدمات متخصصة وحساسة في مجال قضايا الأحوال الشخصية:</p>
+<ul>
+<li data-i18n="li_4">الاستشارات الأسرية السرية والموثوقة في جميع قضايا الأحوال الشخصية</li>
+<li data-i18n="li_5">تمثيل كامل أمام المحاكم الأسرية المتخصصة</li>
+<li data-i18n="li_6">إعداد المذكرات والأوراق القانونية بدقة واحترافية عالية</li>
+<li data-i18n="li_7">المساعدة في التسوية الودية والوساطة بين الأطراف</li>
+<li data-i18n="li_8">متابعة قضايا النفقة والحضانة والإرث</li>
+<li data-i18n="li_9">تمثيل حقوق الأطفال والدفاع عن مصالحهم العليا</li>
+</ul>
+</div>
+</section>
+<section class="section-pad alt">
+<div class="article-body">
+<h2 style="text-align:center;margin-bottom:32px;">الأساس القانوني والأنظمة ذات الصلة</h2>
+<div class="info-box">
+<h3 data-i18n="infobox_h3">الأنظمة والتشريعات الرئيسية</h3>
+<ul>
+<li data-i18n="infobox_li_0">نظام الأحوال الشخصية الصادر بالمرسوم الملكي 1443هـ</li>
+<li data-i18n="infobox_li_1">نظام المحاكم الشرعية وإجراءاتها</li>
+<li data-i18n="infobox_li_2">ضوابط الحضانة والنفقة والولاية</li>
+<li data-i18n="infobox_li_3">تنظيم المحكمة الأسرية المتخصصة</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="section-pad">
+<div class="article-body">
+<h2 style="text-align:center;margin-bottom:32px;">مراحل الإجراءات الأسرية</h2>
+<div class="steps-grid">
+<div class="step-card">
+<div class="step-num">1</div>
+<h4 data-i18n="step_h4_0">الاستشارة الأسرية السرية</h4>
+<p data-i18n="step_p_0">تقديم استشارة سرية وموثوقة حول حقوقك والخيارات المتاحة أمامك مع ضمان الحفاظ على السرية الكاملة.</p>
+</div>
+<div class="step-card">
+<div class="step-num">2</div>
+<h4 data-i18n="step_h4_1">تقديم الدعوى للمحكمة الأسرية</h4>
+<p data-i18n="step_p_1">تقديم الدعوى الموثقة إلى المحكمة الأسرية المختصة مع جميع المستندات الداعمة والأدلة اللازمة.</p>
+</div>
+<div class="step-card">
+<div class="step-num">3</div>
+<h4 data-i18n="step_h4_2">جلسات الإصلاح والوساطة</h4>
+<p data-i18n="step_p_2">محاولة التوصل إلى تسوية ودية بين الطرفين برعاية المحكمة، مع التركيز على مصلحة الأسرة والأطفال.</p>
+</div>
+<div class="step-card">
+<div class="step-num">4</div>
+<h4 data-i18n="step_h4_3">إصدار الحكم وتنفيذه</h4>
+<p data-i18n="step_p_3">إصدار حكم عادل وتنفيذه وفقاً للقانون، مع ضمان حماية حقوق جميع الأطراف خاصة الأطفال.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="cta-section">
+<h2 data-i18n="cta_h2">تحتاج استشارة أسرية موثوقة؟</h2>
+<p data-i18n="cta_p">فريقنا المتخصص يقدم استشارات سرية وموثوقة وحلول عادلة لجميع قضايا الأحوال الشخصية</p>
+<div class="cta-btns">
+<a class="btn-gold" data-i18n="cta_btn_0" href="https://wa.me/966533532153" rel="noopener" target="_blank">استشارة سرية متخصصة</a>
+<a class="btn-outline" data-i18n="cta_btn_1" href="index.html#booking">تواصل معنا</a>
+</div>
+</section>
+<footer>
+<p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+<p style="margin-top:8px;"><a data-i18n="footer_home" href="index.html">الرئيسية</a></p>
+</footer>
+<a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank" title="تواصل عبر واتساب">
+<svg fill="white" height="28" viewbox="0 0 24 24" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path></svg>
+</a>
+ <script>
 const pageTranslations = {
-  breadcrumb_current: {0: 'قضايا الأحوال الشخصية', 1: 'Personal Status Cases', 2: '个人身份案件'},
   breadcrumb_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  breadcrumb_services: {0: 'الخدمات', 1: 'Services', 2: '服务'},
-  cta_button: {0: 'استشر معنا الآن', 1: 'Consult Now', 2: '现在咨询'},
-  footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Mashary Bandar Bin Jalawi Law Firm — All rights reserved', 2: '© 2025 玛沙里·班达尔·本·贾劳伊律师事务所 — 版权所有'},
+  breadcrumb_legal: {0: 'القضايا القانونية', 1: 'Legal Cases', 2: '法律案件'},
+  breadcrumb_current: {0: 'الأحوال الشخصية', 1: 'Personal Status', 2: '个人身份'},
+  hero_h1: {0: 'قضايا الأحوال الشخصية', 1: 'Personal Status Cases', 2: '个人身份案件'},
+  hero_desc: {0: 'تمثيل قانوني رفيع المستوى في قضايا الأسرة والطلاق والحضانة والنفقة وفق الفقه الإسلامي والأنظمة السعودية', 1: 'High-level legal representation in family, divorce, custody, and alimony cases in accordance with Islamic jurisprudence and Saudi regulations', 2: '根据伊斯兰法学和沙特法规，在家庭、离婚、监护权和赡养费案件中提供高水平的法律代理'},
+  section_h2_0: {0: 'مقدمة عن قضايا الأحوال الشخصية', 1: 'Introduction to Personal Status Cases', 2: '个人身份案件简介'},
+  p_0: {0: 'تعتبر قضايا الأحوال الشخصية من أكثر القضايا حساسية وتأثيراً على حياة الأفراد والأسر في المملكة العربية السعودية.', 1: 'Personal status cases are among the most sensitive and impactful on the lives of individuals and families in Saudi Arabia.', 2: '个人身份案件是对沙特阿拉伯个人和家庭生活影响最敏感、最深远的案件之一。'},
+  p_1: {0: 'المحاكم الأسرية المتخصصة في المملكة تتولى النظر في هذه القضايا بطريقة إنسانية وعادلة. شركتنا توفر تمثيلاً قانونياً موثوقاً في هذه القضايا الحساسة.', 1: 'Specialized family courts in Saudi Arabia handle these cases in a humane and fair manner. Our firm provides reliable legal representation in these sensitive cases.', 2: '沙特阿拉伯的专门家庭法庭以人性化和公正的方式处理这些案件。我们的律师事务所在这些敏感案件中提供可靠的法律代理。'},
+  section_h2_1: {0: 'أنواع قضايا الأحوال الشخصية', 1: 'Types of Personal Status Cases', 2: '个人身份案件类型'},
+  p_2: {0: 'تتعدد أنواع قضايا الأحوال الشخصية التي تنظر فيها المحاكم الأسرية المتخصصة.', 1: 'There are many types of personal status cases that specialized family courts adjudicate.', 2: '专业家庭法庭审理的个人身份案件种类繁多。'},
+  section_h3_0: {0: 'قضايا الطلاق والفسخ', 1: 'Divorce and Annulment Cases', 2: '离婚和撤销婚姻案件'},
+  p_3: {0: 'تشمل الطلاق بأنواعه المختلفة سواء كان من قبل الزوج أو من قبل الزوجة من خلال الخلع. نظام الأحوال الشخصية الجديد ينظم هذه القضايا بطريقة متوازنة.', 1: 'These include various types of divorce, whether initiated by the husband or by the wife through khul\' (divorce by mutual consent). The new personal status law regulates these cases in a balanced manner.', 2: '这包括各种类型的离婚，无论是由丈夫提出还是由妻子通过协议离婚提出。新个人身份法以平衡的方式规范这些案件。'},
+  section_h3_1: {0: 'قضايا الحضانة والرعاية', 1: 'Custody and Care Cases', 2: '监护权和抚养案件'},
+  p_4: {0: 'تتعلق بتحديد من له حق حضانة الأطفال ورعايتهم بعد انفصال الوالدين. المحاكم تأخذ في الاعتبار مصلحة الطفل الفضلى كمعيار رئيسي.', 1: 'These relate to determining who has the right to custody and care of children after parental separation. Courts consider the best interests of the child as the primary criterion.', 2: '这涉及确定父母分离后谁有权监护和照料子女。法庭以儿童最大利益为主要标准。'},
+  section_h3_2: {0: 'قضايا النفقة والمستحقات المالية', 1: 'Alimony and Financial Entitlement Cases', 2: '赡养费和财务权益案件'},
+  p_5: {0: 'تشمل النفقة على الزوجة والأطفال بعد الطلاق والتعويضات المالية المختلفة. النظام يضمن حقوق الأسرة المالية بشكل واضح.', 1: 'These include alimony for the wife and children after divorce and various financial compensations. The system clearly guarantees the financial rights of the family.', 2: '这包括离婚后对妻子和子女的赡养费及各种财务补偿。该制度明确保障家庭的财务权利。'},
+  section_h3_3: {0: 'قضايا المهر والصداق', 1: 'Dowry and Mahr Cases', 2: '彩礼和嫁妆案件'},
+  p_6: {0: 'تتعلق بحقوق الزوجة في المهر وضمان دفعه كاملاً. النظام يحمي حق الزوجة في المهر وجعله التزاماً قانونياً ملزماً.', 1: 'These relate to the wife\'s rights to the mahr (dowry) and ensuring it is paid in full. The system protects the wife\'s right to the mahr and makes it a legally binding obligation.', 2: '这涉及妻子对彩礼的权利及确保全额支付。该制度保护妻子对彩礼的权利，并使其成为具有法律约束力的义务。'},
+  section_h3_4: {0: 'قضايا إثبات النسب والنسيب', 1: 'Paternity and Lineage Proof Cases', 2: '亲子关系和世系证明案件'},
+  p_7: {0: 'تتناول إثبات علاقات القرابة والنسب والآثار القانونية الناشئة عن ذلك. هذه القضايا حساسة وتتطلب معالجة قانونية دقيقة.', 1: 'These address the proof of kinship and lineage relationships and the legal consequences arising therefrom. These cases are sensitive and require precise legal handling.', 2: '这些处理亲缘关系和世系关系的证明以及由此产生的法律后果。这些案件敏感，需要精确的法律处理。'},
+  section_h3_5: {0: 'قضايا الإرث وتقسيم التركات', 1: 'Inheritance and Estate Division Cases', 2: '继承和遗产分配案件'},
+  p_8: {0: 'تشمل توزيع التركة على الورثة وفقاً لأحكام الشريعة الإسلامية والقانون. تتطلب هذه القضايا دقة في حساب الأنصبة وتحديد الورثة.', 1: 'These include distributing the estate among heirs in accordance with Islamic law and regulations. These cases require precision in calculating shares and identifying heirs.', 2: '这包括根据伊斯兰法律和法规在继承人之间分配遗产。这些案件需要精确计算份额和确定继承人。'},
+  section_h2_2: {0: 'الأساس القانوني', 1: 'Legal Basis', 2: '法律基础'},
+  p_9: {0: 'يستند نظام الأحوال الشخصية السعودي على عدة مصادر ومراجع قانونية.', 1: 'The Saudi personal status system is based on several legal sources and references.', 2: '沙特个人身份制度以几个法律来源和参考为基础。'},
+  li_0: {0: 'نظام الأحوال الشخصية (1443هـ): نظام حديث يجمع بين الفقه الإسلامي والأنظمة العصرية ويوفر حماية شاملة لجميع أفراد الأسرة', 1: 'Personal Status Law (1443H): A modern law combining Islamic jurisprudence with contemporary regulations, providing comprehensive protection for all family members', 2: '个人身份法（1443H）：一部将伊斯兰法学与当代法规相结合的现代法律，为所有家庭成员提供全面保护'},
+  li_1: {0: 'نظام المحاكم الشرعية: ينظم عمل المحاكم الشرعية والإجراءات المتبعة فيها', 1: 'Sharia Courts Law: Regulates the operation of Sharia courts and the procedures followed in them', 2: '伊斯兰法庭法：规范伊斯兰法庭的运作及其遵循的程序'},
+  li_2: {0: 'ضوابط الحضانة والنفقة: توضح الشروط والضوابط المتعلقة بحقوق الحضانة والنفقة', 1: 'Custody and Alimony Regulations: Clarify the conditions and controls relating to custody and alimony rights', 2: '监护权和赡养费法规：阐明与监护权和赡养费权利相关的条件和控制措施'},
+  li_3: {0: 'تنظيم المحكمة الأسرية: محاكم متخصصة في قضايا الأسرة تتمتع بخبرة عالية', 1: 'Family Court Organization: Specialized courts in family cases with high expertise', 2: '家庭法庭组织：具有高度专业知识的家庭案件专业法庭'},
+  section_h2_3: {0: 'حقوق المرأة في الأحوال الشخصية', 1: 'Women\'s Rights in Personal Status', 2: '个人身份中的妇女权利'},
+  p_10: {0: 'حرصت الأنظمة السعودية على حماية حقوق المرأة في قضايا الأحوال الشخصية. للمرأة الحق في المواصلة والمطالبة بحقوقها أمام المحاكم الأسرية.', 1: 'Saudi regulations have ensured the protection of women\'s rights in personal status cases. Women have the right to pursue and claim their rights before family courts.', 2: '沙特法规确保了在个人身份案件中保护妇女权利。妇女有权在家庭法庭前追索和主张自己的权利。'},
+  section_h2_4: {0: 'نظام المحكمة الأسرية المتخصصة', 1: 'Specialized Family Court System', 2: '专业家庭法庭制度'},
+  p_11: {0: 'أنشأت المملكة محاكم متخصصة للنظر في قضايا الأسرة تتمتع بخبرة عالية في التعامل مع هذا النوع من القضايا الحساسة.', 1: 'Saudi Arabia has established specialized courts for family cases with high expertise in handling this type of sensitive case.', 2: '沙特阿拉伯建立了专门审理家庭案件的专业法庭，具有处理这类敏感案件的高度专业知识。'},
+  section_h2_5: {0: 'خدمات شركة مشاري بندر بن جلوي في قضايا الأحوال الشخصية', 1: 'Services of Meshary Bin Bandar Bin Jaloui Firm in Personal Status Cases', 2: '美沙里·本·班达尔·本·贾卢伊律师事务所的个人身份案件服务'},
+  p_12: {0: 'توفر شركتنا خدمات متخصصة وحساسة في مجال قضايا الأحوال الشخصية:', 1: 'Our firm provides specialized and sensitive services in the field of personal status cases:', 2: '我们的律师事务所在个人身份案件领域提供专业和敏感的服务：'},
+  li_4: {0: 'الاستشارات الأسرية السرية والموثوقة في جميع قضايا الأحوال الشخصية', 1: 'Confidential and reliable family consultations in all personal status cases', 2: '在所有个人身份案件中提供保密可靠的家庭咨询'},
+  li_5: {0: 'تمثيل كامل أمام المحاكم الأسرية المتخصصة', 1: 'Full representation before specialized family courts', 2: '在专业家庭法庭前的全面代理'},
+  li_6: {0: 'إعداد المذكرات والأوراق القانونية بدقة واحترافية عالية', 1: 'Preparing memoranda and legal documents with precision and high professionalism', 2: '以精确性和高度专业性准备备忘录和法律文件'},
+  li_7: {0: 'المساعدة في التسوية الودية والوساطة بين الأطراف', 1: 'Assistance in amicable settlement and mediation between parties', 2: '协助各方友好和解和调解'},
+  li_8: {0: 'متابعة قضايا النفقة والحضانة والإرث', 1: 'Following up on alimony, custody, and inheritance cases', 2: '跟进赡养费、监护权和继承案件'},
+  li_9: {0: 'تمثيل حقوق الأطفال والدفاع عن مصالحهم العليا', 1: 'Representing children\'s rights and defending their best interests', 2: '代理儿童权利并捍卫其最大利益'},
+  infobox_h3: {0: 'الأنظمة والتشريعات الرئيسية', 1: 'Key Laws and Regulations', 2: '主要法律法规'},
+  infobox_li_0: {0: 'نظام الأحوال الشخصية الصادر بالمرسوم الملكي 1443هـ', 1: 'Personal Status Law issued by Royal Decree 1443H', 2: '1443H颁布的个人身份法（皇家法令）'},
+  infobox_li_1: {0: 'نظام المحاكم الشرعية وإجراءاتها', 1: 'Sharia Courts Law and Procedures', 2: '伊斯兰法庭法和程序'},
+  infobox_li_2: {0: 'ضوابط الحضانة والنفقة والولاية', 1: 'Custody, Alimony, and Guardianship Regulations', 2: '监护权、赡养费和监护人法规'},
+  infobox_li_3: {0: 'تنظيم المحكمة الأسرية المتخصصة', 1: 'Specialized Family Court Organization', 2: '专业家庭法庭组织'},
+  step_h4_0: {0: 'الاستشارة الأسرية السرية', 1: 'Confidential Family Consultation', 2: '保密家庭咨询'},
+  step_p_0: {0: 'تقديم استشارة سرية وموثوقة حول حقوقك والخيارات المتاحة أمامك مع ضمان الحفاظ على السرية الكاملة.', 1: 'Providing a confidential and reliable consultation on your rights and available options while ensuring complete confidentiality is maintained.', 2: '提供关于您的权利和可用选项的保密可靠咨询，同时确保保持完全保密性。'},
+  step_h4_1: {0: 'تقديم الدعوى للمحكمة الأسرية', 1: 'Filing the Case with the Family Court', 2: '向家庭法庭提起诉讼'},
+  step_p_1: {0: 'تقديم الدعوى الموثقة إلى المحكمة الأسرية المختصة مع جميع المستندات الداعمة والأدلة اللازمة.', 1: 'Filing the documented case with the competent family court along with all supporting documents and necessary evidence.', 2: '向主管家庭法庭提交有据可查的案件，并附上所有支持文件和必要证据。'},
+  step_h4_2: {0: 'جلسات الإصلاح والوساطة', 1: 'Reconciliation and Mediation Sessions', 2: '和解与调解庭'},
+  step_p_2: {0: 'محاولة التوصل إلى تسوية ودية بين الطرفين برعاية المحكمة، مع التركيز على مصلحة الأسرة والأطفال.', 1: 'Attempting to reach an amicable settlement between parties under court supervision, focusing on the best interests of the family and children.', 2: '在法庭监督下尝试达成双方友好和解，重点关注家庭和子女的最大利益。'},
+  step_h4_3: {0: 'إصدار الحكم وتنفيذه', 1: 'Issuing and Enforcing the Judgment', 2: '作出并执行判决'},
+  step_p_3: {0: 'إصدار حكم عادل وتنفيذه وفقاً للقانون، مع ضمان حماية حقوق جميع الأطراف خاصة الأطفال.', 1: 'Issuing a fair judgment and enforcing it in accordance with the law, while ensuring the protection of all parties\' rights, especially children.', 2: '作出公正判决并依法执行，同时确保保护所有当事方的权利，尤其是儿童的权利。'},
+  cta_h2: {0: 'تحتاج استشارة أسرية موثوقة؟', 1: 'Need Reliable Family Legal Advice?', 2: '需要可靠的家庭法律建议？'},
+  cta_p: {0: 'فريقنا المتخصص يقدم استشارات سرية وموثوقة وحلول عادلة لجميع قضايا الأحوال الشخصية', 1: 'Our specialized team provides confidential, reliable consultations and fair solutions for all personal status cases', 2: '我们的专业团队为所有个人身份案件提供保密、可靠的咨询和公正解决方案'},
+  cta_btn_0: {0: 'استشارة سرية متخصصة', 1: 'Specialized Confidential Consultation', 2: '专业保密咨询'},
+  cta_btn_1: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
+  footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Meshary Bin Bandar Bin Jaloui Law Firm and Legal Consultations — All rights reserved', 2: '© 2025 美沙里·本·班达尔·本·贾卢伊律师事务所和法律咨询——版权所有'},
   footer_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  hero_desc: {0: 'متخصصون في الزواج والطلاق والنفقة والحضانة والقضايا الأسرية برفع عالٍ من الحساسية والاحترافية.', 1: 'Specialized in marriage, divorce, alimony, custody and family matters with the highest sensitivity and professionalism.', 2: '专门处理婚姻、离婚、赡养费、监护权和家庭事务，并具有高度的敏感性和专业性。'},
-  hero_title_first: {0: 'قضايا', 1: 'Personal', 2: '个人'},
-  hero_title_last: {0: 'شخصية', 1: 'Status', 2: '身份'},
-  learnmore_button: {0: 'تعرف على المزيد', 1: 'Learn More', 2: '了解更多'},
-  nav_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
-  nav_careers: {0: 'التوظيف', 1: 'Careers', 2: '招聘'},
-  nav_contact: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
-  nav_contracts: {0: 'عقود الشركات', 1: 'Company Contracts', 2: '公司合同'},
-  nav_eservices: {0: 'الخدمات الإلكترونية', 1: 'E-Services', 2: '电子服务'},
-  nav_faq: {0: 'الأسئلة الشائعة', 1: 'FAQ', 2: '常见问题'},
-  nav_services: {0: 'خدماتنا', 1: 'Our Services', 2: '我们的服务'},
-  nav_team: {0: 'فريقنا', 1: 'Our Team', 2: '我们的团队'},
-  section_1_desc: {0: 'نتعامل مع قضايا الأسرة بحذر واحترام كامل، مع الحرص على حماية حقوق جميع الأطراف خاصة الأطفال.', 1: 'We handle family matters with care and full respect, protecting the rights of all parties, especially children.', 2: '我们以谨慎和充分尊重的方式处理家庭事务，保护所有各方的权利。'},
-  section_1_title: {0: 'القضايا الأسرية الحساسة', 1: 'Sensitive Family Matters', 2: '敏感的家庭事务'},
-  whatsapp_button: {0: 'تواصل عبر واتساب', 1: 'Contact via WhatsApp', 2: '通过WhatsApp联系'},
 };
 </script>
+
+
+
 <script src="lang.js"></script>
-    </body>
+</body>
 </html>

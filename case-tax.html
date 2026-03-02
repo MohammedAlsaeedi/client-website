@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+
+<html dir="rtl" lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قضايا الزكاة والضريبة والجمارك — شركة مشاري بندر بن جلوي للمحاماة</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>قضايا الزكاة والضريبة والجمارك — شركة مشاري بندر بن جلوي للمحاماة</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
         :root { --navy:#1B2C6B; --navy-dark:#111d4a; --navy-mid:#223580; --gold:#B8935A; --gold-light:#d4aa72; --gold-pale:#f5ede0; --white:#ffffff; --off-white:#f8f6f2; --gray:#6b7280; --gray-dark:#374151; --border:#e5e1d9; }
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
         html{scroll-behavior:smooth;overflow-x:hidden}
@@ -94,202 +95,228 @@
         </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="logo.png" alt="شعار شركة مشاري بندر بن جلوي">
-                <div>
-                    <div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
-                    <div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
-                </div>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html#services" data-i18n="nav_services">خدماتنا</a></li>
-                <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
-                <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-                <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
-                <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
-                <li><a href="e-services.html" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
-                <li><a href="careers.html" data-i18n="nav_careers">التوظيف</a></li>
-                <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
-            </ul>
-            <div style="display:flex;align-items:center;gap:10px;">
-                <div class="lang-drop" id="langDrop">
-                    <button class="lang-drop-btn" onclick="toggleLangDrop()" id="langDropBtn">🇸🇦</button>
-                    <div class="lang-drop-menu" id="langDropMenu">
-                        <button onclick="setLang(0);toggleLangDrop()" data-lang="0">🇸🇦 العربية</button>
-                        <button onclick="setLang(1);toggleLangDrop()" data-lang="1">🇬🇧 English</button>
-                        <button onclick="setLang(2);toggleLangDrop()" data-lang="2">🇨🇳 中文</button>
-                    </div>
-                </div>
-                <a href="https://wa.me/966533532153" target="_blank" rel="noopener" class="nav-cta">احجز استشارة</a>
-                <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div class="mobile-drawer" id="drawer">
-        <ul>
-            <li><a href="index.html#services" data-i18n="nav_services" data-i18n="nav_services">خدماتنا</a></li>
-            <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
-            <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-            <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
-            <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
-            <li><a href="e-services.html" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
-            <li><a href="careers.html" data-i18n="nav_careers">التوظيف</a></li>
-            <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
-            <li><a href="https://wa.me/966533532153">احجز استشارة</a></li>
-        </ul>
-    </div>
-
-    <section class="page-hero">
-        <div class="page-hero-content">
-            <div class="page-breadcrumb">
-                <a href="index.html">الرئيسية</a>
-                <span>/</span>
-                <a href="#">القضايا القانونية</a>
-                <span>/</span>
-                <span>الزكاة والضريبة والجمارك</span>
-            </div>
-            <h1>قضايا <em>الزكاة والضريبة والجمارك</em></h1>
-            <p class="page-hero-desc">دعم قانوني متخصص في الاعتراض على قرارات الزكاة وضريبة القيمة المضافة والجمارك أمام الهيئات المختصة</p>
-        </div>
-    </section>
-
-    <section class="section-pad">
-        <div class="article-body">
-            <h2>مقدمة عن قضايا الزكاة والضريبة والجمارك</h2>
-            <p>تمثل قضايا الزكاة والضريبة والجمارك مجالاً متخصصاً وحيوياً في النظام القانوني والاقتصادي السعودي. هذه القضايا تتعلق بالالتزامات المالية للأفراد والشركات تجاه الدولة ويتطلب التعامل معها معرفة عميقة بالأنظمة الضريبية والجمركية والتشريعات ذات الصلة. المملكة العربية السعودية طبقت نظام ضريبة القيمة المضافة في عام 2018 وأنشأت هيئة متخصصة للتعامل مع الزكاة والضريبة والجمارك تحت اسم هيئة الزكاة والضريبة والجمارك (ZATCA).</p>
-            <p>شركة مشاري بندر بن جلوي للمحاماة توفر خدمات متخصصة في التعامل مع قضايا الزكاة والضريبة والجمارك، حيث يمتلك فريقنا خبرة عميقة في الاعتراض على القرارات الضريبية والجمركية والدفاع عن حقوق موكلينا أمام الهيئات والمحاكم المختصة.</p>
-
-            <h2>أنواع قضايا الزكاة والضريبة والجمارك</h2>
-            <p>تتعدد أنواع النزاعات والقضايا في هذا المجال:</p>
-            <h3>نزاعات الزكاة</h3>
-            <p>تشمل الاعتراضات على قرارات فرض الزكاة أو حسابات الزكاة المستحقة. قد يختلف صاحب الدخل مع هيئة الزكاة حول مقدار الزكاة المستحقة أو الأموال الخاضعة للزكاة. هذه النزاعات تتطلب معرفة دقيقة بأحكام الزكاة الشرعية والأنظمة السعودية.</p>
-            <h3>نزاعات ضريبة القيمة المضافة (VAT)</h3>
-            <p>تتعلق بحسابات ضريبة القيمة المضافة والخصومات المستحقة والتصنيفات الضريبية للمنتجات. منذ تطبيق النظام في 2018، حدثت عدة نزاعات حول تصنيف المنتجات والخدمات والضرائب المستحقة عليها.</p>
-            <h3>نزاعات الضريبة الانتقائية</h3>
-            <p>تتعلق بالضرائب المطبقة على منتجات محددة مثل المشروبات والتبغ والطاقة. قد يحدث اختلاف حول معدل الضريبة المطبقة أو تصنيف المنتج.</p>
-            <h3>نزاعات الجمارك والتهريب</h3>
-            <p>تتضمن نزاعات حول التصنيف الجمركي للسلع والضرائب الجمركية المستحقة، وقد تتعلق ببعض الحالات بقضايا التهريب الجمركي والعقوبات المترتبة عليه.</p>
-            <h3>قضايا الإعفاءات الضريبية</h3>
-            <p>تشمل المطالبة بالإعفاءات الضريبية المقررة قانوناً أو المحددة لقطاعات معينة مثل الصحة والتعليم والخدمات الحكومية.</p>
-
-            <h2>الأساس القانوني</h2>
-            <p>تستند قضايا الزكاة والضريبة والجمارك على عدة أنظمة حديثة:</p>
-            <ul>
-                <li><strong>نظام ضريبة القيمة المضافة (1438هـ):</strong> ينظم حساب وفرض ضريبة القيمة المضافة بنسبة 15 بالمائة على معظم السلع والخدمات</li>
-                <li><strong>نظام الزكاة السعودي:</strong> يحدد أحكام الزكاة وكيفية حسابها على الدخول والأموال المختلفة</li>
-                <li><strong>الاتفاقية الجمركية الموحدة لدول الخليج:</strong> توحد التصنيفات والمعدلات الجمركية بين دول الخليج</li>
-                <li><strong>نظام الضريبة الانتقائية:</strong> ينظم فرض ضرائب إضافية على منتجات محددة</li>
-            </ul>
-
-            <h2>هيئة الزكاة والضريبة والجمارك (ZATCA)</h2>
-            <p>أنشأت المملكة هيئة متخصصة تحت مسمى هيئة الزكاة والضريبة والجمارك (ZATCA) تتولى جمع الزكاة والضرائب والرسوم الجمركية. الهيئة تملك صلاحيات واسعة في فرض الضرائب والزكاة والتحقق من الالتزام بها. يمكن للمكلفين الاعتراض على قراراتها والطعن فيها من خلال إجراءات إدارية محددة ثم اللجوء إلى المحاكم.</p>
-
-            <h2>عملية الاعتراض على القرارات الضريبية</h2>
-            <p>عند عدم الاتفاق مع قرار الهيئة بشأن الزكاة أو الضريبة أو الجمارك، يمكن تقديم اعتراض رسمي. أولاً يتم تقديم اعتراض إداري لهيئة الزكاة والضريبة والجمارك يتضمن الأسباب والمستندات الداعمة. إذا لم يتم قبول الاعتراض، يمكن الطعن أمام لجان الاعتراض الضريبية المتخصصة. بعد استنفاد الإجراءات الإدارية، يمكن اللجوء إلى المحاكم للطعن في القرارات الضريبية.</p>
-
-            <h2>خدمات شركة مشاري بندر بن جلوي</h2>
-            <p>توفر شركتنا خدمات متخصصة في مجال الزكاة والضريبة والجمارك:</p>
-            <ul>
-                <li>الاستشارات المتخصصة في الالتزامات الضريبية والزكوية</li>
-                <li>تحليل القرارات الضريبية والجمركية والاعتراض عليها</li>
-                <li>إعداد مذكرات وأوراق الاعتراض على القرارات الضريبية</li>
-                <li>التمثيل أمام لجان الاعتراض الضريبية</li>
-                <li>الطعن في القرارات الضريبية أمام المحاكم المختصة</li>
-                <li>المساعدة في استيفاء الحقوق المرفوضة بسبب قرار ضريبي خاطئ</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="section-pad alt">
-        <div class="article-body">
-            <h2 style="text-align:center;margin-bottom:32px;">الأساس القانوني والأنظمة ذات الصلة</h2>
-            <div class="info-box">
-                <h3>الأنظمة والتشريعات الرئيسية</h3>
-                <ul>
-                    <li>نظام ضريبة القيمة المضافة الصادر 1438هـ (15%)</li>
-                    <li>نظام الزكاة السعودي والقوانين ذات الصلة</li>
-                    <li>الاتفاقية الجمركية الموحدة لدول الخليج</li>
-                    <li>نظام الضريبة الانتقائية على المنتجات المحددة</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-pad">
-        <div class="article-body">
-            <h2 style="text-align:center;margin-bottom:32px;">مراحل عملية الاعتراض الضريبي</h2>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-num">1</div>
-                    <h4>مراجعة القرار الضريبي والتحقق</h4>
-                    <p>دراسة القرار الضريبي بدقة والتحقق من صحة الحسابات والتصنيفات، وجمع المستندات والأدلة الداعمة لقضيتك.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">2</div>
-                    <h4>تقديم الاعتراض الإداري لهيئة ZATCA</h4>
-                    <p>تقديم اعتراض رسمي مفصل مع الأسباب القانونية والمستندات المؤيدة لهيئة الزكاة والضريبة والجمارك.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">3</div>
-                    <h4>التقاضي أمام اللجان الضريبية</h4>
-                    <p>إذا لم يتم قبول الاعتراض الإداري، يمكن الطعن أمام لجان الاعتراض الضريبية المتخصصة بمذكرات قانونية قوية.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">4</div>
-                    <h4>الاستئناف أمام محكمة الاستئناف</h4>
-                    <p>إذا كان الحكم غير عادل، يمكن استئناف قرار لجنة الاعتراض أمام محكمة الاستئناف المختصة.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <h2>هل تواجه مشكلة ضريبية أو جمركية؟</h2>
-        <p>فريقنا المتخصص يقدم دعماً قانونياً كاملاً في جميع قضايا الزكاة والضريبة والجمارك</p>
-        <div class="cta-btns">
-            <a href="https://wa.me/966533532153" class="btn-gold" target="_blank" rel="noopener">استشارة ضريبية متخصصة</a>
-            <a href="index.html#booking" class="btn-outline">تواصل معنا</a>
-        </div>
-    </section>
-
-    <footer>
-        <p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
-        <p style="margin-top:8px;"><a href="index.html" data-i18n="footer_home">الرئيسية</a></p>
-    </footer>
-    <a href="https://wa.me/966533532153" class="whatsapp-fab" target="_blank" rel="noopener" title="تواصل عبر واتساب">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-    </a>
-
-
-    <script>
+<nav class="navbar">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">
+<img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png"/>
+<div>
+<div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
+</div>
+</a>
+<ul class="nav-links">
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+<div style="display:flex;align-items:center;gap:10px;">
+<div class="lang-drop" id="langDrop">
+<button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
+<div class="lang-drop-menu" id="langDropMenu">
+<button data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦 العربية</button>
+<button data-lang="1" onclick="setLang(1);toggleLangDrop()">🇬🇧 English</button>
+<button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
+</div>
+</div>
+<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
+<div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
+<span></span><span></span><span></span>
+</div>
+</div>
+</div>
+</nav>
+<div class="mobile-drawer" id="drawer">
+<ul>
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+<li><a href="https://wa.me/966533532153">احجز استشارة</a></li>
+</ul>
+</div>
+<section class="page-hero">
+<div class="page-hero-content">
+<div class="page-breadcrumb">
+<a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
+<span>/</span>
+<a data-i18n="breadcrumb_legal" href="#">القضايا القانونية</a>
+<span>/</span>
+<span data-i18n="breadcrumb_current">الزكاة والضريبة والجمارك</span>
+</div>
+<h1 data-i18n="hero_h1">قضايا <em>الزكاة والضريبة والجمارك</em></h1>
+<p class="page-hero-desc" data-i18n="hero_desc">دعم قانوني متخصص في الاعتراض على قرارات الزكاة وضريبة القيمة المضافة والجمارك أمام الهيئات المختصة</p>
+</div>
+</section>
+<section class="section-pad">
+<div class="article-body">
+<h2 data-i18n="section_h2_0">مقدمة عن قضايا الزكاة والضريبة والجمارك</h2>
+<p data-i18n="p_0">تمثل قضايا الزكاة والضريبة والجمارك مجالاً متخصصاً وحيوياً في النظام القانوني والاقتصادي السعودي. هذه القضايا تتعلق بالالتزامات المالية للأفراد والشركات تجاه الدولة ويتطلب التعامل معها معرفة عميقة بالأنظمة الضريبية والجمركية والتشريعات ذات الصلة. المملكة العربية السعودية طبقت نظام ضريبة القيمة المضافة في عام 2018 وأنشأت هيئة متخصصة للتعامل مع الزكاة والضريبة والجمارك تحت اسم هيئة الزكاة والضريبة والجمارك (ZATCA).</p>
+<p data-i18n="p_1">شركة مشاري بندر بن جلوي للمحاماة توفر خدمات متخصصة في التعامل مع قضايا الزكاة والضريبة والجمارك، حيث يمتلك فريقنا خبرة عميقة في الاعتراض على القرارات الضريبية والجمركية والدفاع عن حقوق موكلينا أمام الهيئات والمحاكم المختصة.</p>
+<h2 data-i18n="section_h2_1">أنواع قضايا الزكاة والضريبة والجمارك</h2>
+<p data-i18n="p_2">تتعدد أنواع النزاعات والقضايا في هذا المجال:</p>
+<h3 data-i18n="section_h3_0">نزاعات الزكاة</h3>
+<p data-i18n="p_3">تشمل الاعتراضات على قرارات فرض الزكاة أو حسابات الزكاة المستحقة. قد يختلف صاحب الدخل مع هيئة الزكاة حول مقدار الزكاة المستحقة أو الأموال الخاضعة للزكاة. هذه النزاعات تتطلب معرفة دقيقة بأحكام الزكاة الشرعية والأنظمة السعودية.</p>
+<h3 data-i18n="section_h3_1">نزاعات ضريبة القيمة المضافة (VAT)</h3>
+<p data-i18n="p_4">تتعلق بحسابات ضريبة القيمة المضافة والخصومات المستحقة والتصنيفات الضريبية للمنتجات. منذ تطبيق النظام في 2018، حدثت عدة نزاعات حول تصنيف المنتجات والخدمات والضرائب المستحقة عليها.</p>
+<h3 data-i18n="section_h3_2">نزاعات الضريبة الانتقائية</h3>
+<p data-i18n="p_5">تتعلق بالضرائب المطبقة على منتجات محددة مثل المشروبات والتبغ والطاقة. قد يحدث اختلاف حول معدل الضريبة المطبقة أو تصنيف المنتج.</p>
+<h3 data-i18n="section_h3_3">نزاعات الجمارك والتهريب</h3>
+<p data-i18n="p_6">تتضمن نزاعات حول التصنيف الجمركي للسلع والضرائب الجمركية المستحقة، وقد تتعلق ببعض الحالات بقضايا التهريب الجمركي والعقوبات المترتبة عليه.</p>
+<h3 data-i18n="section_h3_4">قضايا الإعفاءات الضريبية</h3>
+<p data-i18n="p_7">تشمل المطالبة بالإعفاءات الضريبية المقررة قانوناً أو المحددة لقطاعات معينة مثل الصحة والتعليم والخدمات الحكومية.</p>
+<h2 data-i18n="section_h2_2">الأساس القانوني</h2>
+<p data-i18n="p_8">تستند قضايا الزكاة والضريبة والجمارك على عدة أنظمة حديثة:</p>
+<ul>
+<li data-i18n="li_0"><strong>نظام ضريبة القيمة المضافة (1438هـ):</strong> ينظم حساب وفرض ضريبة القيمة المضافة بنسبة 15 بالمائة على معظم السلع والخدمات</li>
+<li data-i18n="li_1"><strong>نظام الزكاة السعودي:</strong> يحدد أحكام الزكاة وكيفية حسابها على الدخول والأموال المختلفة</li>
+<li data-i18n="li_2"><strong>الاتفاقية الجمركية الموحدة لدول الخليج:</strong> توحد التصنيفات والمعدلات الجمركية بين دول الخليج</li>
+<li data-i18n="li_3"><strong>نظام الضريبة الانتقائية:</strong> ينظم فرض ضرائب إضافية على منتجات محددة</li>
+</ul>
+<h2 data-i18n="section_h2_3">هيئة الزكاة والضريبة والجمارك (ZATCA)</h2>
+<p data-i18n="p_9">أنشأت المملكة هيئة متخصصة تحت مسمى هيئة الزكاة والضريبة والجمارك (ZATCA) تتولى جمع الزكاة والضرائب والرسوم الجمركية. الهيئة تملك صلاحيات واسعة في فرض الضرائب والزكاة والتحقق من الالتزام بها. يمكن للمكلفين الاعتراض على قراراتها والطعن فيها من خلال إجراءات إدارية محددة ثم اللجوء إلى المحاكم.</p>
+<h2 data-i18n="section_h2_4">عملية الاعتراض على القرارات الضريبية</h2>
+<p data-i18n="p_10">عند عدم الاتفاق مع قرار الهيئة بشأن الزكاة أو الضريبة أو الجمارك، يمكن تقديم اعتراض رسمي. أولاً يتم تقديم اعتراض إداري لهيئة الزكاة والضريبة والجمارك يتضمن الأسباب والمستندات الداعمة. إذا لم يتم قبول الاعتراض، يمكن الطعن أمام لجان الاعتراض الضريبية المتخصصة. بعد استنفاد الإجراءات الإدارية، يمكن اللجوء إلى المحاكم للطعن في القرارات الضريبية.</p>
+<h2 data-i18n="section_h2_5">خدمات شركة مشاري بندر بن جلوي</h2>
+<p data-i18n="p_11">توفر شركتنا خدمات متخصصة في مجال الزكاة والضريبة والجمارك:</p>
+<ul>
+<li data-i18n="li_4">الاستشارات المتخصصة في الالتزامات الضريبية والزكوية</li>
+<li data-i18n="li_5">تحليل القرارات الضريبية والجمركية والاعتراض عليها</li>
+<li data-i18n="li_6">إعداد مذكرات وأوراق الاعتراض على القرارات الضريبية</li>
+<li data-i18n="li_7">التمثيل أمام لجان الاعتراض الضريبية</li>
+<li data-i18n="li_8">الطعن في القرارات الضريبية أمام المحاكم المختصة</li>
+<li data-i18n="li_9">المساعدة في استيفاء الحقوق المرفوضة بسبب قرار ضريبي خاطئ</li>
+</ul>
+</div>
+</section>
+<section class="section-pad alt">
+<div class="article-body">
+<h2 style="text-align:center;margin-bottom:32px;">الأساس القانوني والأنظمة ذات الصلة</h2>
+<div class="info-box">
+<h3 data-i18n="infobox_h3">الأنظمة والتشريعات الرئيسية</h3>
+<ul>
+<li data-i18n="infobox_li_0">نظام ضريبة القيمة المضافة الصادر 1438هـ (15%)</li>
+<li data-i18n="infobox_li_1">نظام الزكاة السعودي والقوانين ذات الصلة</li>
+<li data-i18n="infobox_li_2">الاتفاقية الجمركية الموحدة لدول الخليج</li>
+<li data-i18n="infobox_li_3">نظام الضريبة الانتقائية على المنتجات المحددة</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="section-pad">
+<div class="article-body">
+<h2 style="text-align:center;margin-bottom:32px;">مراحل عملية الاعتراض الضريبي</h2>
+<div class="steps-grid">
+<div class="step-card">
+<div class="step-num">1</div>
+<h4 data-i18n="step_h4_0">مراجعة القرار الضريبي والتحقق</h4>
+<p data-i18n="step_p_0">دراسة القرار الضريبي بدقة والتحقق من صحة الحسابات والتصنيفات، وجمع المستندات والأدلة الداعمة لقضيتك.</p>
+</div>
+<div class="step-card">
+<div class="step-num">2</div>
+<h4 data-i18n="step_h4_1">تقديم الاعتراض الإداري لهيئة ZATCA</h4>
+<p data-i18n="step_p_1">تقديم اعتراض رسمي مفصل مع الأسباب القانونية والمستندات المؤيدة لهيئة الزكاة والضريبة والجمارك.</p>
+</div>
+<div class="step-card">
+<div class="step-num">3</div>
+<h4 data-i18n="step_h4_2">التقاضي أمام اللجان الضريبية</h4>
+<p data-i18n="step_p_2">إذا لم يتم قبول الاعتراض الإداري، يمكن الطعن أمام لجان الاعتراض الضريبية المتخصصة بمذكرات قانونية قوية.</p>
+</div>
+<div class="step-card">
+<div class="step-num">4</div>
+<h4 data-i18n="step_h4_3">الاستئناف أمام محكمة الاستئناف</h4>
+<p data-i18n="step_p_3">إذا كان الحكم غير عادل، يمكن استئناف قرار لجنة الاعتراض أمام محكمة الاستئناف المختصة.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="cta-section">
+<h2 data-i18n="cta_h2">هل تواجه مشكلة ضريبية أو جمركية؟</h2>
+<p data-i18n="cta_p">فريقنا المتخصص يقدم دعماً قانونياً كاملاً في جميع قضايا الزكاة والضريبة والجمارك</p>
+<div class="cta-btns">
+<a class="btn-gold" data-i18n="cta_btn_0" href="https://wa.me/966533532153" rel="noopener" target="_blank">استشارة ضريبية متخصصة</a>
+<a class="btn-outline" data-i18n="cta_btn_1" href="index.html#booking">تواصل معنا</a>
+</div>
+</section>
+<footer>
+<p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+<p style="margin-top:8px;"><a data-i18n="footer_home" href="index.html">الرئيسية</a></p>
+</footer>
+<a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank" title="تواصل عبر واتساب">
+<svg fill="white" height="28" viewbox="0 0 24 24" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path></svg>
+</a>
+ <script>
 const pageTranslations = {
-  breadcrumb_current: {0: 'القضايا الضريبية', 1: 'Tax Cases', 2: '税务案件'},
   breadcrumb_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  breadcrumb_services: {0: 'الخدمات', 1: 'Services', 2: '服务'},
-  cta_button: {0: 'استشر معنا الآن', 1: 'Consult Now', 2: '现在咨询'},
-  footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Mashary Bandar Bin Jalawi Law Firm — All rights reserved', 2: '© 2025 玛沙里·班达尔·本·贾劳伊律师事务所 — 版权所有'},
+  breadcrumb_legal: {0: 'القضايا القانونية', 1: 'Legal Cases', 2: '法律案件'},
+  breadcrumb_current: {0: 'الزكاة والضريبة والجمارك', 1: 'Zakat, Tax & Customs', 2: '天课、税务和海关'},
+  hero_h1: {0: 'قضايا الزكاة والضريبة والجمارك', 1: 'Zakat, Tax & Customs Cases', 2: '天课、税务和海关案件'},
+  hero_desc: {0: 'دعم قانوني متخصص في الاعتراض على قرارات الزكاة وضريبة القيمة المضافة والجمارك أمام الهيئات المختصة', 1: 'Specialized legal support in objecting to Zakat, VAT, and customs decisions before competent authorities', 2: '在主管机构面前就天课、增值税和海关决定提出异议的专业法律支持'},
+  section_h2_0: {0: 'مقدمة عن قضايا الزكاة والضريبة والجمارك', 1: 'Introduction to Zakat, Tax & Customs Cases', 2: '天课、税务和海关案件简介'},
+  p_0: {0: 'تمثل قضايا الزكاة والضريبة والجمارك مجالاً متخصصاً وحيوياً في النظام القانوني والاقتصادي السعودي.', 1: 'Zakat, tax, and customs cases represent a specialized and vital area in the Saudi legal and economic system.', 2: '天课、税务和海关案件是沙特法律和经济体系中专业且至关重要的领域。'},
+  p_1: {0: 'شركة مشاري بندر بن جلوي للمحاماة توفر خدمات متخصصة في التعامل مع قضايا الزكاة والضريبة والجمارك، والاعتراض على قرارات هيئة ZATCA.', 1: 'Meshary Bin Bandar Bin Jaloui Law Firm provides specialized services in handling Zakat, tax, and customs cases, and objecting to ZATCA decisions.', 2: '美沙里·本·班达尔·本·贾卢伊律师事务所提供处理天课、税务和海关案件以及对ZATCA决定提出异议的专业服务。'},
+  section_h2_1: {0: 'أنواع قضايا الزكاة والضريبة والجمارك', 1: 'Types of Zakat, Tax & Customs Cases', 2: '天课、税务和海关案件类型'},
+  p_2: {0: 'تتعدد أنواع النزاعات والقضايا في هذا المجال.', 1: 'There are many types of disputes and cases in this field.', 2: '这一领域存在多种类型的争议和案件。'},
+  section_h3_0: {0: 'نزاعات الزكاة', 1: 'Zakat Disputes', 2: '天课争议'},
+  p_3: {0: 'تشمل الاعتراضات على قرارات فرض الزكاة أو حسابات الزكاة المستحقة. قد يختلف صاحب الدخل مع هيئة الزكاة حول حسابات الوعاء الزكوي.', 1: 'These include objections to Zakat assessment decisions or Zakat liability calculations. The taxpayer may disagree with the Zakat authority over Zakat base calculations.', 2: '这包括对天课评估决定或天课负债计算的异议。纳税人可能对天课征收基础的计算与天课机构存在分歧。'},
+  section_h3_1: {0: 'نزاعات ضريبة القيمة المضافة (VAT)', 1: 'Value Added Tax (VAT) Disputes', 2: '增值税（VAT）争议'},
+  p_4: {0: 'تتعلق بحسابات ضريبة القيمة المضافة والخصومات المستحقة والتصنيفات الضريبية للمنتجات. منذ تطبيق ضريبة القيمة المضافة في المملكة تزايدت هذه القضايا.', 1: 'These relate to VAT calculations, eligible deductions, and tax classifications of products. Since the implementation of VAT in Saudi Arabia, these cases have increased.', 2: '这涉及增值税计算、可扣除额和产品税务分类。自沙特阿拉伯实施增值税以来，这类案件有所增加。'},
+  section_h3_2: {0: 'نزاعات الضريبة الانتقائية', 1: 'Excise Tax Disputes', 2: '消费税争议'},
+  p_5: {0: 'تتعلق بالضرائب المطبقة على منتجات محددة مثل المشروبات والتبغ والطاقة. قد يحدث اختلاف حول معدل الضريبة أو تصنيف المنتج.', 1: 'These relate to taxes applied to specific products such as beverages, tobacco, and energy. Disagreements may arise over the tax rate or product classification.', 2: '这涉及对饮料、烟草和能源等特定产品征收的税款，可能在税率或产品分类方面产生分歧。'},
+  section_h3_3: {0: 'نزاعات الجمارك والتهريب', 1: 'Customs and Smuggling Disputes', 2: '海关和走私争议'},
+  p_6: {0: 'تتضمن نزاعات حول التصنيف الجمركي للسلع والضرائب الجمركية المستحقة، وقد تتعلق ببعض الحالات التي وصفتها الجهات الجمركية بالتهريب.', 1: 'These include disputes over customs classification of goods and customs duties owed, and may relate to cases that customs authorities have classified as smuggling.', 2: '这包括关于货物海关分类和应付关税的争议，可能涉及海关部门定性为走私的案件。'},
+  section_h3_4: {0: 'قضايا الإعفاءات الضريبية', 1: 'Tax Exemption Cases', 2: '税务豁免案件'},
+  p_7: {0: 'تشمل المطالبة بالإعفاءات الضريبية المقررة قانوناً أو المحددة لقطاعات معينة مثل الصحة والتعليم والمنتجات الأساسية.', 1: 'These include claiming legally prescribed tax exemptions or those specified for certain sectors such as health, education, and basic commodities.', 2: '这包括主张法律规定的税务豁免或特定行业（如医疗、教育和基本商品）的豁免。'},
+  section_h2_2: {0: 'الأساس القانوني', 1: 'Legal Basis', 2: '法律基础'},
+  p_8: {0: 'تستند قضايا الزكاة والضريبة والجمارك على عدة أنظمة حديثة.', 1: 'Zakat, tax, and customs cases are based on several modern regulations.', 2: '天课、税务和海关案件以几部现代法规为基础。'},
+  li_0: {0: 'نظام ضريبة القيمة المضافة (1438هـ): ينظم حساب وفرض ضريبة القيمة المضافة بنسبة 15 بالمائة على معظم السلع والخدمات', 1: 'Value Added Tax Law (1438H): Regulates the calculation and imposition of 15% VAT on most goods and services', 2: '增值税法（1438H）：规范对大多数商品和服务征收15%增值税的计算和征收'},
+  li_1: {0: 'نظام الزكاة السعودي: يحدد أحكام الزكاة وكيفية حسابها على الدخول والأموال المختلفة', 1: 'Saudi Zakat System: Defines Zakat provisions and how it is calculated on various incomes and assets', 2: '沙特天课制度：规定天课条款以及如何对各种收入和资产进行计算'},
+  li_2: {0: 'الاتفاقية الجمركية الموحدة لدول الخليج: توحد التصنيفات والمعدلات الجمركية بين دول الخليج', 1: 'GCC Unified Customs Agreement: Unifies customs classifications and rates among Gulf states', 2: 'GCC统一海关协议：统一海湾国家之间的海关分类和税率'},
+  li_3: {0: 'نظام الضريبة الانتقائية: ينظم فرض ضرائب إضافية على منتجات محددة', 1: 'Excise Tax Law: Regulates the imposition of additional taxes on specific products', 2: '消费税法：规范对特定产品征收额外税款'},
+  section_h2_3: {0: 'هيئة الزكاة والضريبة والجمارك (ZATCA)', 1: 'Zakat, Tax and Customs Authority (ZATCA)', 2: '天课、税务和海关局（ZATCA）'},
+  p_9: {0: 'أنشأت المملكة هيئة متخصصة تحت مسمى هيئة الزكاة والضريبة والجمارك (ZATCA) تتولى جمع الزكاة والضرائب والجمارك وإدارة التطبيق.', 1: 'Saudi Arabia established a specialized authority named the Zakat, Tax and Customs Authority (ZATCA), which is responsible for collecting Zakat, taxes, and customs and managing compliance.', 2: '沙特阿拉伯建立了名为天课、税务和海关局（ZATCA）的专业机构，负责收取天课、税款和关税并管理合规事宜。'},
+  section_h2_4: {0: 'عملية الاعتراض على القرارات الضريبية', 1: 'Process of Objecting to Tax Decisions', 2: '对税务决定提出异议的程序'},
+  p_10: {0: 'عند عدم الاتفاق مع قرار الهيئة بشأن الزكاة أو الضريبة أو الجمارك، يمكن تقديم اعتراض رسمي. العملية تبدأ بالاعتراض الإداري ثم التقاضي إذا لزم.', 1: 'When disagreeing with the authority\'s decision on Zakat, tax, or customs, a formal objection can be filed. The process begins with an administrative objection, then litigation if necessary.', 2: '当不同意机构关于天课、税务或海关的决定时，可提出正式异议。程序从行政异议开始，如有必要则进行诉讼。'},
+  section_h2_5: {0: 'خدمات شركة مشاري بندر بن جلوي', 1: 'Services of Meshary Bin Bandar Bin Jaloui Firm', 2: '美沙里·本·班达尔·本·贾卢伊律师事务所服务'},
+  p_11: {0: 'توفر شركتنا خدمات متخصصة في مجال الزكاة والضريبة والجمارك:', 1: 'Our firm provides specialized services in the field of Zakat, tax, and customs:', 2: '我们的律师事务所提供天课、税务和海关领域的专业服务：'},
+  li_4: {0: 'الاستشارات المتخصصة في الالتزامات الضريبية والزكوية', 1: 'Specialized consultations on tax and Zakat obligations', 2: '税务和天课义务的专业咨询'},
+  li_5: {0: 'تحليل القرارات الضريبية والجمركية والاعتراض عليها', 1: 'Analyzing and objecting to tax and customs decisions', 2: '分析并对税务和海关决定提出异议'},
+  li_6: {0: 'إعداد مذكرات وأوراق الاعتراض على القرارات الضريبية', 1: 'Preparing memoranda and objection documents against tax decisions', 2: '准备针对税务决定的备忘录和异议文件'},
+  li_7: {0: 'التمثيل أمام لجان الاعتراض الضريبية', 1: 'Representation before tax objection committees', 2: '在税务异议委员会前的代理'},
+  li_8: {0: 'الطعن في القرارات الضريبية أمام المحاكم المختصة', 1: 'Challenging tax decisions before competent courts', 2: '在主管法院对税务决定提出质疑'},
+  li_9: {0: 'المساعدة في استيفاء الحقوق المرفوضة بسبب قرار ضريبي خاطئ', 1: 'Assistance in recovering rights denied due to an erroneous tax decision', 2: '协助追回因错误税务决定而被拒绝的权利'},
+  infobox_h3: {0: 'الأنظمة والتشريعات الرئيسية', 1: 'Key Laws and Regulations', 2: '主要法律法规'},
+  infobox_li_0: {0: 'نظام ضريبة القيمة المضافة الصادر 1438هـ (15%)', 1: 'Value Added Tax Law issued 1438H (15%)', 2: '1438H颁布的增值税法（15%）'},
+  infobox_li_1: {0: 'نظام الزكاة السعودي والقوانين ذات الصلة', 1: 'Saudi Zakat System and Related Laws', 2: '沙特天课制度及相关法律'},
+  infobox_li_2: {0: 'الاتفاقية الجمركية الموحدة لدول الخليج', 1: 'GCC Unified Customs Agreement', 2: 'GCC统一海关协议'},
+  infobox_li_3: {0: 'نظام الضريبة الانتقائية على المنتجات المحددة', 1: 'Excise Tax Law on Specific Products', 2: '特定产品消费税法'},
+  step_h4_0: {0: 'مراجعة القرار الضريبي والتحقق', 1: 'Reviewing and Verifying the Tax Decision', 2: '审查和核实税务决定'},
+  step_p_0: {0: 'دراسة القرار الضريبي بدقة والتحقق من صحة الحسابات والتصنيفات، وجمع المستندات والأدلة الداعمة للاعتراض.', 1: 'Studying the tax decision carefully and verifying the accuracy of calculations and classifications, and gathering supporting documents and evidence for the objection.', 2: '仔细研究税务决定，核实计算和分类的准确性，并收集支持异议的文件和证据。'},
+  step_h4_1: {0: 'تقديم الاعتراض الإداري لهيئة ZATCA', 1: 'Filing an Administrative Objection with ZATCA', 2: '向ZATCA提出行政异议'},
+  step_p_1: {0: 'تقديم اعتراض رسمي مفصل مع الأسباب القانونية والمستندات المؤيدة لهيئة الزكاة والضريبة والجمارك.', 1: 'Filing a detailed formal objection with legal grounds and supporting documents to the Zakat, Tax and Customs Authority.', 2: '向天课、税务和海关局提交带有法律依据和支持文件的详细正式异议。'},
+  step_h4_2: {0: 'التقاضي أمام اللجان الضريبية', 1: 'Litigation Before Tax Committees', 2: '在税务委员会前诉讼'},
+  step_p_2: {0: 'إذا لم يتم قبول الاعتراض الإداري، يمكن الطعن أمام لجان الاعتراض الضريبية المتخصصة بمذكرات قانونية محكمة.', 1: 'If the administrative objection is not accepted, the case can be challenged before specialized tax objection committees with well-crafted legal memoranda.', 2: '如果行政异议未被接受，可在专业税务异议委员会前以精心撰写的法律备忘录提出质疑。'},
+  step_h4_3: {0: 'الاستئناف أمام محكمة الاستئناف', 1: 'Appeal Before the Court of Appeal', 2: '向上诉法院提起上诉'},
+  step_p_3: {0: 'إذا كان الحكم غير عادل، يمكن استئناف قرار لجنة الاعتراض أمام محكمة الاستئناف المختصة.', 1: 'If the verdict is unjust, the objection committee\'s decision can be appealed before the competent Court of Appeal.', 2: '如果判决不公正，可向主管上诉法院对异议委员会的决定提起上诉。'},
+  cta_h2: {0: 'هل تواجه مشكلة ضريبية أو جمركية؟', 1: 'Facing a Tax or Customs Problem?', 2: '面临税务或海关问题？'},
+  cta_p: {0: 'فريقنا المتخصص يقدم دعماً قانونياً كاملاً في جميع قضايا الزكاة والضريبة والجمارك', 1: 'Our specialized team provides full legal support in all Zakat, tax, and customs cases', 2: '我们的专业团队在所有天课、税务和海关案件中提供全面的法律支持'},
+  cta_btn_0: {0: 'استشارة ضريبية متخصصة', 1: 'Specialized Tax Consultation', 2: '专业税务咨询'},
+  cta_btn_1: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
+  footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Meshary Bin Bandar Bin Jaloui Law Firm and Legal Consultations — All rights reserved', 2: '© 2025 美沙里·本·班达尔·本·贾卢伊律师事务所和法律咨询——版权所有'},
   footer_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  hero_desc: {0: 'متخصصون في قضايا الضرائب والجمارك والعلاقات مع الهيئات الحكومية بخبرة واسعة.', 1: 'Specialized in tax and customs cases and relations with government authorities with extensive experience.', 2: '专门从事税务和海关案件以及与政府机构的关系。'},
-  hero_title_first: {0: 'قضايا', 1: 'Tax', 2: '税务'},
-  hero_title_last: {0: 'ضريبية', 1: 'Cases', 2: '案件'},
-  learnmore_button: {0: 'تعرف على المزيد', 1: 'Learn More', 2: '了解更多'},
-  nav_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
-  nav_careers: {0: 'التوظيف', 1: 'Careers', 2: '招聘'},
-  nav_contact: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
-  nav_contracts: {0: 'عقود الشركات', 1: 'Company Contracts', 2: '公司合同'},
-  nav_eservices: {0: 'الخدمات الإلكترونية', 1: 'E-Services', 2: '电子服务'},
-  nav_faq: {0: 'الأسئلة الشائعة', 1: 'FAQ', 2: '常见问题'},
-  nav_services: {0: 'خدماتنا', 1: 'Our Services', 2: '我们的服务'},
-  nav_team: {0: 'فريقنا', 1: 'Our Team', 2: '我们的团队'},
-  section_1_desc: {0: 'تقديم استشارات ضريبية متخصصة ومتابعة القضايا الضريبية مع الجهات المختصة.', 1: 'Providing specialized tax consultations and following up on tax cases with competent authorities.', 2: '提供专业的税务咨询和跟进税务案件。'},
-  section_1_title: {0: 'الاستشارات الضريبية المتقدمة', 1: 'Advanced Tax Consultations', 2: '高级税务咨询'},
-  whatsapp_button: {0: 'تواصل عبر واتساب', 1: 'Contact via WhatsApp', 2: '通过WhatsApp联系'},
 };
 </script>
+
+
+
 <script src="lang.js"></script>
-    </body>
+</body>
 </html>
