@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>القضايا الجنائية — شركة مشاري بندر بن جلوي للمحاماة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --navy:#1B2C6B; --navy-dark:#111d4a; --navy-mid:#223580; --gold:#B8935A; --gold-light:#d4aa72; --gold-pale:#f5ede0; --white:#ffffff; --off-white:#f8f6f2; --gray:#6b7280; --gray-dark:#374151; --border:#e5e1d9; }
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth;overflow-x:hidden}
+        body{font-family:'Cairo',sans-serif;color:var(--gray-dark);background:var(--white);overflow-x:hidden;line-height:1.7}
+        a{text-decoration:none}
+        img{max-width:100%;display:block}
+        .navbar{position:fixed;inset:0 0 auto 0;z-index:1000;height:90px;background:rgba(17,29,74,.97);backdrop-filter:blur(12px);border-bottom:2px solid rgba(184,147,90,.45);display:flex;align-items:center;padding:0 5%}
+        .nav-inner{width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+        .nav-logo{display:flex;align-items:center;gap:11px}
+        .nav-logo img{width:60px;height:60px;flex-shrink:0}
+        .nav-firm-name{font-size:1.2rem;font-weight:800;color:var(--gold-light);line-height:1.2}
+        .nav-firm-sub{font-size:.8rem;color:rgba(255,255,255,.55)}
+        .nav-links{display:flex;align-items:center;gap:22px;list-style:none;flex:1;justify-content:center}
+        .nav-links a{color:rgba(255,255,255,.82);font-size:.95rem;font-weight:600;transition:color .2s;position:relative;padding-bottom:2px}
+        .nav-links a:hover,.nav-links a.active{color:var(--gold-light)}
+        .nav-links a::after{content:'';position:absolute;bottom:-2px;right:0;left:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .25s}
+        .nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+        .nav-cta{background:var(--gold);color:var(--white);padding:8px 20px;border-radius:25px;font-size:.85rem;font-weight:800;transition:all .25s;white-space:nowrap}
+        .nav-cta:hover{background:var(--gold-light);box-shadow:0 6px 20px rgba(184,147,90,.4)}
+        .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:5px}
+        .hamburger span{display:block;width:24px;height:2px;background:white;border-radius:2px}
+        .mobile-drawer{position:fixed;top:90px;inset-inline:0;background:var(--navy-dark);border-top:1px solid rgba(184,147,90,.25);padding:24px 5%;z-index:999;transform:translateY(-8px);opacity:0;visibility:hidden;transition:all .3s}
+        .mobile-drawer.open{transform:translateY(0);opacity:1;visibility:visible}
+        .mobile-drawer ul{list-style:none}
+        .mobile-drawer li{border-bottom:1px solid rgba(255,255,255,.07)}
+        .mobile-drawer a{display:block;padding:12px 0;color:rgba(255,255,255,.85);font-size:.95rem;font-weight:600}
+        .page-hero{padding:130px 5% 70px;background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 60%,#2a4090 100%);position:relative;overflow:hidden}
+        .page-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(184,147,90,.08) 1px,transparent 1px);background-size:40px 40px}
+        .page-hero-content{position:relative;z-index:2;max-width:800px}
+        .page-breadcrumb{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.55);font-size:.85rem;margin-bottom:18px}
+        .page-breadcrumb a{color:rgba(255,255,255,.55)}
+        .page-breadcrumb a:hover{color:var(--gold-light)}
+        .page-breadcrumb span{color:var(--gold-light)}
+        .page-hero h1{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;color:var(--white);margin-bottom:16px;line-height:1.25}
+        .page-hero h1 em{color:var(--gold-light);font-style:normal}
+        .page-hero-desc{font-size:1rem;color:rgba(255,255,255,.78);line-height:1.9;max-width:650px}
+        .section-pad{padding:80px 5%}
+        .section-pad.alt{background:var(--off-white)}
+        .tag{display:inline-block;background:var(--gold-pale);color:var(--gold);border:1px solid var(--gold-light);padding:4px 16px;border-radius:20px;font-size:.8rem;font-weight:700}
+        .section-title{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;color:var(--navy);margin:10px 0 6px;line-height:1.3}
+        .gold-bar{width:50px;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));border-radius:2px;margin:12px 0 20px}
+        .article-body{max-width:860px;margin:0 auto}
+        .article-body h2{font-size:1.4rem;font-weight:900;color:var(--navy);margin:36px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--gold-pale)}
+        .article-body h3{font-size:1.15rem;font-weight:800;color:var(--navy-mid);margin:24px 0 10px}
+        .article-body p{font-size:.97rem;color:var(--gray-dark);line-height:2;margin-bottom:16px}
+        .article-body ul{padding-right:24px;margin-bottom:16px}
+        .article-body ul li{font-size:.95rem;color:var(--gray-dark);line-height:2;margin-bottom:6px;list-style:disc}
+        .info-box{background:linear-gradient(135deg,var(--navy-dark),var(--navy));border-radius:18px;padding:32px 36px;margin:32px 0;color:var(--white)}
+        .info-box h3{color:var(--gold-light);font-size:1.15rem;font-weight:800;margin-bottom:14px}
+        .info-box ul{padding-right:20px}
+        .info-box ul li{color:rgba(255,255,255,.85);line-height:2;font-size:.93rem;list-style:disc;margin-bottom:4px}
+        .steps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;margin:24px 0}
+        .step-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:26px 22px;transition:transform .3s,box-shadow .3s;box-shadow:0 4px 16px rgba(27,44,107,.06)}
+        .step-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(184,147,90,.14)}
+        .step-num{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-mid));color:var(--gold-light);font-size:1.1rem;font-weight:900;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+        .step-card h4{font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:8px}
+        .step-card p{font-size:.87rem;color:var(--gray);line-height:1.8}
+        .cta-section{background:linear-gradient(135deg,var(--navy-dark),var(--navy));padding:70px 5%;text-align:center}
+        .cta-section h2{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;color:var(--white);margin-bottom:14px}
+        .cta-section p{color:rgba(255,255,255,.7);font-size:.95rem;margin-bottom:32px;max-width:500px;margin-inline:auto}
+        .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+        .btn-gold{background:var(--gold);color:var(--white);padding:13px 32px;border-radius:30px;font-size:.95rem;font-weight:800;transition:all .25s}
+        .btn-gold:hover{background:var(--gold-light);box-shadow:0 8px 25px rgba(184,147,90,.4)}
+        .btn-outline{border:2px solid var(--gold);color:var(--gold);padding:11px 28px;border-radius:30px;font-size:.95rem;font-weight:800;transition:all .25s}
+        .btn-outline:hover{background:var(--gold);color:var(--white)}
+        footer{background:var(--navy-dark);color:rgba(255,255,255,.6);text-align:center;padding:30px 5%;font-size:.85rem;border-top:1px solid rgba(184,147,90,.2)}
+        footer a{color:var(--gold-light)}
+        .whatsapp-fab{position:fixed;bottom:28px;left:28px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:999;box-shadow:0 6px 20px rgba(37,211,102,.4);transition:transform .25s}
+        .whatsapp-fab:hover{transform:scale(1.1)}
+        @media(max-width:900px){.nav-links{display:none}.hamburger{display:flex}}
+        @media(max-width:600px){.nav-cta{display:none}}
+            .lang-switcher{display:flex;align-items:center;gap:5px}
+        .flag-btn{background:none;border:2px solid rgba(255,255,255,.2);border-radius:7px;cursor:pointer;font-size:1.2rem;line-height:1;padding:3px 5px;transition:all .2s;display:flex;align-items:center}
+        .flag-btn:hover{border-color:var(--gold-light);transform:scale(1.08)}
+        .flag-btn.active{border-color:var(--gold);background:rgba(184,147,90,.2)}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="شعار شركة مشاري بندر بن جلوي">
+                <div>
+                    <div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
+                    <div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#services">خدماتنا</a></li>
+                <li><a href="contracts.html">عقود الشركات</a></li>
+                <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                <li><a href="team.html">فريقنا</a></li>
+                <li><a href="blog.html">المدونة</a></li>
+                <li><a href="e-services.html">الخدمات الإلكترونية</a></li>
+                <li><a href="careers.html">التوظيف</a></li>
+                <li><a href="index.html#booking">تواصل معنا</a></li>
+            </ul>
+            <div style="display:flex;align-items:center;gap:10px;">
+                <div class="lang-switcher">
+                    <button class="flag-btn active" onclick="subSetLang(0)" id="flagAR" title="العربية">🇸🇦</button>
+                    <button class="flag-btn" onclick="subSetLang(1)" id="flagEN" title="English">🇬🇧</button>
+                    <button class="flag-btn" onclick="subSetLang(2)" id="flagZH" title="中文">🇨🇳</button>
+                </div>
+                <a href="https://wa.me/966533532153" target="_blank" rel="noopener" class="nav-cta">احجز استشارة</a>
+                <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-drawer" id="drawer">
+        <ul>
+            <li><a href="index.html#services">خدماتنا</a></li>
+            <li><a href="contracts.html">عقود الشركات</a></li>
+            <li><a href="faq.html">الأسئلة الشائعة</a></li>
+            <li><a href="team.html">فريقنا</a></li>
+            <li><a href="blog.html">المدونة</a></li>
+            <li><a href="e-services.html">الخدمات الإلكترونية</a></li>
+            <li><a href="careers.html">التوظيف</a></li>
+            <li><a href="index.html#booking">تواصل معنا</a></li>
+            <li><a href="https://wa.me/966533532153">احجز استشارة</a></li>
+        </ul>
+    </div>
+
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <div class="page-breadcrumb">
+                <a href="index.html">الرئيسية</a>
+                <span>/</span>
+                <a href="#">القضايا القانونية</a>
+                <span>/</span>
+                <span>القضايا الجنائية</span>
+            </div>
+            <h1>القضايا <em>الجنائية</em></h1>
+            <p class="page-hero-desc">دفاع قانوني محترف في القضايا الجنائية والجزائية بما يضمن حقوق الموكلين أمام المحاكم الجزائية</p>
+        </div>
+    </section>
+
+    <section class="section-pad">
+        <div class="article-body">
+            <h2>مقدمة عن القضايا الجنائية في المملكة</h2>
+            <p>تمثل القضايا الجنائية جزءاً حساساً وحيوياً من النظام القانوني السعودي، حيث تتعامل مع أخطر الانتهاكات القانونية التي تؤثر على أمن وسلامة المجتمع. القانون الجنائي السعودي يستمد أساسه من الفقه الإسلامي والأنظمة الحديثة، ويهدف إلى حماية المجتمع من الجرائم مع ضمان حقوق المتهمين والمدانين وفقاً لأسس العدالة والإنصاف.</p>
+            <p>الدفاع عن الموكلين في القضايا الجنائية يتطلب دراية عميقة بقوانين الإجراءات الجزائية وحقوق الإنسان، بالإضافة إلى خبرة عملية واسعة في التعامل مع السلطات الأمنية والقضائية. فريق محاماتنا المتخصص يضمن الدفاع القوي والفعال عن حقوق موكليه في كل مراحل الخصومة الجنائية.</p>
+
+            <h2>أنواع الجرائم والقضايا الجنائية</h2>
+            <p>ينقسم القانون الجنائي السعودي إلى عدة فئات من الجرائم بناءً على طبيعتها والعقوبة المترتبة عليها:</p>
+            <h3>جرائم الحدود</h3>
+            <p>تشمل الجرائم التي حدد الشرع الإسلامي لها عقوبة محددة، مثل السرقة والزنا والشرب والردة. هذه الجرائم لها إجراءات خاصة وتتطلب إثباتاً قانونياً دقيقاً وفقاً لأحكام الشريعة الإسلامية والنظام الجزائي السعودي.</p>
+            <h3>جرائم القصاص والدية</h3>
+            <p>تتعلق بالاعتداءات على الأنفس والأعراض والأموال، مثل جرائم القتل والإصابة والجرح. تتطلب هذه الجرائم إثباتاً قوياً وقد تؤدي إلى عقوبات صارمة تصل إلى الإعدام في حالات القتل العمد.</p>
+            <h3>جرائم التعزير</h3>
+            <p>وهي الجرائم التي لم يحدد الشرع أو النظام عقوبة محددة لها، ويكون للقاضي سلطة تقديرية في تحديد العقوبة المناسبة. تشمل معظم الجرائم الحديثة مثل تزوير المستندات والاحتيال والجرائم المعلوماتية.</p>
+
+            <h2>الأنظمة والقوانين الحاكمة</h2>
+            <p>يستند النظام الجنائي السعودي على عدة أنظمة وتشريعات حديثة تحافظ على حقوق الفرد والمجتمع:</p>
+            <ul>
+                <li><strong>نظام الإجراءات الجزائية (1435هـ):</strong> يحدد الإجراءات التي تتبع في التحقيق والمحاكمة الجنائية وحقوق المتهم والمجني عليه</li>
+                <li><strong>نظام الأحداث:</strong> ينظم معاملة الأحداث والقاصرين في القضايا الجنائية بطريقة خاصة تركز على الإصلاح والتأهيل</li>
+                <li><strong>نظام مكافحة الجرائم المعلوماتية:</strong> يجرم الاستخدام الضار للتقنيات والإنترنت والجرائم الإلكترونية</li>
+                <li><strong>نظام مكافحة الفساد:</strong> يتعامل مع الجرائم المتعلقة بالفساد الإداري والرشوة والاختلاس</li>
+            </ul>
+
+            <h2>حقوق المتهم في الإجراءات الجنائية</h2>
+            <p>القانون السعودي يضمن عدة حقوق أساسية للمتهم خلال الإجراءات الجنائية. أولاً، للمتهم الحق في الاستشارة مع محام منذ بدء التحقيق معه، وهذا حق أساسي لا يمكن انتهاكه. ثانياً، للمتهم الحق في معرفة الاتهام الموجه إليه بوضوح والاطلاع على الأدلة ضده. ثالثاً، للمتهم الحق في الدفاع عن نفسه وتقديم أدلة براءته.</p>
+            <p>بالإضافة إلى ذلك، يجب أن تكون جميع الإجراءات التحقيقية قانونية وموثقة، ولا يمكن اعتماد أي اعترافات تم الحصول عليها تحت التعذيب أو الإكراه. المتهم له أيضاً الحق في الاستئناف والطعن في الأحكام الصادرة ضده.</p>
+
+            <h2>مراحل الإجراءات الجنائية</h2>
+            <p>تمر الدعوى الجنائية بعدة مراحل محددة تبدأ بالتحقيق الأولي ثم الفصل في القضية:</p>
+            <p>تبدأ بالاستدعاء أو التوقيف من قبل الجهات الأمنية، وفي هذه المرحلة يحق للمتهم طلب محام فوراً. يجب إبلاغ المتهم بحقوقه وبطبيعة الاتهام الموجه إليه، والبدء في التحقيق وفقاً لإجراءات قانونية صحيحة.</p>
+            <p>تأتي مرحلة التحقيق الأولي حيث يقوم المحقق بسماع أقوال المتهم والشهود وجمع الأدلة. خلال هذه المرحلة يجب أن يكون المحامي حاضراً لتمثيل الموكل ومراقبة سلامة الإجراءات.</p>
+            <p>بعد انتهاء التحقيق الأولي، تُحال الدعوى إلى المحكمة الجنائية للمحاكمة حيث يتم تقديم الأدلة والحجج من الطرفين. في هذه المرحلة يكون الدفاع القوي عن الموكل حاسماً في نتيجة القضية.</p>
+            <p>بعد انتهاء المحاكمة، تصدر المحكمة حكماً قد يكون بالإدانة أو البراءة. للمحكوم عليه الحق في استئناف الحكم أمام محكمة الاستئناف خلال مدة محددة قانوناً.</p>
+
+            <h2>أهمية وجود محام متخصص</h2>
+            <p>وجود محام متخصص في القضايا الجنائية يعتبر ضرورة حتمية لعدة أسباب. المحامي المتخصص يفهم تعقيدات الإجراءات الجنائية والقوانين المتعلقة بها، ويمكنه تقديم دفاع قوي يحمي حقوق موكله. بالإضافة إلى ذلك، المحامي ذو الخبرة يمكنه تقييم قوة الأدلة ضد الموكل واستخراج الثغرات في الاتهام والدفاع عن حقوق الموكل بفعالية.</p>
+            <p>المحامي يقف بجانب الموكل من أول استدعاء ويرافقه في جميع مراحل التحقيق والمحاكمة، مما يضمن عدم انتهاك أي من حقوقه القانونية، ويسعى إلى تقليل العقوبة أو الوصول إلى براءته.</p>
+
+            <h2>خدمات شركة مشاري بندر بن جلوي في القضايا الجنائية</h2>
+            <p>توفر شركتنا خدمات شاملة في مجال الدفاع الجنائي:</p>
+            <ul>
+                <li>الاستشارة الفورية عند الاستدعاء من قبل السلطات الأمنية</li>
+                <li>التمثيل الكامل خلال التحقيق الأولي والاستجواب</li>
+                <li>الحضور والدفاع أمام المحاكم الجنائية في جميع الجلسات</li>
+                <li>دراسة ملف القضية وتحضير استراتيجية دفاع قوية</li>
+                <li>استئناف الأحكام والطعن فيها بالطرق القانونية المتاحة</li>
+                <li>تمثيل المجني عليهم في القضايا الجنائية</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section-pad alt">
+        <div class="article-body">
+            <h2 style="text-align:center;margin-bottom:32px;">الأساس القانوني والأنظمة ذات الصلة</h2>
+            <div class="info-box">
+                <h3>الأنظمة والتشريعات الرئيسية</h3>
+                <ul>
+                    <li>نظام الإجراءات الجزائية الصادر 1435هـ</li>
+                    <li>نظام الأحداث والمعاملة الخاصة للقاصرين</li>
+                    <li>نظام مكافحة الجرائم المعلوماتية</li>
+                    <li>نظام مكافحة الفساد والجرائم ذات الصلة</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pad">
+        <div class="article-body">
+            <h2 style="text-align:center;margin-bottom:32px;">مراحل الإجراءات الجنائية</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">1</div>
+                    <h4>الاستشارة الفورية عند الاستدعاء</h4>
+                    <p>التواصل الفوري مع المحامي عند استدعائك من قبل الجهات الأمنية والحصول على استشارة قانونية فوراً لحماية حقوقك الأساسية.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">2</div>
+                    <h4>متابعة التحقيق والتوقيف</h4>
+                    <p>حضور المحامي معك في جميع جلسات التحقيق والاستجواب، مراقبة سلامة الإجراءات، وتقديم الدفاع المناسب خلال هذه المرحلة الحرجة.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">3</div>
+                    <h4>المرافعة أمام المحكمة الجزائية</h4>
+                    <p>تقديم دفاع قوي أمام المحكمة الجنائية بعد انتهاء التحقيق، حيث يتم الاستماع للأدلة والحجج من الطرفين وإصدار الحكم.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">4</div>
+                    <h4>الاستئناف وتخفيف العقوبة</h4>
+                    <p>استئناف الأحكام الجائرة أمام محكمة الاستئناف والسعي لتخفيف العقوبة أو تحقيق براءة الموكل بناءً على أدلة قانونية قوية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>هل تواجه قضية جنائية؟</h2>
+        <p>فريقنا المتخصص في القضايا الجنائية جاهز لتقديم دفاع قوي وحماية حقوقك منذ اللحظة الأولى</p>
+        <div class="cta-btns">
+            <a href="https://wa.me/966533532153" class="btn-gold" target="_blank" rel="noopener">استشارة جنائية فوراً</a>
+            <a href="index.html#booking" class="btn-outline">تواصل معنا</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+        <p style="margin-top:8px;"><a href="index.html">الرئيسية</a></p>
+    </footer>
+    <a href="https://wa.me/966533532153" class="whatsapp-fab" target="_blank" rel="noopener" title="تواصل عبر واتساب">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    </a>
+
+
+    <script>
+    // ─── LANGUAGE SWITCHER (Sub-page) ─────────────────────────
+    const subLangDirs = ['rtl','ltr','ltr'];
+    const subLangCodes = ['ar','en','zh'];
+    function subSetLang(l) {
+        localStorage.setItem('siteLang', l);
+        document.documentElement.lang = subLangCodes[l];
+        document.documentElement.dir = subLangDirs[l];
+        ['flagAR','flagEN','flagZH'].forEach((id,i)=>{
+            const b=document.getElementById(id);
+            if(b) b.classList.toggle('active', i===l);
+        });
+        // Redirect to home if switching language (so full translation applies)
+        if(l !== parseInt(localStorage.getItem('prevLang')||'0')) {
+            localStorage.setItem('prevLang', l);
+        }
+    }
+    // Apply saved language on load
+    const _sl = parseInt(localStorage.getItem('siteLang')||'0');
+    if(_sl !== 0) subSetLang(_sl);
+    </script>
+</body>
+</html>

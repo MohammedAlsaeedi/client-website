@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الخدمات الإلكترونية — شركة مشاري بندر بن جلوي للمحاماة</title>
+    <meta name="description" content="خدماتنا القانونية الرقمية — تواصل مع محاميك بضغطة زر — شركة مشاري بندر بن جلوي">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1B2C6B; --navy-dark: #111d4a; --navy-mid: #223580;
+            --gold: #B8935A; --gold-light: #d4aa72; --gold-pale: #f5ede0;
+            --white: #ffffff; --off-white: #f8f6f2; --gray: #6b7280; --gray-dark: #374151; --border: #e5e1d9;
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; overflow-x: hidden; }
+        body { font-family: 'Cairo', sans-serif; color: var(--gray-dark); background: var(--white); overflow-x: hidden; line-height: 1.6; }
+        a { text-decoration: none; }
+
+        /* NAVBAR */
+        .navbar { position: fixed; inset: 0 0 auto 0; z-index: 1000; height: 90px; background: rgba(17,29,74,.97); backdrop-filter: blur(12px); border-bottom: 2px solid rgba(184,147,90,.45); display: flex; align-items: center; padding: 0 5%; }
+        .nav-inner { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+        .nav-logo { display: flex; align-items: center; gap: 11px; }
+        .nav-logo img { width: 60px; height: 60px; flex-shrink: 0; }
+        .nav-firm-name { font-size: 1.2rem; font-weight: 800; color: var(--gold-light); line-height: 1.2; }
+        .nav-firm-sub { font-size: .8rem; color: rgba(255,255,255,.55); }
+        .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; flex: 1; justify-content: center; }
+        .nav-links a { color: rgba(255,255,255,.82); font-size: 1rem; font-weight: 600; transition: color .2s; position: relative; padding-bottom: 2px; }
+        .nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
+        .nav-links a::after { content: ''; position: absolute; bottom: -2px; right: 0; left: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: right; transition: transform .25s; }
+        .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+        .nav-cta { background: var(--gold); color: var(--white); padding: 8px 20px; border-radius: 25px; font-size: .85rem; font-weight: 800; transition: all .25s; white-space: nowrap; }
+        .nav-cta:hover { background: var(--gold-light); }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; }
+        .mobile-drawer { position: fixed; top: 90px; inset-inline: 0; background: var(--navy-dark); border-top: 1px solid rgba(184,147,90,.25); padding: 24px 5%; z-index: 999; transform: translateY(-8px); opacity: 0; visibility: hidden; transition: all .3s; }
+        .mobile-drawer.open { transform: translateY(0); opacity: 1; visibility: visible; }
+        .mobile-drawer ul { list-style: none; }
+        .mobile-drawer li { border-bottom: 1px solid rgba(255,255,255,.07); }
+        .mobile-drawer a { display: block; padding: 12px 0; color: rgba(255,255,255,.85); font-size: .95rem; font-weight: 600; }
+
+        /* PAGE HERO */
+        .page-hero { padding: 130px 5% 70px; background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #2a4090 100%); position: relative; overflow: hidden; }
+        .page-hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(184,147,90,.08) 1px, transparent 1px); background-size: 40px 40px; }
+        .page-hero-content { position: relative; z-index: 2; max-width: 700px; }
+        .page-breadcrumb { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.55); font-size: .85rem; margin-bottom: 18px; }
+        .page-breadcrumb a { color: rgba(255,255,255,.55); }
+        .page-breadcrumb a:hover { color: var(--gold-light); }
+        .page-breadcrumb span { color: var(--gold-light); }
+        .page-hero h1 { font-size: clamp(1.8rem, 3.5vw, 3rem); font-weight: 900; color: var(--white); margin-bottom: 16px; line-height: 1.25; }
+        .page-hero h1 em { color: var(--gold-light); font-style: normal; }
+        .page-hero-desc { font-size: 1rem; color: rgba(255,255,255,.75); line-height: 1.9; max-width: 600px; }
+
+        /* CONTENT */
+        .section-pad { padding: 80px 5%; }
+        .section-pad.alt { background: var(--off-white); }
+        .tag { display: inline-block; background: var(--gold-pale); color: var(--gold); border: 1px solid var(--gold-light); padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 700; }
+        .section-title { font-size: clamp(1.5rem, 2.8vw, 2.2rem); font-weight: 900; color: var(--navy); margin: 12px 0 6px; }
+        .gold-bar { width: 50px; height: 3px; background: linear-gradient(90deg, var(--gold), var(--gold-light)); border-radius: 2px; }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-header .gold-bar { margin: 12px auto 18px; }
+        .section-desc { color: var(--gray); font-size: 1rem; max-width: 580px; line-height: 1.85; margin: 0 auto; }
+
+        /* E-SERVICES GRID */
+        .eserv-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; max-width: 1200px; margin: 0 auto; }
+        .eserv-card { background: var(--white); border: 1.5px solid var(--border); border-radius: 20px; padding: 32px 26px; text-align: center; transition: transform .3s, box-shadow .3s; box-shadow: 0 4px 18px rgba(27,44,107,.06); }
+        .eserv-card:hover { transform: translateY(-5px); box-shadow: 0 14px 40px rgba(184,147,90,.15); border-color: var(--gold-light); }
+        .eserv-icon { width: 70px; height: 70px; border-radius: 50%; background: linear-gradient(135deg, var(--navy), var(--navy-mid)); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 6px 18px rgba(27,44,107,.2); }
+        .eserv-card h3 { font-size: 1.1rem; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+        .eserv-card p { font-size: .88rem; color: var(--gray); line-height: 1.8; margin-bottom: 20px; }
+        .eserv-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--gold); color: var(--white); padding: 9px 22px; border-radius: 22px; font-size: .85rem; font-weight: 700; transition: all .25s; }
+        .eserv-btn:hover { background: var(--gold-light); box-shadow: 0 6px 18px rgba(184,147,90,.3); }
+
+        /* APP SECTION */
+        .app-section { background: linear-gradient(135deg, var(--navy-dark), var(--navy)); padding: 80px 5%; }
+        .app-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .app-text h2 { font-size: clamp(1.6rem, 2.8vw, 2.3rem); font-weight: 900; color: var(--white); margin-bottom: 16px; line-height: 1.3; }
+        .app-text h2 em { color: var(--gold-light); font-style: normal; }
+        .app-text p { color: rgba(255,255,255,.7); font-size: .95rem; line-height: 1.9; margin-bottom: 32px; }
+        .app-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+        .app-btn { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,.1); border: 1.5px solid rgba(255,255,255,.25); color: var(--white); padding: 12px 22px; border-radius: 14px; transition: all .25s; }
+        .app-btn:hover { background: rgba(255,255,255,.2); border-color: var(--gold); }
+        .app-btn-label { font-size: .7rem; color: rgba(255,255,255,.6); }
+        .app-btn-store { font-size: 1.05rem; font-weight: 800; }
+        .app-visual { display: flex; justify-content: center; align-items: center; }
+        .app-mockup { width: 220px; height: 380px; background: rgba(255,255,255,.08); border: 2px solid rgba(255,255,255,.15); border-radius: 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 30px; text-align: center; }
+        .app-mockup-icon { font-size: 3.5rem; }
+        .app-mockup-text { font-size: .85rem; color: rgba(255,255,255,.7); line-height: 1.6; }
+
+        /* CTA */
+        .cta-section { background: var(--off-white); padding: 70px 5%; text-align: center; }
+        .cta-section h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 900; color: var(--navy); margin-bottom: 14px; }
+        .cta-section p { color: var(--gray); font-size: .95rem; margin-bottom: 32px; max-width: 500px; margin-inline: auto; }
+        .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+        .btn-gold { background: var(--gold); color: var(--white); padding: 13px 32px; border-radius: 30px; font-size: .95rem; font-weight: 800; transition: all .25s; display: inline-flex; align-items: center; gap: 8px; }
+        .btn-gold:hover { background: var(--gold-light); box-shadow: 0 8px 25px rgba(184,147,90,.4); }
+        .btn-navy { background: var(--navy); color: var(--white); padding: 13px 28px; border-radius: 30px; font-size: .95rem; font-weight: 800; transition: all .25s; }
+        .btn-navy:hover { background: var(--navy-mid); }
+
+        footer { background: var(--navy-dark); color: rgba(255,255,255,.6); text-align: center; padding: 30px 5%; font-size: .85rem; border-top: 1px solid rgba(184,147,90,.2); }
+        footer a { color: var(--gold-light); }
+        .whatsapp-fab { position: fixed; bottom: 28px; left: 28px; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 999; box-shadow: 0 6px 20px rgba(37,211,102,.4); transition: transform .25s; }
+        .whatsapp-fab:hover { transform: scale(1.1); }
+
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .app-inner { grid-template-columns: 1fr; }
+            .app-visual { display: none; }
+        }
+        @media (max-width: 600px) {
+            .nav-cta { display: none; }
+            .eserv-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 420px) {
+            .eserv-grid { grid-template-columns: 1fr; }
+        }
+            .lang-switcher{display:flex;align-items:center;gap:5px}
+        .flag-btn{background:none;border:2px solid rgba(255,255,255,.2);border-radius:7px;cursor:pointer;font-size:1.2rem;line-height:1;padding:3px 5px;transition:all .2s;display:flex;align-items:center}
+        .flag-btn:hover{border-color:var(--gold-light);transform:scale(1.08)}
+        .flag-btn.active{border-color:var(--gold);background:rgba(184,147,90,.2)}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="شعار شركة مشاري بندر بن جلوي">
+                <div>
+                    <div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
+                    <div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#services">خدماتنا</a></li>
+                <li><a href="contracts.html">عقود الشركات</a></li>
+                <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                <li><a href="team.html">فريقنا</a></li>
+                <li><a href="blog.html">المدونة</a></li>
+                <li><a href="e-services.html" class="active">الخدمات الإلكترونية</a></li>
+                <li><a href="careers.html">التوظيف</a></li>
+                <li><a href="index.html#booking">تواصل معنا</a></li>
+            </ul>
+            <div style="display:flex;align-items:center;gap:10px;">
+                <div class="lang-switcher">
+                    <button class="flag-btn active" onclick="subSetLang(0)" id="flagAR" title="العربية">🇸🇦</button>
+                    <button class="flag-btn" onclick="subSetLang(1)" id="flagEN" title="English">🇬🇧</button>
+                    <button class="flag-btn" onclick="subSetLang(2)" id="flagZH" title="中文">🇨🇳</button>
+                </div>
+                <a href="https://wa.me/966533532153" target="_blank" rel="noopener" class="nav-cta">احجز استشارة</a>
+                <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-drawer" id="drawer">
+        <ul>
+            <li><a href="index.html#services">خدماتنا</a></li>
+            <li><a href="contracts.html">عقود الشركات</a></li>
+            <li><a href="faq.html">الأسئلة الشائعة</a></li>
+            <li><a href="team.html">فريقنا</a></li>
+            <li><a href="blog.html">المدونة</a></li>
+            <li><a href="e-services.html">الخدمات الإلكترونية</a></li>
+                <li><a href="careers.html">التوظيف</a></li>
+                <li><a href="index.html#booking">تواصل معنا</a></li>
+        </ul>
+    </div>
+
+    <div class="page-hero">
+        <div class="page-hero-content">
+            <div class="page-breadcrumb">
+                <a href="index.html">الرئيسية</a>
+                <span>←</span>
+                <span>الخدمات الإلكترونية</span>
+            </div>
+            <h1>الخدمات <em>الإلكترونية</em></h1>
+            <p class="page-hero-desc">ضغطة زر تفصلك عن محاميك — تواصل مع فريقنا القانوني رقمياً، واحصل على خدماتك القانونية من أي مكان في المملكة.</p>
+        </div>
+    </div>
+
+    <!-- E-SERVICES -->
+    <section class="section-pad">
+        <div class="section-header">
+            <div class="tag">الخدمات الرقمية</div>
+            <h2 class="section-title">خدماتنا الإلكترونية</h2>
+            <div class="gold-bar" style="margin:12px auto 18px;"></div>
+            <p class="section-desc">نوظّف التقنية لتقريب الخدمة القانونية وجعلها في متناول يدك في أي وقت ومن أي مكان</p>
+        </div>
+        <div class="eserv-grid">
+
+            <div class="eserv-card">
+                <div class="eserv-icon">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/>
+                    </svg>
+                </div>
+                <h3>استشارة فورية عبر واتساب</h3>
+                <p>تواصل مباشرةً مع محامينا عبر واتساب لطرح سؤالك القانوني والحصول على إجابة سريعة.</p>
+                <a href="https://wa.me/966533532153?text=أرغب%20في%20استشارة%20قانونية" target="_blank" rel="noopener" class="eserv-btn">
+                    ابدأ الآن ←
+                </a>
+            </div>
+
+            <div class="eserv-card">
+                <div class="eserv-icon">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91A16 16 0 0 0 14.09 15.9l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                </div>
+                <h3>حجز موعد هاتفي</h3>
+                <p>احجز وقتاً محدداً لاستشارة هاتفية مع محامينا بما يناسب جدولك الزمني.</p>
+                <a href="https://wa.me/966533532153?text=أرغب%20في%20حجز%20موعد%20هاتفي" target="_blank" rel="noopener" class="eserv-btn">
+                    احجز موعد ←
+                </a>
+            </div>
+
+            <div class="eserv-card">
+                <div class="eserv-icon">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 10l4.553-2.069A1 1 0 0 1 21 8.82v6.36a1 1 0 0 1-1.447.89L15 14M3 8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    </svg>
+                </div>
+                <h3>استشارة مرئية (فيديو)</h3>
+                <p>تواصل وجهاً لوجه مع محاميك عن بُعد عبر مكالمة مرئية لمناقشة قضيتك بخصوصية تامة.</p>
+                <a href="https://wa.me/966533532153?text=أرغب%20في%20استشارة%20مرئية" target="_blank" rel="noopener" class="eserv-btn">
+                    طلب جلسة ←
+                </a>
+            </div>
+
+            <div class="eserv-card">
+                <div class="eserv-icon">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+                    </svg>
+                </div>
+                <h3>إرسال المستندات إلكترونياً</h3>
+                <p>أرسل مستنداتك وعقودك لفريقنا لمراجعتها وتدقيقها إلكترونياً والحصول على تقرير قانوني مفصّل.</p>
+                <a href="https://wa.me/966533532153?text=أرغب%20في%20إرسال%20مستندات%20لمراجعتها" target="_blank" rel="noopener" class="eserv-btn">
+                    أرسل الآن ←
+                </a>
+            </div>
+
+            <div class="eserv-card">
+                <div class="eserv-icon">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                </div>
+                <h3>متابعة القضية الرقمية</h3>
+                <p>تابع آخر تطورات قضيتك وتقاريرها دورياً عبر التواصل الإلكتروني مع فريقنا المخصص.</p>
+                <a href="https://wa.me/966533532153?text=أرغب%20في%20الاستفسار%20عن%20متابعة%20قضيتي" target="_blank" rel="noopener" class="eserv-btn">
+                    استفسر ←
+                </a>
+            </div>
+
+            <div class="eserv-card">
+                <div class="eserv-icon">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </div>
+                <h3>عقد الحماية القانونية السنوي</h3>
+                <p>اشترك في عقد الحماية القانونية السنوي لتحظى بتغطية قانونية شاملة على مدار العام بتكلفة ثابتة.</p>
+                <a href="https://wa.me/966533532153?text=أرغب%20في%20الاشتراك%20بعقد%20الحماية%20القانونية%20السنوي" target="_blank" rel="noopener" class="eserv-btn">
+                    اشترك الآن ←
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- APP SECTION -->
+    <section class="app-section">
+        <div class="app-inner">
+            <div class="app-text">
+                <div class="tag" style="background:rgba(184,147,90,.15);border-color:rgba(184,147,90,.4);color:var(--gold-light);margin-bottom:16px;">قريباً</div>
+                <h2>تطبيق <em>مشاري بندر بن جلوي</em> القانوني</h2>
+                <p>نعمل على تطوير تطبيق ذكي يتيح لك تصفّح خدماتنا، حجز الاستشارات، متابعة قضاياك، وإرسال المستندات — كل ذلك من هاتفك الذكي وبضغطة زر واحدة.</p>
+                <div class="app-btns">
+                    <div class="app-btn" style="opacity:.6;cursor:default;">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.7 9.05 7.4c1.42.07 2.38.74 3.2.8 1.21-.25 2.38-.97 3.6-.84 1.53.17 2.69.75 3.44 1.97-3.28 2.04-2.64 6.26.91 7.35-.42 1.2-.88 2.35-3.15 4.6zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+                        <div><div class="app-btn-label">قريباً على</div><div class="app-btn-store">App Store</div></div>
+                    </div>
+                    <div class="app-btn" style="opacity:.6;cursor:default;">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M3.18 23.76a2 2 0 0 1-.89-1.87V2.11a2 2 0 0 1 .89-1.87l.1-.06 11.62 11.62-.1.1L3.18 23.76zm15.24-7.05l-2.72-1.58-2.93 2.93 2.93 2.93 2.72-1.58a2.01 2.01 0 0 0 0-3.7zM2.5 1.3l9.9 9.9-2.72 2.72L2.5 1.3zM2.5 22.7l7.18-12.92 2.72 2.72-9.9 10.2z"/></svg>
+                        <div><div class="app-btn-label">قريباً على</div><div class="app-btn-store">Google Play</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-visual">
+                <div class="app-mockup">
+                    <div class="app-mockup-icon">⚖️</div>
+                    <div class="app-mockup-text">تطبيق مشاري بندر بن جلوي القانوني<br>قريباً</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-section">
+        <h2>ابدأ رحلتك القانونية الآن</h2>
+        <p>لا تنتظر — تواصل مع فريقنا وسنرشدك بخطوات واضحة نحو حل قضيتك</p>
+        <div class="cta-btns">
+            <a href="https://wa.me/966533532153" target="_blank" rel="noopener" class="btn-gold">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                تواصل عبر واتساب
+            </a>
+            <a href="index.html" class="btn-navy">العودة للرئيسية</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+        <p style="margin-top:8px;"><a href="index.html">الرئيسية</a></p>
+    </footer>
+
+    <a href="https://wa.me/966533532153" class="whatsapp-fab" target="_blank" rel="noopener">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    </a>
+
+
+
+    <script>
+    // ─── LANGUAGE SWITCHER (Sub-page) ─────────────────────────
+    const subLangDirs = ['rtl','ltr','ltr'];
+    const subLangCodes = ['ar','en','zh'];
+    function subSetLang(l) {
+        localStorage.setItem('siteLang', l);
+        document.documentElement.lang = subLangCodes[l];
+        document.documentElement.dir = subLangDirs[l];
+        ['flagAR','flagEN','flagZH'].forEach((id,i)=>{
+            const b=document.getElementById(id);
+            if(b) b.classList.toggle('active', i===l);
+        });
+        // Redirect to home if switching language (so full translation applies)
+        if(l !== parseInt(localStorage.getItem('prevLang')||'0')) {
+            localStorage.setItem('prevLang', l);
+        }
+    }
+    // Apply saved language on load
+    const _sl = parseInt(localStorage.getItem('siteLang')||'0');
+    if(_sl !== 0) subSetLang(_sl);
+    </script>
+</body>
+</html>

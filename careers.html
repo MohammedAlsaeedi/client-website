@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التوظيف — شركة مشاري بندر بن جلوي للمحاماة</title>
+    <meta name="description" content="انضم إلى فريقنا القانوني — شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1B2C6B; --navy-dark: #111d4a; --navy-mid: #223580;
+            --gold: #B8935A; --gold-light: #d4aa72; --gold-pale: #f5ede0;
+            --white: #ffffff; --off-white: #f8f6f2; --gray: #6b7280; --gray-dark: #374151; --border: #e5e1d9;
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; overflow-x: hidden; }
+        body { font-family: 'Cairo', sans-serif; color: var(--gray-dark); background: var(--white); overflow-x: hidden; line-height: 1.6; }
+        a { text-decoration: none; }
+
+        /* NAVBAR */
+        .navbar { position: fixed; inset: 0 0 auto 0; z-index: 1000; height: 90px; background: rgba(17,29,74,.97); backdrop-filter: blur(12px); border-bottom: 2px solid rgba(184,147,90,.45); display: flex; align-items: center; padding: 0 5%; }
+        .nav-inner { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+        .nav-logo { display: flex; align-items: center; gap: 11px; }
+        .nav-logo img { width: 60px; height: 60px; flex-shrink: 0; }
+        .nav-firm-name { font-size: 1.2rem; font-weight: 800; color: var(--gold-light); line-height: 1.2; }
+        .nav-firm-sub { font-size: .8rem; color: rgba(255,255,255,.55); }
+        .nav-links { display: flex; align-items: center; gap: 20px; list-style: none; flex: 1; justify-content: center; }
+        .nav-links a { color: rgba(255,255,255,.82); font-size: .95rem; font-weight: 600; transition: color .2s; position: relative; padding-bottom: 2px; }
+        .nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
+        .nav-links a::after { content: ''; position: absolute; bottom: -2px; right: 0; left: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: right; transition: transform .25s; }
+        .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+        .nav-cta { background: var(--gold); color: var(--white); padding: 8px 20px; border-radius: 25px; font-size: .85rem; font-weight: 800; transition: all .25s; white-space: nowrap; }
+        .nav-cta:hover { background: var(--gold-light); }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; }
+        .mobile-drawer { position: fixed; top: 90px; inset-inline: 0; background: var(--navy-dark); border-top: 1px solid rgba(184,147,90,.25); padding: 24px 5%; z-index: 999; transform: translateY(-8px); opacity: 0; visibility: hidden; transition: all .3s; }
+        .mobile-drawer.open { transform: translateY(0); opacity: 1; visibility: visible; }
+        .mobile-drawer ul { list-style: none; }
+        .mobile-drawer li { border-bottom: 1px solid rgba(255,255,255,.07); }
+        .mobile-drawer a { display: block; padding: 12px 0; color: rgba(255,255,255,.85); font-size: .95rem; font-weight: 600; }
+
+        /* PAGE HERO */
+        .page-hero { padding: 130px 5% 70px; background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #2a4090 100%); position: relative; overflow: hidden; }
+        .page-hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(184,147,90,.08) 1px, transparent 1px); background-size: 40px 40px; }
+        .page-hero-content { position: relative; z-index: 2; max-width: 700px; }
+        .page-breadcrumb { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.55); font-size: .85rem; margin-bottom: 18px; }
+        .page-breadcrumb a { color: rgba(255,255,255,.55); }
+        .page-breadcrumb a:hover { color: var(--gold-light); }
+        .page-breadcrumb span { color: var(--gold-light); }
+        .page-hero h1 { font-size: clamp(1.8rem, 3.5vw, 3rem); font-weight: 900; color: var(--white); margin-bottom: 16px; line-height: 1.25; }
+        .page-hero h1 em { color: var(--gold-light); font-style: normal; }
+        .page-hero-desc { font-size: 1rem; color: rgba(255,255,255,.75); line-height: 1.9; max-width: 600px; }
+
+        /* WHY JOIN */
+        .why-section { padding: 70px 5%; background: var(--off-white); }
+        .tag { display: inline-block; background: var(--gold-pale); color: var(--gold); border: 1px solid var(--gold-light); padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 700; }
+        .section-title { font-size: clamp(1.5rem, 2.8vw, 2.2rem); font-weight: 900; color: var(--navy); margin: 12px 0 6px; }
+        .gold-bar { width: 50px; height: 3px; background: linear-gradient(90deg, var(--gold), var(--gold-light)); border-radius: 2px; }
+        .section-header { text-align: center; margin-bottom: 45px; }
+        .section-header .gold-bar { margin: 12px auto 18px; }
+
+        .perks-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
+        .perk-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 26px 22px; text-align: center; }
+        .perk-icon { font-size: 2.4rem; margin-bottom: 12px; }
+        .perk-card h4 { font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: 6px; }
+        .perk-card p { font-size: .85rem; color: var(--gray); line-height: 1.7; }
+
+        /* FORM */
+        .form-section { padding: 70px 5%; }
+        .form-wrap { max-width: 720px; margin: 0 auto; background: var(--white); border: 1px solid var(--border); border-radius: 24px; padding: 50px 44px; box-shadow: 0 8px 35px rgba(27,44,107,.08); }
+        .form-title { font-size: 1.5rem; font-weight: 900; color: var(--navy); margin-bottom: 8px; }
+        .form-sub { font-size: .9rem; color: var(--gray); margin-bottom: 36px; line-height: 1.7; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px; }
+        .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; }
+        .form-group label { font-size: .88rem; font-weight: 700; color: var(--navy); }
+        .form-group input, .form-group select, .form-group textarea {
+            border: 1.5px solid var(--border); border-radius: 10px; padding: 11px 14px;
+            font-family: inherit; font-size: .9rem; color: var(--gray-dark); background: var(--white);
+            transition: border-color .25s, box-shadow .25s; outline: none;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--gold); box-shadow: 0 0 0 3px rgba(184,147,90,.12);
+        }
+        .form-group textarea { resize: vertical; min-height: 110px; }
+        .form-group select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: left 12px center; }
+        .required { color: var(--gold); }
+        .form-note { font-size: .8rem; color: var(--gray); margin-bottom: 28px; background: var(--gold-pale); border: 1px solid var(--gold-light); border-radius: 10px; padding: 10px 14px; }
+        .submit-btn { width: 100%; background: linear-gradient(135deg, var(--navy), var(--navy-mid)); color: var(--white); border: none; padding: 15px 30px; border-radius: 12px; font-family: inherit; font-size: 1rem; font-weight: 800; cursor: pointer; transition: all .3s; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .submit-btn:hover { background: linear-gradient(135deg, var(--navy-mid), var(--gold)); box-shadow: 0 8px 25px rgba(27,44,107,.3); }
+        .success-msg { display: none; background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 12px; padding: 20px; text-align: center; color: #166534; font-weight: 700; margin-top: 20px; }
+
+        footer { background: var(--navy-dark); color: rgba(255,255,255,.6); text-align: center; padding: 30px 5%; font-size: .85rem; border-top: 1px solid rgba(184,147,90,.2); }
+        footer a { color: var(--gold-light); }
+        .whatsapp-fab { position: fixed; bottom: 28px; left: 28px; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 999; box-shadow: 0 6px 20px rgba(37,211,102,.4); transition: transform .25s; }
+        .whatsapp-fab:hover { transform: scale(1.1); }
+
+        @media (max-width: 900px) { .nav-links { display: none; } .hamburger { display: flex; } .form-row { grid-template-columns: 1fr; } }
+        @media (max-width: 600px) { .nav-cta { display: none; } .form-wrap { padding: 32px 20px; } }
+            .lang-switcher{display:flex;align-items:center;gap:5px}
+        .flag-btn{background:none;border:2px solid rgba(255,255,255,.2);border-radius:7px;cursor:pointer;font-size:1.2rem;line-height:1;padding:3px 5px;transition:all .2s;display:flex;align-items:center}
+        .flag-btn:hover{border-color:var(--gold-light);transform:scale(1.08)}
+        .flag-btn.active{border-color:var(--gold);background:rgba(184,147,90,.2)}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="شعار شركة مشاري بندر بن جلوي">
+                <div>
+                    <div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
+                    <div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#services">خدماتنا</a></li>
+                <li><a href="contracts.html">عقود الشركات</a></li>
+                <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                <li><a href="team.html">فريقنا</a></li>
+                <li><a href="blog.html">المدونة</a></li>
+                <li><a href="e-services.html">الخدمات الإلكترونية</a></li>
+                <li><a href="careers.html" class="active">التوظيف</a></li>
+                <li><a href="index.html#booking">تواصل معنا</a></li>
+            </ul>
+            <div style="display:flex;align-items:center;gap:10px;">
+                <div class="lang-switcher">
+                    <button class="flag-btn active" onclick="subSetLang(0)" id="flagAR" title="العربية">🇸🇦</button>
+                    <button class="flag-btn" onclick="subSetLang(1)" id="flagEN" title="English">🇬🇧</button>
+                    <button class="flag-btn" onclick="subSetLang(2)" id="flagZH" title="中文">🇨🇳</button>
+                </div>
+                <a href="https://wa.me/966533532153" target="_blank" rel="noopener" class="nav-cta">احجز استشارة</a>
+                <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-drawer" id="drawer">
+        <ul>
+            <li><a href="index.html#services">خدماتنا</a></li>
+            <li><a href="contracts.html">عقود الشركات</a></li>
+            <li><a href="faq.html">الأسئلة الشائعة</a></li>
+            <li><a href="team.html">فريقنا</a></li>
+            <li><a href="blog.html">المدونة</a></li>
+            <li><a href="e-services.html">الخدمات الإلكترونية</a></li>
+            <li><a href="careers.html">التوظيف</a></li>
+            <li><a href="index.html#booking">تواصل معنا</a></li>
+        </ul>
+    </div>
+
+    <div class="page-hero">
+        <div class="page-hero-content">
+            <div class="page-breadcrumb">
+                <a href="index.html">الرئيسية</a>
+                <span>←</span>
+                <span>التوظيف</span>
+            </div>
+            <h1>انضم إلى <em>فريقنا</em></h1>
+            <p class="page-hero-desc">نبحث دائماً عن كفاءات قانونية متميزة تؤمن بالعدالة والاحترافية. إذا كنت تمتلك الشغف والكفاءة، نسعد بانضمامك لعائلة مشاري بندر بن جلوي للمحاماة.</p>
+        </div>
+    </div>
+
+    <!-- WHY JOIN -->
+    <section class="why-section">
+        <div class="section-header">
+            <div class="tag">لماذا تنضم إلينا؟</div>
+            <h2 class="section-title">بيئة عمل احترافية ومحفّزة</h2>
+            <div class="gold-bar"></div>
+        </div>
+        <div class="perks-grid">
+            <div class="perk-card">
+                <div class="perk-icon">⚖️</div>
+                <h4>قضايا متنوعة ومثرية</h4>
+                <p>ستتعامل مع قضايا في مختلف التخصصات القانونية مما يعزز خبرتك المهنية باستمرار.</p>
+            </div>
+            <div class="perk-card">
+                <div class="perk-icon">📈</div>
+                <h4>نمو وتطوير مهني</h4>
+                <p>نوفر بيئة تشجع على التعلم المستمر والنمو القانوني من خلال الخبرة الميدانية والتدريب.</p>
+            </div>
+            <div class="perk-card">
+                <div class="perk-icon">🤝</div>
+                <h4>فريق متماسك وداعم</h4>
+                <p>ستنضم لفريق يعمل بروح جماعية ويدعم أعضاءه في مختلف المراحل المهنية.</p>
+            </div>
+            <div class="perk-card">
+                <div class="perk-icon">🏆</div>
+                <h4>سمعة راسخة</h4>
+                <p>انضم لشركة محاماة ذات سمعة مهنية مرموقة ومعروفة بالاحترافية والنزاهة.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- APPLICATION FORM -->
+    <section class="form-section" id="apply">
+        <div class="form-wrap">
+            <h2 class="form-title">📋 نموذج التقديم الوظيفي</h2>
+            <p class="form-sub">أكمل النموذج أدناه وسيتواصل معك فريق الموارد البشرية في أقرب وقت ممكن للتحقق من أهليتك والخطوات التالية.</p>
+
+            <form id="careerForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="handleSubmit(event)">
+                <input type="hidden" name="_subject" value="طلب توظيف جديد — موقع شركة مشاري بندر بن جلوي">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fname">الاسم الكامل <span class="required">*</span></label>
+                        <input type="text" id="fname" name="full_name" placeholder="اسمك الكامل" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nationality">الجنسية <span class="required">*</span></label>
+                        <input type="text" id="nationality" name="nationality" placeholder="مثال: سعودي" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">رقم الجوال <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="05xxxxxxxx" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="position">الوظيفة المطلوبة <span class="required">*</span></label>
+                    <select id="position" name="position" required>
+                        <option value="" disabled selected>— اختر الوظيفة —</option>
+                        <option value="محامٍ / محامية مرخّص(ة)">محامٍ / محامية مرخّص(ة)</option>
+                        <option value="مستشار / مستشارة قانونية">مستشار / مستشارة قانونية</option>
+                        <option value="باحث(ة) قانوني">باحث(ة) قانوني</option>
+                        <option value="متدرب(ة) قانوني">متدرب(ة) قانوني</option>
+                        <option value="سكرتير(ة) قانوني">سكرتير(ة) قانوني</option>
+                        <option value="مسؤول(ة) خدمة العملاء">مسؤول(ة) خدمة العملاء</option>
+                        <option value="أخرى">أخرى</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="education">المؤهل العلمي <span class="required">*</span></label>
+                        <select id="education" name="education" required>
+                            <option value="" disabled selected>— اختر —</option>
+                            <option value="بكالوريوس قانون">بكالوريوس قانون</option>
+                            <option value="بكالوريوس شريعة">بكالوريوس شريعة</option>
+                            <option value="ماجستير قانون">ماجستير قانون</option>
+                            <option value="دكتوراه قانون">دكتوراه قانون</option>
+                            <option value="تخصص آخر">تخصص آخر</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">سنوات الخبرة <span class="required">*</span></label>
+                        <select id="experience" name="experience" required>
+                            <option value="" disabled selected>— اختر —</option>
+                            <option value="بدون خبرة (حديث التخرج)">بدون خبرة (حديث التخرج)</option>
+                            <option value="أقل من سنة">أقل من سنة</option>
+                            <option value="1-3 سنوات">1-3 سنوات</option>
+                            <option value="3-5 سنوات">3-5 سنوات</option>
+                            <option value="أكثر من 5 سنوات">أكثر من 5 سنوات</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="licensed">هل أنت محامٍ / محامية مرخّص(ة)؟</label>
+                    <select id="licensed" name="licensed">
+                        <option value="" disabled selected>— اختر —</option>
+                        <option value="نعم، مرخّص(ة) لدى هيئة المحامين">نعم، مرخّص(ة) لدى هيئة المحامين</option>
+                        <option value="قيد الإجراءات">قيد الإجراءات</option>
+                        <option value="لا">لا</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="cv_link">رابط السيرة الذاتية (اختياري)</label>
+                    <input type="url" id="cv_link" name="cv_link" placeholder="https://drive.google.com/...">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">نبذة عنك ودوافعك للانضمام <span class="required">*</span></label>
+                    <textarea id="message" name="message" placeholder="اكتب باختصار عن نفسك، خبراتك، وسبب رغبتك في الانضمام لشركتنا..." required></textarea>
+                </div>
+
+                <div class="form-note">
+                    📧 سيتم إرسال طلبك مباشرةً إلى إدارة الموارد البشرية، وسنتواصل معك خلال 3-5 أيام عمل.
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                    </svg>
+                    إرسال الطلب
+                </button>
+
+                <div class="success-msg" id="successMsg">
+                    ✅ تم إرسال طلبك بنجاح! سنتواصل معك قريباً.
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+        <p style="margin-top:8px;"><a href="index.html">الرئيسية</a></p>
+    </footer>
+
+    <a href="https://wa.me/966533532153" class="whatsapp-fab" target="_blank" rel="noopener">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    </a>
+
+    <script>
+        function handleSubmit(e) {
+            const form = document.getElementById('careerForm');
+            if (form.action.includes('YOUR_FORM_ID')) {
+                e.preventDefault();
+                const name = document.getElementById('fname').value;
+                const position = document.getElementById('position').value;
+                const phone = document.getElementById('phone').value;
+                const msg = document.getElementById('message').value;
+                const waText = `طلب توظيف جديد\nالاسم: ${name}\nالوظيفة: ${position}\nالهاتف: ${phone}\nنبذة: ${msg}`;
+                window.open('https://wa.me/966533532153?text=' + encodeURIComponent(waText), '_blank');
+                document.getElementById('successMsg').style.display = 'block';
+                form.reset();
+            }
+        }
+    </script>
+
+
+    <script>
+    // ─── LANGUAGE SWITCHER (Sub-page) ─────────────────────────
+    const subLangDirs = ['rtl','ltr','ltr'];
+    const subLangCodes = ['ar','en','zh'];
+    function subSetLang(l) {
+        localStorage.setItem('siteLang', l);
+        document.documentElement.lang = subLangCodes[l];
+        document.documentElement.dir = subLangDirs[l];
+        ['flagAR','flagEN','flagZH'].forEach((id,i)=>{
+            const b=document.getElementById(id);
+            if(b) b.classList.toggle('active', i===l);
+        });
+        // Redirect to home if switching language (so full translation applies)
+        if(l !== parseInt(localStorage.getItem('prevLang')||'0')) {
+            localStorage.setItem('prevLang', l);
+        }
+    }
+    // Apply saved language on load
+    const _sl = parseInt(localStorage.getItem('siteLang')||'0');
+    if(_sl !== 0) subSetLang(_sl);
+    </script>
+</body>
+</html>

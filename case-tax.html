@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قضايا الزكاة والضريبة والجمارك — شركة مشاري بندر بن جلوي للمحاماة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --navy:#1B2C6B; --navy-dark:#111d4a; --navy-mid:#223580; --gold:#B8935A; --gold-light:#d4aa72; --gold-pale:#f5ede0; --white:#ffffff; --off-white:#f8f6f2; --gray:#6b7280; --gray-dark:#374151; --border:#e5e1d9; }
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth;overflow-x:hidden}
+        body{font-family:'Cairo',sans-serif;color:var(--gray-dark);background:var(--white);overflow-x:hidden;line-height:1.7}
+        a{text-decoration:none}
+        img{max-width:100%;display:block}
+        .navbar{position:fixed;inset:0 0 auto 0;z-index:1000;height:90px;background:rgba(17,29,74,.97);backdrop-filter:blur(12px);border-bottom:2px solid rgba(184,147,90,.45);display:flex;align-items:center;padding:0 5%}
+        .nav-inner{width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+        .nav-logo{display:flex;align-items:center;gap:11px}
+        .nav-logo img{width:60px;height:60px;flex-shrink:0}
+        .nav-firm-name{font-size:1.2rem;font-weight:800;color:var(--gold-light);line-height:1.2}
+        .nav-firm-sub{font-size:.8rem;color:rgba(255,255,255,.55)}
+        .nav-links{display:flex;align-items:center;gap:22px;list-style:none;flex:1;justify-content:center}
+        .nav-links a{color:rgba(255,255,255,.82);font-size:.95rem;font-weight:600;transition:color .2s;position:relative;padding-bottom:2px}
+        .nav-links a:hover,.nav-links a.active{color:var(--gold-light)}
+        .nav-links a::after{content:'';position:absolute;bottom:-2px;right:0;left:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .25s}
+        .nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+        .nav-cta{background:var(--gold);color:var(--white);padding:8px 20px;border-radius:25px;font-size:.85rem;font-weight:800;transition:all .25s;white-space:nowrap}
+        .nav-cta:hover{background:var(--gold-light);box-shadow:0 6px 20px rgba(184,147,90,.4)}
+        .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:5px}
+        .hamburger span{display:block;width:24px;height:2px;background:white;border-radius:2px}
+        .mobile-drawer{position:fixed;top:90px;inset-inline:0;background:var(--navy-dark);border-top:1px solid rgba(184,147,90,.25);padding:24px 5%;z-index:999;transform:translateY(-8px);opacity:0;visibility:hidden;transition:all .3s}
+        .mobile-drawer.open{transform:translateY(0);opacity:1;visibility:visible}
+        .mobile-drawer ul{list-style:none}
+        .mobile-drawer li{border-bottom:1px solid rgba(255,255,255,.07)}
+        .mobile-drawer a{display:block;padding:12px 0;color:rgba(255,255,255,.85);font-size:.95rem;font-weight:600}
+        .page-hero{padding:130px 5% 70px;background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 60%,#2a4090 100%);position:relative;overflow:hidden}
+        .page-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(184,147,90,.08) 1px,transparent 1px);background-size:40px 40px}
+        .page-hero-content{position:relative;z-index:2;max-width:800px}
+        .page-breadcrumb{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.55);font-size:.85rem;margin-bottom:18px}
+        .page-breadcrumb a{color:rgba(255,255,255,.55)}
+        .page-breadcrumb a:hover{color:var(--gold-light)}
+        .page-breadcrumb span{color:var(--gold-light)}
+        .page-hero h1{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;color:var(--white);margin-bottom:16px;line-height:1.25}
+        .page-hero h1 em{color:var(--gold-light);font-style:normal}
+        .page-hero-desc{font-size:1rem;color:rgba(255,255,255,.78);line-height:1.9;max-width:650px}
+        .section-pad{padding:80px 5%}
+        .section-pad.alt{background:var(--off-white)}
+        .tag{display:inline-block;background:var(--gold-pale);color:var(--gold);border:1px solid var(--gold-light);padding:4px 16px;border-radius:20px;font-size:.8rem;font-weight:700}
+        .section-title{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;color:var(--navy);margin:10px 0 6px;line-height:1.3}
+        .gold-bar{width:50px;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));border-radius:2px;margin:12px 0 20px}
+        .article-body{max-width:860px;margin:0 auto}
+        .article-body h2{font-size:1.4rem;font-weight:900;color:var(--navy);margin:36px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--gold-pale)}
+        .article-body h3{font-size:1.15rem;font-weight:800;color:var(--navy-mid);margin:24px 0 10px}
+        .article-body p{font-size:.97rem;color:var(--gray-dark);line-height:2;margin-bottom:16px}
+        .article-body ul{padding-right:24px;margin-bottom:16px}
+        .article-body ul li{font-size:.95rem;color:var(--gray-dark);line-height:2;margin-bottom:6px;list-style:disc}
+        .info-box{background:linear-gradient(135deg,var(--navy-dark),var(--navy));border-radius:18px;padding:32px 36px;margin:32px 0;color:var(--white)}
+        .info-box h3{color:var(--gold-light);font-size:1.15rem;font-weight:800;margin-bottom:14px}
+        .info-box ul{padding-right:20px}
+        .info-box ul li{color:rgba(255,255,255,.85);line-height:2;font-size:.93rem;list-style:disc;margin-bottom:4px}
+        .steps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;margin:24px 0}
+        .step-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:26px 22px;transition:transform .3s,box-shadow .3s;box-shadow:0 4px 16px rgba(27,44,107,.06)}
+        .step-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(184,147,90,.14)}
+        .step-num{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-mid));color:var(--gold-light);font-size:1.1rem;font-weight:900;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+        .step-card h4{font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:8px}
+        .step-card p{font-size:.87rem;color:var(--gray);line-height:1.8}
+        .cta-section{background:linear-gradient(135deg,var(--navy-dark),var(--navy));padding:70px 5%;text-align:center}
+        .cta-section h2{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;color:var(--white);margin-bottom:14px}
+        .cta-section p{color:rgba(255,255,255,.7);font-size:.95rem;margin-bottom:32px;max-width:500px;margin-inline:auto}
+        .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+        .btn-gold{background:var(--gold);color:var(--white);padding:13px 32px;border-radius:30px;font-size:.95rem;font-weight:800;transition:all .25s}
+        .btn-gold:hover{background:var(--gold-light);box-shadow:0 8px 25px rgba(184,147,90,.4)}
+        .btn-outline{border:2px solid var(--gold);color:var(--gold);padding:11px 28px;border-radius:30px;font-size:.95rem;font-weight:800;transition:all .25s}
+        .btn-outline:hover{background:var(--gold);color:var(--white)}
+        footer{background:var(--navy-dark);color:rgba(255,255,255,.6);text-align:center;padding:30px 5%;font-size:.85rem;border-top:1px solid rgba(184,147,90,.2)}
+        footer a{color:var(--gold-light)}
+        .whatsapp-fab{position:fixed;bottom:28px;left:28px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:999;box-shadow:0 6px 20px rgba(37,211,102,.4);transition:transform .25s}
+        .whatsapp-fab:hover{transform:scale(1.1)}
+        @media(max-width:900px){.nav-links{display:none}.hamburger{display:flex}}
+        @media(max-width:600px){.nav-cta{display:none}}
+            .lang-switcher{display:flex;align-items:center;gap:5px}
+        .flag-btn{background:none;border:2px solid rgba(255,255,255,.2);border-radius:7px;cursor:pointer;font-size:1.2rem;line-height:1;padding:3px 5px;transition:all .2s;display:flex;align-items:center}
+        .flag-btn:hover{border-color:var(--gold-light);transform:scale(1.08)}
+        .flag-btn.active{border-color:var(--gold);background:rgba(184,147,90,.2)}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="شعار شركة مشاري بندر بن جلوي">
+                <div>
+                    <div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
+                    <div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#services">خدماتنا</a></li>
+                <li><a href="contracts.html">عقود الشركات</a></li>
+                <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                <li><a href="team.html">فريقنا</a></li>
+                <li><a href="blog.html">المدونة</a></li>
+                <li><a href="e-services.html">الخدمات الإلكترونية</a></li>
+                <li><a href="careers.html">التوظيف</a></li>
+                <li><a href="index.html#booking">تواصل معنا</a></li>
+            </ul>
+            <div style="display:flex;align-items:center;gap:10px;">
+                <div class="lang-switcher">
+                    <button class="flag-btn active" onclick="subSetLang(0)" id="flagAR" title="العربية">🇸🇦</button>
+                    <button class="flag-btn" onclick="subSetLang(1)" id="flagEN" title="English">🇬🇧</button>
+                    <button class="flag-btn" onclick="subSetLang(2)" id="flagZH" title="中文">🇨🇳</button>
+                </div>
+                <a href="https://wa.me/966533532153" target="_blank" rel="noopener" class="nav-cta">احجز استشارة</a>
+                <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-drawer" id="drawer">
+        <ul>
+            <li><a href="index.html#services">خدماتنا</a></li>
+            <li><a href="contracts.html">عقود الشركات</a></li>
+            <li><a href="faq.html">الأسئلة الشائعة</a></li>
+            <li><a href="team.html">فريقنا</a></li>
+            <li><a href="blog.html">المدونة</a></li>
+            <li><a href="e-services.html">الخدمات الإلكترونية</a></li>
+            <li><a href="careers.html">التوظيف</a></li>
+            <li><a href="index.html#booking">تواصل معنا</a></li>
+            <li><a href="https://wa.me/966533532153">احجز استشارة</a></li>
+        </ul>
+    </div>
+
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <div class="page-breadcrumb">
+                <a href="index.html">الرئيسية</a>
+                <span>/</span>
+                <a href="#">القضايا القانونية</a>
+                <span>/</span>
+                <span>الزكاة والضريبة والجمارك</span>
+            </div>
+            <h1>قضايا <em>الزكاة والضريبة والجمارك</em></h1>
+            <p class="page-hero-desc">دعم قانوني متخصص في الاعتراض على قرارات الزكاة وضريبة القيمة المضافة والجمارك أمام الهيئات المختصة</p>
+        </div>
+    </section>
+
+    <section class="section-pad">
+        <div class="article-body">
+            <h2>مقدمة عن قضايا الزكاة والضريبة والجمارك</h2>
+            <p>تمثل قضايا الزكاة والضريبة والجمارك مجالاً متخصصاً وحيوياً في النظام القانوني والاقتصادي السعودي. هذه القضايا تتعلق بالالتزامات المالية للأفراد والشركات تجاه الدولة ويتطلب التعامل معها معرفة عميقة بالأنظمة الضريبية والجمركية والتشريعات ذات الصلة. المملكة العربية السعودية طبقت نظام ضريبة القيمة المضافة في عام 2018 وأنشأت هيئة متخصصة للتعامل مع الزكاة والضريبة والجمارك تحت اسم هيئة الزكاة والضريبة والجمارك (ZATCA).</p>
+            <p>شركة مشاري بندر بن جلوي للمحاماة توفر خدمات متخصصة في التعامل مع قضايا الزكاة والضريبة والجمارك، حيث يمتلك فريقنا خبرة عميقة في الاعتراض على القرارات الضريبية والجمركية والدفاع عن حقوق موكلينا أمام الهيئات والمحاكم المختصة.</p>
+
+            <h2>أنواع قضايا الزكاة والضريبة والجمارك</h2>
+            <p>تتعدد أنواع النزاعات والقضايا في هذا المجال:</p>
+            <h3>نزاعات الزكاة</h3>
+            <p>تشمل الاعتراضات على قرارات فرض الزكاة أو حسابات الزكاة المستحقة. قد يختلف صاحب الدخل مع هيئة الزكاة حول مقدار الزكاة المستحقة أو الأموال الخاضعة للزكاة. هذه النزاعات تتطلب معرفة دقيقة بأحكام الزكاة الشرعية والأنظمة السعودية.</p>
+            <h3>نزاعات ضريبة القيمة المضافة (VAT)</h3>
+            <p>تتعلق بحسابات ضريبة القيمة المضافة والخصومات المستحقة والتصنيفات الضريبية للمنتجات. منذ تطبيق النظام في 2018، حدثت عدة نزاعات حول تصنيف المنتجات والخدمات والضرائب المستحقة عليها.</p>
+            <h3>نزاعات الضريبة الانتقائية</h3>
+            <p>تتعلق بالضرائب المطبقة على منتجات محددة مثل المشروبات والتبغ والطاقة. قد يحدث اختلاف حول معدل الضريبة المطبقة أو تصنيف المنتج.</p>
+            <h3>نزاعات الجمارك والتهريب</h3>
+            <p>تتضمن نزاعات حول التصنيف الجمركي للسلع والضرائب الجمركية المستحقة، وقد تتعلق ببعض الحالات بقضايا التهريب الجمركي والعقوبات المترتبة عليه.</p>
+            <h3>قضايا الإعفاءات الضريبية</h3>
+            <p>تشمل المطالبة بالإعفاءات الضريبية المقررة قانوناً أو المحددة لقطاعات معينة مثل الصحة والتعليم والخدمات الحكومية.</p>
+
+            <h2>الأساس القانوني</h2>
+            <p>تستند قضايا الزكاة والضريبة والجمارك على عدة أنظمة حديثة:</p>
+            <ul>
+                <li><strong>نظام ضريبة القيمة المضافة (1438هـ):</strong> ينظم حساب وفرض ضريبة القيمة المضافة بنسبة 15 بالمائة على معظم السلع والخدمات</li>
+                <li><strong>نظام الزكاة السعودي:</strong> يحدد أحكام الزكاة وكيفية حسابها على الدخول والأموال المختلفة</li>
+                <li><strong>الاتفاقية الجمركية الموحدة لدول الخليج:</strong> توحد التصنيفات والمعدلات الجمركية بين دول الخليج</li>
+                <li><strong>نظام الضريبة الانتقائية:</strong> ينظم فرض ضرائب إضافية على منتجات محددة</li>
+            </ul>
+
+            <h2>هيئة الزكاة والضريبة والجمارك (ZATCA)</h2>
+            <p>أنشأت المملكة هيئة متخصصة تحت مسمى هيئة الزكاة والضريبة والجمارك (ZATCA) تتولى جمع الزكاة والضرائب والرسوم الجمركية. الهيئة تملك صلاحيات واسعة في فرض الضرائب والزكاة والتحقق من الالتزام بها. يمكن للمكلفين الاعتراض على قراراتها والطعن فيها من خلال إجراءات إدارية محددة ثم اللجوء إلى المحاكم.</p>
+
+            <h2>عملية الاعتراض على القرارات الضريبية</h2>
+            <p>عند عدم الاتفاق مع قرار الهيئة بشأن الزكاة أو الضريبة أو الجمارك، يمكن تقديم اعتراض رسمي. أولاً يتم تقديم اعتراض إداري لهيئة الزكاة والضريبة والجمارك يتضمن الأسباب والمستندات الداعمة. إذا لم يتم قبول الاعتراض، يمكن الطعن أمام لجان الاعتراض الضريبية المتخصصة. بعد استنفاد الإجراءات الإدارية، يمكن اللجوء إلى المحاكم للطعن في القرارات الضريبية.</p>
+
+            <h2>خدمات شركة مشاري بندر بن جلوي</h2>
+            <p>توفر شركتنا خدمات متخصصة في مجال الزكاة والضريبة والجمارك:</p>
+            <ul>
+                <li>الاستشارات المتخصصة في الالتزامات الضريبية والزكوية</li>
+                <li>تحليل القرارات الضريبية والجمركية والاعتراض عليها</li>
+                <li>إعداد مذكرات وأوراق الاعتراض على القرارات الضريبية</li>
+                <li>التمثيل أمام لجان الاعتراض الضريبية</li>
+                <li>الطعن في القرارات الضريبية أمام المحاكم المختصة</li>
+                <li>المساعدة في استيفاء الحقوق المرفوضة بسبب قرار ضريبي خاطئ</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section-pad alt">
+        <div class="article-body">
+            <h2 style="text-align:center;margin-bottom:32px;">الأساس القانوني والأنظمة ذات الصلة</h2>
+            <div class="info-box">
+                <h3>الأنظمة والتشريعات الرئيسية</h3>
+                <ul>
+                    <li>نظام ضريبة القيمة المضافة الصادر 1438هـ (15%)</li>
+                    <li>نظام الزكاة السعودي والقوانين ذات الصلة</li>
+                    <li>الاتفاقية الجمركية الموحدة لدول الخليج</li>
+                    <li>نظام الضريبة الانتقائية على المنتجات المحددة</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pad">
+        <div class="article-body">
+            <h2 style="text-align:center;margin-bottom:32px;">مراحل عملية الاعتراض الضريبي</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">1</div>
+                    <h4>مراجعة القرار الضريبي والتحقق</h4>
+                    <p>دراسة القرار الضريبي بدقة والتحقق من صحة الحسابات والتصنيفات، وجمع المستندات والأدلة الداعمة لقضيتك.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">2</div>
+                    <h4>تقديم الاعتراض الإداري لهيئة ZATCA</h4>
+                    <p>تقديم اعتراض رسمي مفصل مع الأسباب القانونية والمستندات المؤيدة لهيئة الزكاة والضريبة والجمارك.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">3</div>
+                    <h4>التقاضي أمام اللجان الضريبية</h4>
+                    <p>إذا لم يتم قبول الاعتراض الإداري، يمكن الطعن أمام لجان الاعتراض الضريبية المتخصصة بمذكرات قانونية قوية.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">4</div>
+                    <h4>الاستئناف أمام محكمة الاستئناف</h4>
+                    <p>إذا كان الحكم غير عادل، يمكن استئناف قرار لجنة الاعتراض أمام محكمة الاستئناف المختصة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>هل تواجه مشكلة ضريبية أو جمركية؟</h2>
+        <p>فريقنا المتخصص يقدم دعماً قانونياً كاملاً في جميع قضايا الزكاة والضريبة والجمارك</p>
+        <div class="cta-btns">
+            <a href="https://wa.me/966533532153" class="btn-gold" target="_blank" rel="noopener">استشارة ضريبية متخصصة</a>
+            <a href="index.html#booking" class="btn-outline">تواصل معنا</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+        <p style="margin-top:8px;"><a href="index.html">الرئيسية</a></p>
+    </footer>
+    <a href="https://wa.me/966533532153" class="whatsapp-fab" target="_blank" rel="noopener" title="تواصل عبر واتساب">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    </a>
+
+
+    <script>
+    // ─── LANGUAGE SWITCHER (Sub-page) ─────────────────────────
+    const subLangDirs = ['rtl','ltr','ltr'];
+    const subLangCodes = ['ar','en','zh'];
+    function subSetLang(l) {
+        localStorage.setItem('siteLang', l);
+        document.documentElement.lang = subLangCodes[l];
+        document.documentElement.dir = subLangDirs[l];
+        ['flagAR','flagEN','flagZH'].forEach((id,i)=>{
+            const b=document.getElementById(id);
+            if(b) b.classList.toggle('active', i===l);
+        });
+        // Redirect to home if switching language (so full translation applies)
+        if(l !== parseInt(localStorage.getItem('prevLang')||'0')) {
+            localStorage.setItem('prevLang', l);
+        }
+    }
+    // Apply saved language on load
+    const _sl = parseInt(localStorage.getItem('siteLang')||'0');
+    if(_sl !== 0) subSetLang(_sl);
+    </script>
+</body>
+</html>
