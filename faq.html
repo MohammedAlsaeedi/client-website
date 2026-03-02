@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+
+<html dir="rtl" lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الأسئلة الشائعة — شركة مشاري بندر بن جلوي للمحاماة</title>
-    <meta name="description" content="إجابات على أكثر الأسئلة شيوعاً حول الخدمات القانونية — شركة مشاري بندر بن جلوي للمحاماة">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>الأسئلة الشائعة — شركة مشاري بندر بن جلوي للمحاماة</title>
+<meta content="إجابات على أكثر الأسئلة شيوعاً حول الخدمات القانونية — شركة مشاري بندر بن جلوي للمحاماة" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
         :root {
             --navy: #1B2C6B; --navy-dark: #111d4a; --navy-mid: #223580;
             --gold: #B8935A; --gold-light: #d4aa72; --gold-pale: #f5ede0;
@@ -112,184 +113,164 @@
         </style>
 </head>
 <body>
-
-    <nav class="navbar">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="logo.png" alt="شعار شركة مشاري بندر بن جلوي">
-                <div>
-                    <div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
-                    <div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
-                </div>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html#services" data-i18n="nav_services">خدماتنا</a></li>
-                <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
-                <li><a href="faq.html" class="active" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-                <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
-                <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
-                <li><a href="e-services.html" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
-                <li><a href="careers.html" data-i18n="nav_careers">التوظيف</a></li>
-                <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
-            </ul>
-            <div style="display:flex;align-items:center;gap:10px;">
-                <div class="lang-drop" id="langDrop">
-                    <button class="lang-drop-btn" onclick="toggleLangDrop()" id="langDropBtn">🇸🇦</button>
-                    <div class="lang-drop-menu" id="langDropMenu">
-                        <button onclick="setLang(0);toggleLangDrop()" data-lang="0">🇸🇦 العربية</button>
-                        <button onclick="setLang(1);toggleLangDrop()" data-lang="1">🇬🇧 English</button>
-                        <button onclick="setLang(2);toggleLangDrop()" data-lang="2">🇨🇳 中文</button>
-                    </div>
-                </div>
-                <a href="https://wa.me/966533532153" target="_blank" rel="noopener" class="nav-cta">احجز استشارة</a>
-                <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <div class="mobile-drawer" id="drawer">
-        <ul>
-            <li><a href="index.html#services" data-i18n="nav_services" data-i18n="nav_services">خدماتنا</a></li>
-            <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
-            <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-            <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
-            <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
-            <li><a href="e-services.html" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
-                <li><a href="careers.html" data-i18n="nav_careers">التوظيف</a></li>
-                <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
-        </ul>
-    </div>
-
-    <div class="page-hero">
-        <div class="page-hero-content">
-            <div class="page-breadcrumb">
-                <a href="index.html" data-i18n="breadcrumb_home">الرئيسية</a>
-                <span>←</span>
-                <span>الأسئلة الشائعة</span>
-            </div>
-            <h1>الأسئلة <em>الشائعة</em></h1>
-            <p class="page-hero-desc">إجابات وافية وشفافة على أكثر الأسئلة التي يطرحها عملاؤنا حول خدماتنا القانونية وإجراءات التعامل مع شركتنا.</p>
-        </div>
-    </div>
-
-    <section class="faq-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="tag">مركز المعرفة القانونية</div>
-                <h2 class="section-title">كيف يمكننا مساعدتك؟</h2>
-                <div class="gold-bar"></div>
-            </div>
-
-            <div class="faq-list" id="faqList">
-
-                <div class="faq-item">
-                    <div class="faq-q" onclick="toggleFaq(this)">
-                        <span>ما الخدمات التي تقدمها شركة مشاري بندر بن جلوي للمحاماة؟</span>
-                        <div class="faq-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
-                    </div>
-                    <div class="faq-a">نقدم طيفاً شاملاً من الخدمات القانونية يشمل: الاستشارات القانونية المتخصصة، صياغة ومراجعة العقود، تأسيس الشركات، الترافع أمام المحاكم القضائية، التوثيق والتصديق، التحكيم وفض النزاعات، وخدمات عقود الشركات التجارية — كل ذلك بأيدٍ قانونية مرخّصة وذات خبرة.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-q" onclick="toggleFaq(this)">
-                        <span>كيف أحجز استشارة قانونية؟</span>
-                        <div class="faq-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
-                    </div>
-                    <div class="faq-a">يمكنك حجز استشارتك عبر التواصل معنا مباشرةً على واتساب، أو بزيارة مكتبنا في عنيزة خلال أوقات الدوام. نوفر أيضاً استشارة هاتفية فورية في أوقات متاحة متعددة لتناسب جدولك.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-q" onclick="toggleFaq(this)">
-                        <span>هل يمكن الحصول على استشارة عن بُعد؟</span>
-                        <div class="faq-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
-                    </div>
-                    <div class="faq-a">نعم، نوفر استشارات قانونية عن بُعد عبر المكالمات الهاتفية أو مرئياً، مما يتيح لعملائنا في مختلف مناطق المملكة الاستفادة من خدماتنا دون الحاجة للتنقل.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-q" onclick="toggleFaq(this)">
-                        <span>ما مدة استغراق صياغة عقد تجاري؟</span>
-                        <div class="faq-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
-                    </div>
-                    <div class="faq-a">تتراوح مدة إعداد العقد بين يوم إلى ثلاثة أيام عمل وفق تعقيده ومتطلباته. نلتزم بتسليم العمل في الوقت المحدد مع الحرص التام على الجودة القانونية.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-q" onclick="toggleFaq(this)">
-                        <span>ما هو عقد الحماية القانونية السنوي وما مميزاته؟</span>
-                        <div class="faq-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
-                    </div>
-                    <div class="faq-a">هو عقد سنوي يمنح عميلنا تغطية قانونية متكاملة تشمل: استشارات مستمرة، صياغة ومراجعة العقود، حماية المصالح أمام الجهات الرسمية، وتقارير دورية. مثالي للشركات والمؤسسات التي تحتاج حضوراً قانونياً دائماً.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-q" onclick="toggleFaq(this)">
-                        <span>هل تتولون تأسيس الشركات والمنشآت التجارية؟</span>
-                        <div class="faq-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
-                    </div>
-                    <div class="faq-a">نعم، نتولى تأسيس مختلف أنواع الكيانات القانونية من شركات ذات مسؤولية محدودة، شركات مساهمة، مؤسسات فردية، وجمعيات. نشمل إعداد عقد التأسيس والنظام الأساسي واستيفاء جميع الإجراءات الرسمية.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-q" onclick="toggleFaq(this)">
-                        <span>ما أنواع القضايا التي تترافعون فيها؟</span>
-                        <div class="faq-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
-                    </div>
-                    <div class="faq-a">نترافع في طيف واسع من القضايا: التجارية، الجنائية، العمالية، الأحوال الشخصية، العقارية، الإدارية، المصرفية والمالية، قضايا الزكاة والضريبة والجمارك، وقضايا هيئة سوق المال — أمام كافة درجات المحاكم والهيئات المتخصصة.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-q" onclick="toggleFaq(this)">
-                        <span>هل تضمنون سرية المعلومات والقضايا؟</span>
-                        <div class="faq-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
-                    </div>
-                    <div class="faq-a">السرية التامة من أساسيات عملنا وهي التزام مهني وأخلاقي ثابت. جميع المعلومات التي يشاركها عملاؤنا تُعامَل بسرية مطلقة ولا تُفصح لأي طرف ثالث دون موافقة صريحة من العميل.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-q" onclick="toggleFaq(this)">
-                        <span>هل تخدمون العملاء خارج مدينة عنيزة؟</span>
-                        <div class="faq-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
-                    </div>
-                    <div class="faq-a">نعم، نقدم خدماتنا لعملاء من مختلف مناطق المملكة العربية السعودية، سواء عبر الاستشارات الإلكترونية أو بالتنقل حسب طبيعة القضية ومتطلباتها.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-q" onclick="toggleFaq(this)">
-                        <span>كيف يتم تحديد أتعاب المحاماة؟</span>
-                        <div class="faq-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
-                    </div>
-                    <div class="faq-a">تُحدَّد الأتعاب بناءً على طبيعة الخدمة المطلوبة ودرجة تعقيدها. نؤمن بالشفافية الكاملة في التسعير ونوضح لعميلنا التكلفة بدقة قبل البدء في أي عمل، دون رسوم مخفية أو مفاجآت.</div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <div class="cta-section">
-        <h2>لم تجد إجابة سؤالك؟</h2>
-        <p>تواصل معنا مباشرةً وسيرد فريقنا القانوني على استفساراتك في أقرب وقت</p>
-        <div class="cta-btns">
-            <a href="https://wa.me/966533532153?text=لدي%20استفسار%20قانوني" target="_blank" rel="noopener" class="btn-gold">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+<nav class="navbar">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">
+<img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png"/>
+<div>
+<div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
+</div>
+</a>
+<ul class="nav-links">
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a class="active" data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+<div style="display:flex;align-items:center;gap:10px;">
+<div class="lang-drop" id="langDrop">
+<button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
+<div class="lang-drop-menu" id="langDropMenu">
+<button data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦 العربية</button>
+<button data-lang="1" onclick="setLang(1);toggleLangDrop()">🇬🇧 English</button>
+<button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
+</div>
+</div>
+<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
+<div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
+<span></span><span></span><span></span>
+</div>
+</div>
+</div>
+</nav>
+<div class="mobile-drawer" id="drawer">
+<ul>
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li data-i18n="li_0"><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+</div>
+<div class="page-hero">
+<div class="page-hero-content">
+<div class="page-breadcrumb">
+<a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
+<span>←</span>
+<span>الأسئلة الشائعة</span>
+</div>
+<h1 data-i18n="hero_h1">الأسئلة <em>الشائعة</em></h1>
+<p class="page-hero-desc" data-i18n="p_0">إجابات وافية وشفافة على أكثر الأسئلة التي يطرحها عملاؤنا حول خدماتنا القانونية وإجراءات التعامل مع شركتنا.</p>
+</div>
+</div>
+<section class="faq-section">
+<div class="container">
+<div class="section-header">
+<div class="tag">مركز المعرفة القانونية</div>
+<h2 class="section-title" data-i18n="h2_0">كيف يمكننا مساعدتك؟</h2>
+<div class="gold-bar"></div>
+</div>
+<div class="faq-list" id="faqList">
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<span>ما الخدمات التي تقدمها شركة مشاري بندر بن جلوي للمحاماة؟</span>
+<div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+</div>
+<div class="faq-a">نقدم طيفاً شاملاً من الخدمات القانونية يشمل: الاستشارات القانونية المتخصصة، صياغة ومراجعة العقود، تأسيس الشركات، الترافع أمام المحاكم القضائية، التوثيق والتصديق، التحكيم وفض النزاعات، وخدمات عقود الشركات التجارية — كل ذلك بأيدٍ قانونية مرخّصة وذات خبرة.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<span>كيف أحجز استشارة قانونية؟</span>
+<div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+</div>
+<div class="faq-a">يمكنك حجز استشارتك عبر التواصل معنا مباشرةً على واتساب، أو بزيارة مكتبنا في عنيزة خلال أوقات الدوام. نوفر أيضاً استشارة هاتفية فورية في أوقات متاحة متعددة لتناسب جدولك.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<span>هل يمكن الحصول على استشارة عن بُعد؟</span>
+<div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+</div>
+<div class="faq-a">نعم، نوفر استشارات قانونية عن بُعد عبر المكالمات الهاتفية أو مرئياً، مما يتيح لعملائنا في مختلف مناطق المملكة الاستفادة من خدماتنا دون الحاجة للتنقل.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<span>ما مدة استغراق صياغة عقد تجاري؟</span>
+<div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+</div>
+<div class="faq-a">تتراوح مدة إعداد العقد بين يوم إلى ثلاثة أيام عمل وفق تعقيده ومتطلباته. نلتزم بتسليم العمل في الوقت المحدد مع الحرص التام على الجودة القانونية.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<span>ما هو عقد الحماية القانونية السنوي وما مميزاته؟</span>
+<div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+</div>
+<div class="faq-a">هو عقد سنوي يمنح عميلنا تغطية قانونية متكاملة تشمل: استشارات مستمرة، صياغة ومراجعة العقود، حماية المصالح أمام الجهات الرسمية، وتقارير دورية. مثالي للشركات والمؤسسات التي تحتاج حضوراً قانونياً دائماً.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<span>هل تتولون تأسيس الشركات والمنشآت التجارية؟</span>
+<div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+</div>
+<div class="faq-a">نعم، نتولى تأسيس مختلف أنواع الكيانات القانونية من شركات ذات مسؤولية محدودة، شركات مساهمة، مؤسسات فردية، وجمعيات. نشمل إعداد عقد التأسيس والنظام الأساسي واستيفاء جميع الإجراءات الرسمية.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<span>ما أنواع القضايا التي تترافعون فيها؟</span>
+<div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+</div>
+<div class="faq-a">نترافع في طيف واسع من القضايا: التجارية، الجنائية، العمالية، الأحوال الشخصية، العقارية، الإدارية، المصرفية والمالية، قضايا الزكاة والضريبة والجمارك، وقضايا هيئة سوق المال — أمام كافة درجات المحاكم والهيئات المتخصصة.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<span>هل تضمنون سرية المعلومات والقضايا؟</span>
+<div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+</div>
+<div class="faq-a">السرية التامة من أساسيات عملنا وهي التزام مهني وأخلاقي ثابت. جميع المعلومات التي يشاركها عملاؤنا تُعامَل بسرية مطلقة ولا تُفصح لأي طرف ثالث دون موافقة صريحة من العميل.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<span>هل تخدمون العملاء خارج مدينة عنيزة؟</span>
+<div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+</div>
+<div class="faq-a">نعم، نقدم خدماتنا لعملاء من مختلف مناطق المملكة العربية السعودية، سواء عبر الاستشارات الإلكترونية أو بالتنقل حسب طبيعة القضية ومتطلباتها.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+<span>كيف يتم تحديد أتعاب المحاماة؟</span>
+<div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+</div>
+<div class="faq-a">تُحدَّد الأتعاب بناءً على طبيعة الخدمة المطلوبة ودرجة تعقيدها. نؤمن بالشفافية الكاملة في التسعير ونوضح لعميلنا التكلفة بدقة قبل البدء في أي عمل، دون رسوم مخفية أو مفاجآت.</div>
+</div>
+</div>
+</div>
+</section>
+<div class="cta-section">
+<h2 data-i18n="h2_1">لم تجد إجابة سؤالك؟</h2>
+<p data-i18n="p_1">تواصل معنا مباشرةً وسيرد فريقنا القانوني على استفساراتك في أقرب وقت</p>
+<div class="cta-btns">
+<a class="btn-gold" data-i18n="cta_btn1" href="https://wa.me/966533532153?text=لدي%20استفسار%20قانوني" rel="noopener" target="_blank">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path></svg>
                 تواصل عبر واتساب
             </a>
-            <a href="index.html" class="btn-outline">العودة للرئيسية</a>
-        </div>
-    </div>
-
-    <footer>
-        <p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
-        <p style="margin-top:8px;"><a href="index.html" data-i18n="footer_home">الرئيسية</a></p>
-    </footer>
-
-    <a href="https://wa.me/966533532153" class="whatsapp-fab" target="_blank" rel="noopener">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-    </a>
-
-    <script>
+<a class="btn-outline" data-i18n="cta_btn2" href="index.html">العودة للرئيسية</a>
+</div>
+</div>
+<footer>
+<p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+<p style="margin-top:8px;"><a data-i18n="footer_home" href="index.html">الرئيسية</a></p>
+</footer>
+<a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank">
+<svg fill="white" height="28" viewbox="0 0 24 24" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path></svg>
+</a>
+<script>
         function toggleFaq(el) {
             const item = el.parentElement;
             const isOpen = item.classList.contains('open');
@@ -297,28 +278,30 @@
             if (!isOpen) item.classList.add('open');
         }
     </script>
-
-
-    <script>
+<script>
 const pageTranslations = {
-  breadcrumb_current: {0: 'الأسئلة الشائعة', 1: 'Frequently Asked Questions', 2: '常见问题'},
-  breadcrumb_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  cta_button: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
-  footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Mashary Bandar Bin Jalawi Law Firm — All rights reserved', 2: '© 2025 玛沙里·班达尔·本·贾劳伊律师事务所 — 版权所有'},
-  footer_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  hero_desc: {0: 'إجابات على الأسئلة الشائعة حول الخدمات القانونية والاستشارات', 1: 'Answers to frequently asked questions about legal services and consultations', 2: '关于法律服务和咨询的常见问题解答'},
-  hero_title: {0: 'الأسئلة الشائعة', 1: 'Frequently Asked Questions', 2: '常见问题'},
-  nav_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
-  nav_careers: {0: 'التوظيف', 1: 'Careers', 2: '招聘'},
-  nav_contact: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
-  nav_contracts: {0: 'عقود الشركات', 1: 'Company Contracts', 2: '公司合同'},
-  nav_eservices: {0: 'الخدمات الإلكترونية', 1: 'E-Services', 2: '电子服务'},
-  nav_faq: {0: 'الأسئلة الشائعة', 1: 'FAQ', 2: '常见问题'},
-  nav_services: {0: 'خدماتنا', 1: 'Our Services', 2: '我们的服务'},
-  nav_team: {0: 'فريقنا', 1: 'Our Team', 2: '我们的团队'},
-  whatsapp_button: {0: 'تواصل عبر واتساب', 1: 'Contact via WhatsApp', 2: '通过WhatsApp联系'},
+    breadcrumb_home: {0: "الرئيسية", 1: "Home", 2: "主页"},
+    footer_copyright: {0: "© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة", 1: "© 2025 Al Meshary Bin Bandar Bin Jaloui Law Firm and Legal Consultations — All rights reserved", 2: "© 2025 美沙里·本·班达尔·本·贾卢伊律师事务所和法律咨询——版权所有"},
+    h1: {0: "الأسئلة الشائعة", 1: "Frequently Asked Questions", 2: "常见问题"},
+    h2: {0: "جميع إجاباتك القانونية في مكان واحد", 1: "All Your Legal Answers in One Place", 2: "您所有的法律答案都在一个地方"},
+    h3_0: {0: "ما هي أنواع القضايا التي تتخصص فيها الشركة؟", 1: "What types of cases does the firm specialize in?", 2: "律师事务所专门处理哪些类型的案件？"},
+    h3_1: {0: "كيف يمكنني التواصل مع المحامين؟", 1: "How can I contact the attorneys?", 2: "我如何可以与律师联系？"},
+    h3_2: {0: "ما هي رسوم الاستشارة القانونية الأولى؟", 1: "What are the fees for initial legal consultation?", 2: "初步法律咨询的费用是多少？"},
+    h3_3: {0: "كم من الوقت تستغرق قضية قانونية عادية؟", 1: "How long does a typical legal case take?", 2: "典型的法律案件需要多长时间？"},
+    h3_4: {0: "هل تقدمون خدمات قانونية دولية؟", 1: "Do you provide international legal services?", 2: "你们是否提供国际法律服务？"},
+    h3_5: {0: "ما هي طرق الدفع المتاحة؟", 1: "What payment methods are available?", 2: "有哪些可用的付款方式？"},
+    h3_6: {0: "هل يمكنني الحصول على استشارة عن بعد؟", 1: "Can I get a remote consultation?", 2: "我可以获得远程咨询吗？"},
+    p_0: {0: "نجيب على أكثر الأسئلة شيوعاً التي يطرحها عملاؤنا حول الخدمات القانونية والإجراءات", 1: "We answer the most common questions our clients ask about legal services and procedures", 2: "我们回答客户最常问的关于法律服务和程序的问题"},
+    p_1: {0: "تتخصص شركتنا في مجالات عديدة منها القضايا التجارية والجنائية وقضايا الأحوال الشخصية والعمالية والعقارات والضرائب والقضايا الإدارية والمصرفية والتأمينية.", 1: "Our firm specializes in many areas including commercial, criminal, personal status, labor, real estate, tax, administrative, banking, and insurance cases.", 2: "我们的律师事务所专业处理许多领域，包括商业、刑事、人身状况、劳动、房地产、税务、行政、银行和保险案件。"},
+    p_2: {0: "يمكنك التواصل معنا عبر الهاتف أو البريد الإلكتروني أو عبر تطبيق واتساب. نحن متوفرون طوال ساعات العمل لتقديم الاستشارات القانونية.", 1: "You can contact us via phone, email, or WhatsApp. We are available during business hours to provide legal consultations.", 2: "您可以通过电话、电子邮件或WhatsApp与我们联系。我们在营业时间内随时可用以提供法律咨询。"},
+    p_3: {0: "نقدم استشارات قانونية أولية بأسعار معقولة. يمكنك الاتصال بنا للتعرف على التفاصيل والعروض الخاصة بنا.", 1: "We offer initial legal consultations at reasonable rates. Contact us to learn about our details and special offers.", 2: "我们以合理的价格提供初步法律咨询。请与我们联系以了解我们的详情和特别优惠。"},
+    p_4: {0: "مدة القضية تختلف حسب طبيعتها والمرحلة القانونية. بعض القضايا قد تنتهي في أشهر قليلة بينما قد تستغرق أخرى سنوات.", 1: "The duration of a case varies depending on its nature and legal stage. Some cases may conclude in a few months while others may take years.", 2: "案件的持续时间取决于其性质和法律阶段。某些案件可能在几个月内结束，而其他案件可能需要数年。"},
+    p_5: {0: "نعم، نقدم خدمات قانونية دولية متخصصة للعملاء الذين يتعاملون مع نزاعات دولية أو عقود دولية.", 1: "Yes, we provide specialized international legal services for clients dealing with international disputes or contracts.", 2: "是的，我们为处理国际纠纷或合同的客户提供专业的国际法律服务。"},
+    p_6: {0: "نقبل جميع طرق الدفع الشهيرة بما فيها التحويل البنكي والبطاقات الائتمانية والتحويل السريع.", 1: "We accept all major payment methods including bank transfers, credit cards, and instant transfers.", 2: "我们接受所有主要付款方式，包括银行转账、信用卡和即时转账。"},
+    p_7: {0: "نعم، نقدم استشارات قانونية عن بعد عبر الفيديو أو الهاتف حسب احتياجاتك.", 1: "Yes, we provide remote legal consultations via video or phone according to your needs.", 2: "是的，我们根据您的需求通过视频或电话提供远程法律咨询。"},
 };
+
 </script>
 <script src="lang.js"></script>
-    </body>
+</body>
 </html>

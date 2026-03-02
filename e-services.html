@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+
+<html dir="rtl" lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الخدمات الإلكترونية — شركة مشاري بندر بن جلوي للمحاماة</title>
-    <meta name="description" content="خدماتنا القانونية الرقمية — تواصل مع محاميك بضغطة زر — شركة مشاري بندر بن جلوي">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>الخدمات الإلكترونية — شركة مشاري بندر بن جلوي للمحاماة</title>
+<meta content="خدماتنا القانونية الرقمية — تواصل مع محاميك بضغطة زر — شركة مشاري بندر بن جلوي" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
         :root {
             --navy: #1B2C6B; --navy-dark: #111d4a; --navy-mid: #223580;
             --gold: #B8935A; --gold-light: #d4aa72; --gold-pale: #f5ede0;
@@ -132,231 +133,209 @@
         </style>
 </head>
 <body>
-
-    <nav class="navbar">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="logo.png" alt="شعار شركة مشاري بندر بن جلوي">
-                <div>
-                    <div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
-                    <div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
-                </div>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html#services" data-i18n="nav_services">خدماتنا</a></li>
-                <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
-                <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-                <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
-                <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
-                <li><a href="e-services.html" class="active" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
-                <li><a href="careers.html" data-i18n="nav_careers">التوظيف</a></li>
-                <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
-            </ul>
-            <div style="display:flex;align-items:center;gap:10px;">
-                <div class="lang-drop" id="langDrop">
-                    <button class="lang-drop-btn" onclick="toggleLangDrop()" id="langDropBtn">🇸🇦</button>
-                    <div class="lang-drop-menu" id="langDropMenu">
-                        <button onclick="setLang(0);toggleLangDrop()" data-lang="0">🇸🇦 العربية</button>
-                        <button onclick="setLang(1);toggleLangDrop()" data-lang="1">🇬🇧 English</button>
-                        <button onclick="setLang(2);toggleLangDrop()" data-lang="2">🇨🇳 中文</button>
-                    </div>
-                </div>
-                <a href="https://wa.me/966533532153" target="_blank" rel="noopener" class="nav-cta">احجز استشارة</a>
-                <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <div class="mobile-drawer" id="drawer">
-        <ul>
-            <li><a href="index.html#services" data-i18n="nav_services" data-i18n="nav_services">خدماتنا</a></li>
-            <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
-            <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-            <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
-            <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
-            <li><a href="e-services.html" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
-                <li><a href="careers.html" data-i18n="nav_careers">التوظيف</a></li>
-                <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
-        </ul>
-    </div>
-
-    <div class="page-hero">
-        <div class="page-hero-content">
-            <div class="page-breadcrumb">
-                <a href="index.html" data-i18n="breadcrumb_home">الرئيسية</a>
-                <span>←</span>
-                <span>الخدمات الإلكترونية</span>
-            </div>
-            <h1>الخدمات <em>الإلكترونية</em></h1>
-            <p class="page-hero-desc">ضغطة زر تفصلك عن محاميك — تواصل مع فريقنا القانوني رقمياً، واحصل على خدماتك القانونية من أي مكان في المملكة.</p>
-        </div>
-    </div>
-
-    <!-- E-SERVICES -->
-    <section class="section-pad">
-        <div class="section-header">
-            <div class="tag">الخدمات الرقمية</div>
-            <h2 class="section-title">خدماتنا الإلكترونية</h2>
-            <div class="gold-bar" style="margin:12px auto 18px;"></div>
-            <p class="section-desc">نوظّف التقنية لتقريب الخدمة القانونية وجعلها في متناول يدك في أي وقت ومن أي مكان</p>
-        </div>
-        <div class="eserv-grid">
-
-            <div class="eserv-card">
-                <div class="eserv-icon">
-                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/>
-                    </svg>
-                </div>
-                <h3>استشارة فورية عبر واتساب</h3>
-                <p>تواصل مباشرةً مع محامينا عبر واتساب لطرح سؤالك القانوني والحصول على إجابة سريعة.</p>
-                <a href="https://wa.me/966533532153?text=أرغب%20في%20استشارة%20قانونية" target="_blank" rel="noopener" class="eserv-btn">
+<nav class="navbar">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">
+<img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png"/>
+<div>
+<div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
+</div>
+</a>
+<ul class="nav-links">
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a class="active" data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+<div style="display:flex;align-items:center;gap:10px;">
+<div class="lang-drop" id="langDrop">
+<button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
+<div class="lang-drop-menu" id="langDropMenu">
+<button data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦 العربية</button>
+<button data-lang="1" onclick="setLang(1);toggleLangDrop()">🇬🇧 English</button>
+<button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
+</div>
+</div>
+<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
+<div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
+<span></span><span></span><span></span>
+</div>
+</div>
+</div>
+</nav>
+<div class="mobile-drawer" id="drawer">
+<ul>
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li data-i18n="li_0"><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+</div>
+<div class="page-hero">
+<div class="page-hero-content">
+<div class="page-breadcrumb">
+<a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
+<span>←</span>
+<span>الخدمات الإلكترونية</span>
+</div>
+<h1 data-i18n="hero_h1">الخدمات <em>الإلكترونية</em></h1>
+<p class="page-hero-desc" data-i18n="p_0">ضغطة زر تفصلك عن محاميك — تواصل مع فريقنا القانوني رقمياً، واحصل على خدماتك القانونية من أي مكان في المملكة.</p>
+</div>
+</div>
+<!-- E-SERVICES -->
+<section class="section-pad">
+<div class="section-header">
+<div class="tag">الخدمات الرقمية</div>
+<h2 class="section-title" data-i18n="h2_0">خدماتنا الإلكترونية</h2>
+<div class="gold-bar" style="margin:12px auto 18px;"></div>
+<p class="section-desc" data-i18n="p_1">نوظّف التقنية لتقريب الخدمة القانونية وجعلها في متناول يدك في أي وقت ومن أي مكان</p>
+</div>
+<div class="eserv-grid">
+<div class="eserv-card">
+<div class="eserv-icon">
+<svg fill="none" height="30" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="30">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"></path>
+</svg>
+</div>
+<h3 data-i18n="h3_0">استشارة فورية عبر واتساب</h3>
+<p data-i18n="p_2">تواصل مباشرةً مع محامينا عبر واتساب لطرح سؤالك القانوني والحصول على إجابة سريعة.</p>
+<a class="eserv-btn" href="https://wa.me/966533532153?text=أرغب%20في%20استشارة%20قانونية" rel="noopener" target="_blank">
                     ابدأ الآن ←
                 </a>
-            </div>
-
-            <div class="eserv-card">
-                <div class="eserv-icon">
-                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91A16 16 0 0 0 14.09 15.9l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-                    </svg>
-                </div>
-                <h3>حجز موعد هاتفي</h3>
-                <p>احجز وقتاً محدداً لاستشارة هاتفية مع محامينا بما يناسب جدولك الزمني.</p>
-                <a href="https://wa.me/966533532153?text=أرغب%20في%20حجز%20موعد%20هاتفي" target="_blank" rel="noopener" class="eserv-btn">
+</div>
+<div class="eserv-card">
+<div class="eserv-icon">
+<svg fill="none" height="30" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="30">
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91A16 16 0 0 0 14.09 15.9l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
+</svg>
+</div>
+<h3 data-i18n="h3_1">حجز موعد هاتفي</h3>
+<p data-i18n="p_3">احجز وقتاً محدداً لاستشارة هاتفية مع محامينا بما يناسب جدولك الزمني.</p>
+<a class="eserv-btn" href="https://wa.me/966533532153?text=أرغب%20في%20حجز%20موعد%20هاتفي" rel="noopener" target="_blank">
                     احجز موعد ←
                 </a>
-            </div>
-
-            <div class="eserv-card">
-                <div class="eserv-icon">
-                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M15 10l4.553-2.069A1 1 0 0 1 21 8.82v6.36a1 1 0 0 1-1.447.89L15 14M3 8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                    </svg>
-                </div>
-                <h3>استشارة مرئية (فيديو)</h3>
-                <p>تواصل وجهاً لوجه مع محاميك عن بُعد عبر مكالمة مرئية لمناقشة قضيتك بخصوصية تامة.</p>
-                <a href="https://wa.me/966533532153?text=أرغب%20في%20استشارة%20مرئية" target="_blank" rel="noopener" class="eserv-btn">
+</div>
+<div class="eserv-card">
+<div class="eserv-icon">
+<svg fill="none" height="30" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="30">
+<path d="M15 10l4.553-2.069A1 1 0 0 1 21 8.82v6.36a1 1 0 0 1-1.447.89L15 14M3 8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+</svg>
+</div>
+<h3 data-i18n="h3_2">استشارة مرئية (فيديو)</h3>
+<p data-i18n="p_4">تواصل وجهاً لوجه مع محاميك عن بُعد عبر مكالمة مرئية لمناقشة قضيتك بخصوصية تامة.</p>
+<a class="eserv-btn" href="https://wa.me/966533532153?text=أرغب%20في%20استشارة%20مرئية" rel="noopener" target="_blank">
                     طلب جلسة ←
                 </a>
-            </div>
-
-            <div class="eserv-card">
-                <div class="eserv-icon">
-                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
-                        <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
-                    </svg>
-                </div>
-                <h3>إرسال المستندات إلكترونياً</h3>
-                <p>أرسل مستنداتك وعقودك لفريقنا لمراجعتها وتدقيقها إلكترونياً والحصول على تقرير قانوني مفصّل.</p>
-                <a href="https://wa.me/966533532153?text=أرغب%20في%20إرسال%20مستندات%20لمراجعتها" target="_blank" rel="noopener" class="eserv-btn">
+</div>
+<div class="eserv-card">
+<div class="eserv-icon">
+<svg fill="none" height="30" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="30">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line>
+</svg>
+</div>
+<h3 data-i18n="h3_3">إرسال المستندات إلكترونياً</h3>
+<p data-i18n="p_5">أرسل مستنداتك وعقودك لفريقنا لمراجعتها وتدقيقها إلكترونياً والحصول على تقرير قانوني مفصّل.</p>
+<a class="eserv-btn" href="https://wa.me/966533532153?text=أرغب%20في%20إرسال%20مستندات%20لمراجعتها" rel="noopener" target="_blank">
                     أرسل الآن ←
                 </a>
-            </div>
-
-            <div class="eserv-card">
-                <div class="eserv-icon">
-                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-                    </svg>
-                </div>
-                <h3>متابعة القضية الرقمية</h3>
-                <p>تابع آخر تطورات قضيتك وتقاريرها دورياً عبر التواصل الإلكتروني مع فريقنا المخصص.</p>
-                <a href="https://wa.me/966533532153?text=أرغب%20في%20الاستفسار%20عن%20متابعة%20قضيتي" target="_blank" rel="noopener" class="eserv-btn">
+</div>
+<div class="eserv-card">
+<div class="eserv-icon">
+<svg fill="none" height="30" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="30">
+<circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+</div>
+<h3 data-i18n="h3_4">متابعة القضية الرقمية</h3>
+<p data-i18n="p_6">تابع آخر تطورات قضيتك وتقاريرها دورياً عبر التواصل الإلكتروني مع فريقنا المخصص.</p>
+<a class="eserv-btn" href="https://wa.me/966533532153?text=أرغب%20في%20الاستفسار%20عن%20متابعة%20قضيتي" rel="noopener" target="_blank">
                     استفسر ←
                 </a>
-            </div>
-
-            <div class="eserv-card">
-                <div class="eserv-icon">
-                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                    </svg>
-                </div>
-                <h3>عقد الحماية القانونية السنوي</h3>
-                <p>اشترك في عقد الحماية القانونية السنوي لتحظى بتغطية قانونية شاملة على مدار العام بتكلفة ثابتة.</p>
-                <a href="https://wa.me/966533532153?text=أرغب%20في%20الاشتراك%20بعقد%20الحماية%20القانونية%20السنوي" target="_blank" rel="noopener" class="eserv-btn">
+</div>
+<div class="eserv-card">
+<div class="eserv-icon">
+<svg fill="none" height="30" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="30">
+<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+</svg>
+</div>
+<h3 data-i18n="h3_5">عقد الحماية القانونية السنوي</h3>
+<p data-i18n="p_7">اشترك في عقد الحماية القانونية السنوي لتحظى بتغطية قانونية شاملة على مدار العام بتكلفة ثابتة.</p>
+<a class="eserv-btn" href="https://wa.me/966533532153?text=أرغب%20في%20الاشتراك%20بعقد%20الحماية%20القانونية%20السنوي" rel="noopener" target="_blank">
                     اشترك الآن ←
                 </a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- APP SECTION -->
-    <section class="app-section">
-        <div class="app-inner">
-            <div class="app-text">
-                <div class="tag" style="background:rgba(184,147,90,.15);border-color:rgba(184,147,90,.4);color:var(--gold-light);margin-bottom:16px;">قريباً</div>
-                <h2>تطبيق <em>مشاري بندر بن جلوي</em> القانوني</h2>
-                <p>نعمل على تطوير تطبيق ذكي يتيح لك تصفّح خدماتنا، حجز الاستشارات، متابعة قضاياك، وإرسال المستندات — كل ذلك من هاتفك الذكي وبضغطة زر واحدة.</p>
-                <div class="app-btns">
-                    <div class="app-btn" style="opacity:.6;cursor:default;">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.7 9.05 7.4c1.42.07 2.38.74 3.2.8 1.21-.25 2.38-.97 3.6-.84 1.53.17 2.69.75 3.44 1.97-3.28 2.04-2.64 6.26.91 7.35-.42 1.2-.88 2.35-3.15 4.6zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
-                        <div><div class="app-btn-label">قريباً على</div><div class="app-btn-store">App Store</div></div>
-                    </div>
-                    <div class="app-btn" style="opacity:.6;cursor:default;">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M3.18 23.76a2 2 0 0 1-.89-1.87V2.11a2 2 0 0 1 .89-1.87l.1-.06 11.62 11.62-.1.1L3.18 23.76zm15.24-7.05l-2.72-1.58-2.93 2.93 2.93 2.93 2.72-1.58a2.01 2.01 0 0 0 0-3.7zM2.5 1.3l9.9 9.9-2.72 2.72L2.5 1.3zM2.5 22.7l7.18-12.92 2.72 2.72-9.9 10.2z"/></svg>
-                        <div><div class="app-btn-label">قريباً على</div><div class="app-btn-store">Google Play</div></div>
-                    </div>
-                </div>
-            </div>
-            <div class="app-visual">
-                <div class="app-mockup">
-                    <div class="app-mockup-icon">⚖️</div>
-                    <div class="app-mockup-text">تطبيق مشاري بندر بن جلوي القانوني<br>قريباً</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <div class="cta-section">
-        <h2>ابدأ رحلتك القانونية الآن</h2>
-        <p>لا تنتظر — تواصل مع فريقنا وسنرشدك بخطوات واضحة نحو حل قضيتك</p>
-        <div class="cta-btns">
-            <a href="https://wa.me/966533532153" target="_blank" rel="noopener" class="btn-gold">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</div>
+</div>
+</section>
+<!-- APP SECTION -->
+<section class="app-section">
+<div class="app-inner">
+<div class="app-text">
+<div class="tag" style="background:rgba(184,147,90,.15);border-color:rgba(184,147,90,.4);color:var(--gold-light);margin-bottom:16px;">قريباً</div>
+<h2 data-i18n="h2_1">تطبيق <em>مشاري بندر بن جلوي</em> القانوني</h2>
+<p data-i18n="p_8">نعمل على تطوير تطبيق ذكي يتيح لك تصفّح خدماتنا، حجز الاستشارات، متابعة قضاياك، وإرسال المستندات — كل ذلك من هاتفك الذكي وبضغطة زر واحدة.</p>
+<div class="app-btns">
+<div class="app-btn" style="opacity:.6;cursor:default;">
+<svg fill="white" height="26" viewbox="0 0 24 24" width="26"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.7 9.05 7.4c1.42.07 2.38.74 3.2.8 1.21-.25 2.38-.97 3.6-.84 1.53.17 2.69.75 3.44 1.97-3.28 2.04-2.64 6.26.91 7.35-.42 1.2-.88 2.35-3.15 4.6zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"></path></svg>
+<div><div class="app-btn-label">قريباً على</div><div class="app-btn-store">App Store</div></div>
+</div>
+<div class="app-btn" style="opacity:.6;cursor:default;">
+<svg fill="white" height="26" viewbox="0 0 24 24" width="26"><path d="M3.18 23.76a2 2 0 0 1-.89-1.87V2.11a2 2 0 0 1 .89-1.87l.1-.06 11.62 11.62-.1.1L3.18 23.76zm15.24-7.05l-2.72-1.58-2.93 2.93 2.93 2.93 2.72-1.58a2.01 2.01 0 0 0 0-3.7zM2.5 1.3l9.9 9.9-2.72 2.72L2.5 1.3zM2.5 22.7l7.18-12.92 2.72 2.72-9.9 10.2z"></path></svg>
+<div><div class="app-btn-label">قريباً على</div><div class="app-btn-store">Google Play</div></div>
+</div>
+</div>
+</div>
+<div class="app-visual">
+<div class="app-mockup">
+<div class="app-mockup-icon">⚖️</div>
+<div class="app-mockup-text">تطبيق مشاري بندر بن جلوي القانوني<br/>قريباً</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<div class="cta-section">
+<h2 data-i18n="h2_2">ابدأ رحلتك القانونية الآن</h2>
+<p data-i18n="p_9">لا تنتظر — تواصل مع فريقنا وسنرشدك بخطوات واضحة نحو حل قضيتك</p>
+<div class="cta-btns">
+<a class="btn-gold" data-i18n="cta_btn1" href="https://wa.me/966533532153" rel="noopener" target="_blank">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path></svg>
                 تواصل عبر واتساب
             </a>
-            <a href="index.html" class="btn-navy">العودة للرئيسية</a>
-        </div>
-    </div>
-
-    <footer>
-        <p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
-        <p style="margin-top:8px;"><a href="index.html" data-i18n="footer_home">الرئيسية</a></p>
-    </footer>
-
-    <a href="https://wa.me/966533532153" class="whatsapp-fab" target="_blank" rel="noopener">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-    </a>
-
-
-
-    <script>
+<a class="btn-navy" data-i18n="cta_btn2" href="index.html">العودة للرئيسية</a>
+</div>
+</div>
+<footer>
+<p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+<p style="margin-top:8px;"><a data-i18n="footer_home" href="index.html">الرئيسية</a></p>
+</footer>
+<a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank">
+<svg fill="white" height="28" viewbox="0 0 24 24" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path></svg>
+</a>
+<script>
 const pageTranslations = {
-  breadcrumb_current: {0: 'الخدمات الإلكترونية', 1: 'Electronic Services', 2: '电子服务'},
-  breadcrumb_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  cta_button: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
-  footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Mashary Bandar Bin Jalawi Law Firm — All rights reserved', 2: '© 2025 玛沙里·班达尔·本·贾劳伊律师事务所 — 版权所有'},
-  footer_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  hero_desc: {0: 'خدمات قانونية إلكترونية تُوفر استشارات آمنة وسهلة عبر الإنترنت', 1: 'Electronic legal services providing secure and easy online consultations', 2: '电子法律服务，提供安全便捷的在线咨询'},
-  hero_title: {0: 'الخدمات الإلكترونية', 1: 'Electronic Services', 2: '电子服务'},
-  nav_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
-  nav_careers: {0: 'التوظيف', 1: 'Careers', 2: '招聘'},
-  nav_contact: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
-  nav_contracts: {0: 'عقود الشركات', 1: 'Company Contracts', 2: '公司合同'},
-  nav_eservices: {0: 'الخدمات الإلكترونية', 1: 'E-Services', 2: '电子服务'},
-  nav_faq: {0: 'الأسئلة الشائعة', 1: 'FAQ', 2: '常见问题'},
-  nav_services: {0: 'خدماتنا', 1: 'Our Services', 2: '我们的服务'},
-  nav_team: {0: 'فريقنا', 1: 'Our Team', 2: '我们的团队'},
-  whatsapp_button: {0: 'تواصل عبر واتساب', 1: 'Contact via WhatsApp', 2: '通过WhatsApp联系'},
+    breadcrumb_home: {0: "الرئيسية", 1: "Home", 2: "主页"},
+    cta_h2: {0: "هل أنت مستعد للخدمات القانونية الرقمية؟", 1: "Are You Ready for Digital Legal Services?", 2: "您是否准备好使用数字法律服务？"},
+    cta_p: {0: "انضم إلى آلاف العملاء الذين يثقون بخدماتنا", 1: "Join thousands of clients who trust our services", 2: "加入数千名信任我们服务的客户"},
+    footer_copyright: {0: "© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة", 1: "© 2025 Al Meshary Bin Bandar Bin Jaloui Law Firm and Legal Consultations — All rights reserved", 2: "© 2025 美沙里·本·班达尔·本·贾卢伊律师事务所和法律咨询——版权所有"},
+    footer_home: {0: "الرئيسية", 1: "Home", 2: "主页"},
+    h1: {0: "الخدمات الإلكترونية", 1: "E-Services", 2: "电子服务"},
+    h2_0: {0: "خدماتنا الإلكترونية", 1: "Our Electronic Services", 2: "我们的电子服务"},
+    h2_1: {0: "تطبيق قانوني متطور", 1: "Advanced Legal Application", 2: "先进的法律应用"},
+    h3_0: {0: "استشارة فورية عبر واتساب", 1: "Instant Consultation via WhatsApp", 2: "通过WhatsApp即时咨询"},
+    p_0: {0: "ضغطة زر تفصلك عن محاميك", 1: "One click away from your lawyer", 2: "一键即可联系您的律师"},
+    p_1: {0: "نوظّف التقنية لتقريب الخدمة القانونية", 1: "We use technology to bring legal services closer", 2: "我们利用技术使法律服务更接近"},
 };
+
 </script>
 <script src="lang.js"></script>
-    </body>
+</body>
 </html>

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+
+<html dir="rtl" lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الباقة الأساسية — شركة مشاري بندر بن جلوي للمحاماة</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>الباقة الأساسية — شركة مشاري بندر بن جلوي للمحاماة</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
         :root{--navy:#1B2C6B;--navy-dark:#111d4a;--navy-mid:#223580;--gold:#B8935A;--gold-light:#d4aa72;--gold-pale:#f5ede0;--white:#fff;--off-white:#f8f6f2;--gray:#6b7280;--gray-dark:#374151;--border:#e5e1d9}
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
         html{scroll-behavior:smooth;overflow-x:hidden}
@@ -105,208 +106,179 @@
         </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="logo.png" alt="شعار شركة مشاري بندر بن جلوي">
-                <div>
-                    <div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
-                    <div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
-                </div>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html#services" data-i18n="nav_services">خدماتنا</a></li>
-                <li><a href="index.html#packages">الباقات</a></li>
-                <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
-                <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
-                <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-                <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
-            </ul>
-            <div style="display:flex;align-items:center;gap:10px;">
-                <div class="lang-drop" id="langDrop">
-                    <button class="lang-drop-btn" onclick="toggleLangDrop()" id="langDropBtn">🇸🇦</button>
-                    <div class="lang-drop-menu" id="langDropMenu">
-                        <button onclick="setLang(0);toggleLangDrop()" data-lang="0">🇸🇦 العربية</button>
-                        <button onclick="setLang(1);toggleLangDrop()" data-lang="1">🇬🇧 English</button>
-                        <button onclick="setLang(2);toggleLangDrop()" data-lang="2">🇨🇳 中文</button>
-                    </div>
-                </div>
-                <a href="https://wa.me/966533532153" target="_blank" rel="noopener" class="nav-cta">احجز استشارة</a>
-                <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div class="mobile-drawer" id="drawer">
-        <ul>
-            <li><a href="index.html#services" data-i18n="nav_services" data-i18n="nav_services">خدماتنا</a></li>
-            <li><a href="index.html#packages">الباقات</a></li>
-            <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
-            <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
-            <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-            <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
-            <li><a href="https://wa.me/966533532153">احجز استشارة</a></li>
-        </ul>
-    </div>
-
-    <!-- HERO SECTION -->
-    <section class="page-hero">
-        <div class="page-hero-content">
-            <div class="breadcrumb">
-                <a href="index.html">الرئيسية</a>
-                <span>•</span>
-                <a href="index.html#packages">الباقات</a>
-                <span>•</span>
-                <span>الباقة الأساسية</span>
-            </div>
-            <span class="pkg-badge">للأفراد والمنشآت الصغيرة</span>
-            <h1>الباقة <em>الأساسية</em></h1>
-            <p class="page-hero-desc">انطلق بثقة مع باقة قانونية تناسب الأفراد والمنشآت الصغيرة، تُوفر لك دعماً مستمراً بتكلفة مناسبة ومرونة في التعامل</p>
-        </div>
-    </section>
-
-    <!-- FEATURES SECTION -->
-    <section class="section-pad">
-        <span class="tag">ما تشمله الباقة</span>
-        <h2 class="sec-title">مزايا الباقة الأساسية</h2>
-        <div class="gold-bar"></div>
-
-        <div class="feat-grid">
-            <div class="feat-card">
-                <div class="feat-icon">🗓️</div>
-                <div>
-                    <h4>استشارات شهرية</h4>
-                    <p>حتى 4 استشارات قانونية شهرياً عبر الهاتف أو مقابلة مباشرة</p>
-                </div>
-            </div>
-
-            <div class="feat-card">
-                <div class="feat-icon">📝</div>
-                <div>
-                    <h4>مراجعة العقود</h4>
-                    <p>مراجعة عقد واحد شهرياً والتحقق من سلامته القانونية</p>
-                </div>
-            </div>
-
-            <div class="feat-card">
-                <div class="feat-icon">⚡</div>
-                <div>
-                    <h4>رد سريع</h4>
-                    <p>الرد على استفساراتك خلال 48 ساعة عمل</p>
-                </div>
-            </div>
-
-            <div class="feat-card">
-                <div class="feat-icon">📨</div>
-                <div>
-                    <h4>المراسلات الرسمية</h4>
-                    <p>صياغة خطاب رسمي أو إشعار قانوني شهرياً</p>
-                </div>
-            </div>
-
-            <div class="feat-card">
-                <div class="feat-icon">🏛️</div>
-                <div>
-                    <h4>المتابعة الإدارية</h4>
-                    <p>متابعة المعاملات الإدارية البسيطة مع الجهات الحكومية</p>
-                </div>
-            </div>
-
-            <div class="feat-card">
-                <div class="feat-icon">📊</div>
-                <div>
-                    <h4>تقرير ربع سنوي</h4>
-                    <p>تقرير موجز عن الوضع القانوني كل 3 أشهر</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- COMPARISON SECTION -->
-    <section class="section-pad alt">
-        <div class="compare-box">
-            <h3>مقارنة الباقات</h3>
-            <div class="compare-grid">
-                <div class="compare-col active">
-                    <h4>الباقة الأساسية</h4>
-                    <ul>
-                        <li>استشارات شهرية</li>
-                        <li>مراجعة العقود</li>
-                        <li>رد سريع</li>
-                        <li>مراسلات رسمية</li>
-                        <li>متابعة إدارية</li>
-                        <li>تقارير ربع سنوية</li>
-                    </ul>
-                </div>
-                <div class="compare-col">
-                    <h4>الباقة الاحترافية</h4>
-                    <ul>
-                        <li>استشارات غير محدودة</li>
-                        <li>صياغة العقود</li>
-                        <li>اعتماد اللوائح</li>
-                        <li>حماية رسمية</li>
-                        <li>تقارير دورية</li>
-                        <li>أولوية الرد</li>
-                    </ul>
-                </div>
-                <div class="compare-col">
-                    <h4>الباقة المؤسسية</h4>
-                    <ul>
-                        <li>محامٍ مخصص</li>
-                        <li>تمثيل قضائي كامل</li>
-                        <li>عقود بلا حدود</li>
-                        <li>اجتماعات دورية</li>
-                        <li>دعم طارئ</li>
-                        <li>تقارير تفصيلية</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA SECTION -->
-    <section class="cta-section">
-        <h2>ابدأ رحلتك القانونية الآن</h2>
-        <p>تواصل معنا اليوم لاختيار الباقة الأنسب لاحتياجاتك القانونية</p>
-        <div class="cta-btns">
-            <a href="https://wa.me/966533532153" target="_blank" rel="noopener" class="btn-gold">ابدأ الآن عبر واتساب</a>
-            <a href="index.html#packages" class="btn-outline">عرض جميع الباقات</a>
-        </div>
-    </section>
-
-    <footer>
-        <p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
-        <p style="margin-top:8px;"><a href="index.html#packages">← العودة للباقات</a></p>
-    </footer>
-    <a href="https://wa.me/966533532153" class="whatsapp-fab" target="_blank" rel="noopener">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-    </a>
-
-
-    <script>
+<nav class="navbar">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">
+<img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png"/>
+<div>
+<div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
+</div>
+</a>
+<ul class="nav-links">
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a href="index.html#packages">الباقات</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+<div style="display:flex;align-items:center;gap:10px;">
+<div class="lang-drop" id="langDrop">
+<button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
+<div class="lang-drop-menu" id="langDropMenu">
+<button data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦 العربية</button>
+<button data-lang="1" onclick="setLang(1);toggleLangDrop()">🇬🇧 English</button>
+<button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
+</div>
+</div>
+<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
+<div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
+<span></span><span></span><span></span>
+</div>
+</div>
+</div>
+</nav>
+<div class="mobile-drawer" id="drawer">
+<ul>
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a href="index.html#packages">الباقات</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+<li><a href="https://wa.me/966533532153">احجز استشارة</a></li>
+</ul>
+</div>
+<!-- HERO SECTION -->
+<section class="page-hero">
+<div class="page-hero-content">
+<div class="breadcrumb">
+<a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
+<span>•</span>
+<a data-i18n="breadcrumb_packages" href="index.html#packages">الباقات</a>
+<span>•</span>
+<span data-i18n="breadcrumb_current">الباقة الأساسية</span>
+</div>
+<span class="pkg-badge" data-i18n="pkg_badge">للأفراد والمنشآت الصغيرة</span>
+<h1 data-i18n="hero_h1">الباقة <em>الأساسية</em></h1>
+<p class="page-hero-desc" data-i18n="hero_desc">انطلق بثقة مع باقة قانونية تناسب الأفراد والمنشآت الصغيرة، تُوفر لك دعماً مستمراً بتكلفة مناسبة ومرونة في التعامل</p>
+</div>
+</section>
+<!-- FEATURES SECTION -->
+<section class="section-pad">
+<span class="tag">ما تشمله الباقة</span>
+<h2 class="sec-title" data-i18n="section_title_0">مزايا الباقة الأساسية</h2>
+<div class="gold-bar"></div>
+<div class="feat-grid">
+<div class="feat-card">
+<div class="feat-icon">🗓️</div>
+<div>
+<h4 data-i18n="feat_card_0_h4">استشارات شهرية</h4>
+<p data-i18n="feat_card_0_p">حتى 4 استشارات قانونية شهرياً عبر الهاتف أو مقابلة مباشرة</p>
+</div>
+</div>
+<div class="feat-card">
+<div class="feat-icon">📝</div>
+<div>
+<h4 data-i18n="feat_card_1_h4">مراجعة العقود</h4>
+<p data-i18n="feat_card_1_p">مراجعة عقد واحد شهرياً والتحقق من سلامته القانونية</p>
+</div>
+</div>
+<div class="feat-card">
+<div class="feat-icon">⚡</div>
+<div>
+<h4 data-i18n="feat_card_2_h4">رد سريع</h4>
+<p data-i18n="feat_card_2_p">الرد على استفساراتك خلال 48 ساعة عمل</p>
+</div>
+</div>
+<div class="feat-card">
+<div class="feat-icon">📨</div>
+<div>
+<h4 data-i18n="feat_card_3_h4">المراسلات الرسمية</h4>
+<p data-i18n="feat_card_3_p">صياغة خطاب رسمي أو إشعار قانوني شهرياً</p>
+</div>
+</div>
+<div class="feat-card">
+<div class="feat-icon">🏛️</div>
+<div>
+<h4 data-i18n="feat_card_4_h4">المتابعة الإدارية</h4>
+<p data-i18n="feat_card_4_p">متابعة المعاملات الإدارية البسيطة مع الجهات الحكومية</p>
+</div>
+</div>
+<div class="feat-card">
+<div class="feat-icon">📊</div>
+<div>
+<h4 data-i18n="feat_card_5_h4">تقرير ربع سنوي</h4>
+<p data-i18n="feat_card_5_p">تقرير موجز عن الوضع القانوني كل 3 أشهر</p>
+</div>
+</div>
+</div>
+</section>
+<!-- COMPARISON SECTION -->
+<section class="section-pad alt">
+<div class="compare-box">
+<h3 data-i18n="compare_h3">مقارنة الباقات</h3>
+<div class="compare-grid">
+<div class="compare-col active">
+<h4 data-i18n="compare_col_0_h4">الباقة الأساسية</h4>
+<ul>
+<li data-i18n="compare_col_0_li_0">استشارات شهرية</li>
+<li data-i18n="compare_col_0_li_1">مراجعة العقود</li>
+<li data-i18n="compare_col_0_li_2">رد سريع</li>
+<li data-i18n="compare_col_0_li_3">مراسلات رسمية</li>
+<li data-i18n="compare_col_0_li_4">متابعة إدارية</li>
+<li data-i18n="compare_col_0_li_5">تقارير ربع سنوية</li>
+</ul>
+</div>
+<div class="compare-col">
+<h4 data-i18n="compare_col_1_h4">الباقة الاحترافية</h4>
+<ul>
+<li data-i18n="compare_col_1_li_0">استشارات غير محدودة</li>
+<li data-i18n="compare_col_1_li_1">صياغة العقود</li>
+<li data-i18n="compare_col_1_li_2">اعتماد اللوائح</li>
+<li data-i18n="compare_col_1_li_3">حماية رسمية</li>
+<li data-i18n="compare_col_1_li_4">تقارير دورية</li>
+<li data-i18n="compare_col_1_li_5">أولوية الرد</li>
+</ul>
+</div>
+<div class="compare-col">
+<h4 data-i18n="compare_col_2_h4">الباقة المؤسسية</h4>
+<ul>
+<li data-i18n="compare_col_2_li_0">محامٍ مخصص</li>
+<li data-i18n="compare_col_2_li_1">تمثيل قضائي كامل</li>
+<li data-i18n="compare_col_2_li_2">عقود بلا حدود</li>
+<li data-i18n="compare_col_2_li_3">اجتماعات دورية</li>
+<li data-i18n="compare_col_2_li_4">دعم طارئ</li>
+<li data-i18n="compare_col_2_li_5">تقارير تفصيلية</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA SECTION -->
+<section class="cta-section">
+<h2 data-i18n="cta_h2">ابدأ رحلتك القانونية الآن</h2>
+<p data-i18n="cta_p">تواصل معنا اليوم لاختيار الباقة الأنسب لاحتياجاتك القانونية</p>
+<div class="cta-btns">
+<a class="btn-gold" data-i18n="cta_btn_0" href="https://wa.me/966533532153" rel="noopener" target="_blank">ابدأ الآن عبر واتساب</a>
+<a class="btn-outline" data-i18n="cta_btn_1" href="index.html#packages">عرض جميع الباقات</a>
+</div>
+</section>
+<footer>
+<p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+<p style="margin-top:8px;"><a data-i18n="footer_home" href="index.html#packages">← العودة للباقات</a></p>
+</footer>
+<a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank">
+<svg fill="white" height="26" viewbox="0 0 24 24" width="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path></svg>
+</a>
+<script>
 const pageTranslations = {
-  breadcrumb_current: {0: 'الباقة الأساسية', 1: 'Basic', 2: '基础套餐'},
-  breadcrumb_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  breadcrumb_packages: {0: 'الخطط', 1: 'Packages', 2: '套餐'},
-  breadcrumb_services: {0: 'الخدمات', 1: 'Services', 2: '服务'},
-  cta_button: {0: 'احجز الآن', 1: 'Book Now', 2: '立即预订'},
-  footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Mashary Bandar Bin Jalawi Law Firm — All rights reserved', 2: '© 2025 玛沙里·班达尔·本·贾劳伊律师事务所 — 版权所有'},
-  footer_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  hero_desc: {0: 'اختر الخطة المناسبة لاحتياجاتك القانونية', 1: 'Choose the right plan for your legal needs', 2: '为您的法律需求选择合适的计划'},
-  hero_title: {0: 'خطط الخدمات القانونية', 1: 'Legal Service Plans', 2: '法律服务计划'},
-  nav_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
-  nav_careers: {0: 'التوظيف', 1: 'Careers', 2: '招聘'},
-  nav_contact: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
-  nav_contracts: {0: 'عقود الشركات', 1: 'Company Contracts', 2: '公司合同'},
-  nav_eservices: {0: 'الخدمات الإلكترونية', 1: 'E-Services', 2: '电子服务'},
-  nav_faq: {0: 'الأسئلة الشائعة', 1: 'FAQ', 2: '常见问题'},
-  nav_services: {0: 'خدماتنا', 1: 'Our Services', 2: '我们的服务'},
-  nav_team: {0: 'فريقنا', 1: 'Our Team', 2: '我们的团队'},
-  package_name: {0: 'الباقة الأساسية', 1: 'Basic', 2: '基础套餐'},
-  whatsapp_button: {0: 'تواصل عبر واتساب', 1: 'Contact via WhatsApp', 2: '通过WhatsApp联系'},
+    hero_desc: {0: "خدمات قانونية أساسية بأسعار معقولة", 1: "Basic legal services at reasonable prices", 2: "价格合理的基础法律服务"},
+    hero_h1: {0: "الباقة الأساسية", 1: "Basic Package", 2: "基础套餐"},
 };
+
 </script>
 <script src="lang.js"></script>
-    </body>
+</body>
 </html>

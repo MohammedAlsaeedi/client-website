@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+
+<html dir="rtl" lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>التوظيف — شركة مشاري بندر بن جلوي للمحاماة</title>
-    <meta name="description" content="انضم إلى فريقنا القانوني — شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>التوظيف — شركة مشاري بندر بن جلوي للمحاماة</title>
+<meta content="انضم إلى فريقنا القانوني — شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
         :root {
             --navy: #1B2C6B; --navy-dark: #111d4a; --navy-mid: #223580;
             --gold: #B8935A; --gold-light: #d4aa72; --gold-pale: #f5ede0;
@@ -113,217 +114,198 @@
         </style>
 </head>
 <body>
-
-    <nav class="navbar">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="logo.png" alt="شعار شركة مشاري بندر بن جلوي">
-                <div>
-                    <div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
-                    <div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
-                </div>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html#services" data-i18n="nav_services">خدماتنا</a></li>
-                <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
-                <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-                <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
-                <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
-                <li><a href="e-services.html" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
-                <li><a href="careers.html" class="active" data-i18n="nav_careers">التوظيف</a></li>
-                <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
-            </ul>
-            <div style="display:flex;align-items:center;gap:10px;">
-                <div class="lang-drop" id="langDrop">
-                    <button class="lang-drop-btn" onclick="toggleLangDrop()" id="langDropBtn">🇸🇦</button>
-                    <div class="lang-drop-menu" id="langDropMenu">
-                        <button onclick="setLang(0);toggleLangDrop()" data-lang="0">🇸🇦 العربية</button>
-                        <button onclick="setLang(1);toggleLangDrop()" data-lang="1">🇬🇧 English</button>
-                        <button onclick="setLang(2);toggleLangDrop()" data-lang="2">🇨🇳 中文</button>
-                    </div>
-                </div>
-                <a href="https://wa.me/966533532153" target="_blank" rel="noopener" class="nav-cta">احجز استشارة</a>
-                <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <div class="mobile-drawer" id="drawer">
-        <ul>
-            <li><a href="index.html#services" data-i18n="nav_services" data-i18n="nav_services">خدماتنا</a></li>
-            <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
-            <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-            <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
-            <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
-            <li><a href="e-services.html" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
-            <li><a href="careers.html" data-i18n="nav_careers">التوظيف</a></li>
-            <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
-        </ul>
-    </div>
-
-    <div class="page-hero">
-        <div class="page-hero-content">
-            <div class="page-breadcrumb">
-                <a href="index.html" data-i18n="breadcrumb_home">الرئيسية</a>
-                <span>←</span>
-                <span>التوظيف</span>
-            </div>
-            <h1>انضم إلى <em>فريقنا</em></h1>
-            <p class="page-hero-desc">نبحث دائماً عن كفاءات قانونية متميزة تؤمن بالعدالة والاحترافية. إذا كنت تمتلك الشغف والكفاءة، نسعد بانضمامك لعائلة مشاري بندر بن جلوي للمحاماة.</p>
-        </div>
-    </div>
-
-    <!-- WHY JOIN -->
-    <section class="why-section">
-        <div class="section-header">
-            <div class="tag">لماذا تنضم إلينا؟</div>
-            <h2 class="section-title">بيئة عمل احترافية ومحفّزة</h2>
-            <div class="gold-bar"></div>
-        </div>
-        <div class="perks-grid">
-            <div class="perk-card">
-                <div class="perk-icon">⚖️</div>
-                <h4>قضايا متنوعة ومثرية</h4>
-                <p>ستتعامل مع قضايا في مختلف التخصصات القانونية مما يعزز خبرتك المهنية باستمرار.</p>
-            </div>
-            <div class="perk-card">
-                <div class="perk-icon">📈</div>
-                <h4>نمو وتطوير مهني</h4>
-                <p>نوفر بيئة تشجع على التعلم المستمر والنمو القانوني من خلال الخبرة الميدانية والتدريب.</p>
-            </div>
-            <div class="perk-card">
-                <div class="perk-icon">🤝</div>
-                <h4>فريق متماسك وداعم</h4>
-                <p>ستنضم لفريق يعمل بروح جماعية ويدعم أعضاءه في مختلف المراحل المهنية.</p>
-            </div>
-            <div class="perk-card">
-                <div class="perk-icon">🏆</div>
-                <h4>سمعة راسخة</h4>
-                <p>انضم لشركة محاماة ذات سمعة مهنية مرموقة ومعروفة بالاحترافية والنزاهة.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- APPLICATION FORM -->
-    <section class="form-section" id="apply">
-        <div class="form-wrap">
-            <h2 class="form-title">📋 نموذج التقديم الوظيفي</h2>
-            <p class="form-sub">أكمل النموذج أدناه وسيتواصل معك فريق الموارد البشرية في أقرب وقت ممكن للتحقق من أهليتك والخطوات التالية.</p>
-
-            <form id="careerForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="handleSubmit(event)">
-                <input type="hidden" name="_subject" value="طلب توظيف جديد — موقع شركة مشاري بندر بن جلوي">
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="fname">الاسم الكامل <span class="required">*</span></label>
-                        <input type="text" id="fname" name="full_name" placeholder="اسمك الكامل" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="nationality">الجنسية <span class="required">*</span></label>
-                        <input type="text" id="nationality" name="nationality" placeholder="مثال: سعودي" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="phone">رقم الجوال <span class="required">*</span></label>
-                        <input type="tel" id="phone" name="phone" placeholder="05xxxxxxxx" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">البريد الإلكتروني <span class="required">*</span></label>
-                        <input type="email" id="email" name="email" placeholder="example@email.com" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="position">الوظيفة المطلوبة <span class="required">*</span></label>
-                    <select id="position" name="position" required>
-                        <option value="" disabled selected>— اختر الوظيفة —</option>
-                        <option value="محامٍ / محامية مرخّص(ة)">محامٍ / محامية مرخّص(ة)</option>
-                        <option value="مستشار / مستشارة قانونية">مستشار / مستشارة قانونية</option>
-                        <option value="باحث(ة) قانوني">باحث(ة) قانوني</option>
-                        <option value="متدرب(ة) قانوني">متدرب(ة) قانوني</option>
-                        <option value="سكرتير(ة) قانوني">سكرتير(ة) قانوني</option>
-                        <option value="مسؤول(ة) خدمة العملاء">مسؤول(ة) خدمة العملاء</option>
-                        <option value="أخرى">أخرى</option>
-                    </select>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="education">المؤهل العلمي <span class="required">*</span></label>
-                        <select id="education" name="education" required>
-                            <option value="" disabled selected>— اختر —</option>
-                            <option value="بكالوريوس قانون">بكالوريوس قانون</option>
-                            <option value="بكالوريوس شريعة">بكالوريوس شريعة</option>
-                            <option value="ماجستير قانون">ماجستير قانون</option>
-                            <option value="دكتوراه قانون">دكتوراه قانون</option>
-                            <option value="تخصص آخر">تخصص آخر</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="experience">سنوات الخبرة <span class="required">*</span></label>
-                        <select id="experience" name="experience" required>
-                            <option value="" disabled selected>— اختر —</option>
-                            <option value="بدون خبرة (حديث التخرج)">بدون خبرة (حديث التخرج)</option>
-                            <option value="أقل من سنة">أقل من سنة</option>
-                            <option value="1-3 سنوات">1-3 سنوات</option>
-                            <option value="3-5 سنوات">3-5 سنوات</option>
-                            <option value="أكثر من 5 سنوات">أكثر من 5 سنوات</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="licensed">هل أنت محامٍ / محامية مرخّص(ة)؟</label>
-                    <select id="licensed" name="licensed">
-                        <option value="" disabled selected>— اختر —</option>
-                        <option value="نعم، مرخّص(ة) لدى هيئة المحامين">نعم، مرخّص(ة) لدى هيئة المحامين</option>
-                        <option value="قيد الإجراءات">قيد الإجراءات</option>
-                        <option value="لا">لا</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="cv_link">رابط السيرة الذاتية (اختياري)</label>
-                    <input type="url" id="cv_link" name="cv_link" placeholder="https://drive.google.com/...">
-                </div>
-
-                <div class="form-group">
-                    <label for="message">نبذة عنك ودوافعك للانضمام <span class="required">*</span></label>
-                    <textarea id="message" name="message" placeholder="اكتب باختصار عن نفسك، خبراتك، وسبب رغبتك في الانضمام لشركتنا..." required></textarea>
-                </div>
-
-                <div class="form-note">
+<nav class="navbar">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">
+<img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png"/>
+<div>
+<div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
+</div>
+</a>
+<ul class="nav-links">
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a class="active" data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+<div style="display:flex;align-items:center;gap:10px;">
+<div class="lang-drop" id="langDrop">
+<button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
+<div class="lang-drop-menu" id="langDropMenu">
+<button data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦 العربية</button>
+<button data-lang="1" onclick="setLang(1);toggleLangDrop()">🇬🇧 English</button>
+<button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
+</div>
+</div>
+<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
+<div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
+<span></span><span></span><span></span>
+</div>
+</div>
+</div>
+</nav>
+<div class="mobile-drawer" id="drawer">
+<ul>
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li data-i18n="li_0"><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+</div>
+<div class="page-hero">
+<div class="page-hero-content">
+<div class="page-breadcrumb">
+<a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
+<span>←</span>
+<span>التوظيف</span>
+</div>
+<h1 data-i18n="hero_h1">انضم إلى <em>فريقنا</em></h1>
+<p class="page-hero-desc" data-i18n="p_0">نبحث دائماً عن كفاءات قانونية متميزة تؤمن بالعدالة والاحترافية. إذا كنت تمتلك الشغف والكفاءة، نسعد بانضمامك لعائلة مشاري بندر بن جلوي للمحاماة.</p>
+</div>
+</div>
+<!-- WHY JOIN -->
+<section class="why-section">
+<div class="section-header">
+<div class="tag">لماذا تنضم إلينا؟</div>
+<h2 class="section-title" data-i18n="h2_0">بيئة عمل احترافية ومحفّزة</h2>
+<div class="gold-bar"></div>
+</div>
+<div class="perks-grid">
+<div class="perk-card">
+<div class="perk-icon">⚖️</div>
+<h4 data-i18n="h4_0">قضايا متنوعة ومثرية</h4>
+<p data-i18n="p_1">ستتعامل مع قضايا في مختلف التخصصات القانونية مما يعزز خبرتك المهنية باستمرار.</p>
+</div>
+<div class="perk-card">
+<div class="perk-icon">📈</div>
+<h4 data-i18n="h4_1">نمو وتطوير مهني</h4>
+<p data-i18n="p_2">نوفر بيئة تشجع على التعلم المستمر والنمو القانوني من خلال الخبرة الميدانية والتدريب.</p>
+</div>
+<div class="perk-card">
+<div class="perk-icon">🤝</div>
+<h4 data-i18n="h4_2">فريق متماسك وداعم</h4>
+<p data-i18n="p_3">ستنضم لفريق يعمل بروح جماعية ويدعم أعضاءه في مختلف المراحل المهنية.</p>
+</div>
+<div class="perk-card">
+<div class="perk-icon">🏆</div>
+<h4 data-i18n="h4_3">سمعة راسخة</h4>
+<p data-i18n="p_4">انضم لشركة محاماة ذات سمعة مهنية مرموقة ومعروفة بالاحترافية والنزاهة.</p>
+</div>
+</div>
+</section>
+<!-- APPLICATION FORM -->
+<section class="form-section" id="apply">
+<div class="form-wrap">
+<h2 class="form-title" data-i18n="h2_1">📋 نموذج التقديم الوظيفي</h2>
+<p class="form-sub" data-i18n="p_5">أكمل النموذج أدناه وسيتواصل معك فريق الموارد البشرية في أقرب وقت ممكن للتحقق من أهليتك والخطوات التالية.</p>
+<form action="https://formspree.io/f/YOUR_FORM_ID" id="careerForm" method="POST" onsubmit="handleSubmit(event)">
+<input name="_subject" type="hidden" value="طلب توظيف جديد — موقع شركة مشاري بندر بن جلوي"/>
+<div class="form-row">
+<div class="form-group">
+<label data-i18n="label_0" for="fname">الاسم الكامل <span class="required">*</span></label>
+<input id="fname" name="full_name" placeholder="اسمك الكامل" required="" type="text"/>
+</div>
+<div class="form-group">
+<label data-i18n="label_1" for="nationality">الجنسية <span class="required">*</span></label>
+<input id="nationality" name="nationality" placeholder="مثال: سعودي" required="" type="text"/>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label data-i18n="label_2" for="phone">رقم الجوال <span class="required">*</span></label>
+<input id="phone" name="phone" placeholder="05xxxxxxxx" required="" type="tel"/>
+</div>
+<div class="form-group">
+<label data-i18n="label_3" for="email">البريد الإلكتروني <span class="required">*</span></label>
+<input id="email" name="email" placeholder="example@email.com" required="" type="email"/>
+</div>
+</div>
+<div class="form-group">
+<label data-i18n="label_4" for="position">الوظيفة المطلوبة <span class="required">*</span></label>
+<select id="position" name="position" required="">
+<option disabled="" selected="" value="">— اختر الوظيفة —</option>
+<option value="محامٍ / محامية مرخّص(ة)">محامٍ / محامية مرخّص(ة)</option>
+<option value="مستشار / مستشارة قانونية">مستشار / مستشارة قانونية</option>
+<option value="باحث(ة) قانوني">باحث(ة) قانوني</option>
+<option value="متدرب(ة) قانوني">متدرب(ة) قانوني</option>
+<option value="سكرتير(ة) قانوني">سكرتير(ة) قانوني</option>
+<option value="مسؤول(ة) خدمة العملاء">مسؤول(ة) خدمة العملاء</option>
+<option value="أخرى">أخرى</option>
+</select>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label data-i18n="label_5" for="education">المؤهل العلمي <span class="required">*</span></label>
+<select id="education" name="education" required="">
+<option disabled="" selected="" value="">— اختر —</option>
+<option value="بكالوريوس قانون">بكالوريوس قانون</option>
+<option value="بكالوريوس شريعة">بكالوريوس شريعة</option>
+<option value="ماجستير قانون">ماجستير قانون</option>
+<option value="دكتوراه قانون">دكتوراه قانون</option>
+<option value="تخصص آخر">تخصص آخر</option>
+</select>
+</div>
+<div class="form-group">
+<label data-i18n="label_6" for="experience">سنوات الخبرة <span class="required">*</span></label>
+<select id="experience" name="experience" required="">
+<option disabled="" selected="" value="">— اختر —</option>
+<option value="بدون خبرة (حديث التخرج)">بدون خبرة (حديث التخرج)</option>
+<option value="أقل من سنة">أقل من سنة</option>
+<option value="1-3 سنوات">1-3 سنوات</option>
+<option value="3-5 سنوات">3-5 سنوات</option>
+<option value="أكثر من 5 سنوات">أكثر من 5 سنوات</option>
+</select>
+</div>
+</div>
+<div class="form-group">
+<label data-i18n="label_7" for="licensed">هل أنت محامٍ / محامية مرخّص(ة)؟</label>
+<select id="licensed" name="licensed">
+<option disabled="" selected="" value="">— اختر —</option>
+<option value="نعم، مرخّص(ة) لدى هيئة المحامين">نعم، مرخّص(ة) لدى هيئة المحامين</option>
+<option value="قيد الإجراءات">قيد الإجراءات</option>
+<option value="لا">لا</option>
+</select>
+</div>
+<div class="form-group">
+<label data-i18n="label_8" for="cv_link">رابط السيرة الذاتية (اختياري)</label>
+<input id="cv_link" name="cv_link" placeholder="https://drive.google.com/..." type="url"/>
+</div>
+<div class="form-group">
+<label data-i18n="label_9" for="message">نبذة عنك ودوافعك للانضمام <span class="required">*</span></label>
+<textarea id="message" name="message" placeholder="اكتب باختصار عن نفسك، خبراتك، وسبب رغبتك في الانضمام لشركتنا..." required=""></textarea>
+</div>
+<div class="form-note">
                     📧 سيتم إرسال طلبك مباشرةً إلى إدارة الموارد البشرية، وسنتواصل معك خلال 3-5 أيام عمل.
                 </div>
-
-                <button type="submit" class="submit-btn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
-                    </svg>
+<button class="submit-btn" type="submit">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<line x1="22" x2="11" y1="2" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+</svg>
                     إرسال الطلب
                 </button>
-
-                <div class="success-msg" id="successMsg">
+<div class="success-msg" id="successMsg">
                     ✅ تم إرسال طلبك بنجاح! سنتواصل معك قريباً.
                 </div>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
-        <p style="margin-top:8px;"><a href="index.html" data-i18n="footer_home">الرئيسية</a></p>
-    </footer>
-
-    <a href="https://wa.me/966533532153" class="whatsapp-fab" target="_blank" rel="noopener">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-    </a>
-
-    <script>
+</form>
+</div>
+</section>
+<footer>
+<p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+<p style="margin-top:8px;"><a data-i18n="footer_home" href="index.html">الرئيسية</a></p>
+</footer>
+<a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank">
+<svg fill="white" height="28" viewbox="0 0 24 24" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path></svg>
+</a>
+<script>
         function handleSubmit(e) {
             const form = document.getElementById('careerForm');
             if (form.action.includes('YOUR_FORM_ID')) {
@@ -339,28 +321,26 @@
             }
         }
     </script>
-
-
-    <script>
+<script>
 const pageTranslations = {
-  breadcrumb_current: {0: 'الوظائف والتوظيف', 1: 'Careers', 2: '招聘'},
-  breadcrumb_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  cta_button: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
-  footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Mashary Bandar Bin Jalawi Law Firm — All rights reserved', 2: '© 2025 玛沙里·班达尔·本·贾劳伊律师事务所 — 版权所有'},
-  footer_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  hero_desc: {0: 'انضم إلى فريقنا والمس الفرق في حياة الناس من خلال الخدمات القانونية المتميزة', 1: 'Join our team and make a difference through exceptional legal services', 2: '加入我们的团队，通过卓越的法律服务产生影响'},
-  hero_title: {0: 'الوظائف والتوظيف', 1: 'Careers', 2: '招聘'},
-  nav_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
-  nav_careers: {0: 'التوظيف', 1: 'Careers', 2: '招聘'},
-  nav_contact: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
-  nav_contracts: {0: 'عقود الشركات', 1: 'Company Contracts', 2: '公司合同'},
-  nav_eservices: {0: 'الخدمات الإلكترونية', 1: 'E-Services', 2: '电子服务'},
-  nav_faq: {0: 'الأسئلة الشائعة', 1: 'FAQ', 2: '常见问题'},
-  nav_services: {0: 'خدماتنا', 1: 'Our Services', 2: '我们的服务'},
-  nav_team: {0: 'فريقنا', 1: 'Our Team', 2: '我们的团队'},
-  whatsapp_button: {0: 'تواصل عبر واتساب', 1: 'Contact via WhatsApp', 2: '通过WhatsApp联系'},
+    breadcrumb_home: {0: "الرئيسية", 1: "Home", 2: "主页"},
+    cta_h2: {0: "هل أنت جاهز لخطوة جديدة في مسيرتك؟", 1: "Are You Ready for a New Step in Your Career?", 2: "您是否准备好在您的职业中迈出新的一步？"},
+    cta_p: {0: "تقديمك الآن للانضمام إلى فريق محترف", 1: "Apply now to join a professional team", 2: "现在申请加入专业团队"},
+    footer_copyright: {0: "© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة", 1: "© 2025 Al Meshary Bin Bandar Bin Jaloui Law Firm and Legal Consultations — All rights reserved", 2: "© 2025 美沙里·本·班达尔·本·贾卢伊律师事务所和法律咨询——版权所有"},
+    footer_home: {0: "الرئيسية", 1: "Home", 2: "主页"},
+    h1: {0: "فرص التوظيف", 1: "Career Opportunities", 2: "职业机会"},
+    h2_0: {0: "بيئة عمل احترافية ومحفّزة", 1: "Professional and Motivating Work Environment", 2: "专业和激励的工作环境"},
+    h2_1: {0: "انضم إلى فريقنا", 1: "Join Our Team", 2: "加入我们的团队"},
+    h4_0: {0: "قضايا متنوعة ومثرية", 1: "Diverse and Enriching Cases", 2: "多样化和丰富的案件"},
+    h4_1: {0: "فريق متعاون ومحترف", 1: "Cooperative and Professional Team", 2: "合作和专业的团队"},
+    label_0: {0: "الاسم الكامل", 1: "Full Name", 2: "全名"},
+    label_1: {0: "البريد الإلكتروني", 1: "Email Address", 2: "电子邮件地址"},
+    label_2: {0: "رقم الجوال", 1: "Phone Number", 2: "电话号码"},
+    p_0: {0: "نبحث دائماً عن كفاءات قانونية متميزة", 1: "We are always looking for outstanding legal talents", 2: "我们一直在寻找杰出的法律人才"},
+    p_1: {0: "توفر شركتنا بيئة عمل ديناميكية", 1: "Our firm provides a dynamic work environment", 2: "我们的律师事务所提供动态工作环境"},
 };
+
 </script>
 <script src="lang.js"></script>
-    </body>
+</body>
 </html>

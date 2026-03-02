@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+
+<html dir="rtl" lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عقود الشركات — شركة مشاري بندر بن جلوي للمحاماة</title>
-    <meta name="description" content="خدمات صياغة ومراجعة عقود الشركات — شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>عقود الشركات — شركة مشاري بندر بن جلوي للمحاماة</title>
+<meta content="خدمات صياغة ومراجعة عقود الشركات — شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
         :root {
             --navy: #1B2C6B;
             --navy-dark: #111d4a;
@@ -176,249 +177,250 @@
         </style>
 </head>
 <body>
-
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="logo.png" alt="شعار شركة مشاري بندر بن جلوي">
-                <div>
-                    <div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
-                    <div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
-                </div>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html#services" data-i18n="nav_services">خدماتنا</a></li>
-                <li><a href="contracts.html" class="active" data-i18n="nav_contracts">عقود الشركات</a></li>
-                <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-                <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
-                <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
-                <li><a href="e-services.html" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
-                <li><a href="careers.html" data-i18n="nav_careers">التوظيف</a></li>
-                <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
-            </ul>
-            <div style="display:flex;align-items:center;gap:10px;">
-                <div class="lang-drop" id="langDrop">
-                    <button class="lang-drop-btn" onclick="toggleLangDrop()" id="langDropBtn">🇸🇦</button>
-                    <div class="lang-drop-menu" id="langDropMenu">
-                        <button onclick="setLang(0);toggleLangDrop()" data-lang="0">🇸🇦 العربية</button>
-                        <button onclick="setLang(1);toggleLangDrop()" data-lang="1">🇬🇧 English</button>
-                        <button onclick="setLang(2);toggleLangDrop()" data-lang="2">🇨🇳 中文</button>
-                    </div>
-                </div>
-                <a href="https://wa.me/966533532153" target="_blank" rel="noopener" class="nav-cta">احجز استشارة</a>
-                <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <div class="mobile-drawer" id="drawer">
-        <ul>
-            <li><a href="index.html#services" data-i18n="nav_services" data-i18n="nav_services">خدماتنا</a></li>
-            <li><a href="contracts.html" data-i18n="nav_contracts">عقود الشركات</a></li>
-            <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-            <li><a href="team.html" data-i18n="nav_team">فريقنا</a></li>
-            <li><a href="blog.html" data-i18n="nav_blog">المدونة</a></li>
-            <li><a href="e-services.html" data-i18n="nav_eservices">الخدمات الإلكترونية</a></li>
-                <li><a href="careers.html" data-i18n="nav_careers">التوظيف</a></li>
-                <li><a href="index.html#booking" data-i18n="nav_contact">تواصل معنا</a></li>
-        </ul>
-    </div>
-
-    <!-- PAGE HERO -->
-    <div class="page-hero">
-        <div class="page-hero-content">
-            <div class="page-breadcrumb">
-                <a href="index.html" data-i18n="breadcrumb_home">الرئيسية</a>
-                <span>←</span>
-                <span>عقود الشركات</span>
-            </div>
-            <h1>عقود الشركات <em>الاحترافية</em></h1>
-            <p class="page-hero-desc">نقدم خدمات قانونية متكاملة في صياغة ومراجعة وتوثيق عقود الشركات بما يضمن حماية حقوقكم وفق أحدث الأنظمة والتشريعات في المملكة العربية السعودية.</p>
-        </div>
-    </div>
-
-    <!-- CONTRACTS SECTION -->
-    <section class="section-pad">
-        <div class="container">
-            <div class="section-header">
-                <div class="tag">عقودنا القانونية</div>
-                <h2 class="section-title">أنواع العقود التي نتولاها</h2>
-                <div class="gold-bar"></div>
-                <p class="section-desc">نغطي طيفاً واسعاً من العقود التجارية والمدنية لحماية مصالحكم في كل مرحلة</p>
-            </div>
-            <div class="contracts-grid">
-
-                <div class="contract-card">
-                    <div class="contract-icon">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
-                            <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
-                        </svg>
-                    </div>
-                    <h3>عقود تأسيس الشركات</h3>
-                    <p>صياغة عقود التأسيس بما يتوافق مع نظام الشركات السعودي وتحديد حقوق الشركاء والمساهمين بوضوح قانوني تام.</p>
-                    <span class="contract-tag">تأسيس الأعمال</span>
-                </div>
-
-                <div class="contract-card">
-                    <div class="contract-icon">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-                        </svg>
-                    </div>
-                    <h3>عقود الشراكة التجارية</h3>
-                    <p>تنظيم العلاقات بين الشركاء التجاريين وتحديد آليات اتخاذ القرار وتوزيع الأرباح والخسائر بصورة واضحة وملزمة.</p>
-                    <span class="contract-tag">شراكات</span>
-                </div>
-
-                <div class="contract-card">
-                    <div class="contract-icon">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                        </svg>
-                    </div>
-                    <h3>عقود الحماية والسرية</h3>
-                    <p>صياغة اتفاقيات عدم الإفصاح وحماية المعلومات السرية والملكية الفكرية لضمان سرية بياناتكم التجارية.</p>
-                    <span class="contract-tag">حماية المعلومات</span>
-                </div>
-
-                <div class="contract-card">
-                    <div class="contract-icon">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                        </svg>
-                    </div>
-                    <h3>عقود العمل والتوظيف</h3>
-                    <p>إعداد عقود عمل محكمة تحمي حقوق صاحب العمل والموظف وفق نظام العمل السعودي ولوائح الوزارة.</p>
-                    <span class="contract-tag">عمالة وتوظيف</span>
-                </div>
-
-                <div class="contract-card">
-                    <div class="contract-icon">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
-                        </svg>
-                    </div>
-                    <h3>عقود الإيجار التجاري</h3>
-                    <p>صياغة عقود إيجار تجارية متوازنة تحمي حقوق المؤجر والمستأجر وتنظم شروط التجديد والإخلاء بدقة قانونية.</p>
-                    <span class="contract-tag">عقارات تجارية</span>
-                </div>
-
-                <div class="contract-card">
-                    <div class="contract-icon">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
-                        </svg>
-                    </div>
-                    <h3>عقود الامتياز التجاري</h3>
-                    <p>تنظيم علاقات الفرانشايز وصياغة عقود منح الامتياز التجاري بما يضمن حماية العلامة التجارية وحقوق الطرفين.</p>
-                    <span class="contract-tag">فرانشايز</span>
-                </div>
-
-                <div class="contract-card">
-                    <div class="contract-icon">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
-                        </svg>
-                    </div>
-                    <h3>عقود التقنية والبرمجيات</h3>
-                    <p>صياغة عقود تطوير التقنية وترخيص البرمجيات والخدمات الرقمية وفق المتطلبات القانونية الحديثة.</p>
-                    <span class="contract-tag">تقنية المعلومات</span>
-                </div>
-
-                <div class="contract-card">
-                    <div class="contract-icon">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                        </svg>
-                    </div>
-                    <h3>عقود التوريد والمشتريات</h3>
-                    <p>إعداد عقود توريد السلع والخدمات بصياغة قانونية واضحة تحدد آليات التسليم والدفع والضمانات والمسؤوليات.</p>
-                    <span class="contract-tag">توريد وخدمات</span>
-                </div>
-
-                <div class="contract-card">
-                    <div class="contract-icon">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
-                    </div>
-                    <h3>مراجعة وتدقيق العقود</h3>
-                    <p>فحص ومراجعة العقود القائمة للكشف عن الثغرات القانونية وتقديم توصيات للتعديل قبل التوقيع أو عند النزاع.</p>
-                    <span class="contract-tag">مراجعة قانونية</span>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- WHY US -->
-    <section class="section-pad alt">
-        <div class="container">
-            <div class="section-header">
-                <div class="tag">لماذا نحن؟</div>
-                <h2 class="section-title">مميزات خدمتنا في العقود</h2>
-                <div class="gold-bar"></div>
-            </div>
-            <div class="why-list">
-                <div class="why-item"><div class="why-dot"></div><p>إلمام تام بأحدث أنظمة الشركات والتجارة والعمل في المملكة العربية السعودية</p></div>
-                <div class="why-item"><div class="why-dot"></div><p>صياغة دقيقة تراعي جميع الاحتمالات وتغلق الثغرات القانونية من البداية</p></div>
-                <div class="why-item"><div class="why-dot"></div><p>سرعة في التنفيذ مع الحفاظ على أعلى معايير الجودة القانونية</p></div>
-                <div class="why-item"><div class="why-dot"></div><p>توثيق العقود وفق الإجراءات الرسمية المعتمدة لدى الجهات السعودية</p></div>
-                <div class="why-item"><div class="why-dot"></div><p>متابعة مستمرة وتحديث العقود عند تغيير الأنظمة واللوائح</p></div>
-                <div class="why-item"><div class="why-dot"></div><p>أسعار شفافة وتنافسية مع ضمان جودة الخدمة القانونية</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <div class="cta-section">
-        <h2>هل تحتاج صياغة أو مراجعة عقد؟</h2>
-        <p>تواصل معنا الآن للحصول على استشارة قانونية متخصصة في عقود الشركات</p>
-        <div class="cta-btns">
-            <a href="https://wa.me/966533532153?text=أرغب%20في%20الاستفسار%20عن%20خدمات%20عقود%20الشركات" target="_blank" rel="noopener" class="btn-gold">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+<!-- NAVBAR -->
+<nav class="navbar">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">
+<img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png"/>
+<div>
+<div class="nav-firm-name">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub">للمحاماة والاستشارات القانونية</div>
+</div>
+</a>
+<ul class="nav-links">
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a class="active" data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+<div style="display:flex;align-items:center;gap:10px;">
+<div class="lang-drop" id="langDrop">
+<button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
+<div class="lang-drop-menu" id="langDropMenu">
+<button data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦 العربية</button>
+<button data-lang="1" onclick="setLang(1);toggleLangDrop()">🇬🇧 English</button>
+<button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
+</div>
+</div>
+<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
+<div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
+<span></span><span></span><span></span>
+</div>
+</div>
+</div>
+</nav>
+<div class="mobile-drawer" id="drawer">
+<ul>
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li data-i18n="li_0"><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+</div>
+<!-- PAGE HERO -->
+<div class="page-hero">
+<div class="page-hero-content">
+<div class="page-breadcrumb">
+<a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
+<span>←</span>
+<span>عقود الشركات</span>
+</div>
+<h1 data-i18n="hero_h1">عقود الشركات <em>الاحترافية</em></h1>
+<p class="page-hero-desc" data-i18n="p_0">نقدم خدمات قانونية متكاملة في صياغة ومراجعة وتوثيق عقود الشركات بما يضمن حماية حقوقكم وفق أحدث الأنظمة والتشريعات في المملكة العربية السعودية.</p>
+</div>
+</div>
+<!-- CONTRACTS SECTION -->
+<section class="section-pad">
+<div class="container">
+<div class="section-header">
+<div class="tag">عقودنا القانونية</div>
+<h2 class="section-title" data-i18n="h2_0">أنواع العقود التي نتولاها</h2>
+<div class="gold-bar"></div>
+<p class="section-desc" data-i18n="p_1">نغطي طيفاً واسعاً من العقود التجارية والمدنية لحماية مصالحكم في كل مرحلة</p>
+</div>
+<div class="contracts-grid">
+<div class="contract-card">
+<div class="contract-icon">
+<svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="26">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+</div>
+<h3 data-i18n="h3_0">عقود تأسيس الشركات</h3>
+<p data-i18n="p_2">صياغة عقود التأسيس بما يتوافق مع نظام الشركات السعودي وتحديد حقوق الشركاء والمساهمين بوضوح قانوني تام.</p>
+<span class="contract-tag">تأسيس الأعمال</span>
+</div>
+<div class="contract-card">
+<div class="contract-icon">
+<svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="26">
+<rect height="14" rx="2" ry="2" width="20" x="2" y="7"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+</svg>
+</div>
+<h3 data-i18n="h3_1">عقود الشراكة التجارية</h3>
+<p data-i18n="p_3">تنظيم العلاقات بين الشركاء التجاريين وتحديد آليات اتخاذ القرار وتوزيع الأرباح والخسائر بصورة واضحة وملزمة.</p>
+<span class="contract-tag">شراكات</span>
+</div>
+<div class="contract-card">
+<div class="contract-icon">
+<svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="26">
+<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+</svg>
+</div>
+<h3 data-i18n="h3_2">عقود الحماية والسرية</h3>
+<p data-i18n="p_4">صياغة اتفاقيات عدم الإفصاح وحماية المعلومات السرية والملكية الفكرية لضمان سرية بياناتكم التجارية.</p>
+<span class="contract-tag">حماية المعلومات</span>
+</div>
+<div class="contract-card">
+<div class="contract-icon">
+<svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="26">
+<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle>
+<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+</svg>
+</div>
+<h3 data-i18n="h3_3">عقود العمل والتوظيف</h3>
+<p data-i18n="p_5">إعداد عقود عمل محكمة تحمي حقوق صاحب العمل والموظف وفق نظام العمل السعودي ولوائح الوزارة.</p>
+<span class="contract-tag">عمالة وتوظيف</span>
+</div>
+<div class="contract-card">
+<div class="contract-icon">
+<svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="26">
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+</div>
+<h3 data-i18n="h3_4">عقود الإيجار التجاري</h3>
+<p data-i18n="p_6">صياغة عقود إيجار تجارية متوازنة تحمي حقوق المؤجر والمستأجر وتنظم شروط التجديد والإخلاء بدقة قانونية.</p>
+<span class="contract-tag">عقارات تجارية</span>
+</div>
+<div class="contract-card">
+<div class="contract-icon">
+<svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="26">
+<circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line>
+</svg>
+</div>
+<h3 data-i18n="h3_5">عقود الامتياز التجاري</h3>
+<p data-i18n="p_7">تنظيم علاقات الفرانشايز وصياغة عقود منح الامتياز التجاري بما يضمن حماية العلامة التجارية وحقوق الطرفين.</p>
+<span class="contract-tag">فرانشايز</span>
+</div>
+<div class="contract-card">
+<div class="contract-icon">
+<svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="26">
+<polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>
+</svg>
+</div>
+<h3 data-i18n="h3_6">عقود التقنية والبرمجيات</h3>
+<p data-i18n="p_8">صياغة عقود تطوير التقنية وترخيص البرمجيات والخدمات الرقمية وفق المتطلبات القانونية الحديثة.</p>
+<span class="contract-tag">تقنية المعلومات</span>
+</div>
+<div class="contract-card">
+<div class="contract-icon">
+<svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="26">
+<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+</svg>
+</div>
+<h3 data-i18n="h3_7">عقود التوريد والمشتريات</h3>
+<p data-i18n="p_9">إعداد عقود توريد السلع والخدمات بصياغة قانونية واضحة تحدد آليات التسليم والدفع والضمانات والمسؤوليات.</p>
+<span class="contract-tag">توريد وخدمات</span>
+</div>
+<div class="contract-card">
+<div class="contract-icon">
+<svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="26">
+<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline>
+</svg>
+</div>
+<h3 data-i18n="h3_8">مراجعة وتدقيق العقود</h3>
+<p data-i18n="p_10">فحص ومراجعة العقود القائمة للكشف عن الثغرات القانونية وتقديم توصيات للتعديل قبل التوقيع أو عند النزاع.</p>
+<span class="contract-tag">مراجعة قانونية</span>
+</div>
+</div>
+</div>
+</section>
+<!-- WHY US -->
+<section class="section-pad alt">
+<div class="container">
+<div class="section-header">
+<div class="tag">لماذا نحن؟</div>
+<h2 class="section-title" data-i18n="h2_1">مميزات خدمتنا في العقود</h2>
+<div class="gold-bar"></div>
+</div>
+<div class="why-list">
+<div class="why-item"><div class="why-dot"></div><p data-i18n="p_11">إلمام تام بأحدث أنظمة الشركات والتجارة والعمل في المملكة العربية السعودية</p></div>
+<div class="why-item"><div class="why-dot"></div><p data-i18n="p_12">صياغة دقيقة تراعي جميع الاحتمالات وتغلق الثغرات القانونية من البداية</p></div>
+<div class="why-item"><div class="why-dot"></div><p data-i18n="p_13">سرعة في التنفيذ مع الحفاظ على أعلى معايير الجودة القانونية</p></div>
+<div class="why-item"><div class="why-dot"></div><p data-i18n="p_14">توثيق العقود وفق الإجراءات الرسمية المعتمدة لدى الجهات السعودية</p></div>
+<div class="why-item"><div class="why-dot"></div><p data-i18n="p_15">متابعة مستمرة وتحديث العقود عند تغيير الأنظمة واللوائح</p></div>
+<div class="why-item"><div class="why-dot"></div><p data-i18n="p_16">أسعار شفافة وتنافسية مع ضمان جودة الخدمة القانونية</p></div>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<div class="cta-section">
+<h2 data-i18n="h2_2">هل تحتاج صياغة أو مراجعة عقد؟</h2>
+<p data-i18n="p_17">تواصل معنا الآن للحصول على استشارة قانونية متخصصة في عقود الشركات</p>
+<div class="cta-btns">
+<a class="btn-gold" data-i18n="cta_btn1" href="https://wa.me/966533532153?text=أرغب%20في%20الاستفسار%20عن%20خدمات%20عقود%20الشركات" rel="noopener" target="_blank">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path></svg>
                 تواصل عبر واتساب
             </a>
-            <a href="index.html" class="btn-outline">العودة للرئيسية</a>
-        </div>
-    </div>
-
-    <footer>
-        <p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
-        <p style="margin-top:8px;"><a href="index.html" data-i18n="footer_home">الرئيسية</a></p>
-    </footer>
-
-    <a href="https://wa.me/966533532153" class="whatsapp-fab" target="_blank" rel="noopener" title="تواصل عبر واتساب">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-    </a>
-
-
-
-    <script>
+<a class="btn-outline" data-i18n="cta_btn2" href="index.html">العودة للرئيسية</a>
+</div>
+</div>
+<footer>
+<p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+<p style="margin-top:8px;"><a data-i18n="footer_home" href="index.html">الرئيسية</a></p>
+</footer>
+<a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank" title="تواصل عبر واتساب">
+<svg fill="white" height="28" viewbox="0 0 24 24" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path></svg>
+</a>
+<script>
 const pageTranslations = {
-  breadcrumb_current: {0: 'عقود الشركات', 1: 'Corporate Contracts', 2: '公司合同'},
-  breadcrumb_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  cta_button: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
-  footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Mashary Bandar Bin Jalawi Law Firm — All rights reserved', 2: '© 2025 玛沙里·班达尔·本·贾劳伊律师事务所 — 版权所有'},
-  footer_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  hero_desc: {0: 'نوفر خدمات متخصصة في صياغة وتحليل ومراجعة العقود التجارية والعقود المهمة للشركات والأفراد.', 1: 'We provide specialized services in drafting, analyzing and reviewing commercial contracts and important agreements for companies and individuals.', 2: '我们为公司和个人提供专业的合同草拟、分析和审查服务。'},
-  hero_title: {0: 'عقود الشركات', 1: 'Corporate Contracts', 2: '公司合同'},
-  nav_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
-  nav_careers: {0: 'التوظيف', 1: 'Careers', 2: '招聘'},
-  nav_contact: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
-  nav_contracts: {0: 'عقود الشركات', 1: 'Company Contracts', 2: '公司合同'},
-  nav_eservices: {0: 'الخدمات الإلكترونية', 1: 'E-Services', 2: '电子服务'},
-  nav_faq: {0: 'الأسئلة الشائعة', 1: 'FAQ', 2: '常见问题'},
-  nav_services: {0: 'خدماتنا', 1: 'Our Services', 2: '我们的服务'},
-  nav_team: {0: 'فريقنا', 1: 'Our Team', 2: '我们的团队'},
-  whatsapp_button: {0: 'تواصل عبر واتساب', 1: 'Contact via WhatsApp', 2: '通过WhatsApp联系'},
+    breadcrumb_home: {0: "الرئيسية", 1: "Home", 2: "主页"},
+    cta_btn_0: {0: "احجز استشارة عقود الآن", 1: "Book Contract Consultation Now", 2: "立即预订合同咨询"},
+    cta_btn_1: {0: "تواصل معنا", 1: "Contact Us", 2: "联系我们"},
+    cta_h2: {0: "هل تحتاج صياغة أو مراجعة عقد احترافية؟", 1: "Do You Need Professional Contract Drafting or Review?", 2: "您需要专业的合同起草或审查吗？"},
+    cta_p: {0: "فريقنا القانوني المتخصص جاهز لمساعدتك في جميع احتياجات العقود", 1: "Our specialized legal team is ready to help with all your contract needs", 2: "我们的专业法律团队随时准备帮助满足您的所有合同需求"},
+    footer_copyright: {0: "© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة", 1: "© 2025 Al Meshary Bin Bandar Bin Jaloui Law Firm and Legal Consultations — All rights reserved", 2: "© 2025 美沙里·本·班达尔·本·贾卢伊律师事务所和法律咨询——版权所有"},
+    footer_home: {0: "الرئيسية", 1: "Home", 2: "主页"},
+    h2_0: {0: "أنواع العقود التي نتولاها", 1: "Types of Contracts We Handle", 2: "我们处理的合同类型"},
+    h2_1: {0: "مميزات خدمتنا في العقود", 1: "Advantages of Our Contract Services", 2: "我们合同服务的优势"},
+    h2_2: {0: "هل تحتاج صياغة أو مراجعة عقد؟", 1: "Do You Need Contract Drafting or Review?", 2: "您需要起草或审查合同吗？"},
+    h3_0: {0: "عقود تأسيس الشركات", 1: "Company Formation Contracts", 2: "公司成立合同"},
+    h3_1: {0: "عقود الشراكة التجارية", 1: "Commercial Partnership Contracts", 2: "商业合伙合同"},
+    h3_2: {0: "عقود الحماية والسرية", 1: "Confidentiality and Protection Contracts", 2: "保密和保护合同"},
+    h3_3: {0: "عقود العمل والتوظيف", 1: "Employment Contracts", 2: "雇佣合同"},
+    h3_4: {0: "عقود الإيجار التجاري", 1: "Commercial Lease Contracts", 2: "商业租赁合同"},
+    h3_5: {0: "عقود الامتياز التجاري", 1: "Franchise Contracts", 2: "特许经营合同"},
+    h3_6: {0: "عقود التقنية والبرمجيات", 1: "Technology and Software Contracts", 2: "技术和软件合同"},
+    h3_7: {0: "عقود التوريد والمشتريات", 1: "Supply and Procurement Contracts", 2: "供应和采购合同"},
+    h3_8: {0: "عقود الوكالة والتمثيل", 1: "Agency and Representation Contracts", 2: "代理和代表合同"},
+    p_0: {0: "نقدم خدمات قانونية متكاملة في صياغة ومراجعة وتوثيق عقود الشركات بما يضمن حماية حقوقكم وفق أحدث الأنظمة والتشريعات في المملكة العربية السعودية.", 1: "We provide comprehensive legal services in drafting, reviewing, and documenting company contracts to ensure protection of your rights under the latest regulations and legislations in Saudi Arabia.", 2: "我们提供全面的法律服务，包括起草、审查和证明公司合同，以确保根据沙特阿拉伯最新的法规和立法保护您的权利。"},
+    p_1: {0: "نغطي طيفاً واسعاً من العقود التجارية والمدنية لحماية مصالحكم في كل مرحلة", 1: "We cover a wide range of commercial and civil contracts to protect your interests at every stage", 2: "我们涵盖广泛的商业和民事合同，以在每个阶段保护您的利益"},
+    p_10: {0: "الخبرة العميقة في صياغة العقود الدولية والاتفاقيات بين الشركات السعودية والأجنبية", 1: "Deep expertise in drafting international contracts and agreements between Saudi and foreign companies", 2: "在起草沙特和外国公司之间的国际合同和协议方面拥有深厚专业知识"},
+    p_11: {0: "مراجعة شاملة لجميع العقود قبل التوقيع لضمان عدم وجود ثغرات قانونية", 1: "Comprehensive review of all contracts before signing to ensure no legal gaps", 2: "签署前对所有合同进行全面审查，以确保没有法律漏洞"},
+    p_12: {0: "تعديل وتطوير العقود الموجودة بما يتوافق مع التغييرات والأنظمة الجديدة", 1: "Modifying and developing existing contracts to comply with new changes and regulations", 2: "修改和开发现有合同以符合新的变化和法规"},
+    p_13: {0: "توثيق العقود لدى الجهات المختصة وضمان سلامة جميع الإجراءات", 1: "Documenting contracts with competent authorities and ensuring proper procedures", 2: "向有关当局证明合同并确保所有程序正确"},
+    p_14: {0: "متابعة تنفيذ العقود وحل أي نزاعات قد تنشأ بين الطرفين", 1: "Following up on contract execution and resolving any disputes that may arise between parties", 2: "跟进合同执行情况并解决各方之间可能出现的任何纠纷"},
+    p_15: {0: "الاستشارة الفورية في أي استفسارات تتعلق بالعقود والشروط القانونية", 1: "Immediate consultation on any questions related to contracts and legal terms", 2: "就有关合同和法律条款的任何问题进行立即咨询"},
+    p_16: {0: "فريقنا المتخصص يضمن الجودة والدقة والسرعة في إنجاز جميع خدمات العقود", 1: "Our specialized team ensures quality, accuracy, and speed in delivering all contract services", 2: "我们的专业团队确保在提供所有合同服务时的质量、准确性和速度"},
+    p_17: {0: "نحافظ على السرية الكاملة لجميع بيانات عملائنا والعقود التي نتولاها", 1: "We maintain complete confidentiality of all client data and contracts we handle", 2: "我们对所有客户数据和我们处理的合同保持完全保密"},
+    p_2: {0: "صياغة عقود التأسيس بما يتوافق مع نظام الشركات السعودي وتحديد حقوق الشركاء والمساهمين بوضوح قانوني تام.", 1: "Drafting formation contracts in accordance with the Saudi Companies System and clearly defining the rights of partners and shareholders.", 2: "根据沙特公司制度起草成立合同，并清楚地定义合伙人和股东的权利。"},
+    p_3: {0: "تنظيم العلاقات بين الشركاء التجاريين وتحديد آليات اتخاذ القرار وتوزيع الأرباح والخسائر بصورة واضحة وملزمة.", 1: "Organizing relationships between commercial partners and clearly defining decision-making mechanisms and profit-loss distribution.", 2: "组织商业伙伴之间的关系，并清楚地定义决策机制和利润损失分配。"},
+    p_4: {0: "صياغة اتفاقيات عدم الإفصاح وحماية المعلومات السرية والملكية الفكرية لضمان سرية بياناتكم التجارية.", 1: "Drafting non-disclosure agreements and protecting trade secrets and intellectual property to ensure confidentiality of your business data.", 2: "起草保密协议并保护商业秘密和知识产权，以确保您的业务数据的机密性。"},
+    p_5: {0: "إعداد عقود عمل محكمة تحمي حقوق صاحب العمل والموظف وفق نظام العمل السعودي ولوائح الوزارة.", 1: "Preparing comprehensive employment contracts that protect the rights of both employers and employees under Saudi labor laws.", 2: "准备全面的雇佣合同，根据沙特劳动法保护雇主和员工的权利。"},
+    p_6: {0: "صياغة عقود إيجار تجارية متوازنة تحمي حقوق المؤجر والمستأجر وتنظم شروط التجديد والإخلاء بدقة قانونية.", 1: "Drafting balanced commercial lease contracts protecting landlord and tenant rights with precise legal terms for renewal and termination.", 2: "起草平衡的商业租赁合同，保护房东和租户权利，并对续期和终止条款进行精确的法律规定。"},
+    p_7: {0: "تنظيم علاقات الفرانشايز وصياغة عقود منح الامتياز التجاري بما يضمن حماية العلامة التجارية وحقوق الطرفين.", 1: "Organizing franchise relationships and drafting franchise agreements that protect the trademark and the rights of both parties.", 2: "组织特许经营关系并起草特许经营协议，以保护商标和双方的权利。"},
+    p_8: {0: "صياغة عقود تطوير التقنية وترخيص البرمجيات والخدمات الرقمية وفق المتطلبات القانونية الحديثة.", 1: "Drafting technology development and software licensing contracts for digital services according to modern legal requirements.", 2: "起草技术开发和软件许可合同，用于根据现代法律要求的数字服务。"},
+    p_9: {0: "تنظيم اتفاقيات التوريد والمشتريات وتحديد الكميات والأسعار والشروط والجودة والتسليم بدقة قانونية عالية.", 1: "Organizing supply and procurement agreements with precise legal definition of quantities, prices, terms, quality, and delivery.", 2: "组织供应和采购协议，精确地定义数量、价格、条款、质量和交付。"},
 };
+
 </script>
 <script src="lang.js"></script>
-    </body>
+</body>
 </html>
