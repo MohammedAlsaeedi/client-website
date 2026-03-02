@@ -448,12 +448,25 @@
             animation: fadeDown .8s .2s ease both;
         }
 
+        .hero-who-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: .5px;
+            margin-bottom: 10px;
+            animation: fadeDown .8s .3s ease both;
+        }
+
         .hero-desc {
             font-size: .95rem;
             color: var(--gray);
             line-height: 1.9;
-            margin-bottom: 38px;
+            margin-bottom: 14px;
             animation: fadeDown .8s .3s ease both;
+        }
+
+        .hero-desc:last-of-type {
+            margin-bottom: 38px;
         }
 
         .hero-btns {
@@ -922,10 +935,7 @@
             overflow: hidden;
         }
 
-        /* Make Values card wider */
-        .vmv-card:nth-child(3) {
-            grid-column: span 2;
-        }
+        /* Equal 3 columns for vmv cards */
 
         .vmv-card:hover {
             transform: translateY(-6px);
@@ -945,15 +955,7 @@
             margin-bottom: 18px;
         }
 
-        .vmv-card:nth-child(3) .vmv-icon {
-            width: 116px;
-            height: 116px;
-        }
 
-        .vmv-card:nth-child(3) .vmv-icon svg {
-            width: 56px;
-            height: 56px;
-        }
 
         .vmv-card h3 {
             font-size: 1.25rem;
@@ -2045,6 +2047,79 @@
             }
         }
 
+        /* ─── VMV MOBILE ─── */
+        @media (max-width: 900px) {
+            .vmv-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+            }
+            .vmv-card:nth-child(3) {
+                grid-column: 1 / -1;
+            }
+        }
+        @media (max-width: 600px) {
+            .vmv-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+            .vmv-card {
+                padding: 26px 20px;
+            }
+        }
+
+        /* ─── GENERAL MOBILE ─── */
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 14px;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 14px;
+            }
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+            .goals-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+            .booking-grid {
+                grid-template-columns: 1fr;
+            }
+            .section-title {
+                font-size: 1.3rem;
+            }
+            .section-pad {
+                padding: 50px 5%;
+            }
+        }
+        @media (max-width: 480px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .goals-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-btns {
+                flex-direction: column;
+                gap: 10px;
+                align-items: stretch;
+            }
+            .hero-btns a {
+                justify-content: center;
+                text-align: center;
+            }
+            .pkg-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
 
         .booking-card-featured {
             border-color: var(--gold-light);
@@ -2248,20 +2323,20 @@
 <a class="nav-logo" href="#home">
 <img alt="شعار شركة مشاري بندر بن جلوي" class="nav-logo-svg" src="logo.png"/>
 <div class="nav-logo-text">
-<div class="nav-firm-name" data-key="navName">شركة مشاري بندر بن جلوي</div>
-<div class="nav-firm-sub" data-key="navSub">للمحاماة والاستشارات القانونية</div>
+<div class="nav-firm-name" data-i18n="firm_name" data-key="navName">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub" data-i18n="firm_sub" data-key="navSub">للمحاماة والاستشارات القانونية</div>
 </div>
 </a>
 <!-- Links -->
 <ul class="nav-links">
-<li><a data-key="navServices" href="#services">خدماتنا</a></li>
-<li><a data-key="auto_2" href="contracts.html">عقود الشركات</a></li>
-<li><a data-key="auto_3" href="faq.html">الأسئلة الشائعة</a></li>
-<li><a data-key="auto_4" href="team.html">فريقنا</a></li>
-<li><a data-key="auto_5" href="blog.html">المدونة</a></li>
-<li><a data-key="auto_6" href="e-services.html">الخدمات الإلكترونية</a></li>
-<li><a data-key="auto_7" href="careers.html">التوظيف</a></li>
-<li><a data-key="auto_8" href="#booking">تواصل معنا</a></li>
+<li><a data-i18n="nav_services" data-key="navServices" href="#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" data-key="auto_2" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" data-key="auto_3" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" data-key="auto_4" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" data-key="auto_5" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" data-key="auto_6" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_careers" data-key="auto_7" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" data-key="auto_8" href="#booking">تواصل معنا</a></li>
 </ul>
 <!-- Controls -->
 <div class="nav-controls">
@@ -2273,7 +2348,7 @@
 <button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
 </div>
 </div>
-<a class="nav-cta" data-key="navCta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
+<a class="nav-cta" data-i18n="nav_cta" data-key="navCta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
 <div class="hamburger" onclick="toggleMenu()">
 <span></span><span></span><span></span>
 </div>
@@ -2283,13 +2358,13 @@
 <!-- Mobile drawer -->
 <div class="mobile-drawer" id="drawer">
 <ul>
-<li><a data-key="navServices" href="#services" onclick="toggleMenu()">خدماتنا</a></li>
-<li><a data-key="auto_10" href="contracts.html" onclick="toggleMenu()">عقود الشركات</a></li>
-<li><a data-key="auto_11" href="faq.html" onclick="toggleMenu()">الأسئلة الشائعة</a></li>
-<li><a data-key="auto_12" href="team.html" onclick="toggleMenu()">فريقنا</a></li>
-<li><a data-key="auto_13" href="blog.html" onclick="toggleMenu()">المدونة</a></li>
-<li><a data-key="auto_14" href="e-services.html" onclick="toggleMenu()">الخدمات الإلكترونية</a></li>
-<li><a data-key="auto_15" href="#booking" onclick="toggleMenu()">تواصل معنا</a></li>
+<li><a data-i18n="nav_services" data-key="navServices" href="#services" onclick="toggleMenu()">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" data-key="auto_10" href="contracts.html" onclick="toggleMenu()">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" data-key="auto_11" href="faq.html" onclick="toggleMenu()">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" data-key="auto_12" href="team.html" onclick="toggleMenu()">فريقنا</a></li>
+<li><a data-i18n="nav_blog" data-key="auto_13" href="blog.html" onclick="toggleMenu()">المدونة</a></li>
+<li><a data-i18n="nav_eservices" data-key="auto_14" href="e-services.html" onclick="toggleMenu()">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_contact" data-key="auto_15" href="#booking" onclick="toggleMenu()">تواصل معنا</a></li>
 </ul>
 </div>
 <!-- ═══════════════════════════════════ HERO ═══════════ -->
@@ -2299,92 +2374,50 @@
 <div class="hero-circle hero-circle-1"></div>
 <div class="hero-circle hero-circle-2"></div>
 <div class="hero-content">
-<div class="hero-badge">
+<div class="hero-badge" data-i18n="hero_badge">
 <span>⚖</span>
 <span data-key="heroBadge">شركة سعودية مرخصة · محاماة واستشارات قانونية</span>
 </div>
 <h1>
-<span data-key="heroH1a">شركة</span>
+<span data-i18n="hero_h1_prefix" data-key="heroH1a">شركة</span>
 <span> </span>
-<span class="gold-span" data-key="heroH1b">مشاري بندر بن جلوي</span>
+<span class="gold-span" data-i18n="firm_name" data-key="heroH1b">مشاري بندر بن جلوي</span>
 </h1>
-<div class="hero-sub" data-key="heroSub">للمحاماة والاستشارات القانونية والتوثيق</div>
-<p class="hero-desc" data-key="heroDesc">
-                نقدم خدمات قانونية متكاملة بخبرة عالية ورؤية حديثة تستند إلى مبادئ العدالة والمهنية والالتزام.
-                نخدم الأفراد والشركات والجهات الحكومية على مستوى المملكة العربية السعودية.
-            </p>
+<div class="hero-sub" data-i18n="hero_sub" data-key="heroSub">للمحاماة والاستشارات القانونية والتوثيق</div>
+<h3 class="hero-who-title" data-i18n="hero_who_title">من نحن</h3>
+<p class="hero-desc" data-i18n="hero_desc_a">شركة مهنية سعودية مرخصة تقدم خدماتها القانونية بخبرة عالية ورؤية حديثة تستند إلى مبادئ العدالة والمهنية والالتزام. نتميز بفريق قانوني متخصص يضم نخبة من المحامين والمستشارين ذوي الكفاءة العالية.</p>
+<p class="hero-desc" data-i18n="hero_desc_b">نقدم خدماتنا للأفراد والجهات الحكومية والقطاع الخاص، ونسعى إلى تقديم حلول قانونية متكاملة ومبتكرة بمعايير مهنية رفيعة المستوى. نقدم خدمات قانونية متكاملة بخبرة عالية ورؤية حديثة تستند إلى مبادئ العدالة والمهنية والالتزام. نخدم الأفراد والشركات والجهات الحكومية على مستوى المملكة العربية السعودية.</p>
 <div class="hero-btns">
-<a class="btn-gold" data-key="heroCta1" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة مجانية</a>
-<a class="btn-outline" data-key="heroCta2" href="#services">تعرف على خدماتنا</a>
+<a class="btn-gold" data-i18n="hero_cta1" data-key="heroCta1" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة مجانية</a>
+<a class="btn-outline" data-i18n="hero_cta2" data-key="heroCta2" href="#services">تعرف على خدماتنا</a>
 </div>
 </div>
 <div class="hero-stats">
 <div class="hero-stat">
 <div class="num">+500</div>
-<div class="lbl" data-key="stat1">قضية منجزة</div>
+<div class="lbl" data-i18n="stat_lbl_cases" data-key="stat1">قضية منجزة</div>
 </div>
 <div class="hero-stat">
 <div class="num">+10</div>
-<div class="lbl" data-key="stat2">سنوات خبرة</div>
+<div class="lbl" data-i18n="stat_lbl_years" data-key="stat2">سنوات خبرة</div>
 </div>
 <div class="hero-stat">
 <div class="num">2</div>
-<div class="lbl" data-key="stat3">فروع</div>
+<div class="lbl" data-i18n="stat_lbl_offices" data-key="stat3">فروع</div>
 </div>
 </div>
 <div class="scroll-hint">
-<span data-key="auto_16">استكشف</span>
+<span data-i18n="hero_scroll" data-key="auto_16">استكشف</span>
 <span class="arr">↓</span>
 </div>
 </section>
 <!-- ═══════════════════════════════════ ABOUT ══════════ -->
-<section class="about section-pad" id="about">
-<div class="about-grid fade-up">
-<!-- Text -->
-<div class="about-text">
-<div class="tag" data-key="aboutTag">من نحن</div>
-<h2 data-key="aboutH2a">تعرّف علينا</h2>
-<p class="about-h2-sub" data-key="aboutH2b">للمحاماة والاستشارات القانونية</p>
-<div class="gold-bar"></div>
-<p data-key="aboutP1">
-                    شركة مهنية سعودية مرخصة تقدم خدماتها القانونية بخبرة عالية ورؤية حديثة تستند إلى مبادئ العدالة
-                    والمهنية والالتزام. نتميز بفريق قانوني متخصص يضم نخبة من المحامين والمستشارين ذوي الكفاءة العالية.
-                </p>
-<p data-key="aboutP2">
-                    نقدم خدماتنا للأفراد والجهات الحكومية والقطاع الخاص، ونسعى إلى تقديم حلول قانونية متكاملة ومبتكرة
-                    بمعايير مهنية رفيعة المستوى.
-                </p>
-<div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:22px;">
-<div style="display:flex;align-items:center;gap:8px;background:var(--gold-pale);border:1px solid var(--gold-light);border-radius:10px;padding:10px 16px;">
-<span style="color:var(--gold);font-size:1.3rem;">⚖</span>
-<div>
-<div data-key="auto_17" style="font-size:.8rem;color:var(--gold);font-weight:700;">+10 سنوات</div>
-<div data-key="auto_18" style="font-size:.78rem;color:var(--gray);">خبرة قانونية</div>
-</div>
-</div>
-<div style="display:flex;align-items:center;gap:8px;background:var(--gold-pale);border:1px solid var(--gold-light);border-radius:10px;padding:10px 16px;">
-<span style="color:var(--gold);font-size:1.3rem;">🏛</span>
-<div>
-<div data-key="auto_19" style="font-size:.8rem;color:var(--gold);font-weight:700;">+500 قضية</div>
-<div data-key="auto_20" style="font-size:.78rem;color:var(--gray);">تم إنجازها</div>
-</div>
-</div>
-<div style="display:flex;align-items:center;gap:8px;background:var(--gold-pale);border:1px solid var(--gold-light);border-radius:10px;padding:10px 16px;">
-<span style="color:var(--gold);font-size:1.3rem;">✅</span>
-<div>
-<div data-key="auto_21" style="font-size:.8rem;color:var(--gold);font-weight:700;">مرخصة رسمياً</div>
-<div data-key="auto_22" style="font-size:.78rem;color:var(--gray);">وزارة العدل</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+
 <!-- ═══════════════════════════════════ SERVICES ════════ -->
 <section class="services section-pad" id="services">
 <div class="section-header fade-up">
-<div class="tag" data-key="svcTag">ما نقدمه</div>
-<h2 class="section-title" data-key="svcTitle">خدماتنا القانونية</h2>
+<div class="tag" data-i18n="svc_tag" data-key="svcTag">ما نقدمه</div>
+<h2 class="section-title" data-i18n="svc_h2" data-key="svcTitle">خدماتنا القانونية</h2>
 <div class="gold-bar"></div>
 </div>
 <div class="services-grid fade-up">
@@ -2398,9 +2431,9 @@
 <path d="M15 2v4h4" fill="none" stroke="white" stroke-width="1.5"></path>
 </svg>
 </div>
-<h3 data-key="s1h">أعمال التوثيق</h3>
-<p data-key="s1p">توثيق المستندات والعقود الرسمية وفق الأنظمة المعتمدة في المملكة.</p>
-<a class="svc-cta-btn" data-key="auto_23" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة
+<h3 data-i18n="svc_h3_0" data-key="s1h">أعمال التوثيق</h3>
+<p data-i18n="svc_p_0" data-key="s1p">توثيق المستندات والعقود الرسمية وفق الأنظمة المعتمدة في المملكة.</p>
+<a class="svc-cta-btn" data-i18n="svc_cta_btn" data-key="auto_23" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة
                     ←</a>
 </div>
 <div class="service-card">
@@ -2413,9 +2446,9 @@
 <line x1="10" x2="8" y1="9" y2="9"></line>
 </svg>
 </div>
-<h3 data-key="s2h">صياغة ومراجعة العقود</h3>
-<p data-key="s2p">إعداد ومراجعة كافة أنواع العقود التجارية والمدنية بدقة واحترافية.</p>
-<a class="svc-cta-btn" data-key="auto_24" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة
+<h3 data-i18n="svc_h3_1" data-key="s2h">صياغة ومراجعة العقود</h3>
+<p data-i18n="svc_p_1" data-key="s2p">إعداد ومراجعة كافة أنواع العقود التجارية والمدنية بدقة واحترافية.</p>
+<a class="svc-cta-btn" data-i18n="svc_cta_btn" data-key="auto_24" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة
                     ←</a>
 </div>
 <div class="service-card">
@@ -2427,9 +2460,9 @@
 <line x1="10" x2="14" y1="14" y2="14"></line>
 </svg>
 </div>
-<h3 data-key="s3h">اعتماد لوائح العمل</h3>
-<p data-key="s3p">إعداد واعتماد لوائح العمل الداخلية وفق نظام العمل السعودي.</p>
-<a class="svc-cta-btn" data-key="auto_25" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة
+<h3 data-i18n="svc_h3_2" data-key="s3h">اعتماد لوائح العمل</h3>
+<p data-i18n="svc_p_2" data-key="s3p">إعداد واعتماد لوائح العمل الداخلية وفق نظام العمل السعودي.</p>
+<a class="svc-cta-btn" data-i18n="svc_cta_btn" data-key="auto_25" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة
                     ←</a>
 </div>
 <div class="service-card">
@@ -2439,9 +2472,9 @@
 <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
 </svg>
 </div>
-<h3 data-key="s4h">تدقيق الوثائق القانونية</h3>
-<p data-key="s4p">فحص ومراجعة الوثائق القانونية لضمان الامتثال والصحة القانونية.</p>
-<a class="svc-cta-btn" data-key="auto_26" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة
+<h3 data-i18n="svc_h3_3" data-key="s4h">تدقيق الوثائق القانونية</h3>
+<p data-i18n="svc_p_3" data-key="s4p">فحص ومراجعة الوثائق القانونية لضمان الامتثال والصحة القانونية.</p>
+<a class="svc-cta-btn" data-i18n="svc_cta_btn" data-key="auto_26" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة
                     ←</a>
 </div>
 <div class="service-card">
@@ -2451,9 +2484,9 @@
 <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
 </svg>
 </div>
-<h3 data-key="s5h">الاستشارات القانونية</h3>
-<p data-key="s5p">تقديم استشارات قانونية متخصصة للأفراد والشركات والمؤسسات.</p>
-<a class="svc-cta-btn" data-key="auto_27" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة
+<h3 data-i18n="svc_h3_4" data-key="s5h">الاستشارات القانونية</h3>
+<p data-i18n="svc_p_4" data-key="s5p">تقديم استشارات قانونية متخصصة للأفراد والشركات والمؤسسات.</p>
+<a class="svc-cta-btn" data-i18n="svc_cta_btn" data-key="auto_27" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة
                     ←</a>
 </div>
 <div class="service-card">
@@ -2464,9 +2497,9 @@
 <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
 </svg>
 </div>
-<h3 data-key="s6h">الاستثمار الأجنبي</h3>
-<p data-key="s6p">حلول قانونية شاملة للاستثمار الأجنبي ومتعدد الاستثمارات.</p>
-<a class="svc-cta-btn" data-key="auto_28" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة
+<h3 data-i18n="svc_h3_5" data-key="s6h">الاستثمار الأجنبي</h3>
+<p data-i18n="svc_p_5" data-key="s6p">حلول قانونية شاملة للاستثمار الأجنبي ومتعدد الاستثمارات.</p>
+<a class="svc-cta-btn" data-i18n="svc_cta_btn" data-key="auto_28" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة
                     ←</a>
 </div>
 <div class="service-card">
@@ -2475,9 +2508,9 @@
 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
 </svg>
 </div>
-<h3 data-key="s7h">عقود الحماية القانونية السنوية</h3>
-<p data-key="s7p">حماية قانونية شاملة ومستمرة على مدار العام بمقابل ثابت.</p>
-<a class="svc-cta-btn" data-key="auto_29" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة
+<h3 data-i18n="svc_h3_6" data-key="s7h">عقود الحماية القانونية السنوية</h3>
+<p data-i18n="svc_p_6" data-key="s7p">حماية قانونية شاملة ومستمرة على مدار العام بمقابل ثابت.</p>
+<a class="svc-cta-btn" data-i18n="svc_cta_btn" data-key="auto_29" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة
                     ←</a>
 </div>
 <div class="service-card">
@@ -2492,9 +2525,9 @@
 <ellipse cx="16.5" cy="16" fill="none" rx="2.5" ry="2" stroke="white" stroke-width="1.5"></ellipse>
 </svg>
 </div>
-<h3 data-key="s8h">قسمة التركات</h3>
-<p data-key="s8p">إدارة وقسمة التركات وفق أحكام الشريعة الإسلامية والأنظمة.</p>
-<a class="svc-cta-btn" data-key="auto_30" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة
+<h3 data-i18n="svc_h3_7" data-key="s8h">قسمة التركات</h3>
+<p data-i18n="svc_p_7" data-key="s8p">إدارة وقسمة التركات وفق أحكام الشريعة الإسلامية والأنظمة.</p>
+<a class="svc-cta-btn" data-i18n="svc_cta_btn" data-key="auto_30" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة
                     ←</a>
 </div>
 <div class="service-card">
@@ -2508,9 +2541,9 @@
 <line x1="18" x2="18" y1="10" y2="21"></line>
 </svg>
 </div>
-<h3 data-key="s9h">خدمات التحكيم</h3>
-<p data-key="s9p">تمثيل العملاء في إجراءات التحكيم الداخلي والدولي.</p>
-<a class="svc-cta-btn" data-key="auto_31" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة
+<h3 data-i18n="svc_h3_8" data-key="s9h">خدمات التحكيم</h3>
+<p data-i18n="svc_p_8" data-key="s9p">تمثيل العملاء في إجراءات التحكيم الداخلي والدولي.</p>
+<a class="svc-cta-btn" data-i18n="svc_cta_btn" data-key="auto_31" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة
                     ←</a>
 </div>
 <div class="service-card">
@@ -2521,10 +2554,10 @@
 <path d="M22 15l-3 3-1.5-1.5"></path>
 </svg>
 </div>
-<h3 data-key="s10h">الترافع أمام المحاكم القضائية</h3>
-<p data-key="s10p">تمثيل موكلينا والترافع نيابةً عنهم أمام المحاكم القضائية بكافة درجاتها وتخصصاتها في
+<h3 data-i18n="svc_h3_9" data-key="s10h">الترافع أمام المحاكم القضائية</h3>
+<p data-i18n="svc_p_9" data-key="s10p">تمثيل موكلينا والترافع نيابةً عنهم أمام المحاكم القضائية بكافة درجاتها وتخصصاتها في
                     المملكة العربية السعودية.</p>
-<a class="svc-cta-btn" data-key="auto_32" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة
+<a class="svc-cta-btn" data-i18n="svc_cta_btn" data-key="auto_32" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة
                     ←</a>
 </div>
 <div class="service-card">
@@ -2535,10 +2568,10 @@
 <path d="M7 8l5 3 5-3"></path>
 </svg>
 </div>
-<h3 data-key="s11h">الترافع أمام اللجان القضائية</h3>
-<p data-key="s11p">تمثيل موكلينا أمام اللجان القضائية المتخصصة كلجان العمل والتأمين والضريبة والمنافسة
+<h3 data-i18n="svc_h3_10" data-key="s11h">الترافع أمام اللجان القضائية</h3>
+<p data-i18n="svc_p_10" data-key="s11p">تمثيل موكلينا أمام اللجان القضائية المتخصصة كلجان العمل والتأمين والضريبة والمنافسة
                     وغيرها من الهيئات الرقابية.</p>
-<a class="svc-cta-btn" data-key="auto_33" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة
+<a class="svc-cta-btn" data-i18n="svc_cta_btn" data-key="auto_33" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة
                     ←</a>
 </div>
 </div>
@@ -2546,34 +2579,34 @@
 <!-- ═══════════════════════════════════ LITIGATION ══════ -->
 <section class="litigation section-pad" id="litigation">
 <div class="section-header fade-up">
-<div class="tag" data-key="litTag">المحاكم والهيئات</div>
-<h2 class="section-title" data-key="litTitle">الترافع أمام الجهات القضائية</h2>
+<div class="tag" data-i18n="lit_tag" data-key="litTag">المحاكم والهيئات</div>
+<h2 class="section-title" data-i18n="lit_h2" data-key="litTitle">الترافع أمام الجهات القضائية</h2>
 <div class="gold-bar"></div>
-<p class="section-desc" data-key="litDesc">
+<p class="section-desc" data-i18n="lit_desc" data-key="litDesc">
                 نمثل موكلينا أمام كافة الجهات القضائية والهيئات المتخصصة في المملكة
             </p>
 </div>
 <div class="lit-grid fade-up">
-<a class="lit-tag" data-key="auto_34" href="case-commercial.html">القضايا التجارية</a>
-<a class="lit-tag" data-key="auto_35" href="case-criminal.html">القضايا الجنائية</a>
-<a class="lit-tag" data-key="auto_36" href="case-labor.html">القضايا العمالية</a>
-<a class="lit-tag" data-key="auto_37" href="case-personal-status.html">قضايا الأحوال الشخصية</a>
-<a class="lit-tag" data-key="auto_38" href="case-general-court.html">قضايا المحكمة العامة</a>
-<a class="lit-tag" data-key="auto_39" href="case-tax.html">قضايا الزكاة والضريبة والجمارك</a>
-<a class="lit-tag" data-key="auto_40" href="case-capital-market.html">قضايا هيئة سوق المال</a>
-<a class="lit-tag" data-key="auto_41" href="case-administrative.html">القضايا الإدارية</a>
-<a class="lit-tag" data-key="auto_42" href="case-real-estate.html">القضايا العقارية</a>
-<a class="lit-tag" data-key="auto_43" href="case-banking.html">القضايا المصرفية والمالية</a>
-<a class="lit-tag" data-key="auto_44" href="case-insurance.html">قضايا التأمين</a>
+<a class="lit-tag" data-i18n="lit_t0" data-key="auto_34" href="case-commercial.html">القضايا التجارية</a>
+<a class="lit-tag" data-i18n="lit_t1" data-key="auto_35" href="case-criminal.html">القضايا الجنائية</a>
+<a class="lit-tag" data-i18n="lit_t2" data-key="auto_36" href="case-labor.html">القضايا العمالية</a>
+<a class="lit-tag" data-i18n="lit_t3" data-key="auto_37" href="case-personal-status.html">قضايا الأحوال الشخصية</a>
+<a class="lit-tag" data-i18n="lit_t4" data-key="auto_38" href="case-general-court.html">قضايا المحكمة العامة</a>
+<a class="lit-tag" data-i18n="lit_t5" data-key="auto_39" href="case-tax.html">قضايا الزكاة والضريبة والجمارك</a>
+<a class="lit-tag" data-i18n="lit_t6" data-key="auto_40" href="case-capital-market.html">قضايا هيئة سوق المال</a>
+<a class="lit-tag" data-i18n="lit_t7" data-key="auto_41" href="case-administrative.html">القضايا الإدارية</a>
+<a class="lit-tag" data-i18n="lit_t8" data-key="auto_42" href="case-real-estate.html">القضايا العقارية</a>
+<a class="lit-tag" data-i18n="lit_t9" data-key="auto_43" href="case-banking.html">القضايا المصرفية والمالية</a>
+<a class="lit-tag" data-i18n="lit_t10" data-key="auto_44" href="case-insurance.html">قضايا التأمين</a>
 </div>
 </section>
 <!-- ═══════════════════════════════════ BOOKING ═══════ -->
 <section class="booking section-pad" id="booking">
 <div class="section-header fade-up">
-<div class="tag" data-key="auto_45">احجز استشارتك</div>
-<h2 class="section-title" data-key="auto_46">طرق الاستشارة والحجز</h2>
+<div class="tag" data-i18n="book_tag" data-key="auto_45">احجز استشارتك</div>
+<h2 class="section-title" data-i18n="book_h2" data-key="auto_46">طرق الاستشارة والحجز</h2>
 <div class="gold-bar"></div>
-<p class="section-desc" data-key="auto_47">اختر الطريقة المناسبة لك للتواصل والحجز</p>
+<p class="section-desc" data-i18n="book_desc" data-key="auto_47">اختر الطريقة المناسبة لك للتواصل والحجز</p>
 </div>
 <div class="booking-grid fade-up">
 <!-- Phone Consultation -->
@@ -2583,16 +2616,16 @@
 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91A16 16 0 0 0 14.09 15.9l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
 </svg>
 </div>
-<h3 data-key="auto_48" style="color: var(--navy); font-weight: 800; font-size: 1.2rem; margin-bottom: 10px;">استشارة هاتفية
+<h3 data-i18n="book_h3_0" data-key="auto_48" style="color: var(--navy); font-weight: 800; font-size: 1.2rem; margin-bottom: 10px;">استشارة هاتفية
                 </h3>
-<p data-key="auto_49" style="color: var(--gray); font-size: 0.9rem; margin-bottom: 20px;">تواصل مع محامينا مباشرةً عبر
+<p data-i18n="book_p_0" data-key="auto_49" style="color: var(--gray); font-size: 0.9rem; margin-bottom: 20px;">تواصل مع محامينا مباشرةً عبر
                     الواتساب لحجز استشارة هاتفية فورية أو في الوقت المناسب لك.</p>
 <ul class="booking-features" style="list-style: none; padding: 0; color: var(--navy); font-size: 0.85rem; margin-bottom: 25px;">
-<li data-key="auto_50" style="margin-bottom: 8px;">✓ استجابة فورية</li>
-<li data-key="auto_51" style="margin-bottom: 8px;">✓ مرونة في التوقيت</li>
-<li data-key="auto_52" style="margin-bottom: 8px;">✓ خصوصية تامة</li>
+<li data-i18n="book_li_0" data-key="auto_50" style="margin-bottom: 8px;">✓ استجابة فورية</li>
+<li data-i18n="book_li_1" data-key="auto_51" style="margin-bottom: 8px;">✓ مرونة في التوقيت</li>
+<li data-i18n="book_li_2" data-key="auto_52" style="margin-bottom: 8px;">✓ خصوصية تامة</li>
 </ul>
-<a class="booking-btn booking-btn-phone" data-key="auto_53" href="https://wa.me/966533532153?text=أرغب%20في%20حجز%20استشارة%20هاتفية" rel="noopener" style="display: flex; align-items: center; justify-content: center; gap: 8px; background: #25D366; color: white; padding: 12px 24px; border-radius: 30px; font-weight: bold; text-decoration: none; transition: background 0.3s;" target="_blank">
+<a class="booking-btn booking-btn-phone" data-i18n="book_btn_whatsapp" data-key="auto_53" href="https://wa.me/966533532153?text=أرغب%20في%20حجز%20استشارة%20هاتفية" rel="noopener" style="display: flex; align-items: center; justify-content: center; gap: 8px; background: #25D366; color: white; padding: 12px 24px; border-radius: 30px; font-weight: bold; text-decoration: none; transition: background 0.3s;" target="_blank">
 <svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18">
 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path>
 </svg>
@@ -2607,23 +2640,23 @@
 <circle cx="12" cy="10" r="3"></circle>
 </svg>
 </div>
-<h3 data-key="auto_54" style="color: var(--navy); font-weight: 800; font-size: 1.2rem; margin-bottom: 10px;">استشارة حضورية
+<h3 data-i18n="book_h3_1" data-key="auto_54" style="color: var(--navy); font-weight: 800; font-size: 1.2rem; margin-bottom: 10px;">استشارة حضورية
                 </h3>
-<p data-key="auto_55" style="color: var(--gray); font-size: 0.9rem; margin-bottom: 20px;">زيارة مكتبنا في عنيزة لاستشارة
+<p data-i18n="book_p_1" data-key="auto_55" style="color: var(--gray); font-size: 0.9rem; margin-bottom: 20px;">زيارة مكتبنا في عنيزة لاستشارة
                     مباشرة مع المحامي. نوفر بيئة مهنية وخاصة لمناقشة قضيتك بالتفصيل.</p>
 <ul class="booking-features" style="list-style: none; padding: 0; color: var(--navy); font-size: 0.85rem; margin-bottom: 25px;">
-<li data-key="auto_56" style="margin-bottom: 8px;">✓ تواصل مباشر مع المحامي</li>
-<li data-key="auto_57" style="margin-bottom: 8px;">✓ مراجعة الوثائق فوراً</li>
-<li data-key="auto_58" style="margin-bottom: 8px;">✓ بيئة سرية ومهنية</li>
+<li data-i18n="book_li_3" data-key="auto_56" style="margin-bottom: 8px;">✓ تواصل مباشر مع المحامي</li>
+<li data-i18n="book_li_4" data-key="auto_57" style="margin-bottom: 8px;">✓ مراجعة الوثائق فوراً</li>
+<li data-i18n="book_li_5" data-key="auto_58" style="margin-bottom: 8px;">✓ بيئة سرية ومهنية</li>
 </ul>
 <div class="booking-actions" style="display: flex; gap: 10px;">
-<a class="booking-btn booking-btn-phone" data-key="auto_59" href="https://wa.me/966533532153?text=أرغب%20في%20حجز%20استشارة%20حضورية" rel="noopener" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; background: #25D366; color: white; padding: 12px; border-radius: 30px; font-weight: bold; font-size: 0.9rem; text-decoration: none; transition: background 0.3s;" target="_blank">
+<a class="booking-btn booking-btn-phone" data-i18n="book_btn_appt" data-key="auto_59" href="https://wa.me/966533532153?text=أرغب%20في%20حجز%20استشارة%20حضورية" rel="noopener" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; background: #25D366; color: white; padding: 12px; border-radius: 30px; font-weight: bold; font-size: 0.9rem; text-decoration: none; transition: background 0.3s;" target="_blank">
 <svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16">
 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path>
 </svg>
                         احجز موعد
                     </a>
-<a class="booking-btn booking-btn-map" data-key="auto_60" href="https://www.google.com/maps/search/?api=1&amp;query=محامي+عنيزة+القصيم" rel="noopener" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; background: var(--gold); color: white; padding: 12px; border-radius: 30px; font-weight: bold; font-size: 0.9rem; text-decoration: none; transition: background 0.3s;" target="_blank">
+<a class="booking-btn booking-btn-map" data-i18n="book_btn_map" data-key="auto_60" href="https://www.google.com/maps/search/?api=1&amp;query=محامي+عنيزة+القصيم" rel="noopener" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; background: var(--gold); color: white; padding: 12px; border-radius: 30px; font-weight: bold; font-size: 0.9rem; text-decoration: none; transition: background 0.3s;" target="_blank">
 <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16">
 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
 <circle cx="12" cy="10" r="3"></circle>
@@ -2637,8 +2670,8 @@
 <!-- ═══════════════════════════════════ VMV ════════════ -->
 <section class="vmv section-pad" id="vmv">
 <div class="section-header fade-up">
-<div class="tag" data-key="vmvTag">هويتنا</div>
-<h2 class="section-title" data-key="vmvTitle">رؤيتنا ورسالتنا وقيمنا</h2>
+<div class="tag" data-i18n="vmv_tag" data-key="vmvTag">هويتنا</div>
+<h2 class="section-title" data-i18n="vmv_h2" data-key="vmvTitle">رؤيتنا ورسالتنا وقيمنا</h2>
 <div class="gold-bar"></div>
 </div>
 <div class="vmv-grid fade-up">
@@ -2649,30 +2682,30 @@
 <circle cx="12" cy="12" r="6"></circle>
 <circle cx="12" cy="12" fill="white" r="2"></circle>
 </svg></div>
-<h3 data-key="visionH">الرؤية</h3>
+<h3 data-i18n="vision_h3" data-key="visionH">الرؤية</h3>
 <div class="gold-bar"></div>
 <div class="vals">
 <div class="val-row">
 <div class="val-dot"></div>
-<div><span data-key="vis1">أن نكون من أبرز وأوثق شركات المحاماة في المملكة العربية
+<div><span data-i18n="vis_li_0" data-key="vis1">أن نكون من أبرز وأوثق شركات المحاماة في المملكة العربية
                                 السعودية</span></div>
 </div>
 <div class="val-row">
 <div class="val-dot"></div>
-<div><span data-key="vis2">الإسهام في بناء منظومة قانونية عادلة تحمي حقوق الجميع</span></div>
+<div><span data-i18n="vis_li_1" data-key="vis2">الإسهام في بناء منظومة قانونية عادلة تحمي حقوق الجميع</span></div>
 </div>
 <div class="val-row">
 <div class="val-dot"></div>
-<div><span data-key="vis3">دعم بيئة الأعمال والاستثمار بحلول قانونية متقدمة وريادية</span></div>
+<div><span data-i18n="vis_li_2" data-key="vis3">دعم بيئة الأعمال والاستثمار بحلول قانونية متقدمة وريادية</span></div>
 </div>
 <div class="val-row">
 <div class="val-dot"></div>
-<div><span data-key="vis4">الوصول إلى أعلى معايير الجودة والموثوقية في القطاع القانوني</span>
+<div><span data-i18n="vis_li_3" data-key="vis4">الوصول إلى أعلى معايير الجودة والموثوقية في القطاع القانوني</span>
 </div>
 </div>
 <div class="val-row">
 <div class="val-dot"></div>
-<div><span data-key="vis5">أن نكون الشريك القانوني الأول للشركات والأفراد في المملكة</span>
+<div><span data-i18n="vis_li_4" data-key="vis5">أن نكون الشريك القانوني الأول للشركات والأفراد في المملكة</span>
 </div>
 </div>
 </div>
@@ -2682,31 +2715,31 @@
 <div class="vmv-icon"><svg fill="none" height="28" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="28">
 <path d="M3 11l19-9-9 19-2-8-8-2z"></path>
 </svg></div>
-<h3 data-key="missionH">الرسالة</h3>
+<h3 data-i18n="mission_h3" data-key="missionH">الرسالة</h3>
 <div class="gold-bar"></div>
 <div class="vals">
 <div class="val-row">
 <div class="val-dot"></div>
-<div><span data-key="mis1">تقديم خدمات قانونية شاملة ترتكز على المعرفة العميقة بالأنظمة
+<div><span data-i18n="mis_li_0" data-key="mis1">تقديم خدمات قانونية شاملة ترتكز على المعرفة العميقة بالأنظمة
                                 السعودية</span></div>
 </div>
 <div class="val-row">
 <div class="val-dot"></div>
-<div><span data-key="mis2">الالتزام بالاحترافية والنزاهة في كل مرحلة من مراحل التعامل مع
+<div><span data-i18n="mis_li_1" data-key="mis2">الالتزام بالاحترافية والنزاهة في كل مرحلة من مراحل التعامل مع
                                 العملاء</span></div>
 </div>
 <div class="val-row">
 <div class="val-dot"></div>
-<div><span data-key="mis3">تمكين الأفراد والشركات من الوصول إلى أفضل الحلول القانونية
+<div><span data-i18n="mis_li_2" data-key="mis3">تمكين الأفراد والشركات من الوصول إلى أفضل الحلول القانونية
                                 الممكنة</span></div>
 </div>
 <div class="val-row">
 <div class="val-dot"></div>
-<div><span data-key="mis4">بناء علاقات مستدامة قائمة على الثقة والشفافية والمصداقية</span></div>
+<div><span data-i18n="mis_li_3" data-key="mis4">بناء علاقات مستدامة قائمة على الثقة والشفافية والمصداقية</span></div>
 </div>
 <div class="val-row">
 <div class="val-dot"></div>
-<div><span data-key="mis5">حماية حقوق موكلينا والدفاع عنهم بكفاءة أمام كافة الجهات
+<div><span data-i18n="mis_li_4" data-key="mis5">حماية حقوق موكلينا والدفاع عنهم بكفاءة أمام كافة الجهات
                                 القضائية</span></div>
 </div>
 </div>
@@ -2716,42 +2749,42 @@
 <div class="vmv-icon"><svg fill="none" height="28" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="28">
 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
 </svg></div>
-<h3 data-key="valH">القيم</h3>
+<h3 data-i18n="values_h3" data-key="valH">القيم</h3>
 <div class="gold-bar"></div>
 <div class="vals">
 <div class="val-row">
 <div class="val-dot"></div>
 <div>
-<strong data-key="v1h">النزاهة</strong>
-<span data-key="v1d">نلتزم بأعلى معايير الأمانة والشفافية</span>
+<strong data-i18n="val_h_0" data-key="v1h">النزاهة</strong>
+<span data-i18n="val_p_0" data-key="v1d">نلتزم بأعلى معايير الأمانة والشفافية</span>
 </div>
 </div>
 <div class="val-row">
 <div class="val-dot"></div>
 <div>
-<strong data-key="v2h">الاحترافية</strong>
-<span data-key="v2d">خدمة قانونية دقيقة ومتقنة في كل مرحلة</span>
+<strong data-i18n="val_h_1" data-key="v2h">الاحترافية</strong>
+<span data-i18n="val_p_1" data-key="v2d">خدمة قانونية دقيقة ومتقنة في كل مرحلة</span>
 </div>
 </div>
 <div class="val-row">
 <div class="val-dot"></div>
 <div>
-<strong data-key="v3h">السرية</strong>
-<span data-key="v3d">نحافظ على خصوصية معلومات عملائنا</span>
+<strong data-i18n="val_h_2" data-key="v3h">السرية</strong>
+<span data-i18n="val_p_2" data-key="v3d">نحافظ على خصوصية معلومات عملائنا</span>
 </div>
 </div>
 <div class="val-row">
 <div class="val-dot"></div>
 <div>
-<strong data-key="v4h">الكفاءة</strong>
-<span data-key="v4d">نؤمن بأن النجاح مبني على المعرفة والخبرة</span>
+<strong data-i18n="val_h_3" data-key="v4h">الكفاءة</strong>
+<span data-i18n="val_p_3" data-key="v4d">نؤمن بأن النجاح مبني على المعرفة والخبرة</span>
 </div>
 </div>
 <div class="val-row">
 <div class="val-dot"></div>
 <div>
-<strong data-key="v5h">الابتكار</strong>
-<span data-key="v5d">نبحث دائمًا عن حلول قانونية ذكية</span>
+<strong data-i18n="val_h_4" data-key="v5h">الابتكار</strong>
+<span data-i18n="val_p_4" data-key="v5d">نبحث دائمًا عن حلول قانونية ذكية</span>
 </div>
 </div>
 </div>
@@ -2761,38 +2794,38 @@
 <!-- ═══════════════════════════════════ GOALS ══════════ -->
 <section class="goals section-pad" id="goals">
 <div class="section-header fade-up">
-<div class="tag" data-key="goalTag">توجهنا</div>
-<h2 class="section-title" data-key="goalTitle">أهدافنا</h2>
+<div class="tag" data-i18n="goal_tag" data-key="goalTag">توجهنا</div>
+<h2 class="section-title" data-i18n="goal_h2" data-key="goalTitle">أهدافنا</h2>
 <div class="gold-bar"></div>
 </div>
 <div class="goals-grid fade-up">
 <div class="goal-card">
 <div class="goal-num">01</div>
-<h3 data-key="g1h">بناء الثقة</h3>
-<p data-key="g1p">نبني علاقات طويلة الأمد مع عملائنا مبنية على الثقة والشفافية والنزاهة.</p>
+<h3 data-i18n="goal_h3_0" data-key="g1h">بناء الثقة</h3>
+<p data-i18n="goal_p_0" data-key="g1p">نبني علاقات طويلة الأمد مع عملائنا مبنية على الثقة والشفافية والنزاهة.</p>
 </div>
 <div class="goal-card">
 <div class="goal-num">02</div>
-<h3 data-key="g2h">التميز في الخدمة</h3>
-<p data-key="g2p">نسعى إلى تقديم أعلى معايير الجودة في الخدمات القانونية لتحقيق رضا عملائنا.</p>
+<h3 data-i18n="goal_h3_1" data-key="g2h">التميز في الخدمة</h3>
+<p data-i18n="goal_p_1" data-key="g2p">نسعى إلى تقديم أعلى معايير الجودة في الخدمات القانونية لتحقيق رضا عملائنا.</p>
 </div>
 <div class="goal-card">
 <div class="goal-num">03</div>
-<h3 data-key="g3h">التوسع الجغرافي</h3>
-<p data-key="g3p">نهدف إلى توسيع نطاق خدماتنا لتغطية أكبر عدد من المناطق في المملكة.</p>
+<h3 data-i18n="goal_h3_2" data-key="g3h">التوسع الجغرافي</h3>
+<p data-i18n="goal_p_2" data-key="g3p">نهدف إلى توسيع نطاق خدماتنا لتغطية أكبر عدد من المناطق في المملكة.</p>
 </div>
 <div class="goal-card">
 <div class="goal-num">04</div>
-<h3 data-key="g4h">دعم بيئة الأعمال</h3>
-<p data-key="g4p">نسهم في دعم الاقتصاد الوطني بتوفير الحماية القانونية للشركات والمستثمرين.</p>
+<h3 data-i18n="goal_h3_3" data-key="g4h">دعم بيئة الأعمال</h3>
+<p data-i18n="goal_p_3" data-key="g4p">نسهم في دعم الاقتصاد الوطني بتوفير الحماية القانونية للشركات والمستثمرين.</p>
 </div>
 </div>
 </section>
 <!-- ═══════════════════════════════════ WHY US ═════════ -->
 <section class="why section-pad" id="why">
 <div class="section-header fade-up">
-<div class="tag" data-key="whyTag">مميزاتنا</div>
-<h2 class="section-title" data-key="whyTitle">لماذا نحن؟</h2>
+<div class="tag" data-i18n="why_tag" data-key="whyTag">مميزاتنا</div>
+<h2 class="section-title" data-i18n="why_h2" data-key="whyTitle">لماذا نحن؟</h2>
 <div class="gold-bar"></div>
 </div>
 <div class="why-grid fade-up">
@@ -2800,8 +2833,8 @@
 <div class="why-icon"><svg fill="none" height="28" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="28">
 <polygon fill="rgba(255,255,255,0.15)" points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
 </svg></div>
-<h3 data-key="w1h">سرعة الاستجابة</h3>
-<p data-key="w1p">نضمن الاستجابة السريعة لاستفسارات عملائنا وتلبية احتياجاتهم في أقصر وقت ممكن.</p>
+<h3 data-i18n="why_h3_0" data-key="w1h">سرعة الاستجابة</h3>
+<p data-i18n="why_p_0" data-key="w1p">نضمن الاستجابة السريعة لاستفسارات عملائنا وتلبية احتياجاتهم في أقصر وقت ممكن.</p>
 </div>
 <div class="why-card">
 <div class="why-icon"><svg fill="none" height="28" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="28">
@@ -2812,8 +2845,8 @@
 <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
 <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path>
 </svg></div>
-<h3 data-key="w2h">الخبرة وأفضل النتائج</h3>
-<p data-key="w2p">فريقنا المتخصص يمتلك خبرة واسعة تضمن تحقيق أفضل النتائج القانونية لعملائنا.</p>
+<h3 data-i18n="why_h3_1" data-key="w2h">الخبرة وأفضل النتائج</h3>
+<p data-i18n="why_p_1" data-key="w2p">فريقنا المتخصص يمتلك خبرة واسعة تضمن تحقيق أفضل النتائج القانونية لعملائنا.</p>
 </div>
 <div class="why-card">
 <div class="why-icon"><svg fill="none" height="28" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="28">
@@ -2821,16 +2854,16 @@
 <line x1="12" x2="12" y1="20" y2="4"></line>
 <line x1="6" x2="6" y1="20" y2="14"></line>
 </svg></div>
-<h3 data-key="w3h">تقارير دورية واحترافية</h3>
-<p data-key="w3p">نوفر تقارير دورية شاملة لإطلاع عملائنا على كل مستجد وإجراء في قضاياهم.</p>
+<h3 data-i18n="why_h3_2" data-key="w3h">تقارير دورية واحترافية</h3>
+<p data-i18n="why_p_2" data-key="w3p">نوفر تقارير دورية شاملة لإطلاع عملائنا على كل مستجد وإجراء في قضاياهم.</p>
 </div>
 </div>
 </section>
 <!-- ═══════════════════════════════════ PACKAGES ════════ -->
 <section class="packages section-pad" id="packages">
 <div class="section-header fade-up">
-<div class="tag" data-key="auto_61">عروضنا</div>
-<h2 class="section-title" data-key="auto_62">الباقات</h2>
+<div class="tag" data-i18n="pkg_section_tag" data-key="auto_61">عروضنا</div>
+<h2 class="section-title" data-i18n="pkg_h2" data-key="auto_62">الباقات</h2>
 <div class="gold-bar" style="margin:12px auto 0;"></div>
 </div>
 <div class="pkg-grid fade-up" data-key="auto_63">
@@ -2838,55 +2871,55 @@
 <a class="pkg-card" href="package-basic.html">
 <div class="pkg-card-header">
 <div class="pkg-card-icon">📋</div>
-<h3 data-key="auto_64">الباقة الأساسية</h3>
-<p data-key="auto_65">مثالية للأفراد والمنشآت الصغيرة التي تحتاج دعماً قانونياً منتظماً بتكلفة مناسبة</p>
+<h3 data-i18n="pkg_h3_0" data-key="auto_64">الباقة الأساسية</h3>
+<p data-i18n="pkg_p_0" data-key="auto_65">مثالية للأفراد والمنشآت الصغيرة التي تحتاج دعماً قانونياً منتظماً بتكلفة مناسبة</p>
 </div>
 <div class="pkg-card-body">
 <ul class="pkg-card-feats">
-<li data-key="auto_66"><span class="ck">✓</span> استشارات قانونية شهرية (حتى 4 استشارات)</li>
-<li data-key="auto_67"><span class="ck">✓</span> مراجعة عقد واحد شهرياً</li>
-<li data-key="auto_68"><span class="ck">✓</span> رد على الاستفسارات خلال 48 ساعة</li>
-<li data-key="auto_69"><span class="ck">✓</span> متابعة القضايا الإدارية البسيطة</li>
+<li><span class="ck">✓</span> <span data-i18n="pkg_feat_basic_0">استشارات قانونية شهرية (حتى 4 استشارات)</span></li>
+<li><span class="ck">✓</span> <span data-i18n="pkg_feat_basic_1">مراجعة عقد واحد شهرياً</span></li>
+<li><span class="ck">✓</span> <span data-i18n="pkg_feat_basic_2">رد على الاستفسارات خلال 48 ساعة</span></li>
+<li><span class="ck">✓</span> <span data-i18n="pkg_feat_basic_3">متابعة القضايا الإدارية البسيطة</span></li>
 </ul>
-<span class="pkg-card-cta" data-key="auto_70">اعرف التفاصيل ←</span>
+<span class="pkg-card-cta" data-i18n="pkg_card_cta" data-key="auto_70">اعرف التفاصيل ←</span>
 </div>
 </a>
 <!-- باقة الاحترافية -->
 <a class="pkg-card featured" href="package-pro.html">
-<div class="pkg-badge-top" data-key="auto_71">الأكثر طلباً</div>
+<div class="pkg-badge-top" data-i18n="pkg_badge" data-key="auto_71">الأكثر طلباً</div>
 <div class="pkg-card-header">
 <div class="pkg-card-icon">⚖️</div>
-<h3 data-key="auto_72">الباقة الاحترافية</h3>
-<p data-key="auto_73">للشركات والمؤسسات التي تبحث عن حماية قانونية متكاملة وتمثيل أمام الجهات الرسمية</p>
+<h3 data-i18n="pkg_h3_1" data-key="auto_72">الباقة الاحترافية</h3>
+<p data-i18n="pkg_p_1" data-key="auto_73">للشركات والمؤسسات التي تبحث عن حماية قانونية متكاملة وتمثيل أمام الجهات الرسمية</p>
 </div>
 <div class="pkg-card-body">
 <ul class="pkg-card-feats">
-<li data-key="auto_74"><span class="ck">✓</span> استشارات قانونية غير محدودة</li>
-<li data-key="auto_75"><span class="ck">✓</span> صياغة ومراجعة العقود</li>
-<li data-key="auto_76"><span class="ck">✓</span> اعتماد اللوائح الداخلية</li>
-<li data-key="auto_77"><span class="ck">✓</span> حماية مصالحك أمام الجهات الرسمية</li>
-<li data-key="auto_78"><span class="ck">✓</span> تقارير دورية وإطلاع مستمر</li>
+<li><span class="ck">✓</span> <span data-i18n="pkg_feat_pro_0">استشارات قانونية غير محدودة</span></li>
+<li><span class="ck">✓</span> <span data-i18n="pkg_feat_pro_1">صياغة ومراجعة العقود</span></li>
+<li><span class="ck">✓</span> <span data-i18n="pkg_feat_pro_2">اعتماد اللوائح الداخلية</span></li>
+<li><span class="ck">✓</span> <span data-i18n="pkg_feat_pro_3">حماية مصالحك أمام الجهات الرسمية</span></li>
+<li><span class="ck">✓</span> <span data-i18n="pkg_feat_pro_4">تقارير دورية وإطلاع مستمر</span></li>
 </ul>
-<span class="pkg-card-cta" data-key="auto_79">اعرف التفاصيل ←</span>
+<span class="pkg-card-cta" data-i18n="pkg_card_cta" data-key="auto_79">اعرف التفاصيل ←</span>
 </div>
 </a>
 <!-- باقة المؤسسية -->
 <a class="pkg-card" href="package-enterprise.html">
 <div class="pkg-card-header">
 <div class="pkg-card-icon">🏛️</div>
-<h3 data-key="auto_80">الباقة المؤسسية</h3>
-<p data-key="auto_81">للمؤسسات الكبرى والشركات المتوسطة التي تحتاج محامياً مخصصاً وتمثيلاً قضائياً كاملاً</p>
+<h3 data-i18n="pkg_h3_2" data-key="auto_80">الباقة المؤسسية</h3>
+<p data-i18n="pkg_p_2" data-key="auto_81">للمؤسسات الكبرى والشركات المتوسطة التي تحتاج محامياً مخصصاً وتمثيلاً قضائياً كاملاً</p>
 </div>
 <div class="pkg-card-body">
 <ul class="pkg-card-feats">
-<li data-key="auto_82"><span class="ck">✓</span> محامٍ مخصص لمؤسستك</li>
-<li data-key="auto_83"><span class="ck">✓</span> تمثيل قضائي شامل (حسب الاتفاق)</li>
-<li data-key="auto_84"><span class="ck">✓</span> صياغة جميع العقود بلا حدود</li>
-<li data-key="auto_85"><span class="ck">✓</span> اجتماعات دورية وتقارير تفصيلية</li>
-<li data-key="auto_86"><span class="ck">✓</span> أولوية في الرد والمتابعة</li>
-<li data-key="auto_87"><span class="ck">✓</span> دعم قانوني خارج أوقات العمل</li>
+<li><span class="ck">✓</span> <span data-i18n="pkg_feat_ent_0">محامٍ مخصص لمؤسستك</span></li>
+<li><span class="ck">✓</span> <span data-i18n="pkg_feat_ent_1">تمثيل قضائي شامل (حسب الاتفاق)</span></li>
+<li><span class="ck">✓</span> <span data-i18n="pkg_feat_ent_2">صياغة جميع العقود بلا حدود</span></li>
+<li><span class="ck">✓</span> <span data-i18n="pkg_feat_ent_3">اجتماعات دورية وتقارير تفصيلية</span></li>
+<li><span class="ck">✓</span> <span data-i18n="pkg_feat_ent_4">أولوية في الرد والمتابعة</span></li>
+<li><span class="ck">✓</span> <span data-i18n="pkg_feat_ent_5">دعم قانوني خارج أوقات العمل</span></li>
 </ul>
-<span class="pkg-card-cta" data-key="auto_88">اعرف التفاصيل ←</span>
+<span class="pkg-card-cta" data-i18n="pkg_card_cta" data-key="auto_88">اعرف التفاصيل ←</span>
 </div>
 </a>
 </div>
@@ -2894,8 +2927,8 @@
 <!-- ═══════════════════════════════════ STATS ══════════ -->
 <section class="stats section-pad" id="stats">
 <div class="section-header fade-up">
-<div class="tag" data-key="statsTag">إنجازاتنا</div>
-<h2 class="section-title" data-key="statsTitle">نسبة القضايا المنجزة</h2>
+<div class="tag" data-i18n="stats_tag" data-key="statsTag">إنجازاتنا</div>
+<h2 class="section-title" data-i18n="stats_h2" data-key="statsTitle">نسبة القضايا المنجزة</h2>
 <div class="gold-bar"></div>
 </div>
 <div class="stats-grid fade-up">
@@ -2906,7 +2939,7 @@
 <div class="stat-row">
 <div class="stat-dot" style="background:#1B2C6B;"></div>
 <div class="stat-info">
-<div class="stat-lbl" data-key="sc1">تجاري</div>
+<div class="stat-lbl" data-i18n="slbl_0" data-key="sc1">تجاري</div>
 <div class="bar-track">
 <div class="bar-fill" style="width:26.3%;background:#1B2C6B;"></div>
 </div>
@@ -2916,7 +2949,7 @@
 <div class="stat-row">
 <div class="stat-dot" style="background:#B8935A;"></div>
 <div class="stat-info">
-<div class="stat-lbl" data-key="sc2">جنائي</div>
+<div class="stat-lbl" data-i18n="slbl_1" data-key="sc2">جنائي</div>
 <div class="bar-track">
 <div class="bar-fill" style="width:21.1%;background:#B8935A;"></div>
 </div>
@@ -2926,7 +2959,7 @@
 <div class="stat-row">
 <div class="stat-dot" style="background:#2d4a8a;"></div>
 <div class="stat-info">
-<div class="stat-lbl" data-key="sc3">تنفيذ</div>
+<div class="stat-lbl" data-i18n="slbl_2" data-key="sc3">تنفيذ</div>
 <div class="bar-track">
 <div class="bar-fill" style="width:13.2%;background:#2d4a8a;"></div>
 </div>
@@ -2936,7 +2969,7 @@
 <div class="stat-row">
 <div class="stat-dot" style="background:#d4aa72;"></div>
 <div class="stat-info">
-<div class="stat-lbl" data-key="sc4">لجان قضائية</div>
+<div class="stat-lbl" data-i18n="slbl_3" data-key="sc4">لجان قضائية</div>
 <div class="bar-track">
 <div class="bar-fill" style="width:10.5%;background:#d4aa72;"></div>
 </div>
@@ -2946,7 +2979,7 @@
 <div class="stat-row">
 <div class="stat-dot" style="background:#6b82b8;"></div>
 <div class="stat-info">
-<div class="stat-lbl" data-key="sc5">أحوال شخصية</div>
+<div class="stat-lbl" data-i18n="slbl_4" data-key="sc5">أحوال شخصية</div>
 <div class="bar-track">
 <div class="bar-fill" style="width:7.9%;background:#6b82b8;"></div>
 </div>
@@ -2956,7 +2989,7 @@
 <div class="stat-row">
 <div class="stat-dot" style="background:#8a7050;"></div>
 <div class="stat-info">
-<div class="stat-lbl" data-key="sc6">عمالي</div>
+<div class="stat-lbl" data-i18n="slbl_5" data-key="sc6">عمالي</div>
 <div class="bar-track">
 <div class="bar-fill" style="width:7.9%;background:#8a7050;"></div>
 </div>
@@ -2966,7 +2999,7 @@
 <div class="stat-row">
 <div class="stat-dot" style="background:#4a5568;"></div>
 <div class="stat-info">
-<div class="stat-lbl" data-key="sc7">إداري</div>
+<div class="stat-lbl" data-i18n="slbl_6" data-key="sc7">إداري</div>
 <div class="bar-track">
 <div class="bar-fill" style="width:7.9%;background:#4a5568;"></div>
 </div>
@@ -2976,7 +3009,7 @@
 <div class="stat-row">
 <div class="stat-dot" style="background:#9ca3af;"></div>
 <div class="stat-info">
-<div class="stat-lbl" data-key="sc8">أوقاف</div>
+<div class="stat-lbl" data-i18n="slbl_7" data-key="sc8">أوقاف</div>
 <div class="bar-track">
 <div class="bar-fill" style="width:5.3%;background:#9ca3af;"></div>
 </div>
@@ -2989,8 +3022,8 @@
 <!-- ═══════════════════════════════════ ACCREDITATIONS ══ -->
 <section class="accred section-pad" id="accred">
 <div class="section-header fade-up">
-<div class="tag" data-key="acTag">شراكات ومعتمدون لدى</div>
-<h2 class="section-title" data-key="acTitle">اعتمادات الشركة</h2>
+<div class="tag" data-i18n="partners_tag" data-key="acTag">شراكات ومعتمدون لدى</div>
+<h2 class="section-title" data-i18n="partners_h2" data-key="acTitle">اعتمادات الشركة</h2>
 <div class="gold-bar"></div>
 </div>
 <div class="accred-grid fade-up">
@@ -3012,8 +3045,8 @@
 <!-- ═══════════════════════════════════ REVIEWS ═════════ -->
 <section class="reviews section-pad" id="reviews">
 <div class="section-header fade-up">
-<div class="tag" data-key="revTag">آراء العملاء</div>
-<h2 class="section-title" data-key="revTitle">ماذا يقول عملاؤنا عنا؟</h2>
+<div class="tag" data-i18n="reviews_tag" data-key="revTag">آراء العملاء</div>
+<h2 class="section-title" data-i18n="reviews_h2" data-key="revTitle">ماذا يقول عملاؤنا عنا؟</h2>
 <div class="gold-bar"></div>
 </div>
 <div class="reviews-grid fade-up">
@@ -3022,147 +3055,147 @@
 <div class="review-header">
 <div class="review-avatar" data-key="auto_89">ع</div>
 <div class="review-info">
-<div class="review-name" data-key="auto_90">عبدالله التميمي</div>
+<div class="review-name" data-i18n="rev_name_1" data-key="auto_90">عبدالله التميمي</div>
 <div class="review-rating">★★★★★</div>
 </div>
 </div>
-<div class="review-text" data-key="r1text">
+<div class="review-text" data-i18n="rev_text_1" data-key="r1text">
                     "أشكر فريق العمل في شركة مشاري بندر بن جلوي على الاحترافية العالية والسرعة في الإنجاز. كان تواصلهم
                     ممتازاً ونتائج القضية مرضية جداً. أنصح بالتعامل معهم."
                 </div>
-<div class="review-date" data-key="r1date">قبل شهر واحد</div>
+<div class="review-date" data-i18n="rdate_0" data-key="r1date">قبل شهر واحد</div>
 </div>
 <!-- Review 2 -->
 <div class="review-card">
 <div class="review-header">
 <div class="review-avatar" data-key="auto_91">م</div>
 <div class="review-info">
-<div class="review-name" data-key="auto_92">مؤسسة الأفق التجارية</div>
+<div class="review-name" data-i18n="rev_name_2" data-key="auto_92">مؤسسة الأفق التجارية</div>
 <div class="review-rating">★★★★★</div>
 </div>
 </div>
-<div class="review-text" data-key="r2text">
+<div class="review-text" data-i18n="rev_text_2" data-key="r2text">
                     "نعتمد عليهم في جميع استشاراتنا وصياغة عقود المؤسسة. دقة في المواعيد وإلمام تام بالأنظمة المستحدثة
                     في الممكلة واهتمام بالغ بمصلحة العميل."
                 </div>
-<div class="review-date" data-key="r2date">قبل ٣ أشهر</div>
+<div class="review-date" data-i18n="rdate_1" data-key="r2date">قبل ٣ أشهر</div>
 </div>
 <!-- Review 3 -->
 <div class="review-card">
 <div class="review-header">
 <div class="review-avatar" data-key="auto_93">س</div>
 <div class="review-info">
-<div class="review-name" data-key="auto_94">سارة عبدالرحمن</div>
+<div class="review-name" data-i18n="rev_name_3" data-key="auto_94">سارة عبدالرحمن</div>
 <div class="review-rating">★★★★★</div>
 </div>
 </div>
-<div class="review-text" data-key="r3text">
+<div class="review-text" data-i18n="rev_text_3" data-key="r3text">
                     "تجربتي معهم كانت تفوق التوقعات. الشرح الوافي للوضع القانوني والخيارات المتاحة قبل البدء خطوة بخطوة
                     أعطاني ثقة كبيرة وراحة بال تامة."
                 </div>
-<div class="review-date" data-key="r3date">قبل ٥ أشهر</div>
+<div class="review-date" data-i18n="rdate_2" data-key="r3date">قبل ٥ أشهر</div>
 </div>
 <!-- Review 4 -->
 <div class="review-card">
 <div class="review-header">
 <div class="review-avatar" data-key="auto_95">ش</div>
 <div class="review-info">
-<div class="review-name" data-key="auto_96">شركة الراقي للمقاولات</div>
+<div class="review-name" data-i18n="rev_name_4" data-key="auto_96">شركة الراقي للمقاولات</div>
 <div class="review-rating">★★★★★</div>
 </div>
 </div>
-<div class="review-text" data-key="r4text">
+<div class="review-text" data-i18n="rev_text_4" data-key="r4text">
                     "جهود تذكر فتشكر، فريق عمل متكامل ومهني، تم إنهاء جميع القضايا العالقة للشركة بوقت قياسي."
                 </div>
-<div class="review-date" data-key="r4date">قبل ٦ أشهر</div>
+<div class="review-date" data-i18n="rdate_3" data-key="r4date">قبل ٦ أشهر</div>
 </div>
 <!-- Review 5 -->
 <div class="review-card">
 <div class="review-header">
 <div class="review-avatar" data-key="auto_97">ف</div>
 <div class="review-info">
-<div class="review-name" data-key="auto_98">فهد الدوسري</div>
+<div class="review-name" data-i18n="rev_name_5" data-key="auto_98">فهد الدوسري</div>
 <div class="review-rating">★★★★★</div>
 </div>
 </div>
-<div class="review-text" data-key="r5text">
+<div class="review-text" data-i18n="rev_text_5" data-key="r5text">
                     "مصداقية وأمانة في التعامل، اهتمام بأدق تفاصيل القضية والمتابعة المستمرة حتى كسب الدعوى."
                 </div>
-<div class="review-date" data-key="r5date">قبل ٧ أشهر</div>
+<div class="review-date" data-i18n="rdate_4" data-key="r5date">قبل ٧ أشهر</div>
 </div>
 <!-- Review 6 -->
 <div class="review-card">
 <div class="review-header">
 <div class="review-avatar" data-key="auto_99">ن</div>
 <div class="review-info">
-<div class="review-name" data-key="auto_100">نورة السالم</div>
+<div class="review-name" data-i18n="rev_name_6" data-key="auto_100">نورة السالم</div>
 <div class="review-rating">★★★★★</div>
 </div>
 </div>
-<div class="review-text" data-key="r6text">
+<div class="review-text" data-i18n="rev_text_6" data-key="r6text">
                     "استعنت بهم في قضية أحوال شخصية معقدة، وكانوا خير سند في تقديم أنسب الحلول والحفاظ على الخصوصية
                     بمهنية."
                 </div>
-<div class="review-date" data-key="r6date">قبل ٨ أشهر</div>
+<div class="review-date" data-i18n="rdate_5" data-key="r6date">قبل ٨ أشهر</div>
 </div>
 <!-- Review 7 -->
 <div class="review-card">
 <div class="review-header">
 <div class="review-avatar" data-key="auto_101">م</div>
 <div class="review-info">
-<div class="review-name" data-key="auto_102">مجموعة السعد للاستثمار</div>
+<div class="review-name" data-i18n="rev_name_7" data-key="auto_102">مجموعة السعد للاستثمار</div>
 <div class="review-rating">★★★★★</div>
 </div>
 </div>
-<div class="review-text" data-key="r7text">
+<div class="review-text" data-i18n="rev_text_7" data-key="r7text">
                     "نحن شركاء مع شركة مشاري بندر بن جلوي منذ سنوات ونعتمد عليهم حصرياً في استشاراتنا القانونية وصياغة
                     اتفاقياتنا الاستثمارية."
                 </div>
-<div class="review-date" data-key="r7date">قبل ٩ أشهر</div>
+<div class="review-date" data-i18n="rdate_6" data-key="r7date">قبل ٩ أشهر</div>
 </div>
 <!-- Review 8 -->
 <div class="review-card">
 <div class="review-header">
 <div class="review-avatar" data-key="auto_103">ط</div>
 <div class="review-info">
-<div class="review-name" data-key="auto_104">طارق الشمري</div>
+<div class="review-name" data-i18n="rev_name_8" data-key="auto_104">طارق الشمري</div>
 <div class="review-rating">★★★★★</div>
 </div>
 </div>
-<div class="review-text" data-key="r8text">
+<div class="review-text" data-i18n="rev_text_8" data-key="r8text">
                     "كل الشكر للمحامين والمستشارين، متابعة دورية وشفافية واضحة في كل الإجراءات المتخذة وموقفنا
                     القانوني."
                 </div>
-<div class="review-date" data-key="r8date">قبل ١٠ أشهر</div>
+<div class="review-date" data-i18n="rdate_7" data-key="r8date">قبل ١٠ أشهر</div>
 </div>
 <!-- Review 9 -->
 <div class="review-card">
 <div class="review-header">
 <div class="review-avatar" data-key="auto_105">أ</div>
 <div class="review-info">
-<div class="review-name" data-key="auto_106">أسامة حمدان</div>
+<div class="review-name" data-i18n="rev_name_9" data-key="auto_106">أسامة حمدان</div>
 <div class="review-rating">★★★★★</div>
 </div>
 </div>
-<div class="review-text" data-key="r9text">
+<div class="review-text" data-i18n="rev_text_9" data-key="r9text">
                     "خدمة الاستشارات الهاتفية كانت ممتازة وسريعة الاستجابة وذات فائدة كبيرة وفرت علي الكثير من الوقت."
                 </div>
-<div class="review-date" data-key="r9date">قبل سنة واحدة</div>
+<div class="review-date" data-i18n="rdate_8" data-key="r9date">قبل سنة واحدة</div>
 </div>
 <!-- Review 10 -->
 <div class="review-card">
 <div class="review-header">
 <div class="review-avatar" data-key="auto_107">ش</div>
 <div class="review-info">
-<div class="review-name" data-key="auto_108">شركة المتقدمة للتقنية</div>
+<div class="review-name" data-i18n="rev_name_10" data-key="auto_108">شركة المتقدمة للتقنية</div>
 <div class="review-rating">★★★★★</div>
 </div>
 </div>
-<div class="review-text" data-key="r10text">
+<div class="review-text" data-i18n="rev_text_10" data-key="r10text">
                     "المستشارون في الشركة يمتلكون معرفة مذهلة في قضايا الهيئة وحقوق الملكية، أثبتوا جدارتهم وكفاءتهم
                     مراراً وتكراراً."
                 </div>
-<div class="review-date" data-key="r10date">قبل سنة واحدة</div>
+<div class="review-date" data-i18n="rdate_8" data-key="r10date">قبل سنة واحدة</div>
 </div>
 </div>
 <div class="maps-link-wrapper fade-up">
@@ -3171,7 +3204,7 @@
 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
 <circle cx="12" cy="10" r="3"></circle>
 </svg>
-<span data-key="revBtn">اقرأ المزيد من التقييمات على خرائط جوجل</span>
+<span data-i18n="reviews_more" data-key="revBtn">اقرأ المزيد من التقييمات على خرائط جوجل</span>
 </a>
 </div>
 </section>
@@ -3181,15 +3214,15 @@
 <div class="footer-logo">
 <img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png" style="width:84px;height:84px;object-fit:contain;"/>
 <div>
-<div class="footer-name" data-key="footerName">مشاري بندر بن جلوي</div>
-<div class="footer-sub" data-key="footerSub">للمحاماة والاستشارات القانونية</div>
+<div class="footer-name" data-i18n="firm_name" data-key="footerName">مشاري بندر بن جلوي</div>
+<div class="footer-sub" data-i18n="firm_sub" data-key="footerSub">للمحاماة والاستشارات القانونية</div>
 </div>
 </div>
 <div class="footer-links">
-<a data-key="navAbout" href="#about">من نحن</a>
-<a data-key="navServices" href="#services">خدماتنا</a>
-<a data-key="navLit" href="#litigation">الترافع</a>
-<a data-key="navPkg" href="#packages">الباقات</a>
+<a data-i18n="footer_link_about" data-key="navAbout" href="#about">من نحن</a>
+<a data-i18n="footer_link_svc" data-key="navServices" href="#services">خدماتنا</a>
+<a data-i18n="footer_link_lit" data-key="navLit" href="#litigation">الترافع</a>
+<a data-i18n="footer_link_pkg" data-key="navPkg" href="#packages">الباقات</a>
 </div>
 <div class="footer-social">
 <a class="soc-btn" href="https://x.com/lawbinjalawi?s=21&amp;t=8Ujw4DudcmfPsRLGEzrQCw" rel="noopener" target="_blank" title="X">𝕏</a>
@@ -3206,7 +3239,7 @@
 </div>
 </div>
 <div class="footer-bottom">
-<p>© 2026 <span data-key="footerRights">شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق
+<p>© 2026 <span data-i18n="footer_copyright" data-key="footerRights">شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق
                     محفوظة</span></p>
 </div>
 </footer>
@@ -3528,9 +3561,9 @@
 
                 // ─── LANGUAGE SYSTEM ──────────────────────────────────────────
         let lang = 0; // 0=AR 1=EN 2=ZH
-        const langDirs = ['rtl', 'ltr', 'ltr'];
-        const langCodes = ['ar', 'en', 'zh'];
-        const langTitles = [
+        var _oldLangDirs = ['rtl', 'ltr', 'ltr'];
+        var _oldLangCodes = ['ar', 'en', 'zh'];
+        var _oldLangTitles = [
             'شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية',
             'Meshari Bandar Bin Jalawi Law Firm',
             '麦沙里·本达尔·贾拉维律师事务所'
@@ -3540,9 +3573,9 @@
             lang = l;
             localStorage.setItem('siteLang', l);
             const html = document.documentElement;
-            html.lang = langCodes[l];
-            html.dir = langDirs[l];
-            document.title = langTitles[l];
+            html.lang = _oldLangCodes[l];
+            html.dir = _oldLangDirs[l];
+            document.title = _oldLangTitles[l];
             document.body.classList.remove('lang-ar', 'lang-en', 'lang-zh');
             document.body.classList.add(['lang-ar','lang-en','lang-zh'][l]);
 
@@ -3679,11 +3712,11 @@
     </script>
 <script>
         // ─── DROPDOWN LANGUAGE SWITCHER HELPERS ──────────────────────
-        const langFlags = ['🇸🇦', '🇬🇧', '🇨🇳'];
-        const langNames = ['العربية', 'English', '中文'];
+        var _oldLangFlags = ['🇸🇦', '🇬🇧', '🇨🇳'];
+        var _oldLangNames = ['العربية', 'English', '中文'];
         function updateLangDropButton(langIndex) {
             const btn = document.getElementById('langDropBtn');
-            if (btn) { btn.textContent = langFlags[langIndex]; btn.title = langNames[langIndex]; }
+            if (btn) { btn.textContent = (typeof langFlags !== 'undefined' ? langFlags : _oldLangFlags)[langIndex]; btn.title = (typeof langNames !== 'undefined' ? langNames : _oldLangNames)[langIndex]; }
         }
         function toggleLangDrop() {
             document.getElementById('langDropMenu').classList.toggle('open');
@@ -3699,5 +3732,204 @@
         var _initL = parseInt(localStorage.getItem('siteLang') || '0');
         updateLangDropButton(_initL);
     </script>
+<script>
+const pageTranslations = {
+  hero_badge: {0: "شركة سعودية مرخصة · محاماة واستشارات قانونية", 1: "Licensed Saudi Firm · Law & Legal Consultations", 2: "持牌沙特律师事务所 · 法律与法律咨询"},
+  hero_sub: {0: "للمحاماة والاستشارات القانونية والتوثيق", 1: "Law, Legal Consultations & Notarization", 2: "法律、法律咨询与公证"},
+  hero_cta1: {0: "احجز استشارة مجانية", 1: "Book a Free Consultation", 2: "预约免费咨询"},
+  hero_cta2: {0: "تعرف على خدماتنا", 1: "Explore Our Services", 2: "了解我们的服务"},
+  stat_lbl_cases: {0: "قضية منجزة", 1: "Cases Completed", 2: "已完成案件"},
+  stat_lbl_years: {0: "سنوات خبرة", 1: "Years of Experience", 2: "年经验"},
+  stat_lbl_offices: {0: "فروع", 1: "Offices", 2: "办事处"},
+  hero_scroll: {0: "استكشف", 1: "Explore", 2: "探索"},
+  hero_h1_prefix: {0: "شركة", 1: "Firm of", 2: "律师事务所"},
+  about_tag: {0: "من نحن", 1: "About Us", 2: "关于我们"},
+  about_h2: {0: "تعرّف علينا", 1: "Get to Know Us", 2: "了解我们"},
+  about_firm_sub: {0: "للمحاماة والاستشارات القانونية", 1: "Law Firm & Legal Consultations", 2: "律师事务所与法律咨询"},
+  about_p1: {0: "شركة مهنية سعودية مرخصة تقدم خدماتها القانونية بخبرة عالية ورؤية حديثة تستند إلى مبادئ العدالة                     والمهنية والالتزام. نتميز بفريق قانوني متخصص يضم نخبة من المحامين والمستشارين ذوي الك", 1: "A licensed Saudi professional firm providing legal services with high expertise and a modern vision based on a deep understanding of Saudi regulations and local legal practice.", 2: "一家持牌沙特专业律师事务所，凭借高度专业知识和现代理念提供法律服务，深刻理解沙特法规和本地法律实践。"},
+  about_p2: {0: "نقدم خدماتنا للأفراد والجهات الحكومية والقطاع الخاص، ونسعى إلى تقديم حلول قانونية متكاملة ومبتكرة                     بمعايير مهنية رفيعة المستوى.", 1: "We provide services to individuals, government entities, and the private sector, striving to offer smart and effective legal solutions for every situation.", 2: "我们为个人、政府机构和私营部门提供服务，致力于为每种情况提供智能有效的法律解决方案。"},
+  about_stat_years_num: {0: "+10 سنوات", 1: "+10 Years", 2: "+10年"},
+  about_stat_years_lbl: {0: "خبرة قانونية", 1: "Legal Experience", 2: "法律经验"},
+  about_stat_cases_num: {0: "+500 قضية", 1: "+500 Cases", 2: "+500案件"},
+  about_stat_cases_lbl: {0: "تم إنجازها", 1: "Completed", 2: "已完成"},
+  about_stat_lic1: {0: "مرخصة رسمياً", 1: "Officially Licensed", 2: "正式授权"},
+  about_stat_lic2: {0: "وزارة العدل", 1: "Ministry of Justice", 2: "司法部"},
+  svc_tag: {0: "ما نقدمه", 1: "What We Offer", 2: "我们提供的服务"},
+  svc_h2: {0: "خدماتنا القانونية", 1: "Our Legal Services", 2: "我们的法律服务"},
+  svc_h3_0: {0: "أعمال التوثيق", 1: "Notarization Services", 2: "公证服务"},
+  svc_p_0: {0: "توثيق المستندات والعقود الرسمية وفق الأنظمة المعتمدة في المملكة.", 1: "Notarizing documents and official contracts according to the approved regulations in the Kingdom.", 2: "根据王国批准的法规对文件和正式合同进行公证。"},
+  svc_h3_1: {0: "صياغة ومراجعة العقود", 1: "Contract Drafting & Review", 2: "合同起草与审查"},
+  svc_p_1: {0: "إعداد ومراجعة كافة أنواع العقود التجارية والمدنية بدقة واحترافية.", 1: "Preparing and reviewing all types of commercial and civil contracts with precision and professionalism.", 2: "以精确和专业的方式准备和审查所有类型的商业和民事合同。"},
+  svc_h3_2: {0: "اعتماد لوائح العمل", 1: "Labor Regulations Approval", 2: "劳动法规审批"},
+  svc_p_2: {0: "إعداد واعتماد لوائح العمل الداخلية وفق نظام العمل السعودي.", 1: "Preparing and approving internal labor regulations in accordance with Saudi Labor Law.", 2: "按照沙特劳动法准备和批准内部劳动法规。"},
+  svc_h3_3: {0: "تدقيق الوثائق القانونية", 1: "Legal Document Auditing", 2: "法律文件审计"},
+  svc_p_3: {0: "فحص ومراجعة الوثائق القانونية لضمان الامتثال والصحة القانونية.", 1: "Examining and reviewing legal documents to ensure compliance and legal validity.", 2: "审查和检查法律文件以确保合规性和法律有效性。"},
+  svc_h3_4: {0: "الاستشارات القانونية", 1: "Legal Consultations", 2: "法律咨询"},
+  svc_p_4: {0: "تقديم استشارات قانونية متخصصة للأفراد والشركات والمؤسسات.", 1: "Providing specialized legal consultations for individuals, companies, and institutions.", 2: "为个人、公司和机构提供专业法律咨询。"},
+  svc_h3_5: {0: "الاستثمار الأجنبي", 1: "Foreign Investment", 2: "外资投资"},
+  svc_p_5: {0: "حلول قانونية شاملة للاستثمار الأجنبي ومتعدد الاستثمارات.", 1: "Comprehensive legal solutions for foreign investment and multi-investment structures.", 2: "为外资投资和多元投资结构提供全面法律解决方案。"},
+  svc_h3_6: {0: "عقود الحماية القانونية السنوية", 1: "Annual Legal Protection Contracts", 2: "年度法律保护合同"},
+  svc_p_6: {0: "حماية قانونية شاملة ومستمرة على مدار العام بمقابل ثابت.", 1: "Comprehensive and continuous legal protection throughout the year at a fixed fee.", 2: "全年全面持续的法律保护，收费固定。"},
+  svc_h3_7: {0: "قسمة التركات", 1: "Estate Distribution", 2: "遗产分配"},
+  svc_p_7: {0: "إدارة وقسمة التركات وفق أحكام الشريعة الإسلامية والأنظمة.", 1: "Managing and distributing estates according to Islamic Sharia rulings and applicable regulations.", 2: "根据伊斯兰教法裁决和适用法规管理和分配遗产。"},
+  svc_h3_8: {0: "خدمات التحكيم", 1: "Arbitration Services", 2: "仲裁服务"},
+  svc_p_8: {0: "تمثيل العملاء في إجراءات التحكيم الداخلي والدولي.", 1: "Representing clients in domestic and international arbitration proceedings.", 2: "在国内和国际仲裁程序中代表客户。"},
+  svc_h3_9: {0: "الترافع أمام المحاكم القضائية", 1: "Court Litigation", 2: "法院诉讼"},
+  svc_p_9: {0: "الترافع أمام المحاكم القضائية", 1: "Litigation before judicial courts at all levels.", 2: "在各级司法法院进行诉讼。"},
+  svc_h3_10: {0: "الترافع أمام اللجان القضائية", 1: "Specialized Committee Litigation", 2: "专业委员会诉讼"},
+  svc_p_10: {0: "تمثيل موكلينا أمام اللجان القضائية المتخصصة كلجان العمل والتأمين والضريبة والمناقصات.", 1: "Representing our clients before specialized judicial committees such as labor, insurance, tax, and tender committees.", 2: "在劳动、保险、税务和招标等专业司法委员会前代表客户。"},
+  svc_cta_btn: {0: "احجز استشارة ←", 1: "Book Consultation →", 2: "预约咨询 →"},
+  lit_tag: {0: "المحاكم والهيئات", 1: "Courts & Tribunals", 2: "法院与法庭"},
+  lit_h2: {0: "الترافع أمام الجهات القضائية", 1: "Litigation Before Judicial Authorities", 2: "在司法机关前进行诉讼"},
+  lit_desc: {0: "نمثل موكلينا أمام كافة الجهات القضائية والهيئات المتخصصة في المملكة", 1: "We represent our clients before all judicial authorities and specialized tribunals in the Kingdom", 2: "我们在王国所有司法机构和专业法庭前代表客户"},
+  lit_t0: {0: "القضايا التجارية", 1: "Commercial Cases", 2: "商业案件"},
+  lit_t1: {0: "القضايا الجنائية", 1: "Criminal Cases", 2: "刑事案件"},
+  lit_t2: {0: "القضايا العمالية", 1: "Labor Cases", 2: "劳动案件"},
+  lit_t3: {0: "قضايا الأحوال الشخصية", 1: "Personal Status Cases", 2: "人身状况案件"},
+  lit_t4: {0: "قضايا المحكمة العامة", 1: "General Court Cases", 2: "普通法院案件"},
+  lit_t5: {0: "قضايا الزكاة والضريبة والجمارك", 1: "Zakat, Tax & Customs Cases", 2: "天课、税务与海关案件"},
+  lit_t6: {0: "قضايا هيئة سوق المال", 1: "Capital Market Authority Cases", 2: "资本市场局案件"},
+  lit_t7: {0: "القضايا الإدارية", 1: "Administrative Cases", 2: "行政案件"},
+  lit_t8: {0: "القضايا العقارية", 1: "Real Estate Cases", 2: "房地产案件"},
+  lit_t9: {0: "القضايا المصرفية والمالية", 1: "Banking & Financial Cases", 2: "银行与金融案件"},
+  lit_t10: {0: "قضايا التأمين", 1: "Insurance Cases", 2: "保险案件"},
+  book_tag: {0: "احجز استشارتك", 1: "Book Your Consultation", 2: "预约您的咨询"},
+  book_h2: {0: "طرق الاستشارة والحجز", 1: "Consultation & Booking Methods", 2: "咨询与预约方式"},
+  book_desc: {0: "اختر الطريقة المناسبة لك للتواصل والحجز", 1: "Choose the most suitable way for you to contact us and book", 2: "选择最适合您联系和预约的方式"},
+  book_h3_0: {0: "استشارة هاتفية", 1: "Phone Consultation", 2: "电话咨询"},
+  book_h3_1: {0: "استشارة حضورية", 1: "In-Person Consultation", 2: "面对面咨询"},
+  book_li_0: {0: "✓ استجابة فورية", 1: "✓ Instant Response", 2: "✓ 即时响应"},
+  book_li_1: {0: "✓ مرونة في التوقيت", 1: "✓ Flexible Timing", 2: "✓ 灵活时间"},
+  book_li_2: {0: "✓ خصوصية تامة", 1: "✓ Complete Privacy", 2: "✓ 完全隐私"},
+  book_li_3: {0: "✓ تواصل مباشر مع المحامي", 1: "✓ Direct Contact with Attorney", 2: "✓ 直接联系律师"},
+  book_li_4: {0: "✓ مراجعة الوثائق فوراً", 1: "✓ Immediate Document Review", 2: "✓ 即时文件审查"},
+  book_li_5: {0: "✓ بيئة سرية ومهنية", 1: "✓ Confidential & Professional Environment", 2: "✓ 保密专业环境"},
+  book_p_0: {0: "تواصل مع محامينا مباشرةً عبر                     الواتساب لحجز استشارة هاتفية فورية أو في الوقت المناسب لك.", 1: "Contact our attorney directly via WhatsApp to book an immediate phone consultation at multiple available times to suit your schedule.", 2: "通过WhatsApp直接联系我们的律师，预约即时电话咨询，有多个可用时间段适合您的日程安排。"},
+  book_p_1: {0: "زيارة مكتبنا في عنيزة لاستشارة                     مباشرة مع المحامي. نوفر بيئة مهنية وخاصة لمناقشة قضيتك بالتفصيل.", 1: "Visit our office in Unaizah for a direct consultation with the attorney. We provide a professional, confidential environment for a comprehensive discussion of your case.", 2: "前往我们在乌奈扎的办公室与律师进行直接咨询。我们提供专业、保密的环境，全面讨论您的案件。"},
+  book_btn_whatsapp: {0: "احجز عبر الواتساب", 1: "Book via WhatsApp", 2: "通过WhatsApp预约"},
+  book_btn_appt: {0: "احجز موعد", 1: "Book Appointment", 2: "预约"},
+  book_btn_map: {0: "اعرض على الخريطة", 1: "View on Map", 2: "在地图上查看"},
+  vmv_tag: {0: "هويتنا", 1: "Our Identity", 2: "我们的身份"},
+  vmv_h2: {0: "رؤيتنا ورسالتنا وقيمنا", 1: "Our Vision, Mission & Values", 2: "我们的愿景、使命与价值观"},
+  vision_h3: {0: "الرؤية", 1: "Vision", 2: "愿景"},
+  mission_h3: {0: "الرسالة", 1: "Mission", 2: "使命"},
+  values_h3: {0: "القيم", 1: "Values", 2: "价值观"},
+  vis_li_0: {0: "أن نكون من أبرز وأوثق شركات المحاماة في المملكة العربية السعودية", 1: "To be among the most prominent and trusted law firms in Saudi Arabia", 2: "成为沙特阿拉伯最杰出、最值得信赖的律师事务所之一"},
+  vis_li_1: {0: "الإسهام في بناء منظومة قانونية عادلة تحمي حقوق الجميع", 1: "Contributing to building a fair legal system that protects everyone's rights", 2: "为建立保护所有人权利的公平法律体系做出贡献"},
+  vis_li_2: {0: "دعم بيئة الأعمال والاستثمار بحلول قانونية متقدمة وريادية", 1: "Supporting the business and investment environment with advanced and pioneering legal solutions", 2: "以先进和开创性的法律解决方案支持商业和投资环境"},
+  vis_li_3: {0: "الوصول إلى أعلى معايير الجودة والموثوقية في القطاع القانوني", 1: "Achieving the highest standards of quality and reliability in the legal sector", 2: "在法律领域达到最高质量和可靠性标准"},
+  vis_li_4: {0: "أن نكون الشريك القانوني الأول للشركات والأفراد في المملكة", 1: "To be the premier legal partner for companies and individuals in the Kingdom", 2: "成为王国内公司和个人的首选法律合作伙伴"},
+  mis_li_0: {0: "تقديم خدمات قانونية شاملة ترتكز على المعرفة العميقة بالأنظمة                                 السعودية", 1: "Providing comprehensive legal services based on deep knowledge of regulations", 2: "提供基于深厚法规知识的全面法律服务"},
+  mis_li_1: {0: "الالتزام بالاحترافية والنزاهة في كل مرحلة من مراحل التعامل مع                                 العملاء", 1: "Commitment to professionalism and integrity at every stage of client interaction", 2: "在与客户互动的每个阶段保持专业精神和诚信"},
+  mis_li_2: {0: "تمكين الأفراد والشركات من الوصول إلى أفضل الحلول القانونية                                 الممكنة", 1: "Empowering individuals and companies to access the best legal solutions", 2: "使个人和公司能够获得最佳法律解决方案"},
+  mis_li_3: {0: "بناء علاقات مستدامة قائمة على الثقة والشفافية والمصداقية", 1: "Building sustainable relationships based on trust, transparency, and credibility", 2: "建立基于信任、透明度和可信度的可持续关系"},
+  mis_li_4: {0: "حماية حقوق موكلينا والدفاع عنهم بكفاءة أمام كافة الجهات                                 القضائية", 1: "Protecting our clients' rights and defending them efficiently before all authorities", 2: "保护我们客户的权利并在所有机构面前有效捍卫他们"},
+  val_p_0: {0: "نلتزم بأعلى معايير الأمانة والشفافية", 1: "We adhere to the highest standards of honesty and transparency", 2: "我们坚守最高的诚实和透明度标准"},
+  val_p_1: {0: "خدمة قانونية دقيقة ومتقنة في كل مرحلة", 1: "Precise and refined legal service at every stage", 2: "每个阶段提供精准和精湛的法律服务"},
+  val_p_2: {0: "نحافظ على خصوصية معلومات عملائنا", 1: "We preserve the privacy of our clients' information", 2: "我们维护客户信息的隐私"},
+  val_p_3: {0: "نؤمن بأن النجاح مبني على المعرفة والخبرة", 1: "We believe that success is built on knowledge and experience", 2: "我们相信成功建立在知识和经验的基础上"},
+  val_p_4: {0: "نبحث دائمًا عن حلول قانونية ذكية", 1: "We always seek smart legal solutions", 2: "我们始终寻求智能法律解决方案"},
+  val_h_0: {0: "النزاهة", 1: "Integrity", 2: "诚信"},
+  val_h_1: {0: "الاحترافية", 1: "Professionalism", 2: "专业精神"},
+  val_h_2: {0: "السرية", 1: "Confidentiality", 2: "保密性"},
+  val_h_3: {0: "الكفاءة", 1: "Competence", 2: "能力"},
+  val_h_4: {0: "الابتكار", 1: "Innovation", 2: "创新"},
+  goal_tag: {0: "توجهنا", 1: "Our Direction", 2: "我们的方向"},
+  goal_h2: {0: "أهدافنا", 1: "Our Goals", 2: "我们的目标"},
+  goal_h3_0: {0: "بناء الثقة", 1: "Building Trust", 2: "建立信任"},
+  goal_p_0: {0: "نبني علاقات طويلة الأمد مع عملائنا مبنية على الثقة والشفافية والنزاهة.", 1: "We build long-term relationships with our clients based on trust, transparency, and integrity.", 2: "我们与客户建立基于信任、透明度和诚信的长期关系。"},
+  goal_h3_1: {0: "التميز في الخدمة", 1: "Service Excellence", 2: "服务卓越"},
+  goal_p_1: {0: "نسعى إلى تقديم أعلى معايير الجودة في الخدمات القانونية لتحقيق رضا عملائنا.", 1: "We strive to provide the highest quality standards in legal services to achieve client satisfaction.", 2: "我们努力在法律服务中提供最高质量标准，以实现客户满意度。"},
+  goal_h3_2: {0: "التوسع الجغرافي", 1: "Geographic Expansion", 2: "地理扩张"},
+  goal_p_2: {0: "نهدف إلى توسيع نطاق خدماتنا لتغطية أكبر عدد من المناطق في المملكة.", 1: "We aim to expand the scope of our services to cover more regions across the Kingdom.", 2: "我们旨在扩大服务范围，覆盖王国更多地区。"},
+  goal_h3_3: {0: "دعم بيئة الأعمال", 1: "Supporting Business Environment", 2: "支持商业环境"},
+  goal_p_3: {0: "نسهم في دعم الاقتصاد الوطني بتوفير الحماية القانونية للشركات والمستثمرين.", 1: "We contribute to supporting the national economy by providing legal protection for companies and investors.", 2: "我们通过为公司和投资者提供法律保护来支持国家经济。"},
+  why_tag: {0: "مميزاتنا", 1: "Our Advantages", 2: "我们的优势"},
+  why_h2: {0: "لماذا نحن؟", 1: "Why Us?", 2: "为什么选择我们？"},
+  why_h3_0: {0: "سرعة الاستجابة", 1: "Fast Response", 2: "快速响应"},
+  why_p_0: {0: "نضمن الاستجابة السريعة لاستفسارات عملائنا وتلبية احتياجاتهم في أقصر وقت ممكن.", 1: "We guarantee fast responses to client inquiries and meeting their needs in the shortest possible time.", 2: "我们保证快速响应客户查询，并在最短时间内满足其需求。"},
+  why_h3_1: {0: "الخبرة وأفضل النتائج", 1: "Expertise & Best Results", 2: "专业知识与最佳结果"},
+  why_p_1: {0: "فريقنا المتخصص يمتلك خبرة واسعة تضمن تحقيق أفضل النتائج القانونية لعملائنا.", 1: "Our specialized team has extensive experience that guarantees achieving the best legal outcomes for our clients.", 2: "我们的专业团队拥有丰富经验，确保为客户实现最佳法律结果。"},
+  why_h3_2: {0: "تقارير دورية واحترافية", 1: "Professional Periodic Reports", 2: "专业定期报告"},
+  why_p_2: {0: "نوفر تقارير دورية شاملة لإطلاع عملائنا على كل مستجد وإجراء في قضاياهم.", 1: "We provide comprehensive periodic reports to keep our clients informed of all developments and procedures in their cases.", 2: "我们提供全面的定期报告，使客户了解其案件的所有进展和程序。"},
+  pkg_section_tag: {0: "عروضنا", 1: "Our Packages", 2: "我们的套餐"},
+  pkg_h2: {0: "الباقات", 1: "Packages", 2: "套餐"},
+  pkg_badge: {0: "الأكثر طلباً", 1: "Most Popular", 2: "最受欢迎"},
+  pkg_h3_0: {0: "الباقة الأساسية", 1: "Basic Package", 2: "基础套餐"},
+  pkg_p_0: {0: "مثالية للأفراد والمنشآت الصغيرة التي تحتاج دعماً قانونياً منتظماً بتكلفة مناسبة", 1: "Ideal for individuals and small businesses needing regular legal support at a suitable cost", 2: "适合需要定期法律支持的个人和小型企业，价格合理"},
+  pkg_h3_1: {0: "الباقة الاحترافية", 1: "Professional Package", 2: "专业套餐"},
+  pkg_p_1: {0: "للشركات والمؤسسات التي تبحث عن حماية قانونية متكاملة وتمثيل أمام الجهات الرسمية", 1: "For companies and institutions seeking comprehensive legal protection and representation before official authorities", 2: "适合寻求全面法律保护和在官方机构前代理的公司和机构"},
+  pkg_h3_2: {0: "الباقة المؤسسية", 1: "Enterprise Package", 2: "企业套餐"},
+  pkg_p_2: {0: "للمؤسسات الكبرى والشركات المتوسطة التي تحتاج محامياً مخصصاً وتمثيلاً قضائياً كاملاً", 1: "For large institutions and medium-sized companies that need a dedicated attorney and full judicial representation", 2: "适合需要专属律师和全面司法代理的大型机构和中型企业"},
+  pkg_card_cta: {0: "اعرف التفاصيل ←", 1: "View Details →", 2: "查看详情 →"},
+  pkg_feat_basic_0: {0: "استشارات قانونية شهرية (حتى 4 استشارات)", 1: "Monthly legal consultations (up to 4)", 2: "每月法律咨询（最多4次）"},
+  pkg_feat_basic_1: {0: "مراجعة عقد واحد شهرياً", 1: "Review one contract per month", 2: "每月审查一份合同"},
+  pkg_feat_basic_2: {0: "رد على الاستفسارات خلال 48 ساعة", 1: "Response to inquiries within 48 hours", 2: "48小时内回复询问"},
+  pkg_feat_basic_3: {0: "متابعة القضايا الإدارية البسيطة", 1: "Follow-up on simple administrative matters", 2: "跟进简单行政事务"},
+  pkg_feat_pro_0: {0: "استشارات قانونية غير محدودة", 1: "Unlimited legal consultations", 2: "无限次法律咨询"},
+  pkg_feat_pro_1: {0: "صياغة ومراجعة العقود", 1: "Drafting and reviewing contracts", 2: "起草和审查合同"},
+  pkg_feat_pro_2: {0: "اعتماد اللوائح الداخلية", 1: "Approval of internal regulations", 2: "内部法规审批"},
+  pkg_feat_pro_3: {0: "حماية مصالحك أمام الجهات الرسمية", 1: "Protecting your interests before official authorities", 2: "在官方机构前保护您的利益"},
+  pkg_feat_pro_4: {0: "تقارير دورية وإطلاع مستمر", 1: "Periodic reports and continuous updates", 2: "定期报告和持续更新"},
+  pkg_feat_ent_0: {0: "محامٍ مخصص لمؤسستك", 1: "A dedicated lawyer for your organization", 2: "为您机构配备专属律师"},
+  pkg_feat_ent_1: {0: "تمثيل قضائي شامل (حسب الاتفاق)", 1: "Comprehensive judicial representation (per agreement)", 2: "全面司法代理（按协议）"},
+  pkg_feat_ent_2: {0: "صياغة جميع العقود بلا حدود", 1: "Drafting all contracts without limits", 2: "无限制起草所有合同"},
+  pkg_feat_ent_3: {0: "اجتماعات دورية وتقارير تفصيلية", 1: "Periodic meetings and detailed reports", 2: "定期会议和详细报告"},
+  pkg_feat_ent_4: {0: "أولوية في الرد والمتابعة", 1: "Priority response and follow-up", 2: "优先响应和跟进"},
+  pkg_feat_ent_5: {0: "دعم قانوني خارج أوقات العمل", 1: "Legal support outside working hours", 2: "工作时间外的法律支持"},
+  stats_tag: {0: "إنجازاتنا", 1: "Our Achievements", 2: "我们的成就"},
+  stats_h2: {0: "نسبة القضايا المنجزة", 1: "Completed Cases Rate", 2: "已完成案件比率"},
+  slbl_0: {0: "تجاري", 1: "Commercial", 2: "商业"},
+  slbl_1: {0: "جنائي", 1: "Criminal", 2: "刑事"},
+  slbl_2: {0: "تنفيذ", 1: "Enforcement", 2: "执行"},
+  slbl_3: {0: "لجان قضائية", 1: "Judicial Committees", 2: "司法委员会"},
+  slbl_4: {0: "أحوال شخصية", 1: "Personal Status", 2: "人身状况"},
+  slbl_5: {0: "عمالي", 1: "Labor", 2: "劳动"},
+  slbl_6: {0: "إداري", 1: "Administrative", 2: "行政"},
+  slbl_7: {0: "أوقاف", 1: "Endowments", 2: "宗教捐赠"},
+  partners_tag: {0: "شراكات ومعتمدون لدى", 1: "Partners & Accredited By", 2: "合作伙伴及认证机构"},
+  partners_h2: {0: "اعتمادات الشركة", 1: "Firm Accreditations", 2: "律师事务所认证"},
+  reviews_tag: {0: "آراء العملاء", 1: "Client Reviews", 2: "客户评价"},
+  reviews_h2: {0: "ماذا يقول عملاؤنا عنا؟", 1: "What Do Our Clients Say About Us?", 2: "我们的客户怎么评价我们？"},
+  rdate_0: {0: "قبل شهر واحد", 1: "1 month ago", 2: "1个月前"},
+  rdate_1: {0: "قبل ٣ أشهر", 1: "3 months ago", 2: "3个月前"},
+  rdate_2: {0: "قبل ٥ أشهر", 1: "5 months ago", 2: "5个月前"},
+  rdate_3: {0: "قبل ٦ أشهر", 1: "6 months ago", 2: "6个月前"},
+  rdate_4: {0: "قبل ٧ أشهر", 1: "7 months ago", 2: "7个月前"},
+  rdate_5: {0: "قبل ٨ أشهر", 1: "8 months ago", 2: "8个月前"},
+  rdate_6: {0: "قبل ٩ أشهر", 1: "9 months ago", 2: "9个月前"},
+  rdate_7: {0: "قبل ١٠ أشهر", 1: "10 months ago", 2: "10个月前"},
+  rdate_8: {0: "قبل سنة واحدة", 1: "1 year ago", 2: "1年前"},
+  reviews_more: {0: "اقرأ المزيد من التقييمات على خرائط جوجل", 1: "Read more reviews on Google Maps", 2: "在Google地图上阅读更多评价"},
+  footer_link_about: {0: "من نحن", 1: "About Us", 2: "关于我们"},
+  footer_link_svc: {0: "خدماتنا", 1: "Services", 2: "服务"},
+  footer_link_lit: {0: "الترافع", 1: "Litigation", 2: "诉讼"},
+  footer_link_pkg: {0: "الباقات", 1: "Packages", 2: "套餐"},
+  hero_who_title: {0: "من نحن", 1: "About Us", 2: "关于我们"},
+  hero_desc_a: {0: "شركة مهنية سعودية مرخصة تقدم خدماتها القانونية بخبرة عالية ورؤية حديثة تستند إلى مبادئ العدالة والمهنية والالتزام. نتميز بفريق قانوني متخصص يضم نخبة من المحامين والمستشارين ذوي الكفاءة العالية.", 1: "A licensed Saudi professional firm delivering legal services with high expertise and a modern vision grounded in principles of justice, professionalism, and commitment. We are distinguished by a specialized legal team comprising an elite group of highly competent lawyers and consultants.", 2: "一家持牌沙特专业律师事务所，以丰富的专业知识和现代视野提供法律服务，秉承正义、专业和承诺的原则。我们拥有由精英律师和顾问组成的专业法律团队。"},
+  hero_desc_b: {0: "نقدم خدماتنا للأفراد والجهات الحكومية والقطاع الخاص، ونسعى إلى تقديم حلول قانونية متكاملة ومبتكرة بمعايير مهنية رفيعة المستوى. نقدم خدمات قانونية متكاملة بخبرة عالية ورؤية حديثة تستند إلى مبادئ العدالة والمهنية والالتزام. نخدم الأفراد والشركات والجهات الحكومية على مستوى المملكة العربية السعودية.", 1: "We serve individuals, government entities, and the private sector, striving to deliver comprehensive and innovative legal solutions to the highest professional standards. We provide integrated legal services with high expertise and a modern vision based on the principles of justice, professionalism, and commitment, serving individuals, companies, and government entities across Saudi Arabia.", 2: "我们为个人、政府机构和私营部门提供服务，致力于以最高专业标准提供全面且创新的法律解决方案。我们以专业知识和现代视野提供综合法律服务，秉承正义、专业和承诺的原则，为沙特阿拉伯的个人、企业和政府机构提供服务。"},
+  rev_name_1: {0: "عبدالله التميمي", 1: "Abdullah Al-Tamimi", 2: "阿卜杜拉·塔米米"},
+  rev_name_2: {0: "مؤسسة الأفق التجارية", 1: "Al-Ufuq Trading Est.", 2: "阿尔乌夫克贸易公司"},
+  rev_name_3: {0: "سارة عبدالرحمن", 1: "Sara Abdulrahman", 2: "萨拉·阿卜杜勒拉赫曼"},
+  rev_name_4: {0: "شركة الراقي للمقاولات", 1: "Al-Raqi Contracting Co.", 2: "阿尔拉基承包公司"},
+  rev_name_5: {0: "فهد الدوسري", 1: "Fahad Al-Dosari", 2: "法赫德·多萨里"},
+  rev_name_6: {0: "نورة السالم", 1: "Noura Al-Salem", 2: "努拉·萨利姆"},
+  rev_name_7: {0: "مجموعة السعد للاستثمار", 1: "Al-Saad Investment Group", 2: "萨德投资集团"},
+  rev_name_8: {0: "طارق الشمري", 1: "Tariq Al-Shammari", 2: "塔里克·沙马里"},
+  rev_name_9: {0: "أسامة حمدان", 1: "Osama Hamdan", 2: "乌萨马·哈姆丹"},
+  rev_name_10: {0: "شركة المتقدمة للتقنية", 1: "Al-Mutaqaddima Technology Co.", 2: "穆塔卡迪玛科技公司"},
+  rev_text_1: {0: '"أشكر فريق العمل في شركة مشاري بندر بن جلوي على الاحترافية العالية والسرعة في الإنجاز. كان تواصلهم ممتازاً ونتائج القضية مرضية جداً. أنصح بالتعامل معهم."', 1: '"I thank the team at Meshary Bin Bandar Bin Jaloui for their high professionalism and speed. Communication was excellent and case results very satisfying. Highly recommend."', 2: '"感谢麦沙里律师事务所团队的高度专业性和执行速度。沟通出色，案件结果非常令人满意，强烈推荐。"'},
+  rev_text_2: {0: '"نعتمد عليهم في جميع استشاراتنا وصياغة عقود المؤسسة. دقة في المواعيد وإلمام تام بالأنظمة المستحدثة في المملكة واهتمام بالغ بمصلحة العميل."', 1: '"We rely on them for all our consultations and contract drafting. They are punctual, fully knowledgeable of Saudi regulations, and deeply attentive to client interests."', 2: '"我们依赖他们处理所有咨询和合同起草。守时、精通沙特最新法规，高度关注客户利益。"'},
+  rev_text_3: {0: '"تجربتي معهم كانت تفوق التوقعات. الشرح الوافي للوضع القانوني والخيارات المتاحة خطوة بخطوة أعطاني ثقة كبيرة وراحة بال تامة."', 1: '"My experience with them exceeded expectations. The thorough explanation of the legal situation and options step by step gave me great confidence and complete peace of mind."', 2: '"我的合作体验超出预期。逐步详细解释法律状况和可用选项，给了我极大的信心和完全的安心。"'},
+  rev_text_4: {0: '"جهود تذكر فتشكر، فريق عمل متكامل ومهني، تم إنهاء جميع القضايا العالقة للشركة بوقت قياسي."', 1: '"Efforts worth acknowledging. A complete and professional team that resolved all pending company cases in record time."', 2: '"值得称赞的努力。完整专业的团队以创纪录的时间解决了公司所有悬而未决的案件。"'},
+  rev_text_5: {0: '"مصداقية وأمانة في التعامل، اهتمام بأدق تفاصيل القضية والمتابعة المستمرة حتى كسب الدعوى."', 1: '"Credibility and integrity in dealings, attention to the finest case details, and continuous follow-up until winning the case."', 2: '"处事可信、诚实，关注案件最细节，持续跟进直至赢得诉讼。"'},
+  rev_text_6: {0: '"استعنت بهم في قضية أحوال شخصية معقدة، وكانوا خير سند في تقديم أنسب الحلول والحفاظ على الخصوصية بمهنية."', 1: '"I sought their help in a complex personal status case, and they were the best support in providing suitable solutions while maintaining privacy professionally."', 2: '"在复杂的个人身份案件中寻求他们的帮助，他们以专业方式提供了最合适的解决方案并维护了隐私。"'},
+  rev_text_7: {0: '"نحن شركاء مع شركة مشاري بندر بن جلوي منذ سنوات ونعتمد عليهم حصرياً في استشاراتنا القانونية وصياغة اتفاقياتنا الاستثمارية."', 1: '"We have been partners with Meshary Bin Bandar Bin Jaloui for years and rely on them exclusively for our legal consultations and investment agreement drafting."', 2: '"我们与麦沙里律师事务所合作多年，完全依赖他们进行法律咨询和投资协议起草。"'},
+  rev_text_8: {0: '"كل الشكر للمحامين والمستشارين، متابعة دورية وشفافية واضحة في كل الإجراءات المتخذة وموقفنا القانوني."', 1: '"All thanks to the lawyers and consultants — regular follow-up and clear transparency in all procedures and our legal position."', 2: '"衷心感谢律师和顾问们——定期跟进，对所有程序和法律立场保持清晰透明。"'},
+  rev_text_9: {0: '"خدمة الاستشارات الهاتفية كانت ممتازة وسريعة الاستجابة وذات فائدة كبيرة وفرت علي الكثير من الوقت."', 1: '"The phone consultation service was excellent, fast-responding, and very helpful — saving me a lot of time."', 2: '"电话咨询服务非常出色，响应迅速，帮助很大，为我节省了大量时间。"'},
+  rev_text_10: {0: '"المستشارون في الشركة يمتلكون معرفة مذهلة في قضايا الهيئة وحقوق الملكية، أثبتوا جدارتهم وكفاءتهم مراراً وتكراراً."', 1: '"The consultants possess remarkable knowledge in regulatory authority cases and intellectual property rights — proven their competence time and again."', 2: '"顾问们在监管案件和知识产权方面拥有出色知识，多次证明了他们的能力。"'},
+};
+</script>
+<script src="lang.js"></script>
 </body>
 </html>

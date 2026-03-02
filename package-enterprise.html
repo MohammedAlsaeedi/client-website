@@ -103,6 +103,20 @@
         .lang-drop-menu.open { display: flex; }
         .lang-drop-menu button { background: none; border: none; cursor: pointer; font-size: 1rem; padding: 6px 10px; border-radius: 6px; text-align: right; color: #fff; white-space: nowrap; font-family: inherit; transition: background .15s; }
         .lang-drop-menu button:hover { background: rgba(184,147,90,.2); }
+        
+        /* ─── MOBILE RESPONSIVE ─── */
+        @media(max-width:768px){
+            .page-hero{padding:110px 5% 50px}
+            .page-hero h1{font-size:clamp(1.3rem,5vw,1.8rem)}
+            .features-list{grid-template-columns:1fr}
+            .pkg-compare{overflow-x:auto}
+            .section-pad{padding:50px 5%}
+            .cta-btns{flex-direction:column;align-items:center}
+        }
+        @media(max-width:480px){
+            .cta-btns a{width:100%;justify-content:center;text-align:center}
+            .page-breadcrumb{font-size:.75rem;flex-wrap:wrap}
+        }
         </style>
 </head>
 <body>
@@ -127,7 +141,7 @@
 <div class="lang-drop" id="langDrop">
 <button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
 <div class="lang-drop-menu" id="langDropMenu">
-<button data-i18n="auto_1017" data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦 العربية</button>
+<button data-i18n="lang_btn_ar" data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦 العربية</button>
 <button data-lang="1" onclick="setLang(1);toggleLangDrop()">🇬🇧 English</button>
 <button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
 </div>
