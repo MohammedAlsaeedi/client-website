@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="page_title">ريادة الأعمال - شركة مشاري بندر بن جلوي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root { --navy: #1B2C6B; --navy-dark: #111d4a; --navy-mid: #223580; --gold: #B8935A; --gold-light: #d4aa72; --gold-pale: #f5ede0; --white: #ffffff; --off-white: #f8f6f2; --gray-light: #e5e7eb; --gray: #6b7280; --gray-dark: #374151; --border: #e5e1d9; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { font-family: 'Cairo', sans-serif; color: var(--gray-dark); background: var(--white); overflow-x: hidden; line-height: 1.6; }
+a { text-decoration: none; }
+
+/* NAVBAR */
+.navbar { position: fixed; inset: 0 0 auto 0; z-index: 1000; height: 90px; background: rgba(17,29,74,.97); backdrop-filter: blur(12px); border-bottom: 2px solid rgba(184,147,90,.45); display: flex; align-items: center; padding: 0 5%; }
+.nav-inner { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.nav-logo { display: flex; align-items: center; gap: 11px; }
+.nav-logo img { width: 60px; height: 60px; flex-shrink: 0; }
+.nav-firm-name { font-size: 1.2rem; font-weight: 800; color: var(--gold-light); line-height: 1.2; }
+.nav-firm-sub { font-size: .8rem; color: rgba(255,255,255,.55); }
+.nav-links { display: flex; align-items: center; gap: 20px; list-style: none; flex: 1; justify-content: center; }
+.nav-links a { color: rgba(255,255,255,.82); font-size: .95rem; font-weight: 600; transition: color .2s; position: relative; padding-bottom: 2px; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
+.nav-links a::after { content: ''; position: absolute; bottom: -2px; right: 0; left: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: right; transition: transform .25s; }
+.nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+.nav-cta { background: var(--gold); color: var(--white); padding: 8px 20px; border-radius: 25px; font-size: .85rem; font-weight: 800; transition: all .25s; white-space: nowrap; }
+.nav-cta:hover { background: var(--gold-light); }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; }
+.mobile-drawer { position: fixed; top: 90px; inset-inline: 0; background: var(--navy-dark); border-top: 1px solid rgba(184,147,90,.25); padding: 24px 5%; z-index: 999; transform: translateY(-8px); opacity: 0; visibility: hidden; transition: all .3s; }
+.mobile-drawer.open { transform: translateY(0); opacity: 1; visibility: visible; }
+.mobile-drawer ul { list-style: none; }
+.mobile-drawer li { border-bottom: 1px solid rgba(255,255,255,.07); }
+.mobile-drawer a { display: block; padding: 12px 0; color: rgba(255,255,255,.85); font-size: .95rem; font-weight: 600; }
+
+/* PAGE HERO */
+.page-hero { padding: 130px 5% 65px; background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #2a4090 100%); position: relative; overflow: hidden; }
+.page-hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(184,147,90,.08) 1px, transparent 1px); background-size: 40px 40px; }
+.page-hero-content { position: relative; z-index: 2; max-width: 700px; }
+.page-breadcrumb { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.55); font-size: .85rem; margin-bottom: 18px; }
+.page-breadcrumb a { color: var(--gold-light); }
+.page-breadcrumb span { color: rgba(255,255,255,.3); }
+.page-hero h1 { font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 900; color: white; line-height: 1.3; margin-bottom: 14px; }
+.page-hero p { color: rgba(255,255,255,.7); font-size: 1rem; line-height: 1.7; max-width: 600px; }
+
+/* ARTICLE CONTENT */
+.article-container { max-width: 820px; margin: 0 auto; padding: 60px 5%; }
+.article-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 30px; flex-wrap: wrap; }
+.article-tag { background: var(--gold-pale); color: var(--gold); font-size: .8rem; font-weight: 800; padding: 4px 14px; border-radius: 15px; }
+.article-date { color: var(--gray); font-size: .85rem; }
+.article-body h2 { font-size: 1.35rem; font-weight: 800; color: var(--navy); margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--gold-pale); }
+.article-body h3 { font-size: 1.1rem; font-weight: 700; color: var(--navy-mid); margin: 24px 0 12px; }
+.article-body p { font-size: .95rem; color: var(--gray-dark); line-height: 1.9; margin-bottom: 16px; }
+.article-body ul, .article-body ol { margin: 12px 0 16px 24px; }
+.article-body li { font-size: .93rem; line-height: 1.8; margin-bottom: 8px; color: var(--gray-dark); }
+.article-body strong { color: var(--navy); }
+.info-box { background: var(--off-white); border-right: 4px solid var(--gold); border-radius: 8px; padding: 20px 24px; margin: 20px 0; }
+.info-box p { margin-bottom: 0; }
+.back-to-blog { display: inline-flex; align-items: center; gap: 8px; color: var(--gold); font-weight: 700; font-size: .95rem; margin-top: 40px; transition: color .2s; }
+.back-to-blog:hover { color: var(--navy); }
+
+/* SECTION */
+.section-pad { padding: 70px 5%; max-width: 1280px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 45px; }
+.tag { display: inline-block; background: var(--gold-pale); color: var(--gold); font-size: .82rem; font-weight: 800; padding: 5px 16px; border-radius: 20px; margin-bottom: 12px; }
+.section-title { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 900; color: var(--navy); }
+.gold-bar { width: 50px; height: 4px; background: var(--gold); border-radius: 2px; margin: 12px auto 0; }
+
+/* LANG DROPDOWN */
+.lang-drop { position: relative; display: flex; align-items: center; }
+.lang-drop-btn { background: none; border: 2px solid rgba(255,255,255,.25); border-radius: 10px; cursor: pointer; font-size: 1.4rem; line-height: 1; padding: 4px 8px; transition: all .2s; color: #fff; }
+.lang-drop-btn:hover { border-color: var(--gold); transform: scale(1.05); }
+.lang-drop-menu { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--navy); border: 1px solid var(--gold); border-radius: 10px; padding: 6px; display: none; flex-direction: column; gap: 4px; min-width: 130px; z-index: 9999; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+.lang-drop-menu.open { display: flex; }
+.lang-drop-menu button { background: none; border: none; cursor: pointer; font-size: 1rem; padding: 6px 10px; border-radius: 6px; text-align: right; color: #fff; white-space: nowrap; font-family: inherit; transition: background .15s; }
+.lang-drop-menu button:hover { background: rgba(184,147,90,.2); }
+
+/* FOOTER */
+footer { background: var(--navy-dark); color: rgba(255,255,255,.6); text-align: center; padding: 30px 5%; font-size: .85rem; border-top: 1px solid rgba(184,147,90,.2); }
+footer a { color: var(--gold-light); }
+.whatsapp-fab { position: fixed; bottom: 28px; left: 28px; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 999; box-shadow: 0 6px 20px rgba(37,211,102,.4); transition: transform .25s; }
+.whatsapp-fab:hover { transform: scale(1.1); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) { .nav-links { display: none; } .hamburger { display: flex; } }
+@media (max-width: 768px) {
+    .page-hero { padding: 110px 5% 50px; }
+    .page-hero h1 { font-size: clamp(1.3rem,5vw,1.9rem); }
+    .article-container { padding: 40px 5%; }
+    .article-body h2 { font-size: 1.2rem; }
+}
+@media (max-width: 600px) { .nav-cta { display: none; } }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">
+<img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png" style="width:60px;height:60px;object-fit:contain;"/>
+<div class="nav-logo-text">
+<div class="nav-firm-name" data-i18n="firm_name">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub" data-i18n="firm_sub">للمحاماة والاستشارات القانونية</div>
+</div>
+</a>
+<ul class="nav-links">
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html" class="active">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+<div class="nav-controls">
+<div class="lang-drop" id="langDrop">
+<button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
+<div class="lang-drop-menu" id="langDropMenu">
+<button data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦 العربية</button>
+<button data-lang="1" onclick="setLang(1);toggleLangDrop()">🇬🇧 English</button>
+<button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
+</div>
+</div>
+<a class="nav-cta" data-i18n="nav_cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
+<div class="hamburger" onclick="document.querySelector('.mobile-drawer').classList.toggle('open')">
+<span></span><span></span><span></span>
+</div>
+</div>
+</div>
+</nav>
+<div class="mobile-drawer">
+<ul>
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+</div>
+
+<section class="page-hero">
+<div class="page-hero-content">
+<div class="page-breadcrumb">
+<a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
+<span>›</span>
+<a data-i18n="breadcrumb_blog" href="blog.html">المدونة</a>
+<span>›</span>
+<span data-i18n="art6_title">ريادة الأعمال</span>
+</div>
+<h1 data-i18n="art6_hero_title">ريادة الأعمال والجوانب القانونية في المملكة</h1>
+<p data-i18n="art6_hero_subtitle">دليل رواد الأعمال للتأسيس القانوني السليم وحماية مشاريعهم</p>
+</div>
+</section>
+
+<div class="article-container">
+<div class="article-meta">
+<span class="article-tag" data-i18n="tag_business">أعمال</span>
+<span class="article-date" data-i18n="art6_date">5 مارس 2026</span>
+</div>
+
+<article class="article-body">
+
+<h2 data-i18n="art6_intro_h2">مقدمة عن ريادة الأعمال في المملكة</h2>
+<p data-i18n="art6_intro_p1">تشهد المملكة العربية السعودية نهضة حقيقية في مجال ريادة الأعمال والمشاريع الصغيرة والمتوسطة. برنامج رؤية 2030 أعطى دفعة قوية للمؤسسين والمستثمرين من خلال عدة مبادرات وسياسات تشجيعية. منشآت (الهيئة العامة للمشاريع الصغيرة والمتوسطة) تلعب دوراً محورياً في دعم رواد الأعمال وتسهيل بدء أنشطتهم التجارية.</p>
+
+<p data-i18n="art6_intro_p2">لكن النجاح في ريادة الأعمال ليس فقط عن الفكرة الجيدة أو رأس المال الكافي. الجوانب القانونية والتنظيمية تلعب دوراً حاسماً في ضمان استدامة المشروع وحمايته من المخاطر القانونية. في هذا المقال، سنستعرض الخطوات القانونية الأساسية التي يجب على كل رائد أعمال اتخاذها.</p>
+
+<h2 data-i18n="art6_entity_h2">اختيار الكيان القانوني المناسب</h2>
+<p data-i18n="art6_entity_p1">القرار الأول الذي يواجهه أي رائد أعمال هو اختيار نوع الكيان القانوني للمشروع. هذا القرار له تأثيرات كبيرة على المسؤولية القانونية والضرائب والإدارة. في المملكة، هناك عدة خيارات:</p>
+
+<h3 data-i18n="art6_entity_h3_1">المؤسسة الفردية (Sole Proprietorship)</h3>
+<p data-i18n="art6_entity_p2">هي أبسط وأسرع طريقة لبدء نشاط تجاري. صاحب المؤسسة الفردية يكون مسؤولاً شخصياً وكاملاً عن جميع التزامات المؤسسة. هذا يعني أنه إذا حدثت مشاكل قانونية أو مالية، فإن ممتلكاته الشخصية قد تكون في خطر. لكنها تتطلب رأس مال أقل ولا تحتاج إلى شركاء.</p>
+
+<h3 data-i18n="art6_entity_h3_2">شركة ذات مسؤولية محدودة (Limited Liability Company - LLC)</h3>
+<p data-i18n="art6_entity_p3">هذا هو الخيار الأفضل للعديد من الشركات الصغيرة والمتوسطة. في LLC، تكون مسؤولية المالكين (الشركاء) محدودة بمقدار استثماراتهم. هذا يعني أن ممتلكاتهم الشخصية محمية إذا واجهت الشركة مشاكل قانونية. وتوفر مرونة أكبر في الإدارة والتمويل.</p>
+
+<h3 data-i18n="art6_entity_h3_3">شركة المساهمة المبسّطة (Simplified Joint Stock Company)</h3>
+<p data-i18n="art6_entity_p4">هذا النوع من الشركات أطلقت السعودية مؤخراً بهدف تشجيع الشركات الناشئة. تجمع بين المرونة والحماية القانونية. وتتطلب حد أدنى من رأس المال أقل من الشركات الكبيرة، مما يجعلها مثالية للمشاريع الناشئة (startups).</p>
+
+<div class="info-box">
+<p data-i18n="art6_info1"><strong>نصيحة مهمة:</strong> اختيار الكيان القانوني يعتمد على عوامل مثل حجم المشروع المتوقع، عدد الشركاء، المسؤولية المتوقعة، والخطط المستقبلية للنمو والتمويل.</p>
+</div>
+
+<h2 data-i18n="art6_registration_h2">إجراءات التسجيل والتراخيص الحكومية</h2>
+<p data-i18n="art6_registration_p1">بعد اختيار الكيان القانوني، يجب على رائد الأعمال الحصول على التراخيص والتسجيلات اللازمة من الجهات الحكومية المختلفة:</p>
+
+<h3 data-i18n="art6_registration_h3_1">السجل التجاري (Commercial Registration)</h3>
+<p data-i18n="art6_registration_p2">هذا هو أول إجراء يجب القيام به. يتم تسجيل المشروع في وزارة التجارة والاستثمار. السجل التجاري يعطي المشروع شخصية قانونية معترف بها رسمياً ويسمح له بممارسة نشاطه القانوني.</p>
+
+<h3 data-i18n="art6_registration_h3_2">الترخيص البلدي (Municipal License)</h3>
+<p data-i18n="art6_registration_p3">جميع الأنشطة التجارية تحتاج إلى موافقة بلدية (أمانة المدينة). يجب تقديم طلب ترخيص يتضمن مواقع المكتب أو المحل ووصف النشاط. البلدية تفتش الموقع وتتأكد من التزامه بالمعايير الصحية والأمنية والبيئية.</p>
+
+<h3 data-i18n="art6_registration_h3_3">التسجيل في الزكاة والضريبة (ZATCA)</h3>
+<p data-i18n="art6_registration_p4">هيئة الزكاة والضريبة والجمارك (ZATCA) تتطلب من جميع الشركات التسجيل وفقاً لقيمة دخلهم. التسجيل مهم لحساب الزكاة والضريبة على الدخل. كما أنه إلزامي للاستفادة من الخدمات الحكومية والحصول على التمويل.</p>
+
+<h3 data-i18n="art6_registration_h3_4">التسجيل في التأمينات الاجتماعية (GOSI)</h3>
+<p data-i18n="art6_registration_p5">إذا كان لديك موظفون سعوديون، يجب تسجيل الشركة والموظفين في صندوق التأمينات الاجتماعية. هذا يوفر حماية اجتماعية للموظفين ويضمن الامتثال لقوانين العمل.</p>
+
+<h3 data-i18n="art6_registration_h3_5">برنامج نطاقات (Nitaqat Program)</h3>
+<p data-i18n="art6_registration_p6">برنامج نطاقات يشترط نسبة معينة من الموظفين السعوديين في الشركة. عدم الامتثال قد يؤدي إلى غرامات أو حظر توظيف العمالة الأجنبية. يجب على الشركة فهم متطلبات البرنامج منذ البداية.</p>
+
+<h2 data-i18n="art6_contracts_h2">العقود الأساسية التي يحتاجها رائد الأعمال</h2>
+<p data-i18n="art6_contracts_p1">وجود عقود قانونية واضحة وشاملة ضروري لحماية حقوق رائد الأعمال والشركة:</p>
+
+<h3 data-i18n="art6_contracts_h3_1">عقد التأسيس والنظام الأساسي (Memorandum and Articles of Association)</h3>
+<p data-i18n="art6_contracts_p2">هذا العقد ينظم هيكل الشركة، سلطات الإدارة، توزيع الأرباح، وإجراءات صنع القرارات. وهو ضروري لأي شركة متعددة المالكين أو الشركاء.</p>
+
+<h3 data-i18n="art6_contracts_h3_2">اتفاقية الشركاء (Shareholders Agreement)</h3>
+<p data-i18n="art6_contracts_p3">هذه الاتفاقية توضح حقوق والتزامات كل شريك، طرق تحل النزاعات بينهم، وما يحدث إذا أراد أحد الشركاء مغادرة الشركة. وهي تحمي الشركاء من صراعات محتملة.</p>
+
+<h3 data-i18n="art6_contracts_h3_3">عقود التوظيف (Employment Contracts)</h3>
+<p data-i18n="art6_contracts_p4">عقود واضحة مع الموظفين تحدد الراتب والمزايا والمسؤوليات والشروط. هذا يحمي الشركة من نزاعات العمل المحتملة.</p>
+
+<h3 data-i18n="art6_contracts_h3_4">عقود التوريد والتوزيع (Supply and Distribution Agreements)</h3>
+<p data-i18n="art6_contracts_p5">إذا كان عملك يتضمن شراء من موردين أو بيع عبر موزعين، يجب وجود عقود واضحة تحدد الأسعار والشروط والالتزامات.</p>
+
+<h3 data-i18n="art6_contracts_h3_5">اتفاقيات عدم المنافسة والسرية (NDA and Non-Compete Agreements)</h3>
+<p data-i18n="art6_contracts_p6">هذه الاتفاقيات تحمي المعلومات السرية والملكية الفكرية للشركة. تمنع الموظفين والشركاء السابقين من استخدام المعلومات السرية للشركة في منافسة.</p>
+
+<div class="info-box">
+<p data-i18n="art6_info2"><strong>تنبيه قانوني:</strong> جميع العقود يجب أن تكون بسيطة وواضحة حتى يفهمها جميع الأطراف. كما يجب توثيقها لضمان قوتها القانونية.</p>
+</div>
+
+<h2 data-i18n="art6_ip_h2">حماية الملكية الفكرية والعلامات التجارية</h2>
+<p data-i18n="art6_ip_p1">الملكية الفكرية هي أحد أهم الأصول لأي شركة ناشئة. الحماية القانونية لهذه الأصول ضرورية:</p>
+
+<h3 data-i18n="art6_ip_h3_1">تسجيل العلامات التجارية (Trademark Registration)</h3>
+<p data-i18n="art6_ip_p2">اسم الشركة والشعار والعلامات المميزة يجب تسجيلها لديها الهيئة السعودية للملكية الفكرية (SAIP). التسجيل يعطيك حق حصري في استخدام العلامة ويحمي الشركة من نسخ المنافسين.</p>
+
+<h3 data-i18n="art6_ip_h3_2">براءات الاختراع (Patents)</h3>
+<p data-i18n="art6_ip_p3">إذا طورت اختراعاً أو تكنولوجيا جديدة، يجب التقدم بطلب براءة اختراع. هذا يعطيك حماية قانونية ضد أي شخص آخر يستخدم نفس الاختراع.</p>
+
+<h3 data-i18n="art6_ip_h3_3">حقوق الملكية الفكرية والتأليف (Copyright)</h3>
+<p data-i18n="art6_ip_p4">أي محتوى أصلي تنتجه الشركة (برامج، مقاطع فيديو، صور، نصوص) يتمتع بحماية حقوق التأليف. تسجيل هذه الحقوق يوفر حماية إضافية.</p>
+
+<h3 data-i18n="art6_ip_h3_4">الأسرار التجارية (Trade Secrets)</h3>
+<p data-i18n="art6_ip_p5">المعلومات السرية والحساسة مثل الصيغ أو قوائم العملاء يجب حمايتها من خلال اتفاقيات سرية وممارسات أمنية قوية.</p>
+
+<h2 data-i18n="art6_funding_h2">التمويل والاستثمار: الخيارات القانونية</h2>
+<p data-i18n="art6_funding_p1">الحصول على التمويل مهم لنمو الشركة. هناك عدة خيارات تمويلية في المملكة:</p>
+
+<h3 data-i18n="art6_funding_h3_1">التمويل الذاتي (Bootstrapping)</h3>
+<p data-i18n="art6_funding_p2">استخدام رأسمالك الخاص ودخل الشركة لتمويل النمو. هذا يعطيك السيطرة الكاملة لكن قد يبطئ النمو.</p>
+
+<h3 data-i18n="art6_funding_h3_2">المستثمرون الملائكة (Angel Investors)</h3>
+<p data-i18n="art6_funding_p3">أفراد أثرياء يستثمرون في الشركات الناشئة. المستثمرون الملائكة عادة يبحثون عن حصة في الشركة وقد يقدمون خبرات إضافية. يجب وجود اتفاقية استثمار واضحة تحدد نسبة الملكية والحقوق.</p>
+
+<h3 data-i18n="art6_funding_h3_3">رأس المال الجريء (Venture Capital)</h3>
+<p data-i18n="art6_funding_p4">شركات رأس المال الجريء استثمر في الشركات الناشئة ذات الإمكانيات العالية. هذا يتطلب أن تكون الشركة في مرحلة متقدمة نسبياً وأن تكون لديها خطط نمو طموحة.</p>
+
+<h3 data-i18n="art6_funding_h3_4">التمويل الجماعي (Crowdfunding)</h3>
+<p data-i18n="art6_funding_p5">جمع أموال من مجموعة كبيرة من الناس عبر الإنترنت. هذا يتطلب وجود نموذج عمل واضح وعرض مقنع للعموم.</p>
+
+<h3 data-i18n="art6_funding_h3_5">التمويل الحكومي والبنك الاجتماعي</h3>
+<p data-i18n="art6_funding_p6">بنك التنمية الاجتماعية يقدم تمويل بشروط ميسرة للمشاريع الصغيرة والمتوسطة. هناك أيضاً برامج تدعم الشركات الناشئة.</p>
+
+<div class="info-box">
+<p data-i18n="art6_info3"><strong>مهم:</strong> أي استثمار يجب أن يصاحب اتفاقية قانونية واضحة تحدد حقوق المستثمر، العائدات، والخروج المحتمل.</p>
+</div>
+
+<h2 data-i18n="art6_compliance_h2">الامتثال التنظيمي والالتزامات القانونية</h2>
+<p data-i18n="art6_compliance_p1">رائد الأعمال يجب أن يكون على دراية بالمتطلبات القانونية والتنظيمية:</p>
+
+<h3 data-i18n="art6_compliance_h3_1">ضريبة القيمة المضافة (VAT)</h3>
+<p data-i18n="art6_compliance_p2">إذا تجاوزت مبيعات الشركة حد معين، يجب تسجيلها في نظام ضريبة القيمة المضافة. هذا يتطلب إصدار فواتير ضريبية وحفظ سجلات دقيقة.</p>
+
+<h3 data-i18n="art6_compliance_h3_2">الزكاة والضرائب</h3>
+<p data-i18n="art6_compliance_p3">الشركات يجب أن تدفع الزكاة والضريبة على الأرباح وفقاً للمتطلبات الشرعية والقانونية. الحفاظ على سجلات محاسبية دقيقة ضروري.</p>
+
+<h3 data-i18n="art6_compliance_h3_3">حماية البيانات والخصوصية</h3>
+<p data-i18n="art6_compliance_p4">إذا كنت تجمع بيانات عملاء، يجب الالتزام بقوانين حماية البيانات الشخصية والخصوصية. هذا يتضمن الحصول على الموافقة وتأمين البيانات.</p>
+
+<h3 data-i18n="art6_compliance_h3_4">التجارة الإلكترونية</h3>
+<p data-i18n="art6_compliance_p5">إذا كان عملك يشمل التجارة الإلكترونية أو المتاجر الإلكترونية، يجب الامتثال لنظام التجارة الإلكترونية الذي ينظم البيع عبر الإنترنت وحماية المستهلك.</p>
+
+<h3 data-i18n="art6_compliance_h3_5">حماية المستهلك</h3>
+<p data-i18n="art6_compliance_p6">الشركات يجب أن تلتزم بمعايير جودة المنتجات والخدمات وحماية المستهلك. عدم الالتزام قد يؤدي إلى شكاوى وغرامات.</p>
+
+<h2 data-i18n="art6_challenges_h2">التحديات القانونية الشائعة ورائد الأعمال</h2>
+<p data-i18n="art6_challenges_p1">هناك عدة تحديات قانونية شائعة تواجه رواد الأعمال:</p>
+
+<ul>
+<li data-i18n="art6_challenges_l1"><strong>نزاعات الملكية:</strong> عدم وضوح حقوق الملكية بين الشركاء قد يؤدي لنزاعات. الاتفاقيات الواضحة ضرورية.</li>
+<li data-i18n="art6_challenges_l2"><strong>نزاعات العمل:</strong> سوء الفهم مع الموظفين قد يؤدي لشكاوى لديها محاكم العمل.</li>
+<li data-i18n="art6_challenges_l3"><strong>المشاكل المالية:</strong> عدم الامتثال الضريبي قد يؤدي لغرامات من الجهات الحكومية.</li>
+<li data-i18n="art6_challenges_l4"><strong>مخاطر المنتج:</strong> إذا كان منتجك يسبب ضرر، قد تواجه دعاوى قانونية من المستهلكين.</li>
+<li data-i18n="art6_challenges_l5"><strong>التعاقد مع الشركاء:</strong> عدم وجود عقود واضحة مع الموردين والشركاء قد يؤدي لنزاعات.</li>
+</ul>
+
+<h2 data-i18n="art6_conclusion_h2">الخاتمة</h2>
+<p data-i18n="art6_conclusion_p1">النجاح في ريادة الأعمال يتطلب أكثر من مجرد فكرة جيدة. الأساس القانوني القوي والسليم ضروري لضمان النمو والاستدامة. من اختيار الكيان القانوني الصحيح إلى حماية الملكية الفكرية والامتثال للقوانين، كل خطوة مهمة.</p>
+
+<p data-i18n="art6_conclusion_p2">فريقنا في شركة مشاري بندر بن جلوي متخصص في دعم رواد الأعمال والشركات الناشئة. نحن نقدم استشارات شاملة تغطي جميع الجوانب القانونية لتأسيس ونمو مشروعك. لا تتردد في التواصل معنا للحصول على استشارة متخصصة مكيفة لاحتياجات مشروعك.</p>
+
+<a href="blog.html" class="back-to-blog" data-i18n="back_to_blog">← العودة للمدونة</a>
+
+</article>
+</div>
+
+<section style="background:linear-gradient(135deg,var(--navy-dark),var(--navy));padding:60px 5%;text-align:center;">
+<h2 data-i18n="cta_h2" style="font-size:clamp(1.3rem,3vw,1.8rem);font-weight:900;color:white;margin-bottom:14px;">هل تحتاج استشارة قانونية؟</h2>
+<p data-i18n="cta_p" style="color:rgba(255,255,255,.7);font-size:1rem;max-width:550px;margin:0 auto 24px;">فريقنا القانوني جاهز لمساعدتك</p>
+<a data-i18n="nav_cta" href="https://wa.me/966533532153" style="display:inline-block;background:var(--gold);color:white;padding:12px 32px;border-radius:25px;font-weight:800;font-size:.95rem;" target="_blank" rel="noopener">احجز استشارة</a>
+</section>
+
+<footer>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px 22px;margin-bottom:18px;">
+<a data-i18n="nav_services" href="index.html#services" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">خدماتنا</a>
+<a data-i18n="nav_contracts" href="contracts.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">عقود الشركات</a>
+<a data-i18n="nav_faq" href="faq.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">الأسئلة الشائعة</a>
+<a data-i18n="nav_team" href="team.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">فريقنا</a>
+<a data-i18n="nav_blog" href="blog.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">المدونة</a>
+<a data-i18n="nav_eservices" href="e-services.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">الخدمات الإلكترونية</a>
+<a data-i18n="nav_events" href="events.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">فعاليتنا</a>
+<a data-i18n="nav_cases_stats" href="cases-stats.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">القضايا المنجزة</a>
+<a data-i18n="nav_careers" href="careers.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">التوظيف</a>
+<a data-i18n="nav_contact" href="index.html#booking" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">تواصل معنا</a>
+</div>
+<p data-i18n="footer_copyright">© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+</footer>
+
+<a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank">
+<svg fill="white" height="28" viewbox="0 0 24 24" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<script>
+const pageTranslations = {
+  page_title: {0: 'ريادة الأعمال - شركة مشاري بندر بن جلوي', 1: 'Entrepreneurship - Al Mashari Law Firm', 2: '创业 - Al Mashari律师事务所'},
+  breadcrumb_home: {0: 'الرئيسية', 1: 'Home', 2: '首页'},
+  breadcrumb_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
+  art6_title: {0: 'ريادة الأعمال', 1: 'Entrepreneurship', 2: '创业'},
+  art6_hero_title: {0: 'ريادة الأعمال والجوانب القانونية في المملكة', 1: 'Entrepreneurship and Legal Aspects in the Kingdom', 2: '沙特王国的创业和法律方面'},
+  art6_hero_subtitle: {0: 'دليل رواد الأعمال للتأسيس القانوني السليم وحماية مشاريعهم', 1: 'Entrepreneurs Guide to Proper Legal Foundation and Project Protection', 2: '企业家正确法律基础和项目保护指南'},
+  tag_business: {0: 'أعمال', 1: 'Business', 2: '商业'},
+  art6_date: {0: '5 مارس 2026', 1: 'March 5, 2026', 2: '2026年3月5日'},
+  art6_intro_h2: {0: 'مقدمة عن ريادة الأعمال في المملكة', 1: 'Introduction to Entrepreneurship in the Kingdom', 2: '王国创业介绍'},
+  art6_intro_p1: {0: 'تشهد المملكة العربية السعودية نهضة حقيقية في مجال ريادة الأعمال والمشاريع الصغيرة والمتوسطة. برنامج رؤية 2030 أعطى دفعة قوية للمؤسسين والمستثمرين من خلال عدة مبادرات وسياسات تشجيعية. منشآت (الهيئة العامة للمشاريع الصغيرة والمتوسطة) تلعب دوراً محورياً في دعم رواد الأعمال وتسهيل بدء أنشطتهم التجارية.', 1: 'The Kingdom of Saudi Arabia is witnessing a real renaissance in entrepreneurship and small and medium enterprises. Vision 2030 program has given a strong boost to entrepreneurs and investors through several initiatives and encouraging policies. Monsha\'at (General Authority for Small and Medium Enterprises) plays a pivotal role in supporting entrepreneurs and facilitating the start of their business activities.', 2: '沙特阿拉伯王国正在经历创业和中小企业的真正复兴。2030年愿景计划通过多项倡议和鼓励政策为企业家和投资者提供了强大动力。Monsha\'at（中小企业总局）在支持企业家和促进其商业活动启动方面发挥了关键作用。'},
+  art6_intro_p2: {0: 'لكن النجاح في ريادة الأعمال ليس فقط عن الفكرة الجيدة أو رأس المال الكافي. الجوانب القانونية والتنظيمية تلعب دوراً حاسماً في ضمان استدامة المشروع وحمايته من المخاطر القانونية. في هذا المقال، سنستعرض الخطوات القانونية الأساسية التي يجب على كل رائد أعمال اتخاذها.', 1: 'However, success in entrepreneurship is not just about a good idea or sufficient capital. Legal and regulatory aspects play a crucial role in ensuring project sustainability and protection from legal risks. In this article, we will review the basic legal steps every entrepreneur must take.', 2: '然而，创业的成功不仅仅取决于好主意或足够的资本。法律和监管方面在确保项目可持续性和保护其免受法律风险方面起着至关重要的作用。在本文中，我们将回顾每位企业家必须采取的基本法律步骤。'},
+  art6_entity_h2: {0: 'اختيار الكيان القانوني المناسب', 1: 'Choosing the Right Legal Entity', 2: '选择合适的法律实体'},
+  art6_entity_p1: {0: 'القرار الأول الذي يواجهه أي رائد أعمال هو اختيار نوع الكيان القانوني للمشروع. هذا القرار له تأثيرات كبيرة على المسؤولية القانونية والضرائب والإدارة. في المملكة، هناك عدة خيارات:', 1: 'The first decision any entrepreneur faces is choosing the type of legal entity for the project. This decision has major impacts on legal liability, taxes, and management. In the Kingdom, there are several options:', 2: '任何企业家面临的第一个决定是为项目选择法律实体的类型。此决定对法律责任、税收和管理有重大影响。在王国中，有几种选择：'},
+  art6_entity_h3_1: {0: 'المؤسسة الفردية (Sole Proprietorship)', 1: 'Sole Proprietorship', 2: '独资企业'},
+  art6_entity_p2: {0: 'هي أبسط وأسرع طريقة لبدء نشاط تجاري. صاحب المؤسسة الفردية يكون مسؤولاً شخصياً وكاملاً عن جميع التزامات المؤسسة. هذا يعني أنه إذا حدثت مشاكل قانونية أو مالية، فإن ممتلكاته الشخصية قد تكون في خطر. لكنها تتطلب رأس مال أقل ولا تحتاج إلى شركاء.', 1: 'It is the simplest and fastest way to start a business. The sole proprietor is fully and personally responsible for all obligations of the business. This means that if legal or financial problems occur, his personal property may be at risk. However, it requires less capital and does not need partners.', 2: '这是开始业务的最简单和最快的方式。独资企业所有者对业务的所有义务承担完全个人责任。这意味着如果发生法律或财务问题，其个人财产可能处于风险中。但是，它需要的资本较少，不需要合伙人。'},
+  art6_entity_h3_2: {0: 'شركة ذات مسؤولية محدودة (Limited Liability Company - LLC)', 1: 'Limited Liability Company - LLC', 2: '有限责任公司 - LLC'},
+  art6_entity_p3: {0: 'هذا هو الخيار الأفضل للعديد من الشركات الصغيرة والمتوسطة. في LLC، تكون مسؤولية المالكين (الشركاء) محدودة بمقدار استثماراتهم. هذا يعني أن ممتلكاتهم الشخصية محمية إذا واجهت الشركة مشاكل قانونية. وتوفر مرونة أكبر في الإدارة والتمويل.', 1: 'This is the best option for many small and medium companies. In an LLC, the liability of owners (partners) is limited to the amount of their investment. This means their personal assets are protected if the company faces legal problems. It also provides greater flexibility in management and financing.', 2: '这是许多中小企业的最佳选择。在有限责任公司中，所有者（合伙人）的责任限于其投资额。这意味着如果公司面临法律问题，他们的个人资产将受到保护。它还在管理和融资方面提供了更大的灵活性。'},
+  art6_entity_h3_3: {0: 'شركة المساهمة المبسّطة (Simplified Joint Stock Company)', 1: 'Simplified Joint Stock Company', 2: '简化股份公司'},
+  art6_entity_p4: {0: 'هذا النوع من الشركات أطلقت السعودية مؤخراً بهدف تشجيع الشركات الناشئة. تجمع بين المرونة والحماية القانونية. وتتطلب حد أدنى من رأس المال أقل من الشركات الكبيرة، مما يجعلها مثالية للمشاريع الناشئة (startups).', 1: 'Saudi Arabia recently launched this type of company to encourage startups. It combines flexibility and legal protection. It requires a minimum capital less than large companies, making it ideal for startup projects.', 2: '沙特阿拉伯最近推出这种类型的公司以鼓励创业。它结合了灵活性和法律保护。它需要的最低资本少于大型公司，使其成为初创项目的理想选择。'},
+  art6_info1: {0: 'نصيحة مهمة: اختيار الكيان القانوني يعتمد على عوامل مثل حجم المشروع المتوقع، عدد الشركاء، المسؤولية المتوقعة، والخطط المستقبلية للنمو والتمويل.', 1: 'Important Tip: Choosing the legal entity depends on factors such as expected project size, number of partners, expected liability, and future plans for growth and financing.', 2: '重要提示：选择法律实体取决于多个因素，如预期项目规模、合伙人数量、预期责任以及增长和融资的未来计划。'},
+  art6_registration_h2: {0: 'إجراءات التسجيل والتراخيص الحكومية', 1: 'Registration and Government Licensing Procedures', 2: '注册和政府许可程序'},
+  art6_registration_p1: {0: 'بعد اختيار الكيان القانوني، يجب على رائد الأعمال الحصول على التراخيص والتسجيلات اللازمة من الجهات الحكومية المختلفة:', 1: 'After choosing the legal entity, the entrepreneur must obtain the necessary licenses and registrations from various government agencies:', 2: '选择法律实体后，企业家必须从各个政府机构获得必要的许可证和注册：'},
+  art6_registration_h3_1: {0: 'السجل التجاري (Commercial Registration)', 1: 'Commercial Registration', 2: '商业登记'},
+  art6_registration_p2: {0: 'هذا هو أول إجراء يجب القيام به. يتم تسجيل المشروع في وزارة التجارة والاستثمار. السجل التجاري يعطي المشروع شخصية قانونية معترف بها رسمياً ويسمح له بممارسة نشاطه القانوني.', 1: 'This is the first procedure to be done. The project is registered with the Ministry of Commerce and Investment. Commercial registration gives the project an officially recognized legal personality and allows it to conduct its legal activities.', 2: '这是要做的第一个程序。该项目向商业和投资部注册。商业登记赋予项目官方认可的法律人格，并允许其进行法律活动。'},
+  art6_registration_h3_2: {0: 'الترخيص البلدي (Municipal License)', 1: 'Municipal License', 2: '市政许可证'},
+  art6_registration_p3: {0: 'جميع الأنشطة التجارية تحتاج إلى موافقة بلدية (أمانة المدينة). يجب تقديم طلب ترخيص يتضمن مواقع المكتب أو المحل ووصف النشاط. البلدية تفتش الموقع وتتأكد من التزامه بالمعايير الصحية والأمنية والبيئية.', 1: 'All commercial activities require municipal approval (city municipality). A licensing request must be submitted that includes office or shop locations and activity description. The municipality inspects the location and ensures compliance with health, safety, and environmental standards.', 2: '所有商业活动都需要市政批准（城市市政当局）。必须提交包括办公室或商店地点和活动描述的许可申请。市政当局检查该地点并确保符合卫生、安全和环保标准。'},
+  art6_registration_h3_3: {0: 'التسجيل في الزكاة والضريبة (ZATCA)', 1: 'Zakat and Tax Authority (ZATCA) Registration', 2: '天课和税务局（ZATCA）注册'},
+  art6_registration_p4: {0: 'هيئة الزكاة والضريبة والجمارك (ZATCA) تتطلب من جميع الشركات التسجيل وفقاً لقيمة دخلهم. التسجيل مهم لحساب الزكاة والضريبة على الدخل. كما أنه إلزامي للاستفادة من الخدمات الحكومية والحصول على التمويل.', 1: 'Zakat and Tax Authority (ZATCA) requires all companies to register according to their income value. Registration is important for calculating zakat and income tax. It is also mandatory to benefit from government services and obtain financing.', 2: '天课和税务局（ZATCA）要求所有公司根据其收入价值进行注册。注册对于计算天课和所得税很重要。享受政府服务和获得融资也是强制性的。'},
+  art6_registration_h3_4: {0: 'التسجيل في التأمينات الاجتماعية (GOSI)', 1: 'Social Insurance Registration (GOSI)', 2: '社会保险注册（GOSI）'},
+  art6_registration_p5: {0: 'إذا كان لديك موظفون سعوديون، يجب تسجيل الشركة والموظفين في صندوق التأمينات الاجتماعية. هذا يوفر حماية اجتماعية للموظفين ويضمن الامتثال لقوانين العمل.', 1: 'If you have Saudi employees, you must register the company and employees with the Social Insurance Fund. This provides social protection for employees and ensures compliance with labor laws.', 2: '如果您有沙特员工，必须向社会保险基金注册公司和员工。这为员工提供社会保护并确保遵守劳动法。'},
+  art6_registration_h3_5: {0: 'برنامج نطاقات (Nitaqat Program)', 1: 'Nitaqat Program', 2: 'Nitaqat计划'},
+  art6_registration_p6: {0: 'برنامج نطاقات يشترط نسبة معينة من الموظفين السعوديين في الشركة. عدم الامتثال قد يؤدي إلى غرامات أو حظر توظيف العمالة الأجنبية. يجب على الشركة فهم متطلبات البرنامج منذ البداية.', 1: 'Nitaqat program requires a certain percentage of Saudi employees in the company. Non-compliance may result in fines or ban on hiring foreign labor. The company must understand the program requirements from the beginning.', 2: 'Nitaqat计划要求公司中有一定比例的沙特员工。不遵守可能导致罚款或禁止聘用外国劳动力。公司必须从一开始就理解计划的要求。'},
+  art6_contracts_h2: {0: 'العقود الأساسية التي يحتاجها رائد الأعمال', 1: 'Essential Contracts for Entrepreneurs', 2: '企业家必需的基本合同'},
+  art6_contracts_p1: {0: 'وجود عقود قانونية واضحة وشاملة ضروري لحماية حقوق رائد الأعمال والشركة:', 1: 'Having clear and comprehensive legal contracts is essential to protect the rights of entrepreneurs and the company:', 2: '拥有清晰全面的法律合同对于保护企业家和公司的权利至关重要：'},
+  art6_contracts_h3_1: {0: 'عقد التأسيس والنظام الأساسي (Memorandum and Articles of Association)', 1: 'Memorandum and Articles of Association', 2: '备忘录和关联条款'},
+  art6_contracts_p2: {0: 'هذا العقد ينظم هيكل الشركة، سلطات الإدارة، توزيع الأرباح، وإجراءات صنع القرارات. وهو ضروري لأي شركة متعددة المالكين أو الشركاء.', 1: 'This contract regulates the structure of the company, management authority, profit distribution, and decision-making procedures. It is necessary for any company with multiple owners or partners.', 2: '本合同规定了公司的结构、管理权、利润分配和决策程序。对于任何有多个所有者或合伙人的公司都是必要的。'},
+  art6_contracts_h3_2: {0: 'اتفاقية الشركاء (Shareholders Agreement)', 1: 'Shareholders Agreement', 2: '股东协议'},
+  art6_contracts_p3: {0: 'هذه الاتفاقية توضح حقوق والتزامات كل شريك، طرق تحل النزاعات بينهم، وما يحدث إذا أراد أحد الشركاء مغادرة الشركة. وهي تحمي الشركاء من صراعات محتملة.', 1: 'This agreement clarifies the rights and obligations of each partner, methods to resolve disputes between them, and what happens if a partner wants to leave the company. It protects partners from potential conflicts.', 2: '本协议阐明了每个合伙人的权利和义务、解决纠纷的方法，以及如果合伙人想离开公司会发生什么。它保护合伙人免受潜在的冲突。'},
+  art6_contracts_h3_3: {0: 'عقود التوظيف (Employment Contracts)', 1: 'Employment Contracts', 2: '雇佣合同'},
+  art6_contracts_p4: {0: 'عقود واضحة مع الموظفين تحدد الراتب والمزايا والمسؤوليات والشروط. هذا يحمي الشركة من نزاعات العمل المحتملة.', 1: 'Clear contracts with employees specify salary, benefits, responsibilities, and terms. This protects the company from potential labor disputes.', 2: '与员工的清晰合同规定了薪资、福利、责任和条款。这保护公司免受潜在的劳动纠纷。'},
+  art6_contracts_h3_4: {0: 'عقود التوريد والتوزيع (Supply and Distribution Agreements)', 1: 'Supply and Distribution Agreements', 2: '供应和分销协议'},
+  art6_contracts_p5: {0: 'إذا كان عملك يتضمن شراء من موردين أو بيع عبر موزعين، يجب وجود عقود واضحة تحدد الأسعار والشروط والالتزامات.', 1: 'If your business involves purchasing from suppliers or selling through distributors, there must be clear contracts specifying prices, terms, and obligations.', 2: '如果您的业务涉及从供应商购买或通过分销商销售，必须有明确的合同规定价格、条款和义务。'},
+  art6_contracts_h3_5: {0: 'اتفاقيات عدم المنافسة والسرية (NDA and Non-Compete Agreements)', 1: 'NDA and Non-Compete Agreements', 2: '保密协议和竞业禁止协议'},
+  art6_contracts_p6: {0: 'هذه الاتفاقيات تحمي المعلومات السرية والملكية الفكرية للشركة. تمنع الموظفين والشركاء السابقين من استخدام المعلومات السرية للشركة في منافسة.', 1: 'These agreements protect the company\'s confidential information and intellectual property. They prevent employees and former partners from using the company\'s confidential information in competition.', 2: '这些协议保护公司的机密信息和知识产权。它们防止员工和前合伙人在竞争中使用公司的机密信息。'},
+  art6_info2: {0: 'تنبيه قانوني: جميع العقود يجب أن تكون بسيطة وواضحة حتى يفهمها جميع الأطراف. كما يجب توثيقها لضمان قوتها القانونية.', 1: 'Legal Alert: All contracts must be simple and clear so all parties understand them. They should also be notarized to ensure their legal strength.', 2: '法律警报：所有合同都必须简洁明了，以便所有方理解。它们还应进行公证以确保其法律效力。'},
+  art6_ip_h2: {0: 'حماية الملكية الفكرية والعلامات التجارية', 1: 'Intellectual Property and Trademark Protection', 2: '知识产权和商标保护'},
+  art6_ip_p1: {0: 'الملكية الفكرية هي أحد أهم الأصول لأي شركة ناشئة. الحماية القانونية لهذه الأصول ضرورية:', 1: 'Intellectual property is one of the most important assets for any startup. Legal protection of these assets is necessary:', 2: '知识产权是任何初创公司最重要的资产之一。这些资产的法律保护是必要的：'},
+  art6_ip_h3_1: {0: 'تسجيل العلامات التجارية (Trademark Registration)', 1: 'Trademark Registration', 2: '商标注册'},
+  art6_ip_p2: {0: 'اسم الشركة والشعار والعلامات المميزة يجب تسجيلها لديها الهيئة السعودية للملكية الفكرية (SAIP). التسجيل يعطيك حق حصري في استخدام العلامة ويحمي الشركة من نسخ المنافسين.', 1: 'Company name, logo, and distinctive marks must be registered with the Saudi Authority for Intellectual Property (SAIP). Registration gives you exclusive right to use the mark and protects the company from competitor copying.', 2: '公司名称、徽标和显著标志必须在沙特知识产权局（SAIP）注册。注册使您有权独占使用该标志，并保护公司免受竞争对手复制。'},
+  art6_ip_h3_2: {0: 'براءات الاختراع (Patents)', 1: 'Patents', 2: '专利'},
+  art6_ip_p3: {0: 'إذا طورت اختراعاً أو تكنولوجيا جديدة، يجب التقدم بطلب براءة اختراع. هذا يعطيك حماية قانونية ضد أي شخص آخر يستخدم نفس الاختراع.', 1: 'If you develop an invention or new technology, you should apply for a patent. This gives you legal protection against anyone else using the same invention.', 2: '如果您开发了一项发明或新技术，应该申请专利。这使您能够获得法律保护，防止任何其他人使用同一发明。'},
+  art6_ip_h3_3: {0: 'حقوق الملكية الفكرية والتأليف (Copyright)', 1: 'Copyright', 2: '著作权'},
+  art6_ip_p4: {0: 'أي محتوى أصلي تنتجه الشركة (برامج، مقاطع فيديو، صور، نصوص) يتمتع بحماية حقوق التأليف. تسجيل هذه الحقوق يوفر حماية إضافية.', 1: 'Any original content produced by the company (programs, videos, images, texts) enjoys copyright protection. Registering these rights provides additional protection.', 2: '公司制作的任何原创内容（程序、视频、图像、文本）都享有版权保护。注册这些权利提供额外保护。'},
+  art6_ip_h3_4: {0: 'الأسرار التجارية (Trade Secrets)', 1: 'Trade Secrets', 2: '商业机密'},
+  art6_ip_p5: {0: 'المعلومات السرية والحساسة مثل الصيغ أو قوائم العملاء يجب حمايتها من خلال اتفاقيات سرية وممارسات أمنية قوية.', 1: 'Secret and sensitive information such as formulas or customer lists must be protected through confidentiality agreements and strong security practices.', 2: '秘密和敏感信息（如配方或客户列表）必须通过保密协议和强大的安全措施得到保护。'},
+  art6_funding_h2: {0: 'التمويل والاستثمار: الخيارات القانونية', 1: 'Financing and Investment: Legal Options', 2: '融资和投资：法律选择'},
+  art6_funding_p1: {0: 'الحصول على التمويل مهم لنمو الشركة. هناك عدة خيارات تمويلية في المملكة:', 1: 'Obtaining financing is important for company growth. There are several financing options in the Kingdom:', 2: '获得融资对公司增长很重要。王国中有多种融资选择：'},
+  art6_funding_h3_1: {0: 'التمويل الذاتي (Bootstrapping)', 1: 'Bootstrapping', 2: '自力更生融资'},
+  art6_funding_p2: {0: 'استخدام رأسمالك الخاص ودخل الشركة لتمويل النمو. هذا يعطيك السيطرة الكاملة لكن قد يبطئ النمو.', 1: 'Using your own capital and company income to finance growth. This gives you complete control but may slow growth.', 2: '使用您自己的资本和公司收入来资助增长。这给你完全的控制权，但可能会减缓增长。'},
+  art6_funding_h3_2: {0: 'المستثمرون الملائكة (Angel Investors)', 1: 'Angel Investors', 2: '天使投资者'},
+  art6_funding_p3: {0: 'أفراد أثرياء يستثمرون في الشركات الناشئة. المستثمرون الملائكة عادة يبحثون عن حصة في الشركة وقد يقدمون خبرات إضافية. يجب وجود اتفاقية استثمار واضحة تحدد نسبة الملكية والحقوق.', 1: 'Wealthy individuals who invest in startups. Angel investors usually look for a stake in the company and may provide additional expertise. There should be a clear investment agreement specifying ownership percentage and rights.', 2: '投资初创公司的富有个人。天使投资者通常寻求公司的股份，并可能提供额外的专业知识。应该有一份明确的投资协议，说明所有权百分比和权利。'},
+  art6_funding_h3_3: {0: 'رأس المال الجريء (Venture Capital)', 1: 'Venture Capital', 2: '风险资本'},
+  art6_funding_p4: {0: 'شركات رأس المال الجريء استثمر في الشركات الناشئة ذات الإمكانيات العالية. هذا يتطلب أن تكون الشركة في مرحلة متقدمة نسبياً وأن تكون لديها خطط نمو طموحة.', 1: 'Venture capital firms invest in high-potential startups. This requires the company to be at a relatively advanced stage and have ambitious growth plans.', 2: '风险资本公司投资于具有高潜力的初创公司。这要求公司处于相对先进的阶段，并有雄心勃勃的增长计划。'},
+  art6_funding_h3_4: {0: 'التمويل الجماعي (Crowdfunding)', 1: 'Crowdfunding', 2: '众筹'},
+  art6_funding_p5: {0: 'جمع أموال من مجموعة كبيرة من الناس عبر الإنترنت. هذا يتطلب وجود نموذج عمل واضح وعرض مقنع للعموم.', 1: 'Raising funds from a large group of people online. This requires a clear business model and compelling pitch to the public.', 2: '从在线大量人群中筹集资金。这需要一个清晰的商业模式和对公众的令人信服的宣传。'},
+  art6_funding_h3_5: {0: 'التمويل الحكومي والبنك الاجتماعي', 1: 'Government Financing and Social Development Bank', 2: '政府融资和社会发展银行'},
+  art6_funding_p6: {0: 'بنك التنمية الاجتماعية يقدم تمويل بشروط ميسرة للمشاريع الصغيرة والمتوسطة. هناك أيضاً برامج تدعم الشركات الناشئة.', 1: 'The Social Development Bank offers financing with favorable terms for small and medium enterprises. There are also programs supporting startups.', 2: '社会发展银行为中小企业提供优惠融资。还有支持初创公司的计划。'},
+  art6_info3: {0: 'مهم: أي استثمار يجب أن يصاحب اتفاقية قانونية واضحة تحدد حقوق المستثمر، العائدات، والخروج المحتمل.', 1: 'Important: Any investment should be accompanied by a clear legal agreement specifying investor rights, returns, and potential exit.', 2: '重要：任何投资都应伴随一份明确的法律协议，规定投资者权利、回报和潜在退出。'},
+  art6_compliance_h2: {0: 'الامتثال التنظيمي والالتزامات القانونية', 1: 'Regulatory Compliance and Legal Obligations', 2: '监管合规和法律义务'},
+  art6_compliance_p1: {0: 'رائد الأعمال يجب أن يكون على دراية بالمتطلبات القانونية والتنظيمية:', 1: 'Entrepreneurs must be aware of legal and regulatory requirements:', 2: '企业家必须了解法律和监管要求：'},
+  art6_compliance_h3_1: {0: 'ضريبة القيمة المضافة (VAT)', 1: 'Value Added Tax (VAT)', 2: '增值税'},
+  art6_compliance_p2: {0: 'إذا تجاوزت مبيعات الشركة حد معين، يجب تسجيلها في نظام ضريبة القيمة المضافة. هذا يتطلب إصدار فواتير ضريبية وحفظ سجلات دقيقة.', 1: 'If the company\'s sales exceed a certain threshold, it must be registered in the VAT system. This requires issuing tax invoices and maintaining accurate records.', 2: '如果公司销售额超过一定阈值，必须在增值税系统中注册。这需要签发税务发票并保持准确的记录。'},
+  art6_compliance_h3_2: {0: 'الزكاة والضرائب', 1: 'Zakat and Taxes', 2: '天课和税'},
+  art6_compliance_p3: {0: 'الشركات يجب أن تدفع الزكاة والضريبة على الأرباح وفقاً للمتطلبات الشرعية والقانونية. الحفاظ على سجلات محاسبية دقيقة ضروري.', 1: 'Companies must pay zakat and tax on profits according to Sharia and legal requirements. Maintaining accurate accounting records is essential.', 2: '公司必须根据伊斯兰教法和法律要求支付天课和利润税。保持准确的会计记录是必要的。'},
+  art6_compliance_h3_3: {0: 'حماية البيانات والخصوصية', 1: 'Data Protection and Privacy', 2: '数据保护和隐私'},
+  art6_compliance_p4: {0: 'إذا كنت تجمع بيانات عملاء، يجب الالتزام بقوانين حماية البيانات الشخصية والخصوصية. هذا يتضمن الحصول على الموافقة وتأمين البيانات.', 1: 'If you collect customer data, you must comply with personal data protection and privacy laws. This includes obtaining consent and securing data.', 2: '如果您收集客户数据，必须遵守个人数据保护和隐私法。这包括获得同意和保护数据。'},
+  art6_compliance_h3_4: {0: 'التجارة الإلكترونية', 1: 'E-Commerce', 2: '电子商务'},
+  art6_compliance_p5: {0: 'إذا كان عملك يشمل التجارة الإلكترونية أو المتاجر الإلكترونية، يجب الامتثال لنظام التجارة الإلكترونية الذي ينظم البيع عبر الإنترنت وحماية المستهلك.', 1: 'If your business includes e-commerce or online stores, you must comply with the e-commerce system that regulates online sales and consumer protection.', 2: '如果您的业务包括电子商务或在线商店，必须遵守规范在线销售和消费者保护的电子商务系统。'},
+  art6_compliance_h3_5: {0: 'حماية المستهلك', 1: 'Consumer Protection', 2: '消费者保护'},
+  art6_compliance_p6: {0: 'الشركات يجب أن تلتزم بمعايير جودة المنتجات والخدمات وحماية المستهلك. عدم الالتزام قد يؤدي إلى شكاوى وغرامات.', 1: 'Companies must comply with product and service quality standards and consumer protection. Non-compliance may result in complaints and fines.', 2: '公司必须遵守产品和服务质量标准以及消费者保护。不遵守可能导致投诉和罚款。'},
+  art6_challenges_h2: {0: 'التحديات القانونية الشائعة ورائد الأعمال', 1: 'Common Legal Challenges and Entrepreneurs', 2: '常见的法律挑战和企业家'},
+  art6_challenges_p1: {0: 'هناك عدة تحديات قانونية شائعة تواجه رواد الأعمال:', 1: 'There are several common legal challenges facing entrepreneurs:', 2: '企业家面临几个常见的法律挑战：'},
+  art6_challenges_l1: {0: 'نزاعات الملكية: عدم وضوح حقوق الملكية بين الشركاء قد يؤدي لنزاعات. الاتفاقيات الواضحة ضرورية.', 1: 'Ownership Disputes: Unclear ownership rights between partners can lead to disputes. Clear agreements are necessary.', 2: '所有权纠纷：合伙人之间所有权不明确可能导致纠纷。需要明确的协议。'},
+  art6_challenges_l2: {0: 'نزاعات العمل: سوء الفهم مع الموظفين قد يؤدي لشكاوى لديها محاكم العمل.', 1: 'Labor Disputes: Misunderstandings with employees can lead to complaints in labor courts.', 2: '劳动纠纷：与员工的误解可能导致向劳动法院投诉。'},
+  art6_challenges_l3: {0: 'المشاكل المالية: عدم الامتثال الضريبي قد يؤدي لغرامات من الجهات الحكومية.', 1: 'Financial Problems: Tax non-compliance may result in fines from government authorities.', 2: '财务问题：不遵守税收可能导致政府部门罚款。'},
+  art6_challenges_l4: {0: 'مخاطر المنتج: إذا كان منتجك يسبب ضرر، قد تواجه دعاوى قانونية من المستهلكين.', 1: 'Product Liability: If your product causes harm, you may face legal action from consumers.', 2: '产品责任：如果您的产品造成伤害，可能面临消费者的法律诉讼。'},
+  art6_challenges_l5: {0: 'التعاقد مع الشركاء: عدم وجود عقود واضحة مع الموردين والشركاء قد يؤدي لنزاعات.', 1: 'Contracting with Partners: Lack of clear contracts with suppliers and partners can lead to disputes.', 2: '与合作伙伴订立合同：与供应商和合作伙伴的合同不明确可能导致纠纷。'},
+  art6_conclusion_h2: {0: 'الخاتمة', 1: 'Conclusion', 2: '结论'},
+  art6_conclusion_p1: {0: 'النجاح في ريادة الأعمال يتطلب أكثر من مجرد فكرة جيدة. الأساس القانوني القوي والسليم ضروري لضمان النمو والاستدامة. من اختيار الكيان القانوني الصحيح إلى حماية الملكية الفكرية والامتثال للقوانين، كل خطوة مهمة.', 1: 'Success in entrepreneurship requires more than just a good idea. A strong and solid legal foundation is essential to ensure growth and sustainability. From choosing the right legal entity to protecting intellectual property and complying with laws, every step is important.', 2: '创业的成功不仅仅需要一个好主意。强大和坚实的法律基础对于确保增长和可持续性至关重要。从选择正确的法律实体到保护知识产权和遵守法律，每一步都很重要。'},
+  art6_conclusion_p2: {0: 'فريقنا في شركة مشاري بندر بن جلوي متخصص في دعم رواد الأعمال والشركات الناشئة. نحن نقدم استشارات شاملة تغطي جميع الجوانب القانونية لتأسيس ونمو مشروعك. لا تتردد في التواصل معنا للحصول على استشارة متخصصة مكيفة لاحتياجات مشروعك.', 1: 'Our team at Al Mashari Law Firm specializes in supporting entrepreneurs and startups. We provide comprehensive advice covering all legal aspects of establishing and growing your project. Do not hesitate to contact us for specialized consultation tailored to your project\'s needs.', 2: '我们在Al Mashari律师事务所的团队专门从事对企业家和初创公司的支持。我们提供全面的建议，涵盖建立和发展项目的所有法律方面。请随时与我们联系，以获取针对您的项目需求量身定制的专业咨询。'},
+  back_to_blog: {0: '← العودة للمدونة', 1: '← Back to Blog', 2: '← 返回博客'},
+  cta_h2: {0: 'هل تحتاج استشارة قانونية؟', 1: 'Need Legal Consultation?', 2: '需要法律咨询吗？'},
+  cta_p: {0: 'فريقنا القانوني جاهز لمساعدتك', 1: 'Our legal team is ready to assist you', 2: '我们的法律团队随时准备协助您'},
+  nav_cta: {0: 'احجز استشارة', 1: 'Book Consultation', 2: '预约咨询'},
+  firm_name: {0: 'شركة مشاري بندر بن جلوي', 1: 'Al Mashari Law Firm', 2: 'Al Mashari律师事务所'},
+  firm_sub: {0: 'للمحاماة والاستشارات القانونية', 1: 'Legal Consultants', 2: '法律顾问'},
+  nav_services: {0: 'خدماتنا', 1: 'Services', 2: '服务'},
+  nav_contracts: {0: 'عقود الشركات', 1: 'Corporate Contracts', 2: '公司合同'},
+  nav_faq: {0: 'الأسئلة الشائعة', 1: 'FAQ', 2: '常见问题'},
+  nav_team: {0: 'فريقنا', 1: 'Our Team', 2: '我们的团队'},
+  nav_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
+  nav_eservices: {0: 'الخدمات الإلكترونية', 1: 'E-Services', 2: '电子服务'},
+  nav_events: {0: 'فعاليتنا', 1: 'Events', 2: '活动'},
+  nav_cases_stats: {0: 'القضايا المنجزة', 1: 'Cases Handled', 2: '已处理的案件'},
+  nav_careers: {0: 'التوظيف', 1: 'Careers', 2: '招聘'},
+  nav_contact: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
+  footer_copyright: {0: '© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2026 Al Mashari Law Firm — All rights reserved', 2: '© 2026 Al Mashari律师事务所 — 版权所有'}
+};
+</script>
+<script src="lang.js"></script>
+<script>
+let lang = currentLang;
+function toggleLangDrop() { document.getElementById('langDropMenu').classList.toggle('open'); }
+document.addEventListener('click', function(e) {
+    if (!document.getElementById('langDrop').contains(e.target)) document.getElementById('langDropMenu').classList.remove('open');
+});
+function setLang(l) {
+    lang = l; currentLang = l;
+    const dir = l === 0 ? 'rtl' : 'ltr';
+    const langCode = l === 0 ? 'ar' : (l === 1 ? 'en' : 'zh');
+    document.documentElement.setAttribute('dir', dir);
+    document.documentElement.setAttribute('lang', langCode);
+    document.getElementById('langDropBtn').textContent = l === 0 ? '🇸🇦' : (l === 1 ? '🇬🇧' : '🇨🇳');
+    const allTranslations = Object.assign({}, commonTranslations, pageTranslations);
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (allTranslations[key] && allTranslations[key][l] !== undefined) {
+            if (el.tagName === 'INPUT' && el.type !== 'hidden') el.placeholder = allTranslations[key][l];
+            else el.innerHTML = allTranslations[key][l];
+        }
+    });
+    localStorage.setItem('siteLang', l);
+}
+window.addEventListener('load', function() {
+    const saved = localStorage.getItem('siteLang');
+    if (saved !== null) setLang(parseInt(saved)); else setLang(0);
+});
+</script>
+
+</body>
+</html>

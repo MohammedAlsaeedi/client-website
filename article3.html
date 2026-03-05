@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="page_title">نظام العمل السعودي - شركة مشاري بندر بن جلوي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root { --navy: #1B2C6B; --navy-dark: #111d4a; --navy-mid: #223580; --gold: #B8935A; --gold-light: #d4aa72; --gold-pale: #f5ede0; --white: #ffffff; --off-white: #f8f6f2; --gray-light: #e5e7eb; --gray: #6b7280; --gray-dark: #374151; --border: #e5e1d9; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { font-family: 'Cairo', sans-serif; color: var(--gray-dark); background: var(--white); overflow-x: hidden; line-height: 1.6; }
+a { text-decoration: none; }
+
+/* NAVBAR */
+.navbar { position: fixed; inset: 0 0 auto 0; z-index: 1000; height: 90px; background: rgba(17,29,74,.97); backdrop-filter: blur(12px); border-bottom: 2px solid rgba(184,147,90,.45); display: flex; align-items: center; padding: 0 5%; }
+.nav-inner { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.nav-logo { display: flex; align-items: center; gap: 11px; }
+.nav-logo img { width: 60px; height: 60px; flex-shrink: 0; }
+.nav-firm-name { font-size: 1.2rem; font-weight: 800; color: var(--gold-light); line-height: 1.2; }
+.nav-firm-sub { font-size: .8rem; color: rgba(255,255,255,.55); }
+.nav-links { display: flex; align-items: center; gap: 20px; list-style: none; flex: 1; justify-content: center; }
+.nav-links a { color: rgba(255,255,255,.82); font-size: .95rem; font-weight: 600; transition: color .2s; position: relative; padding-bottom: 2px; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
+.nav-links a::after { content: ''; position: absolute; bottom: -2px; right: 0; left: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: right; transition: transform .25s; }
+.nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+.nav-controls { display: flex; align-items: center; gap: 16px; }
+.nav-cta { background: var(--gold); color: var(--white); padding: 8px 20px; border-radius: 25px; font-size: .85rem; font-weight: 800; transition: all .25s; white-space: nowrap; }
+.nav-cta:hover { background: var(--gold-light); }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; }
+.mobile-drawer { position: fixed; top: 90px; inset-inline: 0; background: var(--navy-dark); border-top: 1px solid rgba(184,147,90,.25); padding: 24px 5%; z-index: 999; transform: translateY(-8px); opacity: 0; visibility: hidden; transition: all .3s; }
+.mobile-drawer.open { transform: translateY(0); opacity: 1; visibility: visible; }
+.mobile-drawer ul { list-style: none; }
+.mobile-drawer li { border-bottom: 1px solid rgba(255,255,255,.07); }
+.mobile-drawer a { display: block; padding: 12px 0; color: rgba(255,255,255,.85); font-size: .95rem; font-weight: 600; }
+
+/* PAGE HERO */
+.page-hero { padding: 130px 5% 65px; background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #2a4090 100%); position: relative; overflow: hidden; }
+.page-hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(184,147,90,.08) 1px, transparent 1px); background-size: 40px 40px; }
+.page-hero-content { position: relative; z-index: 2; max-width: 700px; }
+.page-breadcrumb { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.55); font-size: .85rem; margin-bottom: 18px; }
+.page-breadcrumb a { color: var(--gold-light); }
+.page-breadcrumb span { color: rgba(255,255,255,.3); }
+.page-hero h1 { font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 900; color: white; line-height: 1.3; margin-bottom: 14px; }
+.page-hero p { color: rgba(255,255,255,.7); font-size: 1rem; line-height: 1.7; max-width: 600px; }
+
+/* ARTICLE CONTENT */
+.article-container { max-width: 820px; margin: 0 auto; padding: 60px 5%; }
+.article-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 30px; flex-wrap: wrap; }
+.article-tag { background: var(--gold-pale); color: var(--gold); font-size: .8rem; font-weight: 800; padding: 4px 14px; border-radius: 15px; }
+.article-date { color: var(--gray); font-size: .85rem; }
+.article-body h2 { font-size: 1.35rem; font-weight: 800; color: var(--navy); margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--gold-pale); }
+.article-body h3 { font-size: 1.1rem; font-weight: 700; color: var(--navy-mid); margin: 24px 0 12px; }
+.article-body p { font-size: .95rem; color: var(--gray-dark); line-height: 1.9; margin-bottom: 16px; }
+.article-body ul, .article-body ol { margin: 12px 0 16px 24px; }
+.article-body li { font-size: .93rem; line-height: 1.8; margin-bottom: 8px; color: var(--gray-dark); }
+.article-body strong { color: var(--navy); }
+.info-box { background: var(--off-white); border-right: 4px solid var(--gold); border-radius: 8px; padding: 20px 24px; margin: 20px 0; }
+.info-box p { margin-bottom: 0; }
+.back-to-blog { display: inline-flex; align-items: center; gap: 8px; color: var(--gold); font-weight: 700; font-size: .95rem; margin-top: 40px; transition: color .2s; }
+.back-to-blog:hover { color: var(--navy); }
+
+/* CTA SECTION */
+.cta-section { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); padding: 50px 5%; text-align: center; margin-top: 60px; }
+.cta-section h2 { color: white; font-size: 1.6rem; font-weight: 800; margin-bottom: 16px; }
+.cta-section p { color: rgba(255,255,255,.75); font-size: .95rem; margin-bottom: 24px; }
+.cta-button { background: var(--gold); color: var(--white); padding: 12px 32px; border-radius: 30px; font-weight: 800; font-size: .95rem; transition: all .25s; display: inline-block; }
+.cta-button:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+/* SECTION */
+.section-pad { padding: 70px 5%; max-width: 1280px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 45px; }
+.tag { display: inline-block; background: var(--gold-pale); color: var(--gold); font-size: .82rem; font-weight: 800; padding: 5px 16px; border-radius: 20px; margin-bottom: 12px; }
+.section-title { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 900; color: var(--navy); }
+.gold-bar { width: 50px; height: 4px; background: var(--gold); border-radius: 2px; margin: 12px auto 0; }
+
+/* LANG DROPDOWN */
+.lang-drop { position: relative; display: flex; align-items: center; }
+.lang-drop-btn { background: none; border: 2px solid rgba(255,255,255,.25); border-radius: 10px; cursor: pointer; font-size: 1.4rem; line-height: 1; padding: 4px 8px; transition: all .2s; color: #fff; }
+.lang-drop-btn:hover { border-color: var(--gold); transform: scale(1.05); }
+.lang-drop-menu { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--navy); border: 1px solid var(--gold); border-radius: 10px; padding: 6px; display: none; flex-direction: column; gap: 4px; min-width: 130px; z-index: 9999; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+.lang-drop-menu.open { display: flex; }
+.lang-drop-menu button { background: none; border: none; cursor: pointer; font-size: 1rem; padding: 6px 10px; border-radius: 6px; text-align: right; color: #fff; white-space: nowrap; font-family: inherit; transition: background .15s; }
+.lang-drop-menu button:hover { background: rgba(184,147,90,.2); }
+
+/* FOOTER */
+footer { background: var(--navy-dark); color: rgba(255,255,255,.6); text-align: center; padding: 30px 5%; font-size: .85rem; border-top: 1px solid rgba(184,147,90,.2); }
+footer a { color: var(--gold-light); }
+.whatsapp-fab { position: fixed; bottom: 28px; left: 28px; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 999; box-shadow: 0 6px 20px rgba(37,211,102,.4); transition: transform .25s; }
+.whatsapp-fab:hover { transform: scale(1.1); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) { .nav-links { display: none; } .hamburger { display: flex; } }
+@media (max-width: 768px) {
+    .page-hero { padding: 110px 5% 50px; }
+    .page-hero h1 { font-size: clamp(1.3rem,5vw,1.9rem); }
+    .article-container { padding: 40px 5%; }
+    .article-body h2 { font-size: 1.2rem; }
+}
+@media (max-width: 600px) { .nav-cta { display: none; } }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">
+<img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png" style="width:60px;height:60px;object-fit:contain;"/>
+<div class="nav-logo-text">
+<div class="nav-firm-name" data-i18n="firm_name">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub" data-i18n="firm_sub">للمحاماة والاستشارات القانونية</div>
+</div>
+</a>
+<ul class="nav-links">
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html" class="active">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+<div class="nav-controls">
+<div class="lang-drop" id="langDrop">
+<button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
+<div class="lang-drop-menu" id="langDropMenu">
+<button data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦 العربية</button>
+<button data-lang="1" onclick="setLang(1);toggleLangDrop()">🇬🇧 English</button>
+<button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
+</div>
+</div>
+<a class="nav-cta" data-i18n="nav_cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
+<div class="hamburger" onclick="document.querySelector('.mobile-drawer').classList.toggle('open')">
+<span></span><span></span><span></span>
+</div>
+</div>
+</div>
+</nav>
+
+<div class="mobile-drawer">
+<ul>
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+</div>
+
+<section class="page-hero">
+<div class="page-hero-content">
+<div class="page-breadcrumb">
+<a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
+<span>›</span>
+<a data-i18n="breadcrumb_blog" href="blog.html">المدونة</a>
+<span>›</span>
+<span data-i18n="breadcrumb_article3">نظام العمل</span>
+</div>
+<h1 data-i18n="art3_hero_h1">نظام العمل السعودي: حقوق وواجبات</h1>
+<p data-i18n="art3_hero_p">دليل شامل لحقوق العامل وصاحب العمل في المملكة</p>
+</div>
+</section>
+
+<div class="article-container">
+<div class="article-meta">
+<span class="article-tag" data-i18n="art_category_labor">نظام العمل</span>
+<span class="article-date" data-i18n="art_date_2025">5 مارس 2026</span>
+</div>
+
+<article class="article-body">
+
+<h2 data-i18n="art3_intro_h2">المقدمة</h2>
+
+<p data-i18n="art3_intro_p1">يعتبر نظام العمل في المملكة العربية السعودية من أهم الأنظمة القانونية التي تحكم العلاقة بين العامل وصاحب العمل. تم إصدار نظام العمل الحالي بموجب المرسوم الملكي رقم م/51 في سنة 1426 هـ (2005 م)، وتم تطويره وتحديثه عدة مرات ليواكب التطورات الاقتصادية والاجتماعية في المملكة. تشرف على تطبيق نظام العمل وزارة الموارد البشرية والتنمية الاجتماعية، التي تعمل على حماية حقوق العمال وتحسين ظروف العمل.</p>
+
+<p data-i18n="art3_intro_p2">يهدف نظام العمل السعودي إلى تحقيق التوازن بين حقوق العمال وواجباتهم من جهة، وحقوق أصحاب العمل والتزاماتهم من جهة أخرى. يوفر النظام حماية شاملة للعمال من خلال تحديد الحد الأدنى للأجور، ومتطلبات السلامة، وحق العمال في الإجازات وغيرها. هذا المقال سيشرح بالتفصيل أهم جوانب نظام العمل السعودي.</p>
+
+<div class="info-box">
+<p data-i18n="art3_info_intro">ملاحظة مهمة: فهم حقوقك والتزاماتك بموجب نظام العمل السعودي يحميك من الاستغلال ويضمن معاملة عادلة. نوصي بمراجعة عقدك عند التوقيع والتواصل مع وزارة الموارد البشرية في حالة أي انتهاكات.</p>
+</div>
+
+<h2 data-i18n="art3_contract_h2">عقد العمل</h2>
+
+<p data-i18n="art3_contract_intro">عقد العمل هو الأداة القانونية التي تنظم العلاقة بين العامل وصاحب العمل. يجب أن يكون العقد واضحاً وتفصيلياً ويتضمن جميع البنود والشروط المتفق عليها:</p>
+
+<h3 data-i18n="art3_contract_types">أنواع عقود العمل (Types of Employment Contracts)</h3>
+<p data-i18n="art3_contract_types_desc">يقسم القانون عقود العمل إلى نوعين: عقد محدد المدة (Definite Term Contract)، وهو يحدد فترة زمنية معينة لانتهاء العقد، وعقد غير محدد المدة (Indefinite Term Contract)، والذي لا يحدد فترة انتهاء معينة ويستمر حتى الانتهاء من جانب أحد الطرفين. كل نوع له أحكام مختلفة فيما يتعلق بالإنهاء والتعويضات.</p>
+
+<h3 data-i18n="art3_contract_probation">فترة الاختبار (Probation Period)</h3>
+<p data-i18n="art3_contract_probation_desc">يسمح النظام بفترة اختبار لا تتجاوز 90 يوماً، وخلال هذه الفترة يمكن لصاحب العمل إنهاء العقد بسهولة دون التزام بدفع تعويضات. تهدف هذه الفترة إلى التأكد من توافق العامل مع طبيعة العمل والشركة.</p>
+
+<h3 data-i18n="art3_contract_terms">البنود الأساسية (Essential Terms)</h3>
+<p data-i18n="art3_contract_terms_desc">يجب أن يتضمن العقد بنوداً تحدد طبيعة العمل والراتب والمكان ومدة العمل والإجازات والمزايا والتزامات كل طرف. يجب أن يكون العقد مكتوباً باللغة العربية أو بلغة يفهمها العامل.</p>
+
+<h2 data-i18n="art3_rights_h2">حقوق العامل</h2>
+
+<p data-i18n="art3_rights_intro">يتمتع العامل في المملكة بعدة حقوق محمية بموجب نظام العمل:</p>
+
+<h3 data-i18n="art3_rights_wages">الأجور والتعويضات (Wages and Compensation)</h3>
+<p data-i18n="art3_rights_wages_desc">يحق للعامل الحصول على أجر عادل وفي المواعيد المتفق عليها. الحد الأدنى للأجور للعمال السعوديين هو 4000 ريال سعودي شهرياً. يجب دفع الأجر للعامل في الوقت المحدد، وأي تأخير يترتب عليه فائدة. الأجر يجب أن يكون مكتوباً ومتفقاً عليه في العقد.</p>
+
+<h3 data-i18n="art3_rights_working_hours">ساعات العمل (Working Hours)</h3>
+<p data-i18n="art3_rights_working_hours_desc">لا يجوز أن تتجاوز ساعات العمل 8 ساعات يومية و48 ساعة أسبوعية. خلال شهر رمضان الكريم، تقل ساعات العمل إلى 6 ساعات يومية. أي عمل إضافي يترتب عليه دفع تعويض بنسبة 150% من الأجر العادي للعامل.</p>
+
+<h3 data-i18n="art3_rights_rest">فترات الراحة (Rest Periods)</h3>
+<p data-i18n="art3_rights_rest_desc">يحق للعامل أن يحصل على فترات راحة منتظمة خلال اليوم الواحد. كما يحق له يوم عطلة أسبوعية واحدة على الأقل. يجب أن يحصل العامل على فترات راحة كافية لضمان سلامته وصحته.</p>
+
+<h3 data-i18n="art3_rights_safety">السلامة والصحة (Safety and Health)</h3>
+<p data-i18n="art3_rights_safety_desc">يجب على صاحب العمل توفير بيئة عمل آمنة وصحية. يجب تطبيق معايير السلامة والصحة المهنية، وتوفير الحماية الشخصية اللازمة، والتأمين الصحي. للعامل الحق في رفع شكوى فيما يتعلق بمخاطر الصحة والسلامة.</p>
+
+<h2 data-i18n="art3_leave_h2">نظام الإجازات</h2>
+
+<p data-i18n="art3_leave_intro">نظام الإجازات في المملكة محمي بموجب نظام العمل، ويحق للعامل الحصول على عدة أنواع من الإجازات:</p>
+
+<h3 data-i18n="art3_leave_annual">الإجازة السنوية (Annual Leave)</h3>
+<p data-i18n="art3_leave_annual_desc">يحق للعامل الحصول على إجازة سنوية مدفوعة. مدة الإجازة تكون 21 يوماً خلال السنوات الخمس الأولى من التوظيف، و30 يوماً بعد مضي 5 سنوات. يجب أن يحصل العامل على الأجر كاملاً خلال الإجازة.</p>
+
+<h3 data-i18n="art3_leave_sick">الإجازة المرضية (Sick Leave)</h3>
+<p data-i18n="art3_leave_sick_desc">يحق للعامل الحصول على 30 يوماً مدفوعة الأجر بالكامل، و60 يوماً بنسبة 75% من الأجر، و30 يوماً بدون أجر. إذا تجاوزت الإجازة المرضية 90 يوماً متتالية، قد يتم إنهاء العقد. يجب على صاحب العمل قبول شهادة طبية تثبت المرض.</p>
+
+<h3 data-i18n="art3_leave_maternity">إجازة الأمومة (Maternity Leave)</h3>
+<p data-i18n="art3_leave_maternity_desc">تحصل العاملة على 70 يوماً من الإجازة مدفوعة الأجر بالكامل عند الولادة. يمكنها الحصول على أيام إضافية بدون أجر. خلال فترة الرضاعة، تحصل على وقت للرضاعة. لا يجوز لصاحب العمل فصل العاملة بسبب الحمل أو الولادة.</p>
+
+<h3 data-i18n="art3_leave_hajj">إجازة الحج (Hajj Leave)</h3>
+<p data-i18n="art3_leave_hajj_desc">يحق للعامل المسلم الحصول على 15 يوماً من الإجازة المدفوعة للحج مرة واحدة فقط طوال فترة التوظيف. كما يحق له بعض الأيام الإضافية غير المدفوعة إذا لزم الأمر.</p>
+
+<h3 data-i18n="art3_leave_other">إجازات أخرى (Other Leave)</h3>
+<p data-i18n="art3_leave_other_desc">يحق للعامل الحصول على أيام إجازة في حالة الزواج (3 أيام)، والوفيات (3 أيام)، والأعياد والمناسبات الرسمية. يمكن أيضاً الاتفاق على إجازات إضافية بين العامل وصاحب العمل.</p>
+
+<h2 data-i18n="art3_termination_h2">إنهاء عقد العمل</h2>
+
+<p data-i18n="art3_termination_intro">إنهاء عقد العمل له أحكام قانونية معينة يجب الالتزام بها:</p>
+
+<h3 data-i18n="art3_termination_notice">مدة الإخطار (Notice Period)</h3>
+<p data-i18n="art3_termination_notice_desc">بالنسبة للعقود غير محددة المدة، يجب إخطار الطرف الآخر بـ 60 يوماً قبل الإنهاء. للعقود محددة المدة، مدة الإخطار هي 30 يوماً. يجب أن يكون الإخطار كتابياً ويحدد أسباب الإنهاء إن وجدت.</p>
+
+<h3 data-i18n="art3_termination_reasons">الأسباب المشروعة (Legitimate Reasons)</h3>
+<p data-i18n="art3_termination_reasons_desc">يمكن إنهاء العقد بسبب وجود أسباب مشروعة مثل السلوك السيء، الإهمال، عدم الكفاءة، أو الغياب المتكرر. يجب أن تكون الأسباب موثقة ويجب إعطاء العامل فرصة للدفاع عن نفسه.</p>
+
+<h3 data-i18n="art3_termination_unlawful">الفصل غير القانوني (Wrongful Termination)</h3>
+<p data-i18n="art3_termination_unlawful_desc">إذا تم فصل العامل دون سبب مشروع أو بدون اتباع الإجراءات الصحيحة، يحق له المطالبة بتعويضات. كما لا يجوز فصل العامل بسبب الجنسية أو الدين أو الرأي أو الجنس أو الحالة الصحية.</p>
+
+<h3 data-i18n="art3_termination_benefits">مكافأة نهاية الخدمة (End of Service Gratuity)</h3>
+<p data-i18n="art3_termination_benefits_desc">عند انتهاء عقد العمل، يحق للعامل الحصول على مكافأة نهاية الخدمة. طريقة الحساب هي: نصف شهر عن كل سنة من السنوات الخمس الأولى، وشهر كامل عن كل سنة بعد الخمس سنوات. المكافأة تُحسب بناءً على آخر راتب للعامل.</p>
+
+<div class="info-box">
+<p data-i18n="art3_info_termination">في حالة النزاع حول الفصل أو شروط الإنهاء، يمكن للعامل رفع قضية أمام المحكمة العمالية للحصول على حقوقه.</p>
+</div>
+
+<h2 data-i18n="art3_wps_h2">نظام حماية الأجور</h2>
+
+<p data-i18n="art3_wps_intro">نظام حماية الأجور (Wage Protection System) هو نظام إلكتروني يضمن دفع أجور العمال بشكل صحيح وفي الوقت المحدد:</p>
+
+<h3 data-i18n="art3_wps_requirements">المتطلبات (Requirements)</h3>
+<p data-i18n="art3_wps_requirements_desc">يجب على أصحاب العمل استخدام طريقة إلكترونية معتمدة للدفع (تحويل بنكي أو بطاقة الخصم). يجب أن تكون عمليات الدفع معاملة معاملة مركزية من خلال النظام، وذلك لضمان عدم حبس الأجور.</p>
+
+<h3 data-i18n="art3_wps_penalties">العقوبات (Penalties)</h3>
+<p data-i18n="art3_wps_penalties_desc">عدم الامتثال لنظام حماية الأجور يترتب عليه غرامات مالية كبيرة على صاحب العمل. قد تتجاوز الغرامات مئات الآلاف من الريالات، كما قد يتم إغلاق المنشأة أو منع صاحب العمل من توظيف عمال جدد.</p>
+
+<h2 data-i18n="art3_courts_h2">المحاكم العمالية وتسوية النزاعات</h2>
+
+<p data-i18n="art3_courts_intro">في حالة وجود نزاع بين العامل وصاحب العمل، يمكن اللجوء إلى عدة خيارات:</p>
+
+<h3 data-i18n="art3_courts_amicable">التسوية الودية (Amicable Settlement)</h3>
+<p data-i18n="art3_courts_amicable_desc">يمكن لأطراف النزاع الجلوس معاً والتفاوض على حل ودي يرضي الجميع. التسوية الودية أسرع وأقل تكلفة من رفع قضية، وقد تحافظ على العلاقة بين الطرفين.</p>
+
+<h3 data-i18n="art3_courts_labor">المحاكم العمالية (Labor Courts)</h3>
+<p data-i18n="art3_courts_labor_desc">إذا فشلت التسوية الودية، يمكن للعامل رفع قضية أمام المحكمة العمالية. المحكمة ستنظر في النزاع وتصدر حكماً يحكم الحقوق والالتزامات. يجب تقديم الشكوى ضمن فترة زمنية محددة من حدوث الحادث.</p>
+
+<h3 data-i18n="art3_courts_filing">تقديم الشكوى (Filing a Complaint)</h3>
+<p data-i18n="art3_courts_filing_desc">يتم تقديم الشكوى إلى المحكمة العمالية مع تقديم الأدلة والمستندات التي تثبت الحق. يمكن للعامل أن يمثل نفسه أو يستعين بمحام. المحكمة سوف تستدعي الطرفين وتستمع إلى الحجج والبينات.</p>
+
+<h3 data-i18n="art3_courts_enforcement">التنفيذ (Enforcement)</h3>
+<p data-i18n="art3_courts_enforcement_desc">بعد صدور الحكم، يجب على صاحب العمل تنفيذ الحكم فوراً. في حالة عدم التنفيذ، يمكن للعامل طلب تنفيذ القضائي من خلال جهات التنفيذ المختصة.</p>
+
+<h2 data-i18n="art3_conclusion_h2">الخاتمة</h2>
+
+<p data-i18n="art3_conclusion_p">نظام العمل السعودي يوفر حماية شاملة لحقوق العمال ويضمن علاقة عمل عادلة ومتوازنة. يجب على العامل أن يعرف حقوقه وواجباته، وأن يطالب بحقوقه عند انتهاكها. كما يجب على صاحب العمل الالتزام بالنظام والقوانين لضمان سير العمل بكفاءة واحترافية.</p>
+
+<p data-i18n="art3_conclusion_cta">إذا واجهت أي مشكلة في العمل أو شعرت بأن حقوقك تنتهك، فلا تتردد في التواصل مع شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية. فريقنا المتخصص جاهز لمساعدتك وحماية حقوقك.</p>
+
+<a href="blog.html" class="back-to-blog" data-i18n="back_to_blog">← العودة للمدونة</a>
+
+</article>
+</div>
+
+<section class="cta-section">
+<h2 data-i18n="art_cta_title">هل تحتاج إلى استشارة قانونية متخصصة؟</h2>
+<p data-i18n="art_cta_desc">فريقنا من المحامين المتخصصين جاهز لمساعدتك في جميع مسائل قانون الشركات والعقود التجارية. تواصل معنا اليوم للحصول على استشارة مجانية.</p>
+<a href="https://wa.me/966533532153" class="cta-button" data-i18n="art_cta_button" rel="noopener" target="_blank">احجز استشارتك الآن</a>
+</section>
+
+<footer>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px 22px;margin-bottom:18px;">
+<a data-i18n="nav_services" href="index.html#services" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">خدماتنا</a>
+<a data-i18n="nav_contracts" href="contracts.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">عقود الشركات</a>
+<a data-i18n="nav_faq" href="faq.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">الأسئلة الشائعة</a>
+<a data-i18n="nav_team" href="team.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">فريقنا</a>
+<a data-i18n="nav_blog" href="blog.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">المدونة</a>
+<a data-i18n="nav_eservices" href="e-services.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">الخدمات الإلكترونية</a>
+<a data-i18n="nav_events" href="events.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">فعاليتنا</a>
+<a data-i18n="nav_cases_stats" href="cases-stats.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">القضايا المنجزة</a>
+<a data-i18n="nav_careers" href="careers.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">التوظيف</a>
+<a data-i18n="nav_contact" href="index.html#booking" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">تواصل معنا</a>
+</div>
+<p data-i18n="footer_copyright">© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+</footer>
+
+<a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank">
+<svg fill="white" height="28" viewbox="0 0 24 24" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<script>
+const commonTranslations = {
+  firm_name: {0: 'شركة مشاري بندر بن جلوي', 1: 'Mishary Bin Bandar Bin Jalawi Law Firm', 2: '米沙里本班达本贾劳伊律师事务所'},
+  firm_sub: {0: 'للمحاماة والاستشارات القانونية', 1: 'Legal Practice & Consulting', 2: '法律实践与咨询'},
+  nav_services: {0: 'خدماتنا', 1: 'Services', 2: '服务'},
+  nav_contracts: {0: 'عقود الشركات', 1: 'Corporate Contracts', 2: '公司合同'},
+  nav_faq: {0: 'الأسئلة الشائعة', 1: 'FAQ', 2: '常见问题'},
+  nav_team: {0: 'فريقنا', 1: 'Team', 2: '团队'},
+  nav_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
+  nav_eservices: {0: 'الخدمات الإلكترونية', 1: 'E-Services', 2: '电子服务'},
+  nav_events: {0: 'فعاليتنا', 1: 'Events', 2: '事件'},
+  nav_cases_stats: {0: 'القضايا المنجزة', 1: 'Cases & Stats', 2: '案件与统计'},
+  nav_careers: {0: 'التوظيف', 1: 'Careers', 2: '职业生涯'},
+  nav_contact: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
+  nav_cta: {0: 'احجز استشارة', 1: 'Book Consultation', 2: '预订咨询'},
+  breadcrumb_home: {0: 'الرئيسية', 1: 'Home', 2: '首页'},
+  breadcrumb_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
+  back_to_blog: {0: '← العودة للمدونة', 1: '← Back to Blog', 2: '← 返回博客'},
+  footer_copyright: {0: '© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2026 Mishary Bin Bandar Bin Jalawi Law Firm — All Rights Reserved', 2: '© 2026 米沙里本班达本贾劳伊律师事务所 — 版权所有'},
+  art_cta_title: {0: 'هل تحتاج إلى استشارة قانونية متخصصة؟', 1: 'Do You Need Professional Legal Consultation?', 2: '您需要专业的法律咨询吗？'},
+  art_cta_desc: {0: 'فريقنا من المحامين المتخصصين جاهز لمساعدتك في جميع مسائل قانون الشركات والعقود التجارية. تواصل معنا اليوم للحصول على استشارة مجانية.', 1: 'Our team of specialized lawyers is ready to assist you with all matters of corporate law and commercial contracts. Contact us today for a free consultation.', 2: '我们的专业律师团队随时准备帮助您解决所有公司法和商业合同问题。请立即与我们联系以获取免费咨询。'},
+  art_cta_button: {0: 'احجز استشارتك الآن', 1: 'Book Your Consultation Now', 2: '立即预订您的咨询'},
+  art_category_labor: {0: 'نظام العمل', 1: 'Labor Law', 2: '劳动法'},
+  art_date_2025: {0: '5 مارس 2026', 1: 'March 5, 2026', 2: '2026年3月5日'},
+  page_title: {0: 'نظام العمل السعودي - شركة مشاري بندر بن جلوي', 1: 'Saudi Labor Law - Mishary Bin Bandar Law Firm', 2: '沙特劳动法 - 米沙里本班达律师事务所'},
+};
+
+const pageTranslations = {
+  breadcrumb_article3: {0: 'نظام العمل', 1: 'Labor Law', 2: '劳动法'},
+  art3_hero_h1: {0: 'نظام العمل السعودي: حقوق وواجبات', 1: 'Saudi Labor Law: Rights and Duties', 2: '沙特劳动法：权利和义务'},
+  art3_hero_p: {0: 'دليل شامل لحقوق العامل وصاحب العمل في المملكة', 1: 'A Comprehensive Guide to Workers\' and Employers\' Rights in the Kingdom', 2: '关于沙特王国工人和雇主权利的综合指南'},
+  art3_intro_h2: {0: 'المقدمة', 1: 'Introduction', 2: '简介'},
+  art3_intro_p1: {0: 'يعتبر نظام العمل في المملكة العربية السعودية من أهم الأنظمة القانونية التي تحكم العلاقة بين العامل وصاحب العمل. تم إصدار نظام العمل الحالي بموجب المرسوم الملكي رقم م/51 في سنة 1426 هـ (2005 م)، وتم تطويره وتحديثه عدة مرات ليواكب التطورات الاقتصادية والاجتماعية في المملكة. تشرف على تطبيق نظام العمل وزارة الموارد البشرية والتنمية الاجتماعية، التي تعمل على حماية حقوق العمال وتحسين ظروف العمل.', 1: 'The labor law system in the Kingdom of Saudi Arabia is one of the most important legal systems that govern the relationship between workers and employers. The current Labor Law was issued by Royal Decree No. M/51 in 1426 AH (2005 AD), and has been developed and updated several times to keep pace with the economic and social developments in the Kingdom. The Ministry of Human Resources and Social Development oversees the implementation of the labor law, which works to protect workers\' rights and improve working conditions.', 2: '沙特阿拉伯劳动法体系是管理工人与雇主关系的最重要法律制度之一。现行《劳动法》由皇家法令第M/51号于1426年（公元2005年）颁布，并已多次开发和更新以适应沙特王国的经济和社会发展。人力资源和社会发展部监督劳动法的实施，该部致力于保护工人权利和改善工作条件。'},
+  art3_intro_p2: {0: 'يهدف نظام العمل السعودي إلى تحقيق التوازن بين حقوق العمال وواجباتهم من جهة، وحقوق أصحاب العمل والتزاماتهم من جهة أخرى. يوفر النظام حماية شاملة للعمال من خلال تحديد الحد الأدنى للأجور، ومتطلبات السلامة، وحق العمال في الإجازات وغيرها. هذا المقال سيشرح بالتفصيل أهم جوانب نظام العمل السعودي.', 1: 'The Saudi labor law system aims to achieve balance between workers\' rights and duties on one hand, and employers\' rights and obligations on the other. The system provides comprehensive protection to workers through setting minimum wages, safety requirements, workers\' right to leave, and others. This article will explain in detail the most important aspects of the Saudi labor law system.', 2: '沙特劳动法体系旨在平衡工人的权利和义务与雇主的权利和义务。该体系通过设定最低工资、安全要求、工人的休假权等为工人提供全面保护。本文将详细解释沙特劳动法体系的最重要方面。'},
+  art3_info_intro: {0: 'ملاحظة مهمة: فهم حقوقك والتزاماتك بموجب نظام العمل السعودي يحميك من الاستغلال ويضمن معاملة عادلة. نوصي بمراجعة عقدك عند التوقيع والتواصل مع وزارة الموارد البشرية في حالة أي انتهاكات.', 1: 'Important Note: Understanding your rights and obligations under Saudi labor law protects you from exploitation and ensures fair treatment. We recommend reviewing your contract when signing and contacting the Ministry of Human Resources in case of any violations.', 2: '重要提示：了解您在沙特劳动法下的权利和义务可保护您免受剥削并确保公平待遇。我们建议在签署时审查您的合同，并在发生任何违规时与人力资源部联系。'},
+  art3_contract_h2: {0: 'عقد العمل', 1: 'Employment Contract', 2: '就业合同'},
+  art3_contract_intro: {0: 'عقد العمل هو الأداة القانونية التي تنظم العلاقة بين العامل وصاحب العمل. يجب أن يكون العقد واضحاً وتفصيلياً ويتضمن جميع البنود والشروط المتفق عليها:', 1: 'An employment contract is the legal tool that regulates the relationship between worker and employer. The contract must be clear, detailed, and include all agreed-upon terms and conditions:', 2: '就业合同是规范工人与雇主之间关系的法律工具。合同必须清晰、详细，并包含所有同意的条款和条件：'},
+  art3_contract_types: {0: 'أنواع عقود العمل (Types of Employment Contracts)', 1: 'Types of Employment Contracts', 2: '就业合同的类型'},
+  art3_contract_types_desc: {0: 'يقسم القانون عقود العمل إلى نوعين: عقد محدد المدة (Definite Term Contract)، وهو يحدد فترة زمنية معينة لانتهاء العقد، وعقد غير محدد المدة (Indefinite Term Contract)، والذي لا يحدد فترة انتهاء معينة ويستمر حتى الانتهاء من جانب أحد الطرفين. كل نوع له أحكام مختلفة فيما يتعلق بالإنهاء والتعويضات.', 1: 'The law divides employment contracts into two types: definite-term contracts, which specify a certain period for contract termination, and indefinite-term contracts, which do not specify a termination date and continue until terminated by either party. Each type has different provisions regarding termination and compensation.', 2: '法律将就业合同分为两种类型：定期合同，指定合同终止的特定期限，和无定期合同，不指定终止日期并继续直到任一方终止。每种类型在终止和赔偿方面有不同的规定。'},
+  art3_contract_probation: {0: 'فترة الاختبار (Probation Period)', 1: 'Probation Period', 2: '试用期'},
+  art3_contract_probation_desc: {0: 'يسمح النظام بفترة اختبار لا تتجاوز 90 يوماً، وخلال هذه الفترة يمكن لصاحب العمل إنهاء العقد بسهولة دون التزام بدفع تعويضات. تهدف هذه الفترة إلى التأكد من توافق العامل مع طبيعة العمل والشركة.', 1: 'The system allows for a probation period not exceeding 90 days, during which the employer can easily terminate the contract without obligation to pay compensation. This period is intended to ensure the worker\'s fit with the nature of work and the company.', 2: '该制度允许试用期不超过90天，期间雇主可以轻松终止合同而无需支付赔偿金。这一时期旨在确保工人适合工作性质和公司。'},
+  art3_contract_terms: {0: 'البنود الأساسية (Essential Terms)', 1: 'Essential Terms', 2: '基本条款'},
+  art3_contract_terms_desc: {0: 'يجب أن يتضمن العقد بنوداً تحدد طبيعة العمل والراتب والمكان ومدة العمل والإجازات والمزايا والتزامات كل طرف. يجب أن يكون العقد مكتوباً باللغة العربية أو بلغة يفهمها العامل.', 1: 'The contract must include terms that specify the nature of work, salary, location, duration of employment, leave, benefits, and obligations of each party. The contract must be written in Arabic or in a language understood by the worker.', 2: '合同必须包含指定工作性质、薪资、位置、就业期限、假期、福利和各方义务的条款。合同必须用阿拉伯语或工人理解的语言书写。'},
+  art3_rights_h2: {0: 'حقوق العامل', 1: 'Workers\' Rights', 2: '工人权利'},
+  art3_rights_intro: {0: 'يتمتع العامل في المملكة بعدة حقوق محمية بموجب نظام العمل:', 1: 'Workers in the Kingdom enjoy several rights protected by labor law:', 2: '沙特王国的工人享有劳动法保护的多项权利：'},
+  art3_rights_wages: {0: 'الأجور والتعويضات (Wages and Compensation)', 1: 'Wages and Compensation', 2: '工资和报酬'},
+  art3_rights_wages_desc: {0: 'يحق للعامل الحصول على أجر عادل وفي المواعيد المتفق عليها. الحد الأدنى للأجور للعمال السعوديين هو 4000 ريال سعودي شهرياً. يجب دفع الأجر للعامل في الوقت المحدد، وأي تأخير يترتب عليه فائدة. الأجر يجب أن يكون مكتوباً ومتفقاً عليه في العقد.', 1: 'Workers are entitled to a fair salary paid on agreed dates. The minimum wage for Saudi workers is 4,000 Saudi riyals per month. The salary must be paid on time, and any delay incurs interest. The salary must be written and agreed upon in the contract.', 2: '工人有权获得在商定日期支付的公平薪资。沙特工人的最低工资为每月4000沙特里亚尔。工资必须按时支付，任何延误都会产生利息。工资必须在合同中以书面形式并经同意。'},
+  art3_rights_working_hours: {0: 'ساعات العمل (Working Hours)', 1: 'Working Hours', 2: '工作时间'},
+  art3_rights_working_hours_desc: {0: 'لا يجوز أن تتجاوز ساعات العمل 8 ساعات يومية و48 ساعة أسبوعية. خلال شهر رمضان الكريم، تقل ساعات العمل إلى 6 ساعات يومية. أي عمل إضافي يترتب عليه دفع تعويض بنسبة 150% من الأجر العادي للعامل.', 1: 'Working hours must not exceed 8 hours per day and 48 hours per week. During Ramadan, working hours are reduced to 6 hours per day. Any overtime is compensated at 150% of the worker\'s regular wage.', 2: '工作时间不得超过每天8小时，每周48小时。在斋月期间，工作时间减少至每天6小时。任何加班时间以工人常规工资的150%进行补偿。'},
+  art3_rights_rest: {0: 'فترات الراحة (Rest Periods)', 1: 'Rest Periods', 2: '休息时间'},
+  art3_rights_rest_desc: {0: 'يحق للعامل أن يحصل على فترات راحة منتظمة خلال اليوم الواحد. كما يحق له يوم عطلة أسبوعية واحدة على الأقل. يجب أن يحصل العامل على فترات راحة كافية لضمان سلامته وصحته.', 1: 'Workers are entitled to regular rest periods during the day. They also have the right to at least one weekly day off. Workers must receive adequate rest periods to ensure their safety and health.', 2: '工人有权在整个工作日内获得定期休息。他们也有权至少一周休息一天。工人必须获得充足的休息时间以确保其安全和健康。'},
+  art3_rights_safety: {0: 'السلامة والصحة (Safety and Health)', 1: 'Safety and Health', 2: '安全与健康'},
+  art3_rights_safety_desc: {0: 'يجب على صاحب العمل توفير بيئة عمل آمنة وصحية. يجب تطبيق معايير السلامة والصحة المهنية، وتوفير الحماية الشخصية اللازمة، والتأمين الصحي. للعامل الحق في رفع شكوى فيما يتعلق بمخاطر الصحة والسلامة.', 1: 'Employers must provide a safe and healthy work environment. Occupational safety and health standards must be applied, necessary personal protective equipment provided, and health insurance offered. Workers have the right to raise complaints regarding health and safety hazards.', 2: '雇主必须提供安全和健康的工作环境。必须应用职业安全卫生标准，提供必要的个人防护设备，并提供健康保险。工人有权对健康和安全危害提出投诉。'},
+  art3_leave_h2: {0: 'نظام الإجازات', 1: 'Leave System', 2: '假期制度'},
+  art3_leave_intro: {0: 'نظام الإجازات في المملكة محمي بموجب نظام العمل، ويحق للعامل الحصول على عدة أنواع من الإجازات:', 1: 'The leave system in the Kingdom is protected by labor law, and workers are entitled to several types of leave:', 2: '沙特王国的假期制度受劳动法保护，工人有权享受多种类型的假期：'},
+  art3_leave_annual: {0: 'الإجازة السنوية (Annual Leave)', 1: 'Annual Leave', 2: '年假'},
+  art3_leave_annual_desc: {0: 'يحق للعامل الحصول على إجازة سنوية مدفوعة. مدة الإجازة تكون 21 يوماً خلال السنوات الخمس الأولى من التوظيف، و30 يوماً بعد مضي 5 سنوات. يجب أن يحصل العامل على الأجر كاملاً خلال الإجازة.', 1: 'Workers are entitled to paid annual leave. The duration is 21 days during the first five years of employment, and 30 days after 5 years. Workers must receive full salary during leave.', 2: '工人有权享受带薪年假。前五年的就业期间为21天，5年后为30天。工人在假期期间必须获得全额工资。'},
+  art3_leave_sick: {0: 'الإجازة المرضية (Sick Leave)', 1: 'Sick Leave', 2: '病假'},
+  art3_leave_sick_desc: {0: 'يحق للعامل الحصول على 30 يوماً مدفوعة الأجر بالكامل، و60 يوماً بنسبة 75% من الأجر، و30 يوماً بدون أجر. إذا تجاوزت الإجازة المرضية 90 يوماً متتالية، قد يتم إنهاء العقد. يجب على صاحب العمل قبول شهادة طبية تثبت المرض.', 1: 'Workers are entitled to 30 days fully paid, 60 days at 75% pay, and 30 days unpaid. If sick leave exceeds 90 consecutive days, the contract may be terminated. Employers must accept medical certificates proving illness.', 2: '工人有权享受30天全薪、60天75%薪资和30天无薪假期。如果病假超过90个连续工作日，可能会终止合同。雇主必须接受证明疾病的医疗证书。'},
+  art3_leave_maternity: {0: 'إجازة الأمومة (Maternity Leave)', 1: 'Maternity Leave', 2: '产假'},
+  art3_leave_maternity_desc: {0: 'تحصل العاملة على 70 يوماً من الإجازة مدفوعة الأجر بالكامل عند الولادة. يمكنها الحصول على أيام إضافية بدون أجر. خلال فترة الرضاعة، تحصل على وقت للرضاعة. لا يجوز لصاحب العمل فصل العاملة بسبب الحمل أو الولادة.', 1: 'Female workers receive 70 days of fully paid leave upon birth. They can receive additional unpaid days. During breastfeeding, they receive time for nursing. Employers cannot terminate female workers due to pregnancy or childbirth.', 2: '女工在生育时享受70天全薪假期。她们可以获得额外的无薪日期。在哺乳期间，她们有时间哺乳。雇主不能因怀孕或生育而终止女性工人。'},
+  art3_leave_hajj: {0: 'إجازة الحج (Hajj Leave)', 1: 'Hajj Leave', 2: '朝觐假'},
+  art3_leave_hajj_desc: {0: 'يحق للعامل المسلم الحصول على 15 يوماً من الإجازة المدفوعة للحج مرة واحدة فقط طوال فترة التوظيف. كما يحق له بعض الأيام الإضافية غير المدفوعة إذا لزم الأمر.', 1: 'Muslim workers are entitled to 15 days of paid leave for Hajj only once during their employment period. They can receive some additional unpaid days if needed.', 2: '穆斯林工人在整个就业期间只有权享受15天的带薪朝觐假一次。如果需要，他们可以获得一些额外的无薪日期。'},
+  art3_leave_other: {0: 'إجازات أخرى (Other Leave)', 1: 'Other Leave', 2: '其他假期'},
+  art3_leave_other_desc: {0: 'يحق للعامل الحصول على أيام إجازة في حالة الزواج (3 أيام)، والوفيات (3 أيام)، والأعياد والمناسبات الرسمية. يمكن أيضاً الاتفاق على إجازات إضافية بين العامل وصاحب العمل.', 1: 'Workers are entitled to leave days for marriage (3 days), deaths (3 days), and official holidays and occasions. Additional leave can also be agreed upon between workers and employers.', 2: '工人有权享受婚假（3天）、丧假（3天）和官方假日和场合的假期。工人和雇主之间也可以协商额外的假期。'},
+  art3_termination_h2: {0: 'إنهاء عقد العمل', 1: 'Termination of Employment', 2: '就业合同终止'},
+  art3_termination_intro: {0: 'إنهاء عقد العمل له أحكام قانونية معينة يجب الالتزام بها:', 1: 'Termination of employment has certain legal provisions that must be complied with:', 2: '终止就业有某些必须遵守的法律规定：'},
+  art3_termination_notice: {0: 'مدة الإخطار (Notice Period)', 1: 'Notice Period', 2: '通知期'},
+  art3_termination_notice_desc: {0: 'بالنسبة للعقود غير محددة المدة، يجب إخطار الطرف الآخر بـ 60 يوماً قبل الإنهاء. للعقود محددة المدة، مدة الإخطار هي 30 يوماً. يجب أن يكون الإخطار كتابياً ويحدد أسباب الإنهاء إن وجدت.', 1: 'For indefinite-term contracts, the other party must be given 60 days notice before termination. For fixed-term contracts, the notice period is 30 days. Notice must be written and specify the reasons for termination, if any.', 2: '对于无固定期限合同，必须提前60天通知另一方终止。对于固定期限合同，通知期为30天。通知必须以书面形式提出并说明终止原因（如果有的话）。'},
+  art3_termination_reasons: {0: 'الأسباب المشروعة (Legitimate Reasons)', 1: 'Legitimate Reasons', 2: '合理原因'},
+  art3_termination_reasons_desc: {0: 'يمكن إنهاء العقد بسبب وجود أسباب مشروعة مثل السلوك السيء، الإهمال، عدم الكفاءة، أو الغياب المتكرر. يجب أن تكون الأسباب موثقة ويجب إعطاء العامل فرصة للدفاع عن نفسه.', 1: 'Contracts can be terminated for legitimate reasons such as misconduct, negligence, incompetence, or repeated absences. Reasons must be documented and the worker must be given an opportunity to defend himself.', 2: '可以因为不当行为、疏忽、不胜任或重复缺勤等正当原因终止合同。原因必须有记录，工人必须有机会为自己辩护。'},
+  art3_termination_unlawful: {0: 'الفصل غير القانوني (Wrongful Termination)', 1: 'Wrongful Termination', 2: '非法终止'},
+  art3_termination_unlawful_desc: {0: 'إذا تم فصل العامل دون سبب مشروع أو بدون اتباع الإجراءات الصحيحة، يحق له المطالبة بتعويضات. كما لا يجوز فصل العامل بسبب الجنسية أو الدين أو الرأي أو الجنس أو الحالة الصحية.', 1: 'If a worker is terminated without legitimate reason or without following proper procedures, he is entitled to compensation. Workers cannot be terminated based on nationality, religion, opinion, gender, or health status.', 2: '如果工人因没有正当理由或未遵循适当程序而被终止，他有权获得赔偿。工人不能因国籍、宗教、意见、性别或健康状况而被终止。'},
+  art3_termination_benefits: {0: 'مكافأة نهاية الخدمة (End of Service Gratuity)', 1: 'End of Service Gratuity', 2: '服务终止补偿'},
+  art3_termination_benefits_desc: {0: 'عند انتهاء عقد العمل، يحق للعامل الحصول على مكافأة نهاية الخدمة. طريقة الحساب هي: نصف شهر عن كل سنة من السنوات الخمس الأولى، وشهر كامل عن كل سنة بعد الخمس سنوات. المكافأة تُحسب بناءً على آخر راتب للعامل.', 1: 'Upon termination of employment, workers are entitled to end-of-service gratuity. The calculation method is: half a month for each of the first five years, and a full month for each year after five years. The gratuity is calculated based on the worker\'s last salary.', 2: '在就业终止时，工人有权获得服务终止补偿。计算方法是：前五年中每年半个月，五年后每年一个完整月份。补偿基于工人的最后工资计算。'},
+  art3_info_termination: {0: 'في حالة النزاع حول الفصل أو شروط الإنهاء، يمكن للعامل رفع قضية أمام المحكمة العمالية للحصول على حقوقه.', 1: 'In case of dispute over termination or termination conditions, a worker can file a case before a labor court to obtain their rights.', 2: '如果对终止或终止条件存在争议，工人可以向劳动法院提起诉讼以获得其权利。'},
+  art3_wps_h2: {0: 'نظام حماية الأجور', 1: 'Wage Protection System', 2: '工资保护制度'},
+  art3_wps_intro: {0: 'نظام حماية الأجور (Wage Protection System) هو نظام إلكتروني يضمن دفع أجور العمال بشكل صحيح وفي الوقت المحدد:', 1: 'The Wage Protection System is an electronic system that ensures correct and timely payment of workers\' wages:', 2: '工资保护制度是一个电子系统，确保工人工资的正确和及时支付：'},
+  art3_wps_requirements: {0: 'المتطلبات (Requirements)', 1: 'Requirements', 2: '要求'},
+  art3_wps_requirements_desc: {0: 'يجب على أصحاب العمل استخدام طريقة إلكترونية معتمدة للدفع (تحويل بنكي أو بطاقة الخصم). يجب أن تكون عمليات الدفع معاملة معاملة مركزية من خلال النظام، وذلك لضمان عدم حبس الأجور.', 1: 'Employers must use an approved electronic payment method (bank transfer or debit card). Payment operations must be processed centrally through the system to ensure wages are not withheld.', 2: '雇主必须使用经批准的电子付款方式（银行转账或借记卡）。必须通过系统集中处理付款操作，以确保工资不被扣留。'},
+  art3_wps_penalties: {0: 'العقوبات (Penalties)', 1: 'Penalties', 2: '处罚'},
+  art3_wps_penalties_desc: {0: 'عدم الامتثال لنظام حماية الأجور يترتب عليه غرامات مالية كبيرة على صاحب العمل. قد تتجاوز الغرامات مئات الآلاف من الريالات، كما قد يتم إغلاق المنشأة أو منع صاحب العمل من توظيف عمال جدد.', 1: 'Non-compliance with the Wage Protection System results in substantial fines for employers. Fines can exceed hundreds of thousands of riyals, and establishments may be closed or employers prevented from hiring new workers.', 2: '不遵守工资保护制度会对雇主处以巨额罚款。罚款可能超过数十万里亚尔，并且可能关闭企业或禁止雇主招聘新工人。'},
+  art3_courts_h2: {0: 'المحاكم العمالية وتسوية النزاعات', 1: 'Labor Courts and Dispute Resolution', 2: '劳动法院和争议解决'},
+  art3_courts_intro: {0: 'في حالة وجود نزاع بين العامل وصاحب العمل، يمكن اللجوء إلى عدة خيارات:', 1: 'In case of a dispute between a worker and employer, several options are available:', 2: '如果工人与雇主之间存在争议，有几种选择：'},
+  art3_courts_amicable: {0: 'التسوية الودية (Amicable Settlement)', 1: 'Amicable Settlement', 2: '和解'},
+  art3_courts_amicable_desc: {0: 'يمكن لأطراف النزاع الجلوس معاً والتفاوض على حل ودي يرضي الجميع. التسوية الودية أسرع وأقل تكلفة من رفع قضية، وقد تحافظ على العلاقة بين الطرفين.', 1: 'Disputing parties can sit together and negotiate a friendly solution acceptable to all. Amicable settlement is faster and less costly than litigation, and may preserve the relationship between parties.', 2: '争议方可以坐在一起协商对所有人都可以接受的友好解决方案。和解比诉讼更快、成本更低，可能会保留各方之间的关系。'},
+  art3_courts_labor: {0: 'المحاكم العمالية (Labor Courts)', 1: 'Labor Courts', 2: '劳动法院'},
+  art3_courts_labor_desc: {0: 'إذا فشلت التسوية الودية، يمكن للعامل رفع قضية أمام المحكمة العمالية. المحكمة ستنظر في النزاع وتصدر حكماً يحكم الحقوق والالتزامات. يجب تقديم الشكوى ضمن فترة زمنية محددة من حدوث الحادث.', 1: 'If amicable settlement fails, a worker can file a case before a labor court. The court will examine the dispute and issue a judgment ruling on rights and obligations. The complaint must be filed within a specified timeframe from the incident.', 2: '如果和解失败，工人可以向劳动法院提起诉讼。法院将审查争议并做出裁定。投诉必须在事件发生后的指定期限内提交。'},
+  art3_courts_filing: {0: 'تقديم الشكوى (Filing a Complaint)', 1: 'Filing a Complaint', 2: '提出投诉'},
+  art3_courts_filing_desc: {0: 'يتم تقديم الشكوى إلى المحكمة العمالية مع تقديم الأدلة والمستندات التي تثبت الحق. يمكن للعامل أن يمثل نفسه أو يستعين بمحام. المحكمة سوف تستدعي الطرفين وتستمع إلى الحجج والبينات.', 1: 'A complaint is filed to the labor court with evidence and documents proving the right. A worker can represent himself or hire a lawyer. The court will summon both parties and listen to arguments and evidence.', 2: '投诉提交给劳动法院，并提交证明权利的证据和文件。工人可以代表自己或聘请律师。法院将传唤双方并听取论证和证据。'},
+  art3_courts_enforcement: {0: 'التنفيذ (Enforcement)', 1: 'Enforcement', 2: '执行'},
+  art3_courts_enforcement_desc: {0: 'بعد صدور الحكم، يجب على صاحب العمل تنفيذ الحكم فوراً. في حالة عدم التنفيذ، يمكن للعامل طلب تنفيذ القضائي من خلال جهات التنفيذ المختصة.', 1: 'After judgment is issued, the employer must immediately execute the judgment. If not executed, a worker can request judicial enforcement through competent enforcement authorities.', 2: '判决书发布后，雇主必须立即执行判决。如果未执行，工人可以要求通过主管执行机构进行司法执行。'},
+  art3_conclusion_h2: {0: 'الخاتمة', 1: 'Conclusion', 2: '结论'},
+  art3_conclusion_p: {0: 'نظام العمل السعودي يوفر حماية شاملة لحقوق العمال ويضمن علاقة عمل عادلة ومتوازنة. يجب على العامل أن يعرف حقوقه وواجباته، وأن يطالب بحقوقه عند انتهاكها. كما يجب على صاحب العمل الالتزام بالنظام والقوانين لضمان سير العمل بكفاءة واحترافية.', 1: 'The Saudi labor system provides comprehensive protection of workers\' rights and ensures fair and balanced employment relationships. Workers must know their rights and duties and demand their rights when violated. Employers must comply with the system and laws to ensure efficient and professional work operations.', 2: '沙特劳动体系对工人权利提供全面保护，确保公平和平衡的就业关系。工人必须了解其权利和义务，在权利受到侵犯时要求其权利。雇主必须遵守体系和法律，以确保工作运营的效率和专业性。'},
+  art3_conclusion_cta: {0: 'إذا واجهت أي مشكلة في العمل أو شعرت بأن حقوقك تنتهك، فلا تتردد في التواصل مع شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية. فريقنا المتخصص جاهز لمساعدتك وحماية حقوقك.', 1: 'If you face any work problem or feel your rights are being violated, do not hesitate to contact Mishary Bin Bandar Bin Jalawi Law Firm. Our specialized team is ready to assist you and protect your rights.', 2: '如果您遇到任何工作问题或感觉您的权利受到侵犯，请不要犹豫与米沙里本班达本贾劳伊律师事务所联系。我们的专业团队随时准备帮助您和保护您的权利。'},
+};
+</script>
+<script src="lang.js"></script>
+<script>
+let lang = currentLang;
+function toggleLangDrop() { document.getElementById('langDropMenu').classList.toggle('open'); }
+document.addEventListener('click', function(e) {
+    if (!document.getElementById('langDrop').contains(e.target)) document.getElementById('langDropMenu').classList.remove('open');
+});
+function setLang(l) {
+    lang = l; currentLang = l;
+    const dir = l === 0 ? 'rtl' : 'ltr';
+    const langCode = l === 0 ? 'ar' : (l === 1 ? 'en' : 'zh');
+    document.documentElement.setAttribute('dir', dir);
+    document.documentElement.setAttribute('lang', langCode);
+    document.getElementById('langDropBtn').textContent = l === 0 ? '🇸🇦' : (l === 1 ? '🇬🇧' : '🇨🇳');
+    const allTranslations = Object.assign({}, commonTranslations, pageTranslations);
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (allTranslations[key] && allTranslations[key][l] !== undefined) {
+            if (el.tagName === 'INPUT' && el.type !== 'hidden') el.placeholder = allTranslations[key][l];
+            else el.innerHTML = allTranslations[key][l];
+        }
+    });
+    localStorage.setItem('siteLang', l);
+}
+window.addEventListener('load', function() {
+    const saved = localStorage.getItem('siteLang');
+    if (saved !== null) setLang(parseInt(saved)); else setLang(0);
+});
+</script>
+
+</body>
+</html>

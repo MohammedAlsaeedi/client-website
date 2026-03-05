@@ -1,134 +1,518 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>المدونة القانونية — شركة مشاري بندر بن جلوي للمحاماة</title>
-<meta content="مقالات قانونية متخصصة في نظام العمل السعودي من فريق شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية" name="description"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المدونة القانونية - شركة مشاري بندر بن جلوي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root {
-    --navy: #1B2C6B; --navy-dark: #111d4a; --navy-mid: #223580;
-    --gold: #B8935A; --gold-light: #d4aa72; --gold-pale: #f5ede0;
-    --white: #ffffff; --off-white: #f8f6f2; --gray: #6b7280; --gray-dark: #374151; --border: #e5e1d9;
+  --navy: #1B2C6B;
+  --navy-dark: #111d4a;
+  --navy-mid: #223580;
+  --gold: #B8935A;
+  --gold-light: #d4aa72;
+  --gold-pale: #f5ede0;
+  --white: #ffffff;
+  --off-white: #f8f6f2;
+  --gray-light: #e5e7eb;
+  --gray: #6b7280;
+  --gray-dark: #374151;
+  --border: #e5e1d9;
 }
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; overflow-x: hidden; }
-body { font-family: 'Cairo', sans-serif; color: var(--gray-dark); background: var(--white); overflow-x: hidden; line-height: 1.6; }
-a { text-decoration: none; }
 
-/* NAVBAR */
-.navbar { position: fixed; inset: 0 0 auto 0; z-index: 1000; height: 90px; background: rgba(17,29,74,.97); backdrop-filter: blur(12px); border-bottom: 2px solid rgba(184,147,90,.45); display: flex; align-items: center; padding: 0 5%; }
-.nav-inner { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.nav-logo { display: flex; align-items: center; gap: 11px; }
-.nav-logo img { width: 60px; height: 60px; flex-shrink: 0; }
-.nav-firm-name { font-size: 1.2rem; font-weight: 800; color: var(--gold-light); line-height: 1.2; }
-.nav-firm-sub { font-size: .8rem; color: rgba(255,255,255,.55); }
-.nav-links { display: flex; align-items: center; gap: 20px; list-style: none; flex: 1; justify-content: center; }
-.nav-links a { color: rgba(255,255,255,.82); font-size: .95rem; font-weight: 600; transition: color .2s; position: relative; padding-bottom: 2px; }
-.nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
-.nav-links a::after { content: ''; position: absolute; bottom: -2px; right: 0; left: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: right; transition: transform .25s; }
-.nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
-.nav-cta { background: var(--gold); color: var(--white); padding: 8px 20px; border-radius: 25px; font-size: .85rem; font-weight: 800; transition: all .25s; white-space: nowrap; }
-.nav-cta:hover { background: var(--gold-light); }
-.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
-.hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; }
-.mobile-drawer { position: fixed; top: 90px; inset-inline: 0; background: var(--navy-dark); border-top: 1px solid rgba(184,147,90,.25); padding: 24px 5%; z-index: 999; transform: translateY(-8px); opacity: 0; visibility: hidden; transition: all .3s; }
-.mobile-drawer.open { transform: translateY(0); opacity: 1; visibility: visible; }
-.mobile-drawer ul { list-style: none; }
-.mobile-drawer li { border-bottom: 1px solid rgba(255,255,255,.07); }
-.mobile-drawer a { display: block; padding: 12px 0; color: rgba(255,255,255,.85); font-size: .95rem; font-weight: 600; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* PAGE HERO */
-.page-hero { padding: 130px 5% 70px; background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #2a4090 100%); position: relative; overflow: hidden; }
-.page-hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(184,147,90,.08) 1px, transparent 1px); background-size: 40px 40px; }
-.page-hero-content { position: relative; z-index: 2; max-width: 700px; }
-.page-breadcrumb { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.55); font-size: .85rem; margin-bottom: 18px; }
-.page-breadcrumb a { color: rgba(255,255,255,.55); }
-.page-breadcrumb a:hover { color: var(--gold-light); }
-.page-breadcrumb span { color: var(--gold-light); }
-.page-hero h1 { font-size: clamp(1.8rem, 3.5vw, 3rem); font-weight: 900; color: var(--white); margin-bottom: 16px; line-height: 1.25; }
-.page-hero h1 em { color: var(--gold-light); font-style: normal; }
-.page-hero-desc { font-size: 1rem; color: rgba(255,255,255,.75); line-height: 1.9; max-width: 600px; }
+html, body {
+  font-family: 'Cairo', sans-serif;
+  background: var(--white);
+  color: var(--gray-dark);
+}
 
-/* BLOG */
-.blog-section { padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
-.tag { display: inline-block; background: var(--gold-pale); color: var(--gold); border: 1px solid var(--gold-light); padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 700; }
-.section-title { font-size: clamp(1.5rem, 2.8vw, 2.2rem); font-weight: 900; color: var(--navy); margin: 12px 0 6px; }
-.gold-bar { width: 50px; height: 3px; background: linear-gradient(90deg, var(--gold), var(--gold-light)); border-radius: 2px; }
-.section-header { text-align: center; margin-bottom: 50px; }
-.section-header .gold-bar { margin: 12px auto 18px; }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-.blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 28px; }
-.blog-card { border: 1px solid var(--border); border-radius: 18px; overflow: hidden; background: var(--white); transition: transform .3s, box-shadow .3s; box-shadow: 0 4px 18px rgba(27,44,107,.06); display: flex; flex-direction: column; }
-.blog-card:hover { transform: translateY(-5px); box-shadow: 0 14px 40px rgba(184,147,90,.15); }
-.blog-card-img { height: 200px; position: relative; overflow: hidden; }
-.blog-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
-.blog-card:hover .blog-card-img img { transform: scale(1.05); }
-.blog-card-body { padding: 24px 22px; flex: 1; display: flex; flex-direction: column; }
-.blog-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: .78rem; color: var(--gray); }
-.blog-cat { background: var(--gold-pale); color: var(--gold); border: 1px solid var(--gold-light); padding: 2px 10px; border-radius: 12px; font-size: .72rem; font-weight: 700; }
-.blog-card h3 { font-size: 1.05rem; font-weight: 800; color: var(--navy); margin-bottom: 10px; line-height: 1.5; }
-.blog-card p { font-size: .87rem; color: var(--gray); line-height: 1.85; margin-bottom: 16px; flex: 1; }
-.blog-read { color: var(--gold); font-size: .85rem; font-weight: 700; display: flex; align-items: center; gap: 6px; margin-top: auto; }
-.blog-read:hover { color: var(--navy); }
+.navbar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1000;
+  height: 90px;
+  background: rgba(17, 29, 74, 0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid rgba(184, 147, 90, 0.45);
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+}
 
-/* ARTICLE DETAIL */
-.article-detail { background: var(--off-white); border: 1px solid var(--border); border-radius: 18px; padding: 35px 30px; margin-bottom: 30px; }
-.article-detail h3 { font-size: 1.3rem; font-weight: 900; color: var(--navy); margin-bottom: 16px; line-height: 1.5; }
-.article-detail h4 { font-size: 1.05rem; font-weight: 800; color: var(--navy); margin: 22px 0 10px; padding-right: 14px; border-right: 4px solid var(--gold); }
-.article-detail p { font-size: .92rem; color: var(--gray-dark); line-height: 2; margin-bottom: 12px; }
-.article-detail strong { color: var(--navy); }
-.article-ref { background: var(--gold-pale); border: 1px solid var(--gold-light); border-radius: 12px; padding: 14px 18px; margin: 16px 0; font-size: .85rem; color: var(--gold); font-weight: 700; }
-.article-ref span { color: var(--gray-dark); font-weight: 400; }
+.nav-inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
 
-/* CTA */
-.cta-section { background: linear-gradient(135deg, var(--navy-dark), var(--navy)); padding: 70px 5%; text-align: center; }
-.cta-section h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 900; color: var(--white); margin-bottom: 14px; }
-.cta-section p { color: rgba(255,255,255,.7); font-size: .95rem; margin-bottom: 32px; max-width: 500px; margin-inline: auto; }
-.cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-.btn-gold { background: var(--gold); color: var(--white); padding: 13px 32px; border-radius: 30px; font-size: .95rem; font-weight: 800; transition: all .25s; display: inline-flex; align-items: center; gap: 8px; }
-.btn-gold:hover { background: var(--gold-light); box-shadow: 0 8px 25px rgba(184,147,90,.4); }
-.btn-outline { border: 2px solid var(--gold); color: var(--gold); padding: 11px 28px; border-radius: 30px; font-size: .95rem; font-weight: 800; transition: all .25s; }
-.btn-outline:hover { background: var(--gold); color: var(--white); }
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
 
-footer { background: var(--navy-dark); color: rgba(255,255,255,.6); text-align: center; padding: 30px 5%; font-size: .85rem; border-top: 1px solid rgba(184,147,90,.2); }
-footer a { color: var(--gold-light); }
-.whatsapp-fab { position: fixed; bottom: 28px; left: 28px; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 999; box-shadow: 0 6px 20px rgba(37,211,102,.4); transition: transform .25s; }
-.whatsapp-fab:hover { transform: scale(1.1); }
+.nav-logo img {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
 
-/* Language Dropdown */
-.lang-drop { position: relative; display: flex; align-items: center; }
-.lang-drop-btn { background: none; border: 2px solid rgba(255,255,255,.25); border-radius: 10px; cursor: pointer; font-size: 1.4rem; line-height: 1; padding: 4px 8px; transition: all .2s; color: #fff; }
-.lang-drop-btn:hover { border-color: var(--gold); transform: scale(1.05); }
-.lang-drop-menu { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--navy); border: 1px solid var(--gold); border-radius: 10px; padding: 6px; display: none; flex-direction: column; gap: 4px; min-width: 130px; z-index: 9999; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
-.lang-drop-menu.open { display: flex; }
-.lang-drop-menu button { background: none; border: none; cursor: pointer; font-size: 1rem; padding: 6px 10px; border-radius: 6px; text-align: right; color: #fff; white-space: nowrap; font-family: inherit; transition: background .15s; }
-.lang-drop-menu button:hover { background: rgba(184,147,90,.2); }
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
 
-@media (max-width: 900px) { .nav-links { display: none; } .hamburger { display: flex; } }
+.nav-firm-name {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--gold-light);
+  line-height: 1.2;
+}
+
+.nav-firm-sub {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.2s;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--gold-light);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  left: 0;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  transform: scaleX(1);
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-cta {
+  background: var(--gold);
+  color: var(--white);
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  transition: all 0.25s;
+  white-space: nowrap;
+}
+
+.nav-cta:hover {
+  background: var(--gold-light);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: white;
+  border-radius: 2px;
+}
+
+.mobile-drawer {
+  position: fixed;
+  top: 90px;
+  inset-inline: 0;
+  background: var(--navy-dark);
+  border-top: 1px solid rgba(184, 147, 90, 0.25);
+  padding: 24px 5%;
+  z-index: 999;
+  transform: translateY(-8px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.mobile-drawer.open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-drawer ul {
+  list-style: none;
+}
+
+.mobile-drawer li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.mobile-drawer a {
+  display: block;
+  padding: 12px 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.page-hero {
+  padding: 130px 5% 65px;
+  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #2a4090 100%);
+  position: relative;
+  overflow: hidden;
+  margin-top: 90px;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(184, 147, 90, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.page-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.85rem;
+  margin-bottom: 18px;
+}
+
+.page-breadcrumb a {
+  color: var(--gold-light);
+}
+
+.page-breadcrumb span {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.page-hero h1 {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 900;
+  color: white;
+  line-height: 1.3;
+  margin-bottom: 14px;
+}
+
+.page-hero p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+.section-pad {
+  padding: 70px 5%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--gold-pale);
+  color: var(--gold);
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-weight: 900;
+  color: var(--navy);
+}
+
+.gold-bar {
+  width: 50px;
+  height: 4px;
+  background: var(--gold);
+  border-radius: 2px;
+  margin: 12px auto 0;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 28px;
+}
+
+.blog-card {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--white);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(27, 44, 107, 0.12);
+}
+
+.blog-card-link-wrapper {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.blog-card-img {
+  height: 180px;
+  background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+
+.blog-card-body {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.blog-card-desc {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.7;
+  flex: 1;
+  margin-bottom: 16px;
+}
+
+.blog-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--gold);
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+.blog-card-link:hover {
+  color: var(--navy);
+}
+
+.lang-drop {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.lang-drop-btn {
+  background: none;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 4px 8px;
+  transition: all 0.2s;
+  color: #fff;
+}
+
+.lang-drop-btn:hover {
+  border-color: var(--gold);
+  transform: scale(1.05);
+}
+
+.lang-drop-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--navy);
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  padding: 6px;
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 130px;
+  z-index: 9999;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.lang-drop-menu.open {
+  display: flex;
+}
+
+.lang-drop-menu button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-align: right;
+  color: #fff;
+  white-space: nowrap;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+.lang-drop-menu button:hover {
+  background: rgba(184, 147, 90, 0.2);
+}
+
+footer {
+  background: var(--navy-dark);
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding: 30px 5%;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(184, 147, 90, 0.2);
+}
+
+footer a {
+  color: var(--gold-light);
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: var(--gold);
+}
+
+.whatsapp-fab {
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  transition: transform 0.25s;
+}
+
+.whatsapp-fab:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+
 @media (max-width: 768px) {
-    .page-hero { padding: 110px 5% 50px; }
-    .page-hero h1 { font-size: clamp(1.3rem,5vw,1.9rem); }
-    .blog-section { padding: 50px 5%; }
-    .section-title { font-size: 1.3rem; }
-    .blog-grid { grid-template-columns: 1fr; }
-    .article-detail { padding: 24px 20px; }
+  .page-hero {
+    padding: 110px 5% 50px;
+  }
+  .page-hero h1 {
+    font-size: clamp(1.3rem, 5vw, 1.9rem);
+  }
+  .section-pad {
+    padding: 50px 5%;
+  }
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .blog-card-img {
+    height: 140px;
+    font-size: 3rem;
+  }
 }
+
 @media (max-width: 600px) {
-    .nav-cta { display: none; }
-    .blog-grid { grid-template-columns: 1fr; }
+  .nav-cta {
+    display: none;
+  }
 }
 </style>
 </head>
 <body>
+
 <nav class="navbar">
 <div class="nav-inner">
 <a class="nav-logo" href="index.html">
 <img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png" style="width:60px;height:60px;object-fit:contain;"/>
-<div>
+<div class="nav-logo-text">
 <div class="nav-firm-name" data-i18n="firm_name">شركة مشاري بندر بن جلوي</div>
 <div class="nav-firm-sub" data-i18n="firm_sub">للمحاماة والاستشارات القانونية</div>
 </div>
@@ -138,14 +522,14 @@ footer a { color: var(--gold-light); }
 <li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
 <li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
 <li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
-<li><a class="active" data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_blog" href="blog.html" class="active">المدونة</a></li>
 <li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
 <li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
 <li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
 <li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
 <li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
 </ul>
-<div style="display:flex;align-items:center;gap:10px;">
+<div class="nav-controls">
 <div class="lang-drop" id="langDrop">
 <button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
 <div class="lang-drop-menu" id="langDropMenu">
@@ -154,14 +538,14 @@ footer a { color: var(--gold-light); }
 <button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
 </div>
 </div>
-<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank"><span data-i18n="nav_cta">احجز استشارة</span></a>
-<div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
+<a class="nav-cta" data-i18n="nav_cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
+<div class="hamburger" onclick="document.querySelector('.mobile-drawer').classList.toggle('open')">
 <span></span><span></span><span></span>
 </div>
 </div>
 </div>
 </nav>
-<div class="mobile-drawer" id="drawer">
+<div class="mobile-drawer">
 <ul>
 <li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
 <li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
@@ -176,274 +560,101 @@ footer a { color: var(--gold-light); }
 </ul>
 </div>
 
-<!-- PAGE HERO -->
-<div class="page-hero">
+<section class="page-hero">
 <div class="page-hero-content">
 <div class="page-breadcrumb">
-<a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
-<span>←</span>
-<span data-i18n="breadcrumb_blog">المدونة القانونية</span>
+<a href="index.html" data-i18n="breadcrumb_home">الرئيسية</a>
+<span>/</span>
+<span data-i18n="breadcrumb_blog">المدونة</span>
 </div>
-<h1 data-i18n="hero_h1">نظام العمل <em>السعودي</em></h1>
-<p class="page-hero-desc" data-i18n="hero_p">مقالات قانونية متخصصة ومكثّفة حول نظام العمل السعودي — نشرح لك حقوقك والتزاماتك وفقاً للأنظمة واللوائح المعتمدة من وزارة الموارد البشرية والتنمية الاجتماعية.</p>
+<h1 data-i18n="hero_h1">المدونة القانونية</h1>
+<p data-i18n="hero_p">مقالات قانونية متخصصة تغطي أهم المواضيع في القانون السعودي لمساعدتك في فهم حقوقك والتزاماتك القانونية.</p>
 </div>
-</div>
+</section>
 
-<!-- BLOG CARDS OVERVIEW -->
-<div class="blog-section">
+<section class="section-pad">
 <div class="section-header">
-<div class="tag" data-i18n="blog_tag">نظام العمل السعودي</div>
-<h2 class="section-title" data-i18n="section_h2">دليلك القانوني الشامل</h2>
+<div class="tag" data-i18n="blog_section_tag">آخر المقالات</div>
+<h2 class="section-title" data-i18n="blog_section_h2">مقالاتنا القانونية</h2>
 <div class="gold-bar"></div>
 </div>
 
 <div class="blog-grid">
 
-<!-- ARTICLE 1 -->
-<div class="blog-card" onclick="document.getElementById('art1').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;">
-<div class="blog-card-img">
-<img src="https://images.unsplash.com/photo-1590069261209-f8e9b8642343?w=800&q=80" alt="الرياض — نظام العمل السعودي"/>
-</div>
+<a href="article1.html" class="blog-card-link-wrapper">
+<div class="blog-card">
+<div class="blog-card-img">⚖️</div>
 <div class="blog-card-body">
-<div class="blog-meta">
-<span class="blog-cat" data-i18n="cat_1">حقوق العامل</span>
-<span data-i18n="blog_date">مارس 2026</span>
-</div>
-<h3 data-i18n="card_h3_1">حقوق العامل وصاحب العمل في نظام العمل السعودي</h3>
-<p data-i18n="card_p_1">شرح شامل لأهم الحقوق والالتزامات المتبادلة بين العامل وصاحب العمل وفقاً لنظام العمل الصادر بالمرسوم الملكي رقم (م/51) وتعديلاته.</p>
-<span class="blog-read" data-i18n="blog_read">اقرأ المقال ←</span>
+<h3 class="blog-card-title" data-i18n="blog1_title">قانون الشركات في المملكة العربية السعودية</h3>
+<p class="blog-card-desc" data-i18n="blog1_desc">دليل شامل لنظام الشركات السعودي الجديد وأنواع الكيانات التجارية وإجراءات التأسيس والحوكمة.</p>
+<span class="blog-card-link" data-i18n="blog_read">اقرأ المقال ←</span>
 </div>
 </div>
-
-<!-- ARTICLE 2 -->
-<div class="blog-card" onclick="document.getElementById('art2').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;">
-<div class="blog-card-img">
-<img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80" alt="عقد العمل — إنهاء العقد"/>
-</div>
-<div class="blog-card-body">
-<div class="blog-meta">
-<span class="blog-cat" data-i18n="cat_2">إنهاء العقد</span>
-<span data-i18n="blog_date">مارس 2026</span>
-</div>
-<h3 data-i18n="card_h3_2">إنهاء عقد العمل: المواد 74 و75 و77 و80 و81</h3>
-<p data-i18n="card_p_2">متى يحق لصاحب العمل فصل العامل؟ ومتى يحق للعامل ترك العمل دون إشعار؟ شرح تفصيلي لأهم مواد إنهاء العقد.</p>
-<span class="blog-read" data-i18n="blog_read">اقرأ المقال ←</span>
-</div>
-</div>
-
-<!-- ARTICLE 3 -->
-<div class="blog-card" onclick="document.getElementById('art3').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;">
-<div class="blog-card-img">
-<img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80" alt="مكافأة نهاية الخدمة"/>
-</div>
-<div class="blog-card-body">
-<div class="blog-meta">
-<span class="blog-cat" data-i18n="cat_3">مكافأة نهاية الخدمة</span>
-<span data-i18n="blog_date">مارس 2026</span>
-</div>
-<h3 data-i18n="card_h3_3">مكافأة نهاية الخدمة: كيف تُحسب ومتى تُستحق؟</h3>
-<p data-i18n="card_p_3">دليل عملي لحساب مكافأة نهاية الخدمة وفقاً للمادة 84 من نظام العمل، مع أمثلة رقمية وحالات الاستحقاق الكامل والجزئي.</p>
-<span class="blog-read" data-i18n="blog_read">اقرأ المقال ←</span>
-</div>
-</div>
-
-<!-- ARTICLE 4 -->
-<div class="blog-card" onclick="document.getElementById('art4').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;">
-<div class="blog-card-img">
-<img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80" alt="ساعات العمل والعمل الإضافي"/>
-</div>
-<div class="blog-card-body">
-<div class="blog-meta">
-<span class="blog-cat" data-i18n="cat_4">ساعات العمل</span>
-<span data-i18n="blog_date">مارس 2026</span>
-</div>
-<h3 data-i18n="card_h3_4">ساعات العمل والعمل الإضافي في النظام السعودي</h3>
-<p data-i18n="card_p_4">ما الحد الأقصى لساعات العمل؟ كيف يُحسب أجر الساعات الإضافية؟ وما أحكام العمل في رمضان؟ إجابات قانونية دقيقة.</p>
-<span class="blog-read" data-i18n="blog_read">اقرأ المقال ←</span>
-</div>
-</div>
-
-<!-- ARTICLE 5 -->
-<div class="blog-card" onclick="document.getElementById('art5').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;">
-<div class="blog-card-img">
-<img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&q=80" alt="الإجازات في نظام العمل"/>
-</div>
-<div class="blog-card-body">
-<div class="blog-meta">
-<span class="blog-cat" data-i18n="cat_5">الإجازات</span>
-<span data-i18n="blog_date">مارس 2026</span>
-</div>
-<h3 data-i18n="card_h3_5">الإجازات في نظام العمل السعودي: السنوية والمرضية والأمومة</h3>
-<p data-i18n="card_p_5">جميع أنواع الإجازات المستحقة للعامل بموجب نظام العمل — مددها وشروطها وأجورها ومتى يحق لصاحب العمل رفضها.</p>
-<span class="blog-read" data-i18n="blog_read">اقرأ المقال ←</span>
-</div>
-</div>
-
-<!-- ARTICLE 6 -->
-<div class="blog-card" onclick="document.getElementById('art6').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;">
-<div class="blog-card-img">
-<img src="https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=800&q=80" alt="تعديلات نظام العمل 2024-2025"/>
-</div>
-<div class="blog-card-body">
-<div class="blog-meta">
-<span class="blog-cat" data-i18n="cat_6">التعديلات الجديدة</span>
-<span data-i18n="blog_date">مارس 2026</span>
-</div>
-<h3 data-i18n="card_h3_6">أبرز تعديلات نظام العمل السعودي 2024–2025</h3>
-<p data-i18n="card_p_6">ملخص شامل للتعديلات التي أُقرّت في أغسطس 2024 ودخلت حيّز التنفيذ في فبراير 2025 — شملت 38 مادة معدّلة و7 مواد ملغاة.</p>
-<span class="blog-read" data-i18n="blog_read">اقرأ المقال ←</span>
-</div>
-</div>
-
-</div><!-- end blog-grid -->
-
-<!-- ═══════════════════════════════════════════ -->
-<!-- FULL ARTICLES BELOW -->
-<!-- ═══════════════════════════════════════════ -->
-
-<!-- ARTICLE 1: حقوق العامل وصاحب العمل -->
-<div class="article-detail" id="art1" style="margin-top:60px;">
-<h3 data-i18n="art1_title">حقوق العامل وصاحب العمل في نظام العمل السعودي</h3>
-
-<p data-i18n="art1_intro">يُعد <strong>نظام العمل السعودي</strong> الصادر بالمرسوم الملكي رقم (م/51) وتاريخ 23/8/1426هـ هو المرجع الأساسي الذي ينظّم العلاقة التعاقدية بين العامل وصاحب العمل في القطاع الخاص بالمملكة العربية السعودية. يهدف النظام إلى حماية حقوق الطرفين وتحقيق التوازن بينهما في بيئة عمل عادلة ومنتجة.</p>
-
-<h4 data-i18n="art1_h4_1">حقوق العامل الأساسية</h4>
-<p data-i18n="art1_p1">يكفل نظام العمل للعامل مجموعة من الحقوق الجوهرية، أبرزها: الحصول على أجر عادل يُصرف في موعده المحدد دون تأخير (المادة 90)، وتوفير بيئة عمل آمنة وصحية (المادة 121)، والحماية من الفصل التعسفي مع استحقاق التعويض في حالة الإنهاء غير المشروع (المادة 77). كما يحق للعامل الحصول على إجازة سنوية مدفوعة الأجر لا تقل عن 21 يوماً (المادة 109)، وإجازة مرضية (المادة 117)، ومكافأة نهاية خدمة عند انتهاء العلاقة التعاقدية (المادة 84).</p>
-
-<h4 data-i18n="art1_h4_2">التزامات صاحب العمل</h4>
-<p data-i18n="art1_p2">يلتزم صاحب العمل بتحرير عقد عمل مكتوب من نسختين يحتفظ كل طرف بنسخة منه (المادة 51)، وتوفير السكن المناسب أو بدل سكن نقدي، وتوفير وسيلة مواصلات أو بدل نقل. كما يُمنع صاحب العمل من تشغيل العامل سخرةً أو حجز أجره أو أي جزء منه بغير سند قضائي (المادة 61). ويجب عليه الاشتراك في التأمينات الاجتماعية لجميع العاملين لديه وفقاً لنظام التأمينات الاجتماعية.</p>
-
-<h4 data-i18n="art1_h4_3">فترة التجربة</h4>
-<p data-i18n="art1_p3">يجوز إخضاع العامل لفترة تجربة يُنص عليها صراحة في عقد العمل، بحيث لا تزيد مدتها عن <strong>180 يوماً</strong> وفقاً للتعديلات الأخيرة (المادة 53 المعدّلة). ولا تُحسب فيها إجازة عيدَي الفطر والأضحى والإجازة المرضية. ويحق لأي من الطرفين إنهاء العقد خلال فترة التجربة دون تعويض أو مكافأة نهاية خدمة.</p>
-
-<div class="article-ref">📌 <span data-i18n="art1_ref">المرجع: نظام العمل السعودي — المرسوم الملكي رقم (م/51) وتعديلاته — وزارة الموارد البشرية والتنمية الاجتماعية.</span></div>
-</div>
-
-<!-- ARTICLE 2: إنهاء عقد العمل -->
-<div class="article-detail" id="art2">
-<h3 data-i18n="art2_title">إنهاء عقد العمل: المواد 74 و75 و77 و80 و81</h3>
-
-<p data-i18n="art2_intro">إنهاء عقد العمل من أكثر المواضيع حساسية في العلاقة العمالية، ولهذا نظّم المشرّع السعودي أحكامه بدقة عبر عدة مواد في <strong>نظام العمل</strong> لضمان حقوق الطرفين ومنع التعسف.</p>
-
-<h4 data-i18n="art2_h4_1">المادة 74 — حالات انتهاء عقد العمل</h4>
-<p data-i18n="art2_p1">ينتهي عقد العمل في الحالات التالية: اتفاق الطرفين كتابياً على إنهائه، انتهاء المدة المحددة في العقد ما لم يُجدّد، إرادة أحد الطرفين في العقود غير محددة المدة وفق ضوابط المادة 75، بلوغ العامل سن التقاعد (60 سنة للرجال و55 للنساء) ما لم يتفقا على الاستمرار، القوة القاهرة، وإغلاق المنشأة نهائياً.</p>
-
-<h4 data-i18n="art2_h4_2">المادة 75 — الإشعار المسبق</h4>
-<p data-i18n="art2_p2">إذا كان العقد غير محدد المدة ورغب أحد الطرفين في إنهائه، فيجب توجيه إشعار خطّي مكتوب للطرف الآخر قبل الإنهاء بمدة لا تقل عن <strong>60 يوماً</strong> إذا كان أجر العامل يُدفع شهرياً، و<strong>30 يوماً</strong> في الحالات الأخرى. وإذا لم يُراعَ هذا الإشعار، يلتزم الطرف المخالف بدفع تعويض للطرف الآخر يعادل أجر العامل عن مدة الإشعار.</p>
-
-<h4 data-i18n="art2_h4_3">المادة 77 — التعويض عن الإنهاء غير المشروع</h4>
-<p data-i18n="art2_p3">إذا أُنهي العقد لسبب غير مشروع، يستحق الطرف المتضرر تعويضاً يعادل: <strong>أجر 15 يوماً</strong> عن كل سنة خدمة في العقود غير محددة المدة، أو <strong>أجر المدة الباقية</strong> من العقد إذا كان محدد المدة، على ألّا يقل التعويض في كلتا الحالتين عن أجر شهرين.</p>
-
-<h4 data-i18n="art2_h4_4">المادة 80 — فسخ العقد دون مكافأة</h4>
-<p data-i18n="art2_p4">يحق لصاحب العمل فسخ العقد دون مكافأة أو إشعار أو تعويض في حالات محددة حصراً، منها: اعتداء العامل على صاحب العمل أو زملائه، عدم أدائه التزاماته الجوهرية، ارتكابه فعلاً مخلاً بالشرف أو الأمانة، التغيب بدون سبب مشروع أكثر من <strong>15 يوماً متتالية</strong> أو <strong>30 يوماً متفرقة</strong> خلال السنة، أو إفشاء أسرار العمل.</p>
-
-<h4 data-i18n="art2_h4_5">المادة 81 — ترك العامل للعمل دون إشعار</h4>
-<p data-i18n="art2_p5">يحق للعامل ترك العمل دون إشعار مع احتفاظه بحقوقه النظامية كاملة في حالات منها: إخلال صاحب العمل بالتزاماته التعاقدية الجوهرية، ثبوت غش صاحب العمل وقت التعاقد فيما يخص شروط العمل، تكليف العامل بعمل مختلف جوهرياً عمّا اتُّفق عليه، وقوع اعتداء أو سلوك مخلّ بالآداب من صاحب العمل أو من يمثّله، أو وجود خطر جسيم يهدد سلامة العامل أو صحته.</p>
-
-<div class="article-ref">📌 <span data-i18n="art2_ref">المرجع: نظام العمل — المواد 74، 75، 77، 80، 81 — هيئة الخبراء بمجلس الوزراء.</span></div>
-</div>
-
-<!-- ARTICLE 3: مكافأة نهاية الخدمة -->
-<div class="article-detail" id="art3">
-<h3 data-i18n="art3_title">مكافأة نهاية الخدمة: كيف تُحسب ومتى تُستحق؟</h3>
-
-<p data-i18n="art3_intro">تُعد <strong>مكافأة نهاية الخدمة</strong> من أهم الحقوق المالية للعامل في المملكة العربية السعودية، وقد نظّمتها المادة <strong>84</strong> من نظام العمل بشكل واضح ومحدد.</p>
-
-<h4 data-i18n="art3_h4_1">طريقة حساب المكافأة (المادة 84)</h4>
-<p data-i18n="art3_p1">تُحسب مكافأة نهاية الخدمة على أساس آخر أجر تقاضاه العامل، وتشمل: بدل السكن وبدل المواصلات والعمولات والمكافآت المنتظمة. الصيغة هي: <strong>أجر نصف شهر</strong> عن كل سنة من السنوات الخمس الأولى، و<strong>أجر شهر كامل</strong> عن كل سنة من السنوات التي تلي ذلك. وتُحسب أجزاء السنة بنسبتها.</p>
-
-<h4 data-i18n="art3_h4_2">حالة الاستقالة (المادة 85)</h4>
-<p data-i18n="art3_p2">إذا استقال العامل فتكون مكافأته كالتالي: <strong>لا شيء</strong> إذا كانت خدمته أقل من سنتين، <strong>ثلث المكافأة</strong> إذا كانت خدمته بين سنتين وخمس سنوات، <strong>ثلثا المكافأة</strong> إذا كانت بين خمس وعشر سنوات، و<strong>المكافأة كاملة</strong> إذا تجاوزت خدمته عشر سنوات. وتستحق المرأة العاملة المكافأة كاملة إذا أنهت عقدها خلال ستة أشهر من تاريخ عقد زواجها أو ثلاثة أشهر من تاريخ الوضع.</p>
-
-<h4 data-i18n="art3_h4_3">مثال عملي</h4>
-<p data-i18n="art3_p3">عامل راتبه الأساسي 10,000 ريال (شاملاً البدلات) وخدمته 8 سنوات: السنوات الخمس الأولى = 5,000 × 5 = 25,000 ريال. السنوات الثلاث التالية = 10,000 × 3 = 30,000 ريال. الإجمالي = <strong>55,000 ريال</strong> في حالة إنهاء العقد من قبل صاحب العمل. في حالة الاستقالة (8 سنوات = ثلثا المكافأة): 55,000 × 2/3 = <strong>36,667 ريال</strong>.</p>
-
-<h4 data-i18n="art3_h4_4">موعد صرف المكافأة</h4>
-<p data-i18n="art3_p4">يلتزم صاحب العمل بدفع مكافأة نهاية الخدمة خلال <strong>أسبوع واحد</strong> من تاريخ انتهاء العلاقة العمالية. وإذا كان العامل هو من أنهى العقد، فيكون الصرف خلال أسبوعين. وأي تأخير يُعد مخالفة نظامية يحق للعامل بموجبها التقدم بشكوى لدى المحكمة العمالية.</p>
-
-<div class="article-ref">📌 <span data-i18n="art3_ref">المرجع: نظام العمل — المواد 84، 85، 86، 88 — وزارة الموارد البشرية والتنمية الاجتماعية.</span></div>
-</div>
-
-<!-- ARTICLE 4: ساعات العمل -->
-<div class="article-detail" id="art4">
-<h3 data-i18n="art4_title">ساعات العمل والعمل الإضافي في النظام السعودي</h3>
-
-<p data-i18n="art4_intro">نظّم <strong>الباب السابع</strong> من نظام العمل السعودي أحكام ساعات العمل وفترات الراحة بشكل يحمي صحة العامل ويضمن إنتاجية بيئة العمل.</p>
-
-<h4 data-i18n="art4_h4_1">الحد الأقصى لساعات العمل (المادة 98)</h4>
-<p data-i18n="art4_p1">لا يجوز تشغيل العامل أكثر من <strong>8 ساعات يومياً</strong> أو <strong>48 ساعة أسبوعياً</strong>. وتُخفّض ساعات العمل خلال شهر رمضان المبارك إلى <strong>6 ساعات يومياً</strong> أو <strong>36 ساعة أسبوعياً</strong> للمسلمين. ولا يُعتبر الوقت الذي يقضيه العامل في الانتقال بين مقر سكنه ومقر عمله من ضمن ساعات العمل الفعلية.</p>
-
-<h4 data-i18n="art4_h4_2">فترات الراحة (المادة 101)</h4>
-<p data-i18n="art4_p2">لا يعمل أي عامل أكثر من <strong>5 ساعات متواصلة</strong> دون فترة للراحة والصلاة والطعام لا تقل عن <strong>نصف ساعة</strong> في المرة الواحدة. ولا يبقى العامل في مقر العمل أكثر من <strong>12 ساعة</strong> في اليوم الواحد. ولا تدخل فترات الراحة ضمن ساعات العمل الفعلية.</p>
-
-<h4 data-i18n="art4_h4_3">أجر العمل الإضافي (المادة 107)</h4>
-<p data-i18n="art4_p3">يُعدّ عملاً إضافياً كل عمل يُؤدّى بعد ساعات العمل العادية أو في أيام الراحة والأعياد. ويستحق العامل أجراً إضافياً يعادل أجره الأساسي مضافاً إليه <strong>50%</strong> على الأقل. وبالتالي، إذا كان أجر الساعة العادية 50 ريالاً، فإن أجر ساعة العمل الإضافي لا يقل عن <strong>75 ريالاً</strong>. وإذا كان العمل يُدار بالتناوب (الشفتات)، يجوز تنظيم ساعات العمل بحيث يتم توزيعها بشكل متوازن على مدار الأسبوع.</p>
-
-<h4 data-i18n="art4_h4_4">يوم الراحة الأسبوعية (المادة 104)</h4>
-<p data-i18n="art4_p4">يوم الجمعة هو يوم الراحة الأسبوعي لجميع العاملين. ويجوز لصاحب العمل — بعد إبلاغ مكتب العمل المختص — استبداله بيوم آخر لبعض العاملين. ولا يجوز تعويض يوم الراحة الأسبوعي بمقابل مادي مع استمرار العامل في العمل، بل يجب منحه فعلياً.</p>
-
-<div class="article-ref">📌 <span data-i18n="art4_ref">المرجع: نظام العمل — الباب السابع (المواد 98–108) — وزارة الموارد البشرية والتنمية الاجتماعية.</span></div>
-</div>
-
-<!-- ARTICLE 5: الإجازات -->
-<div class="article-detail" id="art5">
-<h3 data-i18n="art5_title">الإجازات في نظام العمل السعودي: السنوية والمرضية والأمومة</h3>
-
-<p data-i18n="art5_intro">كفل <strong>نظام العمل السعودي</strong> للعاملين أنواعاً متعددة من الإجازات لحماية صحتهم النفسية والجسدية وتمكينهم من الوفاء بالتزاماتهم الشخصية والأسرية.</p>
-
-<h4 data-i18n="art5_h4_1">الإجازة السنوية (المادتان 109 و110)</h4>
-<p data-i18n="art5_p1">يستحق العامل إجازة سنوية بأجر كامل لا تقل عن <strong>21 يوماً</strong>، تُزاد إلى <strong>30 يوماً</strong> إذا أمضى العامل في خدمة صاحب العمل خمس سنوات متصلة. ويجب على صاحب العمل إبلاغ العامل بموعد إجازته قبل 30 يوماً على الأقل. ولا يجوز للعامل التنازل عن إجازته بمقابل مادي، ولصاحب العمل تأجيلها بشروط لا تتجاوز 90 يوماً.</p>
-
-<h4 data-i18n="art5_h4_2">الإجازة المرضية (المادة 117)</h4>
-<p data-i18n="art5_p2">للعامل الحق في إجازة مرضية مثبتة بتقرير طبي، وتُحسب كالتالي: أول <strong>30 يوماً</strong> بأجر كامل، ثم <strong>60 يوماً</strong> بثلاثة أرباع الأجر، ثم <strong>30 يوماً</strong> بدون أجر — أي إجمالي <strong>120 يوماً</strong> خلال السنة الواحدة سواء كانت متصلة أو متقطعة. ولا يجوز لصاحب العمل إنهاء خدمة العامل بسبب المرض قبل استنفاد إجازاته المرضية المنصوص عليها.</p>
-
-<h4 data-i18n="art5_h4_3">إجازة الوضع / الأمومة (المادة 151)</h4>
-<p data-i18n="art5_p3">تستحق المرأة العاملة إجازة وضع بأجر كامل مدتها <strong>10 أسابيع</strong> (70 يوماً)، توزّعها كيف تشاء بحد أقصى 4 أسابيع قبل التاريخ المرجّح للوضع. ولا يجوز تشغيلها خلال <strong>6 أسابيع</strong> بعد الوضع مطلقاً. كما يحق لها تمديد الإجازة شهراً إضافياً بدون أجر. وعند عودتها يحق لها فترة رضاعة لا تقل عن ساعة يومياً خلال 24 شهراً من تاريخ الوضع.</p>
-
-<h4 data-i18n="art5_h4_4">إجازات أخرى</h4>
-<p data-i18n="art5_p4">يكفل النظام أيضاً: إجازة <strong>زواج</strong> (5 أيام بأجر كامل)، إجازة <strong>وفاة زوج أو أحد الأصول أو الفروع</strong> (5 أيام)، إجازة <strong>ولادة مولود</strong> للأب (3 أيام)، إجازة <strong>عدة المرأة المتوفّى عنها زوجها</strong> (4 أشهر و10 أيام بأجر كامل)، إجازة أداء <strong>الحج</strong> (10-15 يوماً لمرة واحدة بشرط مرور سنتين على الأقل في خدمة صاحب العمل)، وإجازة <strong>الامتحانات</strong> الدراسية بأجر كامل.</p>
-
-<div class="article-ref">📌 <span data-i18n="art5_ref">المرجع: نظام العمل — الباب الثامن (المواد 109–123) والباب التاسع (المواد 149–161) — وزارة الموارد البشرية.</span></div>
-</div>
-
-<!-- ARTICLE 6: تعديلات 2024-2025 -->
-<div class="article-detail" id="art6">
-<h3 data-i18n="art6_title">أبرز تعديلات نظام العمل السعودي 2024–2025</h3>
-
-<p data-i18n="art6_intro">وافق مجلس الوزراء بتاريخ <strong>6 أغسطس 2024</strong> على حزمة تعديلات جوهرية على نظام العمل ولائحته التنفيذية، دخلت حيّز التنفيذ في <strong>19 فبراير 2025</strong>. شملت التعديلات <strong>38 مادة معدّلة</strong> وإلغاء 7 مواد وإضافة مادتين جديدتين، بهدف تحسين بيئة العمل ودعم توظيف السعوديين وحماية حقوق العاملين.</p>
-
-<h4 data-i18n="art6_h4_1">فترة التجربة الجديدة</h4>
-<p data-i18n="art6_p1">رُفعت فترة التجربة القصوى من 90 يوماً إلى <strong>180 يوماً</strong> (6 أشهر)، مع إمكانية الاتفاق كتابياً على تمديدها. ولا تُحسب ضمنها إجازات العيدين والإجازة المرضية. ويحق لأي طرف إنهاء العقد خلالها دون تعويض أو مكافأة.</p>
-
-<h4 data-i18n="art6_h4_2">تعريف الاستقالة رسمياً</h4>
-<p data-i18n="art6_p2">لأول مرة يُعرّف النظام <strong>الاستقالة</strong> بشكل صريح: هي إفادة كتابية يعبّر فيها العامل عن رغبته في إنهاء عقده محدد المدة دون إكراه. وعلى صاحب العمل الرد خلال <strong>30 يوماً</strong>، وإلا تُعدّ الاستقالة مقبولة حكماً. ويحق للعامل العدول عنها خلال أسبوع من تقديمها بموافقة صاحب العمل.</p>
-
-<h4 data-i18n="art6_h4_3">عقود العمل الإلكترونية</h4>
-<p data-i18n="art6_p3">أصبح عقد العمل الموثّق عبر <strong>منصة قوى</strong> التابعة لوزارة الموارد البشرية يُعدّ <strong>سنداً تنفيذياً</strong>، أي يمكن تنفيذه مباشرة عبر محاكم التنفيذ دون الحاجة للمرور بالمحاكم العمالية أولاً. وهذا يوفّر الوقت والجهد على الطرفين ويعزّز الامتثال التعاقدي.</p>
-
-<h4 data-i18n="art6_h4_4">تعزيز حقوق المرأة العاملة</h4>
-<p data-i18n="art6_p4">عزّزت التعديلات حماية المرأة العاملة من خلال: تأكيد حظر التمييز في الأجور بين الرجل والمرأة عن العمل ذي القيمة المتساوية، وتنظيم إجازة الوضع بمرونة أكبر، وإضافة نص صريح يمنع فصل المرأة أثناء فترة الحمل والإجازة وحتى 6 أشهر بعد الوضع إلا لأسباب مشروعة منصوص عليها في المادة 80.</p>
-
-<h4 data-i18n="art6_h4_5">بنود أخرى مهمة</h4>
-<p data-i18n="art6_p5">شملت التعديلات أيضاً: إلزام صاحب العمل بوضع <strong>سياسة تدريب وتأهيل</strong> مكتوبة للعاملين السعوديين، تنظيم أوضح لـ<strong>العمل المرن وعن بُعد</strong>، تعديل فترات الإشعار المسبق في العقود محددة المدة (60 يوماً لصاحب العمل و30 يوماً للعامل)، وإضافة <strong>إجازة 3 أيام للأب</strong> عند ولادة مولود جديد.</p>
-
-<div class="article-ref">📌 <span data-i18n="art6_ref">المرجع: قرار مجلس الوزراء بتاريخ 6 أغسطس 2024 — وزارة الموارد البشرية والتنمية الاجتماعية — منصة قوى (qiwa.sa).</span></div>
-</div>
-
-</div><!-- end blog-section -->
-
-<!-- CTA -->
-<div class="cta-section">
-<h2 data-i18n="cta_h2">هل لديك استفسار حول نظام العمل؟</h2>
-<p data-i18n="cta_p">فريقنا القانوني المتخصص في القضايا العمالية جاهز لمساعدتك — تواصل معنا الآن</p>
-<div class="cta-btns">
-<a class="btn-gold" data-i18n="cta_btn1" href="https://wa.me/966533532153" rel="noopener" target="_blank">
-<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path></svg>
-تواصل معنا
 </a>
-<a class="btn-outline" data-i18n="cta_btn2" href="index.html">العودة للرئيسية</a>
+
+<a href="article2.html" class="blog-card-link-wrapper">
+<div class="blog-card">
+<div class="blog-card-img">📋</div>
+<div class="blog-card-body">
+<h3 class="blog-card-title" data-i18n="blog2_title">العقود التجارية: أسسها وأحكامها</h3>
+<p class="blog-card-desc" data-i18n="blog2_desc">تعرّف على أركان العقد وشروط صحته وأهم البنود التي يجب تضمينها في العقود التجارية.</p>
+<span class="blog-card-link" data-i18n="blog_read">اقرأ المقال ←</span>
 </div>
 </div>
+</a>
+
+<a href="article3.html" class="blog-card-link-wrapper">
+<div class="blog-card">
+<div class="blog-card-img">🏛️</div>
+<div class="blog-card-body">
+<h3 class="blog-card-title" data-i18n="blog3_title">نظام العمل السعودي: حقوق وواجبات</h3>
+<p class="blog-card-desc" data-i18n="blog3_desc">كل ما تحتاج معرفته عن حقوق العامل وصاحب العمل وعقود العمل ونظام الإجازات والتعويضات.</p>
+<span class="blog-card-link" data-i18n="blog_read">اقرأ المقال ←</span>
+</div>
+</div>
+</a>
+
+<a href="article4.html" class="blog-card-link-wrapper">
+<div class="blog-card">
+<div class="blog-card-img">🏢</div>
+<div class="blog-card-body">
+<h3 class="blog-card-title" data-i18n="blog4_title">التوثيق والتصديق في المملكة</h3>
+<p class="blog-card-desc" data-i18n="blog4_desc">شرح مفصّل لإجراءات التوثيق عبر منصة ناجز وأنواع الوثائق والفرق بين التوثيق والتصديق.</p>
+<span class="blog-card-link" data-i18n="blog_read">اقرأ المقال ←</span>
+</div>
+</div>
+</a>
+
+<a href="article5.html" class="blog-card-link-wrapper">
+<div class="blog-card">
+<div class="blog-card-img">🤝</div>
+<div class="blog-card-body">
+<h3 class="blog-card-title" data-i18n="blog5_title">التحكيم التجاري: البديل الفعّال للتقاضي</h3>
+<p class="blog-card-desc" data-i18n="blog5_desc">تعرّف على نظام التحكيم السعودي وإجراءاته ومزاياه كوسيلة لحل النزاعات التجارية.</p>
+<span class="blog-card-link" data-i18n="blog_read">اقرأ المقال ←</span>
+</div>
+</div>
+</a>
+
+<a href="article6.html" class="blog-card-link-wrapper">
+<div class="blog-card">
+<div class="blog-card-img">💼</div>
+<div class="blog-card-body">
+<h3 class="blog-card-title" data-i18n="blog6_title">ريادة الأعمال والجوانب القانونية</h3>
+<p class="blog-card-desc" data-i18n="blog6_desc">دليل رواد الأعمال لاختيار الكيان القانوني المناسب وحماية الملكية الفكرية والامتثال التنظيمي.</p>
+<span class="blog-card-link" data-i18n="blog_read">اقرأ المقال ←</span>
+</div>
+</div>
+</a>
+
+</div>
+</section>
+
+<section style="background:linear-gradient(135deg,var(--navy-dark),var(--navy));padding:60px 5%;text-align:center;">
+<h2 data-i18n="blog_cta_h2" style="font-size:clamp(1.3rem,3vw,1.8rem);font-weight:900;color:white;margin-bottom:14px;">هل تحتاج استشارة قانونية؟</h2>
+<p data-i18n="blog_cta_p" style="color:rgba(255,255,255,.7);font-size:1rem;max-width:550px;margin:0 auto 24px;">فريقنا القانوني جاهز لمساعدتك في جميع الاستفسارات</p>
+<a data-i18n="nav_cta" href="https://wa.me/966533532153" style="display:inline-block;background:var(--gold);color:white;padding:12px 32px;border-radius:25px;font-weight:800;font-size:.95rem;transition:all .25s;" target="_blank" rel="noopener">احجز استشارة</a>
+</section>
 
 <footer>
 <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px 22px;margin-bottom:18px;">
@@ -467,151 +678,93 @@ footer a { color: var(--gold-light); }
 
 <script>
 const pageTranslations = {
+  breadcrumb_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
   breadcrumb_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  breadcrumb_blog: {0: 'المدونة القانونية', 1: 'Legal Blog', 2: '法律博客'},
-  hero_h1: {0: 'نظام العمل <em>السعودي</em>', 1: 'Saudi <em>Labor Law</em>', 2: '沙特<em>劳动法</em>'},
-  hero_p: {0: 'مقالات قانونية متخصصة ومكثّفة حول نظام العمل السعودي — نشرح لك حقوقك والتزاماتك وفقاً للأنظمة واللوائح المعتمدة من وزارة الموارد البشرية والتنمية الاجتماعية.', 1: 'Specialized and in-depth legal articles on Saudi Labor Law — explaining your rights and obligations according to the regulations approved by the Ministry of Human Resources and Social Development.', 2: '关于沙特劳动法的专业深入法律文章——根据人力资源和社会发展部批准的法规，解释您的权利和义务。'},
-  blog_tag: {0: 'نظام العمل السعودي', 1: 'Saudi Labor Law', 2: '沙特劳动法'},
-  section_h2: {0: 'دليلك القانوني الشامل', 1: 'Your Comprehensive Legal Guide', 2: '您的综合法律指南'},
-  blog_date: {0: 'مارس 2026', 1: 'March 2026', 2: '2026年3月'},
+  hero_h1: {0: 'المدونة القانونية', 1: 'Legal Blog', 2: '法律博客'},
+  hero_p: {0: 'مقالات قانونية متخصصة تغطي أهم المواضيع في القانون السعودي لمساعدتك في فهم حقوقك والتزاماتك القانونية.', 1: 'Specialized legal articles covering the most important topics in Saudi law to help you understand your rights and legal obligations.', 2: '专业法律文章，涵盖沙特法律中最重要的主题，帮助您了解自己的权利和法律义务。'},
+  blog_section_tag: {0: 'آخر المقالات', 1: 'Latest Articles', 2: '最新文章'},
+  blog_section_h2: {0: 'مقالاتنا القانونية', 1: 'Our Legal Articles', 2: '我们的法律文章'},
+
+  blog1_title: {0: 'قانون الشركات في المملكة العربية السعودية', 1: 'Corporate Law in Saudi Arabia', 2: '沙特阿拉伯公司法'},
+  blog1_desc: {0: 'دليل شامل لنظام الشركات السعودي الجديد وأنواع الكيانات التجارية وإجراءات التأسيس والحوكمة.', 1: 'A comprehensive guide to the new Saudi Companies Law, types of business entities, incorporation procedures, and governance.', 2: '沙特新公司法、商业实体类型、注册程序和治理的综合指南。'},
+
+  blog2_title: {0: 'العقود التجارية: أسسها وأحكامها', 1: 'Commercial Contracts: Foundations & Provisions', 2: '商业合同：基础与规定'},
+  blog2_desc: {0: 'تعرّف على أركان العقد وشروط صحته وأهم البنود التي يجب تضمينها في العقود التجارية.', 1: 'Learn about contract elements, validity conditions, and the most important clauses to include in commercial contracts.', 2: '了解合同要素、有效性条件以及商业合同中应包含的最重要条款。'},
+
+  blog3_title: {0: 'نظام العمل السعودي: حقوق وواجبات', 1: 'Saudi Labor Law: Rights & Obligations', 2: '沙特劳动法：权利与义务'},
+  blog3_desc: {0: 'كل ما تحتاج معرفته عن حقوق العامل وصاحب العمل وعقود العمل ونظام الإجازات والتعويضات.', 1: 'Everything you need to know about employee and employer rights, employment contracts, leave system, and compensation.', 2: '关于员工和雇主权利、劳动合同、休假制度和补偿的一切。'},
+
+  blog4_title: {0: 'التوثيق والتصديق في المملكة', 1: 'Notarization & Authentication in the Kingdom', 2: '王国的公证与认证'},
+  blog4_desc: {0: 'شرح مفصّل لإجراءات التوثيق عبر منصة ناجز وأنواع الوثائق والفرق بين التوثيق والتصديق.', 1: 'Detailed explanation of notarization procedures via the Najiz platform, document types, and the difference between notarization and authentication.', 2: '通过Najiz平台公证程序、文件类型以及公证与认证之间区别的详细说明。'},
+
+  blog5_title: {0: 'التحكيم التجاري: البديل الفعّال للتقاضي', 1: 'Commercial Arbitration: An Effective Alternative to Litigation', 2: '商业仲裁：诉讼的有效替代'},
+  blog5_desc: {0: 'تعرّف على نظام التحكيم السعودي وإجراءاته ومزاياه كوسيلة لحل النزاعات التجارية.', 1: 'Learn about the Saudi arbitration system, its procedures, and advantages as a means of resolving commercial disputes.', 2: '了解沙特仲裁制度、其程序和作为解决商业纠纷手段的优势。'},
+
+  blog6_title: {0: 'ريادة الأعمال والجوانب القانونية', 1: 'Entrepreneurship & Legal Aspects', 2: '创业与法律方面'},
+  blog6_desc: {0: 'دليل رواد الأعمال لاختيار الكيان القانوني المناسب وحماية الملكية الفكرية والامتثال التنظيمي.', 1: "Entrepreneur's guide to choosing the right legal entity, intellectual property protection, and regulatory compliance.", 2: '企业家选择合适法律实体、知识产权保护和合规的指南。'},
+
   blog_read: {0: 'اقرأ المقال ←', 1: 'Read Article →', 2: '阅读文章 →'},
 
-  cat_1: {0: 'حقوق العامل', 1: 'Employee Rights', 2: '员工权利'},
-  cat_2: {0: 'إنهاء العقد', 1: 'Contract Termination', 2: '合同终止'},
-  cat_3: {0: 'مكافأة نهاية الخدمة', 1: 'End of Service', 2: '服务终止金'},
-  cat_4: {0: 'ساعات العمل', 1: 'Working Hours', 2: '工作时间'},
-  cat_5: {0: 'الإجازات', 1: 'Leaves', 2: '休假'},
-  cat_6: {0: 'التعديلات الجديدة', 1: 'New Amendments', 2: '新修正案'},
-
-  card_h3_1: {0: 'حقوق العامل وصاحب العمل في نظام العمل السعودي', 1: 'Employee and Employer Rights under Saudi Labor Law', 2: '沙特劳动法下员工和雇主的权利'},
-  card_p_1: {0: 'شرح شامل لأهم الحقوق والالتزامات المتبادلة بين العامل وصاحب العمل وفقاً لنظام العمل الصادر بالمرسوم الملكي رقم (م/51) وتعديلاته.', 1: 'A comprehensive explanation of the key mutual rights and obligations between employees and employers under the Labor Law issued by Royal Decree No. (M/51) and its amendments.', 2: '根据皇家法令第(M/51)号及其修正案发布的劳动法，全面解释员工和雇主之间的主要相互权利和义务。'},
-
-  card_h3_2: {0: 'إنهاء عقد العمل: المواد 74 و75 و77 و80 و81', 1: 'Termination of Employment: Articles 74, 75, 77, 80 & 81', 2: '劳动合同终止：第74、75、77、80和81条'},
-  card_p_2: {0: 'متى يحق لصاحب العمل فصل العامل؟ ومتى يحق للعامل ترك العمل دون إشعار؟ شرح تفصيلي لأهم مواد إنهاء العقد.', 1: 'When can an employer dismiss an employee? When can an employee leave without notice? A detailed explanation of the key termination articles.', 2: '雇主何时可以解雇员工？员工何时可以不经通知离职？关键终止条款的详细解释。'},
-
-  card_h3_3: {0: 'مكافأة نهاية الخدمة: كيف تُحسب ومتى تُستحق؟', 1: 'End of Service Benefits: How Are They Calculated?', 2: '服务终止金：如何计算？'},
-  card_p_3: {0: 'دليل عملي لحساب مكافأة نهاية الخدمة وفقاً للمادة 84 من نظام العمل، مع أمثلة رقمية وحالات الاستحقاق الكامل والجزئي.', 1: 'A practical guide to calculating end-of-service benefits under Article 84, with numerical examples and full/partial entitlement cases.', 2: '根据第84条计算服务终止金的实用指南，包含数字示例和全额/部分权利案例。'},
-
-  card_h3_4: {0: 'ساعات العمل والعمل الإضافي في النظام السعودي', 1: 'Working Hours and Overtime in Saudi Law', 2: '沙特法律中的工作时间和加班'},
-  card_p_4: {0: 'ما الحد الأقصى لساعات العمل؟ كيف يُحسب أجر الساعات الإضافية؟ وما أحكام العمل في رمضان؟ إجابات قانونية دقيقة.', 1: 'What is the maximum working hours? How is overtime pay calculated? What are the rules during Ramadan? Precise legal answers.', 2: '最长工作时间是多少？加班费如何计算？斋月期间有什么规定？精确的法律解答。'},
-
-  card_h3_5: {0: 'الإجازات في نظام العمل السعودي: السنوية والمرضية والأمومة', 1: 'Leaves in Saudi Labor Law: Annual, Sick & Maternity', 2: '沙特劳动法中的休假：年假、病假和产假'},
-  card_p_5: {0: 'جميع أنواع الإجازات المستحقة للعامل بموجب نظام العمل — مددها وشروطها وأجورها ومتى يحق لصاحب العمل رفضها.', 1: 'All types of leaves entitled to employees under the Labor Law — duration, conditions, pay, and when employers can refuse them.', 2: '劳动法规定的员工所有休假类型——期限、条件、薪资以及雇主何时可以拒绝。'},
-
-  card_h3_6: {0: 'أبرز تعديلات نظام العمل السعودي 2024–2025', 1: 'Key Saudi Labor Law Amendments 2024–2025', 2: '2024-2025年沙特劳动法主要修正案'},
-  card_p_6: {0: 'ملخص شامل للتعديلات التي أُقرّت في أغسطس 2024 ودخلت حيّز التنفيذ في فبراير 2025 — شملت 38 مادة معدّلة و7 مواد ملغاة.', 1: 'Comprehensive summary of amendments approved in August 2024 and effective February 2025 — covering 38 amended articles and 7 repealed.', 2: '2024年8月批准并于2025年2月生效的修正案全面摘要——涵盖38条修订和7条废除。'},
-
-  // Article translations with full content including body text
-  art1_title: {0: 'حقوق العامل وصاحب العمل في نظام العمل السعودي', 1: 'Employee and Employer Rights under Saudi Labor Law', 2: '沙特劳动法下员工和雇主的权利'},
-  art1_intro: {0: 'يُعد <strong>نظام العمل السعودي</strong> الصادر بالمرسوم الملكي رقم (م/51) وتاريخ 23/8/1426هـ هو المرجع الأساسي الذي ينظّم العلاقة التعاقدية بين العامل وصاحب العمل في القطاع الخاص بالمملكة العربية السعودية. يهدف النظام إلى حماية حقوق الطرفين وتحقيق التوازن بينهما في بيئة عمل عادلة ومنتجة.', 1: 'The <strong>Saudi Labor Law</strong> issued by Royal Decree No. (M/51) dated 23/8/1426H is the primary reference regulating the contractual relationship between employees and employers in the private sector of the Kingdom of Saudi Arabia. The law aims to protect the rights of both parties and achieve balance between them in a fair and productive work environment.', 2: '<strong>沙特劳动法</strong>由皇家法令第(M/51)号于1426年8月23日发布，是规范沙特阿拉伯王国私营部门员工与雇主之间合同关系的主要参考。该法律旨在保护双方的权利，并在公平和高效的工作环境中实现平衡。'},
-  art1_h4_1: {0: 'حقوق العامل الأساسية', 1: 'Basic Employee Rights', 2: '员工基本权利'},
-  art1_p1: {0: 'يكفل نظام العمل للعامل مجموعة من الحقوق الجوهرية، أبرزها: الحصول على أجر عادل يُصرف في موعده المحدد دون تأخير (المادة 90)، وتوفير بيئة عمل آمنة وصحية (المادة 121)، والحماية من الفصل التعسفي مع استحقاق التعويض في حالة الإنهاء غير المشروع (المادة 77). كما يحق للعامل الحصول على إجازة سنوية مدفوعة الأجر لا تقل عن 21 يوماً (المادة 109)، وإجازة مرضية (المادة 117)، ومكافأة نهاية خدمة عند انتهاء العلاقة التعاقدية (المادة 84).', 1: 'Saudi Labor Law guarantees employees a set of fundamental rights, most notably: receiving fair compensation paid on time without delay (<strong>Article 90</strong>), providing a safe and healthy work environment (<strong>Article 121</strong>), and protection against arbitrary dismissal with compensation entitlement in case of wrongful termination (<strong>Article 77</strong>). Employees also have the right to an annual paid leave of at least 21 days (<strong>Article 109</strong>), sick leave (<strong>Article 117</strong>), and end-of-service benefits upon termination of the employment relationship (<strong>Article 84</strong>).', 2: '沙特劳动法保障员工一系列基本权利，其中最重要的是：获得公平薪酬并按时支付且不延迟（<strong>第90条</strong>）、提供安全和健康的工作环境（<strong>第121条</strong>），以及防止武断解雇并在不当终止时获得赔偿（<strong>第77条</strong>）。员工还有权获得不少于21天的年度带薪假期（<strong>第109条</strong>）、病假（<strong>第117条</strong>）以及劳动关系终止时的服务终止金（<strong>第84条</strong>）。'},
-  art1_h4_2: {0: 'التزامات صاحب العمل', 1: 'Employer Obligations', 2: '雇主义务'},
-  art1_p2: {0: 'يلتزم صاحب العمل بتحرير عقد عمل مكتوب من نسختين يحتفظ كل طرف بنسخة منه (المادة 51)، وتوفير السكن المناسب أو بدل سكن نقدي، وتوفير وسيلة مواصلات أو بدل نقل. كما يُمنع صاحب العمل من تشغيل العامل سخرةً أو حجز أجره أو أي جزء منه بغير سند قضائي (المادة 61). ويجب عليه الاشتراك في التأمينات الاجتماعية لجميع العاملين لديه وفقاً لنظام التأمينات الاجتماعية.', 1: 'Employers are required to issue a written employment contract in two copies, with each party retaining a copy (<strong>Article 51</strong>), and to provide suitable housing or housing allowance, and transportation or transportation allowance. Employers are prohibited from forcing the employee to work under duress or withholding wages or any part thereof without judicial authorization (<strong>Article 61</strong>). They must also enroll all employees in social insurance according to the social insurance system.', 2: '雇主必须颁发两份书面劳动合同副本，由双方各持一份（<strong>第51条</strong>），并提供合适的住房或住房津贴，以及交通工具或交通津贴。雇主禁止强迫员工在胁迫下工作或未经司法授权扣留工资或任何部分（<strong>第61条</strong>）。他们还必须根据社会保险制度为所有员工参加社会保险。'},
-  art1_h4_3: {0: 'فترة التجربة', 1: 'Probation Period', 2: '试用期'},
-  art1_p3: {0: 'يجوز إخضاع العامل لفترة تجربة يُنص عليها صراحة في عقد العمل، بحيث لا تزيد مدتها عن <strong>180 يوماً</strong> وفقاً للتعديلات الأخيرة (المادة 53 المعدّلة). ولا تُحسب فيها إجازة عيدَي الفطر والأضحى والإجازة المرضية. ويحق لأي من الطرفين إنهاء العقد خلال فترة التجربة دون تعويض أو مكافأة نهاية خدمة.', 1: 'An employee may be placed on a probation period explicitly mentioned in the employment contract, with a maximum duration of <strong>180 days</strong> according to recent amendments (<strong>Article 53 as amended</strong>). This period does not include Eid holidays or sick leave. Either party has the right to terminate the contract during the probation period without compensation or end-of-service benefits.', 2: '员工可能被置于劳动合同中明确提及的试用期内，最长期限为<strong>180天</strong>，根据最近的修正案（<strong>第53条修正后</strong>）。此期间不包括开斋节和宰牲节假期或病假。任何一方都有权在试用期内终止合同，无需赔偿或服务终止金。'},
-  art1_ref: {0: 'المرجع: نظام العمل السعودي — المرسوم الملكي رقم (م/51) وتعديلاته — وزارة الموارد البشرية والتنمية الاجتماعية.', 1: 'Reference: Saudi Labor Law — Royal Decree No. (M/51) and its amendments — Ministry of Human Resources and Social Development.', 2: '参考资料：沙特劳动法——皇家法令第(M/51)号及其修正案——人力资源和社会发展部。'},
-
-  art2_title: {0: 'إنهاء عقد العمل: المواد 74 و75 و77 و80 و81', 1: 'Termination of Employment: Articles 74, 75, 77, 80 & 81', 2: '劳动合同终止：第74、75、77、80和81条'},
-  art2_intro: {0: 'إنهاء عقد العمل من أكثر المواضيع حساسية في العلاقة العمالية، ولهذا نظّم المشرّع السعودي أحكامه بدقة عبر عدة مواد في <strong>نظام العمل</strong> لضمان حقوق الطرفين ومنع التعسف.', 1: 'Termination of employment is one of the most sensitive topics in labor relations, and for this reason, the Saudi legislator regulated its provisions precisely through several articles in the <strong>Labor Law</strong> to ensure the rights of both parties and prevent abuse.', 2: '劳动合同终止是劳动关系中最敏感的话题之一，因此沙特立法者在<strong>劳动法</strong>中通过若干条款精确规定其条款，以确保双方权利并防止滥用。'},
-  art2_h4_1: {0: 'المادة 74 — حالات انتهاء عقد العمل', 1: 'Article 74 — Cases of Termination of Employment', 2: '第74条——劳动合同终止的情况'},
-  art2_p1: {0: 'ينتهي عقد العمل في الحالات التالية: اتفاق الطرفين كتابياً على إنهائه، انتهاء المدة المحددة في العقد ما لم يُجدّد، إرادة أحد الطرفين في العقود غير محددة المدة وفق ضوابط المادة 75، بلوغ العامل سن التقاعد (60 سنة للرجال و55 للنساء) ما لم يتفقا على الاستمرار، القوة القاهرة، وإغلاق المنشأة نهائياً.', 1: 'Employment contracts terminate in the following cases: written agreement between both parties to terminate, expiration of the period specified in the contract unless renewed, the will of one party in indefinite-term contracts according to <strong>Article 75</strong> procedures, the employee reaching retirement age (60 years for men and 55 for women) unless they agree to continue, force majeure, and permanent closure of the enterprise.', 2: '劳动合同在以下情况下终止：双方书面同意终止、合同规定期限的届满且未续签、根据<strong>第75条</strong>规定的不定期限合同中一方的意愿、员工达到退休年龄（男性60岁，女性55岁）除非他们同意继续、不可抗力以及企业永久关闭。'},
-  art2_h4_2: {0: 'المادة 75 — الإشعار المسبق', 1: 'Article 75 — Notice Period', 2: '第75条——通知期'},
-  art2_p2: {0: 'إذا كان العقد غير محدد المدة ورغب أحد الطرفين في إنهائه، فيجب توجيه إشعار خطّي مكتوب للطرف الآخر قبل الإنهاء بمدة لا تقل عن <strong>60 يوماً</strong> إذا كان أجر العامل يُدفع شهرياً، و<strong>30 يوماً</strong> في الحالات الأخرى. وإذا لم يُراعَ هذا الإشعار، يلتزم الطرف المخالف بدفع تعويض للطرف الآخر يعادل أجر العامل عن مدة الإشعار.', 1: 'If the contract is indefinite-term and one party wishes to terminate it, written notice must be given to the other party at least <strong>60 days</strong> in advance if the employee is paid monthly, or <strong>30 days</strong> in other cases. If this notice requirement is not met, the breaching party must pay compensation to the other party equal to the employee\'s wages for the notice period.', 2: '如果合同为不定期限且一方希望终止，必须事先通知另一方至少<strong>60天</strong>（如果员工按月支付），或<strong>30天</strong>（在其他情况下）。如果未履行此通知要求，违约方必须支付补偿金，相当于员工在通知期内的工资。'},
-  art2_h4_3: {0: 'المادة 77 — التعويض عن الإنهاء غير المشروع', 1: 'Article 77 — Compensation for Unlawful Termination', 2: '第77条——不当终止的赔偿'},
-  art2_p3: {0: 'إذا أُنهي العقد لسبب غير مشروع، يستحق الطرف المتضرر تعويضاً يعادل: <strong>أجر 15 يوماً</strong> عن كل سنة خدمة في العقود غير محددة المدة، أو <strong>أجر المدة الباقية</strong> من العقد إذا كان محدد المدة، على ألّا يقل التعويض في كلتا الحالتين عن أجر شهرين.', 1: 'If a contract is terminated for an unlawful reason, the injured party is entitled to compensation equal to: <strong>15 days\' pay</strong> for each year of service in indefinite-term contracts, or <strong>pay for the remaining period</strong> of the contract if it is fixed-term, provided that the compensation in both cases shall not be less than two months\' pay.', 2: '如果因非法原因终止合同，受损方有权获得赔偿，相当于：在不定期限合同中每年服务<strong>15天的工资</strong>，或者如果是定期合同，则为<strong>合同剩余期限的工资</strong>，但在两种情况下赔偿均不少于两个月的工资。'},
-  art2_h4_4: {0: 'المادة 80 — فسخ العقد دون مكافأة', 1: 'Article 80 — Termination Without Compensation', 2: '第80条——无补偿终止'},
-  art2_p4: {0: 'يحق لصاحب العمل فسخ العقد دون مكافأة أو إشعار أو تعويض في حالات محددة حصراً، منها: اعتداء العامل على صاحب العمل أو زملائه، عدم أدائه التزاماته الجوهرية، ارتكابه فعلاً مخلاً بالشرف أو الأمانة، التغيب بدون سبب مشروع أكثر من <strong>15 يوماً متتالية</strong> أو <strong>30 يوماً متفرقة</strong> خلال السنة، أو إفشاء أسرار العمل.', 1: 'An employer has the right to terminate a contract without compensation, notice, or indemnity in strictly defined cases, including: the employee\'s assault on the employer or colleagues, failure to perform substantial obligations, commission of an act contrary to honor or trust, absence without legitimate reason for more than <strong>15 consecutive days</strong> or <strong>30 scattered days</strong> during the year, or disclosure of work secrets.', 2: '雇主有权在严格规定的情况下无补偿、无通知或无赔偿地终止合同，包括：员工对雇主或同事的暴力行为、未能履行实质性义务、犯有违反诚实或信任的行为、在合理理由下缺勤超过<strong>连续15天</strong>或在一年内<strong>分散的30天</strong>，或泄露工作机密。'},
-  art2_h4_5: {0: 'المادة 81 — ترك العامل للعمل دون إشعار', 1: 'Article 81 — Employee Leaving Without Notice', 2: '第81条——员工不经通知离职'},
-  art2_p5: {0: 'يحق للعامل ترك العمل دون إشعار مع احتفاظه بحقوقه النظامية كاملة في حالات منها: إخلال صاحب العمل بالتزاماته التعاقدية الجوهرية، ثبوت غش صاحب العمل وقت التعاقد فيما يخص شروط العمل، تكليف العامل بعمل مختلف جوهرياً عمّا اتُّفق عليه، وقوع اعتداء أو سلوك مخلّ بالآداب من صاحب العمل أو من يمثّله، أو وجود خطر جسيم يهدد سلامة العامل أو صحته.', 1: 'An employee has the right to leave work without notice while retaining all statutory rights in cases including: the employer\'s breach of substantial contractual obligations, proof of employer\'s fraud at the time of contracting regarding work conditions, assigning the employee work substantially different from what was agreed upon, assault or misconduct by the employer or his representative, or the existence of serious danger threatening the employee\'s safety or health.', 2: '员工有权在不经通知的情况下离职，同时保留所有法定权利，包括：雇主违反实质性合同义务、在合同时期间证明雇主关于工作条件的欺诈、分配与协议内容本质上不同的工作给员工、雇主或其代表的暴力或不当行为，或存在威胁员工安全或健康的严重危险。'},
-  art2_ref: {0: 'المرجع: نظام العمل — المواد 74، 75، 77، 80، 81 — هيئة الخبراء بمجلس الوزراء.', 1: 'Reference: Labor Law — Articles 74, 75, 77, 80, 81 — Council of Ministers\' Secretariat General.', 2: '参考资料：劳动法——第74、75、77、80、81条——部长会议秘书处。'},
-
-  art3_title: {0: 'مكافأة نهاية الخدمة: كيف تُحسب ومتى تُستحق؟', 1: 'End of Service Benefits: How Are They Calculated?', 2: '服务终止金：如何计算？'},
-  art3_intro: {0: 'تُعد <strong>مكافأة نهاية الخدمة</strong> من أهم الحقوق المالية للعامل في المملكة العربية السعودية، وقد نظّمتها المادة <strong>84</strong> من نظام العمل بشكل واضح ومحدد.', 1: '<strong>End-of-service benefits</strong> are among the most important financial rights of employees in the Kingdom of Saudi Arabia, and they are clearly and precisely regulated by <strong>Article 84</strong> of the Labor Law.', 2: '<strong>服务终止金</strong>是沙特阿拉伯王国员工最重要的财务权利之一，由劳动法<strong>第84条</strong>明确和精确规定。'},
-  art3_h4_1: {0: 'طريقة حساب المكافأة (المادة 84)', 1: 'Calculation Method (Article 84)', 2: '计算方法（第84条）'},
-  art3_p1: {0: 'تُحسب مكافأة نهاية الخدمة على أساس آخر أجر تقاضاه العامل، وتشمل: بدل السكن وبدل المواصلات والعمولات والمكافآت المنتظمة. الصيغة هي: <strong>أجر نصف شهر</strong> عن كل سنة من السنوات الخمس الأولى، و<strong>أجر شهر كامل</strong> عن كل سنة من السنوات التي تلي ذلك. وتُحسب أجزاء السنة بنسبتها.', 1: 'End-of-service benefits are calculated based on the employee\'s last salary, which includes: housing allowance, transportation allowance, commissions, and regular bonuses. The formula is: <strong>half a month\'s pay</strong> for each of the first five years, and <strong>a full month\'s pay</strong> for each subsequent year. Partial years are calculated proportionally.', 2: '服务终止金以员工的最后工资为基础计算，包括：住房津贴、交通津贴、佣金和定期奖金。公式为：前五年每年<strong>半个月的工资</strong>，随后的每一年<strong>一个月的工资</strong>。部分年份按比例计算。'},
-  art3_h4_2: {0: 'حالة الاستقالة (المادة 85)', 1: 'Case of Resignation (Article 85)', 2: '辞职情况（第85条）'},
-  art3_p2: {0: 'إذا استقال العامل فتكون مكافأته كالتالي: <strong>لا شيء</strong> إذا كانت خدمته أقل من سنتين، <strong>ثلث المكافأة</strong> إذا كانت خدمته بين سنتين وخمس سنوات، <strong>ثلثا المكافأة</strong> إذا كانت بين خمس وعشر سنوات، و<strong>المكافأة كاملة</strong> إذا تجاوزت خدمته عشر سنوات. وتستحق المرأة العاملة المكافأة كاملة إذا أنهت عقدها خلال ستة أشهر من تاريخ عقد زواجها أو ثلاثة أشهر من تاريخ الوضع.', 1: 'If an employee resigns, the benefits are as follows: <strong>nothing</strong> if service is less than two years, <strong>one-third of benefits</strong> if service is between two and five years, <strong>two-thirds of benefits</strong> if service is between five and ten years, and <strong>full benefits</strong> if service exceeds ten years. A working woman is entitled to full benefits if she terminates her contract within six months of her marriage date or three months from the date of childbirth.', 2: '如果员工辞职，福利如下：如果服务少于两年为<strong>无</strong>，如果服务在2到5年之间为<strong>三分之一</strong>，如果服务在5到10年之间为<strong>三分之二</strong>，如果服务超过10年为<strong>全额</strong>。如果女员工在婚日后六个月内或分娩后三个月内终止合同，则有权获得全额福利。'},
-  art3_h4_3: {0: 'مثال عملي', 1: 'Practical Example', 2: '实际例子'},
-  art3_p3: {0: 'عامل راتبه الأساسي 10,000 ريال (شاملاً البدلات) وخدمته 8 سنوات: السنوات الخمس الأولى = 5,000 × 5 = 25,000 ريال. السنوات الثلاث التالية = 10,000 × 3 = 30,000 ريال. الإجمالي = <strong>55,000 ريال</strong> في حالة إنهاء العقد من قبل صاحب العمل. في حالة الاستقالة (8 سنوات = ثلثا المكافأة): 55,000 × 2/3 = <strong>36,667 ريال</strong>.', 1: 'An employee with a basic salary of 10,000 riyals (including allowances) and 8 years of service: First five years = 5,000 × 5 = 25,000 riyals. Next three years = 10,000 × 3 = 30,000 riyals. Total = <strong>55,000 riyals</strong> in case of employer termination. In case of resignation (8 years = two-thirds benefit): 55,000 × 2/3 = <strong>36,667 riyals</strong>.', 2: '一名员工基本工资为10,000里亚尔（包括津贴），服务8年：前五年 = 5,000 × 5 = 25,000里亚尔。之后三年 = 10,000 × 3 = 30,000里亚尔。总计 = <strong>55,000里亚尔</strong>如果是雇主终止。如果辞职（8年 = 三分之二福利）：55,000 × 2/3 = <strong>36,667里亚尔</strong>。'},
-  art3_h4_4: {0: 'موعد صرف المكافأة', 1: 'Timing of Payment', 2: '支付时间'},
-  art3_p4: {0: 'يلتزم صاحب العمل بدفع مكافأة نهاية الخدمة خلال <strong>أسبوع واحد</strong> من تاريخ انتهاء العلاقة العمالية. وإذا كان العامل هو من أنهى العقد، فيكون الصرف خلال أسبوعين. وأي تأخير يُعد مخالفة نظامية يحق للعامل بموجبها التقدم بشكوى لدى المحكمة العمالية.', 1: 'The employer is obligated to pay end-of-service benefits within <strong>one week</strong> from the date of termination of the employment relationship. If the employee terminates the contract, payment shall be made within two weeks. Any delay constitutes a regulatory violation for which the employee has the right to file a complaint with the Labor Court.', 2: '雇主必须在劳动关系终止之日起<strong>一周</strong>内支付服务终止金。如果员工终止合同，支付应在两周内进行。任何延迟都构成规章违反，员工有权向劳动法院提出申诉。'},
-  art3_ref: {0: 'المرجع: نظام العمل — المواد 84، 85، 86، 88 — وزارة الموارد البشرية والتنمية الاجتماعية.', 1: 'Reference: Labor Law — Articles 84, 85, 86, 88 — Ministry of Human Resources and Social Development.', 2: '参考资料：劳动法——第84、85、86、88条——人力资源和社会发展部。'},
-
-  art4_title: {0: 'ساعات العمل والعمل الإضافي في النظام السعودي', 1: 'Working Hours and Overtime in Saudi Law', 2: '沙特法律中的工作时间和加班'},
-  art4_intro: {0: 'نظّم <strong>الباب السابع</strong> من نظام العمل السعودي أحكام ساعات العمل وفترات الراحة بشكل يحمي صحة العامل ويضمن إنتاجية بيئة العمل.', 1: '<strong>Chapter Seven</strong> of the Saudi Labor Law regulates working hours and rest periods in a manner that protects employee health and ensures productive work environment.', 2: '沙特劳动法<strong>第七章</strong>规定工作时间和休息时间，以保护员工健康并确保工作环境的生产率。'},
-  art4_h4_1: {0: 'الحد الأقصى لساعات العمل (المادة 98)', 1: 'Maximum Working Hours (Article 98)', 2: '最长工作时间（第98条）'},
-  art4_p1: {0: 'لا يجوز تشغيل العامل أكثر من <strong>8 ساعات يومياً</strong> أو <strong>48 ساعة أسبوعياً</strong>. وتُخفّض ساعات العمل خلال شهر رمضان المبارك إلى <strong>6 ساعات يومياً</strong> أو <strong>36 ساعة أسبوعياً</strong> للمسلمين. ولا يُعتبر الوقت الذي يقضيه العامل في الانتقال بين مقر سكنه ومقر عمله من ضمن ساعات العمل الفعلية.', 1: 'Employees shall not be worked more than <strong>8 hours per day</strong> or <strong>48 hours per week</strong>. Working hours are reduced during Ramadan to <strong>6 hours per day</strong> or <strong>36 hours per week</strong> for Muslim employees. Time spent by employees commuting between their residence and workplace is not considered part of actual working hours.', 2: '员工每天工作不超过<strong>8小时</strong>或每周<strong>48小时</strong>。在斋月期间，穆斯林员工的工作时间减少到<strong>每天6小时</strong>或<strong>每周36小时</strong>。员工在住所和工作地点之间往返花费的时间不属于实际工作时间。'},
-  art4_h4_2: {0: 'فترات الراحة (المادة 101)', 1: 'Rest Periods (Article 101)', 2: '休息时间（第101条）'},
-  art4_p2: {0: 'لا يعمل أي عامل أكثر من <strong>5 ساعات متواصلة</strong> دون فترة للراحة والصلاة والطعام لا تقل عن <strong>نصف ساعة</strong> في المرة الواحدة. ولا يبقى العامل في مقر العمل أكثر من <strong>12 ساعة</strong> في اليوم الواحد. ولا تدخل فترات الراحة ضمن ساعات العمل الفعلية.', 1: 'No employee shall work more than <strong>5 consecutive hours</strong> without a rest period for prayer, meals, and relaxation of at least <strong>half an hour</strong> per break. Employees shall not remain at the workplace for more than <strong>12 hours</strong> per day. Rest periods are not counted as actual working hours.', 2: '任何员工每次连续工作不超过<strong>5小时</strong>，中间没有至少<strong>半小时</strong>的祈祷、进食和休息时间。员工每天在工作地点停留的时间不超过<strong>12小时</strong>。休息时间不计入实际工作时间。'},
-  art4_h4_3: {0: 'أجر العمل الإضافي (المادة 107)', 1: 'Overtime Pay (Article 107)', 2: '加班费（第107条）'},
-  art4_p3: {0: 'يُعدّ عملاً إضافياً كل عمل يُؤدّى بعد ساعات العمل العادية أو في أيام الراحة والأعياد. ويستحق العامل أجراً إضافياً يعادل أجره الأساسي مضافاً إليه <strong>50%</strong> على الأقل. وبالتالي، إذا كان أجر الساعة العادية 50 ريالاً، فإن أجر ساعة العمل الإضافي لا يقل عن <strong>75 ريالاً</strong>. وإذا كان العمل يُدار بالتناوب (الشفتات)، يجوز تنظيم ساعات العمل بحيث يتم توزيعها بشكل متوازن على مدار الأسبوع.', 1: 'Any work performed after regular working hours or on rest days and holidays is considered overtime. Employees are entitled to additional compensation equal to their base salary plus at least <strong>50%</strong>. Therefore, if the regular hourly rate is 50 riyals, overtime pay shall not be less than <strong>75 riyals</strong> per hour. If work is operated on a shift basis, working hours may be arranged so that they are distributed evenly throughout the week.', 2: '在正常工作时间之后或在休息日和假期进行的任何工作都被视为加班。员工有权获得额外补偿，相当于其基本工资加至少<strong>50%</strong>。因此，如果正常时薪为50里亚尔，加班费不少于<strong>每小时75里亚尔</strong>。如果工作采用轮班制，可以安排工作时间，使其在整周内均匀分布。'},
-  art4_h4_4: {0: 'يوم الراحة الأسبوعية (المادة 104)', 1: 'Weekly Rest Day (Article 104)', 2: '每周休息日（第104条）'},
-  art4_p4: {0: 'يوم الجمعة هو يوم الراحة الأسبوعي لجميع العاملين. ويجوز لصاحب العمل — بعد إبلاغ مكتب العمل المختص — استبداله بيوم آخر لبعض العاملين. ولا يجوز تعويض يوم الراحة الأسبوعي بمقابل مادي مع استمرار العامل في العمل، بل يجب منحه فعلياً.', 1: 'Friday is the weekly rest day for all employees. An employer may—after notifying the competent labor office—substitute it with another day for some employees. The weekly rest day may not be compensated with a monetary benefit while the employee continues working; it must be granted as actual leave.', 2: '星期五是所有员工的每周休息日。雇主可以在通知主管劳动部门后，为某些员工用另一天替代。每周休息日不能用金钱补偿而员工继续工作；必须以实际休假的形式给予。'},
-  art4_ref: {0: 'المرجع: نظام العمل — الباب السابع (المواد 98–108) — وزارة الموارد البشرية والتنمية الاجتماعية.', 1: 'Reference: Labor Law — Chapter Seven (Articles 98–108) — Ministry of Human Resources and Social Development.', 2: '参考资料：劳动法——第七章（第98–108条）——人力资源和社会发展部。'},
-
-  art5_title: {0: 'الإجازات في نظام العمل السعودي: السنوية والمرضية والأمومة', 1: 'Leaves in Saudi Labor Law: Annual, Sick & Maternity', 2: '沙特劳动法中的休假：年假、病假和产假'},
-  art5_intro: {0: 'كفل <strong>نظام العمل السعودي</strong> للعاملين أنواعاً متعددة من الإجازات لحماية صحتهم النفسية والجسدية وتمكينهم من الوفاء بالتزاماتهم الشخصية والأسرية.', 1: 'The <strong>Saudi Labor Law</strong> guarantees employees various types of leave to protect their mental and physical health and enable them to fulfill personal and family obligations.', 2: '<strong>沙特劳动法</strong>为员工提供多种休假类型，以保护其心理和身体健康，并使其能够履行个人和家庭义务。'},
-  art5_h4_1: {0: 'الإجازة السنوية (المادتان 109 و110)', 1: 'Annual Leave (Articles 109 & 110)', 2: '年假（第109和110条）'},
-  art5_p1: {0: 'يستحق العامل إجازة سنوية بأجر كامل لا تقل عن <strong>21 يوماً</strong>، تُزاد إلى <strong>30 يوماً</strong> إذا أمضى العامل في خدمة صاحب العمل خمس سنوات متصلة. ويجب على صاحب العمل إبلاغ العامل بموعد إجازته قبل 30 يوماً على الأقل. ولا يجوز للعامل التنازل عن إجازته بمقابل مادي، ولصاحب العمل تأجيلها بشروط لا تتجاوز 90 يوماً.', 1: 'An employee is entitled to annual paid leave of at least <strong>21 days</strong>, increased to <strong>30 days</strong> if the employee has completed five consecutive years in the employer\'s service. The employer must notify the employee of the leave date at least 30 days in advance. Employees cannot waive their leave for monetary compensation, and employers may defer it under conditions not exceeding 90 days.', 2: '员工有权享受至少<strong>21天</strong>的年度带薪假期，如果员工已在雇主服务中连续完成五年，则增加到<strong>30天</strong>。雇主必须至少提前30天通知员工休假日期。员工不能放弃假期以换取金钱补偿，雇主可以将其推迟，但期限不超过90天。'},
-  art5_h4_2: {0: 'الإجازة المرضية (المادة 117)', 1: 'Sick Leave (Article 117)', 2: '病假（第117条）'},
-  art5_p2: {0: 'للعامل الحق في إجازة مرضية مثبتة بتقرير طبي، وتُحسب كالتالي: أول <strong>30 يوماً</strong> بأجر كامل، ثم <strong>60 يوماً</strong> بثلاثة أرباع الأجر، ثم <strong>30 يوماً</strong> بدون أجر — أي إجمالي <strong>120 يوماً</strong> خلال السنة الواحدة سواء كانت متصلة أو متقطعة. ولا يجوز لصاحب العمل إنهاء خدمة العامل بسبب المرض قبل استنفاد إجازاته المرضية المنصوص عليها.', 1: 'Employees have the right to medical leave supported by a medical certificate, calculated as follows: first <strong>30 days</strong> with full pay, then <strong>60 days</strong> at three-quarters pay, then <strong>30 days</strong> without pay — totaling <strong>120 days</strong> per year whether continuous or sporadic. Employers cannot terminate an employee\'s service due to illness before exhausting the prescribed medical leaves.', 2: '员工有权获得医疗假期，由医学证书支持，计算如下：前<strong>30天</strong>全额支付，然后<strong>60天</strong>按四分之三工资支付，然后<strong>30天</strong>无薪——每年总计<strong>120天</strong>，无论是连续的还是分散的。雇主不能因员工生病而在员工用完规定的医疗假期前终止其服务。'},
-  art5_h4_3: {0: 'إجازة الوضع / الأمومة (المادة 151)', 1: 'Maternity Leave (Article 151)', 2: '产假（第151条）'},
-  art5_p3: {0: 'تستحق المرأة العاملة إجازة وضع بأجر كامل مدتها <strong>10 أسابيع</strong> (70 يوماً)، توزّعها كيف تشاء بحد أقصى 4 أسابيع قبل التاريخ المرجّح للوضع. ولا يجوز تشغيلها خلال <strong>6 أسابيع</strong> بعد الوضع مطلقاً. كما يحق لها تمديد الإجازة شهراً إضافياً بدون أجر. وعند عودتها يحق لها فترة رضاعة لا تقل عن ساعة يومياً خلال 24 شهراً من تاريخ الوضع.', 1: 'Working women are entitled to maternity leave with full pay for <strong>10 weeks</strong> (70 days), distributed as desired with a maximum of 4 weeks before the expected delivery date. They cannot be employed for <strong>6 weeks</strong> after delivery. They may also extend the leave by one additional month without pay. Upon return, they are entitled to nursing breaks of at least one hour daily for 24 months from the date of delivery.', 2: '工作女性有权获得<strong>10周</strong>（70天）全额支付的产假，可根据意愿分配，预产期前最多4周。分娩后<strong>6周</strong>内不得让其工作。她们还可以将假期延长额外一个月无薪。返回工作时，在分娩之日起24个月内，她们每天有权获得至少一小时的哺乳休息。'},
-  art5_h4_4: {0: 'إجازات أخرى', 1: 'Other Leaves', 2: '其他假期'},
-  art5_p4: {0: 'يكفل النظام أيضاً: إجازة <strong>زواج</strong> (5 أيام بأجر كامل)، إجازة <strong>وفاة زوج أو أحد الأصول أو الفروع</strong> (5 أيام)، إجازة <strong>ولادة مولود</strong> للأب (3 أيام)، إجازة <strong>عدة المرأة المتوفّى عنها زوجها</strong> (4 أشهر و10 أيام بأجر كامل)، إجازة أداء <strong>الحج</strong> (10-15 يوماً لمرة واحدة بشرط مرور سنتين على الأقل في خدمة صاحب العمل)، وإجازة <strong>الامتحانات</strong> الدراسية بأجر كامل.', 1: 'The law also provides: <strong>marriage</strong> leave (5 days with full pay), <strong>bereavement</strong> leave for death of spouse or parents/children (5 days), <strong>paternity</strong> leave for newborn (3 days), <strong>widow\'s mourning</strong> leave (4 months and 10 days with full pay), <strong>Hajj</strong> leave (10-15 days once with condition of minimum 2 years service), and <strong>examination</strong> leave with full pay.', 2: '法律还提供：<strong>婚假</strong>（5天全额支付）、<strong>丧假</strong>为配偶或父母/子女死亡（5天）、<strong>陪产假</strong>为新生儿（3天）、<strong>寡妇哀悼</strong>假（4个月零10天全额支付）、<strong>朝觐</strong>假期（一次10-15天，条件是至少2年服务）和<strong>考试</strong>假期全额支付。'},
-  art5_ref: {0: 'المرجع: نظام العمل — الباب الثامن (المواد 109–123) والباب التاسع (المواد 149–161) — وزارة الموارد البشرية.', 1: 'Reference: Labor Law — Chapter Eight (Articles 109–123) and Chapter Nine (Articles 149–161) — Ministry of Human Resources.', 2: '参考资料：劳动法——第八章（第109–123条）和第九章（第149–161条）——人力资源部。'},
-
-  art6_title: {0: 'أبرز تعديلات نظام العمل السعودي 2024–2025', 1: 'Key Saudi Labor Law Amendments 2024–2025', 2: '2024-2025年沙特劳动法主要修正案'},
-  art6_intro: {0: 'وافق مجلس الوزراء بتاريخ <strong>6 أغسطس 2024</strong> على حزمة تعديلات جوهرية على نظام العمل ولائحته التنفيذية، دخلت حيّز التنفيذ في <strong>19 فبراير 2025</strong>. شملت التعديلات <strong>38 مادة معدّلة</strong> وإلغاء 7 مواد وإضافة مادتين جديدتين، بهدف تحسين بيئة العمل ودعم توظيف السعوديين وحماية حقوق العاملين.', 1: 'The Council of Ministers approved on <strong>August 6, 2024</strong> a significant package of amendments to the Labor Law and its implementing regulations, effective <strong>February 19, 2025</strong>. The amendments included <strong>38 modified articles</strong>, repeal of 7 articles, and addition of 2 new articles, aimed at improving the work environment, supporting Saudi employment, and protecting worker rights.', 2: '部长会议于<strong>2024年8月6日</strong>批准了劳动法及其实施条例的重要修正案，于<strong>2025年2月19日</strong>生效。修正案包括<strong>38条修订条款</strong>、7条条款的废除和2条新条款的增加，目旨改善工作环境、支持沙特就业和保护工人权利。'},
-  art6_h4_1: {0: 'فترة التجربة الجديدة', 1: 'New Probation Period', 2: '新试用期'},
-  art6_p1: {0: 'رُفعت فترة التجربة القصوى من 90 يوماً إلى <strong>180 يوماً</strong> (6 أشهر)، مع إمكانية الاتفاق كتابياً على تمديدها. ولا تُحسب ضمنها إجازات العيدين والإجازة المرضية. ويحق لأي طرف إنهاء العقد خلالها دون تعويض أو مكافأة.', 1: 'The maximum probation period has been increased from 90 days to <strong>180 days</strong> (6 months), with the possibility of extending it by written agreement. Eid holidays and sick leave are not counted within this period. Either party has the right to terminate the contract during this period without compensation or benefits.', 2: '最长试用期已从90天延长至<strong>180天</strong>（6个月），可通过书面协议延长。开斋节和宰牲节假期以及病假不计入此期间。双方有权在此期间内无任何补偿或福利地终止合同。'},
-  art6_h4_2: {0: 'تعريف الاستقالة رسمياً', 1: 'Formal Definition of Resignation', 2: '正式的辞职定义'},
-  art6_p2: {0: 'لأول مرة يُعرّف النظام <strong>الاستقالة</strong> بشكل صريح: هي إفادة كتابية يعبّر فيها العامل عن رغبته في إنهاء عقده محدد المدة دون إكراه. وعلى صاحب العمل الرد خلال <strong>30 يوماً</strong>، وإلا تُعدّ الاستقالة مقبولة حكماً. ويحق للعامل العدول عنها خلال أسبوع من تقديمها بموافقة صاحب العمل.', 1: 'For the first time, the law explicitly defines <strong>resignation</strong>: it is a written statement in which the employee expresses their wish to terminate a fixed-term contract without coercion. The employer must respond within <strong>30 days</strong>, otherwise the resignation is deemed accepted. The employee has the right to withdraw it within a week of submission with the employer\'s consent.', 2: '该法律首次明确定义<strong>辞职</strong>：这是员工以书面形式表示希望在没有强制的情况下终止定期合同的声明。雇主必须在<strong>30天</strong>内回应，否则辞职被视为已接受。员工有权在提交后一周内撤回，经雇主同意。'},
-  art6_h4_3: {0: 'عقود العمل الإلكترونية', 1: 'Electronic Employment Contracts', 2: '电子劳动合同'},
-  art6_p3: {0: 'أصبح عقد العمل الموثّق عبر <strong>منصة قوى</strong> التابعة لوزارة الموارد البشرية يُعدّ <strong>سنداً تنفيذياً</strong>، أي يمكن تنفيذه مباشرة عبر محاكم التنفيذ دون الحاجة للمرور بالمحاكم العمالية أولاً. وهذا يوفّر الوقت والجهد على الطرفين ويعزّز الامتثال التعاقدي.', 1: 'Employment contracts documented through the <strong>Qiwa platform</strong> operated by the Ministry of Human Resources now constitute <strong>enforceable instruments</strong>, meaning they can be directly enforced through execution courts without first going through labor courts. This saves time and effort for both parties and promotes contractual compliance.', 2: '通过人力资源部运营的<strong>Qiwa平台</strong>记录的劳动合同现在构成<strong>可执行的文件</strong>，意味着它们可以通过执行法院直接执行，无需首先通过劳动法院。这为双方节省了时间和精力，并促进了合同合规性。'},
-  art6_h4_4: {0: 'تعزيز حقوق المرأة العاملة', 1: 'Strengthening Women Worker Rights', 2: '加强女性工人权利'},
-  art6_p4: {0: 'عزّزت التعديلات حماية المرأة العاملة من خلال: تأكيد حظر التمييز في الأجور بين الرجل والمرأة عن العمل ذي القيمة المتساوية، وتنظيم إجازة الوضع بمرونة أكبر، وإضافة نص صريح يمنع فصل المرأة أثناء فترة الحمل والإجازة وحتى 6 أشهر بعد الوضع إلا لأسباب مشروعة منصوص عليها في المادة 80.', 1: 'The amendments strengthened the protection of women workers by: confirming the prohibition of wage discrimination between men and women for work of equal value, regulating maternity leave with greater flexibility, and adding an explicit provision prohibiting the termination of women during pregnancy, leave, and up to 6 months after childbirth except for legitimate reasons specified in <strong>Article 80</strong>.', 2: '修正案通过以下方式加强了女性工人的保护：确认禁止对同工同酬的男女工人的工资歧视、以更大灵活性规范产假、增加明确条款禁止在怀孕期间、假期期间和产后6个月内解雇女性，除了<strong>第80条</strong>规定的正当理由。'},
-  art6_h4_5: {0: 'بنود أخرى مهمة', 1: 'Other Important Provisions', 2: '其他重要条款'},
-  art6_p5: {0: 'شملت التعديلات أيضاً: إلزام صاحب العمل بوضع <strong>سياسة تدريب وتأهيل</strong> مكتوبة للعاملين السعوديين، تنظيم أوضح لـ<strong>العمل المرن وعن بُعد</strong>، تعديل فترات الإشعار المسبق في العقود محددة المدة (60 يوماً لصاحب العمل و30 يوماً للعامل)، وإضافة <strong>إجازة 3 أيام للأب</strong> عند ولادة مولود جديد.', 1: 'The amendments also included: requiring employers to establish a written <strong>training and development policy</strong> for Saudi employees, clearer regulation of <strong>flexible and remote work</strong>, modification of notice periods in fixed-term contracts (60 days for employers and 30 days for employees), and addition of <strong>3-day paternity leave</strong> for fathers upon the birth of a new child.', 2: '修正案还包括：要求雇主为沙特员工制定书面<strong>培训和发展政策</strong>、更清楚地规范<strong>灵活和远程工作</strong>、修改定期合同中的通知期（雇主60天，员工30天），以及在新生儿出生时为父亲增加<strong>3天陪产假</strong>。'},
-  art6_ref: {0: 'المرجع: قرار مجلس الوزراء بتاريخ 6 أغسطس 2024 — وزارة الموارد البشرية والتنمية الاجتماعية — منصة قوى (qiwa.sa).', 1: 'Reference: Council of Ministers Resolution dated August 6, 2024 — Ministry of Human Resources and Social Development — Qiwa Platform (qiwa.sa).', 2: '参考资料：部长会议决议（2024年8月6日）——人力资源和社会发展部——Qiwa平台(qiwa.sa)。'},
-
-  cta_h2: {0: 'هل لديك استفسار حول نظام العمل؟', 1: 'Have a Question About Labor Law?', 2: '对劳动法有疑问？'},
-  cta_p: {0: 'فريقنا القانوني المتخصص في القضايا العمالية جاهز لمساعدتك — تواصل معنا الآن', 1: 'Our legal team specializing in labor cases is ready to help — contact us now', 2: '我们专门处理劳动案件的法律团队随时为您提供帮助——立即联系我们'},
-  cta_btn1: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
-  cta_btn2: {0: 'العودة للرئيسية', 1: 'Back to Home', 2: '返回主页'},
-  footer_copyright: {0: '© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2026 Meshary Bin Bandar Bin Jaloui Law Firm — All rights reserved', 2: '© 2026 美沙里律师事务所——版权所有'},
-  footer_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
+  blog_cta_h2: {0: 'هل تحتاج استشارة قانونية؟', 1: 'Need Legal Consultation?', 2: '需要法律咨询？'},
+  blog_cta_p: {0: 'فريقنا القانوني جاهز لمساعدتك في جميع الاستفسارات', 1: 'Our legal team is ready to help you with all inquiries', 2: '我们的法律团队随时准备帮助您解答所有问题'}
 };
 </script>
 <script src="lang.js"></script>
 <script>
-let lang = currentLang;
-function toggleLangDrop() { document.getElementById('langDropMenu').classList.toggle('open'); }
-document.addEventListener('click', function(e) {
-    if (!document.getElementById('langDrop').contains(e.target)) document.getElementById('langDropMenu').classList.remove('open');
-});
-function setLang(l) {
-    lang = l; currentLang = l;
-    const dir = l === 0 ? 'rtl' : 'ltr';
-    const langCode = l === 0 ? 'ar' : (l === 1 ? 'en' : 'zh');
-    document.documentElement.setAttribute('dir', dir);
-    document.documentElement.setAttribute('lang', langCode);
-    document.getElementById('langDropBtn').textContent = l === 0 ? '🇸🇦' : (l === 1 ? '🇬🇧' : '🇨🇳');
-    const allTranslations = Object.assign({}, commonTranslations, pageTranslations);
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (allTranslations[key] && allTranslations[key][l] !== undefined) {
-            if (el.tagName === 'INPUT' && el.type !== 'hidden') el.placeholder = allTranslations[key][l];
-            else el.innerHTML = allTranslations[key][l];
-        }
-    });
-    localStorage.setItem('siteLang', l);
+let lang = typeof currentLang !== 'undefined' ? currentLang : 0;
+
+function toggleLangDrop() {
+  document.getElementById('langDropMenu').classList.toggle('open');
 }
+
+document.addEventListener('click', function(e) {
+  if (!document.getElementById('langDrop').contains(e.target)) {
+    document.getElementById('langDropMenu').classList.remove('open');
+  }
+});
+
+function setLang(l) {
+  lang = l;
+  if (typeof window !== 'undefined' && window.currentLang !== undefined) {
+    window.currentLang = l;
+  }
+  const dir = l === 0 ? 'rtl' : 'ltr';
+  const langCode = l === 0 ? 'ar' : (l === 1 ? 'en' : 'zh');
+  document.documentElement.setAttribute('dir', dir);
+  document.documentElement.setAttribute('lang', langCode);
+  document.getElementById('langDropBtn').textContent = l === 0 ? '🇸🇦' : (l === 1 ? '🇬🇧' : '🇨🇳');
+
+  const allTranslations = typeof commonTranslations !== 'undefined' ? Object.assign({}, commonTranslations, pageTranslations) : pageTranslations;
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (allTranslations[key] && allTranslations[key][l] !== undefined) {
+      if (el.tagName === 'INPUT' && el.type !== 'hidden') {
+        el.placeholder = allTranslations[key][l];
+      } else {
+        el.innerHTML = allTranslations[key][l];
+      }
+    }
+  });
+
+  if (typeof localStorage !== 'undefined') {
+    localStorage.setItem('siteLang', l);
+  }
+}
+
 window.addEventListener('load', function() {
+  if (typeof localStorage !== 'undefined') {
     const saved = localStorage.getItem('siteLang');
-    if (saved !== null) setLang(parseInt(saved)); else setLang(0);
+    if (saved !== null) {
+      setLang(parseInt(saved));
+    } else {
+      setLang(0);
+    }
+  } else {
+    setLang(0);
+  }
 });
 </script>
+
 </body>
 </html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="page_title">التوثيق والتصديق - شركة مشاري بندر بن جلوي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root { --navy: #1B2C6B; --navy-dark: #111d4a; --navy-mid: #223580; --gold: #B8935A; --gold-light: #d4aa72; --gold-pale: #f5ede0; --white: #ffffff; --off-white: #f8f6f2; --gray-light: #e5e7eb; --gray: #6b7280; --gray-dark: #374151; --border: #e5e1d9; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { font-family: 'Cairo', sans-serif; color: var(--gray-dark); background: var(--white); overflow-x: hidden; line-height: 1.6; }
+a { text-decoration: none; }
+
+/* NAVBAR */
+.navbar { position: fixed; inset: 0 0 auto 0; z-index: 1000; height: 90px; background: rgba(17,29,74,.97); backdrop-filter: blur(12px); border-bottom: 2px solid rgba(184,147,90,.45); display: flex; align-items: center; padding: 0 5%; }
+.nav-inner { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.nav-logo { display: flex; align-items: center; gap: 11px; }
+.nav-logo img { width: 60px; height: 60px; flex-shrink: 0; }
+.nav-firm-name { font-size: 1.2rem; font-weight: 800; color: var(--gold-light); line-height: 1.2; }
+.nav-firm-sub { font-size: .8rem; color: rgba(255,255,255,.55); }
+.nav-links { display: flex; align-items: center; gap: 20px; list-style: none; flex: 1; justify-content: center; }
+.nav-links a { color: rgba(255,255,255,.82); font-size: .95rem; font-weight: 600; transition: color .2s; position: relative; padding-bottom: 2px; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
+.nav-links a::after { content: ''; position: absolute; bottom: -2px; right: 0; left: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: right; transition: transform .25s; }
+.nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+.nav-cta { background: var(--gold); color: var(--white); padding: 8px 20px; border-radius: 25px; font-size: .85rem; font-weight: 800; transition: all .25s; white-space: nowrap; }
+.nav-cta:hover { background: var(--gold-light); }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; }
+.mobile-drawer { position: fixed; top: 90px; inset-inline: 0; background: var(--navy-dark); border-top: 1px solid rgba(184,147,90,.25); padding: 24px 5%; z-index: 999; transform: translateY(-8px); opacity: 0; visibility: hidden; transition: all .3s; }
+.mobile-drawer.open { transform: translateY(0); opacity: 1; visibility: visible; }
+.mobile-drawer ul { list-style: none; }
+.mobile-drawer li { border-bottom: 1px solid rgba(255,255,255,.07); }
+.mobile-drawer a { display: block; padding: 12px 0; color: rgba(255,255,255,.85); font-size: .95rem; font-weight: 600; }
+
+/* PAGE HERO */
+.page-hero { padding: 130px 5% 65px; background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #2a4090 100%); position: relative; overflow: hidden; }
+.page-hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(184,147,90,.08) 1px, transparent 1px); background-size: 40px 40px; }
+.page-hero-content { position: relative; z-index: 2; max-width: 700px; }
+.page-breadcrumb { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.55); font-size: .85rem; margin-bottom: 18px; }
+.page-breadcrumb a { color: var(--gold-light); }
+.page-breadcrumb span { color: rgba(255,255,255,.3); }
+.page-hero h1 { font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 900; color: white; line-height: 1.3; margin-bottom: 14px; }
+.page-hero p { color: rgba(255,255,255,.7); font-size: 1rem; line-height: 1.7; max-width: 600px; }
+
+/* ARTICLE CONTENT */
+.article-container { max-width: 820px; margin: 0 auto; padding: 60px 5%; }
+.article-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 30px; flex-wrap: wrap; }
+.article-tag { background: var(--gold-pale); color: var(--gold); font-size: .8rem; font-weight: 800; padding: 4px 14px; border-radius: 15px; }
+.article-date { color: var(--gray); font-size: .85rem; }
+.article-body h2 { font-size: 1.35rem; font-weight: 800; color: var(--navy); margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--gold-pale); }
+.article-body h3 { font-size: 1.1rem; font-weight: 700; color: var(--navy-mid); margin: 24px 0 12px; }
+.article-body p { font-size: .95rem; color: var(--gray-dark); line-height: 1.9; margin-bottom: 16px; }
+.article-body ul, .article-body ol { margin: 12px 0 16px 24px; }
+.article-body li { font-size: .93rem; line-height: 1.8; margin-bottom: 8px; color: var(--gray-dark); }
+.article-body strong { color: var(--navy); }
+.info-box { background: var(--off-white); border-right: 4px solid var(--gold); border-radius: 8px; padding: 20px 24px; margin: 20px 0; }
+.info-box p { margin-bottom: 0; }
+.back-to-blog { display: inline-flex; align-items: center; gap: 8px; color: var(--gold); font-weight: 700; font-size: .95rem; margin-top: 40px; transition: color .2s; }
+.back-to-blog:hover { color: var(--navy); }
+
+/* SECTION */
+.section-pad { padding: 70px 5%; max-width: 1280px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 45px; }
+.tag { display: inline-block; background: var(--gold-pale); color: var(--gold); font-size: .82rem; font-weight: 800; padding: 5px 16px; border-radius: 20px; margin-bottom: 12px; }
+.section-title { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 900; color: var(--navy); }
+.gold-bar { width: 50px; height: 4px; background: var(--gold); border-radius: 2px; margin: 12px auto 0; }
+
+/* LANG DROPDOWN */
+.lang-drop { position: relative; display: flex; align-items: center; }
+.lang-drop-btn { background: none; border: 2px solid rgba(255,255,255,.25); border-radius: 10px; cursor: pointer; font-size: 1.4rem; line-height: 1; padding: 4px 8px; transition: all .2s; color: #fff; }
+.lang-drop-btn:hover { border-color: var(--gold); transform: scale(1.05); }
+.lang-drop-menu { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--navy); border: 1px solid var(--gold); border-radius: 10px; padding: 6px; display: none; flex-direction: column; gap: 4px; min-width: 130px; z-index: 9999; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+.lang-drop-menu.open { display: flex; }
+.lang-drop-menu button { background: none; border: none; cursor: pointer; font-size: 1rem; padding: 6px 10px; border-radius: 6px; text-align: right; color: #fff; white-space: nowrap; font-family: inherit; transition: background .15s; }
+.lang-drop-menu button:hover { background: rgba(184,147,90,.2); }
+
+/* FOOTER */
+footer { background: var(--navy-dark); color: rgba(255,255,255,.6); text-align: center; padding: 30px 5%; font-size: .85rem; border-top: 1px solid rgba(184,147,90,.2); }
+footer a { color: var(--gold-light); }
+.whatsapp-fab { position: fixed; bottom: 28px; left: 28px; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 999; box-shadow: 0 6px 20px rgba(37,211,102,.4); transition: transform .25s; }
+.whatsapp-fab:hover { transform: scale(1.1); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) { .nav-links { display: none; } .hamburger { display: flex; } }
+@media (max-width: 768px) {
+    .page-hero { padding: 110px 5% 50px; }
+    .page-hero h1 { font-size: clamp(1.3rem,5vw,1.9rem); }
+    .article-container { padding: 40px 5%; }
+    .article-body h2 { font-size: 1.2rem; }
+}
+@media (max-width: 600px) { .nav-cta { display: none; } }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">
+<img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png" style="width:60px;height:60px;object-fit:contain;"/>
+<div class="nav-logo-text">
+<div class="nav-firm-name" data-i18n="firm_name">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub" data-i18n="firm_sub">للمحاماة والاستشارات القانونية</div>
+</div>
+</a>
+<ul class="nav-links">
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html" class="active">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+<div class="nav-controls">
+<div class="lang-drop" id="langDrop">
+<button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
+<div class="lang-drop-menu" id="langDropMenu">
+<button data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦 العربية</button>
+<button data-lang="1" onclick="setLang(1);toggleLangDrop()">🇬🇧 English</button>
+<button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
+</div>
+</div>
+<a class="nav-cta" data-i18n="nav_cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
+<div class="hamburger" onclick="document.querySelector('.mobile-drawer').classList.toggle('open')">
+<span></span><span></span><span></span>
+</div>
+</div>
+</div>
+</nav>
+<div class="mobile-drawer">
+<ul>
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+</div>
+
+<section class="page-hero">
+<div class="page-hero-content">
+<div class="page-breadcrumb">
+<a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
+<span>›</span>
+<a data-i18n="breadcrumb_blog" href="blog.html">المدونة</a>
+<span>›</span>
+<span data-i18n="art4_title">التوثيق والتصديق</span>
+</div>
+<h1 data-i18n="art4_hero_title">التوثيق والتصديق في المملكة العربية السعودية</h1>
+<p data-i18n="art4_hero_subtitle">دليل شامل لإجراءات التوثيق عبر منصة ناجز وأنواع الوثائق القانونية</p>
+</div>
+</section>
+
+<div class="article-container">
+<div class="article-meta">
+<span class="article-tag" data-i18n="tag_legal">قانون</span>
+<span class="article-date" data-i18n="art4_date">5 مارس 2026</span>
+</div>
+
+<article class="article-body">
+
+<h2 data-i18n="art4_intro_h2">مقدمة عن نظام التوثيق في المملكة</h2>
+<p data-i18n="art4_intro_p1">يُعتبر التوثيق والتصديق من أهم الخدمات القانونية التي توفرها الدولة لضمان سلامة المعاملات التجارية والمدنية. في المملكة العربية السعودية، تشرف وزارة العدل على نظام التوثيق من خلال كتابات العدل المنتشرة في جميع أنحاء المملكة. هذه الخدمات تضمن الحماية القانونية للعقود والوثائق وتعطيها قوة إثبات قانونية أمام القضاء.</p>
+
+<p data-i18n="art4_intro_p2">مع التطور التكنولوجي والتحول الرقمي، أطلقت المملكة منصة ناجز (Najiz) للخدمات الإلكترونية التي سهّلت إجراءات التوثيق والتصديق بشكل كبير. هذه المنصة تتيح للمواطنين والمقيمين التعامل مع كتابات العدل من خلال التوقيع الرقمي والهوية الرقمية، مما يسرّع الإجراءات ويقلل من التكاليف والعناء.</p>
+
+<h2 data-i18n="art4_concept_h2">مفهوم التوثيق والفرق بينه وبين التصديق</h2>
+<p data-i18n="art4_concept_p1">كثيراً ما يخلط الناس بين التوثيق والتصديق، وهما مفهومان قانونيان مختلفان تماماً. التوثيق هو عملية إصدار وثيقة رسمية من قبل كاتب العدل بناءً على اتفاق أو إجراء معين. يشهد كاتب العدل بأن العقد أو الوثيقة تم توقيعها بحضوره من قبل الأطراف المعنية، وأن هويتهم تم التحقق منها.</p>
+
+<p data-i18n="art4_concept_p2">أما التصديق فهو عملية تحقق من صحة وثيقة موجودة بالفعل، حيث يقوم كاتب العدل بالتأكد من أن التوقيع أو البصمة على الوثيقة صحيح وأنه من صاحبه الفعلي. التصديق لا ينشئ وثيقة جديدة بل يؤكد صحة ما هو موجود. على سبيل المثال، إذا وقّعت عقداً خاصاً بينك وبين طرف آخر، ثم ذهبت لكاتب العدل لتصديق توقيعك، فهذا تصديق وليس توثيق.</p>
+
+<div class="info-box">
+<p data-i18n="art4_info1"><strong>معلومة مهمة:</strong> الوثائق الموثقة لها قوة إثبات أقوى من الوثائق المصدقة أمام القضاء، لأن كاتب العدل شهد على عملية التوقيع بنفسه أثناء التوثيق.</p>
+</div>
+
+<h2 data-i18n="art4_types_h2">أنواع الوثائق التي تتطلب التوثيق</h2>
+<p data-i18n="art4_types_p1">هناك عدة أنواع من الوثائق التي يتطلب القانون توثيقها أمام كاتب العدل:</p>
+
+<h3 data-i18n="art4_types_h3_1">1. الوكالات الشرعية</h3>
+<p data-i18n="art4_types_p2">الوكالة هي تفويض من شخص (الموكل) لآخر (الوكيل) ليقوم بعمل معين أو أعمال محددة نيابة عنه. يجب توثيق الوكالات أمام كاتب العدل لضمان صحتها وسلامتها القانونية، خاصة في الأمور الحساسة مثل البيع والشراء والقضايا القانونية.</p>
+
+<h3 data-i18n="art4_types_h3_2">2. عقود البيع والشراء</h3>
+<p data-i18n="art4_types_p3">عقود البيع والشراء للعقارات والممتلكات الثمينة يجب أن تكون موثقة رسمياً. هذا يحمي حقوق البائع والمشتري ويمنع النزاعات المستقبلية. التوثيق يضمن أن الطرفين وافقا بحرية وعن قصد على شروط العقد.</p>
+
+<h3 data-i18n="art4_types_h3_3">3. عقود الإيجار</h3>
+<p data-i18n="art4_types_p4">عقود الإيجار طويلة الأجل أو ذات القيمة الكبيرة يتطلب توثيقها، خاصة في القطاع العقاري. توثيق عقد الإيجار يحمي المستأجر والمؤجر من أي نزاع قد ينشأ بينهما.</p>
+
+<h3 data-i18n="art4_types_h3_4">4. عقود الشراكة والمساهمة</h3>
+<p data-i18n="art4_types_p5">عقود الشراكة بين الأفراد لتأسيس مشروع مشترك يجب أن تكون موثقة. هذا يوضح حقوق والتزامات كل شريك ويمنع الخلافات لاحقاً.</p>
+
+<h3 data-i18n="art4_types_h3_5">5. الإقرارات والفسوخات</h3>
+<p data-i18n="art4_types_p6">الإقرارات (الاعترافات بحقوق أو ديون) والفسوخات (إلغاء العقود) أيضاً تتطلب توثيقاً رسمياً لضمان صحتها القانونية.</p>
+
+<h2 data-i18n="art4_procedures_h2">إجراءات التوثيق عبر منصة ناجز</h2>
+<p data-i18n="art4_procedures_p1">منصة ناجز جعلت عملية التوثيق أسهل وأسرع. إليك خطوات التوثيق الإلكتروني:</p>
+
+<h3 data-i18n="art4_procedures_h3_1">الخطوة الأولى: التسجيل والدخول</h3>
+<p data-i18n="art4_procedures_p2">يجب عليك الدخول لمنصة ناجز عبر النفاذ الوطني الموحد (National Single Sign-On) باستخدام بيانات الهوية الرقمية الخاصة بك. هذا يضمن أن هويتك معروفة وموثقة رسمياً.</p>
+
+<h3 data-i18n="art4_procedures_h3_2">الخطوة الثانية: اختيار نوع الخدمة</h3>
+<p data-i18n="art4_procedures_p3">تختار من قائمة الخدمات المتاحة نوع الوثيقة التي تريد توثيقها (وكالة، عقد بيع، إقرار، إلخ). المنصة تقدم واجهة سهلة الاستخدام لاختيار الخدمة المناسبة.</p>
+
+<h3 data-i18n="art4_procedures_h3_3">الخطوة الثالثة: تحضير الوثيقة</h3>
+<p data-i18n="art4_procedures_p4">تقوم برفع الوثيقة التي تريد توثيقها على المنصة. يجب أن تكون الوثيقة واضحة وتحتوي على جميع البيانات المطلوبة. يمكنك أيضاً تحضير الوثيقة على المنصة نفسها باستخدام النماذج المتاحة.</p>
+
+<h3 data-i18n="art4_procedures_h3_4">الخطوة الرابعة: التحقق من الهوية</h3>
+<p data-i18n="art4_procedures_p5">المنصة تتحقق من هوية جميع الأطراف باستخدام الهوية الرقمية والنفاذ الوطني. هذا يضمن أن التوقيع صادر من الشخص الفعلي.</p>
+
+<h3 data-i18n="art4_procedures_h3_5">الخطوة الخامسة: التوقيع الرقمي</h3>
+<p data-i18n="art4_procedures_p6">توقع الوثيقة رقمياً باستخدام البصمة أو كلمة المرور الخاصة بك. هذا التوقيع له نفس القيمة القانونية للتوقيع اليدوي.</p>
+
+<h3 data-i18n="art4_procedures_h3_6">الخطوة السادسة: الحصول على الوثيقة</h3>
+<p data-i18n="art4_procedures_p7">بعد إكمال جميع الخطوات والموافقة عليها، تحصل على الوثيقة الموثقة رسمياً برقم مرجعي، وتستطيع تحميلها وطباعتها.</p>
+
+<div class="info-box">
+<p data-i18n="art4_info2"><strong>ملاحظة:</strong> جميع الأطراف يجب أن تكون لديها حساب على منصة ناجز وأن تكون مسجلة رسمياً للتوقيع على الوثائق الموثقة إلكترونياً.</p>
+</div>
+
+<h2 data-i18n="art4_enotarization_h2">التوثيق الإلكتروني والتطبيقات الحديثة</h2>
+<p data-i18n="art4_enotarization_p1">التوثيق الإلكتروني أصبح الاتجاه الحديث في المملكة. هذا النوع من التوثيق يتمتع بعدة مزايا عن التوثيق التقليدي:</p>
+
+<ul>
+<li data-i18n="art4_enotarization_l1">السرعة: لا تحتاج للذهاب لكاتب العدل شخصياً، يمكنك توثيق الوثائق من منزلك أو مكتبك</li>
+<li data-i18n="art4_enotarization_l2">الراحة: التوثيق متاح 24 ساعة طوال السنة</li>
+<li data-i18n="art4_enotarization_l3">التكلفة: الرسوم أقل من التوثيق التقليدي</li>
+<li data-i18n="art4_enotarization_l4">الأمان: التوقيع الرقمي محمي بتقنيات تشفير عالية</li>
+<li data-i18n="art4_enotarization_l5">الكفاءة: الوثائق المخزنة إلكترونياً وسهولة الوصول إليها لاحقاً</li>
+</ul>
+
+<p data-i18n="art4_enotarization_p2">المملكة تستعد أيضاً لتطبيق تكنولوجيا البلوكتشين في التوثيق لزيادة الأمان والشفافية. هذه التقنية ستجعل من المستحيل تزييف الوثائق أو تعديلها بعد التوثيق.</p>
+
+<h2 data-i18n="art4_powers_h2">الوكالات الشرعية وأنواعها</h2>
+<p data-i18n="art4_powers_p1">الوكالات الشرعية لها أهمية كبيرة في المعاملات التجارية والشخصية. هناك عدة أنواع من الوكالات:</p>
+
+<h3 data-i18n="art4_powers_h3_1">الوكالة العامة</h3>
+<p data-i18n="art4_powers_p2">تفوض الموكل الوكيل بإدارة جميع شؤونه بدون تحديد. هذه الوكالة تعطي الوكيل صلاحيات واسعة وتتطلب ثقة عالية.</p>
+
+<h3 data-i18n="art4_powers_h3_2">الوكالة الخاصة</h3>
+<p data-i18n="art4_powers_p3">تقتصر على عمل أو أعمال محددة فقط. مثلاً، توكيل شخص ببيع عقار معين أو تحصيل ديون محددة.</p>
+
+<h3 data-i18n="art4_powers_h3_3">الوكالة العقارية</h3>
+<p data-i18n="art4_powers_p4">متخصصة في المعاملات العقارية مثل البيع والشراء والإيجار. تتطلب تفاصيل دقيقة عن العقار وشروط المعاملة.</p>
+
+<h3 data-i18n="art4_powers_h3_4">الوكالة التجارية</h3>
+<p data-i18n="art4_powers_p5">للشركات والأنشطة التجارية، حيث يوكل المالك أو المدير شخصاً للتعامل مع الشؤون التجارية باسم الشركة.</p>
+
+<h3 data-i18n="art4_powers_h3_5">الوكالة القضائية</h3>
+<p data-i18n="art4_powers_p6">توكيل محامي أو شخص معين للتمثيل في دعوى قضائية أمام المحاكم. هذه الوكالة تحتاج شروطاً معينة وقد تكون مؤقتة أو دائمة.</p>
+
+<div class="info-box">
+<p data-i18n="art4_info3"><strong>حقيقة قانونية:</strong> الوكالة يمكن فسخها في أي وقت من قبل الموكل، لكن يجب إبلاغ الوكيل بذلك رسمياً وتوثيق الفسخ.</p>
+</div>
+
+<h2 data-i18n="art4_tips_h2">نصائح قانونية مهمة عند التوثيق</h2>
+<p data-i18n="art4_tips_p1">هناك عدة نقاط يجب الانتباه لها عند قيامك بتوثيق أي وثيقة:</p>
+
+<h3 data-i18n="art4_tips_h3_1">تحقق من هوية الطرف الآخر</h3>
+<p data-i18n="art4_tips_p2">تأكد من أن الشخص الذي تتعاقد معه هو من تعتقد أنه. اطلب رؤية بطاقته الهوية وتحقق من بياناتها قبل التوقيع على أي وثيقة.</p>
+
+<h3 data-i18n="art4_tips_h3_2">اقرأ جميع الشروط بعناية</h3>
+<p data-i18n="art4_tips_p3">لا تسرع في توثيق الوثيقة بدون فهم كامل لمحتواها. اقرأ كل بند وشرط بعناية واطلب توضيحاً إذا لم تفهم أي شيء.</p>
+
+<h3 data-i18n="art4_tips_h3_3">احتفظ بنسخ من الوثائق</h3>
+<p data-i18n="art4_tips_p4">احتفظ بنسخة موثقة من الوثيقة لنفسك وقدم الأصل للطرف الآخر إن لزم الأمر. النسخ الموثقة لها نفس قيمة الأصل قانونياً.</p>
+
+<h3 data-i18n="art4_tips_h3_4">افهم عملية الفسخ</h3>
+<p data-i18n="art4_tips_p5">قبل توقيع وكالة، تعرف على كيفية فسخها. كن متأكداً من شروط الإنهاء والفسخ وما هي الالتزامات المتبقية عند الفسخ.</p>
+
+<h3 data-i18n="art4_tips_h3_5">استشر محامياً في الصفقات الكبيرة</h3>
+<p data-i18n="art4_tips_p6">بالنسبة للصفقات الكبيرة أو المعقدة، لا تتردد في استشارة محامٍ متخصص قبل التوثيق. هذا يحميك من الأخطاء القانونية المستقبلية.</p>
+
+<h2 data-i18n="art4_conclusion_h2">الخاتمة</h2>
+<p data-i18n="art4_conclusion_p1">التوثيق والتصديق يلعبان دوراً محورياً في حماية حقوقك القانونية وضمان سلامة معاملاتك. مع التطور التكنولوجي والخدمات الإلكترونية المتاحة عبر منصة ناجز، أصبح التوثيق أسهل وأسرع من أي وقت مضى. استفد من هذه الخدمات لحماية استثماراتك وعقودك.</p>
+
+<p data-i18n="art4_conclusion_p2">إذا كنت بحاجة لاستشارة قانونية متخصصة حول التوثيق أو أي معاملة قانونية أخرى، فريقنا في شركة مشاري بندر بن جلوي جاهز لمساعدتك. لا تتردد في التواصل معنا عبر الواتس أو الاتصال المباشر.</p>
+
+<a href="blog.html" class="back-to-blog" data-i18n="back_to_blog">← العودة للمدونة</a>
+
+</article>
+</div>
+
+<section style="background:linear-gradient(135deg,var(--navy-dark),var(--navy));padding:60px 5%;text-align:center;">
+<h2 data-i18n="cta_h2" style="font-size:clamp(1.3rem,3vw,1.8rem);font-weight:900;color:white;margin-bottom:14px;">هل تحتاج استشارة قانونية؟</h2>
+<p data-i18n="cta_p" style="color:rgba(255,255,255,.7);font-size:1rem;max-width:550px;margin:0 auto 24px;">فريقنا القانوني جاهز لمساعدتك</p>
+<a data-i18n="nav_cta" href="https://wa.me/966533532153" style="display:inline-block;background:var(--gold);color:white;padding:12px 32px;border-radius:25px;font-weight:800;font-size:.95rem;" target="_blank" rel="noopener">احجز استشارة</a>
+</section>
+
+<footer>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px 22px;margin-bottom:18px;">
+<a data-i18n="nav_services" href="index.html#services" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">خدماتنا</a>
+<a data-i18n="nav_contracts" href="contracts.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">عقود الشركات</a>
+<a data-i18n="nav_faq" href="faq.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">الأسئلة الشائعة</a>
+<a data-i18n="nav_team" href="team.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">فريقنا</a>
+<a data-i18n="nav_blog" href="blog.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">المدونة</a>
+<a data-i18n="nav_eservices" href="e-services.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">الخدمات الإلكترونية</a>
+<a data-i18n="nav_events" href="events.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">فعاليتنا</a>
+<a data-i18n="nav_cases_stats" href="cases-stats.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">القضايا المنجزة</a>
+<a data-i18n="nav_careers" href="careers.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">التوظيف</a>
+<a data-i18n="nav_contact" href="index.html#booking" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">تواصل معنا</a>
+</div>
+<p data-i18n="footer_copyright">© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+</footer>
+
+<a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank">
+<svg fill="white" height="28" viewbox="0 0 24 24" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<script>
+const pageTranslations = {
+  page_title: {0: 'التوثيق والتصديق - شركة مشاري بندر بن جلوي', 1: 'Notarization & Authentication - Al Mashari Law Firm', 2: '公证与认证 - Al Mashari律师事务所'},
+  breadcrumb_home: {0: 'الرئيسية', 1: 'Home', 2: '首页'},
+  breadcrumb_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
+  art4_title: {0: 'التوثيق والتصديق', 1: 'Notarization & Authentication', 2: '公证与认证'},
+  art4_hero_title: {0: 'التوثيق والتصديق في المملكة العربية السعودية', 1: 'Notarization & Authentication in Saudi Arabia', 2: '沙特阿拉伯的公证与认证'},
+  art4_hero_subtitle: {0: 'دليل شامل لإجراءات التوثيق عبر منصة ناجز وأنواع الوثائق القانونية', 1: 'Complete guide to notarization procedures via Najiz platform and types of legal documents', 2: '通过Najiz平台的公证程序和各类法律文件的完整指南'},
+  tag_legal: {0: 'قانون', 1: 'Legal', 2: '法律'},
+  art4_date: {0: '5 مارس 2026', 1: 'March 5, 2026', 2: '2026年3月5日'},
+  art4_intro_h2: {0: 'مقدمة عن نظام التوثيق في المملكة', 1: 'Introduction to the Notarization System in the Kingdom', 2: '沙特王国公证系统介绍'},
+  art4_intro_p1: {0: 'يُعتبر التوثيق والتصديق من أهم الخدمات القانونية التي توفرها الدولة لضمان سلامة المعاملات التجارية والمدنية. في المملكة العربية السعودية، تشرف وزارة العدل على نظام التوثيق من خلال كتابات العدل المنتشرة في جميع أنحاء المملكة. هذه الخدمات تضمن الحماية القانونية للعقود والوثائق وتعطيها قوة إثبات قانونية أمام القضاء.', 1: 'Notarization and authentication are among the most important legal services provided by the state to ensure the integrity of commercial and civil transactions. In the Kingdom of Saudi Arabia, the Ministry of Justice oversees the notarization system through notary offices spread throughout the Kingdom. These services ensure legal protection for contracts and documents and give them legal proof value before courts.', 2: '公证与认证是国家提供的最重要的法律服务之一，用于确保商业和民事交易的完整性。在沙特阿拉伯王国，司法部通过遍布整个王国的公证处监督公证系统。这些服务为合同和文件提供法律保护，并赋予它们在法院前的法律证明价值。'},
+  art4_intro_p2: {0: 'مع التطور التكنولوجي والتحول الرقمي، أطلقت المملكة منصة ناجز (Najiz) للخدمات الإلكترونية التي سهّلت إجراءات التوثيق والتصديق بشكل كبير. هذه المنصة تتيح للمواطنين والمقيمين التعامل مع كتابات العدل من خلال التوقيع الرقمي والهوية الرقمية، مما يسرّع الإجراءات ويقلل من التكاليف والعناء.', 1: 'With technological advancement and digital transformation, the Kingdom launched the Najiz platform for e-services, which greatly simplified notarization and authentication procedures. This platform allows citizens and residents to deal with notary offices through digital signatures and digital identity, speeding up procedures and reducing costs and hassle.', 2: '随着技术进步和数字化转型，沙特王国推出了Najiz电子服务平台，大大简化了公证和认证程序。该平台允许居民通过数字签名和数字身份与公证处打交道，加快了程序速度，降低了成本和麻烦。'},
+  art4_concept_h2: {0: 'مفهوم التوثيق والفرق بينه وبين التصديق', 1: 'The Concept of Notarization and the Difference Between Notarization and Authentication', 2: '公证的概念以及公证与认证之间的区别'},
+  art4_concept_p1: {0: 'كثيراً ما يخلط الناس بين التوثيق والتصديق، وهما مفهومان قانونيان مختلفان تماماً. التوثيق هو عملية إصدار وثيقة رسمية من قبل كاتب العدل بناءً على اتفاق أو إجراء معين. يشهد كاتب العدل بأن العقد أو الوثيقة تم توقيعها بحضوره من قبل الأطراف المعنية، وأن هويتهم تم التحقق منها.', 1: 'People often confuse notarization and authentication, which are two completely different legal concepts. Notarization is the process of issuing an official document by a notary based on a specific agreement or transaction. The notary witnesses that the contract or document was signed in his presence by the relevant parties, and their identity has been verified.', 2: '人们经常混淆公证和认证，它们是两个完全不同的法律概念。公证是公证人根据特定协议或交易发行官方文件的过程。公证人见证该合同或文件由相关方在其面前签署，其身份已得到核实。'},
+  art4_concept_p2: {0: 'أما التصديق فهو عملية تحقق من صحة وثيقة موجودة بالفعل، حيث يقوم كاتب العدل بالتأكد من أن التوقيع أو البصمة على الوثيقة صحيح وأنه من صاحبه الفعلي. التصديق لا ينشئ وثيقة جديدة بل يؤكد صحة ما هو موجود. على سبيل المثال، إذا وقّعت عقداً خاصاً بينك وبين طرف آخر، ثم ذهبت لكاتب العدل لتصديق توقيعك، فهذا تصديق وليس توثيق.', 1: 'Authentication, on the other hand, is the process of verifying the validity of an existing document, where the notary ensures that the signature or fingerprint on the document is correct and from its actual owner. Authentication does not create a new document but confirms the validity of what already exists. For example, if you signed a private contract with another party, then went to the notary to authenticate your signature, that is authentication and not notarization.', 2: '另一方面，认证是验证现有文件有效性的过程，其中公证人确保文件上的签名或指纹是正确的并来自其实际所有者。认证不会创建新文件，而是确认现有内容的有效性。例如，如果您与另一方签署了私人合同，然后去公证处认证您的签名，那就是认证而不是公证。'},
+  art4_info1: {0: 'معلومة مهمة: الوثائق الموثقة لها قوة إثبات أقوى من الوثائق المصدقة أمام القضاء، لأن كاتب العدل شهد على عملية التوقيع بنفسه أثناء التوثيق.', 1: 'Important Note: Notarized documents have stronger evidentiary value than authenticated documents in court, because the notary witnessed the signing process himself during notarization.', 2: '重要提示：公证文件在法庭上的证明力强于认证文件，因为公证人在公证过程中亲自见证了签署过程。'},
+  art4_types_h2: {0: 'أنواع الوثائق التي تتطلب التوثيق', 1: 'Types of Documents Requiring Notarization', 2: '需要公证的文件类型'},
+  art4_types_p1: {0: 'هناك عدة أنواع من الوثائق التي يتطلب القانون توثيقها أمام كاتب العدل:', 1: 'There are several types of documents that the law requires to be notarized before a notary:', 2: '有几种类型的文件需要在公证人面前公证：'},
+  art4_types_h3_1: {0: '1. الوكالات الشرعية', 1: '1. Powers of Attorney', 2: '1. 授权书'},
+  art4_types_p2: {0: 'الوكالة هي تفويض من شخص (الموكل) لآخر (الوكيل) ليقوم بعمل معين أو أعمال محددة نيابة عنه. يجب توثيق الوكالات أمام كاتب العدل لضمان صحتها وسلامتها القانونية، خاصة في الأمور الحساسة مثل البيع والشراء والقضايا القانونية.', 1: 'A power of attorney is an authorization from one person (the principal) to another (the agent) to perform a specific act or specific acts on their behalf. Powers of attorney must be notarized before a notary to ensure their validity and legal integrity, especially in sensitive matters such as buying and selling and legal issues.', 2: '授权书是从一个人（委托人）向另一个人（代理人）授权代表他们执行特定行为或特定行为。授权书必须在公证人面前公证，以确保其有效性和法律完整性，尤其是在买卖和法律问题等敏感事项中。'},
+  art4_types_h3_2: {0: '2. عقود البيع والشراء', 1: '2. Sales and Purchase Agreements', 2: '2. 买卖协议'},
+  art4_types_p3: {0: 'عقود البيع والشراء للعقارات والممتلكات الثمينة يجب أن تكون موثقة رسمياً. هذا يحمي حقوق البائع والمشتري ويمنع النزاعات المستقبلية. التوثيق يضمن أن الطرفين وافقا بحرية وعن قصد على شروط العقد.', 1: 'Sales and purchase agreements for real estate and valuable property must be formally notarized. This protects the rights of the seller and buyer and prevents future disputes. Notarization ensures that both parties freely and intentionally agreed to the terms of the agreement.', 2: '房地产和贵重财产的买卖协议必须正式公证。这保护买卖双方的权利并防止未来纠纷。公证确保双方自由且有意地同意协议条款。'},
+  art4_types_h3_3: {0: '3. عقود الإيجار', 1: '3. Lease Agreements', 2: '3. 租赁协议'},
+  art4_types_p4: {0: 'عقود الإيجار طويلة الأجل أو ذات القيمة الكبيرة يتطلب توثيقها، خاصة في القطاع العقاري. توثيق عقد الإيجار يحمي المستأجر والمؤجر من أي نزاع قد ينشأ بينهما.', 1: 'Long-term or high-value lease agreements require notarization, especially in the real estate sector. Notarizing a lease agreement protects the tenant and landlord from any disputes that may arise between them.', 2: '长期或高价值租赁协议需要公证，尤其是在房地产领域。公证租赁协议保护承租人和出租人免受可能产生的任何纠纷。'},
+  art4_types_h3_4: {0: '4. عقود الشراكة والمساهمة', 1: '4. Partnership and Investment Agreements', 2: '4. 合伙和投资协议'},
+  art4_types_p5: {0: 'عقود الشراكة بين الأفراد لتأسيس مشروع مشترك يجب أن تكون موثقة. هذا يوضح حقوق والتزامات كل شريك ويمنع الخلافات لاحقاً.', 1: 'Partnership agreements between individuals to establish a joint venture must be notarized. This clarifies the rights and obligations of each partner and prevents disputes later.', 2: '个人为建立合资企业而达成的合伙协议必须公证。这澄清了每个合伙人的权利和义务，并防止以后产生纠纷。'},
+  art4_types_h3_5: {0: '5. الإقرارات والفسوخات', 1: '5. Declarations and Rescissions', 2: '5. 声明和解除'},
+  art4_types_p6: {0: 'الإقرارات (الاعترافات بحقوق أو ديون) والفسوخات (إلغاء العقود) أيضاً تتطلب توثيقاً رسمياً لضمان صحتها القانونية.', 1: 'Declarations (acknowledgments of rights or debts) and rescissions (cancellations of contracts) also require formal notarization to ensure their legal validity.', 2: '声明（确认权利或债务）和解除（取消合同）也需要正式公证以确保其法律有效性。'},
+  art4_procedures_h2: {0: 'إجراءات التوثيق عبر منصة ناجز', 1: 'Notarization Procedures via Najiz Platform', 2: '通过Najiz平台的公证程序'},
+  art4_procedures_p1: {0: 'منصة ناجز جعلت عملية التوثيق أسهل وأسرع. إليك خطوات التوثيق الإلكتروني:', 1: 'Najiz platform made the notarization process easier and faster. Here are the steps for electronic notarization:', 2: 'Najiz平台使公证过程更容易、更快速。以下是电子公证的步骤：'},
+  art4_procedures_h3_1: {0: 'الخطوة الأولى: التسجيل والدخول', 1: 'Step One: Registration and Login', 2: '步骤一：注册和登录'},
+  art4_procedures_p2: {0: 'يجب عليك الدخول لمنصة ناجز عبر النفاذ الوطني الموحد (National Single Sign-On) باستخدام بيانات الهوية الرقمية الخاصة بك. هذا يضمن أن هويتك معروفة وموثقة رسمياً.', 1: 'You must log into the Najiz platform via the National Single Sign-On using your digital identity credentials. This ensures that your identity is known and officially verified.', 2: '您必须通过国家统一登录系统使用您的数字身份凭证登录Najiz平台。这确保您的身份是已知的并正式核实。'},
+  art4_procedures_h3_2: {0: 'الخطوة الثانية: اختيار نوع الخدمة', 1: 'Step Two: Choose Service Type', 2: '步骤二：选择服务类型'},
+  art4_procedures_p3: {0: 'تختار من قائمة الخدمات المتاحة نوع الوثيقة التي تريد توثيقها (وكالة، عقد بيع، إقرار، إلخ). المنصة تقدم واجهة سهلة الاستخدام لاختيار الخدمة المناسبة.', 1: 'You choose from the available services the type of document you want to notarize (power of attorney, sales agreement, declaration, etc.). The platform provides a user-friendly interface for selecting the appropriate service.', 2: '您从可用服务中选择要公证的文件类型（授权书、销售协议、声明等）。该平台提供用户友好的界面来选择适当的服务。'},
+  art4_procedures_h3_3: {0: 'الخطوة الثالثة: تحضير الوثيقة', 1: 'Step Three: Prepare the Document', 2: '步骤三：准备文件'},
+  art4_procedures_p4: {0: 'تقوم برفع الوثيقة التي تريد توثيقها على المنصة. يجب أن تكون الوثيقة واضحة وتحتوي على جميع البيانات المطلوبة. يمكنك أيضاً تحضير الوثيقة على المنصة نفسها باستخدام النماذج المتاحة.', 1: 'You upload the document you want to notarize to the platform. The document must be clear and contain all required information. You can also prepare the document on the platform itself using the available templates.', 2: '您将要公证的文件上传到平台。文件必须清晰并包含所有必需的信息。您也可以使用可用的模板在平台本身上准备文件。'},
+  art4_procedures_h3_4: {0: 'الخطوة الرابعة: التحقق من الهوية', 1: 'Step Four: Identity Verification', 2: '步骤四：身份验证'},
+  art4_procedures_p5: {0: 'المنصة تتحقق من هوية جميع الأطراف باستخدام الهوية الرقمية والنفاذ الوطني. هذا يضمن أن التوقيع صادر من الشخص الفعلي.', 1: 'The platform verifies the identity of all parties using digital identity and national access. This ensures that the signature comes from the actual person.', 2: '该平台使用数字身份和国家访问权验证所有方的身份。这确保签名来自实际的人。'},
+  art4_procedures_h3_5: {0: 'الخطوة الخامسة: التوقيع الرقمي', 1: 'Step Five: Digital Signature', 2: '步骤五：数字签名'},
+  art4_procedures_p6: {0: 'توقع الوثيقة رقمياً باستخدام البصمة أو كلمة المرور الخاصة بك. هذا التوقيع له نفس القيمة القانونية للتوقيع اليدوي.', 1: 'Sign the document digitally using your fingerprint or password. This signature has the same legal value as a handwritten signature.', 2: '使用您的指纹或密码以数字方式签署文件。此签名与手写签名具有相同的法律价值。'},
+  art4_procedures_h3_6: {0: 'الخطوة السادسة: الحصول على الوثيقة', 1: 'Step Six: Obtain the Document', 2: '步骤六：获取文件'},
+  art4_procedures_p7: {0: 'بعد إكمال جميع الخطوات والموافقة عليها، تحصل على الوثيقة الموثقة رسمياً برقم مرجعي، وتستطيع تحميلها وطباعتها.', 1: 'After completing and approving all steps, you receive the officially notarized document with a reference number, and you can download and print it.', 2: '完成并批准所有步骤后，您会收到具有参考号的正式公证文件，并可以下载和打印它。'},
+  art4_info2: {0: 'ملاحظة: جميع الأطراف يجب أن تكون لديها حساب على منصة ناجز وأن تكون مسجلة رسمياً للتوقيع على الوثائق الموثقة إلكترونياً.', 1: 'Note: All parties must have an account on the Najiz platform and be officially registered to sign electronically notarized documents.', 2: '注意：所有方必须在Najiz平台上拥有账户并正式注册，才能在电子公证文件上签名。'},
+  art4_enotarization_h2: {0: 'التوثيق الإلكتروني والتطبيقات الحديثة', 1: 'Electronic Notarization and Modern Applications', 2: '电子公证和现代应用'},
+  art4_enotarization_p1: {0: 'التوثيق الإلكتروني أصبح الاتجاه الحديث في المملكة. هذا النوع من التوثيق يتمتع بعدة مزايا عن التوثيق التقليدي:', 1: 'Electronic notarization has become the modern trend in the Kingdom. This type of notarization enjoys several advantages over traditional notarization:', 2: '电子公证已成为王国的现代趋势。这种类型的公证相比传统公证具有多项优势：'},
+  art4_enotarization_l1: {0: 'السرعة: لا تحتاج للذهاب لكاتب العدل شخصياً، يمكنك توثيق الوثائق من منزلك أو مكتبك', 1: 'Speed: You do not need to go to the notary in person, you can notarize documents from your home or office', 2: '速度：您无需亲自去公证处，可以从您的家或办公室对文件进行公证'},
+  art4_enotarization_l2: {0: 'الراحة: التوثيق متاح 24 ساعة طوال السنة', 1: 'Convenience: Notarization is available 24/7', 2: '便利性：全天候提供公证服务'},
+  art4_enotarization_l3: {0: 'التكلفة: الرسوم أقل من التوثيق التقليدي', 1: 'Cost: Fees are lower than traditional notarization', 2: '成本：费用低于传统公证'},
+  art4_enotarization_l4: {0: 'الأمان: التوقيع الرقمي محمي بتقنيات تشفير عالية', 1: 'Security: Digital signature is protected with high encryption technology', 2: '安全性：数字签名受高级加密技术保护'},
+  art4_enotarization_l5: {0: 'الكفاءة: الوثائق المخزنة إلكترونياً وسهولة الوصول إليها لاحقاً', 1: 'Efficiency: Documents stored electronically with easy future access', 2: '效率：文件以电子方式存储，便于日后访问'},
+  art4_enotarization_p2: {0: 'المملكة تستعد أيضاً لتطبيق تكنولوجيا البلوكتشين في التوثيق لزيادة الأمان والشفافية. هذه التقنية ستجعل من المستحيل تزييف الوثائق أو تعديلها بعد التوثيق.', 1: 'The Kingdom is also preparing to implement blockchain technology in notarization to increase security and transparency. This technology will make it impossible to forge or modify documents after notarization.', 2: '沙特王国也在准备在公证中实施区块链技术，以提高安全性和透明度。这项技术将使公证后伪造或修改文件成为不可能。'},
+  art4_powers_h2: {0: 'الوكالات الشرعية وأنواعها', 1: 'Powers of Attorney and Their Types', 2: '授权书及其类型'},
+  art4_powers_p1: {0: 'الوكالات الشرعية لها أهمية كبيرة في المعاملات التجارية والشخصية. هناك عدة أنواع من الوكالات:', 1: 'Powers of attorney have great importance in commercial and personal transactions. There are several types of powers of attorney:', 2: '授权书在商业和个人交易中具有重要意义。有几种类型的授权书：'},
+  art4_powers_h3_1: {0: 'الوكالة العامة', 1: 'General Power of Attorney', 2: '一般授权书'},
+  art4_powers_p2: {0: 'تفوض الموكل الوكيل بإدارة جميع شؤونه بدون تحديد. هذه الوكالة تعطي الوكيل صلاحيات واسعة وتتطلب ثقة عالية.', 1: 'The principal authorizes the agent to manage all his affairs without limitation. This power of attorney gives the agent broad authority and requires high trust.', 2: '委托人授权代理人无限制地管理其所有事务。此授权书赋予代理人广泛的权限并需要高度信任。'},
+  art4_powers_h3_2: {0: 'الوكالة الخاصة', 1: 'Special Power of Attorney', 2: '特定授权书'},
+  art4_powers_p3: {0: 'تقتصر على عمل أو أعمال محددة فقط. مثلاً، توكيل شخص ببيع عقار معين أو تحصيل ديون محددة.', 1: 'Limited to specific act or acts only. For example, authorizing a person to sell a specific property or collect specific debts.', 2: '仅限于特定行为。例如，授权一个人出售特定财产或收取特定债务。'},
+  art4_powers_h3_3: {0: 'الوكالة العقارية', 1: 'Real Estate Power of Attorney', 2: '房地产授权书'},
+  art4_powers_p4: {0: 'متخصصة في المعاملات العقارية مثل البيع والشراء والإيجار. تتطلب تفاصيل دقيقة عن العقار وشروط المعاملة.', 1: 'Specialized in real estate transactions such as buying, selling, and leasing. Requires detailed specifications about the property and transaction terms.', 2: '专门从事房地产交易，如购买、销售和租赁。需要关于房产和交易条款的详细规格。'},
+  art4_powers_h3_4: {0: 'الوكالة التجارية', 1: 'Commercial Power of Attorney', 2: '商业授权书'},
+  art4_powers_p5: {0: 'للشركات والأنشطة التجارية، حيث يوكل المالك أو المدير شخصاً للتعامل مع الشؤون التجارية باسم الشركة.', 1: 'For companies and commercial activities, where the owner or manager authorizes a person to handle business affairs on behalf of the company.', 2: '对于公司和商业活动，其中所有者或经理授权一个人代表公司处理业务事务。'},
+  art4_powers_h3_5: {0: 'الوكالة القضائية', 1: 'Judicial Power of Attorney', 2: '司法授权书'},
+  art4_powers_p6: {0: 'توكيل محامي أو شخص معين للتمثيل في دعوى قضائية أمام المحاكم. هذه الوكالة تحتاج شروطاً معينة وقد تكون مؤقتة أو دائمة.', 1: 'Authorizing a lawyer or specific person to represent in a legal case before the courts. This power of attorney requires certain conditions and may be temporary or permanent.', 2: '授权律师或特定人士代表进行诉讼。此授权书需要某些条件，可能是临时的或永久的。'},
+  art4_info3: {0: 'حقيقة قانونية: الوكالة يمكن فسخها في أي وقت من قبل الموكل، لكن يجب إبلاغ الوكيل بذلك رسمياً وتوثيق الفسخ.', 1: 'Legal Fact: The power of attorney can be revoked at any time by the principal, but the agent must be formally notified and the revocation documented.', 2: '法律事实：委托人可以随时撤销授权书，但代理人必须正式通知，并记录撤销。'},
+  art4_tips_h2: {0: 'نصائح قانونية مهمة عند التوثيق', 1: 'Important Legal Tips When Notarizing', 2: '公证时的重要法律提示'},
+  art4_tips_p1: {0: 'هناك عدة نقاط يجب الانتباه لها عند قيامك بتوثيق أي وثيقة:', 1: 'There are several points to pay attention to when notarizing any document:', 2: '公证任何文件时，需要注意以下几点：'},
+  art4_tips_h3_1: {0: 'تحقق من هوية الطرف الآخر', 1: 'Verify the Identity of the Other Party', 2: '验证另一方的身份'},
+  art4_tips_p2: {0: 'تأكد من أن الشخص الذي تتعاقد معه هو من تعتقد أنه. اطلب رؤية بطاقته الهوية وتحقق من بياناته قبل التوقيع على أي وثيقة.', 1: 'Make sure the person you are contracting with is who you think they are. Ask to see their ID card and verify their information before signing any document.', 2: '确保您与之订立合同的人是您认为的人。要求查看他们的身份证并在签署任何文件前验证其信息。'},
+  art4_tips_h3_2: {0: 'اقرأ جميع الشروط بعناية', 1: 'Read All Terms Carefully', 2: '仔细阅读所有条款'},
+  art4_tips_p3: {0: 'لا تسرع في توثيق الوثيقة بدون فهم كامل لمحتواها. اقرأ كل بند وشرط بعناية واطلب توضيحاً إذا لم تفهم أي شيء.', 1: 'Do not rush to notarize the document without fully understanding its content. Read each clause and condition carefully and ask for clarification if you do not understand anything.', 2: '不要急于在没有充分理解其内容的情况下公证文件。仔细阅读每条款并理解条件，如果您不理解任何内容，请寻求澄清。'},
+  art4_tips_h3_3: {0: 'احتفظ بنسخ من الوثائق', 1: 'Keep Copies of Documents', 2: '保留文件副本'},
+  art4_tips_p4: {0: 'احتفظ بنسخة موثقة من الوثيقة لنفسك وقدم الأصل للطرف الآخر إن لزم الأمر. النسخ الموثقة لها نفس قيمة الأصل قانونياً.', 1: 'Keep a notarized copy of the document for yourself and provide the original to the other party if necessary. Notarized copies have the same legal value as the original.', 2: '为自己保留文件的公证副本，如有必要将原件提供给另一方。公证副本与原件具有相同的法律价值。'},
+  art4_tips_h3_4: {0: 'افهم عملية الفسخ', 1: 'Understand the Revocation Process', 2: '了解撤销过程'},
+  art4_tips_p5: {0: 'قبل توقيع وكالة، تعرف على كيفية فسخها. كن متأكداً من شروط الإنهاء والفسخ وما هي الالتزامات المتبقية عند الفسخ.', 1: 'Before signing a power of attorney, learn how to revoke it. Be clear on the terms of termination and what obligations remain upon revocation.', 2: '在签署授权书之前，了解如何撤销它。清楚了解终止条款以及撤销时仍存在的义务。'},
+  art4_tips_h3_5: {0: 'استشر محامياً في الصفقات الكبيرة', 1: 'Consult a Lawyer for Major Transactions', 2: '就重大交易咨询律师'},
+  art4_tips_p6: {0: 'بالنسبة للصفقات الكبيرة أو المعقدة، لا تتردد في استشارة محامٍ متخصص قبل التوثيق. هذا يحميك من الأخطاء القانونية المستقبلية.', 1: 'For major or complex transactions, do not hesitate to consult a specialized lawyer before notarization. This protects you from future legal mistakes.', 2: '对于重大或复杂的交易，不要犹豫在公证前咨询专业律师。这可以保护您免于将来的法律错误。'},
+  art4_conclusion_h2: {0: 'الخاتمة', 1: 'Conclusion', 2: '结论'},
+  art4_conclusion_p1: {0: 'التوثيق والتصديق يلعبان دوراً محورياً في حماية حقوقك القانونية وضمان سلامة معاملاتك. مع التطور التكنولوجي والخدمات الإلكترونية المتاحة عبر منصة ناجز، أصبح التوثيق أسهل وأسرع من أي وقت مضى. استفد من هذه الخدمات لحماية استثماراتك وعقودك.', 1: 'Notarization and authentication play a crucial role in protecting your legal rights and ensuring the integrity of your transactions. With technological advancement and electronic services available through the Najiz platform, notarization has become easier and faster than ever. Take advantage of these services to protect your investments and contracts.', 2: '公证和认证在保护您的法律权利和确保交易完整性方面起着至关重要的作用。随着技术进步和通过Najiz平台提供的电子服务，公证变得比以往任何时候都更容易、更快速。利用这些服务来保护您的投资和合同。'},
+  art4_conclusion_p2: {0: 'إذا كنت بحاجة لاستشارة قانونية متخصصة حول التوثيق أو أي معاملة قانونية أخرى، فريقنا في شركة مشاري بندر بن جلوي جاهز لمساعدتك. لا تتردد في التواصل معنا عبر الواتس أو الاتصال المباشر.', 1: 'If you need specialized legal advice on notarization or any other legal matter, our team at Al Mashari Law Firm is ready to assist you. Do not hesitate to contact us via WhatsApp or direct call.', 2: '如果您需要关于公证或任何其他法律事项的专业法律建议，我们在Al Mashari律师事务所的团队已准备好协助您。请随时通过WhatsApp或直接电话与我们联系。'},
+  back_to_blog: {0: '← العودة للمدونة', 1: '← Back to Blog', 2: '← 返回博客'},
+  cta_h2: {0: 'هل تحتاج استشارة قانونية؟', 1: 'Need Legal Consultation?', 2: '需要法律咨询吗？'},
+  cta_p: {0: 'فريقنا القانوني جاهز لمساعدتك', 1: 'Our legal team is ready to assist you', 2: '我们的法律团队随时准备协助您'},
+  nav_cta: {0: 'احجز استشارة', 1: 'Book Consultation', 2: '预约咨询'},
+  firm_name: {0: 'شركة مشاري بندر بن جلوي', 1: 'Al Mashari Law Firm', 2: 'Al Mashari律师事务所'},
+  firm_sub: {0: 'للمحاماة والاستشارات القانونية', 1: 'Legal Consultants', 2: '法律顾问'},
+  nav_services: {0: 'خدماتنا', 1: 'Services', 2: '服务'},
+  nav_contracts: {0: 'عقود الشركات', 1: 'Corporate Contracts', 2: '公司合同'},
+  nav_faq: {0: 'الأسئلة الشائعة', 1: 'FAQ', 2: '常见问题'},
+  nav_team: {0: 'فريقنا', 1: 'Our Team', 2: '我们的团队'},
+  nav_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
+  nav_eservices: {0: 'الخدمات الإلكترونية', 1: 'E-Services', 2: '电子服务'},
+  nav_events: {0: 'فعاليتنا', 1: 'Events', 2: '活动'},
+  nav_cases_stats: {0: 'القضايا المنجزة', 1: 'Cases Handled', 2: '已处理的案件'},
+  nav_careers: {0: 'التوظيف', 1: 'Careers', 2: '招聘'},
+  nav_contact: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
+  footer_copyright: {0: '© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2026 Al Mashari Law Firm — All rights reserved', 2: '© 2026 Al Mashari律师事务所 — 版权所有'}
+};
+</script>
+<script src="lang.js"></script>
+<script>
+let lang = currentLang;
+function toggleLangDrop() { document.getElementById('langDropMenu').classList.toggle('open'); }
+document.addEventListener('click', function(e) {
+    if (!document.getElementById('langDrop').contains(e.target)) document.getElementById('langDropMenu').classList.remove('open');
+});
+function setLang(l) {
+    lang = l; currentLang = l;
+    const dir = l === 0 ? 'rtl' : 'ltr';
+    const langCode = l === 0 ? 'ar' : (l === 1 ? 'en' : 'zh');
+    document.documentElement.setAttribute('dir', dir);
+    document.documentElement.setAttribute('lang', langCode);
+    document.getElementById('langDropBtn').textContent = l === 0 ? '🇸🇦' : (l === 1 ? '🇬🇧' : '🇨🇳');
+    const allTranslations = Object.assign({}, commonTranslations, pageTranslations);
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (allTranslations[key] && allTranslations[key][l] !== undefined) {
+            if (el.tagName === 'INPUT' && el.type !== 'hidden') el.placeholder = allTranslations[key][l];
+            else el.innerHTML = allTranslations[key][l];
+        }
+    });
+    localStorage.setItem('siteLang', l);
+}
+window.addEventListener('load', function() {
+    const saved = localStorage.getItem('siteLang');
+    if (saved !== null) setLang(parseInt(saved)); else setLang(0);
+});
+</script>
+
+</body>
+</html>

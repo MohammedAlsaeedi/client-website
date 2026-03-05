@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>حجز موعد هاتفي — شركة مشاري بندر بن جلوي للمحاماة</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --navy: #1B2C6B; --navy-dark: #111d4a; --navy-mid: #223580;
+            --gold: #B8935A; --gold-light: #d4aa72; --gold-pale: #f5ede0;
+            --white: #ffffff; --off-white: #f8f6f2; --gray: #6b7280; --gray-dark: #374151; --border: #e5e1d9;
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; overflow-x: hidden; }
+        body { font-family: 'Cairo', sans-serif; color: var(--gray-dark); background: var(--white); overflow-x: hidden; line-height: 1.6; }
+        a { text-decoration: none; }
+        .navbar { position: fixed; inset: 0 0 auto 0; z-index: 1000; height: 90px; background: rgba(17,29,74,.97); backdrop-filter: blur(12px); border-bottom: 2px solid rgba(184,147,90,.45); display: flex; align-items: center; padding: 0 5%; }
+        .nav-inner { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+        .nav-logo { display: flex; align-items: center; gap: 11px; }
+        .nav-logo img { width: 60px; height: 60px; flex-shrink: 0; }
+        .nav-firm-name { font-size: 1.2rem; font-weight: 800; color: var(--gold-light); line-height: 1.2; }
+        .nav-firm-sub { font-size: .8rem; color: rgba(255,255,255,.55); }
+        .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; flex: 1; justify-content: center; }
+        .nav-links a { color: rgba(255,255,255,.82); font-size: 1rem; font-weight: 600; transition: color .2s; position: relative; padding-bottom: 2px; }
+        .nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
+        .nav-links a::after { content: ''; position: absolute; bottom: -2px; right: 0; left: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: right; transition: transform .25s; }
+        .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+        .nav-cta { background: var(--gold); color: var(--white); padding: 8px 20px; border-radius: 25px; font-size: .85rem; font-weight: 800; transition: all .25s; white-space: nowrap; }
+        .nav-cta:hover { background: var(--gold-light); }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; }
+        .mobile-drawer { position: fixed; top: 90px; inset-inline: 0; background: var(--navy-dark); border-top: 1px solid rgba(184,147,90,.25); padding: 24px 5%; z-index: 999; transform: translateY(-8px); opacity: 0; visibility: hidden; transition: all .3s; }
+        .mobile-drawer.open { transform: translateY(0); opacity: 1; visibility: visible; }
+        .mobile-drawer ul { list-style: none; }
+        .mobile-drawer li { border-bottom: 1px solid rgba(255,255,255,.07); }
+        .mobile-drawer a { display: block; padding: 12px 0; color: rgba(255,255,255,.85); font-size: .95rem; font-weight: 600; }
+        .page-hero { padding: 130px 5% 70px; background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #2a4090 100%); position: relative; overflow: hidden; }
+        .page-hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(184,147,90,.08) 1px, transparent 1px); background-size: 40px 40px; }
+        .page-hero-content { position: relative; z-index: 2; max-width: 700px; }
+        .page-breadcrumb { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.55); font-size: .85rem; margin-bottom: 18px; }
+        .page-breadcrumb a { color: rgba(255,255,255,.55); }
+        .page-breadcrumb a:hover { color: var(--gold-light); }
+        .page-breadcrumb span { color: var(--gold-light); }
+        .page-hero h1 { font-size: clamp(1.8rem, 3.5vw, 3rem); font-weight: 900; color: var(--white); margin-bottom: 16px; line-height: 1.25; }
+        .page-hero h1 em { color: var(--gold-light); font-style: normal; }
+        .page-hero-desc { font-size: 1rem; color: rgba(255,255,255,.75); line-height: 1.9; max-width: 600px; }
+        footer { background: var(--navy-dark); color: rgba(255,255,255,.6); text-align: center; padding: 30px 5%; font-size: .85rem; border-top: 1px solid rgba(184,147,90,.2); }
+        footer a { color: var(--gold-light); }
+        .whatsapp-fab { position: fixed; bottom: 28px; left: 28px; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 999; box-shadow: 0 6px 20px rgba(37,211,102,.4); transition: transform .25s; }
+        .whatsapp-fab:hover { transform: scale(1.1); }
+        .lang-drop { position: relative; display: flex; align-items: center; }
+        .lang-drop-btn { background: none; border: 2px solid rgba(255,255,255,.25); border-radius: 10px; cursor: pointer; font-size: 1.4rem; line-height: 1; padding: 4px 8px; transition: all .2s; color: #fff; }
+        .lang-drop-btn:hover { border-color: var(--gold); transform: scale(1.05); }
+        .lang-drop-menu { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--navy); border: 1px solid var(--gold); border-radius: 10px; padding: 6px; display: none; flex-direction: column; gap: 4px; min-width: 130px; z-index: 9999; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+        .lang-drop-menu.open { display: flex; }
+        .lang-drop-menu button { background: none; border: none; cursor: pointer; font-size: 1rem; padding: 6px 10px; border-radius: 6px; text-align: right; color: #fff; white-space: nowrap; font-family: inherit; transition: background .15s; }
+        .lang-drop-menu button:hover { background: rgba(184,147,90,.2); }
+        @media (max-width: 900px) { .nav-links { display: none; } .hamburger { display: flex; } }
+        @media (max-width: 600px) { .nav-cta { display: none; } }
+        @media(max-width:768px){ .page-hero{padding:110px 5% 50px} .page-hero h1{font-size:clamp(1.3rem,5vw,1.9rem)} }
+        @media(max-width:480px){ .page-breadcrumb{font-size:.75rem;flex-wrap:wrap} }
+
+        /* FORM PAGE STYLES */
+        .form-section { padding: 80px 5% 60px; background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #2a4090 100%); position: relative; }
+        .form-section::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(184,147,90,.06) 1px, transparent 1px); background-size: 40px 40px; }
+        .form-wrapper { max-width: 650px; margin: 0 auto; position: relative; z-index: 2; }
+        .form-card { background: rgba(255,255,255,.04); border: 1px solid rgba(184,147,90,.2); border-radius: 24px; padding: 38px; }
+        .form-card-header { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+        .form-card-icon { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--gold), var(--gold-light)); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .form-card-header h2 { color: var(--white); font-size: 1.2rem; font-weight: 800; }
+        .form-card-desc { color: rgba(255,255,255,.5); font-size: .85rem; margin-bottom: 28px; line-height: 1.7; }
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; color: rgba(255,255,255,.6); font-size: .8rem; margin-bottom: 7px; font-weight: 600; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; background: rgba(255,255,255,.07); border: 1px solid rgba(184,147,90,.25); border-radius: 10px; padding: 11px 14px; color: white; font-family: inherit; font-size: .88rem; outline: none; transition: border-color .3s; }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--gold); }
+        .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,.25); }
+        .form-group select option { background: var(--navy-dark); color: white; }
+        .form-group textarea { height: 110px; resize: vertical; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .form-group input[type="file"] { padding: 9px 14px; cursor: pointer; }
+        .form-group input[type="file"]::-webkit-file-upload-button { background: var(--gold); color: var(--navy); border: none; padding: 6px 14px; border-radius: 6px; font-family: inherit; font-weight: 700; font-size: .78rem; cursor: pointer; margin-left: 10px; }
+        .form-submit-btn { width: 100%; background: var(--gold); color: var(--navy); border: none; padding: 14px; border-radius: 30px; font-size: .95rem; font-weight: 900; cursor: pointer; font-family: inherit; transition: all .3s; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px; }
+        .form-submit-btn:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(184,147,90,.3); }
+        .form-success { display: none; text-align: center; padding: 40px 20px; }
+        .form-success .check-circle { width: 70px; height: 70px; border-radius: 50%; background: #22c55e; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; }
+        .form-success h4 { color: var(--white); font-size: 1.1rem; margin-bottom: 8px; }
+        .form-success p { color: rgba(255,255,255,.55); font-size: .88rem; line-height: 1.7; }
+        .form-back { display: inline-flex; align-items: center; gap: 8px; color: var(--gold-light); font-size: .88rem; font-weight: 700; margin-top: 30px; text-align: center; }
+        .form-back:hover { color: var(--gold); }
+        @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .form-card { padding: 24px 18px; } }
+
+</style>
+</head>
+<body>
+<nav class="navbar">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">
+<img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png"/>
+<div>
+<div class="nav-firm-name" data-i18n="firm_name">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub" data-i18n="firm_sub">للمحاماة والاستشارات القانونية</div>
+</div>
+</a>
+<ul class="nav-links">
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+<div style="display:flex;align-items:center;gap:10px;">
+<div class="lang-drop" id="langDrop">
+<button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
+<div class="lang-drop-menu" id="langDropMenu">
+<button data-i18n="lang_btn_ar" data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦 العربية</button>
+<button data-lang="1" onclick="setLang(1);toggleLangDrop()">🇬🇧 English</button>
+<button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
+</div>
+</div>
+<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank"><span data-i18n="nav_cta">احجز استشارة</span></a>
+<div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
+<span></span><span></span><span></span>
+</div>
+</div>
+</div>
+</nav>
+<div class="mobile-drawer" id="drawer">
+<ul>
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+</div>
+<div class="page-hero">
+<div class="page-hero-content">
+<div class="page-breadcrumb">
+<a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
+<span>←</span>
+<a data-i18n="breadcrumb_eservices" href="e-services.html">الخدمات الإلكترونية</a>
+<span>←</span>
+<span data-i18n="bc_form_phone">حجز موعد هاتفي</span>
+</div>
+<h1 data-i18n="hero_h1">حجز <em>موعد هاتفي</em></h1>
+<p class="page-hero-desc" data-i18n="hero_desc">احجز وقتاً محدداً لاستشارة هاتفية مع محامينا بما يناسب جدولك الزمني</p>
+</div>
+</div>
+<!-- FORM SECTION -->
+<section class="form-section">
+<div class="form-wrapper">
+<div class="form-card">
+<div class="form-card-header">
+<span class="form-card-icon"><svg fill="none" height="22" stroke="var(--navy)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91A16 16 0 0 0 14.09 15.9l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+<h2 data-i18n="form_title">حجز موعد هاتفي</h2>
+</div>
+<p class="form-card-desc" data-i18n="form_desc">احجز وقتاً لاستشارة هاتفية مع محامينا</p>
+<form id="serviceForm" onsubmit="handleServiceForm(event, 'حجز موعد هاتفي')">
+<div class="form-row">
+<div class="form-group"><label data-i18n="f_name">الاسم الكامل</label><input type="text" name="name" required data-i18n-ph="f_name_ph" placeholder="أدخل اسمك الكامل"></div>
+<div class="form-group"><label data-i18n="f_phone">رقم الجوال</label><input type="tel" name="phone" required data-i18n-ph="f_phone_ph" placeholder="05XXXXXXXX"></div>
+</div>
+<div class="form-group"><label data-i18n="f_email">البريد الإلكتروني</label><input type="email" name="email" required data-i18n-ph="f_email_ph" placeholder="example@email.com"></div>
+<div class="form-row">
+<div class="form-group"><label data-i18n="f_date">التاريخ المفضل</label><input type="date" name="date" required></div>
+<div class="form-group"><label data-i18n="f_time">الوقت المفضل</label>
+<select name="time" required><option value="" data-i18n="f_time_ph">اختر الوقت...</option><option value="09:00-10:00">09:00 - 10:00</option><option value="10:00-11:00">10:00 - 11:00</option><option value="11:00-12:00">11:00 - 12:00</option><option value="01:00-02:00">01:00 - 02:00</option><option value="02:00-03:00">02:00 - 03:00</option><option value="03:00-04:00">03:00 - 04:00</option></select></div>
+</div>
+<div class="form-group"><label data-i18n="f_topic">موضوع الاستشارة</label>
+<select name="topic" required><option value="" data-i18n="f_topic_ph">اختر الموضوع...</option><option value="استشارة تجارية" data-i18n="f_topic_1">استشارة تجارية</option><option value="استشارة عمالية" data-i18n="f_topic_2">استشارة عمالية</option><option value="استشارة عقارية" data-i18n="f_topic_3">استشارة عقارية</option><option value="استشارة جنائية" data-i18n="f_topic_4">استشارة جنائية</option><option value="أحوال شخصية" data-i18n="f_topic_5">أحوال شخصية</option><option value="أخرى" data-i18n="f_topic_6">أخرى</option></select></div>
+<div class="form-group"><label data-i18n="f_details">تفاصيل إضافية</label><textarea name="details" data-i18n-ph="f_details_ph" placeholder="اكتب وصفاً مختصراً لاستشارتك..."></textarea></div>
+<button type="submit" class="form-submit-btn" data-i18n="f_submit">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="18"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+إرسال طلب الحجز
+</button>
+</form>
+<div class="form-success" id="formSuccess">
+<div class="check-circle"><svg fill="none" height="30" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="30"><polyline points="20 6 9 17 4 12"/></svg></div>
+<h4 data-i18n="f_success_title">تم إرسال طلبك بنجاح!</h4>
+<p data-i18n="f_success_msg">سيتواصل معك فريقنا لتأكيد الموعد في أقرب وقت</p>
+</div>
+<div style="text-align:center;margin-top:24px;">
+<a class="form-back" data-i18n="back_link" href="e-services.html">← العودة للخدمات الإلكترونية</a>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px 22px;margin-bottom:18px;">
+<a data-i18n="nav_services" href="index.html#services" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">خدماتنا</a>
+<a data-i18n="nav_contracts" href="contracts.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">عقود الشركات</a>
+<a data-i18n="nav_faq" href="faq.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">الأسئلة الشائعة</a>
+<a data-i18n="nav_team" href="team.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">فريقنا</a>
+<a data-i18n="nav_blog" href="blog.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">المدونة</a>
+<a data-i18n="nav_eservices" href="e-services.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">الخدمات الإلكترونية</a>
+<a data-i18n="nav_events" href="events.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">فعاليتنا</a>
+<a data-i18n="nav_cases_stats" href="cases-stats.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">القضايا المنجزة</a>
+<a data-i18n="nav_careers" href="careers.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">التوظيف</a>
+<a data-i18n="nav_contact" href="index.html#booking" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">تواصل معنا</a>
+</div>
+<p data-i18n="footer_copyright">© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+</footer>
+<a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank">
+<svg fill="white" height="28" viewbox="0 0 24 24" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+<script>
+const pageTranslations = {
+    breadcrumb_home:{0:"الرئيسية",1:"Home",2:"主页"},
+    breadcrumb_eservices:{0:"الخدمات الإلكترونية",1:"E-Services",2:"电子服务"},
+    footer_copyright:{0:"© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة",1:"© 2026 Al Meshary Bin Bandar Bin Jaloui Law Firm — All rights reserved",2:"© 2026 美沙里·本·班达尔·本·贾卢伊律师事务所——版权所有"},
+    hero_h1:{0:'حجز <em>موعد هاتفي</em>',1:'Book a <em>Phone Appointment</em>',2:'预约<em>电话咨询</em>'},
+    hero_desc:{0:'احجز وقتاً محدداً لاستشارة هاتفية مع محامينا بما يناسب جدولك الزمني',1:'Book a specific time for a phone consultation with our lawyers to suit your schedule',2:'预约与我们律师进行电话咨询的特定时间，以配合您的日程安排'},
+    bc_form_phone:{0:'حجز موعد هاتفي',1:'Phone Appointment',2:'电话预约'},
+    form_title:{0:'حجز موعد هاتفي',1:'Book a Phone Appointment',2:'预约电话咨询'},
+    form_desc:{0:'احجز وقتاً لاستشارة هاتفية مع محامينا',1:'Book a time for a phone consultation with our lawyers',2:'预约与我们律师进行电话咨询的时间'},
+    f_name:{0:'الاسم الكامل',1:'Full Name',2:'全名'},f_name_ph:{0:'أدخل اسمك الكامل',1:'Enter your full name',2:'输入您的全名'},
+    f_phone:{0:'رقم الجوال',1:'Phone Number',2:'手机号码'},f_phone_ph:{0:'05XXXXXXXX',1:'05XXXXXXXX',2:'05XXXXXXXX'},
+    f_email:{0:'البريد الإلكتروني',1:'Email',2:'电子邮件'},f_email_ph:{0:'example@email.com',1:'example@email.com',2:'example@email.com'},
+    f_date:{0:'التاريخ المفضل',1:'Preferred Date',2:'首选日期'},
+    f_time:{0:'الوقت المفضل',1:'Preferred Time',2:'首选时间'},f_time_ph:{0:'اختر الوقت...',1:'Select time...',2:'选择时间...'},
+    f_topic:{0:'موضوع الاستشارة',1:'Consultation Topic',2:'咨询主题'},f_topic_ph:{0:'اختر الموضوع...',1:'Select topic...',2:'选择主题...'},
+    f_topic_1:{0:'استشارة تجارية',1:'Commercial',2:'商业'},f_topic_2:{0:'استشارة عمالية',1:'Labor',2:'劳动'},f_topic_3:{0:'استشارة عقارية',1:'Real Estate',2:'房地产'},f_topic_4:{0:'استشارة جنائية',1:'Criminal',2:'刑事'},f_topic_5:{0:'أحوال شخصية',1:'Personal Status',2:'个人身份'},f_topic_6:{0:'أخرى',1:'Other',2:'其他'},
+    f_details:{0:'تفاصيل إضافية',1:'Additional Details',2:'附加详情'},f_details_ph:{0:'اكتب وصفاً مختصراً لاستشارتك...',1:'Briefly describe your consultation...',2:'简要描述您的咨询...'},
+    f_submit:{0:'إرسال طلب الحجز',1:'Submit Booking Request',2:'提交预约请求'},
+    f_success_title:{0:'تم إرسال طلبك بنجاح!',1:'Request sent successfully!',2:'请求发送成功！'},
+    f_success_msg:{0:'سيتواصل معك فريقنا لتأكيد الموعد في أقرب وقت',1:'Our team will contact you to confirm the appointment soon',2:'我们的团队将尽快与您联系确认预约'},
+    back_link:{0:'← العودة للخدمات الإلكترونية',1:'← Back to E-Services',2:'← 返回电子服务'},
+};
+
+function handleServiceForm(e, serviceName) {
+    e.preventDefault();
+    const form = e.target;
+    const card = form.closest('.form-card');
+    const successDiv = card.querySelector('.form-success');
+    const formData = new FormData(form);
+    let bodyParts = [];
+    bodyParts.push('الخدمة المطلوبة: ' + serviceName);
+    bodyParts.push('---');
+    for (let [key, value] of formData.entries()) {
+        if (key === 'documents') continue;
+        const label = form.querySelector('[name="' + key + '"]')?.closest('.form-group')?.querySelector('label')?.textContent || key;
+        if (value) bodyParts.push(label + ': ' + value);
+    }
+    const subject = encodeURIComponent('طلب خدمة إلكترونية — ' + serviceName);
+    const body = encodeURIComponent(bodyParts.join('\n'));
+    window.location.href = 'mailto:info@lawmeshari.com?subject=' + subject + '&body=' + body;
+    form.style.display = 'none';
+    successDiv.style.display = 'block';
+    setTimeout(() => { form.style.display = ''; successDiv.style.display = 'none'; form.reset(); }, 6000);
+}
+function applyFormPlaceholders() {
+    const lang = parseInt(localStorage.getItem('siteLang') || '0');
+    document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+        const key = el.getAttribute('data-i18n-ph');
+        const t = pageTranslations[key] || {};
+        if (t[lang]) el.placeholder = t[lang];
+    });
+}
+document.addEventListener('DOMContentLoaded', () => setTimeout(applyFormPlaceholders, 100));
+
+
+function toggleLangDrop(){document.getElementById('langDropMenu').classList.toggle('open')}
+document.addEventListener('click',function(e){var d=document.getElementById('langDrop');if(d&&!d.contains(e.target)){var m=document.getElementById('langDropMenu');if(m)m.classList.remove('open')}});
+
+</script>
+<script src="lang.js"></script>
+<script>
+if(typeof setLang==='function'){var _oSL=setLang;setLang=function(l){_oSL(l);setTimeout(applyFormPlaceholders,50)};}
+setTimeout(applyFormPlaceholders,200);
+var _lBtn=document.getElementById('langDropBtn');
+if(_lBtn){var _sl=parseInt(localStorage.getItem('siteLang')||'0');_lBtn.textContent=['🇸🇦','🇬🇧','🇨🇳'][_sl];}
+</script>
+</body>
+</html>

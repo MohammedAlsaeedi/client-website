@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="page_title">العقود التجارية - شركة مشاري بندر بن جلوي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root { --navy: #1B2C6B; --navy-dark: #111d4a; --navy-mid: #223580; --gold: #B8935A; --gold-light: #d4aa72; --gold-pale: #f5ede0; --white: #ffffff; --off-white: #f8f6f2; --gray-light: #e5e7eb; --gray: #6b7280; --gray-dark: #374151; --border: #e5e1d9; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { font-family: 'Cairo', sans-serif; color: var(--gray-dark); background: var(--white); overflow-x: hidden; line-height: 1.6; }
+a { text-decoration: none; }
+
+/* NAVBAR */
+.navbar { position: fixed; inset: 0 0 auto 0; z-index: 1000; height: 90px; background: rgba(17,29,74,.97); backdrop-filter: blur(12px); border-bottom: 2px solid rgba(184,147,90,.45); display: flex; align-items: center; padding: 0 5%; }
+.nav-inner { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.nav-logo { display: flex; align-items: center; gap: 11px; }
+.nav-logo img { width: 60px; height: 60px; flex-shrink: 0; }
+.nav-firm-name { font-size: 1.2rem; font-weight: 800; color: var(--gold-light); line-height: 1.2; }
+.nav-firm-sub { font-size: .8rem; color: rgba(255,255,255,.55); }
+.nav-links { display: flex; align-items: center; gap: 20px; list-style: none; flex: 1; justify-content: center; }
+.nav-links a { color: rgba(255,255,255,.82); font-size: .95rem; font-weight: 600; transition: color .2s; position: relative; padding-bottom: 2px; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
+.nav-links a::after { content: ''; position: absolute; bottom: -2px; right: 0; left: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: right; transition: transform .25s; }
+.nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+.nav-controls { display: flex; align-items: center; gap: 16px; }
+.nav-cta { background: var(--gold); color: var(--white); padding: 8px 20px; border-radius: 25px; font-size: .85rem; font-weight: 800; transition: all .25s; white-space: nowrap; }
+.nav-cta:hover { background: var(--gold-light); }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; }
+.mobile-drawer { position: fixed; top: 90px; inset-inline: 0; background: var(--navy-dark); border-top: 1px solid rgba(184,147,90,.25); padding: 24px 5%; z-index: 999; transform: translateY(-8px); opacity: 0; visibility: hidden; transition: all .3s; }
+.mobile-drawer.open { transform: translateY(0); opacity: 1; visibility: visible; }
+.mobile-drawer ul { list-style: none; }
+.mobile-drawer li { border-bottom: 1px solid rgba(255,255,255,.07); }
+.mobile-drawer a { display: block; padding: 12px 0; color: rgba(255,255,255,.85); font-size: .95rem; font-weight: 600; }
+
+/* PAGE HERO */
+.page-hero { padding: 130px 5% 65px; background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #2a4090 100%); position: relative; overflow: hidden; }
+.page-hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(184,147,90,.08) 1px, transparent 1px); background-size: 40px 40px; }
+.page-hero-content { position: relative; z-index: 2; max-width: 700px; }
+.page-breadcrumb { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.55); font-size: .85rem; margin-bottom: 18px; }
+.page-breadcrumb a { color: var(--gold-light); }
+.page-breadcrumb span { color: rgba(255,255,255,.3); }
+.page-hero h1 { font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 900; color: white; line-height: 1.3; margin-bottom: 14px; }
+.page-hero p { color: rgba(255,255,255,.7); font-size: 1rem; line-height: 1.7; max-width: 600px; }
+
+/* ARTICLE CONTENT */
+.article-container { max-width: 820px; margin: 0 auto; padding: 60px 5%; }
+.article-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 30px; flex-wrap: wrap; }
+.article-tag { background: var(--gold-pale); color: var(--gold); font-size: .8rem; font-weight: 800; padding: 4px 14px; border-radius: 15px; }
+.article-date { color: var(--gray); font-size: .85rem; }
+.article-body h2 { font-size: 1.35rem; font-weight: 800; color: var(--navy); margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--gold-pale); }
+.article-body h3 { font-size: 1.1rem; font-weight: 700; color: var(--navy-mid); margin: 24px 0 12px; }
+.article-body p { font-size: .95rem; color: var(--gray-dark); line-height: 1.9; margin-bottom: 16px; }
+.article-body ul, .article-body ol { margin: 12px 0 16px 24px; }
+.article-body li { font-size: .93rem; line-height: 1.8; margin-bottom: 8px; color: var(--gray-dark); }
+.article-body strong { color: var(--navy); }
+.info-box { background: var(--off-white); border-right: 4px solid var(--gold); border-radius: 8px; padding: 20px 24px; margin: 20px 0; }
+.info-box p { margin-bottom: 0; }
+.back-to-blog { display: inline-flex; align-items: center; gap: 8px; color: var(--gold); font-weight: 700; font-size: .95rem; margin-top: 40px; transition: color .2s; }
+.back-to-blog:hover { color: var(--navy); }
+
+/* CTA SECTION */
+.cta-section { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); padding: 50px 5%; text-align: center; margin-top: 60px; }
+.cta-section h2 { color: white; font-size: 1.6rem; font-weight: 800; margin-bottom: 16px; }
+.cta-section p { color: rgba(255,255,255,.75); font-size: .95rem; margin-bottom: 24px; }
+.cta-button { background: var(--gold); color: var(--white); padding: 12px 32px; border-radius: 30px; font-weight: 800; font-size: .95rem; transition: all .25s; display: inline-block; }
+.cta-button:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+/* SECTION */
+.section-pad { padding: 70px 5%; max-width: 1280px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 45px; }
+.tag { display: inline-block; background: var(--gold-pale); color: var(--gold); font-size: .82rem; font-weight: 800; padding: 5px 16px; border-radius: 20px; margin-bottom: 12px; }
+.section-title { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 900; color: var(--navy); }
+.gold-bar { width: 50px; height: 4px; background: var(--gold); border-radius: 2px; margin: 12px auto 0; }
+
+/* LANG DROPDOWN */
+.lang-drop { position: relative; display: flex; align-items: center; }
+.lang-drop-btn { background: none; border: 2px solid rgba(255,255,255,.25); border-radius: 10px; cursor: pointer; font-size: 1.4rem; line-height: 1; padding: 4px 8px; transition: all .2s; color: #fff; }
+.lang-drop-btn:hover { border-color: var(--gold); transform: scale(1.05); }
+.lang-drop-menu { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--navy); border: 1px solid var(--gold); border-radius: 10px; padding: 6px; display: none; flex-direction: column; gap: 4px; min-width: 130px; z-index: 9999; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+.lang-drop-menu.open { display: flex; }
+.lang-drop-menu button { background: none; border: none; cursor: pointer; font-size: 1rem; padding: 6px 10px; border-radius: 6px; text-align: right; color: #fff; white-space: nowrap; font-family: inherit; transition: background .15s; }
+.lang-drop-menu button:hover { background: rgba(184,147,90,.2); }
+
+/* FOOTER */
+footer { background: var(--navy-dark); color: rgba(255,255,255,.6); text-align: center; padding: 30px 5%; font-size: .85rem; border-top: 1px solid rgba(184,147,90,.2); }
+footer a { color: var(--gold-light); }
+.whatsapp-fab { position: fixed; bottom: 28px; left: 28px; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 999; box-shadow: 0 6px 20px rgba(37,211,102,.4); transition: transform .25s; }
+.whatsapp-fab:hover { transform: scale(1.1); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) { .nav-links { display: none; } .hamburger { display: flex; } }
+@media (max-width: 768px) {
+    .page-hero { padding: 110px 5% 50px; }
+    .page-hero h1 { font-size: clamp(1.3rem,5vw,1.9rem); }
+    .article-container { padding: 40px 5%; }
+    .article-body h2 { font-size: 1.2rem; }
+}
+@media (max-width: 600px) { .nav-cta { display: none; } }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">
+<img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png" style="width:60px;height:60px;object-fit:contain;"/>
+<div class="nav-logo-text">
+<div class="nav-firm-name" data-i18n="firm_name">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub" data-i18n="firm_sub">للمحاماة والاستشارات القانونية</div>
+</div>
+</a>
+<ul class="nav-links">
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html" class="active">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+<div class="nav-controls">
+<div class="lang-drop" id="langDrop">
+<button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
+<div class="lang-drop-menu" id="langDropMenu">
+<button data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦 العربية</button>
+<button data-lang="1" onclick="setLang(1);toggleLangDrop()">🇬🇧 English</button>
+<button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
+</div>
+</div>
+<a class="nav-cta" data-i18n="nav_cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
+<div class="hamburger" onclick="document.querySelector('.mobile-drawer').classList.toggle('open')">
+<span></span><span></span><span></span>
+</div>
+</div>
+</div>
+</nav>
+
+<div class="mobile-drawer">
+<ul>
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+</div>
+
+<section class="page-hero">
+<div class="page-hero-content">
+<div class="page-breadcrumb">
+<a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
+<span>›</span>
+<a data-i18n="breadcrumb_blog" href="blog.html">المدونة</a>
+<span>›</span>
+<span data-i18n="breadcrumb_article2">العقود التجارية</span>
+</div>
+<h1 data-i18n="art2_hero_h1">العقود التجارية: أسسها وأحكامها</h1>
+<p data-i18n="art2_hero_p">كل ما تحتاج معرفته عن إبرام العقود التجارية في المملكة</p>
+</div>
+</section>
+
+<div class="article-container">
+<div class="article-meta">
+<span class="article-tag" data-i18n="art_category_contracts">العقود التجارية</span>
+<span class="article-date" data-i18n="art_date_2025">5 مارس 2026</span>
+</div>
+
+<article class="article-body">
+
+<h2 data-i18n="art2_intro_h2">المقدمة</h2>
+
+<p data-i18n="art2_intro_p1">تعتبر العقود التجارية الأساس الذي تقوم عليه جميع المعاملات التجارية في المملكة العربية السعودية. فهي الأداة القانونية التي تنظم العلاقة بين الأطراف المتعاقدة وتحدد التزاماتهم وحقوقهم بشكل واضح ومحدد. ويتم تنظيم العقود التجارية في المملكة من خلال نظام المعاملات المدنية، الذي يوفر إطاراً شاملاً وقوياً لحماية حقوق جميع الأطراف.</p>
+
+<p data-i18n="art2_intro_p2">العقد التجاري هو اتفاق بين طرفين أو أكثر بقصد إنشاء التزامات قانونية. وللعقد دور حاسم في الأنشطة الاقتصادية، حيث يوفر الأمان القانوني والاستقرار الذي يحتاجه رجال الأعمال والمؤسسات لممارسة أنشطتهم التجارية بثقة واطمئنان. في هذا المقال سنشرح أركان العقد وأنواعه والبنود الأساسية التي يجب أن تتضمنها العقود التجارية.</p>
+
+<div class="info-box">
+<p data-i18n="art2_info_intro">ملاحظة مهمة: اتباع الإجراءات الصحيحة عند إبرام العقود يحمي مصالح أطرافها ويقلل من النزاعات والخلافات المستقبلية. ننصح بطلب استشارة قانونية قبل التوقيع على أي عقد تجاري مهم.</p>
+</div>
+
+<h2 data-i18n="art2_elements_h2">أركان العقد</h2>
+
+<p data-i18n="art2_elements_intro">لكي يكون العقد صحيحاً وملزماً قانوناً، يجب أن تتوفر فيه عدة أركان أساسية. عدم توفر أي من هذه الأركان قد يؤدي إلى بطلان العقد أو عدم نفاذه:</p>
+
+<h3 data-i18n="art2_elements_consent">الرضا (Consent)</h3>
+<p data-i18n="art2_elements_consent_desc">يجب أن يكون هناك توافق إرادة بين الأطراف المتعاقدة على جميع عناصر العقد. يجب أن يكون الرضا حراً وغير مجبور، خالياً من أي إكراه أو احتيال أو تدليس. القانون يعتبر العقد الذي يتم تحت إكراه غير صحيح وقابل للفسخ.</p>
+
+<h3 data-i18n="art2_elements_subject">المحل (Subject Matter)</h3>
+<p data-i18n="art2_elements_subject_desc">يجب أن يكون محل العقد معروفاً وممكناً. محل العقد هو الالتزام الذي يتعهد به كل طرف. فمثلاً، في عقد البيع، محل العقد هو نقل الملكية والسعر. يجب أن يكون المحل محدداً بطريقة تمكن الأطراف من معرفة التزاماتهم بالضبط.</p>
+
+<h3 data-i18n="art2_elements_cause">السبب (Cause)</h3>
+<p data-i18n="art2_elements_cause_desc">يقصد به الغرض أو الحكمة من العقد. يجب أن يكون السبب مشروعاً وقانونياً. على سبيل المثال، عقد بيع مخدرات غير مشروع لأن سببه غير قانوني. إذا كان السبب غير مشروع أو غير أخلاقي، فإن العقد يكون باطلاً.</p>
+
+<div class="info-box">
+<p data-i18n="art2_info_elements">أن توفر أركان العقد الثلاثة (الرضا والمحل والسبب) هو شرط أساسي لصحة العقد. عند صياغة عقد تجاري، يجب التأكد من وضوح هذه الأركان وتوثيقها بشكل دقيق.</p>
+</div>
+
+<h2 data-i18n="art2_types_h2">أنواع العقود التجارية</h2>
+
+<p data-i18n="art2_types_intro">هناك عدة أنواع من العقود التجارية الشائعة في الممارسة العملية. كل نوع له خصائصه وأحكامه القانونية:</p>
+
+<h3 data-i18n="art2_type_sale_title">عقد البيع (Sale Contract)</h3>
+<p data-i18n="art2_type_sale_desc">هو أكثر العقود التجارية شيوعاً. يتم فيه نقل ملكية سلعة أو منتج من البائع إلى المشتري مقابل دفع ثمن محدد. يجب أن يتضمن العقد وصفاً دقيقاً للسلعة والسعر وشروط الدفع والتسليم وحقوق كل طرف.</p>
+
+<h3 data-i18n="art2_type_lease_title">عقد الإيجار (Lease Contract)</h3>
+<p data-i18n="art2_type_lease_desc">يسمح باستخدام عقار أو منقول معين مقابل دفع أجرة محددة. يحدد العقد مدة الإيجار والأجرة والالتزامات والتزامات المستأجر والمؤجر، وشروط الصيانة والإصلاح والتأمين.</p>
+
+<h3 data-i18n="art2_type_construction_title">عقد المقاولة (Construction/Services Contract)</h3>
+<p data-i18n="art2_type_construction_desc">يتم فيه الاتفاق على تنفيذ عمل معين أو تقديم خدمة محددة. يشمل ذلك البناء والإنشاء والتصميم والإصلاح والصيانة والاستشارات وغيرها. يجب أن يحدد العقد نطاق العمل والمواعيد النهائية والمقابل المالي وشروط الدفع.</p>
+
+<h3 data-i18n="art2_type_agency_title">عقد الوكالة (Agency Contract)</h3>
+<p data-i18n="art2_type_agency_desc">يقوم بموجبه شخص (الوكيل) بتمثيل شخص آخر (الموكل) في التعاملات والعقود. تحدد الوكالة صلاحيات الوكيل وحدود سلطته وحقوقه والتزاماته تجاه الموكل.</p>
+
+<h3 data-i18n="art2_type_supply_title">عقد التوريد (Supply Contract)</h3>
+<p data-i18n="art2_type_supply_desc">يتم بموجبه توريد كميات محددة من المواد أو المنتجات على فترات زمنية معينة. يحدد العقد الكميات والأسعار وجدول التسليم والجودة والمواصفات وشروط الدفع والتعديلات المحتملة للأسعار.</p>
+
+<h3 data-i18n="art2_type_franchise_title">عقد الامتياز التجاري (Franchise Contract)</h3>
+<p data-i18n="art2_type_franchise_desc">يعطي أحد الأطراف (الممنوح) الحق في استخدام الاسم التجاري والعلامة والنموذج التجاري لطرف آخر (المانح). يحدد العقد الرسوم والالتزامات والحقوق والواجبات والمدة والمنطقة الجغرافية.</p>
+
+<h2 data-i18n="art2_terms_h2">البنود الأساسية في العقد التجاري</h2>
+
+<p data-i18n="art2_terms_intro">يجب أن يتضمن أي عقد تجاري احترافي البنود الأساسية التالية لضمان وضوح الالتزامات وحماية حقوق الأطراف:</p>
+
+<h3 data-i18n="art2_terms_parties">تحديد الأطراف (Identification of Parties)</h3>
+<p data-i18n="art2_terms_parties_desc">يجب أن يوضح العقد هوية جميع الأطراف بالكامل، بما في ذلك الأسماء والعناوين والبيانات الشخصية، وتحديد سمتهم القانونية (فرد، شركة، إلخ). هذا يضمن عدم الالتباس بشأن من هم طرف في العقد.</p>
+
+<h3 data-i18n="art2_terms_scope">نطاق العمل (Scope of Work)</h3>
+<p data-i18n="art2_terms_scope_desc">يجب أن يحدد العقد بوضوح ودقة ما سيتم إنجازه أو توريده. يجب أن تكون المواصفات والكميات والجودة والمعايير محددة بشكل دقيق لتجنب أي التباس أو خلاف في المستقبل.</p>
+
+<h3 data-i18n="art2_terms_price">التسعير والدفع (Pricing and Payment)</h3>
+<p data-i18n="art2_terms_price_desc">يجب أن يذكر العقد السعر الإجمالي وطريقة الحساب وشروط الدفع (نقداً، بشيك، تحويل بنكي) والآجال الزمنية للدفع والفائدة على التأخير وحدود أي رسوم إضافية.</p>
+
+<h3 data-i18n="art2_terms_duration">المدة والتسليم (Duration and Delivery)</h3>
+<p data-i18n="art2_terms_duration_desc">يجب أن يحدد العقد متى يبدأ وينتهي الالتزام، ومتى يتم التسليم أو تقديم الخدمة. يجب تحديد تواريخ محددة وقابلة للقياس لتجنب النزاعات حول عدم الوفاء بالموعد.</p>
+
+<h3 data-i18n="art2_terms_termination">الإنهاء والفسخ (Termination)</h3>
+<p data-i18n="art2_terms_termination_desc">يجب أن يوضح العقد تحت أي ظروف يمكن إنهاء العقد، وكيفية الإنهاء، ومدة الإشعار المطلوبة، والالتزامات المتبقية بعد الإنهاء، وأي عقوبات أو تعويضات قد تترتب على الإنهاء المبكر.</p>
+
+<h3 data-i18n="art2_terms_governing_law">القانون الواجب التطبيق (Governing Law)</h3>
+<p data-i18n="art2_terms_governing_law_desc">يجب أن ينص العقد على أن القانون السعودي هو الذي يحكم تفسير وتنفيذ العقد. هذا يضمن وضوح النظام القانوني الذي سيتم الرجوع إليه في حالة النزاع.</p>
+
+<h3 data-i18n="art2_terms_dispute">تسوية النزاعات (Dispute Resolution)</h3>
+<p data-i18n="art2_terms_dispute_desc">يجب أن يتضمن العقد بند يوضح كيفية تسوية أي نزاعات، سواء من خلال التفاوض أو الوساطة أو التحكيم أو المقاضاة أمام المحاكم. هذا يوفر آلية واضحة ومتفق عليها لحل الخلافات.</p>
+
+<h3 data-i18n="art2_terms_force_majeure">قوة قاهرة (Force Majeure)</h3>
+<p data-i18n="art2_terms_force_majeure_desc">يجب أن ينص العقد على أحكام تتعلق بالأحداث التي خارج السيطرة (كوارث طبيعية، حروب، أوبئة) وكيفية التعامل معها. هذا يحمي الأطراف من المسؤولية عن عدم الوفاء بالالتزامات في حالة القوة القاهرة.</p>
+
+<h3 data-i18n="art2_terms_confidentiality">السرية والخصوصية (Confidentiality)</h3>
+<p data-i18n="art2_terms_confidentiality_desc">يجب أن يحتوي العقد على بند يحمي المعلومات السرية والحساسة للأطراف. يحدد هذا البند ما يعتبر معلومات سرية وكيفية التعامل معها والعقوبات على الانتهاكات.</p>
+
+<h2 data-i18n="art2_econtracts_h2">العقود الإلكترونية</h2>
+
+<p data-i18n="art2_econtracts_intro">مع تطور التكنولوجيا، أصبح إبرام العقود بطرق إلكترونية أمراً شائعاً وقانونياً. نظام التعاملات الإلكترونية في المملكة يعترف بصحة العقود الإلكترونية ويعطيها نفس قوة العقود الورقية:</p>
+
+<h3 data-i18n="art2_econtracts_validity">صحة العقود الإلكترونية (Validity)</h3>
+<p data-i18n="art2_econtracts_validity_desc">تعتبر العقود الموقعة إلكترونياً صحيحة وملزمة قانوناً بنفس الطريقة التي تعتبر بها العقود الورقية. يجب أن تتضمن العقود الإلكترونية جميع الأركان والبنود المذكورة أعلاه.</p>
+
+<h3 data-i18n="art2_econtracts_signatures">التوقيع الرقمي (Digital Signature)</h3>
+<p data-i18n="art2_econtracts_signatures_desc">التوقيع الرقمي المعترف به قانوناً يعتبر معادلاً للتوقيع اليدوي. يجب أن يتم إنشاء التوقيع الرقمي بطريقة آمنة وتشفير قوي لضمان عدم إنكار الموقع للتوقيع.</p>
+
+<h3 data-i18n="art2_econtracts_blockchain">تقنية البلوكتشين والعقود الذكية (Blockchain and Smart Contracts)</h3>
+<p data-i18n="art2_econtracts_blockchain_desc">تقنية البلوكتشين تتيح إنشاء عقود ذكية (Smart Contracts) التي تنفذ نفسها تلقائياً عند تحقق شروط معينة. هذه التقنية توفر مستوى عالياً من الأمان والشفافية، لكن يجب التأكد من الامتثال للقوانين المحلية.</p>
+
+<div class="info-box">
+<p data-i18n="art2_info_digital">عند إبرام عقد إلكتروني، يجب التأكد من استخدام منصات آمنة وموثوقة، والاحتفاظ بنسخ من جميع المراسلات والمستندات، وتطبيق أفضل ممارسات الأمان السيبراني.</p>
+</div>
+
+<h2 data-i18n="art2_breach_h2">فسخ العقد والتعويض</h2>
+
+<p data-i18n="art2_breach_intro">عندما يفشل أحد الأطراف في الوفاء بالتزاماته بموجب العقد، يحق للطرف الآخر طلب فسخ العقد والحصول على تعويض عن الأضرار:</p>
+
+<h3 data-i18n="art2_breach_termination">فسخ العقد (Contract Termination)</h3>
+<p data-i18n="art2_breach_termination_desc">عندما ينتهك أحد الأطراف شروط العقد بشكل جسيم، يمكن للطرف الآخر طلب فسخ العقد. يجب إرسال إشعار مكتوب للطرف المنتهك معطياً إياه فرصة معقولة لإصلاح المخالفة قبل الشروع في الفسخ.</p>
+
+<h3 data-i18n="art2_breach_remedies">سبل الانتصاف (Remedies)</h3>
+<p data-i18n="art2_breach_remedies_desc">تشمل الخيارات المتاحة للطرف المتضرر طلب التنفيذ العيني (إلزام الطرف المنتهك بتنفيذ التزاماته) أو طلب التعويض المالي عن الأضرار والخسائر المترتبة على الإخلال.</p>
+
+<h3 data-i18n="art2_breach_compensation">التعويض والعقوبات (Compensation)</h3>
+<p data-i18n="art2_breach_compensation_desc">يحق للطرف المتضرر المطالبة بتعويض يغطي جميع الأضرار التي لحقت به نتيجة الإخلال بالعقد. قد تشمل التعويضات الخسارة المباشرة والخسارة غير المباشرة والأرباح الضائعة. قد يتضمن العقد أيضاً عقوبة تعاقدية محددة مسبقاً للإخلال.</p>
+
+<h2 data-i18n="art2_conclusion_h2">الخاتمة</h2>
+
+<p data-i18n="art2_conclusion_p">العقود التجارية هي الأساس الذي تقوم عليه المعاملات التجارية الناجحة والموثوقة. صياغة عقد قوي وواضح يحمي مصالح جميع الأطراف ويقلل من احتمال النزاعات والخلافات. يجب على كل طرف أن يفهم التزاماته وحقوقه قبل التوقيع على أي عقد، وينبغي طلب استشارة قانونية متخصصة لضمان صحة وفعالية العقد.</p>
+
+<p data-i18n="art2_conclusion_cta">إذا كنت بحاجة إلى مساعدة في صياغة أو مراجعة عقد تجاري، أو إذا واجهت نزاعاً حول عقد، فإن فريقنا المتخصص في شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية جاهز لمساعدتك.</p>
+
+<a href="blog.html" class="back-to-blog" data-i18n="back_to_blog">← العودة للمدونة</a>
+
+</article>
+</div>
+
+<section class="cta-section">
+<h2 data-i18n="art_cta_title">هل تحتاج إلى استشارة قانونية متخصصة؟</h2>
+<p data-i18n="art_cta_desc">فريقنا من المحامين المتخصصين جاهز لمساعدتك في جميع مسائل قانون الشركات والعقود التجارية. تواصل معنا اليوم للحصول على استشارة مجانية.</p>
+<a href="https://wa.me/966533532153" class="cta-button" data-i18n="art_cta_button" rel="noopener" target="_blank">احجز استشارتك الآن</a>
+</section>
+
+<footer>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px 22px;margin-bottom:18px;">
+<a data-i18n="nav_services" href="index.html#services" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">خدماتنا</a>
+<a data-i18n="nav_contracts" href="contracts.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">عقود الشركات</a>
+<a data-i18n="nav_faq" href="faq.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">الأسئلة الشائعة</a>
+<a data-i18n="nav_team" href="team.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">فريقنا</a>
+<a data-i18n="nav_blog" href="blog.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">المدونة</a>
+<a data-i18n="nav_eservices" href="e-services.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">الخدمات الإلكترونية</a>
+<a data-i18n="nav_events" href="events.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">فعاليتنا</a>
+<a data-i18n="nav_cases_stats" href="cases-stats.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">القضايا المنجزة</a>
+<a data-i18n="nav_careers" href="careers.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">التوظيف</a>
+<a data-i18n="nav_contact" href="index.html#booking" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">تواصل معنا</a>
+</div>
+<p data-i18n="footer_copyright">© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+</footer>
+
+<a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank">
+<svg fill="white" height="28" viewbox="0 0 24 24" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<script>
+const commonTranslations = {
+  firm_name: {0: 'شركة مشاري بندر بن جلوي', 1: 'Mishary Bin Bandar Bin Jalawi Law Firm', 2: '米沙里本班达本贾劳伊律师事务所'},
+  firm_sub: {0: 'للمحاماة والاستشارات القانونية', 1: 'Legal Practice & Consulting', 2: '法律实践与咨询'},
+  nav_services: {0: 'خدماتنا', 1: 'Services', 2: '服务'},
+  nav_contracts: {0: 'عقود الشركات', 1: 'Corporate Contracts', 2: '公司合同'},
+  nav_faq: {0: 'الأسئلة الشائعة', 1: 'FAQ', 2: '常见问题'},
+  nav_team: {0: 'فريقنا', 1: 'Team', 2: '团队'},
+  nav_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
+  nav_eservices: {0: 'الخدمات الإلكترونية', 1: 'E-Services', 2: '电子服务'},
+  nav_events: {0: 'فعاليتنا', 1: 'Events', 2: '事件'},
+  nav_cases_stats: {0: 'القضايا المنجزة', 1: 'Cases & Stats', 2: '案件与统计'},
+  nav_careers: {0: 'التوظيف', 1: 'Careers', 2: '职业生涯'},
+  nav_contact: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
+  nav_cta: {0: 'احجز استشارة', 1: 'Book Consultation', 2: '预订咨询'},
+  breadcrumb_home: {0: 'الرئيسية', 1: 'Home', 2: '首页'},
+  breadcrumb_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
+  back_to_blog: {0: '← العودة للمدونة', 1: '← Back to Blog', 2: '← 返回博客'},
+  footer_copyright: {0: '© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2026 Mishary Bin Bandar Bin Jalawi Law Firm — All Rights Reserved', 2: '© 2026 米沙里本班达本贾劳伊律师事务所 — 版权所有'},
+  art_cta_title: {0: 'هل تحتاج إلى استشارة قانونية متخصصة؟', 1: 'Do You Need Professional Legal Consultation?', 2: '您需要专业的法律咨询吗？'},
+  art_cta_desc: {0: 'فريقنا من المحامين المتخصصين جاهز لمساعدتك في جميع مسائل قانون الشركات والعقود التجارية. تواصل معنا اليوم للحصول على استشارة مجانية.', 1: 'Our team of specialized lawyers is ready to assist you with all matters of corporate law and commercial contracts. Contact us today for a free consultation.', 2: '我们的专业律师团队随时准备帮助您解决所有公司法和商业合同问题。请立即与我们联系以获取免费咨询。'},
+  art_cta_button: {0: 'احجز استشارتك الآن', 1: 'Book Your Consultation Now', 2: '立即预订您的咨询'},
+  art_category_contracts: {0: 'العقود التجارية', 1: 'Commercial Contracts', 2: '商业合同'},
+  art_date_2025: {0: '5 مارس 2026', 1: 'March 5, 2026', 2: '2026年3月5日'},
+  page_title: {0: 'العقود التجارية - شركة مشاري بندر بن جلوي', 1: 'Commercial Contracts - Mishary Bin Bandar Law Firm', 2: '商业合同 - 米沙里本班达律师事务所'},
+};
+
+const pageTranslations = {
+  breadcrumb_article2: {0: 'العقود التجارية', 1: 'Commercial Contracts', 2: '商业合同'},
+  art2_hero_h1: {0: 'العقود التجارية: أسسها وأحكامها', 1: 'Commercial Contracts: Foundations and Rules', 2: '商业合同：基础和规则'},
+  art2_hero_p: {0: 'كل ما تحتاج معرفته عن إبرام العقود التجارية في المملكة', 1: 'Everything You Need to Know About Entering into Commercial Contracts in the Kingdom', 2: '您需要了解的关于在沙特王国签订商业合同的所有信息'},
+  art2_intro_h2: {0: 'المقدمة', 1: 'Introduction', 2: '简介'},
+  art2_intro_p1: {0: 'تعتبر العقود التجارية الأساس الذي تقوم عليه جميع المعاملات التجارية في المملكة العربية السعودية. فهي الأداة القانونية التي تنظم العلاقة بين الأطراف المتعاقدة وتحدد التزاماتهم وحقوقهم بشكل واضح ومحدد. ويتم تنظيم العقود التجارية في المملكة من خلال نظام المعاملات المدنية، الذي يوفر إطاراً شاملاً وقوياً لحماية حقوق جميع الأطراف.', 1: 'Commercial contracts are the foundation upon which all commercial transactions in the Kingdom of Saudi Arabia are based. They are the legal tool that regulates the relationship between contracting parties and defines their obligations and rights clearly and specifically. Commercial contracts in the Kingdom are governed by the Law of Civil Transactions, which provides a comprehensive and strong framework to protect the rights of all parties.', 2: '商业合同是沙特阿拉伯所有商业交易的基础。它们是规范缔约方之间关系并明确界定其义务和权利的法律工具。沙特王国的商业合同由《民事交易法》管辖，该法为保护所有当事人的权利提供了全面的法律框架。'},
+  art2_intro_p2: {0: 'العقد التجاري هو اتفاق بين طرفين أو أكثر بقصد إنشاء التزامات قانونية. وللعقد دور حاسم في الأنشطة الاقتصادية، حيث يوفر الأمان القانوني والاستقرار الذي يحتاجه رجال الأعمال والمؤسسات لممارسة أنشطتهم التجارية بثقة واطمئنان. في هذا المقال سنشرح أركان العقد وأنواعه والبنود الأساسية التي يجب أن تتضمنها العقود التجارية.', 1: 'A commercial contract is an agreement between two or more parties intended to create legal obligations. The contract plays a crucial role in economic activities, providing the legal security and stability that businesses and institutions need to conduct their commercial activities with confidence. In this article, we will explain the elements of contracts, their types, and the essential terms that commercial contracts should include.', 2: '商业合同是两个或多个当事人之间旨在创建法律义务的协议。该合同在经济活动中起着至关重要的作用，为企业和机构开展商业活动提供了所需的法律安全和稳定性。在本文中，我们将解释合同的要素、其类型和商业合同应包含的基本条款。'},
+  art2_info_intro: {0: 'ملاحظة مهمة: اتباع الإجراءات الصحيحة عند إبرام العقود يحمي مصالح أطرافها ويقلل من النزاعات والخلافات المستقبلية. ننصح بطلب استشارة قانونية قبل التوقيع على أي عقد تجاري مهم.', 1: 'Important Note: Following proper procedures when entering into contracts protects the interests of the parties and reduces future disputes and disagreements. We recommend seeking legal advice before signing any important commercial contract.', 2: '重要提示：在签订合同时遵循适当的程序可以保护各方的利益并减少未来的纠纷。我们建议在签署任何重要的商业合同之前寻求法律意见。'},
+  art2_elements_h2: {0: 'أركان العقد', 1: 'Elements of a Contract', 2: '合同要素'},
+  art2_elements_intro: {0: 'لكي يكون العقد صحيحاً وملزماً قانوناً، يجب أن تتوفر فيه عدة أركان أساسية. عدم توفر أي من هذه الأركان قد يؤدي إلى بطلان العقد أو عدم نفاذه:', 1: 'For a contract to be valid and legally binding, it must contain several essential elements. The absence of any of these elements may render the contract void or unenforceable:', 2: '为了使合同有效且具有法律约束力，它必须包含几个基本要素。这些要素中任何一个的缺失可能导致合同无效或无法执行：'},
+  art2_elements_consent: {0: 'الرضا (Consent)', 1: 'Consent', 2: '同意'},
+  art2_elements_consent_desc: {0: 'يجب أن يكون هناك توافق إرادة بين الأطراف المتعاقدة على جميع عناصر العقد. يجب أن يكون الرضا حراً وغير مجبور، خالياً من أي إكراه أو احتيال أو تدليس. القانون يعتبر العقد الذي يتم تحت إكراه غير صحيح وقابل للفسخ.', 1: 'There must be agreement of will between the contracting parties on all elements of the contract. Consent must be free and unforced, free from any duress, fraud, or misrepresentation. A contract entered into under duress is considered invalid and voidable by law.', 2: '缔约方之间必须就合同的所有要素达成一致意见。同意必须是自由的、非强制的，不受任何胁迫、欺诈或不实陈述的影响。法律认为在胁迫下签订的合同无效且可撤销。'},
+  art2_elements_subject: {0: 'المحل (Subject Matter)', 1: 'Subject Matter', 2: '合同标的'},
+  art2_elements_subject_desc: {0: 'يجب أن يكون محل العقد معروفاً وممكناً. محل العقد هو الالتزام الذي يتعهد به كل طرف. فمثلاً، في عقد البيع، محل العقد هو نقل الملكية والسعر. يجب أن يكون المحل محدداً بطريقة تمكن الأطراف من معرفة التزاماتهم بالضبط.', 1: 'The subject matter of the contract must be known and possible. The subject matter is the obligation undertaken by each party. For example, in a sales contract, the subject matter is the transfer of ownership and the price. The subject matter must be defined in a way that enables parties to know their obligations precisely.', 2: '合同标的必须是已知的且可能的。标的是每一方承担的义务。例如，在销售合同中，标的是所有权的转移和价格。标的必须以使各方能够准确了解其义务的方式进行定义。'},
+  art2_elements_cause: {0: 'السبب (Cause)', 1: 'Cause', 2: '原因'},
+  art2_elements_cause_desc: {0: 'يقصد به الغرض أو الحكمة من العقد. يجب أن يكون السبب مشروعاً وقانونياً. على سبيل المثال، عقد بيع مخدرات غير مشروع لأن سببه غير قانوني. إذا كان السبب غير مشروع أو غير أخلاقي، فإن العقد يكون باطلاً.', 1: 'The cause refers to the purpose or rationale of the contract. The cause must be lawful and legal. For example, a contract to sell illegal drugs is unlawful because its cause is illegal. If the cause is unlawful or unethical, the contract is void.', 2: '原因是指合同的目的或理由。原因必须合法和合理。例如，销售非法毒品的合同因其原因非法而不合法。如果原因不合法或不道德，则合同无效。'},
+  art2_info_elements: {0: 'أن توفر أركان العقد الثلاثة (الرضا والمحل والسبب) هو شرط أساسي لصحة العقد. عند صياغة عقد تجاري، يجب التأكد من وضوح هذه الأركان وتوثيقها بشكل دقيق.', 1: 'The presence of the three elements of a contract (consent, subject matter, and cause) is an essential condition for the validity of the contract. When drafting a commercial contract, ensure that these elements are clear and properly documented.', 2: '合同的三个要素（同意、标的和原因）的存在是合同有效性的基本条件。在起草商业合同时，请确保这些要素清晰且有适当的记录。'},
+  art2_types_h2: {0: 'أنواع العقود التجارية', 1: 'Types of Commercial Contracts', 2: '商业合同的类型'},
+  art2_types_intro: {0: 'هناك عدة أنواع من العقود التجارية الشائعة في الممارسة العملية. كل نوع له خصائصه وأحكامه القانونية:', 1: 'There are several types of common commercial contracts in practical application. Each type has its own characteristics and legal provisions:', 2: '在实际应用中有几种常见的商业合同类型。每种类型都有其自己的特点和法律规定：'},
+  art2_type_sale_title: {0: 'عقد البيع (Sale Contract)', 1: 'Sale Contract', 2: '销售合同'},
+  art2_type_sale_desc: {0: 'هو أكثر العقود التجارية شيوعاً. يتم فيه نقل ملكية سلعة أو منتج من البائع إلى المشتري مقابل دفع ثمن محدد. يجب أن يتضمن العقد وصفاً دقيقاً للسلعة والسعر وشروط الدفع والتسليم وحقوق كل طرف.', 1: 'It is the most common commercial contract. It transfers ownership of a product or goods from the seller to the buyer in exchange for payment of a fixed price. The contract must include a precise description of the goods, price, payment terms, delivery conditions, and the rights of each party.', 2: '这是最常见的商业合同。它将产品或商品的所有权从卖方转移到买方，以换取固定价格的支付。合同必须包括商品的精确描述、价格、付款条款、交付条件以及各方的权利。'},
+  art2_type_lease_title: {0: 'عقد الإيجار (Lease Contract)', 1: 'Lease Contract', 2: '租赁合同'},
+  art2_type_lease_desc: {0: 'يسمح باستخدام عقار أو منقول معين مقابل دفع أجرة محددة. يحدد العقد مدة الإيجار والأجرة والالتزامات والتزامات المستأجر والمؤجر، وشروط الصيانة والإصلاح والتأمين.', 1: 'It allows the use of a specific immovable or movable property in exchange for payment of a specified rent. The contract specifies the lease term, rent, obligations of the tenant and landlord, and conditions of maintenance, repair, and insurance.', 2: '它允许使用特定的不动产或动产，以换取指定租金的支付。合同规定租赁期限、租金、租户和房东的义务，以及维护、维修和保险的条件。'},
+  art2_type_construction_title: {0: 'عقد المقاولة (Construction/Services Contract)', 1: 'Construction/Services Contract', 2: '建筑/服务合同'},
+  art2_type_construction_desc: {0: 'يتم فيه الاتفاق على تنفيذ عمل معين أو تقديم خدمة محددة. يشمل ذلك البناء والإنشاء والتصميم والإصلاح والصيانة والاستشارات وغيرها. يجب أن يحدد العقد نطاق العمل والمواعيد النهائية والمقابل المالي وشروط الدفع.', 1: 'An agreement to perform specific work or provide a defined service. This includes construction, design, repair, maintenance, consulting, and others. The contract must specify the scope of work, deadlines, compensation, and payment terms.', 2: '进行特定工作或提供定义服务的协议。这包括建筑、设计、维修、维护、咨询等。合同必须指定工作范围、截止日期、报酬和付款条款。'},
+  art2_type_agency_title: {0: 'عقد الوكالة (Agency Contract)', 1: 'Agency Contract', 2: '代理合同'},
+  art2_type_agency_desc: {0: 'يقوم بموجبه شخص (الوكيل) بتمثيل شخص آخر (الموكل) في التعاملات والعقود. تحدد الوكالة صلاحيات الوكيل وحدود سلطته وحقوقه والتزاماته تجاه الموكل.', 1: 'One person (the agent) represents another person (the principal) in transactions and contracts. The agency specifies the agent\'s authority, scope of power, rights, and obligations to the principal.', 2: '一个人（代理人）代表另一个人（委托人）进行交易和合同。代理指定代理人的权力、权力范围、权利和对委托人的义务。'},
+  art2_type_supply_title: {0: 'عقد التوريد (Supply Contract)', 1: 'Supply Contract', 2: '供应合同'},
+  art2_type_supply_desc: {0: 'يتم بموجبه توريد كميات محددة من المواد أو المنتجات على فترات زمنية معينة. يحدد العقد الكميات والأسعار وجدول التسليم والجودة والمواصفات وشروط الدفع والتعديلات المحتملة للأسعار.', 1: 'The supply of specified quantities of materials or products at certain intervals. The contract specifies quantities, prices, delivery schedule, quality, specifications, payment terms, and possible price adjustments.', 2: '在特定时间间隔内供应指定数量的材料或产品。合同规定数量、价格、交付计划、质量、规格、付款条款和可能的价格调整。'},
+  art2_type_franchise_title: {0: 'عقد الامتياز التجاري (Franchise Contract)', 1: 'Franchise Contract', 2: '特许经营合同'},
+  art2_type_franchise_desc: {0: 'يعطي أحد الأطراف (الممنوح) الحق في استخدام الاسم التجاري والعلامة والنموذج التجاري لطرف آخر (المانح). يحدد العقد الرسوم والالتزامات والحقوق والواجبات والمدة والمنطقة الجغرافية.', 1: 'Grants one party (the grantee) the right to use the trade name, brand, and business model of another party (the grantor). The contract specifies fees, obligations, rights, duties, term, and geographic area.', 2: '授予一方（被授权人）使用另一方（授权人）的商业名称、品牌和商业模式的权利。合同规定费用、义务、权利、职责、期限和地理区域。'},
+  art2_terms_h2: {0: 'البنود الأساسية في العقد التجاري', 1: 'Essential Terms in a Commercial Contract', 2: '商业合同中的基本条款'},
+  art2_terms_intro: {0: 'يجب أن يتضمن أي عقد تجاري احترافي البنود الأساسية التالية لضمان وضوح الالتزامات وحماية حقوق الأطراف:', 1: 'Any professional commercial contract must include the following essential terms to ensure clarity of obligations and protection of parties\' rights:', 2: '任何专业商业合同必须包括以下基本条款，以确保义务的清晰性和各方权利的保护：'},
+  art2_terms_parties: {0: 'تحديد الأطراف (Identification of Parties)', 1: 'Identification of Parties', 2: '当事人身份确认'},
+  art2_terms_parties_desc: {0: 'يجب أن يوضح العقد هوية جميع الأطراف بالكامل، بما في ذلك الأسماء والعناوين والبيانات الشخصية، وتحديد سمتهم القانونية (فرد، شركة، إلخ). هذا يضمن عدم الالتباس بشأن من هم طرف في العقد.', 1: 'The contract must clearly identify all parties in full, including names, addresses, and personal data, and specify their legal status (individual, company, etc.). This ensures no confusion about who are parties to the contract.', 2: '合同必须完整清楚地识别所有当事人，包括名称、地址和个人数据，并指定其法律地位（个人、公司等）。这确保了没有关于谁是合同当事人的混淆。'},
+  art2_terms_scope: {0: 'نطاق العمل (Scope of Work)', 1: 'Scope of Work', 2: '工作范围'},
+  art2_terms_scope_desc: {0: 'يجب أن يحدد العقد بوضوح ودقة ما سيتم إنجازه أو توريده. يجب أن تكون المواصفات والكميات والجودة والمعايير محددة بشكل دقيق لتجنب أي التباس أو خلاف في المستقبل.', 1: 'The contract must clearly and precisely specify what will be accomplished or delivered. Specifications, quantities, quality, and standards must be precisely defined to avoid any confusion or dispute in the future.', 2: '合同必须清楚准确地指定将要完成或交付的内容。规格、数量、质量和标准必须精确定义，以避免将来的任何混淆或纠纷。'},
+  art2_terms_price: {0: 'التسعير والدفع (Pricing and Payment)', 1: 'Pricing and Payment', 2: '定价和付款'},
+  art2_terms_price_desc: {0: 'يجب أن يذكر العقد السعر الإجمالي وطريقة الحساب وشروط الدفع (نقداً، بشيك، تحويل بنكي) والآجال الزمنية للدفع والفائدة على التأخير وحدود أي رسوم إضافية.', 1: 'The contract must state the total price, method of calculation, payment terms (cash, check, bank transfer), payment deadlines, late payment interest, and limits on any additional fees.', 2: '合同必须说明总价格、计算方法、付款条款（现金、支票、银行转账）、付款截止日期、逾期利息和任何额外费用的限制。'},
+  art2_terms_duration: {0: 'المدة والتسليم (Duration and Delivery)', 1: 'Duration and Delivery', 2: '期限和交付'},
+  art2_terms_duration_desc: {0: 'يجب أن يحدد العقد متى يبدأ وينتهي الالتزام، ومتى يتم التسليم أو تقديم الخدمة. يجب تحديد تواريخ محددة وقابلة للقياس لتجنب النزاعات حول عدم الوفاء بالموعد.', 1: 'The contract must specify when the obligation begins and ends, and when delivery or service is provided. Specific and measurable dates must be set to avoid disputes over non-compliance with deadlines.', 2: '合同必须指定义务何时开始和结束，以及何时交付或提供服务。必须设定具体和可衡量的日期，以避免关于不遵守截止日期的纠纷。'},
+  art2_terms_termination: {0: 'الإنهاء والفسخ (Termination)', 1: 'Termination', 2: '终止'},
+  art2_terms_termination_desc: {0: 'يجب أن يوضح العقد تحت أي ظروف يمكن إنهاء العقد، وكيفية الإنهاء، ومدة الإشعار المطلوبة، والالتزامات المتبقية بعد الإنهاء، وأي عقوبات أو تعويضات قد تترتب على الإنهاء المبكر.', 1: 'The contract must clarify under what circumstances it can be terminated, how termination occurs, notice periods required, remaining obligations after termination, and any penalties or compensation for early termination.', 2: '合同必须澄清可以在什么情况下终止、如何终止、所需的通知期、终止后的剩余义务以及提前终止的任何罚款或赔偿。'},
+  art2_terms_governing_law: {0: 'القانون الواجب التطبيق (Governing Law)', 1: 'Governing Law', 2: '适用法律'},
+  art2_terms_governing_law_desc: {0: 'يجب أن ينص العقد على أن القانون السعودي هو الذي يحكم تفسير وتنفيذ العقد. هذا يضمن وضوح النظام القانوني الذي سيتم الرجوع إليه في حالة النزاع.', 1: 'The contract must state that Saudi law governs the interpretation and enforcement of the contract. This ensures clarity of the legal system to be referred to in case of dispute.', 2: '合同必须说明沙特法律适用于合同的解释和执行。这确保了在发生纠纷时要参照的法律制度的清晰性。'},
+  art2_terms_dispute: {0: 'تسوية النزاعات (Dispute Resolution)', 1: 'Dispute Resolution', 2: '争议解决'},
+  art2_terms_dispute_desc: {0: 'يجب أن يتضمن العقد بند يوضح كيفية تسوية أي نزاعات، سواء من خلال التفاوض أو الوساطة أو التحكيم أو المقاضاة أمام المحاكم. هذا يوفر آلية واضحة ومتفق عليها لحل الخلافات.', 1: 'The contract must include a clause clarifying how disputes will be resolved, whether through negotiation, mediation, arbitration, or litigation before courts. This provides a clear and agreed-upon mechanism for resolving disagreements.', 2: '合同必须包含一项条款，澄清纠纷将如何解决，无论是通过谈判、调解、仲裁还是在法院诉讼。这为解决分歧提供了明确和公认的机制。'},
+  art2_terms_force_majeure: {0: 'قوة قاهرة (Force Majeure)', 1: 'Force Majeure', 2: '不可抗力'},
+  art2_terms_force_majeure_desc: {0: 'يجب أن ينص العقد على أحكام تتعلق بالأحداث التي خارج السيطرة (كوارث طبيعية، حروب، أوبئة) وكيفية التعامل معها. هذا يحمي الأطراف من المسؤولية عن عدم الوفاء بالالتزامات في حالة القوة القاهرة.', 1: 'The contract must include provisions relating to events beyond control (natural disasters, wars, epidemics) and how to handle them. This protects parties from liability for non-performance of obligations in case of force majeure.', 2: '合同必须包含与超出控制范围的事件（自然灾害、战争、流行病）相关的条款以及如何处理这些事件。这可以在不可抗力情况下保护各方免于不履行义务的责任。'},
+  art2_terms_confidentiality: {0: 'السرية والخصوصية (Confidentiality)', 1: 'Confidentiality', 2: '保密'},
+  art2_terms_confidentiality_desc: {0: 'يجب أن يحتوي العقد على بند يحمي المعلومات السرية والحساسة للأطراف. يحدد هذا البند ما يعتبر معلومات سرية وكيفية التعامل معها والعقوبات على الانتهاكات.', 1: 'The contract must contain a clause that protects confidential and sensitive information of the parties. This clause defines what constitutes confidential information, how it is to be handled, and penalties for breaches.', 2: '合同必须包含一项条款，保护各方的机密和敏感信息。该条款定义了什么构成机密信息、如何处理它以及违反的处罚。'},
+  art2_econtracts_h2: {0: 'العقود الإلكترونية', 1: 'Electronic Contracts', 2: '电子合同'},
+  art2_econtracts_intro: {{0: 'مع تطور التكنولوجيا، أصبح إبرام العقود بطرق إلكترونية أمراً شائعاً وقانونياً. نظام التعاملات الإلكترونية في المملكة يعترف بصحة العقود الإلكترونية ويعطيها نفس قوة العقود الورقية:', 1: 'With technological advancement, concluding contracts through electronic means has become common and legal. The Kingdom\'s Electronic Transactions Law recognizes the validity of electronic contracts and gives them the same force as paper contracts:', 2: '随着技术的进步，通过电子手段签订合同已成为常见且合法的做法。沙特王国的《电子交易法》承认电子合同的有效性，并赋予它们与纸质合同相同的效力：'}},
+  art2_econtracts_validity: {{0: 'صحة العقود الإلكترونية (Validity)', 1: 'Validity of Electronic Contracts', 2: '电子合同的有效性'}},
+  art2_econtracts_validity_desc: {{0: 'تعتبر العقود الموقعة إلكترونياً صحيحة وملزمة قانوناً بنفس الطريقة التي تعتبر بها العقود الورقية. يجب أن تتضمن العقود الإلكترونية جميع الأركان والبنود المذكورة أعلاه.', 1: 'Electronically signed contracts are considered valid and legally binding in the same way as paper contracts. Electronic contracts must include all the elements and terms mentioned above.', 2: '电子签署的合同在与纸质合同相同的方式下被认为有效且具有法律约束力。电子合同必须包括上述所有要素和条款。'}}},
+  art2_econtracts_signatures: {{0: 'التوقيع الرقمي (Digital Signature)', 1: 'Digital Signature', 2: '数字签名'}},
+  art2_econtracts_signatures_desc: {{0: 'التوقيع الرقمي المعترف به قانوناً يعتبر معادلاً للتوقيع اليدوي. يجب أن يتم إنشاء التوقيع الرقمي بطريقة آمنة وتشفير قوي لضمان عدم إنكار الموقع للتوقيع.', 1: 'A legally recognized digital signature is considered equivalent to a handwritten signature. Digital signatures must be created using secure methods and strong encryption to ensure non-repudiation by the signer.', 2: '合法承认的数字签名被视为与手写签名等效。必须使用安全方法和强加密创建数字签名，以确保签名者的不可否认性。'}}},
+  art2_econtracts_blockchain: {{0: 'تقنية البلوكتشين والعقود الذكية (Blockchain and Smart Contracts)', 1: 'Blockchain Technology and Smart Contracts', 2: '区块链技术和智能合约'}},
+  art2_econtracts_blockchain_desc: {{0: 'تقنية البلوكتشين تتيح إنشاء عقود ذكية (Smart Contracts) التي تنفذ نفسها تلقائياً عند تحقق شروط معينة. هذه التقنية توفر مستوى عالياً من الأمان والشفافية، لكن يجب التأكد من الامتثال للقوانين المحلية.', 1: 'Blockchain technology enables the creation of Smart Contracts that execute themselves automatically when certain conditions are met. This technology provides a high level of security and transparency, but compliance with local laws must be ensured.', 2: '区块链技术能够创建当满足特定条件时自动执行的智能合约。这项技术提供了高水平的安全性和透明度，但必须确保符合当地法律。'}}},
+  art2_info_digital: {{0: 'عند إبرام عقد إلكتروني، يجب التأكد من استخدام منصات آمنة وموثوقة، والاحتفاظ بنسخ من جميع المراسلات والمستندات، وتطبيق أفضل ممارسات الأمان السيبراني.', 1: 'When concluding an electronic contract, ensure the use of secure and reliable platforms, maintain copies of all communications and documents, and apply best cybersecurity practices.', 2: '在签订电子合同时，请确保使用安全和可靠的平台，保留所有通信和文件的副本，并应用最佳网络安全实践。'}}},
+  art2_breach_h2: {{0: 'فسخ العقد والتعويض', 1: 'Contract Termination and Compensation', 2: '合同终止和赔偿'}},
+  art2_breach_intro: {{0: 'عندما يفشل أحد الأطراف في الوفاء بالتزاماته بموجب العقد، يحق للطرف الآخر طلب فسخ العقد والحصول على تعويض عن الأضرار:', 1: 'When one party fails to fulfill its obligations under the contract, the other party has the right to request termination of the contract and compensation for damages:', 2: '当一方未能履行合同项下的义务时，另一方有权要求终止合同并获得损害赔偿：'}}},
+  art2_breach_termination: {{0: 'فسخ العقد (Contract Termination)', 1: 'Contract Termination', 2: '合同终止'}},
+  art2_breach_termination_desc: {{0: 'عندما ينتهك أحد الأطراف شروط العقد بشكل جسيم، يمكن للطرف الآخر طلب فسخ العقد. يجب إرسال إشعار مكتوب للطرف المنتهك معطياً إياه فرصة معقولة لإصلاح المخالفة قبل الشروع في الفسخ.', 1: 'When one party materially breaches the terms of the contract, the other party may request termination. Written notice must be sent to the breaching party giving it a reasonable opportunity to remedy the breach before proceeding with termination.', 2: '当一方严重违反合同条款时，另一方可以要求终止。必须向违反方发送书面通知，给予其合理的机会在继续终止前纠正违规行为。'}}},
+  art2_breach_remedies: {{0: 'سبل الانتصاف (Remedies)', 1: 'Remedies', 2: '救济手段'}},
+  art2_breach_remedies_desc: {{0: 'تشمل الخيارات المتاحة للطرف المتضرر طلب التنفيذ العيني (إلزام الطرف المنتهك بتنفيذ التزاماته) أو طلب التعويض المالي عن الأضرار والخسائر المترتبة على الإخلال.', 1: 'Options available to the injured party include requesting specific performance (compelling the breaching party to fulfill its obligations) or requesting monetary compensation for damages and losses resulting from the breach.', 2: '受伤害方可用的选择包括要求具体履行（强制违反方履行其义务）或要求因违反而造成的损害和损失的金钱赔偿。'}}},
+  art2_breach_compensation: {{0: 'التعويض والعقوبات (Compensation)', 1: 'Compensation and Penalties', 2: '赔偿和处罚'}},
+  art2_breach_compensation_desc: {{0: 'يحق للطرف المتضرر المطالبة بتعويض يغطي جميع الأضرار التي لحقت به نتيجة الإخلال بالعقد. قد تشمل التعويضات الخسارة المباشرة والخسارة غير المباشرة والأرباح الضائعة. قد يتضمن العقد أيضاً عقوبة تعاقدية محددة مسبقاً للإخلال.', 1: 'The injured party has the right to claim compensation covering all damages resulting from the breach. Compensation may include direct losses, indirect losses, and lost profits. The contract may also include a pre-determined penalty for breach.', 2: '受伤害方有权要求赔偿，其中包括因违反造成的所有损害。赔偿可能包括直接损失、间接损失和失去的利润。合同还可能包括对违反的预先确定的处罚。'}}},
+  art2_conclusion_h2: {{0: 'الخاتمة', 1: 'Conclusion', 2: '结论'}},
+  art2_conclusion_p: {{0: 'العقود التجارية هي الأساس الذي تقوم عليه المعاملات التجارية الناجحة والموثوقة. صياغة عقد قوي وواضح يحمي مصالح جميع الأطراف ويقلل من احتمال النزاعات والخلافات. يجب على كل طرف أن يفهم التزاماته وحقوقه قبل التوقيع على أي عقد، وينبغي طلب استشارة قانونية متخصصة لضمان صحة وفعالية العقد.', 1: 'Commercial contracts are the foundation of successful and reliable commercial transactions. Drafting a strong and clear contract protects the interests of all parties and reduces the likelihood of disputes. Each party should understand its obligations and rights before signing any contract, and should seek specialized legal advice to ensure the validity and effectiveness of the contract.', 2: '商业合同是成功和可靠的商业交易的基础。起草一份强大而清晰的合同可保护所有当事人的利益并降低纠纷的可能性。每一方在签署任何合同前应了解其义务和权利，并应寻求专业法律意见以确保合同的有效性和有效性。'}}},
+  art2_conclusion_cta: {{0: 'إذا كنت بحاجة إلى مساعدة في صياغة أو مراجعة عقد تجاري، أو إذا واجهت نزاعاً حول عقد، فإن فريقنا المتخصص في شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية جاهز لمساعدتك.', 1: 'If you need assistance in drafting or reviewing a commercial contract, or if you encounter a contract dispute, our specialized team at Mishary Bin Bandar Bin Jalawi Law Firm is ready to assist you.', 2: '如果您需要帮助起草或审查商业合同，或者您遇到合同纠纷，我们米沙里本班达本贾劳伊律师事务所的专业团队随时准备帮助您。'}}},
+};
+</script>
+<script src="lang.js"></script>
+<script>
+let lang = currentLang;
+function toggleLangDrop() { document.getElementById('langDropMenu').classList.toggle('open'); }
+document.addEventListener('click', function(e) {
+    if (!document.getElementById('langDrop').contains(e.target)) document.getElementById('langDropMenu').classList.remove('open');
+});
+function setLang(l) {
+    lang = l; currentLang = l;
+    const dir = l === 0 ? 'rtl' : 'ltr';
+    const langCode = l === 0 ? 'ar' : (l === 1 ? 'en' : 'zh');
+    document.documentElement.setAttribute('dir', dir);
+    document.documentElement.setAttribute('lang', langCode);
+    document.getElementById('langDropBtn').textContent = l === 0 ? '🇸🇦' : (l === 1 ? '🇬🇧' : '🇨🇳');
+    const allTranslations = Object.assign({}, commonTranslations, pageTranslations);
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (allTranslations[key] && allTranslations[key][l] !== undefined) {
+            if (el.tagName === 'INPUT' && el.type !== 'hidden') el.placeholder = allTranslations[key][l];
+            else el.innerHTML = allTranslations[key][l];
+        }
+    });
+    localStorage.setItem('siteLang', l);
+}
+window.addEventListener('load', function() {
+    const saved = localStorage.getItem('siteLang');
+    if (saved !== null) setLang(parseInt(saved)); else setLang(0);
+});
+</script>
+
+</body>
+</html>

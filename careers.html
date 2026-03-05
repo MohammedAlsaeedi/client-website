@@ -64,7 +64,8 @@
 
         .perks-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
         .perk-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 26px 22px; text-align: center; }
-        .perk-icon { font-size: 2.4rem; margin-bottom: 12px; }
+        .perk-icon { width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, var(--navy), var(--navy-mid)); display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; box-shadow: 0 4px 15px rgba(27,44,107,.18); }
+        .perk-icon svg { width: 26px; height: 26px; stroke: var(--gold-light); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
         .perk-card h4 { font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: 6px; }
         .perk-card p { font-size: .85rem; color: var(--gray); line-height: 1.7; }
 
@@ -197,22 +198,22 @@
 </div>
 <div class="perks-grid">
 <div class="perk-card">
-<div class="perk-icon">⚖️</div>
+<div class="perk-icon"><svg viewBox="0 0 24 24"><path d="M12 3c-1.2 0-2.4.6-3 1.7L3.3 14.4c-.6 1.1-.6 2.4 0 3.4.6 1.1 1.8 1.7 3 1.7h13.4c1.2 0 2.4-.6 3-1.7.6-1.1.6-2.4 0-3.4L17 4.7C16.4 3.6 15.2 3 14 3H12z" fill="none"/><line x1="12" y1="8" x2="12" y2="13"/><line x1="9" y1="18" x2="15" y2="18"/></svg></div>
 <h4 data-i18n="h4_0">قضايا متنوعة ومثرية</h4>
 <p data-i18n="p_1">ستتعامل مع قضايا في مختلف التخصصات القانونية مما يعزز خبرتك المهنية باستمرار.</p>
 </div>
 <div class="perk-card">
-<div class="perk-icon">📈</div>
+<div class="perk-icon"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
 <h4 data-i18n="h4_1">نمو وتطوير مهني</h4>
 <p data-i18n="p_2">نوفر بيئة تشجع على التعلم المستمر والنمو القانوني من خلال الخبرة الميدانية والتدريب.</p>
 </div>
 <div class="perk-card">
-<div class="perk-icon">🤝</div>
+<div class="perk-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
 <h4 data-i18n="h4_2">فريق متماسك وداعم</h4>
 <p data-i18n="p_3">ستنضم لفريق يعمل بروح جماعية ويدعم أعضاءه في مختلف المراحل المهنية.</p>
 </div>
 <div class="perk-card">
-<div class="perk-icon">🏆</div>
+<div class="perk-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div>
 <h4 data-i18n="h4_3">سمعة راسخة</h4>
 <p data-i18n="p_4">انضم لشركة محاماة ذات سمعة مهنية مرموقة ومعروفة بالاحترافية والنزاهة.</p>
 </div>
@@ -287,7 +288,7 @@
 <select id="licensed" name="licensed">
 <option data-i18n="select_placeholder_2" disabled="" selected="" value="">— اختر —</option>
 <option data-i18n="opt_نعم_مرخصة_لدى_هيئة_المحامين" value="نعم، مرخّص(ة) لدى هيئة المحامين">نعم، مرخّص(ة) لدى هيئة المحامين</option>
-<option data-i18n="opt_قيد_الإجراءات" value="قيد الإجراءات">قيد الإجراءات</option>
+<option data-i18n="opt_قيد_الإجراءات" value="غير ذلك">غير ذلك</option>
 <option data-i18n="opt_محامي_متدرب" value="محامي متدرب">محامي متدرب</option>
 <option data-i18n="opt_محامي_حديث_تخرج" value="محامي حديث تخرج">محامي حديث تخرج</option>
 <option data-i18n="opt_تدريب_تعاوني" value="تدريب تعاوني">تدريب تعاوني</option>
@@ -429,7 +430,7 @@ const pageTranslations = {
 
   opt_نعم_مرخصة_لدى_هيئة_المحامين: {0: "نعم، مرخّص(ة) لدى هيئة المحامين", 1: "Yes, licensed by the Bar Association", 2: "是，已获律师协会执照"},
 
-  opt_قيد_الإجراءات: {0: "قيد الإجراءات", 1: "In Progress", 2: "办理中"},
+  opt_قيد_الإجراءات: {0: "غير ذلك", 1: "Other", 2: "其他"},
   opt_محامي_متدرب: {0: "محامي متدرب", 1: "Trainee Lawyer", 2: "实习律师"},
   opt_محامي_حديث_تخرج: {0: "محامي حديث تخرج", 1: "Fresh Graduate Lawyer", 2: "应届毕业律师"},
   opt_تدريب_تعاوني: {0: "تدريب تعاوني", 1: "Cooperative Training", 2: "合作培训"},

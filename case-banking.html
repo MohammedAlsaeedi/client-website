@@ -125,6 +125,9 @@
         .cf-group textarea{resize:vertical;min-height:100px}
         .cf-file{cursor:pointer;padding:8px 12px}
         .cf-file-hint{color:rgba(255,255,255,.4);font-size:.78rem;margin-top:4px}
+        .cf-group select{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:11px 16px;color:#fff;font-family:inherit;font-size:.93rem;transition:border .2s;width:100%;box-sizing:border-box;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.5)' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");background-repeat:no-repeat;background-position:left 14px center;cursor:pointer}
+        .cf-group select:focus{outline:none;border-color:var(--gold);background-color:rgba(255,255,255,.12)}
+        .cf-group select option{background:var(--navy);color:#fff}
         .cf-submit{width:100%;padding:14px;background:var(--gold);color:#fff;border:none;border-radius:30px;font-size:1rem;font-weight:800;font-family:inherit;cursor:pointer;transition:all .25s;margin-top:8px}
         .cf-submit:hover{background:#b8960c;transform:translateY(-1px)}
         .cf-success{margin-top:16px;text-align:center;color:#4ade80;font-size:.95rem;font-weight:600}
@@ -299,7 +302,15 @@
 </div>
 <div class="cf-group">
 <label data-i18n="cf_lbl_service" for="cf_service">الخدمة المطلوبة <span class="cf-req">*</span></label>
-<input data-i18n="cf_ph_service" id="cf_service" name="service" placeholder="نوع الخدمة المطلوبة" required type="text"/>
+<select id="cf_service" name="service" required>
+<option value="" disabled selected data-i18n="svc_placeholder">— اختر الخدمة —</option>
+<option value="صلح" data-i18n="svc_opt_1">صلح</option>
+<option value="حضور جلسة واحدة" data-i18n="svc_opt_2">حضور جلسة واحدة</option>
+<option value="توكيلنا بالدعوى المنظورة" data-i18n="svc_opt_3">توكيلنا بالدعوى المنظورة</option>
+<option value="صياغة مذكرة للدعوى" data-i18n="svc_opt_4">صياغة مذكرة للدعوى</option>
+<option value="اعتراض على حكم" data-i18n="svc_opt_5">اعتراض على حكم</option>
+<option value="صياغة لائحة نقض" data-i18n="svc_opt_6">صياغة لائحة نقض</option>
+</select>
 </div>
 </div>
 <div class="cf-group">
@@ -392,6 +403,39 @@ footer_copyright: {0: '© 2026 شركة مشاري بندر بن جلوي للم
   cta_h2: {0: 'احصل على استشارة قانونية متخصصة', 1: 'Get Specialized Legal Consultation', 2: '获取专业法律咨询'},
 h2_steps: {0: "خطوات الإجراء في النزاعات المصرفية", 1: "Banking Dispute Procedure Steps", 2: "银行纠纷程序步骤"},
 };
+</script>
+<script>
+function handleCaseFormSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const serviceSelect = form.querySelector('select[name="service"]');
+    if (checked.length === 0) {
+        alert('يرجى اختيار خدمة واحدة على الأقل');
+        return;
+    }
+    const name = form.querySelector('[name="name"]').value;
+    const phone = form.querySelector('[name="phone"]').value;
+    const email = form.querySelector('[name="email"]').value || '-';
+    const services = Array.from(checked).map(c => c.value).join('، ');
+    const details = form.querySelector('[name="details"]').value;
+    const pageTitle = document.title.split('—')[0].trim();
+    const bodyParts = [
+        'طلب استشارة قانونية — ' + pageTitle,
+        '---',
+        'الاسم: ' + name,
+        'الجوال: ' + phone,
+        'البريد: ' + email,
+        'الخدمة المطلوبة: ' + services,
+        'التفاصيل: ' + details
+    ];
+    const subject = encodeURIComponent('طلب استشارة قانونية — ' + pageTitle);
+    const body = encodeURIComponent(bodyParts.join('\n'));
+    window.location.href = 'mailto:info@lawmeshari.com?subject=' + subject + '&body=' + body;
+    var successDiv = document.getElementById('cfSuccess');
+    if (successDiv) { successDiv.style.display = 'block'; }
+    form.reset();
+    setTimeout(function(){ if(successDiv) successDiv.style.display='none'; }, 6000);
+}
 </script>
 <script src="lang.js"></script>
 </body>

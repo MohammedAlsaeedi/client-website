@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="page_title">التحكيم التجاري - شركة مشاري بندر بن جلوي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root { --navy: #1B2C6B; --navy-dark: #111d4a; --navy-mid: #223580; --gold: #B8935A; --gold-light: #d4aa72; --gold-pale: #f5ede0; --white: #ffffff; --off-white: #f8f6f2; --gray-light: #e5e7eb; --gray: #6b7280; --gray-dark: #374151; --border: #e5e1d9; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { font-family: 'Cairo', sans-serif; color: var(--gray-dark); background: var(--white); overflow-x: hidden; line-height: 1.6; }
+a { text-decoration: none; }
+
+/* NAVBAR */
+.navbar { position: fixed; inset: 0 0 auto 0; z-index: 1000; height: 90px; background: rgba(17,29,74,.97); backdrop-filter: blur(12px); border-bottom: 2px solid rgba(184,147,90,.45); display: flex; align-items: center; padding: 0 5%; }
+.nav-inner { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.nav-logo { display: flex; align-items: center; gap: 11px; }
+.nav-logo img { width: 60px; height: 60px; flex-shrink: 0; }
+.nav-firm-name { font-size: 1.2rem; font-weight: 800; color: var(--gold-light); line-height: 1.2; }
+.nav-firm-sub { font-size: .8rem; color: rgba(255,255,255,.55); }
+.nav-links { display: flex; align-items: center; gap: 20px; list-style: none; flex: 1; justify-content: center; }
+.nav-links a { color: rgba(255,255,255,.82); font-size: .95rem; font-weight: 600; transition: color .2s; position: relative; padding-bottom: 2px; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
+.nav-links a::after { content: ''; position: absolute; bottom: -2px; right: 0; left: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: right; transition: transform .25s; }
+.nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+.nav-cta { background: var(--gold); color: var(--white); padding: 8px 20px; border-radius: 25px; font-size: .85rem; font-weight: 800; transition: all .25s; white-space: nowrap; }
+.nav-cta:hover { background: var(--gold-light); }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; }
+.mobile-drawer { position: fixed; top: 90px; inset-inline: 0; background: var(--navy-dark); border-top: 1px solid rgba(184,147,90,.25); padding: 24px 5%; z-index: 999; transform: translateY(-8px); opacity: 0; visibility: hidden; transition: all .3s; }
+.mobile-drawer.open { transform: translateY(0); opacity: 1; visibility: visible; }
+.mobile-drawer ul { list-style: none; }
+.mobile-drawer li { border-bottom: 1px solid rgba(255,255,255,.07); }
+.mobile-drawer a { display: block; padding: 12px 0; color: rgba(255,255,255,.85); font-size: .95rem; font-weight: 600; }
+
+/* PAGE HERO */
+.page-hero { padding: 130px 5% 65px; background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #2a4090 100%); position: relative; overflow: hidden; }
+.page-hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(184,147,90,.08) 1px, transparent 1px); background-size: 40px 40px; }
+.page-hero-content { position: relative; z-index: 2; max-width: 700px; }
+.page-breadcrumb { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.55); font-size: .85rem; margin-bottom: 18px; }
+.page-breadcrumb a { color: var(--gold-light); }
+.page-breadcrumb span { color: rgba(255,255,255,.3); }
+.page-hero h1 { font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 900; color: white; line-height: 1.3; margin-bottom: 14px; }
+.page-hero p { color: rgba(255,255,255,.7); font-size: 1rem; line-height: 1.7; max-width: 600px; }
+
+/* ARTICLE CONTENT */
+.article-container { max-width: 820px; margin: 0 auto; padding: 60px 5%; }
+.article-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 30px; flex-wrap: wrap; }
+.article-tag { background: var(--gold-pale); color: var(--gold); font-size: .8rem; font-weight: 800; padding: 4px 14px; border-radius: 15px; }
+.article-date { color: var(--gray); font-size: .85rem; }
+.article-body h2 { font-size: 1.35rem; font-weight: 800; color: var(--navy); margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--gold-pale); }
+.article-body h3 { font-size: 1.1rem; font-weight: 700; color: var(--navy-mid); margin: 24px 0 12px; }
+.article-body p { font-size: .95rem; color: var(--gray-dark); line-height: 1.9; margin-bottom: 16px; }
+.article-body ul, .article-body ol { margin: 12px 0 16px 24px; }
+.article-body li { font-size: .93rem; line-height: 1.8; margin-bottom: 8px; color: var(--gray-dark); }
+.article-body strong { color: var(--navy); }
+.info-box { background: var(--off-white); border-right: 4px solid var(--gold); border-radius: 8px; padding: 20px 24px; margin: 20px 0; }
+.info-box p { margin-bottom: 0; }
+.back-to-blog { display: inline-flex; align-items: center; gap: 8px; color: var(--gold); font-weight: 700; font-size: .95rem; margin-top: 40px; transition: color .2s; }
+.back-to-blog:hover { color: var(--navy); }
+
+/* SECTION */
+.section-pad { padding: 70px 5%; max-width: 1280px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 45px; }
+.tag { display: inline-block; background: var(--gold-pale); color: var(--gold); font-size: .82rem; font-weight: 800; padding: 5px 16px; border-radius: 20px; margin-bottom: 12px; }
+.section-title { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 900; color: var(--navy); }
+.gold-bar { width: 50px; height: 4px; background: var(--gold); border-radius: 2px; margin: 12px auto 0; }
+
+/* LANG DROPDOWN */
+.lang-drop { position: relative; display: flex; align-items: center; }
+.lang-drop-btn { background: none; border: 2px solid rgba(255,255,255,.25); border-radius: 10px; cursor: pointer; font-size: 1.4rem; line-height: 1; padding: 4px 8px; transition: all .2s; color: #fff; }
+.lang-drop-btn:hover { border-color: var(--gold); transform: scale(1.05); }
+.lang-drop-menu { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--navy); border: 1px solid var(--gold); border-radius: 10px; padding: 6px; display: none; flex-direction: column; gap: 4px; min-width: 130px; z-index: 9999; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+.lang-drop-menu.open { display: flex; }
+.lang-drop-menu button { background: none; border: none; cursor: pointer; font-size: 1rem; padding: 6px 10px; border-radius: 6px; text-align: right; color: #fff; white-space: nowrap; font-family: inherit; transition: background .15s; }
+.lang-drop-menu button:hover { background: rgba(184,147,90,.2); }
+
+/* FOOTER */
+footer { background: var(--navy-dark); color: rgba(255,255,255,.6); text-align: center; padding: 30px 5%; font-size: .85rem; border-top: 1px solid rgba(184,147,90,.2); }
+footer a { color: var(--gold-light); }
+.whatsapp-fab { position: fixed; bottom: 28px; left: 28px; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 999; box-shadow: 0 6px 20px rgba(37,211,102,.4); transition: transform .25s; }
+.whatsapp-fab:hover { transform: scale(1.1); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) { .nav-links { display: none; } .hamburger { display: flex; } }
+@media (max-width: 768px) {
+    .page-hero { padding: 110px 5% 50px; }
+    .page-hero h1 { font-size: clamp(1.3rem,5vw,1.9rem); }
+    .article-container { padding: 40px 5%; }
+    .article-body h2 { font-size: 1.2rem; }
+}
+@media (max-width: 600px) { .nav-cta { display: none; } }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">
+<img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png" style="width:60px;height:60px;object-fit:contain;"/>
+<div class="nav-logo-text">
+<div class="nav-firm-name" data-i18n="firm_name">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub" data-i18n="firm_sub">للمحاماة والاستشارات القانونية</div>
+</div>
+</a>
+<ul class="nav-links">
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html" class="active">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+<div class="nav-controls">
+<div class="lang-drop" id="langDrop">
+<button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
+<div class="lang-drop-menu" id="langDropMenu">
+<button data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦 العربية</button>
+<button data-lang="1" onclick="setLang(1);toggleLangDrop()">🇬🇧 English</button>
+<button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
+</div>
+</div>
+<a class="nav-cta" data-i18n="nav_cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
+<div class="hamburger" onclick="document.querySelector('.mobile-drawer').classList.toggle('open')">
+<span></span><span></span><span></span>
+</div>
+</div>
+</div>
+</nav>
+<div class="mobile-drawer">
+<ul>
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+</div>
+
+<section class="page-hero">
+<div class="page-hero-content">
+<div class="page-breadcrumb">
+<a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
+<span>›</span>
+<a data-i18n="breadcrumb_blog" href="blog.html">المدونة</a>
+<span>›</span>
+<span data-i18n="art5_title">التحكيم التجاري</span>
+</div>
+<h1 data-i18n="art5_hero_title">التحكيم التجاري: البديل الفعّال للتقاضي</h1>
+<p data-i18n="art5_hero_subtitle">كل ما تحتاج معرفته عن نظام التحكيم السعودي وإجراءاته</p>
+</div>
+</section>
+
+<div class="article-container">
+<div class="article-meta">
+<span class="article-tag" data-i18n="tag_legal">قانون</span>
+<span class="article-date" data-i18n="art5_date">5 مارس 2026</span>
+</div>
+
+<article class="article-body">
+
+<h2 data-i18n="art5_intro_h2">مقدمة عن التحكيم كآلية فعّالة لحل النزاعات</h2>
+<p data-i18n="art5_intro_p1">التحكيم التجاري أصبح أحد أهم آليات حل النزاعات في العالم. في المملكة العربية السعودية، تم إصدار نظام التحكيم برمز ملكي م/34 سنة 2012، الذي حدد الإطار القانوني الشامل لعملية التحكيم والإجراءات المتبعة فيها. هذا النظام ينظم كل جوانب عملية التحكيم من تشكيل هيئة التحكيم إلى تنفيذ أحكامها.</p>
+
+<p data-i18n="art5_intro_p2">مع نمو القطاع التجاري والاستثمارات الأجنبية في المملكة، أصبح للتحكيم أهمية كبيرة. المستثمرون والشركات يفضلون التحكيم على التقاضي لأنه يوفر حلاً أسرع وأقل تكلفة. كما أن الشركات السعودية التي تتعامل مع شركاء أجانب تستخدم التحكيم كوسيلة محايدة لفض النزاعات.</p>
+
+<h2 data-i18n="art5_concept_h2">ما هو التحكيم ومزاياه على التقاضي التقليدي</h2>
+<p data-i18n="art5_concept_p1">التحكيم هو آلية ودية لحل النزاعات يختار فيها الطرفان محكماً أو مجموعة من المحكمين (هيئة تحكيمية) للفصل في النزاع بدلاً من المحكمة العادية. المحكم يستمع للحجج من الطرفين ثم يصدر حكماً ملزماً يسمى "حكم التحكيم".</p>
+
+<p data-i18n="art5_concept_p2">التحكيم له عدة مزايا مقارنة بالتقاضي التقليدي:</p>
+
+<ul>
+<li data-i18n="art5_concept_l1"><strong>السرعة:</strong> التحكيم أسرع من التقاضي العادي الذي قد يأخذ سنوات. عادة التحكيم ينتهي في 12 شهر أو أقل</li>
+<li data-i18n="art5_concept_l2"><strong>السرية:</strong> إجراءات التحكيم سرية تماماً، بعكس المحاكم العامة حيث الجلسات علنية</li>
+<li data-i18n="art5_concept_l3"><strong>المرونة:</strong> الطرفان يستطيعان الاتفاق على إجراءات التحكيم والمحكمين والقانون الواجب التطبيق</li>
+<li data-i18n="art5_concept_l4"><strong>الكفاءة المتخصصة:</strong> يمكن اختيار محكمين متخصصين في المجال محل النزاع</li>
+<li data-i18n="art5_concept_l5"><strong>الإنفاذ الدولي:</strong> أحكام التحكيم قابلة للإنفاذ في جميع دول العالم بموجب اتفاقية نيويورك</li>
+<li data-i18n="art5_concept_l6"><strong>التكلفة:</strong> قد تكون أقل تكلفة من التقاضي الطويل والمعقد</li>
+</ul>
+
+<div class="info-box">
+<p data-i18n="art5_info1"><strong>معلومة مهمة:</strong> حكم التحكيم ملزم لكلا الطرفين ولا يمكن استئنافه مثل أحكام المحاكم، مما يجعله نهائياً إلى حد كبير.</p>
+</div>
+
+<h2 data-i18n="art5_agreement_h2">اتفاق التحكيم: أساس النزاع والإجراءات</h2>
+<p data-i18n="art5_agreement_p1">اتفاق التحكيم هو العنصر الأساسي والضروري لبدء أي عملية تحكيمية. يجب أن يكون هناك اتفاق كتابي واضح بين الطرفين على اللجوء للتحكيم بدلاً من المحكمة. هناك نوعان من اتفاقات التحكيم:</p>
+
+<h3 data-i18n="art5_agreement_h3_1">شرط التحكيم (Arbitration Clause)</h3>
+<p data-i18n="art5_agreement_p2">هو شرط يضاف في العقد الأساسي بين الطرفين قبل حدوث أي نزاع. على سبيل المثال، في عقد توريد بين شركة سعودية وشركة أجنبية، يمكن إضافة شرط يقول: "أي نزاع ينشأ من هذا العقد يتم فضه بالتحكيم وفقاً لقواعد المركز السعودي للتحكيم التجاري."</p>
+
+<h3 data-i18n="art5_agreement_h3_2">مشارطة التحكيم (Submission Agreement)</h3>
+<p data-i18n="art5_agreement_p3">هي اتفاق يتم عمله بعد حدوث النزاع بالفعل. إذا كان هناك عقد بدون شرط تحكيم، يمكن للطرفين الاتفاق بعد حدوث النزاع على تحويله للتحكيم بدلاً من رفع دعوى أمام المحكمة.</p>
+
+<p data-i18n="art5_agreement_p4">اتفاق التحكيم يجب أن يتضمن عناصر أساسية مثل: تحديد الأطراف، وصف النزاع أو المسائل محل التحكيم، عدد المحكمين، كيفية تعيينهم، مكان التحكيم، القانون الواجب التطبيق، والمركز التحكيمي (إن كان الأمر متعلقاً بتحكيم مؤسسي).</p>
+
+<h2 data-i18n="art5_procedures_h2">إجراءات التحكيم التفصيلية</h2>
+<p data-i18n="art5_procedures_p1">إجراءات التحكيم تحكمها قواعد معينة وتمر بمراحل متسلسلة:</p>
+
+<h3 data-i18n="art5_procedures_h3_1">المرحلة الأولى: تقديم طلب التحكيم</h3>
+<p data-i18n="art5_procedures_p2">الطرف الذي يريد اللجوء للتحكيم يقدم طلباً رسمياً يسمى "طلب التحكيم" أو "النزاع" إلى هيئة التحكيم أو المركز التحكيمي. الطلب يجب أن يتضمن معلومات دقيقة عن الطرفين والنزاع والمطالبات المالية.</p>
+
+<h3 data-i18n="art5_procedures_h3_2">المرحلة الثانية: تعيين المحكمين</h3>
+<p data-i18n="art5_procedures_p3">تعيين المحكمين يتم بطرق مختلفة حسب الاتفاق. قد يكون هناك محكم واحد (في النزاعات البسيطة) أو ثلاثة محكمين (في النزاعات المعقدة). إذا كان هناك ثلاثة محكمين، كل طرف يعين محكم واحد، ثم يختار هذان المحكمان محكم ثالث يرأس الهيئة.</p>
+
+<h3 data-i18n="art5_procedures_h3_3">المرحلة الثالثة: الجلسة الافتتاحية</h3>
+<p data-i18n="art5_procedures_p4">تعقد جلسة افتتاحية يتم فيها تحديد الإجراءات والجدول الزمني والقضايا المراد التحكيم بشأنها. الطرفان يقدمان موقفهما الأولي والمستندات الأساسية.</p>
+
+<h3 data-i18n="art5_procedures_h3_4">المرحلة الرابعة: تبادل المذكرات والأدلة</h3>
+<p data-i18n="art5_procedures_p5">كل طرف يقدم مذكرات قانونية تشرح موقفه مع المستندات الداعمة والأدلة. هناك جولات من تبادل المذكرات بين الطرفين قد تستغرق عدة أشهر.</p>
+
+<h3 data-i18n="art5_procedures_h3_5">المرحلة الخامسة: جلسات الاستماع</h3>
+<p data-i18n="art5_procedures_p6">يتم عقد جلسات استماع حيث يقدم الطرفان الشهود والخبراء، ويتم استجوابهم من قبل الطرف الآخر والمحكمين. كل طرف يحصل على فرصة لتقديم حجته الشفوية.</p>
+
+<h3 data-i18n="art5_procedures_h3_6">المرحلة السادسة: المذكرات الختامية</h3>
+<p data-i18n="art5_procedures_p7">بعد انتهاء جلسات الاستماع، كل طرف يقدم مذكرة ختامية تلخص حجته والقانون الواجب التطبيق.</p>
+
+<h3 data-i18n="art5_procedures_h3_7">المرحلة السابعة: صدور حكم التحكيم</h3>
+<p data-i18n="art5_procedures_p8">المحكمون يتداولون بشكل سري ثم يصدرون حكماً نهائياً ملزماً. الحكم يجب أن يكون مكتوباً ويتضمن أسباب الحكم والقرار النهائي.</p>
+
+<div class="info-box">
+<p data-i18n="art5_info2"><strong>ملاحظة:</strong> الإطار الزمني القياسي للتحكيم هو 12 شهر من تاريخ تقديم طلب التحكيم، ويمكن تمديده لمدة 6 أشهر إضافية بموافقة الطرفين.</p>
+</div>
+
+<h2 data-i18n="art5_scca_h2">المركز السعودي للتحكيم التجاري (SCCA)</h2>
+<p data-i18n="art5_scca_p1">المركز السعودي للتحكيم التجاري هو مؤسسة سعودية رسمية متخصصة في إدارة قضايا التحكيم. المركز يوفر إطار مؤسسي معترف به دولياً لإجراء التحكيم بكفاءة واحترافية.</p>
+
+<h3 data-i18n="art5_scca_h3_1">دور المركز:</h3>
+<ul>
+<li data-i18n="art5_scca_l1">إدارة إجراءات التحكيم من البداية للنهاية</li>
+<li data-i18n="art5_scca_l2">توفير قائمة محكمين معتمدين ومتخصصين</li>
+<li data-i18n="art5_scca_l3">تنظيم جلسات التحكيم في مقراته</li>
+<li data-i18n="art5_scca_l4">تحصيل الرسوم من الطرفين</li>
+<li data-i18n="art5_scca_l5">التواصل بين الطرفين والمحكمين</li>
+</ul>
+
+<h3 data-i18n="art5_scca_h3_2">الفرق بين التحكيم المؤسسي والتحكيم الحر (Ad Hoc):</h3>
+<p data-i18n="art5_scca_p2">التحكيم المؤسسي (الإداري) مثل ما يقدمه المركز السعودي، حيث تدير مؤسسة الإجراءات كاملة. بينما التحكيم الحر (Ad Hoc) يتم بين الطرفين مباشرة بدون تدخل مؤسسة، مما قد يكون أكثر مرونة لكن أقل نظاماً وحماية.</p>
+
+<p data-i18n="art5_scca_p3">معظم الشركات والمستثمرين يفضلون التحكيم المؤسسي لأنه يوفر الحماية والمصداقية والالتزام بمعايير دولية.</p>
+
+<h2 data-i18n="art5_enforcement_h2">تنفيذ أحكام التحكيم</h2>
+<p data-i18n="art5_enforcement_p1">حكم التحكيم ليس مفيداً إلا إذا أمكن تنفيذه. في المملكة العربية السعودية، تنفيذ أحكام التحكيم يتم من خلال:</p>
+
+<h3 data-i18n="art5_enforcement_h3_1">تنفيذ الأحكام المحلية:</h3>
+<p data-i18n="art5_enforcement_p2">إذا كان أطراف النزاع سعوديين وكان التحكيم قد تم بموجب القانون السعودي، فإن الحكم ينفذ أمام محاكم التنفيذ السعودية. الطرف المستحق يقدم الحكم ويطلب التنفيذ، وإذا لم يقم الطرف الآخر بتنفيذه طوعاً، يتم التنفيذ الجبري.</p>
+
+<h3 data-i18n="art5_enforcement_h3_2">تنفيذ الأحكام الأجنبية (اتفاقية نيويورك):</h3>
+<p data-i18n="art5_enforcement_p3">المملكة العربية السعودية موقعة على اتفاقية نيويورك لتنفيذ أحكام التحكيم الأجنبية (منذ 1994). هذا يعني أن حكم تحكيم صادر من بلد أجنبي يمكن تنفيذه في المملكة بموجب هذه الاتفاقية. الطرف المستحق يقدم طلب تنفيذ الحكم الأجنبي إلى المحاكم السعودية المختصة.</p>
+
+<div class="info-box">
+<p data-i18n="art5_info3"><strong>أهمية:</strong> انضمام المملكة لاتفاقية نيويورك يجعل أحكام التحكيم الصادرة ضد شركة سعودية في التحكيم الدولي قابلة للتنفيذ بسهولة في المملكة.</p>
+</div>
+
+<h2 data-i18n="art5_set_aside_h2">بطلان أحكام التحكيم والطعن فيها</h2>
+<p data-i18n="art5_set_aside_p1">على الرغم من أن أحكام التحكيم نهائية وملزمة، إلا أنه في حالات استثنائية يمكن الطعن فيها بطلب إلغاء الحكم. نظام التحكيم السعودي يسمح بتقديم دعوى بطلان حكم التحكيم أمام محاكم التنفيذ.</p>
+
+<h3 data-i18n="art5_set_aside_h3_1">أسباب الطعن في حكم التحكيم:</h3>
+<ul>
+<li data-i18n="art5_set_aside_l1"><strong>عدم الاختصاص:</strong> إذا كانت هيئة التحكيم تفتقر الاختصاص للنظر في النزاع</li>
+<li data-i18n="art5_set_aside_l2"><strong>الإجراءات غير السليمة:</strong> إذا تم انتهاك إجراءات التحكيم بشكل جوهري</li>
+<li data-i18n="art5_set_aside_l3"><strong>الغش أو الفساد:</strong> إذا كان هناك غش أو فساد أثناء الإجراءات</li>
+<li data-i18n="art5_set_aside_l4"><strong>النظام العام:</strong> إذا كان الحكم يتعارض مع النظام العام والآداب في المملكة</li>
+<li data-i18n="art5_set_aside_l5"><strong>التحيز:</strong> إذا كان هناك تحيز واضح من المحكم</li>
+</ul>
+
+<p data-i18n="art5_set_aside_p2">يجب تقديم دعوى البطلان خلال 3 أشهر من الحصول على نسخة من حكم التحكيم. هذا الحد الزمني قصير جداً، مما يتطلب من الطرف المعترض أن يتحرك بسرعة إذا أراد الطعن.</p>
+
+<h2 data-i18n="art5_cases_h2">حالات واقعية ودروس من النزاعات التحكيمية</h2>
+<p data-i18n="art5_cases_p1">في الممارسة العملية، كثير من النزاعات التجارية السعودية تم حلها بواسطة التحكيم. على سبيل المثال:</p>
+
+<ul>
+<li data-i18n="art5_cases_l1">نزاعات التوريد والعقود بين الشركات السعودية والأجنبية</li>
+<li data-i18n="art5_cases_l2">نزاعات الاستثمار والمشاريع الكبرى</li>
+<li data-i18n="art5_cases_l3">نزاعات حقوق الملكية الفكرية في مجالات التكنولوجيا</li>
+<li data-i18n="art5_cases_l4">نزاعات التمويل والخدمات المصرفية</li>
+<li data-i18n="art5_cases_l5">نزاعات البناء والمقاولات في المشاريع الكبرى</li>
+</ul>
+
+<p data-i18n="art5_cases_p2">الدروس المستفادة من هذه النزاعات تؤكد على أهمية صياغة عقود واضحة وشاملة، واختيار محكمين متخصصين، والالتزام بالإجراءات التحكيمية.</p>
+
+<h2 data-i18n="art5_tips_h2">نصائح للتعامل مع النزاعات التحكيمية</h2>
+<p data-i18n="art5_tips_p1">إذا وجدت نفسك في نزاع تجاري وتفكر في اللجوء للتحكيم، إليك بعض النصائح المهمة:</p>
+
+<h3 data-i18n="art5_tips_h3_1">1. حضّر وثائقك مسبقاً</h3>
+<p data-i18n="art5_tips_p2">قبل بدء إجراءات التحكيم، تأكد من أن لديك جميع العقود والمراسلات والفواتير والمستندات الأخرى منظمة وموثقة بشكل صحيح.</p>
+
+<h3 data-i18n="art5_tips_h3_2">2. اختر محامياً متخصصاً</h3>
+<p data-i18n="art5_tips_p3">اختيار محام ذو خبرة في التحكيم التجاري والقانون السعودي ضروري جداً لتمثيل قضيتك بكفاءة.</p>
+
+<h3 data-i18n="art5_tips_h3_3">3. افهم الاتفاقية</h3>
+<p data-i18n="art5_tips_p4">تأكد من أنك تفهم كل بنود اتفاق التحكيم قبل توقيعه أو المضي فيه.</p>
+
+<h3 data-i18n="art5_tips_h3_4">4. اجمع الأدلة بسرعة</h3>
+<p data-i18n="art5_tips_p5">جمع الأدلة والشهود سريعاً قبل فقدانهم أو فقدان إمكانية الحصول عليهم.</p>
+
+<h3 data-i18n="art5_tips_h3_5">5. لا تهمل الجلسات</h3>
+<p data-i18n="art5_tips_p6">الحضور المنتظم والفعال في جلسات التحكيم ضروري لعرض قضيتك بشكل صحيح.</p>
+
+<h2 data-i18n="art5_conclusion_h2">الخاتمة</h2>
+<p data-i18n="art5_conclusion_p1">التحكيم التجاري أصبح الآلية الأساسية لحل النزاعات في المعاملات التجارية الدولية والسعودية. نظام التحكيم السعودي يوفر إطار عمل قوي وفعال يحمي حقوق الطرفين ويضمن عدالة الحكم. مع وجود المركز السعودي للتحكيم التجاري وموقع المملكة على اتفاقيات دولية، أصبح التحكيم في المملكة جاذباً للاستثمارات الأجنبية.</p>
+
+<p data-i18n="art5_conclusion_p2">إذا كنت شركة أو فرد تتعامل في النزاعات التجارية، فهم التحكيم والاستعداد له بشكل صحيح ضروري جداً. فريقنا في شركة مشاري بندر بن جلوي متخصص في قضايا التحكيم التجاري ويمكنه مساعدتك في جميع مراحل العملية من الاتفاق الأولي حتى تنفيذ الحكم.</p>
+
+<a href="blog.html" class="back-to-blog" data-i18n="back_to_blog">← العودة للمدونة</a>
+
+</article>
+</div>
+
+<section style="background:linear-gradient(135deg,var(--navy-dark),var(--navy));padding:60px 5%;text-align:center;">
+<h2 data-i18n="cta_h2" style="font-size:clamp(1.3rem,3vw,1.8rem);font-weight:900;color:white;margin-bottom:14px;">هل تحتاج استشارة قانونية؟</h2>
+<p data-i18n="cta_p" style="color:rgba(255,255,255,.7);font-size:1rem;max-width:550px;margin:0 auto 24px;">فريقنا القانوني جاهز لمساعدتك</p>
+<a data-i18n="nav_cta" href="https://wa.me/966533532153" style="display:inline-block;background:var(--gold);color:white;padding:12px 32px;border-radius:25px;font-weight:800;font-size:.95rem;" target="_blank" rel="noopener">احجز استشارة</a>
+</section>
+
+<footer>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px 22px;margin-bottom:18px;">
+<a data-i18n="nav_services" href="index.html#services" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">خدماتنا</a>
+<a data-i18n="nav_contracts" href="contracts.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">عقود الشركات</a>
+<a data-i18n="nav_faq" href="faq.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">الأسئلة الشائعة</a>
+<a data-i18n="nav_team" href="team.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">فريقنا</a>
+<a data-i18n="nav_blog" href="blog.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">المدونة</a>
+<a data-i18n="nav_eservices" href="e-services.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">الخدمات الإلكترونية</a>
+<a data-i18n="nav_events" href="events.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">فعاليتنا</a>
+<a data-i18n="nav_cases_stats" href="cases-stats.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">القضايا المنجزة</a>
+<a data-i18n="nav_careers" href="careers.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">التوظيف</a>
+<a data-i18n="nav_contact" href="index.html#booking" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;">تواصل معنا</a>
+</div>
+<p data-i18n="footer_copyright">© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+</footer>
+
+<a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank">
+<svg fill="white" height="28" viewbox="0 0 24 24" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<script>
+const pageTranslations = {
+  page_title: {0: 'التحكيم التجاري - شركة مشاري بندر بن جلوي', 1: 'Commercial Arbitration - Al Mashari Law Firm', 2: '商业仲裁 - Al Mashari律师事务所'},
+  breadcrumb_home: {0: 'الرئيسية', 1: 'Home', 2: '首页'},
+  breadcrumb_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
+  art5_title: {0: 'التحكيم التجاري', 1: 'Commercial Arbitration', 2: '商业仲裁'},
+  art5_hero_title: {0: 'التحكيم التجاري: البديل الفعّال للتقاضي', 1: 'Commercial Arbitration: An Effective Alternative to Litigation', 2: '商业仲裁：诉讼的有效替代方案'},
+  art5_hero_subtitle: {0: 'كل ما تحتاج معرفته عن نظام التحكيم السعودي وإجراءاته', 1: 'Everything you need to know about the Saudi arbitration system and procedures', 2: '关于沙特仲裁系统和程序的所有信息'},
+  tag_legal: {0: 'قانون', 1: 'Legal', 2: '法律'},
+  art5_date: {0: '5 مارس 2026', 1: 'March 5, 2026', 2: '2026年3月5日'},
+  art5_intro_h2: {0: 'مقدمة عن التحكيم كآلية فعّالة لحل النزاعات', 1: 'Introduction to Arbitration as an Effective Dispute Resolution Mechanism', 2: '仲裁作为有效纠纷解决机制的介绍'},
+  art5_intro_p1: {0: 'التحكيم التجاري أصبح أحد أهم آليات حل النزاعات في العالم. في المملكة العربية السعودية، تم إصدار نظام التحكيم برمز ملكي م/34 سنة 2012، الذي حدد الإطار القانوني الشامل لعملية التحكيم والإجراءات المتبعة فيها. هذا النظام ينظم كل جوانب عملية التحكيم من تشكيل هيئة التحكيم إلى تنفيذ أحكامها.', 1: 'Commercial arbitration has become one of the most important mechanisms for dispute resolution in the world. In the Kingdom of Saudi Arabia, the Arbitration Law was issued by Royal Decree M/34 in 2012, which set the comprehensive legal framework for the arbitration process and its procedures. This law regulates all aspects of arbitration from the formation of the arbitration tribunal to the enforcement of its awards.', 2: '商业仲裁已成为世界上最重要的纠纷解决机制之一。在沙特阿拉伯王国，2012年发布了编号为M/34的皇家法令，规定了仲裁程序的全面法律框架。该法律规定了仲裁过程的各个方面，从仲裁庭的组成到仲裁裁决的执行。'},
+  art5_intro_p2: {0: 'مع نمو القطاع التجاري والاستثمارات الأجنبية في المملكة، أصبح للتحكيم أهمية كبيرة. المستثمرون والشركات يفضلون التحكيم على التقاضي لأنه يوفر حلاً أسرع وأقل تكلفة. كما أن الشركات السعودية التي تتعامل مع شركاء أجانب تستخدم التحكيم كوسيلة محايدة لفض النزاعات.', 1: 'With the growth of the commercial sector and foreign investments in the Kingdom, arbitration has become very important. Investors and companies prefer arbitration to litigation because it provides a faster and less costly solution. Saudi companies dealing with foreign partners also use arbitration as a neutral means to resolve disputes.', 2: '随着商业部门和外国投资在王国的增长，仲裁变得非常重要。投资者和公司倾向于选择仲裁而不是诉讼，因为它提供了更快、成本更低的解决方案。与外国伙伴合作的沙特公司也使用仲裁作为解决纠纷的中立手段。'},
+  art5_concept_h2: {0: 'ما هو التحكيم ومزاياه على التقاضي التقليدي', 1: 'What is Arbitration and Its Advantages Over Traditional Litigation', 2: '什么是仲裁及其相对于传统诉讼的优势'},
+  art5_concept_p1: {0: 'التحكيم هو آلية ودية لحل النزاعات يختار فيها الطرفان محكماً أو مجموعة من المحكمين (هيئة تحكيمية) للفصل في النزاع بدلاً من المحكمة العادية. المحكم يستمع للحجج من الطرفين ثم يصدر حكماً ملزماً يسمى "حكم التحكيم".', 1: 'Arbitration is a friendly mechanism for dispute resolution in which the parties choose an arbitrator or group of arbitrators (arbitration tribunal) to decide the dispute instead of the ordinary court. The arbitrator listens to arguments from both parties and then issues a binding decision called an "arbitral award".', 2: '仲裁是纠纷解决的友好机制，其中当事人选择一名仲裁员或仲裁员小组（仲裁庭）代替普通法院来解决争议。仲裁员听取双方的意见，然后发布名为"仲裁裁决"的具有约束力的决定。'},
+  art5_concept_p2: {0: 'التحكيم له عدة مزايا مقارنة بالتقاضي التقليدي:', 1: 'Arbitration has several advantages compared to traditional litigation:', 2: '与传统诉讼相比，仲裁具有以下几个优势：'},
+  art5_concept_l1: {0: 'السرعة: التحكيم أسرع من التقاضي العادي الذي قد يأخذ سنوات. عادة التحكيم ينتهي في 12 شهر أو أقل', 1: 'Speed: Arbitration is faster than ordinary litigation which can take years. Arbitration usually ends in 12 months or less', 2: '速度：仲裁比普通诉讼快，后者可能需要多年。仲裁通常在12个月或更短时间内结束'},
+  art5_concept_l2: {0: 'السرية: إجراءات التحكيم سرية تماماً، بعكس المحاكم العامة حيث الجلسات علنية', 1: 'Confidentiality: Arbitration proceedings are completely confidential, unlike public courts where sessions are public', 2: '机密性：仲裁程序完全保密，不同于公众法庭的公开会议'},
+  art5_concept_l3: {0: 'المرونة: الطرفان يستطيعان الاتفاق على إجراءات التحكيم والمحكمين والقانون الواجب التطبيق', 1: 'Flexibility: The parties can agree on arbitration procedures, arbitrators, and applicable law', 2: '灵活性：当事人可以就仲裁程序、仲裁员和适用法律达成一致'},
+  art5_concept_l4: {0: 'الكفاءة المتخصصة: يمكن اختيار محكمين متخصصين في المجال محل النزاع', 1: 'Specialized Expertise: You can choose arbitrators who are experts in the field of the dispute', 2: '专业知识：您可以选择在争议领域拥有专业知识的仲裁员'},
+  art5_concept_l5: {0: 'الإنفاذ الدولي: أحكام التحكيم قابلة للإنفاذ في جميع دول العالم بموجب اتفاقية نيويورك', 1: 'International Enforcement: Arbitration awards are enforceable in all countries under the New York Convention', 2: '国际执行：仲裁裁决在《纽约公约》下可在所有国家执行'},
+  art5_concept_l6: {0: 'التكلفة: قد تكون أقل تكلفة من التقاضي الطويل والمعقد', 1: 'Cost: May be less expensive than long and complex litigation', 2: '成本：可能比冗长复杂的诉讼成本更低'},
+  art5_info1: {0: 'معلومة مهمة: حكم التحكيم ملزم لكلا الطرفين ولا يمكن استئنافه مثل أحكام المحاكم، مما يجعله نهائياً إلى حد كبير.', 1: 'Important Note: An arbitral award is binding on both parties and cannot be appealed like court decisions, making it largely final.', 2: '重要提示：仲裁裁决对双方都具有约束力，不能像法院裁决那样上诉，这使其基本上是最终的。'},
+  art5_agreement_h2: {0: 'اتفاق التحكيم: أساس النزاع والإجراءات', 1: 'Arbitration Agreement: Foundation of the Dispute and Procedures', 2: '仲裁协议：纠纷和程序的基础'},
+  art5_agreement_p1: {0: 'اتفاق التحكيم هو العنصر الأساسي والضروري لبدء أي عملية تحكيمية. يجب أن يكون هناك اتفاق كتابي واضح بين الطرفين على اللجوء للتحكيم بدلاً من المحكمة. هناك نوعان من اتفاقات التحكيم:', 1: 'An arbitration agreement is the basic and necessary element to initiate any arbitration process. There must be a clear written agreement between the parties to resort to arbitration instead of court. There are two types of arbitration agreements:', 2: '仲裁协议是启动任何仲裁程序的基本和必要因素。当事人之间必须有明确的书面协议，以诉诸仲裁而不是法庭。仲裁协议有两种类型：'},
+  art5_agreement_h3_1: {0: 'شرط التحكيم (Arbitration Clause)', 1: 'Arbitration Clause', 2: '仲裁条款'},
+  art5_agreement_p2: {0: 'هو شرط يضاف في العقد الأساسي بين الطرفين قبل حدوث أي نزاع. على سبيل المثال، في عقد توريد بين شركة سعودية وشركة أجنبية، يمكن إضافة شرط يقول: "أي نزاع ينشأ من هذا العقد يتم فضه بالتحكيم وفقاً لقواعد المركز السعودي للتحكيم التجاري."', 1: 'A clause added to the main contract between parties before any dispute occurs. For example, in a supply contract between a Saudi company and a foreign company, you could add a clause stating: "Any dispute arising from this contract shall be resolved by arbitration according to the rules of the Saudi Center for Commercial Arbitration."', 2: '在任何纠纷发生之前，在当事人之间的主要合同中添加的条款。例如，在沙特公司与外国公司之间的供应合同中，您可以添加条款规定："本合同产生的任何纠纷应根据沙特商业仲裁中心的规则通过仲裁解决。"'},
+  art5_agreement_h3_2: {0: 'مشارطة التحكيم (Submission Agreement)', 1: 'Submission Agreement', 2: '仲裁提交协议'},
+  art5_agreement_p3: {0: 'هي اتفاق يتم عمله بعد حدوث النزاع بالفعل. إذا كان هناك عقد بدون شرط تحكيم، يمكن للطرفين الاتفاق بعد حدوث النزاع على تحويله للتحكيم بدلاً من رفع دعوى أمام المحكمة.', 1: 'An agreement made after the dispute has actually occurred. If there is a contract without an arbitration clause, the parties can agree after the dispute arises to submit it to arbitration instead of filing a lawsuit.', 2: '纠纷实际发生后达成的协议。如果合同中没有仲裁条款，当事人可以在纠纷发生后达成一致，将其提交仲裁而不是提起诉讼。'},
+  art5_agreement_p4: {0: 'اتفاق التحكيم يجب أن يتضمن عناصر أساسية مثل: تحديد الأطراف، وصف النزاع أو المسائل محل التحكيم، عدد المحكمين، كيفية تعيينهم، مكان التحكيم، القانون الواجب التطبيق، والمركز التحكيمي (إن كان الأمر متعلقاً بتحكيم مؤسسي).', 1: 'An arbitration agreement should include basic elements such as: identification of parties, description of the dispute or issues subject to arbitration, number of arbitrators, how they are appointed, place of arbitration, applicable law, and arbitration center (if it is institutional arbitration).', 2: '仲裁协议应包括基本要素，如：当事人的身份、争议或仲裁对象事项的描述、仲裁员的数量、其任命方式、仲裁地点、适用法律和仲裁机构（如果是机构仲裁）。'},
+  art5_procedures_h2: {0: 'إجراءات التحكيم التفصيلية', 1: 'Detailed Arbitration Procedures', 2: '详细的仲裁程序'},
+  art5_procedures_p1: {0: 'إجراءات التحكيم تحكمها قواعد معينة وتمر بمراحل متسلسلة:', 1: 'Arbitration procedures are governed by specific rules and pass through sequential stages:', 2: '仲裁程序受特定规则管辖，并经历顺序阶段：'},
+  art5_procedures_h3_1: {0: 'المرحلة الأولى: تقديم طلب التحكيم', 1: 'Stage One: Filing the Request for Arbitration', 2: '第一阶段：提交仲裁请求'},
+  art5_procedures_p2: {0: 'الطرف الذي يريد اللجوء للتحكيم يقدم طلباً رسمياً يسمى "طلب التحكيم" أو "النزاع" إلى هيئة التحكيم أو المركز التحكيمي. الطلب يجب أن يتضمن معلومات دقيقة عن الطرفين والنزاع والمطالبات المالية.', 1: 'The party wishing to resort to arbitration files a formal request called "Request for Arbitration" or "Notice of Dispute" to the arbitration tribunal or arbitration center. The request must include accurate information about the parties, the dispute, and financial claims.', 2: '希望诉诸仲裁的当事人向仲裁庭或仲裁机构提交称为"仲裁请求"或"纠纷通知"的正式请求。该请求必须包含关于当事人、纠纷和财务索赔的准确信息。'},
+  art5_procedures_h3_2: {0: 'المرحلة الثانية: تعيين المحكمين', 1: 'Stage Two: Appointment of Arbitrators', 2: '第二阶段：任命仲裁员'},
+  art5_procedures_p3: {0: 'تعيين المحكمين يتم بطرق مختلفة حسب الاتفاق. قد يكون هناك محكم واحد (في النزاعات البسيطة) أو ثلاثة محكمين (في النزاعات المعقدة). إذا كان هناك ثلاثة محكمين، كل طرف يعين محكم واحد، ثم يختار هذان المحكمان محكم ثالث يرأس الهيئة.', 1: 'Appointment of arbitrators is done in different ways according to the agreement. There may be one arbitrator (in simple disputes) or three arbitrators (in complex disputes). If there are three arbitrators, each party appoints one arbitrator, then these two arbitrators choose a third arbitrator to chair the tribunal.', 2: '仲裁员的任命根据协议以不同的方式进行。可能有一名仲裁员（在简单纠纷中）或三名仲裁员（在复杂纠纷中）。如果有三名仲裁员，每方任命一名仲裁员，然后这两名仲裁员选择一名主持仲裁庭的第三名仲裁员。'},
+  art5_procedures_h3_3: {0: 'المرحلة الثالثة: الجلسة الافتتاحية', 1: 'Stage Three: Preliminary Hearing', 2: '第三阶段：初步听证'},
+  art5_procedures_p4: {0: 'تعقد جلسة افتتاحية يتم فيها تحديد الإجراءات والجدول الزمني والقضايا المراد التحكيم بشأنها. الطرفان يقدمان موقفهما الأولي والمستندات الأساسية.', 1: 'A preliminary hearing is held where procedures, timeline, and issues to be arbitrated are determined. The parties present their initial position and basic documents.', 2: '举行初步听证会，确定程序、时间表和要仲裁的事项。双方提出初步立场和基本文件。'},
+  art5_procedures_h3_4: {0: 'المرحلة الرابعة: تبادل المذكرات والأدلة', 1: 'Stage Four: Exchange of Memoranda and Evidence', 2: '第四阶段：交换备忘录和证据'},
+  art5_procedures_p5: {0: 'كل طرف يقدم مذكرات قانونية تشرح موقفه مع المستندات الداعمة والأدلة. هناك جولات من تبادل المذكرات بين الطرفين قد تستغرق عدة أشهر.', 1: 'Each party submits legal memoranda explaining its position with supporting documents and evidence. There are rounds of exchange of memoranda between the parties that can take several months.', 2: '每一方提交解释其立场的法律备忘录以及支持文件和证据。当事人之间有多轮备忘录交换，可能需要几个月。'},
+  art5_procedures_h3_5: {0: 'المرحلة الخامسة: جلسات الاستماع', 1: 'Stage Five: Hearings', 2: '第五阶段：听证会'},
+  art5_procedures_p6: {0: 'يتم عقد جلسات استماع حيث يقدم الطرفان الشهود والخبراء، ويتم استجوابهم من قبل الطرف الآخر والمحكمين. كل طرف يحصل على فرصة لتقديم حجته الشفوية.', 1: 'Hearings are held where parties present witnesses and experts, and they are cross-examined by the other party and the arbitrators. Each party has an opportunity to present its oral arguments.', 2: '举行听证会，当事人提出证人和专家，由另一方和仲裁员进行盘问。每一方都有机会提出口头辩论。'},
+  art5_procedures_h3_6: {0: 'المرحلة السادسة: المذكرات الختامية', 1: 'Stage Six: Final Memoranda', 2: '第六阶段：最终备忘录'},
+  art5_procedures_p7: {0: 'بعد انتهاء جلسات الاستماع، كل طرف يقدم مذكرة ختامية تلخص حجته والقانون الواجب التطبيق.', 1: 'After the hearings end, each party submits a final memorandum summarizing its arguments and the applicable law.', 2: '听证会结束后，每一方提交最终备忘录，总结其论证和适用法律。'},
+  art5_procedures_h3_7: {0: 'المرحلة السابعة: صدور حكم التحكيم', 1: 'Stage Seven: Issuance of Arbitral Award', 2: '第七阶段：发布仲裁裁决'},
+  art5_procedures_p8: {0: 'المحكمون يتداولون بشكل سري ثم يصدرون حكماً نهائياً ملزماً. الحكم يجب أن يكون مكتوباً ويتضمن أسباب الحكم والقرار النهائي.', 1: 'The arbitrators deliberate in secret and then issue a final binding award. The award must be in writing and include the reasons for the award and the final decision.', 2: '仲裁员秘密协商，然后发布最终的具有约束力的裁决。裁决必须是书面的，并包括裁决的理由和最终决定。'},
+  art5_info2: {0: 'ملاحظة: الإطار الزمني القياسي للتحكيم هو 12 شهر من تاريخ تقديم طلب التحكيم، ويمكن تمديده لمدة 6 أشهر إضافية بموافقة الطرفين.', 1: 'Note: The standard timeframe for arbitration is 12 months from the date of filing the request for arbitration, and it can be extended for an additional 6 months with the consent of the parties.', 2: '注意：仲裁的标准时限为自提交仲裁请求之日起12个月，经当事人同意可延长6个月。'},
+  art5_scca_h2: {0: 'المركز السعودي للتحكيم التجاري (SCCA)', 1: 'Saudi Center for Commercial Arbitration (SCCA)', 2: '沙特商业仲裁中心（SCCA）'},
+  art5_scca_p1: {0: 'المركز السعودي للتحكيم التجاري هو مؤسسة سعودية رسمية متخصصة في إدارة قضايا التحكيم. المركز يوفر إطار مؤسسي معترف به دولياً لإجراء التحكيم بكفاءة واحترافية.', 1: 'The Saudi Center for Commercial Arbitration is an official Saudi institution specialized in managing arbitration cases. The center provides an internationally recognized institutional framework for conducting arbitration efficiently and professionally.', 2: '沙特商业仲裁中心是一个官方沙特机构，专门管理仲裁案件。该中心为高效和专业地进行仲裁提供了国际公认的机构框架。'},
+  art5_scca_h3_1: {0: 'دور المركز:', 1: 'Role of the Center:', 2: '中心的角色：'},
+  art5_scca_l1: {0: 'إدارة إجراءات التحكيم من البداية للنهاية', 1: 'Managing arbitration procedures from beginning to end', 2: '从头到尾管理仲裁程序'},
+  art5_scca_l2: {0: 'توفير قائمة محكمين معتمدين ومتخصصين', 1: 'Providing a list of accredited and specialized arbitrators', 2: '提供认证和专业仲裁员的名单'},
+  art5_scca_l3: {0: 'تنظيم جلسات التحكيم في مقراته', 1: 'Organizing arbitration hearings at its premises', 2: '在其场地组织仲裁听证会'},
+  art5_scca_l4: {0: 'تحصيل الرسوم من الطرفين', 1: 'Collecting fees from the parties', 2: '向当事人收取费用'},
+  art5_scca_l5: {0: 'التواصل بين الطرفين والمحكمين', 1: 'Facilitating communication between parties and arbitrators', 2: '促进当事人和仲裁员之间的沟通'},
+  art5_scca_h3_2: {0: 'الفرق بين التحكيم المؤسسي والتحكيم الحر (Ad Hoc):', 1: 'Difference Between Institutional Arbitration and Ad Hoc Arbitration:', 2: '机构仲裁和临时仲裁之间的区别：'},
+  art5_scca_p2: {0: 'التحكيم المؤسسي (الإداري) مثل ما يقدمه المركز السعودي، حيث تدير مؤسسة الإجراءات كاملة. بينما التحكيم الحر (Ad Hoc) يتم بين الطرفين مباشرة بدون تدخل مؤسسة، مما قد يكون أكثر مرونة لكن أقل نظاماً وحماية.', 1: 'Institutional (administered) arbitration like what the Saudi Center provides, where an institution manages the entire process. While ad hoc arbitration takes place directly between the parties without institutional involvement, which may be more flexible but less organized and protected.', 2: '机构（管理的）仲裁，如沙特中心提供的，由机构管理整个过程。而临时仲裁直接在当事人之间进行，没有机构参与，这可能更灵活，但组织程度和保护程度较低。'},
+  art5_scca_p3: {0: 'معظم الشركات والمستثمرين يفضلون التحكيم المؤسسي لأنه يوفر الحماية والمصداقية والالتزام بمعايير دولية.', 1: 'Most companies and investors prefer institutional arbitration because it provides protection, credibility, and compliance with international standards.', 2: '大多数公司和投资者倾向于选择机构仲裁，因为它提供了保护、可信度和对国际标准的遵守。'},
+  art5_enforcement_h2: {0: 'تنفيذ أحكام التحكيم', 1: 'Enforcement of Arbitration Awards', 2: '执行仲裁裁决'},
+  art5_enforcement_p1: {0: 'حكم التحكيم ليس مفيداً إلا إذا أمكن تنفيذه. في المملكة العربية السعودية، تنفيذ أحكام التحكيم يتم من خلال:', 1: 'An arbitration award is only useful if it can be enforced. In the Kingdom of Saudi Arabia, arbitration awards are enforced through:', 2: '仲裁裁决只有在可以执行的情况下才有用。在沙特阿拉伯王国，仲裁裁决通过以下方式执行：'},
+  art5_enforcement_h3_1: {0: 'تنفيذ الأحكام المحلية:', 1: 'Enforcement of Domestic Awards:', 2: '执行本地仲裁裁决：'},
+  art5_enforcement_p2: {0: 'إذا كان أطراف النزاع سعوديين وكان التحكيم قد تم بموجب القانون السعودي، فإن الحكم ينفذ أمام محاكم التنفيذ السعودية. الطرف المستحق يقدم الحكم ويطلب التنفيذ، وإذا لم يقم الطرف الآخر بتنفيذه طوعاً، يتم التنفيذ الجبري.', 1: 'If the dispute parties are Saudi and the arbitration was conducted under Saudi law, the award is enforced before Saudi execution courts. The beneficiary party presents the award and requests enforcement, and if the other party does not voluntarily comply, forced execution is carried out.', 2: '如果纠纷当事人是沙特人，仲裁是根据沙特法律进行的，则该裁决在沙特执行法院执行。受益方提交裁决并要求执行，如果另一方不自愿遵守，则进行强制执行。'},
+  art5_enforcement_h3_2: {0: 'تنفيذ الأحكام الأجنبية (اتفاقية نيويورك):', 1: 'Enforcement of Foreign Awards (New York Convention):', 2: '执行外国仲裁裁决（《纽约公约》）：'},
+  art5_enforcement_p3: {0: 'المملكة العربية السعودية موقعة على اتفاقية نيويورك لتنفيذ أحكام التحكيم الأجنبية (منذ 1994). هذا يعني أن حكم تحكيم صادر من بلد أجنبي يمكن تنفيذه في المملكة بموجب هذه الاتفاقية. الطرف المستحق يقدم طلب تنفيذ الحكم الأجنبي إلى المحاكم السعودية المختصة.', 1: 'The Kingdom of Saudi Arabia is a signatory to the New York Convention on the enforcement of foreign arbitration awards (since 1994). This means an arbitration award issued by a foreign country can be enforced in the Kingdom under this convention. The beneficiary party submits a request for enforcement of the foreign award to the competent Saudi courts.', 2: '沙特阿拉伯王国是《纽约公约》的签署国，该公约涉及外国仲裁裁决的执行（自1994年以来）。这意味着外国发布的仲裁裁决可以根据本公约在王国内执行。受益方向有管辖权的沙特法院提交外国裁决执行请求。'},
+  art5_info3: {0: 'أهمية: انضمام المملكة لاتفاقية نيويورك يجعل أحكام التحكيم الصادرة ضد شركة سعودية في التحكيم الدولي قابلة للتنفيذ بسهولة في المملكة.', 1: 'Significance: The Kingdom\'s accession to the New York Convention makes arbitration awards issued against a Saudi company in international arbitration easily enforceable in the Kingdom.', 2: '重要性：王国加入《纽约公约》使得在国际仲裁中对沙特公司作出的仲裁裁决易于在王国内执行。'},
+  art5_set_aside_h2: {0: 'بطلان أحكام التحكيم والطعن فيها', 1: 'Nullity of Arbitration Awards and Challenges', 2: '仲裁裁决的无效性和异议'},
+  art5_set_aside_p1: {0: 'على الرغم من أن أحكام التحكيم نهائية وملزمة، إلا أنه في حالات استثنائية يمكن الطعن فيها بطلب إلغاء الحكم. نظام التحكيم السعودي يسمح بتقديم دعوى بطلان حكم التحكيم أمام محاكم التنفيذ.', 1: 'Although arbitration awards are final and binding, in exceptional cases they can be challenged by requesting nullification. The Saudi arbitration system allows filing a nullity action against an arbitration award before execution courts.', 2: '尽管仲裁裁决是最终的和具有约束力的，但在特殊情况下可以通过要求撤销来质疑。沙特仲裁系统允许在执行法院对仲裁裁决提起无效诉讼。'},
+  art5_set_aside_h3_1: {0: 'أسباب الطعن في حكم التحكيم:', 1: 'Grounds for Challenge of Arbitration Award:', 2: '对仲裁裁决提出异议的理由：'},
+  art5_set_aside_l1: {0: 'عدم الاختصاص: إذا كانت هيئة التحكيم تفتقر الاختصاص للنظر في النزاع', 1: 'Lack of Jurisdiction: If the arbitration tribunal lacked jurisdiction to consider the dispute', 2: '缺乏管辖权：如果仲裁庭缺乏审理纠纷的管辖权'},
+  art5_set_aside_l2: {0: 'الإجراءات غير السليمة: إذا تم انتهاك إجراءات التحكيم بشكل جوهري', 1: 'Improper Procedures: If arbitration procedures were violated substantially', 2: '不当程序：如果实质性违反了仲裁程序'},
+  art5_set_aside_l3: {0: 'الغش أو الفساد: إذا كان هناك غش أو فساد أثناء الإجراءات', 1: 'Fraud or Corruption: If there was fraud or corruption during the proceedings', 2: '欺诈或贪污：如果在诉讼中存在欺诈或贪污'},
+  art5_set_aside_l4: {0: 'النظام العام: إذا كان الحكم يتعارض مع النظام العام والآداب في المملكة', 1: 'Public Order: If the award violates public order and morals in the Kingdom', 2: '公共秩序：如果裁决违反王国的公共秩序和道德'},
+  art5_set_aside_l5: {0: 'التحيز: إذا كان هناك تحيز واضح من المحكم', 1: 'Bias: If there was obvious bias from the arbitrator', 2: '偏见：如果仲裁员存在明显的偏见'},
+  art5_set_aside_p2: {0: 'يجب تقديم دعوى البطلان خلال 3 أشهر من الحصول على نسخة من حكم التحكيم. هذا الحد الزمني قصير جداً، مما يتطلب من الطرف المعترض أن يتحرك بسرعة إذا أراد الطعن.', 1: 'A nullity action must be filed within 3 months of receiving a copy of the arbitration award. This timeframe is very short, requiring the objecting party to act quickly if it wishes to challenge.', 2: '必须在收到仲裁裁决副本之日起3个月内提起无效诉讼。这个时限很短，要求反对方如果想提出异议必须迅速采取行动。'},
+  art5_cases_h2: {0: 'حالات واقعية ودروس من النزاعات التحكيمية', 1: 'Real Cases and Lessons from Arbitration Disputes', 2: '仲裁纠纷的真实案例和教训'},
+  art5_cases_p1: {0: 'في الممارسة العملية، كثير من النزاعات التجارية السعودية تم حلها بواسطة التحكيم. على سبيل المثال:', 1: 'In practice, many Saudi commercial disputes have been resolved through arbitration. For example:', 2: '在实践中，许多沙特商业纠纷已通过仲裁解决。例如：'},
+  art5_cases_l1: {0: 'نزاعات التوريد والعقود بين الشركات السعودية والأجنبية', 1: 'Supply and contract disputes between Saudi and foreign companies', 2: '沙特和外国公司之间的供应和合同纠纷'},
+  art5_cases_l2: {0: 'نزاعات الاستثمار والمشاريع الكبرى', 1: 'Investment and major project disputes', 2: '投资和大型项目纠纷'},
+  art5_cases_l3: {0: 'نزاعات حقوق الملكية الفكرية في مجالات التكنولوجيا', 1: 'Intellectual property disputes in technology fields', 2: '技术领域的知识产权纠纷'},
+  art5_cases_l4: {0: 'نزاعات التمويل والخدمات المصرفية', 1: 'Financing and banking service disputes', 2: '融资和银行服务纠纷'},
+  art5_cases_l5: {0: 'نزاعات البناء والمقاولات في المشاريع الكبرى', 1: 'Construction and contracting disputes in major projects', 2: '大型项目中的建筑和承包纠纷'},
+  art5_cases_p2: {0: 'الدروس المستفادة من هذه النزاعات تؤكد على أهمية صياغة عقود واضحة وشاملة، واختيار محكمين متخصصين، والالتزام بالإجراءات التحكيمية.', 1: 'Lessons learned from these disputes emphasize the importance of clear and comprehensive contract drafting, selecting specialized arbitrators, and following arbitration procedures.', 2: '从这些纠纷中吸取的教训强调了清晰和全面的合同起草、选择专业仲裁员和遵循仲裁程序的重要性。'},
+  art5_tips_h2: {0: 'نصائح للتعامل مع النزاعات التحكيمية', 1: 'Tips for Handling Arbitration Disputes', 2: '处理仲裁纠纷的提示'},
+  art5_tips_p1: {0: 'إذا وجدت نفسك في نزاع تجاري وتفكر في اللجوء للتحكيم، إليك بعض النصائح المهمة:', 1: 'If you find yourself in a commercial dispute and considering arbitration, here are some important tips:', 2: '如果您陷入商业纠纷并考虑仲裁，以下是一些重要提示：'},
+  art5_tips_h3_1: {0: '1. حضّر وثائقك مسبقاً', 1: '1. Prepare Your Documents in Advance', 2: '1. 提前准备您的文件'},
+  art5_tips_p2: {0: 'قبل بدء إجراءات التحكيم، تأكد من أن لديك جميع العقود والمراسلات والفواتير والمستندات الأخرى منظمة وموثقة بشكل صحيح.', 1: 'Before starting arbitration proceedings, ensure you have all contracts, correspondence, invoices, and other documents properly organized and documented.', 2: '在开始仲裁程序之前，确保您已妥善组织和记录所有合同、信件、发票和其他文件。'},
+  art5_tips_h3_2: {0: '2. اختر محامياً متخصصاً', 1: '2. Choose a Specialized Lawyer', 2: '2. 选择专业律师'},
+  art5_tips_p3: {0: 'اختيار محام ذو خبرة في التحكيم التجاري والقانون السعودي ضروري جداً لتمثيل قضيتك بكفاءة.', 1: 'Choosing a lawyer with experience in commercial arbitration and Saudi law is essential to represent your case effectively.', 2: '选择具有商业仲裁和沙特法律经验的律师对有效代理您的案件至关重要。'},
+  art5_tips_h3_3: {0: '3. افهم الاتفاقية', 1: '3. Understand the Agreement', 2: '3. 理解协议'},
+  art5_tips_p4: {0: 'تأكد من أنك تفهم كل بنود اتفاق التحكيم قبل توقيعه أو المضي فيه.', 1: 'Make sure you understand all terms of the arbitration agreement before signing or proceeding with it.', 2: '在签署或继续执行仲裁协议之前，确保您理解其所有条款。'},
+  art5_tips_h3_4: {{0: '4. اجمع الأدلة بسرعة', 1: '4. Gather Evidence Quickly', 2: '4. 快速收集证据'},
+  art5_tips_p5: {0: 'جمع الأدلة والشهود سريعاً قبل فقدانهم أو فقدان إمكانية الحصول عليهم.', 1: 'Collect evidence and witnesses quickly before losing them or losing the ability to access them.', 2: '在失去证据和证人或失去访问他们的能力之前，迅速收集证据和证人。'},
+  art5_tips_h3_5: {0: '5. لا تهمل الجلسات', 1: '5. Do Not Neglect the Hearings', 2: '5. 不要忽视听证会'},
+  art5_tips_p6: {0: 'الحضور المنتظم والفعال في جلسات التحكيم ضروري لعرض قضيتك بشكل صحيح.', 1: 'Regular and effective presence in arbitration hearings is necessary to present your case properly.', 2: '定期和有效地参与仲裁听证会对于正确提交您的案件至关重要。'},
+  art5_conclusion_h2: {0: 'الخاتمة', 1: 'Conclusion', 2: '结论'},
+  art5_conclusion_p1: {0: 'التحكيم التجاري أصبح الآلية الأساسية لحل النزاعات في المعاملات التجارية الدولية والسعودية. نظام التحكيم السعودي يوفر إطار عمل قوي وفعال يحمي حقوق الطرفين ويضمن عدالة الحكم. مع وجود المركز السعودي للتحكيم التجاري وموقع المملكة على اتفاقيات دولية، أصبح التحكيم في المملكة جاذباً للاستثمارات الأجنبية.', 1: 'Commercial arbitration has become the primary mechanism for resolving disputes in international and Saudi commercial transactions. The Saudi arbitration system provides a strong and effective framework that protects the rights of parties and ensures fair judgment. With the Saudi Center for Commercial Arbitration and the Kingdom\'s position on international conventions, arbitration in the Kingdom has become attractive for foreign investments.', 2: '商业仲裁已成为解决国际和沙特商业交易纠纷的主要机制。沙特仲裁系统提供了保护当事人权利并确保公正判决的强大有效框架。有了沙特商业仲裁中心和沙特王国在国际公约中的地位，王国内的仲裁已成为外国投资的吸引力。'},
+  art5_conclusion_p2: {0: 'إذا كنت شركة أو فرد تتعامل في النزاعات التجارية، فهم التحكيم والاستعداد له بشكل صحيح ضروري جداً. فريقنا في شركة مشاري بندر بن جلوي متخصص في قضايا التحكيم التجاري ويمكنه مساعدتك في جميع مراحل العملية من الاتفاق الأولي حتى تنفيذ الحكم.', 1: 'If you are a company or individual dealing with commercial disputes, understanding arbitration and preparing for it properly is essential. Our team at Al Mashari Law Firm is specialized in commercial arbitration matters and can help you through all stages of the process from initial agreement to enforcement of the award.', 2: '如果您是处理商业纠纷的公司或个人，了解和正确准备仲裁至关重要。我们在Al Mashari律师事务所的团队专门从事商业仲裁事务，可以在从初始协议到裁决执行的整个过程中帮助您。'},
+  back_to_blog: {0: '← العودة للمدونة', 1: '← Back to Blog', 2: '← 返回博客'},
+  cta_h2: {0: 'هل تحتاج استشارة قانونية؟', 1: 'Need Legal Consultation?', 2: '需要法律咨询吗？'},
+  cta_p: {0: 'فريقنا القانوني جاهز لمساعدتك', 1: 'Our legal team is ready to assist you', 2: '我们的法律团队随时准备协助您'},
+  nav_cta: {0: 'احجز استشارة', 1: 'Book Consultation', 2: '预约咨询'},
+  firm_name: {0: 'شركة مشاري بندر بن جلوي', 1: 'Al Mashari Law Firm', 2: 'Al Mashari律师事务所'},
+  firm_sub: {0: 'للمحاماة والاستشارات القانونية', 1: 'Legal Consultants', 2: '法律顾问'},
+  nav_services: {0: 'خدماتنا', 1: 'Services', 2: '服务'},
+  nav_contracts: {0: 'عقود الشركات', 1: 'Corporate Contracts', 2: '公司合同'},
+  nav_faq: {0: 'الأسئلة الشائعة', 1: 'FAQ', 2: '常见问题'},
+  nav_team: {0: 'فريقنا', 1: 'Our Team', 2: '我们的团队'},
+  nav_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
+  nav_eservices: {0: 'الخدمات الإلكترونية', 1: 'E-Services', 2: '电子服务'},
+  nav_events: {0: 'فعاليتنا', 1: 'Events', 2: '活动'},
+  nav_cases_stats: {0: 'القضايا المنجزة', 1: 'Cases Handled', 2: '已处理的案件'},
+  nav_careers: {0: 'التوظيف', 1: 'Careers', 2: '招聘'},
+  nav_contact: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
+  footer_copyright: {0: '© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2026 Al Mashari Law Firm — All rights reserved', 2: '© 2026 Al Mashari律师事务所 — 版权所有'}
+};
+</script>
+<script src="lang.js"></script>
+<script>
+let lang = currentLang;
+function toggleLangDrop() { document.getElementById('langDropMenu').classList.toggle('open'); }
+document.addEventListener('click', function(e) {
+    if (!document.getElementById('langDrop').contains(e.target)) document.getElementById('langDropMenu').classList.remove('open');
+});
+function setLang(l) {
+    lang = l; currentLang = l;
+    const dir = l === 0 ? 'rtl' : 'ltr';
+    const langCode = l === 0 ? 'ar' : (l === 1 ? 'en' : 'zh');
+    document.documentElement.setAttribute('dir', dir);
+    document.documentElement.setAttribute('lang', langCode);
+    document.getElementById('langDropBtn').textContent = l === 0 ? '🇸🇦' : (l === 1 ? '🇬🇧' : '🇨🇳');
+    const allTranslations = Object.assign({}, commonTranslations, pageTranslations);
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (allTranslations[key] && allTranslations[key][l] !== undefined) {
+            if (el.tagName === 'INPUT' && el.type !== 'hidden') el.placeholder = allTranslations[key][l];
+            else el.innerHTML = allTranslations[key][l];
+        }
+    });
+    localStorage.setItem('siteLang', l);
+}
+window.addEventListener('load', function() {
+    const saved = localStorage.getItem('siteLang');
+    if (saved !== null) setLang(parseInt(saved)); else setLang(0);
+});
+</script>
+
+</body>
+</html>
