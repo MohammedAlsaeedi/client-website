@@ -56,7 +56,28 @@ const commonTranslations = {
   h2_legal_basis: {0: 'الأساس القانوني والأنظمة ذات الصلة', 1: 'Legal Basis & Relevant Regulations', 2: '法律依据与相关法规'},
 
   // General UI
-  whatsapp_button: {0: 'تواصل عبر واتساب', 1: 'Contact via WhatsApp', 2: '通过WhatsApp联系'}
+  whatsapp_button: {0: 'تواصل عبر واتساب', 1: 'Contact via WhatsApp', 2: '通过WhatsApp联系'},
+
+  // Case form labels (shared across all case-*.html pages)
+  cf_lbl_name: {0: 'الاسم', 1: 'Name', 2: '姓名'},
+  cf_lbl_phone: {0: 'رقم الجوال', 1: 'Phone Number', 2: '电话号码'},
+  cf_lbl_email: {0: 'البريد الإلكتروني', 1: 'Email', 2: '电子邮件'},
+  cf_lbl_service: {0: 'الخدمة المطلوبة', 1: 'Required Service', 2: '所需服务'},
+  cf_lbl_details: {0: 'تفاصيل القضية', 1: 'Case Details', 2: '案件详情'},
+  cf_lbl_docs: {0: 'المستندات', 1: 'Documents', 2: '文件'},
+  cf_ph_name: {0: 'اسمك الكامل', 1: 'Your full name', 2: '您的全名'},
+  cf_ph_details: {0: 'اكتب تفاصيل قضيتك باختصار...', 1: 'Briefly describe your case details...', 2: '请简要描述您的案件详情...'},
+  cf_optional: {0: '(اختياري)', 1: '(Optional)', 2: '（可选）'},
+  cf_file_hint: {0: 'PDF, Word, أو صورة', 1: 'PDF, Word, or image', 2: 'PDF、Word或图片'},
+  cf_submit: {0: 'إرسال الطلب', 1: 'Submit Request', 2: '提交请求'},
+  cf_success: {0: '✅ تم إرسال طلبك بنجاح، سنتواصل معك قريباً', 1: '✅ Your request has been submitted successfully, we will contact you soon', 2: '✅ 您的请求已成功提交，我们将尽快与您联系'},
+  svc_placeholder: {0: '— اختر الخدمة —', 1: '— Select Service —', 2: '— 选择服务 —'},
+  svc_opt_1: {0: 'صلح', 1: 'Settlement', 2: '和解'},
+  svc_opt_2: {0: 'حضور جلسة واحدة', 1: 'Attend One Session', 2: '出席一次庭审'},
+  svc_opt_3: {0: 'توكيلنا بالدعوى المنظورة', 1: 'Authorize Us for the Pending Case', 2: '委托我们处理待审案件'},
+  svc_opt_4: {0: 'صياغة مذكرة للدعوى', 1: 'Draft a Case Memorandum', 2: '起草案件备忘录'},
+  svc_opt_5: {0: 'اعتراض على حكم', 1: 'Appeal a Judgment', 2: '对判决提出异议'},
+  svc_opt_6: {0: 'صياغة لائحة نقض', 1: 'Draft a Cassation Petition', 2: '起草上诉状'}
 };
 
 /**
