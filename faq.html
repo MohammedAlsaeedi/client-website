@@ -91,6 +91,23 @@
         .btn-outline { border: 2px solid var(--gold); color: var(--gold); padding: 11px 28px; border-radius: 30px; font-size: .95rem; font-weight: 800; transition: all .25s; }
         .btn-outline:hover { background: var(--gold); color: var(--white); }
 
+        /* ── FAQ Contact Form ── */
+        .faq-form{max-width:720px;margin:0 auto;text-align:right}
+        .cf-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+        @media(max-width:600px){.cf-row{grid-template-columns:1fr}}
+        .cf-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+        .cf-group label{color:rgba(255,255,255,.9);font-size:.88rem;font-weight:600}
+        .cf-req{color:var(--gold);margin-inline-start:3px}
+        .cf-optional{color:rgba(255,255,255,.5);font-size:.8rem;font-weight:400}
+        .cf-group input,.cf-group textarea,.cf-group select{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:11px 16px;color:#fff;font-family:inherit;font-size:.93rem;transition:border .2s;width:100%;box-sizing:border-box}
+        .cf-group input:focus,.cf-group textarea:focus,.cf-group select:focus{outline:none;border-color:var(--gold);background:rgba(255,255,255,.12)}
+        .cf-group input::placeholder,.cf-group textarea::placeholder{color:rgba(255,255,255,.35)}
+        .cf-group textarea{resize:vertical;min-height:100px}
+        .cf-submit{width:100%;padding:14px;background:var(--gold);color:#fff;border:none;border-radius:30px;font-size:1rem;font-weight:800;font-family:inherit;cursor:pointer;transition:all .25s;margin-top:8px}
+        .cf-submit:hover{background:#b8960c;transform:translateY(-1px)}
+        .cf-success{margin-top:16px;text-align:center;color:#4ade80;font-size:.95rem;font-weight:600}
+        .cf-subtitle{color:rgba(255,255,255,.75);font-size:.95rem;margin-bottom:28px;text-align:center}
+
         footer { background: var(--navy-dark); color: rgba(255,255,255,.6); text-align: center; padding: 30px 5%; font-size: .85rem; border-top: 1px solid rgba(184,147,90,.2); }
         footer a { color: var(--gold-light); }
         .whatsapp-fab { position: fixed; bottom: 28px; left: 28px; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 999; box-shadow: 0 6px 20px rgba(37,211,102,.4); transition: transform .25s; }
@@ -141,6 +158,8 @@
 <li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
 <li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
 <li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
 <li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
 <li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
 </ul>
@@ -168,6 +187,8 @@
 <li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
 <li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
 <li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
 <li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
 <li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
 </ul>
@@ -264,17 +285,42 @@
 </div>
 </div>
 </section>
-<div class="cta-section">
+<section class="cta-section">
 <h2 data-i18n="h2_1">لم تجد إجابة سؤالك؟</h2>
-<p data-i18n="p_1">تواصل معنا مباشرةً وسيرد فريقنا القانوني على استفساراتك في أقرب وقت</p>
-<div class="cta-btns">
-<a class="btn-gold" data-i18n="cta_btn1" href="https://wa.me/966533532153?text=لدي%20استفسار%20قانوني" rel="noopener" target="_blank">
-<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path></svg>
-                تواصل عبر واتساب
-            </a>
+<p class="cf-subtitle" data-i18n="faq_form_subtitle">أرسل استفسارك وسيرد عليك فريقنا القانوني في أقرب وقت</p>
+<form class="faq-form" id="faqForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="handleFaqFormSubmit(event)">
+<input name="_subject" type="hidden" value="استفسار من صفحة الأسئلة الشائعة — موقع شركة مشاري بندر بن جلوي"/>
+<div class="cf-row">
+<div class="cf-group">
+<label data-i18n="faq_cf_name" for="faq_name">الاسم <span class="cf-req">*</span></label>
+<input data-i18n="faq_cf_ph_name" id="faq_name" name="name" placeholder="اسمك الكامل" required type="text"/>
+</div>
+<div class="cf-group">
+<label data-i18n="faq_cf_phone" for="faq_phone">رقم الجوال <span class="cf-req">*</span></label>
+<input id="faq_phone" name="phone" placeholder="05xxxxxxxx" required type="tel"/>
+</div>
+</div>
+<div class="cf-row">
+<div class="cf-group">
+<label data-i18n="faq_cf_email" for="faq_email">البريد الإلكتروني</label>
+<input id="faq_email" name="email" placeholder="example@email.com" type="email"/>
+</div>
+<div class="cf-group">
+<label data-i18n="faq_cf_subject" for="faq_subject">الموضوع <span class="cf-req">*</span></label>
+<input data-i18n="faq_cf_ph_subject" id="faq_subject" name="subject" placeholder="موضوع الاستفسار" required type="text"/>
+</div>
+</div>
+<div class="cf-group">
+<label data-i18n="faq_cf_message" for="faq_message">رسالتك <span class="cf-req">*</span></label>
+<textarea data-i18n="faq_cf_ph_message" id="faq_message" name="message" placeholder="اكتب استفسارك هنا بالتفصيل..." required rows="4"></textarea>
+</div>
+<button class="cf-submit" data-i18n="faq_cf_submit" type="submit">إرسال الاستفسار</button>
+<div class="cf-success" id="faqSuccess" style="display:none;" data-i18n="faq_cf_success">✅ تم إرسال استفسارك بنجاح، سنتواصل معك قريباً</div>
+</form>
+<div style="margin-top:20px;">
 <a class="btn-outline" data-i18n="cta_btn2" href="index.html">العودة للرئيسية</a>
 </div>
-</div>
+</section>
 <footer>
 <p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
 <p style="margin-top:8px;"><a data-i18n="footer_home" href="index.html">الرئيسية</a></p>
@@ -288,6 +334,19 @@
             const isOpen = item.classList.contains('open');
             document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
             if (!isOpen) item.classList.add('open');
+        }
+        function handleFaqFormSubmit(e) {
+            e.preventDefault();
+            const form = e.target;
+            const data = new FormData(form);
+            fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+                .then(r => {
+                    if (r.ok) {
+                        form.reset();
+                        document.getElementById('faqSuccess').style.display = 'block';
+                        setTimeout(() => { document.getElementById('faqSuccess').style.display = 'none'; }, 5000);
+                    }
+                }).catch(() => {});
         }
     </script>
 <script>
@@ -311,8 +370,18 @@ const pageTranslations = {
     p_5: {0: "نعم، نقدم خدمات قانونية دولية متخصصة للعملاء الذين يتعاملون مع نزاعات دولية أو عقود دولية.", 1: "Yes, we provide specialized international legal services for clients dealing with international disputes or contracts.", 2: "是的，我们为处理国际纠纷或合同的客户提供专业的国际法律服务。"},
     p_6: {0: "نقبل جميع طرق الدفع الشهيرة بما فيها التحويل البنكي والبطاقات الائتمانية والتحويل السريع.", 1: "We accept all major payment methods including bank transfers, credit cards, and instant transfers.", 2: "我们接受所有主要付款方式，包括银行转账、信用卡和即时转账。"},
     p_7: {0: "نعم، نقدم استشارات قانونية عن بعد عبر الفيديو أو الهاتف حسب احتياجاتك.", 1: "Yes, we provide remote legal consultations via video or phone according to your needs.", 2: "是的，我们根据您的需求通过视频或电话提供远程法律咨询。"},
-  cta_btn1: {0: 'تواصل عبر واتساب', 1: 'Contact via WhatsApp', 2: '通过WhatsApp联系'},
   cta_btn2: {0: 'العودة للرئيسية', 1: 'Back to Home', 2: '返回主页'},
+  faq_form_subtitle: {0: 'أرسل استفسارك وسيرد عليك فريقنا القانوني في أقرب وقت', 1: 'Send your inquiry and our legal team will respond as soon as possible', 2: '发送您的咨询，我们的法律团队将尽快回复'},
+  faq_cf_name: {0: 'الاسم', 1: 'Name', 2: '姓名'},
+  faq_cf_ph_name: {0: 'اسمك الكامل', 1: 'Your full name', 2: '您的全名'},
+  faq_cf_phone: {0: 'رقم الجوال', 1: 'Phone Number', 2: '电话号码'},
+  faq_cf_email: {0: 'البريد الإلكتروني', 1: 'Email', 2: '电子邮件'},
+  faq_cf_subject: {0: 'الموضوع', 1: 'Subject', 2: '主题'},
+  faq_cf_ph_subject: {0: 'موضوع الاستفسار', 1: 'Inquiry subject', 2: '咨询主题'},
+  faq_cf_message: {0: 'رسالتك', 1: 'Your Message', 2: '您的留言'},
+  faq_cf_ph_message: {0: 'اكتب استفسارك هنا بالتفصيل...', 1: 'Write your inquiry in detail here...', 2: '请在此详细写下您的咨询...'},
+  faq_cf_submit: {0: 'إرسال الاستفسار', 1: 'Send Inquiry', 2: '发送咨询'},
+  faq_cf_success: {0: '✅ تم إرسال استفسارك بنجاح، سنتواصل معك قريباً', 1: '✅ Your inquiry was sent successfully, we will contact you soon', 2: '✅ 您的咨询已成功发送，我们将尽快与您联系'},
   footer_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
   h2_0: {0: 'كيف يمكننا مساعدتك؟', 1: 'How Can We Help You?', 2: '我们如何帮助您？'},
   h2_1: {0: 'لم تجد إجابة سؤالك؟', 1: 'Didn\'t Find the Answer?', 2: '没有找到您的答案？'},

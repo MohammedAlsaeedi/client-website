@@ -109,6 +109,26 @@
             .cta-btns{flex-direction:column;align-items:center}
             .cta-btns a{width:100%;justify-content:center;text-align:center}
         }
+        
+        /* ── Case Contact Form ── */
+        .cf-subtitle{color:rgba(255,255,255,.75);font-size:.95rem;margin-bottom:28px;text-align:center}
+        .case-form{max-width:720px;margin:0 auto;text-align:right}
+        .cf-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+        @media(max-width:600px){.cf-row{grid-template-columns:1fr}}
+        .cf-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+        .cf-group label{color:rgba(255,255,255,.9);font-size:.88rem;font-weight:600}
+        .cf-req{color:var(--gold);margin-inline-start:3px}
+        .cf-optional{color:rgba(255,255,255,.5);font-size:.8rem;font-weight:400}
+        .cf-group input,.cf-group textarea{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:11px 16px;color:#fff;font-family:inherit;font-size:.93rem;transition:border .2s;width:100%;box-sizing:border-box}
+        .cf-group input:focus,.cf-group textarea:focus{outline:none;border-color:var(--gold);background:rgba(255,255,255,.12)}
+        .cf-group input::placeholder,.cf-group textarea::placeholder{color:rgba(255,255,255,.35)}
+        .cf-group textarea{resize:vertical;min-height:100px}
+        .cf-file{cursor:pointer;padding:8px 12px}
+        .cf-file-hint{color:rgba(255,255,255,.4);font-size:.78rem;margin-top:4px}
+        .cf-submit{width:100%;padding:14px;background:var(--gold);color:#fff;border:none;border-radius:30px;font-size:1rem;font-weight:800;font-family:inherit;cursor:pointer;transition:all .25s;margin-top:8px}
+        .cf-submit:hover{background:#b8960c;transform:translateY(-1px)}
+        .cf-success{margin-top:16px;text-align:center;color:#4ade80;font-size:.95rem;font-weight:600}
+
         </style>
 </head>
 <body>
@@ -128,6 +148,8 @@
 <li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
 <li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
 <li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
 <li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
 <li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
 </ul>
@@ -155,6 +177,8 @@
 <li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
 <li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
 <li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
 <li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
 <li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
 <li><a data-i18n="nav_cta" href="https://wa.me/966533532153">احجز استشارة</a></li>
@@ -255,11 +279,41 @@
 </div>
 <div class="cta-section">
 <h2 data-i18n="cta_h2">احصل على استشارة قانونية متخصصة</h2>
-<p data-i18n="cta_p">فريقنا المتخصص في القضايا العقارية جاهز لحماية حقوقك والدفاع عنها أمام المحاكم العقارية.</p>
-<div class="cta-btns">
-<a class="btn-gold" data-i18n="cta_btn1" href="https://wa.me/966533532153" rel="noopener" target="_blank">تواصل معنا عبر واتساب</a>
-<a class="btn-outline" data-i18n="cta_btn2" href="index.html#booking">احجز استشارة قانونية</a>
+<p class="cf-subtitle" data-i18n="cf_subtitle">أرسل بياناتك وسيتواصل معك فريقنا القانوني في أقرب وقت</p>
+<form class="case-form" id="caseForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="handleCaseFormSubmit(event)">
+<input name="_subject" type="hidden" value="طلب استشارة قانونية — موقع شركة مشاري بندر بن جلوي"/>
+<div class="cf-row">
+<div class="cf-group">
+<label data-i18n="cf_lbl_name" for="cf_name">الاسم <span class="cf-req">*</span></label>
+<input data-i18n="cf_ph_name" id="cf_name" name="name" placeholder="اسمك الكامل" required type="text"/>
 </div>
+<div class="cf-group">
+<label data-i18n="cf_lbl_phone" for="cf_phone">رقم الجوال <span class="cf-req">*</span></label>
+<input id="cf_phone" name="phone" placeholder="05xxxxxxxx" required type="tel"/>
+</div>
+</div>
+<div class="cf-row">
+<div class="cf-group">
+<label data-i18n="cf_lbl_email" for="cf_email">البريد الإلكتروني</label>
+<input id="cf_email" name="email" placeholder="example@email.com" type="email"/>
+</div>
+<div class="cf-group">
+<label data-i18n="cf_lbl_service" for="cf_service">الخدمة المطلوبة <span class="cf-req">*</span></label>
+<input data-i18n="cf_ph_service" id="cf_service" name="service" placeholder="نوع الخدمة المطلوبة" required type="text"/>
+</div>
+</div>
+<div class="cf-group">
+<label data-i18n="cf_lbl_details" for="cf_details">تفاصيل القضية <span class="cf-req">*</span></label>
+<textarea data-i18n="cf_ph_details" id="cf_details" name="details" placeholder="اكتب تفاصيل قضيتك باختصار..." required rows="4"></textarea>
+</div>
+<div class="cf-group">
+<label data-i18n="cf_lbl_docs" for="cf_docs">المستندات <span class="cf-optional" data-i18n="cf_optional">(اختياري)</span></label>
+<input accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" class="cf-file" id="cf_docs" name="docs" type="file"/>
+<span class="cf-file-hint" data-i18n="cf_file_hint">PDF, Word, أو صورة</span>
+</div>
+<button class="cf-submit" data-i18n="cf_submit" type="submit">إرسال الطلب</button>
+<div class="cf-success" id="cfSuccess" style="display:none;" data-i18n="cf_success">✅ تم إرسال طلبك بنجاح، سنتواصل معك قريباً</div>
+</form>
 </div>
 <footer>
 <p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
@@ -274,9 +328,7 @@ const pageTranslations = {
   breadcrumb_cases: {0: 'القضايا القانونية', 1: 'Legal Cases', 2: '法律案件'},
   section_h2_0: {0: 'الأطر التنظيمية الرئيسية', 1: 'Main Regulatory Frameworks', 2: '主要监管框架'},
   infobox_h3: {0: 'الأنظمة والتشريعات الرئيسية', 1: 'Main Laws and Regulations', 2: '主要法律和法规'},
-  cta_btn1: {0: 'تواصل معنا عبر واتساب', 1: 'Contact via WhatsApp', 2: '通过WhatsApp联系我们'},
-  cta_btn2: {0: 'احجز استشارة قانونية', 1: 'Book a Legal Consultation', 2: '预约法律咨询'},
-  footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Mashary Bandar Bin Jalawi Law Firm — All rights reserved', 2: '© 2025 玛沙里·班达尔·本·贾劳伊律师事务所 — 版权所有'},
+footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Mashary Bandar Bin Jalawi Law Firm — All rights reserved', 2: '© 2025 玛沙里·班达尔·本·贾劳伊律师事务所 — 版权所有'},
   footer_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
   breadcrumb_current: {0: 'القضايا العقارية', 1: 'Real Estate Cases', 2: '房地产案件'},
   hero_h1: {0: 'القضايا العقارية', 1: 'Real Estate Cases', 2: '房地产案件'},
@@ -326,8 +378,7 @@ const pageTranslations = {
   step_h4_3: {0: 'تنفيذ الحكم وحماية الحقوق', 1: 'Enforcing the Judgment and Protecting Rights', 2: '执行判决和保护权利'},
   step_p_3: {0: 'بعد صدور الحكم يتم تنفيذه من خلال جهات التنفيذ المختصة لضمان استرداد الحقوق العقارية كاملة.', 1: 'After the ruling is issued, it is enforced through the competent enforcement authorities to ensure full recovery of real estate rights.', 2: '判决发布后，通过有管辖权的执行机构执行，以确保充分追回房地产权益。'},
   cta_h2: {0: 'احصل على استشارة قانونية متخصصة في العقارات', 1: 'Get Specialized Real Estate Legal Consultation', 2: '获取专业房地产法律咨询'},
-  cta_p: {0: 'فريقنا المتخصص في القضايا العقارية جاهز لحماية حقوقك وتمثيلك أمام المحاكم العقارية السعودية.', 1: 'Our team specialized in real estate cases is ready to protect your rights and represent you before Saudi real estate courts.', 2: '我们专业的房地产案件团队随时准备保护您的权利并在沙特房地产法院代理您。'},
-  art_h3_6: {0: 'نزاعات الستاتا والمباني المخالفة', 1: 'Strata and Unauthorized Buildings Disputes', 2: '分层产权和违规建筑争议'},
+art_h3_6: {0: 'نزاعات الستاتا والمباني المخالفة', 1: 'Strata and Unauthorized Buildings Disputes', 2: '分层产权和违规建筑争议'},
 
   h2_steps: {0: "خطوات الإجراء في القضايا العقارية", 1: "Real Estate Case Procedure Steps", 2: "房地产案件程序步骤"},
 };

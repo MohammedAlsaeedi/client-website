@@ -117,6 +117,27 @@
             .cta-btns a{width:100%;justify-content:center;text-align:center}
             .page-breadcrumb{font-size:.75rem;flex-wrap:wrap}
         }
+        
+        /* ── Package Contact Form ── */
+        .cf-subtitle{color:rgba(255,255,255,.75);font-size:.95rem;margin-bottom:28px;text-align:center}
+        .case-form{max-width:720px;margin:0 auto;text-align:right}
+        .cf-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+        @media(max-width:600px){.cf-row{grid-template-columns:1fr}}
+        .cf-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+        .cf-group label{color:rgba(255,255,255,.9);font-size:.88rem;font-weight:600}
+        .cf-req{color:var(--gold);margin-inline-start:3px}
+        .cf-optional{color:rgba(255,255,255,.5);font-size:.8rem;font-weight:400}
+        .cf-group input,.cf-group textarea,.cf-group select{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:11px 16px;color:#fff;font-family:inherit;font-size:.93rem;transition:border .2s;width:100%;box-sizing:border-box}
+        .cf-group input:focus,.cf-group textarea:focus,.cf-group select:focus{outline:none;border-color:var(--gold);background:rgba(255,255,255,.12)}
+        .cf-group input::placeholder,.cf-group textarea::placeholder{color:rgba(255,255,255,.35)}
+        .cf-group textarea{resize:vertical;min-height:100px}
+        .cf-group select option{background:var(--navy);color:#fff}
+        .cf-file{cursor:pointer;padding:8px 12px}
+        .cf-file-hint{color:rgba(255,255,255,.4);font-size:.78rem;margin-top:4px}
+        .cf-submit{width:100%;padding:14px;background:var(--gold);color:#fff;border:none;border-radius:30px;font-size:1rem;font-weight:800;font-family:inherit;cursor:pointer;transition:all .25s;margin-top:8px}
+        .cf-submit:hover{background:#b8960c;transform:translateY(-1px)}
+        .cf-success{margin-top:16px;text-align:center;color:#4ade80;font-size:.95rem;font-weight:600}
+
         </style>
 </head>
 <body>
@@ -299,7 +320,7 @@
 <li data-i18n="compare_col_0_li_2">رد سريع</li>
 <li data-i18n="compare_col_0_li_3">مراسلات رسمية</li>
 <li data-i18n="compare_col_0_li_4">متابعة إدارية</li>
-<li data-i18n="compare_col_0_li_5">تقارير ربع سنوية</li>
+<li data-i18n="compare_col_0_li_5">تقارير شهرية</li>
 </ul>
 </div>
 <div class="compare-col active">
@@ -330,11 +351,47 @@
 <!-- CTA SECTION -->
 <section class="cta-section">
 <h2 data-i18n="cta_h2">اختر الباقة الاحترافية اليوم</h2>
-<p data-i18n="cta_p">انضم إلى العشرات من الشركات الناجحة التي تثق بنا لحماية مصالحها القانونية</p>
-<div class="cta-btns">
-<a class="btn-gold" data-i18n="cta_btn_0" href="https://wa.me/966533532153" rel="noopener" target="_blank">ابدأ الآن عبر واتساب</a>
-<a class="btn-outline" data-i18n="cta_btn_1" href="index.html#packages">عرض جميع الباقات</a>
+<p class="cf-subtitle" data-i18n="cf_subtitle">أرسل بياناتك وسنتواصل معك لتفعيل الباقة</p>
+<form class="case-form" id="pkgForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="handlePkgFormSubmit(event)">
+<input name="_subject" type="hidden" value="طلب باقة — موقع شركة مشاري بندر بن جلوي"/>
+<div class="cf-row">
+<div class="cf-group">
+<label data-i18n="cf_lbl_name" for="cf_name">الاسم <span class="cf-req">*</span></label>
+<input data-i18n="cf_ph_name" id="cf_name" name="name" placeholder="اسمك الكامل" required type="text"/>
 </div>
+<div class="cf-group">
+<label data-i18n="cf_lbl_phone" for="cf_phone">رقم الجوال <span class="cf-req">*</span></label>
+<input id="cf_phone" name="phone" placeholder="05xxxxxxxx" required type="tel"/>
+</div>
+</div>
+<div class="cf-row">
+<div class="cf-group">
+<label data-i18n="cf_lbl_email" for="cf_email">البريد الإلكتروني</label>
+<input id="cf_email" name="email" placeholder="example@email.com" type="email"/>
+</div>
+<div class="cf-group">
+<label data-i18n="pkg_lbl_type" for="cf_type">نوع العميل <span class="cf-req">*</span></label>
+<select id="cf_type" name="client_type" required style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:11px 16px;color:#fff;font-family:inherit;font-size:.93rem;">
+<option value="" disabled selected data-i18n="pkg_opt_choose">— اختر —</option>
+<option value="فرد" data-i18n="pkg_opt_individual">فرد</option>
+<option value="شركة" data-i18n="pkg_opt_company">شركة</option>
+<option value="مؤسسة" data-i18n="pkg_opt_org">مؤسسة</option>
+<option value="جهة حكومية" data-i18n="pkg_opt_gov">جهة حكومية</option>
+</select>
+</div>
+</div>
+<div class="cf-group">
+<label data-i18n="cf_lbl_details" for="cf_details">تفاصيل الطلب <span class="cf-req">*</span></label>
+<textarea data-i18n="pkg_ph_details" id="cf_details" name="details" placeholder="اذكر متطلباتك القانونية باختصار..." required rows="4"></textarea>
+</div>
+<div class="cf-group">
+<label data-i18n="cf_lbl_docs" for="cf_docs">المستندات <span class="cf-optional" data-i18n="cf_optional">(اختياري)</span></label>
+<input accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" class="cf-file" id="cf_docs" name="docs" type="file"/>
+<span class="cf-file-hint" data-i18n="cf_file_hint">PDF, Word, أو صورة</span>
+</div>
+<button class="cf-submit" data-i18n="pkg_submit" type="submit">أرسل طلب الاشتراك</button>
+<div class="cf-success" id="cfSuccess" style="display:none;" data-i18n="cf_success">✅ تم إرسال طلبك بنجاح، سنتواصل معك قريباً</div>
+</form>
 </section>
 <footer>
 <p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
@@ -371,7 +428,7 @@ const pageTranslations = {
   cmp_col1_li_2: {0: 'رد سريع', 1: 'Fast response', 2: '快速响应'},
   cmp_col1_li_3: {0: 'مراسلات رسمية', 1: 'Official correspondence', 2: '正式信函'},
   cmp_col1_li_4: {0: 'متابعة إدارية', 1: 'Administrative follow-up', 2: '行政跟进'},
-  cmp_col1_li_5: {0: 'تقارير ربع سنوية', 1: 'Quarterly reports', 2: '季度报告'},
+  cmp_col1_li_5: {0: 'تقارير شهرية', 1: 'Monthly reports', 2: '月度报告'},
   cmp_col2_h4: {0: 'الباقة الاحترافية', 1: 'Professional Package', 2: '专业套餐'},
   cmp_col2_li_0: {0: 'استشارات غير محدودة', 1: 'Unlimited consultations', 2: '无限咨询'},
   cmp_col2_li_1: {0: 'صياغة العقود', 1: 'Contract drafting', 2: '合同起草'},
@@ -387,10 +444,7 @@ const pageTranslations = {
   cmp_col3_li_4: {0: 'دعم طارئ', 1: 'Emergency support', 2: '紧急支持'},
   cmp_col3_li_5: {0: 'تقارير تفصيلية', 1: 'Detailed reports', 2: '详细报告'},
   cta_h2: {0: 'احصل على الباقة الاحترافية الآن', 1: 'Get the Professional Package Now', 2: '立即获取专业套餐'},
-  cta_p: {0: 'حماية قانونية متكاملة لشركتك بأفضل كفاءة وأعلى مستوى من الاحترافية', 1: 'Comprehensive legal protection for your company with the highest efficiency and professionalism.', 2: '以最高效率和专业水平为您的公司提供全面法律保护。'},
-  cta_btn1: {0: 'تواصل معنا عبر واتساب', 1: 'Contact via WhatsApp', 2: '通过WhatsApp联系我们'},
-  cta_btn2: {0: 'عرض جميع الباقات', 1: 'View All Packages', 2: '查看所有套餐'},
-  footer_back: {0: '← العودة للباقات', 1: '← Back to Packages', 2: '← 返回套餐'},
+footer_back: {0: '← العودة للباقات', 1: '← Back to Packages', 2: '← 返回套餐'},
   footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Mashary Bandar Bin Jalawi Law Firm — All rights reserved', 2: '© 2025 玛沙里·班达尔·本·贾劳伊律师事务所 — 版权所有'},
   compare_col_0_h4: {0: 'الباقة الأساسية', 1: 'Basic Package', 2: '基础套餐'},
   compare_col_0_li_0: {0: 'استشارات شهرية', 1: 'Monthly Consultations', 2: '每月咨询'},
@@ -398,7 +452,7 @@ const pageTranslations = {
   compare_col_0_li_2: {0: 'رد سريع', 1: 'Quick Response', 2: '快速响应'},
   compare_col_0_li_3: {0: 'مراسلات رسمية', 1: 'Official Correspondence', 2: '正式通讯'},
   compare_col_0_li_4: {0: 'متابعة إدارية', 1: 'Administrative Follow-up', 2: '行政跟进'},
-  compare_col_0_li_5: {0: 'تقارير ربع سنوية', 1: 'Quarterly Reports', 2: '季度报告'},
+  compare_col_0_li_5: {0: 'تقارير شهرية', 1: 'Monthly Reports', 2: '月度报告'},
   compare_col_1_h4: {0: 'الباقة الاحترافية', 1: 'Professional Package', 2: '专业套餐'},
   compare_col_1_li_0: {0: 'استشارات غير محدودة', 1: 'Unlimited Consultations', 2: '无限咨询'},
   compare_col_1_li_1: {0: 'صياغة العقود', 1: 'Contract Drafting', 2: '合同起草'},
@@ -414,10 +468,8 @@ const pageTranslations = {
   compare_col_2_li_4: {0: 'دعم طارئ', 1: 'Emergency Support', 2: '紧急支持'},
   compare_col_2_li_5: {0: 'تقارير تفصيلية', 1: 'Detailed Reports', 2: '详细报告'},
   compare_h3: {0: 'مقارنة الباقات', 1: 'Package Comparison', 2: '套餐比较'},
-  cta_btn_1: {0: 'عرض جميع الباقات', 1: 'View All Packages', 2: '查看所有套餐'},
-  footer_home: {0: '← العودة للباقات', 1: '← Back to Packages', 2: '← 返回套餐'},
-  cta_btn_0: {0: 'ابدأ الآن عبر واتساب', 1: 'Start Now via WhatsApp', 2: '立即通过WhatsApp开始'},
-  section_title_1: {0: 'تفاصيل الخدمات المتضمنة', 1: 'Details of Included Services', 2: '包含服务详情'},
+footer_home: {0: '← العودة للباقات', 1: '← Back to Packages', 2: '← 返回套餐'},
+section_title_1: {0: 'تفاصيل الخدمات المتضمنة', 1: 'Details of Included Services', 2: '包含服务详情'},
 
   breadcrumb_packages_link: {0: "الباقات", 1: "Packages", 2: "套餐"},
 

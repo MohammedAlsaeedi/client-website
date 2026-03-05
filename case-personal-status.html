@@ -109,6 +109,26 @@
             .cta-btns{flex-direction:column;align-items:center}
             .cta-btns a{width:100%;justify-content:center;text-align:center}
         }
+        
+        /* ── Case Contact Form ── */
+        .cf-subtitle{color:rgba(255,255,255,.75);font-size:.95rem;margin-bottom:28px;text-align:center}
+        .case-form{max-width:720px;margin:0 auto;text-align:right}
+        .cf-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+        @media(max-width:600px){.cf-row{grid-template-columns:1fr}}
+        .cf-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+        .cf-group label{color:rgba(255,255,255,.9);font-size:.88rem;font-weight:600}
+        .cf-req{color:var(--gold);margin-inline-start:3px}
+        .cf-optional{color:rgba(255,255,255,.5);font-size:.8rem;font-weight:400}
+        .cf-group input,.cf-group textarea{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:11px 16px;color:#fff;font-family:inherit;font-size:.93rem;transition:border .2s;width:100%;box-sizing:border-box}
+        .cf-group input:focus,.cf-group textarea:focus{outline:none;border-color:var(--gold);background:rgba(255,255,255,.12)}
+        .cf-group input::placeholder,.cf-group textarea::placeholder{color:rgba(255,255,255,.35)}
+        .cf-group textarea{resize:vertical;min-height:100px}
+        .cf-file{cursor:pointer;padding:8px 12px}
+        .cf-file-hint{color:rgba(255,255,255,.4);font-size:.78rem;margin-top:4px}
+        .cf-submit{width:100%;padding:14px;background:var(--gold);color:#fff;border:none;border-radius:30px;font-size:1rem;font-weight:800;font-family:inherit;cursor:pointer;transition:all .25s;margin-top:8px}
+        .cf-submit:hover{background:#b8960c;transform:translateY(-1px)}
+        .cf-success{margin-top:16px;text-align:center;color:#4ade80;font-size:.95rem;font-weight:600}
+
         </style>
 </head>
 <body>
@@ -128,6 +148,8 @@
 <li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
 <li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
 <li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
 <li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
 <li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
 </ul>
@@ -155,6 +177,8 @@
 <li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
 <li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
 <li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
 <li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
 <li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
 <li><a data-i18n="nav_cta" href="https://wa.me/966533532153">احجز استشارة</a></li>
@@ -259,11 +283,41 @@
 </section>
 <section class="cta-section">
 <h2 data-i18n="cta_h2">تحتاج استشارة أسرية موثوقة؟</h2>
-<p data-i18n="cta_p">فريقنا المتخصص يقدم استشارات سرية وموثوقة وحلول عادلة لجميع قضايا الأحوال الشخصية</p>
-<div class="cta-btns">
-<a class="btn-gold" data-i18n="cta_btn_0" href="https://wa.me/966533532153" rel="noopener" target="_blank">استشارة سرية متخصصة</a>
-<a class="btn-outline" data-i18n="cta_btn_1" href="index.html#booking">تواصل معنا</a>
+<p class="cf-subtitle" data-i18n="cf_subtitle">أرسل بياناتك وسيتواصل معك فريقنا القانوني في أقرب وقت</p>
+<form class="case-form" id="caseForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="handleCaseFormSubmit(event)">
+<input name="_subject" type="hidden" value="طلب استشارة قانونية — موقع شركة مشاري بندر بن جلوي"/>
+<div class="cf-row">
+<div class="cf-group">
+<label data-i18n="cf_lbl_name" for="cf_name">الاسم <span class="cf-req">*</span></label>
+<input data-i18n="cf_ph_name" id="cf_name" name="name" placeholder="اسمك الكامل" required type="text"/>
 </div>
+<div class="cf-group">
+<label data-i18n="cf_lbl_phone" for="cf_phone">رقم الجوال <span class="cf-req">*</span></label>
+<input id="cf_phone" name="phone" placeholder="05xxxxxxxx" required type="tel"/>
+</div>
+</div>
+<div class="cf-row">
+<div class="cf-group">
+<label data-i18n="cf_lbl_email" for="cf_email">البريد الإلكتروني</label>
+<input id="cf_email" name="email" placeholder="example@email.com" type="email"/>
+</div>
+<div class="cf-group">
+<label data-i18n="cf_lbl_service" for="cf_service">الخدمة المطلوبة <span class="cf-req">*</span></label>
+<input data-i18n="cf_ph_service" id="cf_service" name="service" placeholder="نوع الخدمة المطلوبة" required type="text"/>
+</div>
+</div>
+<div class="cf-group">
+<label data-i18n="cf_lbl_details" for="cf_details">تفاصيل القضية <span class="cf-req">*</span></label>
+<textarea data-i18n="cf_ph_details" id="cf_details" name="details" placeholder="اكتب تفاصيل قضيتك باختصار..." required rows="4"></textarea>
+</div>
+<div class="cf-group">
+<label data-i18n="cf_lbl_docs" for="cf_docs">المستندات <span class="cf-optional" data-i18n="cf_optional">(اختياري)</span></label>
+<input accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" class="cf-file" id="cf_docs" name="docs" type="file"/>
+<span class="cf-file-hint" data-i18n="cf_file_hint">PDF, Word, أو صورة</span>
+</div>
+<button class="cf-submit" data-i18n="cf_submit" type="submit">إرسال الطلب</button>
+<div class="cf-success" id="cfSuccess" style="display:none;" data-i18n="cf_success">✅ تم إرسال طلبك بنجاح، سنتواصل معك قريباً</div>
+</form>
 </section>
 <footer>
 <p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
@@ -328,10 +382,7 @@ const pageTranslations = {
   step_h4_3: {0: 'إصدار الحكم وتنفيذه', 1: 'Issuing and Enforcing the Judgment', 2: '作出并执行判决'},
   step_p_3: {0: 'إصدار حكم عادل وتنفيذه وفقاً للقانون، مع ضمان حماية حقوق جميع الأطراف خاصة الأطفال.', 1: 'Issuing a fair judgment and enforcing it in accordance with the law, while ensuring the protection of all parties\' rights, especially children.', 2: '作出公正判决并依法执行，同时确保保护所有当事方的权利，尤其是儿童的权利。'},
   cta_h2: {0: 'تحتاج استشارة أسرية موثوقة؟', 1: 'Need Reliable Family Legal Advice?', 2: '需要可靠的家庭法律建议？'},
-  cta_p: {0: 'فريقنا المتخصص يقدم استشارات سرية وموثوقة وحلول عادلة لجميع قضايا الأحوال الشخصية', 1: 'Our specialized team provides confidential, reliable consultations and fair solutions for all personal status cases', 2: '我们的专业团队为所有个人身份案件提供保密、可靠的咨询和公正解决方案'},
-  cta_btn_0: {0: 'استشارة سرية متخصصة', 1: 'Specialized Confidential Consultation', 2: '专业保密咨询'},
-  cta_btn_1: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
-  footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Meshary Bin Bandar Bin Jaloui Law Firm and Legal Consultations — All rights reserved', 2: '© 2025 美沙里·本·班达尔·本·贾卢伊律师事务所和法律咨询——版权所有'},
+footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Meshary Bin Bandar Bin Jaloui Law Firm and Legal Consultations — All rights reserved', 2: '© 2025 美沙里·本·班达尔·本·贾卢伊律师事务所和法律咨询——版权所有'},
   footer_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
 
   h2_steps: {0: "مراحل الإجراءات الأسرية", 1: "Family Law Procedure Stages", 2: "家庭法诉讼程序阶段"},

@@ -20,6 +20,8 @@ const commonTranslations = {
   nav_team: {0: 'فريقنا', 1: 'Our Team', 2: '我们的团队'},
   nav_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
   nav_eservices: {0: 'الخدمات الإلكترونية', 1: 'E-Services', 2: '电子服务'},
+  nav_events: {0: 'فعاليتنا', 1: 'Our Events', 2: '我们的活动'},
+  nav_cases_stats: {0: 'القضايا المنجزة', 1: 'Completed Cases', 2: '已完成案件'},
   nav_careers: {0: 'التوظيف', 1: 'Careers', 2: '招聘'},
   nav_contact: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
   nav_cta: {0: 'احجز استشارة', 1: 'Book Consultation', 2: '预约咨询'},

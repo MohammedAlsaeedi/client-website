@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>فعاليتنا — شركة مشاري بندر بن جلوي للمحاماة</title>
+<meta content="فعاليات ومشاركات شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — نشارككم أبرز الفعاليات والمناسبات" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --navy: #1B2C6B; --navy-dark: #111d4a; --navy-mid: #223580;
+            --gold: #B8935A; --gold-light: #d4aa72; --gold-pale: #f5ede0;
+            --white: #ffffff; --off-white: #f8f6f2; --gray-light: #e5e7eb;
+            --gray: #6b7280; --gray-dark: #374151; --border: #e5e1d9;
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; overflow-x: hidden; }
+        body { font-family: 'Cairo', sans-serif; color: var(--gray-dark); background: var(--white); overflow-x: hidden; line-height: 1.6; }
+        a { text-decoration: none; }
+
+        /* ── NAVBAR ── */
+        .navbar { position: fixed; inset: 0 0 auto 0; z-index: 1000; height: 90px; background: rgba(17,29,74,.97); backdrop-filter: blur(12px); border-bottom: 2px solid rgba(184,147,90,.45); display: flex; align-items: center; padding: 0 5%; }
+        .nav-inner { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+        .nav-logo { display: flex; align-items: center; gap: 11px; }
+        .nav-logo img { width: 60px; height: 60px; flex-shrink: 0; }
+        .nav-firm-name { font-size: 1.2rem; font-weight: 800; color: var(--gold-light); line-height: 1.2; }
+        .nav-firm-sub { font-size: .8rem; color: rgba(255,255,255,.55); }
+        .nav-links { display: flex; align-items: center; gap: 20px; list-style: none; flex: 1; justify-content: center; }
+        .nav-links a { color: rgba(255,255,255,.82); font-size: .95rem; font-weight: 600; transition: color .2s; position: relative; padding-bottom: 2px; }
+        .nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
+        .nav-links a::after { content: ''; position: absolute; bottom: -2px; right: 0; left: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: right; transition: transform .25s; }
+        .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+        .nav-cta { background: var(--gold); color: var(--white); padding: 8px 20px; border-radius: 25px; font-size: .85rem; font-weight: 800; transition: all .25s; white-space: nowrap; }
+        .nav-cta:hover { background: var(--gold-light); }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; }
+        .mobile-drawer { position: fixed; top: 90px; inset-inline: 0; background: var(--navy-dark); border-top: 1px solid rgba(184,147,90,.25); padding: 24px 5%; z-index: 999; transform: translateY(-8px); opacity: 0; visibility: hidden; transition: all .3s; }
+        .mobile-drawer.open { transform: translateY(0); opacity: 1; visibility: visible; }
+        .mobile-drawer ul { list-style: none; }
+        .mobile-drawer li { border-bottom: 1px solid rgba(255,255,255,.07); }
+        .mobile-drawer a { display: block; padding: 12px 0; color: rgba(255,255,255,.85); font-size: .95rem; font-weight: 600; }
+
+        /* ── PAGE HERO ── */
+        .page-hero { padding: 130px 5% 65px; background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #2a4090 100%); position: relative; overflow: hidden; }
+        .page-hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(184,147,90,.08) 1px, transparent 1px); background-size: 40px 40px; }
+        .page-hero-content { position: relative; z-index: 2; max-width: 700px; }
+        .page-breadcrumb { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.55); font-size: .85rem; margin-bottom: 18px; }
+        .page-breadcrumb a { color: var(--gold-light); }
+        .page-breadcrumb span { color: rgba(255,255,255,.3); }
+        .page-hero h1 { font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 900; color: white; line-height: 1.3; margin-bottom: 14px; }
+        .page-hero p { color: rgba(255,255,255,.7); font-size: 1rem; line-height: 1.7; max-width: 600px; }
+
+        /* ── SECTION ── */
+        .section-pad { padding: 70px 5%; max-width: 1280px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 45px; }
+        .tag { display: inline-block; background: var(--gold-pale); color: var(--gold); font-size: .82rem; font-weight: 800; padding: 5px 16px; border-radius: 20px; margin-bottom: 12px; }
+        .section-title { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 900; color: var(--navy); }
+        .gold-bar { width: 50px; height: 4px; background: var(--gold); border-radius: 2px; margin: 12px auto 0; }
+
+        /* ── EVENT ARTICLE ── */
+        .event-article { background: var(--white); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; box-shadow: 0 8px 30px rgba(27,44,107,.06); margin-bottom: 40px; }
+        .event-header-img { width: 100%; height: 340px; object-fit: cover; display: block; }
+        .event-header-placeholder { width: 100%; height: 340px; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 50%, var(--gold) 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; }
+        .event-body { padding: 40px; }
+        .event-meta { display: flex; align-items: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; }
+        .event-date { display: flex; align-items: center; gap: 6px; color: var(--gold); font-size: .88rem; font-weight: 700; }
+        .event-tag { background: var(--gold-pale); color: var(--gold); font-size: .78rem; font-weight: 800; padding: 4px 14px; border-radius: 15px; }
+        .event-title { font-size: 1.6rem; font-weight: 900; color: var(--navy); margin-bottom: 16px; line-height: 1.4; }
+        .event-text { color: var(--gray-dark); font-size: .95rem; line-height: 1.85; margin-bottom: 16px; }
+        .event-text strong { color: var(--navy); }
+
+        /* ── EVENT GALLERY ── */
+        .event-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin-top: 24px; margin-bottom: 24px; }
+        .event-gallery-item { border-radius: 14px; overflow: hidden; border: 2px solid var(--border); height: 200px; display: flex; align-items: center; justify-content: center; background: var(--off-white); transition: transform .3s, box-shadow .3s; }
+        .event-gallery-item:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(184,147,90,.15); }
+        .event-gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+        .gallery-placeholder { color: var(--gray); font-size: .85rem; text-align: center; padding: 20px; }
+        .gallery-placeholder svg { display: block; margin: 0 auto 8px; opacity: .4; }
+
+        /* ── HIGHLIGHTS ── */
+        .event-highlights { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
+        .highlight-card { background: var(--off-white); border: 1px solid var(--border); border-radius: 14px; padding: 20px; text-align: center; transition: transform .3s; }
+        .highlight-card:hover { transform: translateY(-4px); }
+        .highlight-icon { font-size: 2rem; margin-bottom: 8px; }
+        .highlight-label { font-size: .85rem; font-weight: 700; color: var(--navy); }
+
+        /* ── FOOTER ── */
+        footer { background: var(--navy-dark); color: rgba(255,255,255,.6); text-align: center; padding: 30px 5%; font-size: .85rem; border-top: 1px solid rgba(184,147,90,.2); }
+        footer a { color: var(--gold-light); }
+        .whatsapp-fab { position: fixed; bottom: 28px; left: 28px; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 999; box-shadow: 0 6px 20px rgba(37,211,102,.4); transition: transform .25s; }
+        .whatsapp-fab:hover { transform: scale(1.1); }
+
+        /* Language Dropdown */
+        .lang-drop { position: relative; display: flex; align-items: center; }
+        .lang-drop-btn { background: none; border: 2px solid rgba(255,255,255,.25); border-radius: 10px; cursor: pointer; font-size: 1.4rem; line-height: 1; padding: 4px 8px; transition: all .2s; color: #fff; }
+        .lang-drop-btn:hover { border-color: var(--gold); transform: scale(1.05); }
+        .lang-drop-menu { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--navy); border: 1px solid var(--gold); border-radius: 10px; padding: 6px; display: none; flex-direction: column; gap: 4px; min-width: 130px; z-index: 9999; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+        .lang-drop-menu.open { display: flex; }
+        .lang-drop-menu button { background: none; border: none; cursor: pointer; font-size: 1rem; padding: 6px 10px; border-radius: 6px; text-align: right; color: #fff; white-space: nowrap; font-family: inherit; transition: background .15s; }
+        .lang-drop-menu button:hover { background: rgba(184,147,90,.2); }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 900px) { .nav-links { display: none; } .hamburger { display: flex; } }
+        @media (max-width: 768px) {
+            .page-hero { padding: 110px 5% 50px; }
+            .page-hero h1 { font-size: clamp(1.3rem,5vw,1.9rem); }
+            .section-pad { padding: 50px 5%; }
+            .event-body { padding: 24px; }
+            .event-title { font-size: 1.3rem; }
+            .event-header-img, .event-header-placeholder { height: 220px; }
+            .event-gallery { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 600px) {
+            .nav-cta { display: none; }
+            .event-gallery { grid-template-columns: 1fr; }
+            .event-highlights { grid-template-columns: 1fr 1fr; }
+        }
+</style>
+</head>
+<body>
+<nav class="navbar">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">
+<img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png" style="width:60px;height:60px;object-fit:contain;"/>
+<div class="nav-logo-text">
+<div class="nav-firm-name" data-i18n="firm_name">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub" data-i18n="firm_sub">للمحاماة والاستشارات القانونية</div>
+</div>
+</a>
+<ul class="nav-links">
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_events" href="events.html" class="active">فعاليتنا</a></li>
+<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+<div class="nav-controls">
+<div class="lang-drop" id="langDrop">
+<button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
+<div class="lang-drop-menu" id="langDropMenu">
+<button data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦 العربية</button>
+<button data-lang="1" onclick="setLang(1);toggleLangDrop()">🇬🇧 English</button>
+<button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
+</div>
+</div>
+<a class="nav-cta" data-i18n="nav_cta" href="https://wa.me/966533532153" rel="noopener" target="_blank">احجز استشارة</a>
+<div class="hamburger" onclick="document.querySelector('.mobile-drawer').classList.toggle('open')">
+<span></span><span></span><span></span>
+</div>
+</div>
+</div>
+</nav>
+<div class="mobile-drawer">
+<ul>
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+<div class="page-hero-content">
+<div class="page-breadcrumb">
+<a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
+<span>›</span>
+<span data-i18n="breadcrumb_events">فعاليتنا</span>
+</div>
+<h1 data-i18n="hero_h1">فعاليتنا</h1>
+<p data-i18n="hero_p">نشارككم أبرز فعالياتنا ومناسباتنا التي تعكس التزامنا بالمجتمع والتطوير المستمر في القطاع القانوني.</p>
+</div>
+</section>
+
+<!-- EVENTS LIST -->
+<section class="section-pad">
+<div class="section-header">
+<div class="tag" data-i18n="events_tag">مشاركاتنا</div>
+<h2 class="section-title" data-i18n="events_h2">أبرز الفعاليات</h2>
+<div class="gold-bar"></div>
+</div>
+
+<!-- EVENT 1: GHAMRA -->
+<article class="event-article" id="ghamra">
+<div class="event-header-placeholder">
+<span>🏜️ غَمرة</span>
+</div>
+<div class="event-body">
+<div class="event-meta">
+<div class="event-date">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+<span data-i18n="ev1_date">2025</span>
+</div>
+<span class="event-tag" data-i18n="ev1_tag">فعالية مجتمعية</span>
+<span class="event-tag" data-i18n="ev1_tag2">سياحة بيئية</span>
+</div>
+
+<h3 class="event-title" data-i18n="ev1_title">مشاركتنا في فعالية غَمرة للسياحة البيئية والمغامرات</h3>
+
+<p class="event-text" data-i18n="ev1_p1">
+تفتخر <strong>شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية</strong> بمشاركتها في فعالية <strong>غَمرة</strong> للسياحة البيئية والمغامرات، وهي إحدى أبرز التجارب السياحية في المملكة العربية السعودية التي تجمع بين جمال الطبيعة الخلاب وروح المغامرة والتعلم.
+</p>
+
+<p class="event-text" data-i18n="ev1_p2">
+تقع غَمرة في قلب <strong>حديقة الرياض الجيولوجية</strong> شمال العاصمة الرياض، وهي منطقة معترف بها من قبل اليونسكو، تتميز بتشكيلاتها الصخرية الفريدة ومناظرها الطبيعية المفتوحة التي تقدم تجربة جيولوجية استثنائية للزوار.
+</p>
+
+<div class="event-highlights">
+<div class="highlight-card">
+<div class="highlight-icon">🏜️</div>
+<div class="highlight-label" data-i18n="ev1_hl1">التزلج على الرمال</div>
+</div>
+<div class="highlight-card">
+<div class="highlight-icon">🐎</div>
+<div class="highlight-label" data-i18n="ev1_hl2">عروض الخيل والصقور</div>
+</div>
+<div class="highlight-card">
+<div class="highlight-icon">⛰️</div>
+<div class="highlight-label" data-i18n="ev1_hl3">تسلق الصخور</div>
+</div>
+<div class="highlight-card">
+<div class="highlight-icon">🌌</div>
+<div class="highlight-label" data-i18n="ev1_hl4">رصد النجوم</div>
+</div>
+</div>
+
+<p class="event-text" data-i18n="ev1_p3">
+جاءت مشاركتنا في هذه الفعالية انطلاقاً من إيماننا بأهمية التواصل المجتمعي وتعزيز الروابط مع مختلف القطاعات. نحرص دائماً على أن نكون جزءاً فاعلاً في المجتمع، لا نقتصر على تقديم الخدمات القانونية فحسب، بل نسهم في دعم المبادرات التي ترتقي بجودة الحياة وتعزز السياحة الوطنية.
+</p>
+
+<p class="event-text" data-i18n="ev1_p4">
+تضمنت الفعالية العديد من الأنشطة المتنوعة التي شارك فيها فريقنا بحماس واحترافية، مما أتاح لنا فرصة التعارف والتواصل مع شرائح واسعة من المجتمع في أجواء مليئة بالحيوية والمغامرة.
+</p>
+
+<!-- GALLERY PLACEHOLDERS - will be replaced with real photos -->
+<h4 style="font-weight:800;color:var(--navy);margin-bottom:12px;" data-i18n="ev1_gallery_title">صور من المشاركة</h4>
+<div class="event-gallery" id="ghamraGallery">
+<div class="event-gallery-item">
+<div class="gallery-placeholder">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+<span data-i18n="ev1_ph1">صورة 1 — سيتم إضافتها قريباً</span>
+</div>
+</div>
+<div class="event-gallery-item">
+<div class="gallery-placeholder">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+<span data-i18n="ev1_ph2">صورة 2 — سيتم إضافتها قريباً</span>
+</div>
+</div>
+<div class="event-gallery-item">
+<div class="gallery-placeholder">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+<span data-i18n="ev1_ph3">صورة 3 — سيتم إضافتها قريباً</span>
+</div>
+</div>
+</div>
+
+</div>
+</article>
+
+</section>
+
+<footer>
+<p data-i18n="footer_copyright">© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+<p style="margin-top:8px;"><a data-i18n="footer_home" href="index.html">الرئيسية</a></p>
+</footer>
+
+<a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank">
+<svg fill="white" height="28" viewbox="0 0 24 24" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path></svg>
+</a>
+
+<script>
+const pageTranslations = {
+  breadcrumb_events: {0: 'فعاليتنا', 1: 'Our Events', 2: '我们的活动'},
+  hero_h1: {0: 'فعاليتنا', 1: 'Our Events', 2: '我们的活动'},
+  hero_p: {0: 'نشارككم أبرز فعالياتنا ومناسباتنا التي تعكس التزامنا بالمجتمع والتطوير المستمر في القطاع القانوني.', 1: 'We share our most prominent events that reflect our commitment to the community and continuous development in the legal sector.', 2: '我们分享最突出的活动，反映我们对社区和法律领域持续发展的承诺。'},
+  events_tag: {0: 'مشاركاتنا', 1: 'Our Participations', 2: '我们的参与'},
+  events_h2: {0: 'أبرز الفعاليات', 1: 'Featured Events', 2: '精选活动'},
+  ev1_date: {0: '2025', 1: '2025', 2: '2025'},
+  ev1_tag: {0: 'فعالية مجتمعية', 1: 'Community Event', 2: '社区活动'},
+  ev1_tag2: {0: 'سياحة بيئية', 1: 'Eco-Tourism', 2: '生态旅游'},
+  ev1_title: {0: 'مشاركتنا في فعالية غَمرة للسياحة البيئية والمغامرات', 1: 'Our Participation in Ghamra Eco-Tourism & Adventure Event', 2: '我们参加Ghamra生态旅游和冒险活动'},
+  ev1_p1: {0: 'تفتخر <strong>شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية</strong> بمشاركتها في فعالية <strong>غَمرة</strong> للسياحة البيئية والمغامرات، وهي إحدى أبرز التجارب السياحية في المملكة العربية السعودية التي تجمع بين جمال الطبيعة الخلاب وروح المغامرة والتعلم.', 1: '<strong>Meshary Bin Bandar Bin Jaloui Law Firm</strong> is proud to have participated in the <strong>Ghamra</strong> Eco-Tourism & Adventure event, one of the most prominent tourism experiences in Saudi Arabia that combines breathtaking natural beauty with the spirit of adventure and learning.', 2: '<strong>麦沙里·本·班达尔·本·贾卢伊律师事务所</strong>自豪地参加了<strong>Ghamra</strong>生态旅游和冒险活动，这是沙特阿拉伯最著名的旅游体验之一，将壮丽的自然美景与冒险和学习精神相结合。'},
+  ev1_p2: {0: 'تقع غَمرة في قلب <strong>حديقة الرياض الجيولوجية</strong> شمال العاصمة الرياض، وهي منطقة معترف بها من قبل اليونسكو، تتميز بتشكيلاتها الصخرية الفريدة ومناظرها الطبيعية المفتوحة التي تقدم تجربة جيولوجية استثنائية للزوار.', 1: 'Ghamra is located in the heart of the <strong>North Riyadh Geopark</strong>, a UNESCO-recognized area featuring unique rock formations and open landscapes that offer visitors an exceptional geological experience.', 2: 'Ghamra位于<strong>北利雅得地质公园</strong>的中心，这是联合国教科文组织认可的地区，拥有独特的岩层和开阔的景观，为游客提供非凡的地质体验。'},
+  ev1_hl1: {0: 'التزلج على الرمال', 1: 'Sandboarding', 2: '沙板滑沙'},
+  ev1_hl2: {0: 'عروض الخيل والصقور', 1: 'Horse & Falcon Shows', 2: '马术和猎鹰表演'},
+  ev1_hl3: {0: 'تسلق الصخور', 1: 'Rock Climbing', 2: '攀岩'},
+  ev1_hl4: {0: 'رصد النجوم', 1: 'Stargazing', 2: '观星'},
+  ev1_p3: {0: 'جاءت مشاركتنا في هذه الفعالية انطلاقاً من إيماننا بأهمية التواصل المجتمعي وتعزيز الروابط مع مختلف القطاعات. نحرص دائماً على أن نكون جزءاً فاعلاً في المجتمع، لا نقتصر على تقديم الخدمات القانونية فحسب، بل نسهم في دعم المبادرات التي ترتقي بجودة الحياة وتعزز السياحة الوطنية.', 1: 'Our participation stems from our belief in the importance of community engagement and strengthening ties across sectors. We always strive to be an active part of the community, not limited to providing legal services, but also contributing to initiatives that enhance quality of life and promote national tourism.', 2: '我们的参与源于我们对社区参与重要性和加强各部门联系的信念。我们始终努力成为社区的积极参与者，不仅限于提供法律服务，还为提升生活质量和促进国家旅游的倡议做出贡献。'},
+  ev1_p4: {0: 'تضمنت الفعالية العديد من الأنشطة المتنوعة التي شارك فيها فريقنا بحماس واحترافية، مما أتاح لنا فرصة التعارف والتواصل مع شرائح واسعة من المجتمع في أجواء مليئة بالحيوية والمغامرة.', 1: 'The event featured a variety of activities that our team participated in with enthusiasm and professionalism, providing us an opportunity to network and connect with a wide range of community members in an atmosphere filled with vitality and adventure.', 2: '活动包含了我们团队热情专业参与的各种活动，让我们有机会在充满活力和冒险的氛围中与广泛的社区成员建立联系。'},
+  ev1_gallery_title: {0: 'صور من المشاركة', 1: 'Photos from the Event', 2: '活动照片'},
+  ev1_ph1: {0: 'صورة 1 — سيتم إضافتها قريباً', 1: 'Photo 1 — Coming soon', 2: '照片1 — 即将添加'},
+  ev1_ph2: {0: 'صورة 2 — سيتم إضافتها قريباً', 1: 'Photo 2 — Coming soon', 2: '照片2 — 即将添加'},
+  ev1_ph3: {0: 'صورة 3 — سيتم إضافتها قريباً', 1: 'Photo 3 — Coming soon', 2: '照片3 — 即将添加'},
+};
+</script>
+<script src="lang.js"></script>
+<script>
+let lang = currentLang;
+function toggleLangDrop() { document.getElementById('langDropMenu').classList.toggle('open'); }
+document.addEventListener('click', function(e) {
+    if (!document.getElementById('langDrop').contains(e.target)) document.getElementById('langDropMenu').classList.remove('open');
+});
+function setLang(l) {
+    lang = l; currentLang = l;
+    const dir = l === 0 ? 'rtl' : 'ltr';
+    const langCode = l === 0 ? 'ar' : (l === 1 ? 'en' : 'zh');
+    document.documentElement.setAttribute('dir', dir);
+    document.documentElement.setAttribute('lang', langCode);
+    document.getElementById('langDropBtn').textContent = l === 0 ? '🇸🇦' : (l === 1 ? '🇬🇧' : '🇨🇳');
+    const allTranslations = Object.assign({}, commonTranslations, pageTranslations);
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (allTranslations[key] && allTranslations[key][l] !== undefined) {
+            if (el.tagName === 'INPUT' && el.type !== 'hidden') el.placeholder = allTranslations[key][l];
+            else el.innerHTML = allTranslations[key][l];
+        }
+    });
+    localStorage.setItem('siteLang', l);
+}
+window.addEventListener('load', function() {
+    const saved = localStorage.getItem('siteLang');
+    if (saved !== null) setLang(parseInt(saved)); else setLang(0);
+});
+</script>
+</body>
+</html>
