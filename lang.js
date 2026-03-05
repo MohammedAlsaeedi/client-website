@@ -36,7 +36,7 @@ const commonTranslations = {
   breadcrumb_packages: {0: 'باقات الخدمات', 1: 'Service Packages', 2: '服务套餐'},
 
   // Footer
-  footer_copyright: {0: '© 2025 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2025 Meshary Bin Bandar Bin Jaloui Law Firm and Legal Consultations — All rights reserved', 2: '© 2025 美沙里·本·班达尔·本·贾卢伊律师事务所和法律咨询——版权所有'},
+  footer_copyright: {0: '© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2026 Meshary Bin Bandar Bin Jaloui Law Firm and Legal Consultations — All rights reserved', 2: '© 2026 美沙里·本·班达尔·本·贾卢伊律师事务所和法律咨询——版权所有'},
   footer_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
 
   // Section tags (shared)
