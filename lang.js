@@ -77,7 +77,16 @@ const commonTranslations = {
   svc_opt_3: {0: 'توكيلنا بالدعوى المنظورة', 1: 'Authorize Us for the Pending Case', 2: '委托我们处理待审案件'},
   svc_opt_4: {0: 'صياغة مذكرة للدعوى', 1: 'Draft a Case Memorandum', 2: '起草案件备忘录'},
   svc_opt_5: {0: 'اعتراض على حكم', 1: 'Appeal a Judgment', 2: '对判决提出异议'},
-  svc_opt_6: {0: 'صياغة لائحة نقض', 1: 'Draft a Cassation Petition', 2: '起草上诉状'}
+  svc_opt_6: {0: 'صياغة لائحة نقض', 1: 'Draft a Cassation Petition', 2: '起草上诉状'},
+  cf_subtitle: {0: 'أرسل بياناتك وسيتواصل معك فريقنا القانوني في أقرب وقت', 1: 'Send your details and our legal team will contact you as soon as possible', 2: '发送您的信息，我们的法律团队将尽快与您联系'},
+  pkg_lbl_type: {0: 'نوع العميل', 1: 'Client Type', 2: '客户类型'},
+  pkg_opt_choose: {0: '— اختر —', 1: '— Select —', 2: '— 选择 —'},
+  pkg_opt_individual: {0: 'فرد', 1: 'Individual', 2: '个人'},
+  pkg_opt_company: {0: 'شركة', 1: 'Company', 2: '公司'},
+  pkg_opt_org: {0: 'مؤسسة', 1: 'Organization', 2: '机构'},
+  pkg_opt_gov: {0: 'جهة حكومية', 1: 'Government Entity', 2: '政府机构'},
+  pkg_ph_details: {0: 'اذكر متطلباتك القانونية باختصار...', 1: 'Briefly describe your legal requirements...', 2: '简要描述您的法律需求...'},
+  pkg_submit: {0: 'أرسل طلب الاشتراك', 1: 'Submit Subscription Request', 2: '提交订阅请求'}
 };
 
 /**
