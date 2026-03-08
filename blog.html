@@ -326,11 +326,17 @@ a {
 
 .blog-card-img {
   height: 180px;
-  background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 4rem;
+}
+.blog-card-img img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  opacity: .85;
 }
 
 .blog-card-body {
@@ -495,7 +501,10 @@ footer a:hover {
   }
   .blog-card-img {
     height: 140px;
-    font-size: 3rem;
+  }
+  .blog-card-img img {
+    width: 65px;
+    height: 65px;
   }
 }
 
@@ -583,7 +592,7 @@ footer a:hover {
 
 <a href="article1.html" class="blog-card-link-wrapper">
 <div class="blog-card">
-<div class="blog-card-img">⚖️</div>
+<div class="blog-card-img"><img src="logo.png" alt="شعار الشركة"/></div>
 <div class="blog-card-body">
 <h3 class="blog-card-title" data-i18n="blog1_title">قانون الشركات في المملكة العربية السعودية</h3>
 <p class="blog-card-desc" data-i18n="blog1_desc">دليل شامل لنظام الشركات السعودي الجديد وأنواع الكيانات التجارية وإجراءات التأسيس والحوكمة.</p>
@@ -594,7 +603,7 @@ footer a:hover {
 
 <a href="article2.html" class="blog-card-link-wrapper">
 <div class="blog-card">
-<div class="blog-card-img">📋</div>
+<div class="blog-card-img"><img src="logo.png" alt="شعار الشركة"/></div>
 <div class="blog-card-body">
 <h3 class="blog-card-title" data-i18n="blog2_title">العقود التجارية: أسسها وأحكامها</h3>
 <p class="blog-card-desc" data-i18n="blog2_desc">تعرّف على أركان العقد وشروط صحته وأهم البنود التي يجب تضمينها في العقود التجارية.</p>
@@ -605,7 +614,7 @@ footer a:hover {
 
 <a href="article3.html" class="blog-card-link-wrapper">
 <div class="blog-card">
-<div class="blog-card-img">🏛️</div>
+<div class="blog-card-img"><img src="logo.png" alt="شعار الشركة"/></div>
 <div class="blog-card-body">
 <h3 class="blog-card-title" data-i18n="blog3_title">نظام العمل السعودي: حقوق وواجبات</h3>
 <p class="blog-card-desc" data-i18n="blog3_desc">كل ما تحتاج معرفته عن حقوق العامل وصاحب العمل وعقود العمل ونظام الإجازات والتعويضات.</p>
@@ -616,7 +625,7 @@ footer a:hover {
 
 <a href="article4.html" class="blog-card-link-wrapper">
 <div class="blog-card">
-<div class="blog-card-img">🏢</div>
+<div class="blog-card-img"><img src="logo.png" alt="شعار الشركة"/></div>
 <div class="blog-card-body">
 <h3 class="blog-card-title" data-i18n="blog4_title">التوثيق والتصديق في المملكة</h3>
 <p class="blog-card-desc" data-i18n="blog4_desc">شرح مفصّل لإجراءات التوثيق عبر منصة ناجز وأنواع الوثائق والفرق بين التوثيق والتصديق.</p>
@@ -627,7 +636,7 @@ footer a:hover {
 
 <a href="article5.html" class="blog-card-link-wrapper">
 <div class="blog-card">
-<div class="blog-card-img">🤝</div>
+<div class="blog-card-img"><img src="logo.png" alt="شعار الشركة"/></div>
 <div class="blog-card-body">
 <h3 class="blog-card-title" data-i18n="blog5_title">التحكيم التجاري: البديل الفعّال للتقاضي</h3>
 <p class="blog-card-desc" data-i18n="blog5_desc">تعرّف على نظام التحكيم السعودي وإجراءاته ومزاياه كوسيلة لحل النزاعات التجارية.</p>
@@ -638,7 +647,7 @@ footer a:hover {
 
 <a href="article6.html" class="blog-card-link-wrapper">
 <div class="blog-card">
-<div class="blog-card-img">💼</div>
+<div class="blog-card-img"><img src="logo.png" alt="شعار الشركة"/></div>
 <div class="blog-card-body">
 <h3 class="blog-card-title" data-i18n="blog6_title">ريادة الأعمال والجوانب القانونية</h3>
 <p class="blog-card-desc" data-i18n="blog6_desc">دليل رواد الأعمال لاختيار الكيان القانوني المناسب وحماية الملكية الفكرية والامتثال التنظيمي.</p>

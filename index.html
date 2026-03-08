@@ -347,26 +347,27 @@
             padding: 90px 5% 60px;
         }
 
-        /* B&W office photo background */
+        /* Video background */
         .hero-bg {
             position: absolute;
             inset: 0;
-            background: url('office-new.jpg') center/cover no-repeat;
-            filter: grayscale(100%) opacity(70%);
-            /* Black and white w/ opacity for watermark feel */
             z-index: 0;
+            overflow: hidden;
+        }
+        .hero-bg video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(60%) brightness(0.7);
         }
 
-        /* white overlay for gold/white theme */
+        /* overlay for video readability */
         .hero::before {
             content: '';
             position: absolute;
             inset: 0;
             z-index: 1;
-            background-color: rgba(255, 255, 255, 0.82);
-            /* Increased opacity to maintain legibility */
-            background-image: radial-gradient(rgba(184, 147, 90, .08) 1px, transparent 1px);
-            background-size: 40px 40px;
+            background: linear-gradient(135deg, rgba(17,29,74,.85) 0%, rgba(27,44,107,.75) 50%, rgba(17,29,74,.88) 100%);
         }
 
         /* gold diagonal shape */
@@ -430,7 +431,7 @@
         .hero h1 {
             font-size: clamp(1.5rem, 5.5vw, 3.3rem);
             font-weight: 900;
-            color: var(--navy);
+            color: var(--white);
             line-height: 1.28;
             margin-bottom: 10px;
             animation: fadeDown .8s .1s ease both;
@@ -438,12 +439,12 @@
         }
 
         .hero h1 span {
-            color: var(--gold);
+            color: var(--gold-light);
         }
 
         .hero-sub {
             font-size: 1.1rem;
-            color: var(--navy-mid);
+            color: var(--gold-light);
             margin-bottom: 20px;
             animation: fadeDown .8s .2s ease both;
         }
@@ -459,7 +460,7 @@
 
         .hero-desc {
             font-size: .95rem;
-            color: var(--gray);
+            color: rgba(255,255,255,.78);
             line-height: 1.9;
             margin-bottom: 14px;
             animation: fadeDown .8s .3s ease both;
@@ -2426,7 +2427,7 @@
 </div>
 <!-- ═══════════════════════════════════ HERO ═══════════ -->
 <section class="hero" id="home">
-<div class="hero-bg"></div>
+<div class="hero-bg"><video autoplay muted loop playsinline><source src="Video.mp4" type="video/mp4"/></video></div>
 <div class="hero-shape"></div>
 <div class="hero-circle hero-circle-1"></div>
 <div class="hero-circle hero-circle-2"></div>
@@ -2650,6 +2651,7 @@
 <a class="lit-tag" data-i18n="lit_t8" data-key="auto_42" href="case-real-estate.html">القضايا العقارية</a>
 <a class="lit-tag" data-i18n="lit_t9" data-key="auto_43" href="case-banking.html">القضايا المصرفية والمالية</a>
 <a class="lit-tag" data-i18n="lit_t10" data-key="auto_44" href="case-insurance.html">قضايا التأمين</a>
+<a class="lit-tag" data-i18n="lit_t11" href="case-other.html">قضايا أخرى</a>
 </div>
 </section>
 <!-- ═══════════════════════════════════ BOOKING ═══════ -->
@@ -3806,6 +3808,7 @@ const pageTranslations = {
   lit_t8: {0: "القضايا العقارية", 1: "Real Estate Cases", 2: "房地产案件"},
   lit_t9: {0: "القضايا المصرفية والمالية", 1: "Banking & Financial Cases", 2: "银行与金融案件"},
   lit_t10: {0: "قضايا التأمين", 1: "Insurance Cases", 2: "保险案件"},
+  lit_t11: {0: "قضايا أخرى", 1: "Other Cases", 2: "其他案件"},
   book_tag: {0: "احجز استشارتك", 1: "Book Your Consultation", 2: "预约您的咨询"},
   book_h2: {0: "طرق الاستشارة والحجز", 1: "Consultation & Booking Methods", 2: "咨询与预约方式"},
   book_desc: {0: "اختر الطريقة المناسبة لك للتواصل والحجز", 1: "Choose the most suitable way for you to contact us and book", 2: "选择最适合您联系和预约的方式"},

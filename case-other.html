@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>قضايا أخرى — شركة مشاري بندر بن جلوي للمحاماة</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root { --navy:#1B2C6B; --navy-dark:#111d4a; --navy-mid:#223580; --gold:#B8935A; --gold-light:#d4aa72; --gold-pale:#f5ede0; --white:#ffffff; --off-white:#f8f6f2; --gray:#6b7280; --gray-dark:#374151; --border:#e5e1d9; }
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth;overflow-x:hidden}
+        body{font-family:'Cairo',sans-serif;color:var(--gray-dark);background:var(--white);overflow-x:hidden;line-height:1.7}
+        a{text-decoration:none}
+        img{max-width:100%;display:block}
+        .navbar{position:fixed;inset:0 0 auto 0;z-index:1000;height:90px;background:rgba(17,29,74,.97);backdrop-filter:blur(12px);border-bottom:2px solid rgba(184,147,90,.45);display:flex;align-items:center;padding:0 5%}
+        .nav-inner{width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+        .nav-logo{display:flex;align-items:center;gap:11px}
+        .nav-logo img{width:60px;height:60px;flex-shrink:0}
+        .nav-firm-name{font-size:1.2rem;font-weight:800;color:var(--gold-light);line-height:1.2}
+        .nav-firm-sub{font-size:.8rem;color:rgba(255,255,255,.55)}
+        .nav-links{display:flex;align-items:center;gap:22px;list-style:none;flex:1;justify-content:center}
+        .nav-links a{color:rgba(255,255,255,.82);font-size:.95rem;font-weight:600;transition:color .2s;position:relative;padding-bottom:2px}
+        .nav-links a:hover,.nav-links a.active{color:var(--gold-light)}
+        .nav-links a::after{content:'';position:absolute;bottom:-2px;right:0;left:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .25s}
+        .nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+        .nav-cta{background:var(--gold);color:var(--white);padding:8px 20px;border-radius:25px;font-size:.85rem;font-weight:800;transition:all .25s;white-space:nowrap}
+        .nav-cta:hover{background:var(--gold-light);box-shadow:0 6px 20px rgba(184,147,90,.4)}
+        .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:5px}
+        .hamburger span{display:block;width:24px;height:2px;background:white;border-radius:2px}
+        .mobile-drawer{position:fixed;top:90px;inset-inline:0;background:var(--navy-dark);border-top:1px solid rgba(184,147,90,.25);padding:24px 5%;z-index:999;transform:translateY(-8px);opacity:0;visibility:hidden;transition:all .3s}
+        .mobile-drawer.open{transform:translateY(0);opacity:1;visibility:visible}
+        .mobile-drawer ul{list-style:none}
+        .mobile-drawer li{border-bottom:1px solid rgba(255,255,255,.07)}
+        .mobile-drawer a{display:block;padding:12px 0;color:rgba(255,255,255,.85);font-size:.95rem;font-weight:600}
+        .page-hero{padding:130px 5% 70px;background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 60%,#2a4090 100%);position:relative;overflow:hidden}
+        .page-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(184,147,90,.08) 1px,transparent 1px);background-size:40px 40px}
+        .page-hero-content{position:relative;z-index:2;max-width:800px}
+        .page-breadcrumb{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.55);font-size:.85rem;margin-bottom:18px}
+        .page-breadcrumb a{color:rgba(255,255,255,.55)}
+        .page-breadcrumb a:hover{color:var(--gold-light)}
+        .page-breadcrumb span{color:var(--gold-light)}
+        .page-hero h1{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;color:var(--white);margin-bottom:16px;line-height:1.25}
+        .page-hero h1 em{color:var(--gold-light);font-style:normal}
+        .page-hero-desc{font-size:1rem;color:rgba(255,255,255,.78);line-height:1.9;max-width:650px}
+        .section-pad{padding:80px 5%}
+        .section-pad.alt{background:var(--off-white)}
+        .tag{display:inline-block;background:var(--gold-pale);color:var(--gold);border:1px solid var(--gold-light);padding:4px 16px;border-radius:20px;font-size:.8rem;font-weight:700}
+        .section-title{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;color:var(--navy);margin:10px 0 6px;line-height:1.3}
+        .gold-bar{width:50px;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));border-radius:2px;margin:12px 0 20px}
+        .article-body{max-width:860px;margin:0 auto}
+        .article-body h2{font-size:1.4rem;font-weight:900;color:var(--navy);margin:36px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--gold-pale)}
+        .article-body h3{font-size:1.15rem;font-weight:800;color:var(--navy-mid);margin:24px 0 10px}
+        .article-body p{font-size:.97rem;color:var(--gray-dark);line-height:2;margin-bottom:16px}
+        .article-body ul{padding-right:24px;margin-bottom:16px}
+        .article-body ul li{font-size:.95rem;color:var(--gray-dark);line-height:2;margin-bottom:6px;list-style:disc}
+        .info-box{background:linear-gradient(135deg,var(--navy-dark),var(--navy));border-radius:18px;padding:32px 36px;margin:32px 0;color:var(--white)}
+        .info-box h3{color:var(--gold-light);font-size:1.15rem;font-weight:800;margin-bottom:14px}
+        .info-box ul{padding-right:20px}
+        .info-box ul li{color:rgba(255,255,255,.85);line-height:2;font-size:.93rem;list-style:disc;margin-bottom:4px}
+        .steps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;margin:24px 0}
+        .step-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:26px 22px;transition:transform .3s,box-shadow .3s;box-shadow:0 4px 16px rgba(27,44,107,.06)}
+        .step-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(184,147,90,.14)}
+        .step-num{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-mid));color:var(--gold-light);font-size:1.1rem;font-weight:900;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+        .step-card h4{font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:8px}
+        .step-card p{font-size:.87rem;color:var(--gray);line-height:1.8}
+        .cta-section{background:linear-gradient(135deg,var(--navy-dark),var(--navy));padding:70px 5%;text-align:center}
+        .cta-section h2{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;color:var(--white);margin-bottom:14px}
+        .cta-section p{color:rgba(255,255,255,.7);font-size:.95rem;margin-bottom:32px;max-width:500px;margin-inline:auto}
+        .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+        .btn-gold{background:var(--gold);color:var(--white);padding:13px 32px;border-radius:30px;font-size:.95rem;font-weight:800;transition:all .25s}
+        .btn-gold:hover{background:var(--gold-light);box-shadow:0 8px 25px rgba(184,147,90,.4)}
+        .btn-outline{border:2px solid var(--gold);color:var(--gold);padding:11px 28px;border-radius:30px;font-size:.95rem;font-weight:800;transition:all .25s}
+        .btn-outline:hover{background:var(--gold);color:var(--white)}
+        footer{background:var(--navy-dark);color:rgba(255,255,255,.6);text-align:center;padding:30px 5%;font-size:.85rem;border-top:1px solid rgba(184,147,90,.2)}
+        footer a{color:var(--gold-light)}
+        .whatsapp-fab{position:fixed;bottom:28px;left:28px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:999;box-shadow:0 6px 20px rgba(37,211,102,.4);transition:transform .25s}
+        .whatsapp-fab:hover{transform:scale(1.1)}
+        @media(max-width:900px){.nav-links{display:none}.hamburger{display:flex}}
+        @media(max-width:600px){.nav-cta{display:none}}
+            .lang-switcher{display:flex;align-items:center;gap:5px}
+        .flag-btn{background:none;border:2px solid rgba(255,255,255,.2);border-radius:7px;cursor:pointer;font-size:1.2rem;line-height:1;padding:3px 5px;transition:all .2s;display:flex;align-items:center}
+        .flag-btn:hover{border-color:var(--gold-light);transform:scale(1.08)}
+        .flag-btn.active{border-color:var(--gold);background:rgba(184,147,90,.2)}
+    /* Language Dropdown */
+        .lang-drop { position: relative; display: flex; align-items: center; }
+        .lang-drop-btn { background: none; border: 2px solid rgba(255,255,255,.25); border-radius: 10px; cursor: pointer; font-size: 1.4rem; line-height: 1; padding: 4px 8px; transition: all .2s; color: #fff; }
+        .lang-drop-btn:hover { border-color: var(--gold); transform: scale(1.05); }
+        .lang-drop-menu { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--navy); border: 1px solid var(--gold); border-radius: 10px; padding: 6px; display: none; flex-direction: column; gap: 4px; min-width: 130px; z-index: 9999; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+        .lang-drop-menu.open { display: flex; }
+        .lang-drop-menu button { background: none; border: none; cursor: pointer; font-size: 1rem; padding: 6px 10px; border-radius: 6px; text-align: right; color: #fff; white-space: nowrap; font-family: inherit; transition: background .15s; }
+        .lang-drop-menu button:hover { background: rgba(184,147,90,.2); }
+
+        /* ─── MOBILE RESPONSIVE ─── */
+        @media(max-width:768px){
+            .page-hero{padding:110px 5% 50px}
+            .page-hero h1{font-size:clamp(1.4rem,5vw,2rem)}
+            .page-hero-desc{font-size:.9rem}
+            .section-pad{padding:50px 5%}
+            .steps-grid{grid-template-columns:1fr}
+            .basis-list{grid-template-columns:1fr}
+            .services-grid{grid-template-columns:1fr}
+            .section-title{font-size:1.3rem}
+        }
+        @media(max-width:480px){
+            .page-breadcrumb{font-size:.75rem;flex-wrap:wrap}
+            .cta-btns{flex-direction:column;align-items:center}
+            .cta-btns a{width:100%;justify-content:center;text-align:center}
+        }
+
+        /* ── Case Contact Form ── */
+        .cf-subtitle{color:rgba(255,255,255,.75);font-size:.95rem;margin-bottom:28px;text-align:center}
+        .case-form{max-width:720px;margin:0 auto;text-align:right}
+        .cf-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+        @media(max-width:600px){.cf-row{grid-template-columns:1fr}}
+        .cf-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+        .cf-group label{color:rgba(255,255,255,.9);font-size:.88rem;font-weight:600}
+        .cf-req{color:var(--gold);margin-inline-start:3px}
+        .cf-optional{color:rgba(255,255,255,.5);font-size:.8rem;font-weight:400}
+        .cf-group input,.cf-group textarea{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:11px 16px;color:#fff;font-family:inherit;font-size:.93rem;transition:border .2s;width:100%;box-sizing:border-box}
+        .cf-group input:focus,.cf-group textarea:focus{outline:none;border-color:var(--gold);background:rgba(255,255,255,.12)}
+        .cf-group input::placeholder,.cf-group textarea::placeholder{color:rgba(255,255,255,.35)}
+        .cf-group textarea{resize:vertical;min-height:100px}
+        .cf-file{cursor:pointer;padding:8px 12px}
+        .cf-file-hint{color:rgba(255,255,255,.4);font-size:.78rem;margin-top:4px}
+        .cf-group select{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:11px 16px;color:#fff;font-family:inherit;font-size:.93rem;transition:border .2s;width:100%;box-sizing:border-box;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.5)' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");background-repeat:no-repeat;background-position:left 14px center;cursor:pointer}
+        .cf-group select:focus{outline:none;border-color:var(--gold);background-color:rgba(255,255,255,.12)}
+        .cf-group select option{background:var(--navy);color:#fff}
+        .cf-submit{width:100%;padding:14px;background:var(--gold);color:#fff;border:none;border-radius:30px;font-size:1rem;font-weight:800;font-family:inherit;cursor:pointer;transition:all .25s;margin-top:8px}
+        .cf-submit:hover{background:#b8960c;transform:translateY(-1px)}
+        .cf-success{margin-top:16px;text-align:center;color:#4ade80;font-size:.95rem;font-weight:600}
+
+        </style>
+</head>
+<body>
+<nav class="navbar">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">
+<img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png"/>
+<div>
+<div class="nav-firm-name" data-i18n="firm_name">شركة مشاري بندر بن جلوي</div>
+<div class="nav-firm-sub" data-i18n="firm_sub">للمحاماة والاستشارات القانونية</div>
+</div>
+</a>
+<ul class="nav-links">
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+<li><a class="active" data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+</ul>
+<div style="display:flex;align-items:center;gap:10px;">
+<div class="lang-drop" id="langDrop">
+<button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
+<div class="lang-drop-menu" id="langDropMenu">
+<button data-i18n="lang_btn_ar" data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦 العربية</button>
+<button data-lang="1" onclick="setLang(1);toggleLangDrop()">🇬🇧 English</button>
+<button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
+</div>
+</div>
+<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank"><span data-i18n="nav_cta">احجز استشارة</span></a>
+<div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
+<span></span><span></span><span></span>
+</div>
+</div>
+</div>
+</nav>
+<div class="mobile-drawer" id="drawer">
+<ul>
+<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+<li><a class="active" data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
+<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+<li><a data-i18n="nav_cta" href="https://wa.me/966533532153">احجز استشارة</a></li>
+</ul>
+</div>
+<section class="page-hero">
+<div class="page-hero-content">
+<div class="page-breadcrumb">
+<a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
+<span>/</span>
+<a data-i18n="breadcrumb_legal" href="#">القضايا القانونية</a>
+<span>/</span>
+<span data-i18n="breadcrumb_current">قضايا أخرى</span>
+</div>
+<h1 data-i18n="hero_h1">قضايا <em>أخرى</em></h1>
+<p class="page-hero-desc" data-i18n="hero_desc">خدمات قانونية متنوعة تشمل جميع أنواع القضايا التي لا تندرج تحت تصنيف محدد. نقدم الدعم القانوني الشامل لحماية حقوقك</p>
+</div>
+</section>
+<section class="section-pad">
+<div class="article-body">
+<h2 data-i18n="section_h2_0">مقدمة</h2>
+<p data-i18n="p_0">تتعامل شركة مشاري بندر بن جلوي للمحاماة مع مجموعة واسعة ومتنوعة من القضايا التي لا تندرج ضمن التصنيفات المحددة. نحن ندرك أن كل عميل قد يواجه تحديات قانونية فريدة وتتطلب اهتماماً خاصاً واستراتيجية مخصصة. فريقنا المتخصص مجهز بالمعرفة والخبرة اللازمة للتعامل مع أي نوع من القضايا التي قد تحتاج إلى دعم قانوني متخصص.</p>
+<p data-i18n="p_1">نوفر حلولاً قانونية شاملة وفعالة لضمان حماية حقوقك والدفاع عن مصالحك بكفاءة واحترافية عالية، بغض النظر عن طبيعة القضية أو تعقيدها.</p>
+<h2 data-i18n="section_h2_1">أنواع القضايا الأخرى</h2>
+<p data-i18n="p_2">تشمل الخدمات القانونية المتنوعة العديد من الأنواع:</p>
+<h3 data-i18n="section_h3_0">قضايا التعويض عن الأضرار</h3>
+<p data-i18n="p_3">تتعلق بالمطالبة بالتعويض عن الأضرار المادية أو المعنوية التي لحقت بالشخص نتيجة لتصرف غير قانوني من قبل الغير. يمكن أن تشمل حوادث السيارات، الإصابات الشخصية، الضرر الناجم عن الإهمال أو الأفعال المضرة. نحن نعمل على توثيق الأضرار وحساب التعويض العادل والدفاع عن حقوقك أمام المحاكم.</p>
+<h3 data-i18n="section_h3_1">قضايا حماية المستهلك</h3>
+<p data-i18n="p_4">تتعلق بحماية حقوق المستهلكين من الممارسات الخاطئة أو المضللة في البيع والتسويق. قد تشمل الدعاوى ضد شركات لتقديم منتجات معيبة أو خدمات دون المستوى المطلوب أو عدم الالتزام بالضمانات. نحن نساعد المستهلكين على استعادة حقوقهم والحصول على التعويضات المستحقة.</p>
+<h3 data-i18n="section_h3_2">قضايا الملكية الفكرية</h3>
+<p data-i18n="p_5">تتعلق بحماية براءات الاختراع والعلامات التجارية والحقوق المرتبطة بالملكية الفكرية والابتكار. قد تشمل دعاوى ضد التقليد أو الاستخدام غير المصرح به للملكية الفكرية. نحن نقدم استشارات متخصصة في تسجيل وحماية الحقوق الفكرية والدفاع عنها قانونياً.</p>
+<h3 data-i18n="section_h3_3">قضايا التحكيم والوساطة</h3>
+<p data-i18n="p_6">تقدم بديلاً فعالاً للتقاضي التقليدي أمام المحاكم. التحكيم والوساطة توفر حلاً أسرع وأكثر سرية وأقل تكلفة للنزاعات. نحن نمثل عملاءنا في إجراءات التحكيم والوساطة ونعمل على التوصل إلى حلول توافقية تحقق مصالح جميع الأطراف.</p>
+<h3 data-i18n="section_h3_4">قضايا التنفيذ والأحكام</h3>
+<p data-i18n="p_7">تتعلق بتنفيذ الأحكام والقرارات القضائية والاستحقاقات المالية. قد تواجه صعوبات في تنفيذ حكم ما أو استيفاء حقك من محكوم عليه. نحن نساعدك في متابعة التنفيذ واتخاذ الإجراءات القانونية اللازمة للحصول على حقوقك.</p>
+<h2 data-i18n="section_h2_2">خدماتنا في القضايا المتنوعة</h2>
+<p data-i18n="p_8">توفر شركتنا خدمات قانونية شاملة في جميع أنواع القضايا المتنوعة:</p>
+<ul>
+<li data-i18n="li_0">الاستشارات القانونية المتخصصة والتحليل الدقيق للقضايا</li>
+<li data-i18n="li_1">إعداد الأوراق والمذكرات القانونية بدقة واحترافية</li>
+<li data-i18n="li_2">التمثيل الكامل أمام المحاكم وفي الإجراءات القانونية</li>
+<li data-i18n="li_3">التفاوض والوساطة بين الأطراف للتوصل إلى حلول</li>
+<li data-i18n="li_4">متابعة القضايا من البداية حتى النهاية</li>
+<li data-i18n="li_5">تنفيذ الأحكام واستيفاء الحقوق</li>
+</ul>
+<h2 data-i18n="section_h2_3">لماذا تختارنا؟</h2>
+<p data-i18n="p_9">اختيار الشريك القانوني المناسب أمر حاسم لنجاح قضيتك. شركة مشاري بندر بن جلوي تقدم:</p>
+<ul>
+<li data-i18n="li_6">فريق قانوني متخصص وذو خبرة عملية واسعة في أنواع قضايا مختلفة</li>
+<li data-i18n="li_7">استراتيجيات قانونية مخصصة تناسب كل حالة</li>
+<li data-i18n="li_8">التزام بسرية العميل وحماية خصوصيته</li>
+<li data-i18n="li_9">تواصل مستمر وشفافية كاملة مع العميل</li>
+<li data-i18n="li_10">أتعاب عادلة وواضحة بدون مخفيات</li>
+<li data-i18n="li_11">سجل حافل بالقضايا الناجحة والراضين عن الخدمة</li>
+</ul>
+</div>
+</section>
+<section class="section-pad alt">
+<div class="article-body">
+<h2 data-i18n="h2_approach" style="text-align:center;margin-bottom:32px;">منهجنا في التعامل مع القضايا</h2>
+<div class="info-box">
+<h3 data-i18n="infobox_h3">المزايا الرئيسية</h3>
+<ul>
+<li data-i18n="infobox_li_0">تقييم شامل وعميق لكل قضية وظروفها</li>
+<li data-i18n="infobox_li_1">وضع استراتيجية قانونية محكمة وفعالة</li>
+<li data-i18n="infobox_li_2">متابعة دقيقة وتحديثات منتظمة للعميل</li>
+<li data-i18n="infobox_li_3">السعي للتوصل إلى أفضل نتائج قانونية وعملية</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="section-pad">
+<div class="article-body">
+<h2 data-i18n="h2_steps" style="text-align:center;margin-bottom:32px;">مراحل التعامل مع القضايا</h2>
+<div class="steps-grid">
+<div class="step-card">
+<div class="step-num">1</div>
+<h4 data-i18n="step_h4_0">التشاور الأولي</h4>
+<p data-i18n="step_p_0">نستمع بانتباه إلى تفاصيل قضيتك وندرس جميع المستندات والأدلة ذات الصلة لفهم الوضع بشكل كامل.</p>
+</div>
+<div class="step-card">
+<div class="step-num">2</div>
+<h4 data-i18n="step_h4_1">إعداد الاستراتيجية</h4>
+<p data-i18n="step_p_1">نضع خطة قانونية متقنة مخصصة لقضيتك تحقق أهدافك وتحمي حقوقك بشكل فعال.</p>
+</div>
+<div class="step-card">
+<div class="step-num">3</div>
+<h4 data-i18n="step_h4_2">المتابعة والتنفيذ</h4>
+<p data-i18n="step_p_2">نتابع القضية بعناية فائقة وننفذ الإجراءات القانونية المطلوبة ونحدثك بشكل مستمر عن التطورات.</p>
+</div>
+<div class="step-card">
+<div class="step-num">4</div>
+<h4 data-i18n="step_h4_3">الحل والتنفيذ</h4>
+<p data-i18n="step_p_3">نسعى للوصول إلى أفضل حل ممكن وتنفيذه بكفاءة مع ضمان حماية مصالحك.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="cta-section">
+<h2 data-i18n="cta_h2">هل لديك قضية تحتاج استشارة قانونية؟</h2>
+<p class="cf-subtitle" data-i18n="cf_subtitle">أرسل بياناتك وسيتواصل معك فريقنا القانوني في أقرب وقت</p>
+<form class="case-form" id="caseForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="handleCaseFormSubmit(event)">
+<input name="_subject" type="hidden" value="طلب استشارة قانونية — موقع شركة مشاري بندر بن جلوي"/>
+<div class="cf-row">
+<div class="cf-group">
+<label data-i18n="cf_lbl_name" for="cf_name">الاسم <span class="cf-req">*</span></label>
+<input data-i18n="cf_ph_name" id="cf_name" name="name" placeholder="اسمك الكامل" required type="text"/>
+</div>
+<div class="cf-group">
+<label data-i18n="cf_lbl_phone" for="cf_phone">رقم الجوال <span class="cf-req">*</span></label>
+<input id="cf_phone" name="phone" placeholder="05xxxxxxxx" required type="tel"/>
+</div>
+</div>
+<div class="cf-row">
+<div class="cf-group">
+<label data-i18n="cf_lbl_email" for="cf_email">البريد الإلكتروني</label>
+<input id="cf_email" name="email" placeholder="example@email.com" type="email"/>
+</div>
+<div class="cf-group">
+<label data-i18n="cf_lbl_service" for="cf_service">الخدمة المطلوبة <span class="cf-req">*</span></label>
+<select id="cf_service" name="service" required>
+<option value="" disabled selected data-i18n="svc_placeholder">— اختر الخدمة —</option>
+<option value="صلح" data-i18n="svc_opt_1">صلح</option>
+<option value="حضور جلسة واحدة" data-i18n="svc_opt_2">حضور جلسة واحدة</option>
+<option value="توكيلنا بالدعوى المنظورة" data-i18n="svc_opt_3">توكيلنا بالدعوى المنظورة</option>
+<option value="صياغة مذكرة للدعوى" data-i18n="svc_opt_4">صياغة مذكرة للدعوى</option>
+<option value="اعتراض على حكم" data-i18n="svc_opt_5">اعتراض على حكم</option>
+<option value="صياغة لائحة نقض" data-i18n="svc_opt_6">صياغة لائحة نقض</option>
+</select>
+</div>
+</div>
+<div class="cf-group">
+<label data-i18n="cf_lbl_details" for="cf_details">تفاصيل القضية <span class="cf-req">*</span></label>
+<textarea data-i18n="cf_ph_details" id="cf_details" name="details" placeholder="اكتب تفاصيل قضيتك باختصار..." required rows="4"></textarea>
+</div>
+<div class="cf-group">
+<label data-i18n="cf_lbl_docs" for="cf_docs">المستندات <span class="cf-optional" data-i18n="cf_optional">(اختياري)</span></label>
+<input accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" class="cf-file" id="cf_docs" name="docs" type="file"/>
+<span class="cf-file-hint" data-i18n="cf_file_hint">PDF, Word, أو صورة</span>
+</div>
+<button class="cf-submit" data-i18n="cf_submit" type="submit">إرسال الطلب</button>
+<div class="cf-success" id="cfSuccess" style="display:none;" data-i18n="cf_success">✅ تم إرسال طلبك بنجاح، سنتواصل معك قريباً</div>
+</form>
+</section>
+<footer>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px 22px;margin-bottom:18px;">
+<a data-i18n="nav_services" href="index.html#services" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">خدماتنا</a>
+<a data-i18n="nav_contracts" href="contracts.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">عقود الشركات</a>
+<a data-i18n="nav_faq" href="faq.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">الأسئلة الشائعة</a>
+<a data-i18n="nav_team" href="team.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">فريقنا</a>
+<a data-i18n="nav_blog" href="blog.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">المدونة</a>
+<a data-i18n="nav_eservices" href="e-services.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">الخدمات الإلكترونية</a>
+<a data-i18n="nav_events" href="events.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">فعاليتنا</a>
+<a data-i18n="nav_cases_stats" href="cases-stats.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">القضايا المنجزة</a>
+<a data-i18n="nav_careers" href="careers.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">التوظيف</a>
+<a data-i18n="nav_contact" href="index.html#booking" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">تواصل معنا</a>
+</div>
+<p data-i18n="footer_copyright">© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
+</footer>
+<a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank" title="تواصل عبر واتساب">
+<svg fill="white" height="28" viewbox="0 0 24 24" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path></svg>
+</a>
+<script>
+const pageTranslations = {
+  breadcrumb_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
+  breadcrumb_legal: {0: 'القضايا القانونية', 1: 'Legal Cases', 2: '法律案件'},
+  breadcrumb_current: {0: 'قضايا أخرى', 1: 'Other Cases', 2: '其他案件'},
+  hero_h1: {0: 'قضايا أخرى', 1: 'Other Cases', 2: '其他案件'},
+  hero_desc: {0: 'خدمات قانونية متنوعة تشمل جميع أنواع القضايا التي لا تندرج تحت تصنيف محدد. نقدم الدعم القانوني الشامل لحماية حقوقك', 1: 'Diverse legal services covering all types of cases that do not fall under specific categories. We provide comprehensive legal support to protect your rights', 2: '涵盖所有不属于特定类别的各类案件的多样化法律服务。我们提供全面的法律支持来保护您的权利'},
+  section_h2_0: {0: 'مقدمة', 1: 'Introduction', 2: '介绍'},
+  p_0: {0: 'تتعامل شركة مشاري بندر بن جلوي للمحاماة مع مجموعة واسعة ومتنوعة من القضايا التي لا تندرج ضمن التصنيفات المحددة. نحن ندرك أن كل عميل قد يواجه تحديات قانونية فريدة وتتطلب اهتماماً خاصاً واستراتيجية مخصصة.', 1: 'Meshary Bin Bandar Bin Jaloui Law Firm handles a wide and diverse range of cases that do not fall within specified categories. We understand that each client may face unique legal challenges requiring special attention and customized strategy.', 2: '美沙里·本·班达尔·本·贾卢伊律师事务所处理不属于指定类别的广泛而多样的案件。我们理解每位客户可能面临独特的法律挑战，需要特殊关注和定制化战略。'},
+  p_1: {0: 'نوفر حلولاً قانونية شاملة وفعالة لضمان حماية حقوقك والدفاع عن مصالحك بكفاءة واحترافية عالية، بغض النظر عن طبيعة القضية أو تعقيدها.', 1: 'We provide comprehensive and effective legal solutions to ensure the protection of your rights and defense of your interests with high efficiency and professionalism, regardless of the nature or complexity of the case.', 2: '我们提供全面有效的法律解决方案，确保保护您的权利并以高效率和专业精神维护您的利益，无论案件的性质或复杂性如何。'},
+  section_h2_1: {0: 'أنواع القضايا الأخرى', 1: 'Types of Other Cases', 2: '其他案件类型'},
+  p_2: {0: 'تشمل الخدمات القانونية المتنوعة العديد من الأنواع:', 1: 'Diverse legal services include many types:', 2: '多样化的法律服务包括许多类型：'},
+  section_h3_0: {0: 'قضايا التعويض عن الأضرار', 1: 'Compensation for Damages Cases', 2: '损害赔偿案件'},
+  p_3: {0: 'تتعلق بالمطالبة بالتعويض عن الأضرار المادية أو المعنوية التي لحقت بالشخص نتيجة لتصرف غير قانوني من قبل الغير. يمكن أن تشمل حوادث السيارات، الإصابات الشخصية، الضرر الناجم عن الإهمال أو الأفعال المضرة.', 1: 'Related to claiming compensation for material or moral damages suffered by a person as a result of unlawful conduct by others. This can include car accidents, personal injuries, damage resulting from negligence or harmful acts.', 2: '与因他人非法行为而蒙受的物质或精神损害赔偿索赔相关。这可能包括交通事故、人身伤害、由过失或有害行为造成的损害。'},
+  section_h3_1: {0: 'قضايا حماية المستهلك', 1: 'Consumer Protection Cases', 2: '消费者保护案件'},
+  p_4: {0: 'تتعلق بحماية حقوق المستهلكين من الممارسات الخاطئة أو المضللة في البيع والتسويق. قد تشمل الدعاوى ضد شركات لتقديم منتجات معيبة أو خدمات دون المستوى المطلوب أو عدم الالتزام بالضمانات.', 1: 'Related to protecting consumer rights from wrong or misleading practices in sales and marketing. May include lawsuits against companies for providing defective products or substandard services or failure to comply with warranties.', 2: '与保护消费者权利免受销售和营销中不当或误导行为有关。可能包括对公司提供缺陷产品或低质量服务或未能遵守保修的诉讼。'},
+  section_h3_2: {0: 'قضايا الملكية الفكرية', 1: 'Intellectual Property Cases', 2: '知识产权案件'},
+  p_5: {0: 'تتعلق بحماية براءات الاختراع والعلامات التجارية والحقوق المرتبطة بالملكية الفكرية والابتكار. قد تشمل دعاوى ضد التقليد أو الاستخدام غير المصرح به للملكية الفكرية.', 1: 'Related to protecting patents, trademarks, and rights related to intellectual property and innovation. May include lawsuits against counterfeiting or unauthorized use of intellectual property.', 2: '与保护专利、商标和与知识产权和创新相关的权利有关。可能包括针对假冒或未经授权使用知识产权的诉讼。'},
+  section_h3_3: {0: 'قضايا التحكيم والوساطة', 1: 'Arbitration and Mediation Cases', 2: '仲裁和调解案件'},
+  p_6: {0: 'تقدم بديلاً فعالاً للتقاضي التقليدي أمام المحاكم. التحكيم والوساطة توفر حلاً أسرع وأكثر سرية وأقل تكلفة للنزاعات. نحن نمثل عملاءنا في إجراءات التحكيم والوساطة ونعمل على التوصل إلى حلول توافقية.', 1: 'Provides an effective alternative to traditional litigation in courts. Arbitration and mediation offer faster, more confidential, and less costly solutions to disputes. We represent our clients in arbitration and mediation proceedings and work to reach consensual solutions.', 2: '提供了对法庭传统诉讼的有效替代方案。仲裁和调解为纠纷提供了更快、更保密和成本更低的解决方案。我们在仲裁和调解程序中代理我们的客户，并努力达成共识解决方案。'},
+  section_h3_4: {0: 'قضايا التنفيذ والأحكام', 1: 'Enforcement and Judgment Cases', 2: '执行和判决案件'},
+  p_7: {0: 'تتعلق بتنفيذ الأحكام والقرارات القضائية والاستحقاقات المالية. قد تواجه صعوبات في تنفيذ حكم ما أو استيفاء حقك من محكوم عليه. نحن نساعدك في متابعة التنفيذ واتخاذ الإجراءات القانونية اللازمة.', 1: 'Related to enforcing judgments, court rulings, and financial receivables. You may face difficulties in enforcing a judgment or collecting your rights from the defendant. We help you follow up on enforcement and take necessary legal actions.', 2: '与执行判决、法院裁定和财务应收款有关。您可能在执行判决或从被告处收取您的权利时面临困难。我们帮助您跟进执行并采取必要的法律行动。'},
+  section_h2_2: {0: 'خدماتنا في القضايا المتنوعة', 1: 'Our Services in Diverse Cases', 2: '我们的多样化案件服务'},
+  p_8: {0: 'توفر شركتنا خدمات قانونية شاملة في جميع أنواع القضايا المتنوعة:', 1: 'Our firm provides comprehensive legal services in all types of diverse cases:', 2: '我们的律师事务所为所有类型的多样化案件提供全面的法律服务：'},
+  li_0: {0: 'الاستشارات القانونية المتخصصة والتحليل الدقيق للقضايا', 1: 'Specialized legal consultations and accurate case analysis', 2: '专业法律咨询和准确的案件分析'},
+  li_1: {0: 'إعداد الأوراق والمذكرات القانونية بدقة واحترافية', 1: 'Preparation of legal documents and memoranda with precision and professionalism', 2: '以精确性和专业性准备法律文件和备忘录'},
+  li_2: {0: 'التمثيل الكامل أمام المحاكم وفي الإجراءات القانونية', 1: 'Full representation before courts and in legal proceedings', 2: '在法院和法律程序中的全面代理'},
+  li_3: {0: 'التفاوض والوساطة بين الأطراف للتوصل إلى حلول', 1: 'Negotiation and mediation between parties to reach solutions', 2: '各方之间的谈判和调解以达成解决方案'},
+  li_4: {0: 'متابعة القضايا من البداية حتى النهاية', 1: 'Case tracking from start to finish', 2: '从开始到结束的案件跟踪'},
+  li_5: {0: 'تنفيذ الأحكام واستيفاء الحقوق', 1: 'Enforcement of judgments and claiming rights', 2: '执行判决和主张权利'},
+  section_h2_3: {0: 'لماذا تختارنا؟', 1: 'Why Choose Us?', 2: '为什么选择我们？'},
+  p_9: {0: 'اختيار الشريك القانوني المناسب أمر حاسم لنجاح قضيتك. شركة مشاري بندر بن جلوي تقدم:', 1: 'Choosing the right legal partner is critical to the success of your case. Meshary Bin Bandar Bin Jaloui Firm offers:', 2: '选择合适的法律合作伙伴对您案件的成功至关重要。美沙里·本·班达尔·本·贾卢伊律师事务所提供：'},
+  li_6: {0: 'فريق قانوني متخصص وذو خبرة عملية واسعة في أنواع قضايا مختلفة', 1: 'Specialized legal team with extensive practical experience in different types of cases', 2: '专业法律团队，在不同类型案件中拥有丰富的实践经验'},
+  li_7: {0: 'استراتيجيات قانونية مخصصة تناسب كل حالة', 1: 'Customized legal strategies tailored to each case', 2: '根据每种情况量身定制的法律策略'},
+  li_8: {0: 'التزام بسرية العميل وحماية خصوصيته', 1: 'Commitment to client confidentiality and privacy protection', 2: '致力于客户保密和隐私保护'},
+  li_9: {0: 'تواصل مستمر وشفافية كاملة مع العميل', 1: 'Continuous communication and full transparency with the client', 2: '与客户的持续沟通和完全透明'},
+  li_10: {0: 'أتعاب عادلة وواضحة بدون مخفيات', 1: 'Fair and clear fees with no hidden charges', 2: '公平透明的费用，无隐含费用'},
+  li_11: {0: 'سجل حافل بالقضايا الناجحة والراضين عن الخدمة', 1: 'A strong track record of successful cases and satisfied clients', 2: '成功案件和满意客户的良好记录'},
+  h2_approach: {0: 'منهجنا في التعامل مع القضايا', 1: 'Our Approach to Case Handling', 2: '我们的案件处理方法'},
+  infobox_h3: {0: 'المزايا الرئيسية', 1: 'Key Advantages', 2: '主要优势'},
+  infobox_li_0: {0: 'تقييم شامل وعميق لكل قضية وظروفها', 1: 'Comprehensive and thorough assessment of each case and its circumstances', 2: '对每个案件及其情况的全面和深入评估'},
+  infobox_li_1: {0: 'وضع استراتيجية قانونية محكمة وفعالة', 1: 'Development of a sound and effective legal strategy', 2: '制定可靠有效的法律策略'},
+  infobox_li_2: {0: 'متابعة دقيقة وتحديثات منتظمة للعميل', 1: 'Precise follow-up and regular updates for the client', 2: '精确跟进和定期向客户更新'},
+  infobox_li_3: {0: 'السعي للتوصل إلى أفضل نتائج قانونية وعملية', 1: 'Striving to achieve the best legal and practical results', 2: '努力实现最佳的法律和实际结果'},
+  h2_steps: {0: 'مراحل التعامل مع القضايا', 1: 'Case Handling Phases', 2: '案件处理阶段'},
+  step_h4_0: {0: 'التشاور الأولي', 1: 'Initial Consultation', 2: '初始咨询'},
+  step_p_0: {0: 'نستمع بانتباه إلى تفاصيل قضيتك وندرس جميع المستندات والأدلة ذات الصلة لفهم الوضع بشكل كامل.', 1: 'We listen carefully to the details of your case and review all relevant documents and evidence to fully understand the situation.', 2: '我们认真倾听您案件的细节，并审查所有相关文件和证据，以充分了解情况。'},
+  step_h4_1: {{0: 'إعداد الاستراتيجية', 1: 'Strategy Development', 2: '战略制定'},
+  step_p_1: {0: 'نضع خطة قانونية متقنة مخصصة لقضيتك تحقق أهدافك وتحمي حقوقك بشكل فعال.', 1: 'We develop a well-crafted legal plan tailored to your case that achieves your goals and effectively protects your rights.', 2: '我们制定一份精心制作的定制法律计划，以实现您的目标并有效保护您的权利。'},
+  step_h4_2: {0: 'المتابعة والتنفيذ', 1: 'Follow-up and Implementation', 2: '跟进和实施'},
+  step_p_2: {0: 'نتابع القضية بعناية فائقة وننفذ الإجراءات القانونية المطلوبة ونحدثك بشكل مستمر عن التطورات.', 1: 'We follow up on the case with utmost care, implement the required legal procedures, and keep you constantly updated on developments.', 2: '我们以最高的谨慎跟进案件，实施所需的法律程序，并让您随时了解最新发展。'},
+  step_h4_3: {0: 'الحل والتنفيذ', 1: 'Resolution and Enforcement', 2: '解决和执行'},
+  step_p_3: {0: 'نسعى للوصول إلى أفضل حل ممكن وتنفيذه بكفاءة مع ضمان حماية مصالحك.', 1: 'We strive to achieve the best possible solution and implement it efficiently while ensuring the protection of your interests.', 2: '我们努力实现最佳可能的解决方案并有效实施，同时确保保护您的利益。'},
+  cta_h2: {0: 'هل لديك قضية تحتاج استشارة قانونية؟', 1: 'Do You Have a Case That Needs Legal Consultation?', 2: '您有需要法律咨询的案件吗？'},
+  cf_subtitle: {0: 'أرسل بياناتك وسيتواصل معك فريقنا القانوني في أقرب وقت', 1: 'Submit your details and our legal team will contact you as soon as possible', 2: '提交您的详细信息，我们的法律团队将尽快与您联系'},
+  cf_lbl_name: {0: 'الاسم', 1: 'Name', 2: '名字'},
+  cf_ph_name: {0: 'اسمك الكامل', 1: 'Your full name', 2: '您的全名'},
+  cf_lbl_phone: {0: 'رقم الجوال', 1: 'Phone Number', 2: '电话号码'},
+  cf_lbl_email: {0: 'البريد الإلكتروني', 1: 'Email', 2: '电子邮件'},
+  cf_lbl_service: {0: 'الخدمة المطلوبة', 1: 'Required Service', 2: '所需服务'},
+  cf_lbl_details: {0: 'تفاصيل القضية', 1: 'Case Details', 2: '案件详情'},
+  cf_ph_details: {0: 'اكتب تفاصيل قضيتك باختصار...', 1: 'Write your case details briefly...', 2: '简要写下您案件的详情...'},
+  cf_lbl_docs: {0: 'المستندات', 1: 'Documents', 2: '文件'},
+  cf_optional: {0: '(اختياري)', 1: '(Optional)', 2: '（可选）'},
+  cf_file_hint: {0: 'PDF, Word, أو صورة', 1: 'PDF, Word, or Image', 2: 'PDF、Word或图像'},
+  cf_submit: {0: 'إرسال الطلب', 1: 'Submit Request', 2: '提交请求'},
+  cf_success: {0: '✅ تم إرسال طلبك بنجاح، سنتواصل معك قريباً', 1: '✅ Your request has been sent successfully, we will contact you soon', 2: '✅ 您的请求已成功发送，我们将尽快与您联系'},
+  svc_placeholder: {0: '— اختر الخدمة —', 1: '— Choose Service —', 2: '— 选择服务 —'},
+  svc_opt_1: {0: 'صلح', 1: 'Settlement', 2: '和解'},
+  svc_opt_2: {0: 'حضور جلسة واحدة', 1: 'Attending One Session', 2: '参加一次庭审'},
+  svc_opt_3: {0: 'توكيلنا بالدعوى المنظورة', 1: 'Representation in Pending Lawsuit', 2: '在待决诉讼中代理'},
+  svc_opt_4: {0: 'صياغة مذكرة للدعوى', 1: 'Drafting a Case Memorandum', 2: '起草案件备忘录'},
+  svc_opt_5: {0: 'اعتراض على حكم', 1: 'Objection to a Judgment', 2: '对判决的异议'},
+  svc_opt_6: {0: 'صياغة لائحة نقض', 1: 'Drafting Cassation Appeal', 2: '起草上诉状'},
+  footer_copyright: {0: '© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة', 1: '© 2026 Meshary Bin Bandar Bin Jaloui Law Firm and Legal Consultations — All rights reserved', 2: '© 2026 美沙里·本·班达尔·本·贾卢伊律师事务所和法律咨询——版权所有'},
+  firm_name: {0: 'شركة مشاري بندر بن جلوي', 1: 'Meshary Bin Bandar Bin Jaloui', 2: '美沙里·本·班达尔·本·贾卢伊'},
+  firm_sub: {0: 'للمحاماة والاستشارات القانونية', 1: 'Law Firm and Legal Consultations', 2: '律师事务所和法律咨询'},
+  nav_services: {0: 'خدماتنا', 1: 'Our Services', 2: '我们的服务'},
+  nav_contracts: {0: 'عقود الشركات', 1: 'Company Contracts', 2: '公司合同'},
+  nav_faq: {0: 'الأسئلة الشائعة', 1: 'FAQ', 2: '常见问题'},
+  nav_team: {0: 'فريقنا', 1: 'Our Team', 2: '我们的团队'},
+  nav_blog: {0: 'المدونة', 1: 'Blog', 2: '博客'},
+  nav_eservices: {0: 'الخدمات الإلكترونية', 1: 'E-Services', 2: '电子服务'},
+  nav_events: {0: 'فعاليتنا', 1: 'Our Events', 2: '我们的活动'},
+  nav_cases_stats: {0: 'القضايا المنجزة', 1: 'Completed Cases', 2: '已完成案件'},
+  nav_careers: {0: 'التوظيف', 1: 'Careers', 2: '职业机会'},
+  nav_contact: {0: 'تواصل معنا', 1: 'Contact Us', 2: '联系我们'},
+  nav_cta: {0: 'احجز استشارة', 1: 'Book Consultation', 2: '预约咨询'},
+  lang_btn_ar: {0: '🇸🇦 العربية', 1: 'العربية', 2: 'العربية'},
+};
+</script>
+<script>
+function handleCaseFormSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const serviceSelect = form.querySelector('select[name="service"]');
+    if (!serviceSelect.value) {
+        alert('يرجى اختيار خدمة واحدة على الأقل');
+        return;
+    }
+    const name = form.querySelector('[name="name"]').value;
+    const phone = form.querySelector('[name="phone"]').value;
+    const email = form.querySelector('[name="email"]').value || '-';
+    const service = serviceSelect.value;
+    const details = form.querySelector('[name="details"]').value;
+    const pageTitle = document.title.split('—')[0].trim();
+    const bodyParts = [
+        'طلب استشارة قانونية — ' + pageTitle,
+        '---',
+        'الاسم: ' + name,
+        'الجوال: ' + phone,
+        'البريد: ' + email,
+        'الخدمة المطلوبة: ' + service,
+        'التفاصيل: ' + details
+    ];
+    const subject = encodeURIComponent('طلب استشارة قانونية — ' + pageTitle);
+    const body = encodeURIComponent(bodyParts.join('\n'));
+    window.location.href = 'mailto:info@lawmeshari.com?subject=' + subject + '&body=' + body;
+    var successDiv = document.getElementById('cfSuccess');
+    if (successDiv) { successDiv.style.display = 'block'; }
+    form.reset();
+    setTimeout(function(){ if(successDiv) successDiv.style.display='none'; }, 6000);
+}
+</script>
+<script src="lang.js"></script>
+</body>
+</html>
