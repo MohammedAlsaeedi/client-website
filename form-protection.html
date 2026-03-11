@@ -294,7 +294,7 @@ function toggleLangDrop(){document.getElementById('langDropMenu').classList.togg
 document.addEventListener('click',function(e){var d=document.getElementById('langDrop');if(d&&!d.contains(e.target)){var m=document.getElementById('langDropMenu');if(m)m.classList.remove('open')}});
 
 </script>
-<script src="lang.js"></script>
+<script src="lang.js?v=2"></script>
 <script>
 if(typeof setLang==='function'){var _oSL=setLang;setLang=function(l){_oSL(l);setTimeout(applyFormPlaceholders,50)};}
 setTimeout(applyFormPlaceholders,200);

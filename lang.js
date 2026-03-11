@@ -161,7 +161,7 @@ function applyLang(langIndex) {
       } else if (el.tagName === 'IMG' || el.tagName === 'A' && el.href && el.dataset.i18n === 'navHome') {
         el.alt = text;
       } else {
-        el.textContent = text;
+        el.innerHTML = text;
       }
     }
   });
