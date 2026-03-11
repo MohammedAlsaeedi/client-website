@@ -1,345 +1,1053 @@
 <!DOCTYPE html>
 
 <html dir="rtl" lang="ar">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>الأسئلة الشائعة — شركة مشاري بندر بن جلوي للمحاماة</title>
-<meta content="إجابات على أكثر الأسئلة شيوعاً حول الخدمات القانونية — شركة مشاري بندر بن جلوي للمحاماة" name="description"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-<style>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>الأسئلة الشائعة — شركة مشاري بندر بن جلوي للمحاماة</title>
+    <meta content="إجابات على أكثر الأسئلة شيوعاً حول الخدمات القانونية — شركة مشاري بندر بن جلوي للمحاماة"
+        name="description" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <style>
         :root {
-            --navy: #1B2C6B; --navy-dark: #111d4a; --navy-mid: #223580;
-            --gold: #B8935A; --gold-light: #d4aa72; --gold-pale: #f5ede0;
-            --white: #ffffff; --off-white: #f8f6f2; --gray: #6b7280; --gray-dark: #374151; --border: #e5e1d9;
+            --navy: #1B2C6B;
+            --navy-dark: #111d4a;
+            --navy-mid: #223580;
+            --gold: #B8935A;
+            --gold-light: #d4aa72;
+            --gold-pale: #f5ede0;
+            --white: #ffffff;
+            --off-white: #f8f6f2;
+            --gray: #6b7280;
+            --gray-dark: #374151;
+            --border: #e5e1d9;
         }
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; overflow-x: hidden; }
-        body { font-family: 'Cairo', sans-serif; color: var(--gray-dark); background: var(--white); overflow-x: hidden; line-height: 1.6; }
-        a { text-decoration: none; }
-        .container { max-width: 860px; margin: 0 auto; padding: 0 5%; }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            color: var(--gray-dark);
+            background: var(--white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
 
         /* NAVBAR */
-        .navbar { position: fixed; inset: 0 0 auto 0; z-index: 1000; height: 90px; background: rgba(17,29,74,.97); backdrop-filter: blur(12px); border-bottom: 2px solid rgba(184,147,90,.45); display: flex; align-items: center; padding: 0 5%; }
-        .nav-inner { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-        .nav-logo { display: flex; align-items: center; gap: 11px; }
-        .nav-logo img { width: 60px; height: 60px; flex-shrink: 0; }
-        .nav-firm-name { font-size: 1.2rem; font-weight: 800; color: var(--gold-light); line-height: 1.2; }
-        .nav-firm-sub { font-size: .8rem; color: rgba(255,255,255,.55); }
-        .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; flex: 1; justify-content: center; }
-        .nav-links a { color: rgba(255,255,255,.82); font-size: 1rem; font-weight: 600; transition: color .2s; position: relative; padding-bottom: 2px; }
-        .nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
-        .nav-links a::after { content: ''; position: absolute; bottom: -2px; right: 0; left: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: right; transition: transform .25s; }
-        .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
-        .nav-cta { background: var(--gold); color: var(--white); padding: 8px 20px; border-radius: 25px; font-size: .85rem; font-weight: 800; transition: all .25s; white-space: nowrap; }
-        .nav-cta:hover { background: var(--gold-light); }
-        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
-        .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; }
-        .mobile-drawer { position: fixed; top: 90px; inset-inline: 0; background: var(--navy-dark); border-top: 1px solid rgba(184,147,90,.25); padding: 24px 5%; z-index: 999; transform: translateY(-8px); opacity: 0; visibility: hidden; transition: all .3s; }
-        .mobile-drawer.open { transform: translateY(0); opacity: 1; visibility: visible; }
-        .mobile-drawer ul { list-style: none; }
-        .mobile-drawer li { border-bottom: 1px solid rgba(255,255,255,.07); }
-        .mobile-drawer a { display: block; padding: 12px 0; color: rgba(255,255,255,.85); font-size: .95rem; font-weight: 600; }
+        .navbar {
+            position: fixed;
+            inset: 0 0 auto 0;
+            z-index: 1000;
+            height: 90px;
+            background: rgba(17, 29, 74, .97);
+            backdrop-filter: blur(12px);
+            border-bottom: 2px solid rgba(184, 147, 90, .45);
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+        }
+
+        .nav-inner {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+        }
+
+        .nav-logo img {
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0;
+        }
+
+        .nav-firm-name {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--gold-light);
+            line-height: 1.2;
+        }
+
+        .nav-firm-sub {
+            font-size: .8rem;
+            color: rgba(255, 255, 255, .55);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            list-style: none;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, .82);
+            font-size: 1rem;
+            font-weight: 600;
+            transition: color .2s;
+            position: relative;
+            padding-bottom: 2px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--gold-light);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            left: 0;
+            height: 2px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform .25s;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            transform: scaleX(1);
+        }
+
+        .nav-cta {
+            background: var(--gold);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: .85rem;
+            font-weight: 800;
+            transition: all .25s;
+            white-space: nowrap;
+        }
+
+        .nav-cta:hover {
+            background: var(--gold-light);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: white;
+            border-radius: 2px;
+        }
+
+        .mobile-drawer {
+            position: fixed;
+            top: 90px;
+            inset-inline: 0;
+            background: var(--navy-dark);
+            border-top: 1px solid rgba(184, 147, 90, .25);
+            padding: 24px 5%;
+            z-index: 999;
+            transform: translateY(-8px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s;
+        }
+
+        .mobile-drawer.open {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-drawer ul {
+            list-style: none;
+        }
+
+        .mobile-drawer li {
+            border-bottom: 1px solid rgba(255, 255, 255, .07);
+        }
+
+        .mobile-drawer a {
+            display: block;
+            padding: 12px 0;
+            color: rgba(255, 255, 255, .85);
+            font-size: .95rem;
+            font-weight: 600;
+        }
 
         /* PAGE HERO */
-        .page-hero { padding: 130px 5% 70px; background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #2a4090 100%); position: relative; overflow: hidden; }
-        .page-hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(184,147,90,.08) 1px, transparent 1px); background-size: 40px 40px; }
-        .page-hero-content { position: relative; z-index: 2; max-width: 700px; }
-        .page-breadcrumb { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.55); font-size: .85rem; margin-bottom: 18px; }
-        .page-breadcrumb a { color: rgba(255,255,255,.55); transition: color .2s; }
-        .page-breadcrumb a:hover { color: var(--gold-light); }
-        .page-breadcrumb span { color: var(--gold-light); }
-        .page-hero h1 { font-size: clamp(1.8rem, 3.5vw, 3rem); font-weight: 900; color: var(--white); margin-bottom: 16px; line-height: 1.25; }
-        .page-hero h1 em { color: var(--gold-light); font-style: normal; }
-        .page-hero-desc { font-size: 1rem; color: rgba(255,255,255,.75); line-height: 1.9; max-width: 600px; }
+        .page-hero {
+            padding: 130px 5% 70px;
+            background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #2a4090 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(184, 147, 90, .08) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+        }
+
+        .page-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, .55);
+            font-size: .85rem;
+            margin-bottom: 18px;
+        }
+
+        .page-breadcrumb a {
+            color: rgba(255, 255, 255, .55);
+            transition: color .2s;
+        }
+
+        .page-breadcrumb a:hover {
+            color: var(--gold-light);
+        }
+
+        .page-breadcrumb span {
+            color: var(--gold-light);
+        }
+
+        .page-hero h1 {
+            font-size: clamp(1.8rem, 3.5vw, 3rem);
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 16px;
+            line-height: 1.25;
+        }
+
+        .page-hero h1 em {
+            color: var(--gold-light);
+            font-style: normal;
+        }
+
+        .page-hero-desc {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, .75);
+            line-height: 1.9;
+            max-width: 600px;
+        }
 
         /* FAQ */
-        .faq-section { padding: 80px 5%; }
-        .tag { display: inline-block; background: var(--gold-pale); color: var(--gold); border: 1px solid var(--gold-light); padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 700; }
-        .section-title { font-size: clamp(1.5rem, 2.8vw, 2.2rem); font-weight: 900; color: var(--navy); margin: 12px 0 6px; }
-        .gold-bar { width: 50px; height: 3px; background: linear-gradient(90deg, var(--gold), var(--gold-light)); border-radius: 2px; margin: 12px 0 40px; }
-        .section-header { text-align: center; margin-bottom: 50px; }
-        .section-header .gold-bar { margin: 12px auto 18px; }
+        .faq-section {
+            padding: 80px 5%;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--gold-pale);
+            color: var(--gold);
+            border: 1px solid var(--gold-light);
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: .8rem;
+            font-weight: 700;
+        }
+
+        .section-title {
+            font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+            font-weight: 900;
+            color: var(--navy);
+            margin: 12px 0 6px;
+        }
+
+        .gold-bar {
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            border-radius: 2px;
+            margin: 12px 0 40px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header .gold-bar {
+            margin: 12px auto 18px;
+        }
 
         /* FAQ CATEGORIES */
-        .faq-cats { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 40px; }
-        .faq-cat-btn { padding: 7px 18px; border-radius: 22px; border: 1.5px solid var(--border); background: var(--white); color: var(--gray); font-family: inherit; font-size: .85rem; font-weight: 700; cursor: pointer; transition: all .25s; }
-        .faq-cat-btn:hover, .faq-cat-btn.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
+        .faq-cats {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .faq-cat-btn {
+            padding: 7px 18px;
+            border-radius: 22px;
+            border: 1.5px solid var(--border);
+            background: var(--white);
+            color: var(--gray);
+            font-family: inherit;
+            font-size: .85rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all .25s;
+        }
+
+        .faq-cat-btn:hover,
+        .faq-cat-btn.active {
+            background: var(--navy);
+            color: var(--white);
+            border-color: var(--navy);
+        }
 
         /* ACCORDION */
-        .faq-list { display: flex; flex-direction: column; gap: 14px; }
-        .faq-item { border: 1.5px solid var(--border); border-radius: 14px; overflow: hidden; background: var(--white); transition: box-shadow .25s; }
-        .faq-item:hover { box-shadow: 0 6px 22px rgba(27,44,107,.08); }
-        .faq-item.open { border-color: var(--gold); }
-        .faq-q { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 20px 24px; cursor: pointer; font-size: 1rem; font-weight: 700; color: var(--navy); }
-        .faq-q:hover { background: var(--off-white); }
-        .faq-item.open .faq-q { background: var(--gold-pale); color: var(--gold); }
-        .faq-arrow { width: 22px; height: 22px; flex-shrink: 0; border-radius: 50%; background: var(--navy); display: flex; align-items: center; justify-content: center; transition: transform .3s, background .25s; }
-        .faq-item.open .faq-arrow { background: var(--gold); transform: rotate(180deg); }
-        .faq-a { display: none; padding: 0 24px 20px; font-size: .92rem; color: var(--gray); line-height: 1.9; border-top: 1px solid var(--border); padding-top: 16px; }
-        .faq-item.open .faq-a { display: block; }
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .faq-item {
+            border: 1.5px solid var(--border);
+            border-radius: 14px;
+            overflow: hidden;
+            background: var(--white);
+            transition: box-shadow .25s;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 6px 22px rgba(27, 44, 107, .08);
+        }
+
+        .faq-item.open {
+            border-color: var(--gold);
+        }
+
+        .faq-q {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            padding: 20px 24px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .faq-q:hover {
+            background: var(--off-white);
+        }
+
+        .faq-item.open .faq-q {
+            background: var(--gold-pale);
+            color: var(--gold);
+        }
+
+        .faq-arrow {
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background: var(--navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform .3s, background .25s;
+        }
+
+        .faq-item.open .faq-arrow {
+            background: var(--gold);
+            transform: rotate(180deg);
+        }
+
+        .faq-a {
+            display: none;
+            padding: 0 24px 20px;
+            font-size: .92rem;
+            color: var(--gray);
+            line-height: 1.9;
+            border-top: 1px solid var(--border);
+            padding-top: 16px;
+        }
+
+        .faq-item.open .faq-a {
+            display: block;
+        }
 
         /* CTA */
-        .cta-section { background: linear-gradient(135deg, var(--navy-dark), var(--navy)); padding: 70px 5%; text-align: center; }
-        .cta-section h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 900; color: var(--white); margin-bottom: 14px; }
-        .cta-section p { color: rgba(255,255,255,.7); font-size: .95rem; margin-bottom: 32px; max-width: 500px; margin-inline: auto; }
-        .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-        .btn-gold { background: var(--gold); color: var(--white); padding: 13px 32px; border-radius: 30px; font-size: .95rem; font-weight: 800; transition: all .25s; display: inline-flex; align-items: center; gap: 8px; }
-        .btn-gold:hover { background: var(--gold-light); box-shadow: 0 8px 25px rgba(184,147,90,.4); }
-        .btn-outline { border: 2px solid var(--gold); color: var(--gold); padding: 11px 28px; border-radius: 30px; font-size: .95rem; font-weight: 800; transition: all .25s; }
-        .btn-outline:hover { background: var(--gold); color: var(--white); }
+        .cta-section {
+            background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+            padding: 70px 5%;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(1.4rem, 2.5vw, 2rem);
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 14px;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, .7);
+            font-size: .95rem;
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-inline: auto;
+        }
+
+        .cta-btns {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: var(--white);
+            padding: 13px 32px;
+            border-radius: 30px;
+            font-size: .95rem;
+            font-weight: 800;
+            transition: all .25s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-gold:hover {
+            background: var(--gold-light);
+            box-shadow: 0 8px 25px rgba(184, 147, 90, .4);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            padding: 11px 28px;
+            border-radius: 30px;
+            font-size: .95rem;
+            font-weight: 800;
+            transition: all .25s;
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: var(--white);
+        }
 
         /* ── FAQ Contact Form ── */
-        .faq-form{max-width:720px;margin:0 auto;text-align:right}
-        .cf-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-        @media(max-width:600px){.cf-row{grid-template-columns:1fr}}
-        .cf-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
-        .cf-group label{color:rgba(255,255,255,.9);font-size:.88rem;font-weight:600}
-        .cf-req{color:var(--gold);margin-inline-start:3px}
-        .cf-optional{color:rgba(255,255,255,.5);font-size:.8rem;font-weight:400}
-        .cf-group input,.cf-group textarea,.cf-group select{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:11px 16px;color:#fff;font-family:inherit;font-size:.93rem;transition:border .2s;width:100%;box-sizing:border-box}
-        .cf-group input:focus,.cf-group textarea:focus,.cf-group select:focus{outline:none;border-color:var(--gold);background:rgba(255,255,255,.12)}
-        .cf-group input::placeholder,.cf-group textarea::placeholder{color:rgba(255,255,255,.35)}
-        .cf-group textarea{resize:vertical;min-height:100px}
-        .cf-submit{width:100%;padding:14px;background:var(--gold);color:#fff;border:none;border-radius:30px;font-size:1rem;font-weight:800;font-family:inherit;cursor:pointer;transition:all .25s;margin-top:8px}
-        .cf-submit:hover{background:#b8960c;transform:translateY(-1px)}
-        .cf-success{margin-top:16px;text-align:center;color:#4ade80;font-size:.95rem;font-weight:600}
-        .cf-subtitle{color:rgba(255,255,255,.75);font-size:.95rem;margin-bottom:28px;text-align:center}
+        .faq-form {
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: right
+        }
 
-        footer { background: var(--navy-dark); color: rgba(255,255,255,.6); text-align: center; padding: 30px 5%; font-size: .85rem; border-top: 1px solid rgba(184,147,90,.2); }
-        footer a { color: var(--gold-light); }
-        .whatsapp-fab { position: fixed; bottom: 28px; left: 28px; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 999; box-shadow: 0 6px 20px rgba(37,211,102,.4); transition: transform .25s; }
-        .whatsapp-fab:hover { transform: scale(1.1); }
+        .cf-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px
+        }
 
-        @media (max-width: 900px) { .nav-links { display: none; } .hamburger { display: flex; } }
-        @media (max-width: 600px) { .nav-cta { display: none; } .faq-q { font-size: .9rem; padding: 16px 18px; } }
-            .lang-switcher{display:flex;align-items:center;gap:5px}
-        .flag-btn{background:none;border:2px solid rgba(255,255,255,.2);border-radius:7px;cursor:pointer;font-size:1.2rem;line-height:1;padding:3px 5px;transition:all .2s;display:flex;align-items:center}
-        .flag-btn:hover{border-color:var(--gold-light);transform:scale(1.08)}
-        .flag-btn.active{border-color:var(--gold);background:rgba(184,147,90,.2)}
-    /* Language Dropdown */
-        .lang-drop { position: relative; display: flex; align-items: center; }
-        .lang-drop-btn { background: none; border: 2px solid rgba(255,255,255,.25); border-radius: 10px; cursor: pointer; font-size: 1.4rem; line-height: 1; padding: 4px 8px; transition: all .2s; color: #fff; }
-        .lang-drop-btn:hover { border-color: var(--gold); transform: scale(1.05); }
-        .lang-drop-menu { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--navy); border: 1px solid var(--gold); border-radius: 10px; padding: 6px; display: none; flex-direction: column; gap: 4px; min-width: 130px; z-index: 9999; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
-        .lang-drop-menu.open { display: flex; }
-        .lang-drop-menu button { background: none; border: none; cursor: pointer; font-size: 1rem; padding: 6px 10px; border-radius: 6px; text-align: right; color: #fff; white-space: nowrap; font-family: inherit; transition: background .15s; }
-        .lang-drop-menu button:hover { background: rgba(184,147,90,.2); }
-        
+        @media(max-width:600px) {
+            .cf-row {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .cf-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 16px
+        }
+
+        .cf-group label {
+            color: rgba(255, 255, 255, .9);
+            font-size: .88rem;
+            font-weight: 600
+        }
+
+        .cf-req {
+            color: var(--gold);
+            margin-inline-start: 3px
+        }
+
+        .cf-optional {
+            color: rgba(255, 255, 255, .5);
+            font-size: .8rem;
+            font-weight: 400
+        }
+
+        .cf-group input,
+        .cf-group textarea,
+        .cf-group select {
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .2);
+            border-radius: 10px;
+            padding: 11px 16px;
+            color: #fff;
+            font-family: inherit;
+            font-size: .93rem;
+            transition: border .2s;
+            width: 100%;
+            box-sizing: border-box
+        }
+
+        .cf-group input:focus,
+        .cf-group textarea:focus,
+        .cf-group select:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: rgba(255, 255, 255, .12)
+        }
+
+        .cf-group input::placeholder,
+        .cf-group textarea::placeholder {
+            color: rgba(255, 255, 255, .35)
+        }
+
+        .cf-group textarea {
+            resize: vertical;
+            min-height: 100px
+        }
+
+        .cf-submit {
+            width: 100%;
+            padding: 14px;
+            background: var(--gold);
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 800;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all .25s;
+            margin-top: 8px
+        }
+
+        .cf-submit:hover {
+            background: #b8960c;
+            transform: translateY(-1px)
+        }
+
+        .cf-success {
+            margin-top: 16px;
+            text-align: center;
+            color: #4ade80;
+            font-size: .95rem;
+            font-weight: 600
+        }
+
+        .cf-subtitle {
+            color: rgba(255, 255, 255, .75);
+            font-size: .95rem;
+            margin-bottom: 28px;
+            text-align: center
+        }
+
+        footer {
+            background: var(--navy-dark);
+            color: rgba(255, 255, 255, .6);
+            text-align: center;
+            padding: 30px 5%;
+            font-size: .85rem;
+            border-top: 1px solid rgba(184, 147, 90, .2);
+        }
+
+        footer a {
+            color: var(--gold-light);
+        }
+
+        .whatsapp-fab {
+            position: fixed;
+            bottom: 28px;
+            left: 28px;
+            width: 56px;
+            height: 56px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, .4);
+            transition: transform .25s;
+        }
+
+        .whatsapp-fab:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav-cta {
+                display: none;
+            }
+
+            .faq-q {
+                font-size: .9rem;
+                padding: 16px 18px;
+            }
+        }
+
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 5px
+        }
+
+        .flag-btn {
+            background: none;
+            border: 2px solid rgba(255, 255, 255, .2);
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            line-height: 1;
+            padding: 3px 5px;
+            transition: all .2s;
+            display: flex;
+            align-items: center
+        }
+
+        .flag-btn:hover {
+            border-color: var(--gold-light);
+            transform: scale(1.08)
+        }
+
+        .flag-btn.active {
+            border-color: var(--gold);
+            background: rgba(184, 147, 90, .2)
+        }
+
+        /* Language Dropdown */
+        .lang-drop {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .lang-drop-btn {
+            background: none;
+            border: 2px solid rgba(255, 255, 255, .25);
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.4rem;
+            line-height: 1;
+            padding: 4px 8px;
+            transition: all .2s;
+            color: #fff;
+        }
+
+        .lang-drop-btn:hover {
+            border-color: var(--gold);
+            transform: scale(1.05);
+        }
+
+        .lang-drop-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--navy);
+            border: 1px solid var(--gold);
+            border-radius: 10px;
+            padding: 6px;
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            min-width: 130px;
+            z-index: 9999;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .4);
+        }
+
+        .lang-drop-menu.open {
+            display: flex;
+        }
+
+        .lang-drop-menu button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 6px 10px;
+            border-radius: 6px;
+            text-align: right;
+            color: #fff;
+            white-space: nowrap;
+            font-family: inherit;
+            transition: background .15s;
+        }
+
+        .lang-drop-menu button:hover {
+            background: rgba(184, 147, 90, .2);
+        }
+
         /* ─── MOBILE RESPONSIVE ─── */
-        @media(max-width:768px){
-            .page-hero{padding:110px 5% 50px}
-            .page-hero h1{font-size:clamp(1.3rem,5vw,1.9rem)}
-            .section-pad{padding:50px 5%}
-            .section-title{font-size:1.3rem}
+        @media(max-width:768px) {
+            .page-hero {
+                padding: 110px 5% 50px
+            }
+
+            .page-hero h1 {
+                font-size: clamp(1.3rem, 5vw, 1.9rem)
+            }
+
+            .section-pad {
+                padding: 50px 5%
+            }
+
+            .section-title {
+                font-size: 1.3rem
+            }
         }
-        @media(max-width:480px){
-            .page-breadcrumb{font-size:.75rem;flex-wrap:wrap}
-            .cta-btns{flex-direction:column;align-items:center}
+
+        @media(max-width:480px) {
+            .page-breadcrumb {
+                font-size: .75rem;
+                flex-wrap: wrap
+            }
+
+            .cta-btns {
+                flex-direction: column;
+                align-items: center
+            }
         }
-        </style>
+    </style>
 </head>
+
 <body>
-<nav class="navbar">
-<div class="nav-inner">
-<a class="nav-logo" href="index.html">
-<img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png"/>
-<div>
-<div class="nav-firm-name" data-i18n="firm_name">شركة مشاري بندر بن جلوي</div>
-<div class="nav-firm-sub" data-i18n="firm_sub">للمحاماة والاستشارات القانونية</div>
-</div>
-</a>
-<ul class="nav-links">
-<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
-<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
-<li><a class="active" data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
-<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
-<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
-<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
-<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
-<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
-<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
-<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
-</ul>
-<div style="display:flex;align-items:center;gap:10px;">
-<div class="lang-drop" id="langDrop">
-<button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
-<div class="lang-drop-menu" id="langDropMenu">
-<button data-i18n="lang_btn_ar" data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦 العربية</button>
-<button data-lang="1" onclick="setLang(1);toggleLangDrop()">🇬🇧 English</button>
-<button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
-</div>
-</div>
-<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank"><span data-i18n="nav_cta">احجز استشارة</span></a>
-<div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
-<span></span><span></span><span></span>
-</div>
-</div>
-</div>
-</nav>
-<div class="mobile-drawer" id="drawer">
-<ul>
-<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
-<li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
-<li data-i18n="li_0"><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
-<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
-<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
-<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
-<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
-<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
-<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
-<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
-</ul>
-</div>
-<div class="page-hero">
-<div class="page-hero-content">
-<div class="page-breadcrumb">
-<a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
-<span>←</span>
-<span data-i18n="breadcrumb_faq">الأسئلة الشائعة</span>
-</div>
-<h1 data-i18n="hero_h1">الأسئلة <em>الشائعة</em></h1>
-<p class="page-hero-desc" data-i18n="p_0">إجابات وافية وشفافة على أكثر الأسئلة التي يطرحها عملاؤنا حول خدماتنا القانونية وإجراءات التعامل مع شركتنا.</p>
-</div>
-</div>
-<section class="faq-section">
-<div class="container">
-<div class="section-header">
-<div class="tag" data-i18n="faq_tag">مركز المعرفة القانونية</div>
-<h2 class="section-title" data-i18n="h2_0">كيف يمكننا مساعدتك؟</h2>
-<div class="gold-bar"></div>
-</div>
-<div class="faq-list" id="faqList">
-<div class="faq-item">
-<div class="faq-q" onclick="toggleFaq(this)">
-<span data-i18n="faq_q_0">ما الخدمات التي تقدمها شركة مشاري بندر بن جلوي للمحاماة؟</span>
-<div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
-</div>
-<div class="faq-a" data-i18n="faq_a_0">نقدم طيفاً شاملاً من الخدمات القانونية يشمل: الاستشارات القانونية المتخصصة، صياغة ومراجعة العقود، تأسيس الشركات، الترافع أمام المحاكم القضائية، التوثيق والتصديق، التحكيم وفض النزاعات، وخدمات عقود الشركات التجارية — كل ذلك بأيدٍ قانونية مرخّصة وذات خبرة.</div>
-</div>
-<div class="faq-item">
-<div class="faq-q" onclick="toggleFaq(this)">
-<span data-i18n="faq_q_1">كيف أحجز استشارة قانونية؟</span>
-<div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
-</div>
-<div class="faq-a" data-i18n="faq_a_1">يمكنك حجز استشارتك عبر التواصل معنا مباشرةً على واتساب، أو بزيارة مكتبنا في عنيزة خلال أوقات الدوام. نوفر أيضاً استشارة هاتفية فورية في أوقات متاحة متعددة لتناسب جدولك.</div>
-</div>
-<div class="faq-item">
-<div class="faq-q" onclick="toggleFaq(this)">
-<span data-i18n="faq_q_2">هل يمكن الحصول على استشارة عن بُعد؟</span>
-<div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
-</div>
-<div class="faq-a" data-i18n="faq_a_2">نعم، نوفر استشارات قانونية عن بُعد عبر المكالمات الهاتفية أو مرئياً، مما يتيح لعملائنا في مختلف مناطق المملكة الاستفادة من خدماتنا دون الحاجة للتنقل.</div>
-</div>
-<div class="faq-item">
-<div class="faq-q" onclick="toggleFaq(this)">
-<span data-i18n="faq_q_3">ما مدة استغراق صياغة عقد تجاري؟</span>
-<div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
-</div>
-<div class="faq-a" data-i18n="faq_a_3">تتراوح مدة إعداد العقد بين يوم إلى ثلاثة أيام عمل وفق تعقيده ومتطلباته. نلتزم بتسليم العمل في الوقت المحدد مع الحرص التام على الجودة القانونية.</div>
-</div>
-<div class="faq-item">
-<div class="faq-q" onclick="toggleFaq(this)">
-<span data-i18n="faq_q_4">ما هو عقد الحماية القانونية السنوي وما مميزاته؟</span>
-<div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
-</div>
-<div class="faq-a" data-i18n="faq_a_4">هو عقد سنوي يمنح عميلنا تغطية قانونية متكاملة تشمل: استشارات مستمرة، صياغة ومراجعة العقود، حماية المصالح أمام الجهات الرسمية، وتقارير دورية. مثالي للشركات والمؤسسات التي تحتاج حضوراً قانونياً دائماً.</div>
-</div>
-<div class="faq-item">
-<div class="faq-q" onclick="toggleFaq(this)">
-<span data-i18n="faq_q_5">هل تتولون تأسيس الشركات والمنشآت التجارية؟</span>
-<div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
-</div>
-<div class="faq-a" data-i18n="faq_a_5">نعم، نتولى تأسيس مختلف أنواع الكيانات القانونية من شركات ذات مسؤولية محدودة، شركات مساهمة، مؤسسات فردية، وجمعيات. نشمل إعداد عقد التأسيس والنظام الأساسي واستيفاء جميع الإجراءات الرسمية.</div>
-</div>
-<div class="faq-item">
-<div class="faq-q" onclick="toggleFaq(this)">
-<span data-i18n="faq_q_6">ما أنواع القضايا التي تترافعون فيها؟</span>
-<div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
-</div>
-<div class="faq-a" data-i18n="faq_a_6">نترافع في طيف واسع من القضايا: التجارية، الجنائية، العمالية، الأحوال الشخصية، العقارية، الإدارية، المصرفية والمالية، قضايا الزكاة والضريبة والجمارك، وقضايا هيئة سوق المال — أمام كافة درجات المحاكم والهيئات المتخصصة.</div>
-</div>
-<div class="faq-item">
-<div class="faq-q" onclick="toggleFaq(this)">
-<span data-i18n="faq_q_7">هل تضمنون سرية المعلومات والقضايا؟</span>
-<div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
-</div>
-<div class="faq-a" data-i18n="faq_a_7">السرية التامة من أساسيات عملنا وهي التزام مهني وأخلاقي ثابت. جميع المعلومات التي يشاركها عملاؤنا تُعامَل بسرية مطلقة ولا تُفصح لأي طرف ثالث دون موافقة صريحة من العميل.</div>
-</div>
-<div class="faq-item">
-<div class="faq-q" onclick="toggleFaq(this)">
-<span data-i18n="faq_q_8">هل تخدمون العملاء خارج مدينة عنيزة؟</span>
-<div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
-</div>
-<div class="faq-a" data-i18n="faq_a_8">نعم، نقدم خدماتنا لعملاء من مختلف مناطق المملكة العربية السعودية، سواء عبر الاستشارات الإلكترونية أو بالتنقل حسب طبيعة القضية ومتطلباتها.</div>
-</div>
-<div class="faq-item">
-<div class="faq-q" onclick="toggleFaq(this)">
-<span data-i18n="faq_q_9">كيف يتم تحديد أتعاب المحاماة؟</span>
-<div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
-</div>
-<div class="faq-a" data-i18n="faq_a_9">تُحدَّد الأتعاب بناءً على طبيعة الخدمة المطلوبة ودرجة تعقيدها. نؤمن بالشفافية الكاملة في التسعير ونوضح لعميلنا التكلفة بدقة قبل البدء في أي عمل، دون رسوم مخفية أو مفاجآت.</div>
-</div>
-</div>
-</div>
-</section>
-<section class="cta-section">
-<h2 data-i18n="h2_1">لم تجد إجابة سؤالك؟</h2>
-<p class="cf-subtitle" data-i18n="faq_form_subtitle">أرسل استفسارك وسيرد عليك فريقنا القانوني في أقرب وقت</p>
-<form class="faq-form" id="faqForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="handleFaqFormSubmit(event)">
-<input name="_subject" type="hidden" value="استفسار من صفحة الأسئلة الشائعة — موقع شركة مشاري بندر بن جلوي"/>
-<div class="cf-row">
-<div class="cf-group">
-<label data-i18n="faq_cf_name" for="faq_name">الاسم <span class="cf-req">*</span></label>
-<input data-i18n="faq_cf_ph_name" id="faq_name" name="name" placeholder="اسمك الكامل" required type="text"/>
-</div>
-<div class="cf-group">
-<label data-i18n="faq_cf_phone" for="faq_phone">رقم الجوال <span class="cf-req">*</span></label>
-<input id="faq_phone" name="phone" placeholder="05xxxxxxxx" required type="tel"/>
-</div>
-</div>
-<div class="cf-row">
-<div class="cf-group">
-<label data-i18n="faq_cf_email" for="faq_email">البريد الإلكتروني</label>
-<input id="faq_email" name="email" placeholder="example@email.com" type="email"/>
-</div>
-<div class="cf-group">
-<label data-i18n="faq_cf_subject" for="faq_subject">الموضوع <span class="cf-req">*</span></label>
-<input data-i18n="faq_cf_ph_subject" id="faq_subject" name="subject" placeholder="موضوع الاستفسار" required type="text"/>
-</div>
-</div>
-<div class="cf-group">
-<label data-i18n="faq_cf_message" for="faq_message">رسالتك <span class="cf-req">*</span></label>
-<textarea data-i18n="faq_cf_ph_message" id="faq_message" name="message" placeholder="اكتب استفسارك هنا بالتفصيل..." required rows="4"></textarea>
-</div>
-<button class="cf-submit" data-i18n="faq_cf_submit" type="submit">إرسال الاستفسار</button>
-<div class="cf-success" id="faqSuccess" style="display:none;" data-i18n="faq_cf_success">✅ تم إرسال استفسارك بنجاح، سنتواصل معك قريباً</div>
-</form>
-<div style="margin-top:20px;">
-<a class="btn-outline" data-i18n="cta_btn2" href="index.html">العودة للرئيسية</a>
-</div>
-</section>
-<footer>
-<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px 22px;margin-bottom:18px;">
-<a data-i18n="nav_services" href="index.html#services" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">خدماتنا</a>
-<a data-i18n="nav_contracts" href="contracts.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">عقود الشركات</a>
-<a data-i18n="nav_faq" href="faq.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">الأسئلة الشائعة</a>
-<a data-i18n="nav_team" href="team.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">فريقنا</a>
-<a data-i18n="nav_blog" href="blog.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">المدونة</a>
-<a data-i18n="nav_eservices" href="e-services.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">الخدمات الإلكترونية</a>
-<a data-i18n="nav_events" href="events.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">فعاليتنا</a>
-<a data-i18n="nav_cases_stats" href="cases-stats.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">القضايا المنجزة</a>
-<a data-i18n="nav_careers" href="careers.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">التوظيف</a>
-<a data-i18n="nav_contact" href="index.html#booking" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">تواصل معنا</a>
-</div>
-<p data-i18n="footer_copyright">© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
-</footer>
-<a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank">
-<svg fill="white" height="28" viewbox="0 0 24 24" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path></svg>
-</a>
-<script>
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a class="nav-logo" href="index.html">
+                <img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png" />
+                <div>
+                    <div class="nav-firm-name" data-i18n="firm_name">شركة مشاري بندر بن جلوي</div>
+                    <div class="nav-firm-sub" data-i18n="firm_sub">للمحاماة والاستشارات القانونية</div>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+                <li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+                <li><a class="active" data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+                <li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+                <li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+                <li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+                <li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+                <li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
+                <li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+                <li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+            </ul>
+            <div style="display:flex;align-items:center;gap:10px;">
+                <div class="lang-drop" id="langDrop">
+                    <button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
+                    <div class="lang-drop-menu" id="langDropMenu">
+                        <button data-i18n="lang_btn_ar" data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦
+                            العربية</button>
+                        <button data-lang="1" onclick="setLang(1);toggleLangDrop()">🇬🇧 English</button>
+                        <button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
+                    </div>
+                </div>
+                <a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank"><span
+                        data-i18n="nav_cta">احجز استشارة</span></a>
+                <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-drawer" id="drawer">
+        <ul>
+            <li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+            <li><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+            <li data-i18n="li_0"><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+            <li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+            <li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+            <li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+            <li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+            <li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
+            <li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+            <li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+        </ul>
+    </div>
+    <div class="page-hero">
+        <div class="page-hero-content">
+            <div class="page-breadcrumb">
+                <a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
+                <span>←</span>
+                <span data-i18n="breadcrumb_faq">الأسئلة الشائعة</span>
+            </div>
+            <h1 data-i18n="hero_h1">الأسئلة <em>الشائعة</em></h1>
+            <p class="page-hero-desc" data-i18n="p_0">إجابات وافية وشفافة على أكثر الأسئلة التي يطرحها عملاؤنا حول
+                خدماتنا القانونية وإجراءات التعامل مع شركتنا.</p>
+        </div>
+    </div>
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="tag" data-i18n="faq_tag">مركز المعرفة القانونية</div>
+                <h2 class="section-title" data-i18n="h2_0">كيف يمكننا مساعدتك؟</h2>
+                <div class="gold-bar"></div>
+            </div>
+            <div class="faq-list" id="faqList">
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q_0">ما الخدمات التي تقدمها شركة مشاري بندر بن جلوي للمحاماة؟</span>
+                        <div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                    </div>
+                    <div class="faq-a" data-i18n="faq_a_0">نقدم طيفاً شاملاً من الخدمات القانونية يشمل: الاستشارات
+                        القانونية المتخصصة، صياغة ومراجعة العقود، تأسيس الشركات، الترافع أمام المحاكم القضائية، التوثيق
+                        والتصديق، التحكيم وفض النزاعات، وخدمات عقود الشركات التجارية — كل ذلك بأيدٍ قانونية مرخّصة وذات
+                        خبرة.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q_1">كيف أحجز استشارة قانونية؟</span>
+                        <div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                    </div>
+                    <div class="faq-a" data-i18n="faq_a_1">يمكنك حجز استشارتك عبر التواصل معنا مباشرةً على واتساب، أو
+                        بزيارة مكتبنا بمحافظة عنيزة خلال أوقات الدوام. نوفر أيضاً استشارة هاتفية فورية في أوقات متاحة
+                        متعددة لتناسب جدولك.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q_2">هل يمكن الحصول على استشارة عن بُعد؟</span>
+                        <div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                    </div>
+                    <div class="faq-a" data-i18n="faq_a_2">نعم، نوفر استشارات قانونية عن بُعد عبر المكالمات الهاتفية أو
+                        مرئياً، مما يتيح لعملائنا في مختلف مناطق المملكة الاستفادة من خدماتنا دون الحاجة للتنقل.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q_3">ما مدة استغراق صياغة عقد تجاري؟</span>
+                        <div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                    </div>
+                    <div class="faq-a" data-i18n="faq_a_3">تتراوح مدة إعداد العقد بين يوم إلى ثلاثة أيام عمل وفق تعقيده
+                        ومتطلباته. نلتزم بتسليم العمل في الوقت المحدد مع الحرص التام على الجودة القانونية.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q_4">ما هو عقد الحماية القانونية السنوي وما مميزاته؟</span>
+                        <div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                    </div>
+                    <div class="faq-a" data-i18n="faq_a_4">هو عقد سنوي يمنح عميلنا تغطية قانونية متكاملة تشمل: استشارات
+                        مستمرة، صياغة ومراجعة العقود، حماية المصالح أمام الجهات الرسمية، وتقارير دورية. مثالي للشركات
+                        والمؤسسات التي تحتاج حضوراً قانونياً دائماً.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q_5">هل تتولون تأسيس الشركات والمنشآت التجارية؟</span>
+                        <div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                    </div>
+                    <div class="faq-a" data-i18n="faq_a_5">نعم، نتولى تأسيس مختلف أنواع الكيانات القانونية من شركات ذات
+                        مسؤولية محدودة، شركات مساهمة، مؤسسات فردية، وجمعيات. نشمل إعداد عقد التأسيس والنظام الأساسي
+                        واستيفاء جميع الإجراءات الرسمية.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q_6">ما أنواع القضايا التي تترافعون فيها؟</span>
+                        <div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                    </div>
+                    <div class="faq-a" data-i18n="faq_a_6">نترافع في طيف واسع من القضايا: التجارية، الجنائية، العمالية،
+                        الأحوال الشخصية، العقارية، الإدارية، المصرفية والمالية، قضايا الزكاة والضريبة والجمارك، وقضايا
+                        هيئة سوق المال — أمام كافة درجات المحاكم والهيئات المتخصصة.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q_7">هل تضمنون سرية المعلومات والقضايا؟</span>
+                        <div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                    </div>
+                    <div class="faq-a" data-i18n="faq_a_7">السرية التامة من أساسيات عملنا وهي التزام مهني وأخلاقي ثابت.
+                        جميع المعلومات التي يشاركها عملاؤنا تُعامَل بسرية مطلقة ولا تُفصح لأي طرف ثالث دون موافقة صريحة
+                        من العميل.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q_8">هل تخدمون العملاء خارج مدينة عنيزة؟</span>
+                        <div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                    </div>
+                    <div class="faq-a" data-i18n="faq_a_8">نعم، نقدم خدماتنا لعملاء من مختلف مناطق المملكة العربية
+                        السعودية، سواء عبر الاستشارات الإلكترونية أو بالتنقل حسب طبيعة القضية ومتطلباتها.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q_9">كيف يتم تحديد أتعاب المحاماة؟</span>
+                        <div class="faq-arrow"><svg fill="none" height="12" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="12">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                    </div>
+                    <div class="faq-a" data-i18n="faq_a_9">تُحدَّد الأتعاب بناءً على طبيعة الخدمة المطلوبة ودرجة
+                        تعقيدها. نؤمن بالشفافية الكاملة في التسعير ونوضح لعميلنا التكلفة بدقة قبل البدء في أي عمل، دون
+                        رسوم مخفية أو مفاجآت.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cta-section">
+        <h2 data-i18n="h2_1">لم تجد إجابة سؤالك؟</h2>
+        <p class="cf-subtitle" data-i18n="faq_form_subtitle">أرسل استفسارك وسيرد عليك فريقنا القانوني في أقرب وقت</p>
+        <form class="faq-form" id="faqForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
+            onsubmit="handleFaqFormSubmit(event)">
+            <input name="_subject" type="hidden"
+                value="استفسار من صفحة الأسئلة الشائعة — موقع شركة مشاري بندر بن جلوي" />
+            <div class="cf-row">
+                <div class="cf-group">
+                    <label data-i18n="faq_cf_name" for="faq_name">الاسم <span class="cf-req">*</span></label>
+                    <input data-i18n="faq_cf_ph_name" id="faq_name" name="name" placeholder="اسمك الكامل" required
+                        type="text" />
+                </div>
+                <div class="cf-group">
+                    <label data-i18n="faq_cf_phone" for="faq_phone">رقم الجوال <span class="cf-req">*</span></label>
+                    <input id="faq_phone" name="phone" placeholder="05xxxxxxxx" required type="tel" />
+                </div>
+            </div>
+            <div class="cf-row">
+                <div class="cf-group">
+                    <label data-i18n="faq_cf_email" for="faq_email">البريد الإلكتروني</label>
+                    <input id="faq_email" name="email" placeholder="example@email.com" type="email" />
+                </div>
+                <div class="cf-group">
+                    <label data-i18n="faq_cf_subject" for="faq_subject">الموضوع <span class="cf-req">*</span></label>
+                    <input data-i18n="faq_cf_ph_subject" id="faq_subject" name="subject" placeholder="موضوع الاستفسار"
+                        required type="text" />
+                </div>
+            </div>
+            <div class="cf-group">
+                <label data-i18n="faq_cf_message" for="faq_message">رسالتك <span class="cf-req">*</span></label>
+                <textarea data-i18n="faq_cf_ph_message" id="faq_message" name="message"
+                    placeholder="اكتب استفسارك هنا بالتفصيل..." required rows="4"></textarea>
+            </div>
+            <button class="cf-submit" data-i18n="faq_cf_submit" type="submit">إرسال الاستفسار</button>
+            <div class="cf-success" id="faqSuccess" style="display:none;" data-i18n="faq_cf_success">✅ تم إرسال استفسارك
+                بنجاح، سنتواصل معك قريباً</div>
+        </form>
+        <div style="margin-top:20px;">
+            <a class="btn-outline" data-i18n="cta_btn2" href="index.html">العودة للرئيسية</a>
+        </div>
+    </section>
+    <footer>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px 22px;margin-bottom:18px;">
+            <a data-i18n="nav_services" href="index.html#services"
+                style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">خدماتنا</a>
+            <a data-i18n="nav_contracts" href="contracts.html"
+                style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">عقود
+                الشركات</a>
+            <a data-i18n="nav_faq" href="faq.html"
+                style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">الأسئلة
+                الشائعة</a>
+            <a data-i18n="nav_team" href="team.html"
+                style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">فريقنا</a>
+            <a data-i18n="nav_blog" href="blog.html"
+                style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">المدونة</a>
+            <a data-i18n="nav_eservices" href="e-services.html"
+                style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">الخدمات
+                الإلكترونية</a>
+            <a data-i18n="nav_events" href="events.html"
+                style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">فعاليتنا</a>
+            <a data-i18n="nav_cases_stats" href="cases-stats.html"
+                style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">القضايا
+                المنجزة</a>
+            <a data-i18n="nav_careers" href="careers.html"
+                style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">التوظيف</a>
+            <a data-i18n="nav_contact" href="index.html#booking"
+                style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">تواصل
+                معنا</a>
+        </div>
+        <p data-i18n="footer_copyright">© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق
+            محفوظة</p>
+    </footer>
+    <a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank">
+        <svg fill="white" height="28" viewbox="0 0 24 24" width="28">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z">
+            </path>
+        </svg>
+    </a>
+    <script>
         function toggleFaq(el) {
             const item = el.parentElement;
             const isOpen = item.classList.contains('open');
@@ -357,94 +1065,95 @@
                         document.getElementById('faqSuccess').style.display = 'block';
                         setTimeout(() => { document.getElementById('faqSuccess').style.display = 'none'; }, 5000);
                     }
-                }).catch(() => {});
+                }).catch(() => { });
         }
     </script>
-<script>
-const pageTranslations = {
-    breadcrumb_home: {0: "الرئيسية", 1: "Home", 2: "主页"},
-    footer_copyright: {0: "© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة", 1: "© 2026 Al Meshary Bin Bandar Bin Jaloui Law Firm and Legal Consultations — All rights reserved", 2: "© 2026 美沙里·本·班达尔·本·贾卢伊律师事务所和法律咨询——版权所有"},
-    h1: {0: "الأسئلة الشائعة", 1: "Frequently Asked Questions", 2: "常见问题"},
-    h2: {0: "جميع إجاباتك القانونية في مكان واحد", 1: "All Your Legal Answers in One Place", 2: "您所有的法律答案都在一个地方"},
-    h3_0: {0: "ما هي أنواع القضايا التي تتخصص فيها الشركة؟", 1: "What types of cases does the firm specialize in?", 2: "律师事务所专门处理哪些类型的案件？"},
-    h3_1: {0: "كيف يمكنني التواصل مع المحامين؟", 1: "How can I contact the attorneys?", 2: "我如何可以与律师联系？"},
-    h3_2: {0: "ما هي رسوم الاستشارة القانونية الأولى؟", 1: "What are the fees for initial legal consultation?", 2: "初步法律咨询的费用是多少？"},
-    h3_3: {0: "كم من الوقت تستغرق قضية قانونية عادية؟", 1: "How long does a typical legal case take?", 2: "典型的法律案件需要多长时间？"},
-    h3_4: {0: "هل تقدمون خدمات قانونية دولية؟", 1: "Do you provide international legal services?", 2: "你们是否提供国际法律服务？"},
-    h3_5: {0: "ما هي طرق الدفع المتاحة؟", 1: "What payment methods are available?", 2: "有哪些可用的付款方式？"},
-    h3_6: {0: "هل يمكنني الحصول على استشارة عن بعد؟", 1: "Can I get a remote consultation?", 2: "我可以获得远程咨询吗？"},
-    p_0: {0: "نجيب على أكثر الأسئلة شيوعاً التي يطرحها عملاؤنا حول الخدمات القانونية والإجراءات", 1: "We answer the most common questions our clients ask about legal services and procedures", 2: "我们回答客户最常问的关于法律服务和程序的问题"},
-    p_1: {0: "تتخصص شركتنا في مجالات عديدة منها القضايا التجارية والجنائية وقضايا الأحوال الشخصية والعمالية والعقارات والضرائب والقضايا الإدارية والمصرفية والتأمينية.", 1: "Our firm specializes in many areas including commercial, criminal, personal status, labor, real estate, tax, administrative, banking, and insurance cases.", 2: "我们的律师事务所专业处理许多领域，包括商业、刑事、人身状况、劳动、房地产、税务、行政、银行和保险案件。"},
-    p_2: {0: "يمكنك التواصل معنا عبر الهاتف أو البريد الإلكتروني أو عبر تطبيق واتساب. نحن متوفرون طوال ساعات العمل لتقديم الاستشارات القانونية.", 1: "You can contact us via phone, email, or WhatsApp. We are available during business hours to provide legal consultations.", 2: "您可以通过电话、电子邮件或WhatsApp与我们联系。我们在营业时间内随时可用以提供法律咨询。"},
-    p_3: {0: "نقدم استشارات قانونية أولية بأسعار معقولة. يمكنك الاتصال بنا للتعرف على التفاصيل والعروض الخاصة بنا.", 1: "We offer initial legal consultations at reasonable rates. Contact us to learn about our details and special offers.", 2: "我们以合理的价格提供初步法律咨询。请与我们联系以了解我们的详情和特别优惠。"},
-    p_4: {0: "مدة القضية تختلف حسب طبيعتها والمرحلة القانونية. بعض القضايا قد تنتهي في أشهر قليلة بينما قد تستغرق أخرى سنوات.", 1: "The duration of a case varies depending on its nature and legal stage. Some cases may conclude in a few months while others may take years.", 2: "案件的持续时间取决于其性质和法律阶段。某些案件可能在几个月内结束，而其他案件可能需要数年。"},
-    p_5: {0: "نعم، نقدم خدمات قانونية دولية متخصصة للعملاء الذين يتعاملون مع نزاعات دولية أو عقود دولية.", 1: "Yes, we provide specialized international legal services for clients dealing with international disputes or contracts.", 2: "是的，我们为处理国际纠纷或合同的客户提供专业的国际法律服务。"},
-    p_6: {0: "نقبل جميع طرق الدفع الشهيرة بما فيها التحويل البنكي والبطاقات الائتمانية والتحويل السريع.", 1: "We accept all major payment methods including bank transfers, credit cards, and instant transfers.", 2: "我们接受所有主要付款方式，包括银行转账、信用卡和即时转账。"},
-    p_7: {0: "نعم، نقدم استشارات قانونية عن بعد عبر الفيديو أو الهاتف حسب احتياجاتك.", 1: "Yes, we provide remote legal consultations via video or phone according to your needs.", 2: "是的，我们根据您的需求通过视频或电话提供远程法律咨询。"},
-  cta_btn2: {0: 'العودة للرئيسية', 1: 'Back to Home', 2: '返回主页'},
-  faq_form_subtitle: {0: 'أرسل استفسارك وسيرد عليك فريقنا القانوني في أقرب وقت', 1: 'Send your inquiry and our legal team will respond as soon as possible', 2: '发送您的咨询，我们的法律团队将尽快回复'},
-  faq_cf_name: {0: 'الاسم', 1: 'Name', 2: '姓名'},
-  faq_cf_ph_name: {0: 'اسمك الكامل', 1: 'Your full name', 2: '您的全名'},
-  faq_cf_phone: {0: 'رقم الجوال', 1: 'Phone Number', 2: '电话号码'},
-  faq_cf_email: {0: 'البريد الإلكتروني', 1: 'Email', 2: '电子邮件'},
-  faq_cf_subject: {0: 'الموضوع', 1: 'Subject', 2: '主题'},
-  faq_cf_ph_subject: {0: 'موضوع الاستفسار', 1: 'Inquiry subject', 2: '咨询主题'},
-  faq_cf_message: {0: 'رسالتك', 1: 'Your Message', 2: '您的留言'},
-  faq_cf_ph_message: {0: 'اكتب استفسارك هنا بالتفصيل...', 1: 'Write your inquiry in detail here...', 2: '请在此详细写下您的咨询...'},
-  faq_cf_submit: {0: 'إرسال الاستفسار', 1: 'Send Inquiry', 2: '发送咨询'},
-  faq_cf_success: {0: '✅ تم إرسال استفسارك بنجاح، سنتواصل معك قريباً', 1: '✅ Your inquiry was sent successfully, we will contact you soon', 2: '✅ 您的咨询已成功发送，我们将尽快与您联系'},
-  footer_home: {0: 'الرئيسية', 1: 'Home', 2: '主页'},
-  h2_0: {0: 'كيف يمكننا مساعدتك؟', 1: 'How Can We Help You?', 2: '我们如何帮助您？'},
-  h2_1: {0: 'لم تجد إجابة سؤالك؟', 1: 'Didn\'t Find the Answer?', 2: '没有找到您的答案？'},
-  hero_h1: {0: 'الأسئلة الشائعة', 1: 'Frequently Asked Questions', 2: '常见问题'},
-  li_0: {0: 'الأسئلة الشائعة', 1: 'FAQ', 2: '常见问题'},
+    <script>
+        const pageTranslations = {
+            breadcrumb_home: { 0: "الرئيسية", 1: "Home", 2: "主页" },
+            footer_copyright: { 0: "© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة", 1: "© 2026 Al Meshary Bin Bandar Bin Jaloui Law Firm and Legal Consultations — All rights reserved", 2: "© 2026 美沙里·本·班达尔·本·贾卢伊律师事务所和法律咨询——版权所有" },
+            h1: { 0: "الأسئلة الشائعة", 1: "Frequently Asked Questions", 2: "常见问题" },
+            h2: { 0: "جميع إجاباتك القانونية في مكان واحد", 1: "All Your Legal Answers in One Place", 2: "您所有的法律答案都在一个地方" },
+            h3_0: { 0: "ما هي أنواع القضايا التي تتخصص فيها الشركة؟", 1: "What types of cases does the firm specialize in?", 2: "律师事务所专门处理哪些类型的案件？" },
+            h3_1: { 0: "كيف يمكنني التواصل مع المحامين؟", 1: "How can I contact the attorneys?", 2: "我如何可以与律师联系？" },
+            h3_2: { 0: "ما هي رسوم الاستشارة القانونية الأولى؟", 1: "What are the fees for initial legal consultation?", 2: "初步法律咨询的费用是多少？" },
+            h3_3: { 0: "كم من الوقت تستغرق قضية قانونية عادية؟", 1: "How long does a typical legal case take?", 2: "典型的法律案件需要多长时间？" },
+            h3_4: { 0: "هل تقدمون خدمات قانونية دولية؟", 1: "Do you provide international legal services?", 2: "你们是否提供国际法律服务？" },
+            h3_5: { 0: "ما هي طرق الدفع المتاحة؟", 1: "What payment methods are available?", 2: "有哪些可用的付款方式？" },
+            h3_6: { 0: "هل يمكنني الحصول على استشارة عن بعد؟", 1: "Can I get a remote consultation?", 2: "我可以获得远程咨询吗？" },
+            p_0: { 0: "نجيب على أكثر الأسئلة شيوعاً التي يطرحها عملاؤنا حول الخدمات القانونية والإجراءات", 1: "We answer the most common questions our clients ask about legal services and procedures", 2: "我们回答客户最常问的关于法律服务和程序的问题" },
+            p_1: { 0: "تتخصص شركتنا في مجالات عديدة منها القضايا التجارية والجنائية وقضايا الأحوال الشخصية والعمالية والعقارات والضرائب والقضايا الإدارية والمصرفية والتأمينية.", 1: "Our firm specializes in many areas including commercial, criminal, personal status, labor, real estate, tax, administrative, banking, and insurance cases.", 2: "我们的律师事务所专业处理许多领域，包括商业、刑事、人身状况、劳动、房地产、税务、行政、银行和保险案件。" },
+            p_2: { 0: "يمكنك التواصل معنا عبر الهاتف أو البريد الإلكتروني أو عبر تطبيق واتساب. نحن متوفرون طوال ساعات العمل لتقديم الاستشارات القانونية.", 1: "You can contact us via phone, email, or WhatsApp. We are available during business hours to provide legal consultations.", 2: "您可以通过电话、电子邮件或WhatsApp与我们联系。我们在营业时间内随时可用以提供法律咨询。" },
+            p_3: { 0: "نقدم استشارات قانونية أولية بأسعار معقولة. يمكنك الاتصال بنا للتعرف على التفاصيل والعروض الخاصة بنا.", 1: "We offer initial legal consultations at reasonable rates. Contact us to learn about our details and special offers.", 2: "我们以合理的价格提供初步法律咨询。请与我们联系以了解我们的详情和特别优惠。" },
+            p_4: { 0: "مدة القضية تختلف حسب طبيعتها والمرحلة القانونية. بعض القضايا قد تنتهي في أشهر قليلة بينما قد تستغرق أخرى سنوات.", 1: "The duration of a case varies depending on its nature and legal stage. Some cases may conclude in a few months while others may take years.", 2: "案件的持续时间取决于其性质和法律阶段。某些案件可能在几个月内结束，而其他案件可能需要数年。" },
+            p_5: { 0: "نعم، نقدم خدمات قانونية دولية متخصصة للعملاء الذين يتعاملون مع نزاعات دولية أو عقود دولية.", 1: "Yes, we provide specialized international legal services for clients dealing with international disputes or contracts.", 2: "是的，我们为处理国际纠纷或合同的客户提供专业的国际法律服务。" },
+            p_6: { 0: "نقبل جميع طرق الدفع الشهيرة بما فيها التحويل البنكي والبطاقات الائتمانية والتحويل السريع.", 1: "We accept all major payment methods including bank transfers, credit cards, and instant transfers.", 2: "我们接受所有主要付款方式，包括银行转账、信用卡和即时转账。" },
+            p_7: { 0: "نعم، نقدم استشارات قانونية عن بعد عبر الفيديو أو الهاتف حسب احتياجاتك.", 1: "Yes, we provide remote legal consultations via video or phone according to your needs.", 2: "是的，我们根据您的需求通过视频或电话提供远程法律咨询。" },
+            cta_btn2: { 0: 'العودة للرئيسية', 1: 'Back to Home', 2: '返回主页' },
+            faq_form_subtitle: { 0: 'أرسل استفسارك وسيرد عليك فريقنا القانوني في أقرب وقت', 1: 'Send your inquiry and our legal team will respond as soon as possible', 2: '发送您的咨询，我们的法律团队将尽快回复' },
+            faq_cf_name: { 0: 'الاسم', 1: 'Name', 2: '姓名' },
+            faq_cf_ph_name: { 0: 'اسمك الكامل', 1: 'Your full name', 2: '您的全名' },
+            faq_cf_phone: { 0: 'رقم الجوال', 1: 'Phone Number', 2: '电话号码' },
+            faq_cf_email: { 0: 'البريد الإلكتروني', 1: 'Email', 2: '电子邮件' },
+            faq_cf_subject: { 0: 'الموضوع', 1: 'Subject', 2: '主题' },
+            faq_cf_ph_subject: { 0: 'موضوع الاستفسار', 1: 'Inquiry subject', 2: '咨询主题' },
+            faq_cf_message: { 0: 'رسالتك', 1: 'Your Message', 2: '您的留言' },
+            faq_cf_ph_message: { 0: 'اكتب استفسارك هنا بالتفصيل...', 1: 'Write your inquiry in detail here...', 2: '请在此详细写下您的咨询...' },
+            faq_cf_submit: { 0: 'إرسال الاستفسار', 1: 'Send Inquiry', 2: '发送咨询' },
+            faq_cf_success: { 0: '✅ تم إرسال استفسارك بنجاح، سنتواصل معك قريباً', 1: '✅ Your inquiry was sent successfully, we will contact you soon', 2: '✅ 您的咨询已成功发送，我们将尽快与您联系' },
+            footer_home: { 0: 'الرئيسية', 1: 'Home', 2: '主页' },
+            h2_0: { 0: 'كيف يمكننا مساعدتك؟', 1: 'How Can We Help You?', 2: '我们如何帮助您？' },
+            h2_1: { 0: 'لم تجد إجابة سؤالك؟', 1: 'Didn\'t Find the Answer?', 2: '没有找到您的答案？' },
+            hero_h1: { 0: 'الأسئلة الشائعة', 1: 'Frequently Asked Questions', 2: '常见问题' },
+            li_0: { 0: 'الأسئلة الشائعة', 1: 'FAQ', 2: '常见问题' },
 
-  faq_tag: {0: "مركز المعرفة القانونية", 1: "Legal Knowledge Center", 2: "法律知识中心"},
+            faq_tag: { 0: "مركز المعرفة القانونية", 1: "Legal Knowledge Center", 2: "法律知识中心" },
 
-  faq_q_0: {0: "ما الخدمات التي تقدمها شركة مشاري بندر بن جلوي للمحاماة؟", 1: "What services does Meshary Bin Bandar Bin Jaloui Law Firm provide?", 2: "美沙里·本·班达尔·本·贾卢伊律师事务所提供哪些服务？"},
+            faq_q_0: { 0: "ما الخدمات التي تقدمها شركة مشاري بندر بن جلوي للمحاماة؟", 1: "What services does Meshary Bin Bandar Bin Jaloui Law Firm provide?", 2: "美沙里·本·班达尔·本·贾卢伊律师事务所提供哪些服务？" },
 
-  faq_a_0: {0: "نقدم طيفاً شاملاً من الخدمات القانونية يشمل: الاستشارات القانونية المتخصصة، صياغة ومراجعة العقود، تأسيس الشركات، الترافع أمام المحاكم القضائية، التوثيق والتصديق، التحكيم وفض النزاعات، وخدمات عقود الشركات التجارية — كل ذلك بأيدٍ قانونية مرخّصة وذات خبرة.", 1: "We provide a comprehensive range of legal services including: specialized legal consultations, contract drafting and review, company formation, litigation before courts, notarization and attestation, arbitration and dispute resolution, and commercial corporate contract services — all handled by licensed and experienced legal professionals.", 2: "我们提供全面的法律服务，包括：专业法律咨询、合同起草和审查、公司设立、法院诉讼、公证和认证、仲裁和纠纷解决以及商业公司合同服务——所有服务均由持牌且经验丰富的法律专业人士处理。"},
+            faq_a_0: { 0: "نقدم طيفاً شاملاً من الخدمات القانونية يشمل: الاستشارات القانونية المتخصصة، صياغة ومراجعة العقود، تأسيس الشركات، الترافع أمام المحاكم القضائية، التوثيق والتصديق، التحكيم وفض النزاعات، وخدمات عقود الشركات التجارية — كل ذلك بأيدٍ قانونية مرخّصة وذات خبرة.", 1: "We provide a comprehensive range of legal services including: specialized legal consultations, contract drafting and review, company formation, litigation before courts, notarization and attestation, arbitration and dispute resolution, and commercial corporate contract services — all handled by licensed and experienced legal professionals.", 2: "我们提供全面的法律服务，包括：专业法律咨询、合同起草和审查、公司设立、法院诉讼、公证和认证、仲裁和纠纷解决以及商业公司合同服务——所有服务均由持牌且经验丰富的法律专业人士处理。" },
 
-  faq_q_1: {0: "كيف أحجز استشارة قانونية؟", 1: "How do I book a legal consultation?", 2: "如何预约法律咨询？"},
+            faq_q_1: { 0: "كيف أحجز استشارة قانونية؟", 1: "How do I book a legal consultation?", 2: "如何预约法律咨询？" },
 
-  faq_a_1: {0: "يمكنك حجز استشارتك عبر التواصل معنا مباشرةً على واتساب، أو بزيارة مكتبنا في عنيزة خلال أوقات الدوام. نوفر أيضاً استشارة هاتفية فورية في أوقات متاحة متعددة لتناسب جدولك.", 1: "You can book your consultation by contacting us directly on WhatsApp, or by visiting our office in Unaizah during working hours. We also offer immediate phone consultations at multiple available times to suit your schedule.", 2: "您可以通过WhatsApp直接联系我们预约咨询，或在工作时间内访问我们在乌奈扎的办公室。我们还提供即时电话咨询，有多个可用时间段以适应您的日程安排。"},
+            faq_a_1: { 0: "يمكنك حجز استشارتك عبر التواصل معنا مباشرةً على واتساب، أو بزيارة مكتبنا بمحافظة عنيزة خلال أوقات الدوام. نوفر أيضاً استشارة هاتفية فورية في أوقات متاحة متعددة لتناسب جدولك.", 1: "You can book your consultation by contacting us directly on WhatsApp, or by visiting our office in Unaizah during working hours. We also offer immediate phone consultations at multiple available times to suit your schedule.", 2: "您可以通过WhatsApp直接联系我们预约咨询，或在工作时间内访问我们在乌奈扎的办公室。我们还提供即时电话咨询，有多个可用时间段以适应您的日程安排。" },
 
-  faq_q_2: {0: "هل يمكن الحصول على استشارة عن بُعد؟", 1: "Is it possible to get a remote consultation?", 2: "是否可以获得远程咨询？"},
+            faq_q_2: { 0: "هل يمكن الحصول على استشارة عن بُعد؟", 1: "Is it possible to get a remote consultation?", 2: "是否可以获得远程咨询？" },
 
-  faq_a_2: {0: "نعم، نوفر استشارات قانونية عن بُعد عبر المكالمات الهاتفية أو مرئياً، مما يتيح لعملائنا في مختلف مناطق المملكة الاستفادة من خدماتنا دون الحاجة للتنقل.", 1: "Yes, we provide remote legal consultations via phone or video calls, allowing our clients across various regions of the Kingdom to benefit from our services without the need to travel.", 2: "是的，我们通过电话或视频通话提供远程法律咨询，让全国各地的客户无需出行即可享受我们的服务。"},
+            faq_a_2: { 0: "نعم، نوفر استشارات قانونية عن بُعد عبر المكالمات الهاتفية أو مرئياً، مما يتيح لعملائنا في مختلف مناطق المملكة الاستفادة من خدماتنا دون الحاجة للتنقل.", 1: "Yes, we provide remote legal consultations via phone or video calls, allowing our clients across various regions of the Kingdom to benefit from our services without the need to travel.", 2: "是的，我们通过电话或视频通话提供远程法律咨询，让全国各地的客户无需出行即可享受我们的服务。" },
 
-  faq_q_3: {0: "ما مدة استغراق صياغة عقد تجاري؟", 1: "How long does it take to draft a commercial contract?", 2: "起草商业合同需要多长时间？"},
+            faq_q_3: { 0: "ما مدة استغراق صياغة عقد تجاري؟", 1: "How long does it take to draft a commercial contract?", 2: "起草商业合同需要多长时间？" },
 
-  faq_a_3: {0: "تتراوح مدة إعداد العقد بين يوم إلى ثلاثة أيام عمل وفق تعقيده ومتطلباته. نلتزم بتسليم العمل في الوقت المحدد مع الحرص التام على الجودة القانونية.", 1: "Contract preparation typically takes between one to three business days depending on its complexity and requirements. We are committed to delivering the work on time while ensuring the highest legal quality.", 2: "合同准备通常需要一到三个工作日，具体取决于其复杂性和要求。我们承诺按时交付工作，同时确保最高的法律质量。"},
+            faq_a_3: { 0: "تتراوح مدة إعداد العقد بين يوم إلى ثلاثة أيام عمل وفق تعقيده ومتطلباته. نلتزم بتسليم العمل في الوقت المحدد مع الحرص التام على الجودة القانونية.", 1: "Contract preparation typically takes between one to three business days depending on its complexity and requirements. We are committed to delivering the work on time while ensuring the highest legal quality.", 2: "合同准备通常需要一到三个工作日，具体取决于其复杂性和要求。我们承诺按时交付工作，同时确保最高的法律质量。" },
 
-  faq_q_4: {0: "ما هو عقد الحماية القانونية السنوي وما مميزاته؟", 1: "What is the Annual Legal Protection Contract and what are its benefits?", 2: "什么是年度法律保护合同，其优势是什么？"},
+            faq_q_4: { 0: "ما هو عقد الحماية القانونية السنوي وما مميزاته؟", 1: "What is the Annual Legal Protection Contract and what are its benefits?", 2: "什么是年度法律保护合同，其优势是什么？" },
 
-  faq_a_4: {0: "هو عقد سنوي يمنح عميلنا تغطية قانونية متكاملة تشمل: استشارات مستمرة، صياغة ومراجعة العقود، حماية المصالح أمام الجهات الرسمية، وتقارير دورية. مثالي للشركات والمؤسسات التي تحتاج حضوراً قانونياً دائماً.", 1: "It is an annual contract that grants our client comprehensive legal coverage including: ongoing consultations, contract drafting and review, protecting interests before official authorities, and periodic reports. Ideal for companies and institutions that need a permanent legal presence.", 2: "这是一份年度合同，为我们的客户提供全面的法律保障，包括：持续咨询、合同起草和审查、在官方机构面前保护利益以及定期报告。非常适合需要永久法律存在的公司和机构。"},
+            faq_a_4: { 0: "هو عقد سنوي يمنح عميلنا تغطية قانونية متكاملة تشمل: استشارات مستمرة، صياغة ومراجعة العقود، حماية المصالح أمام الجهات الرسمية، وتقارير دورية. مثالي للشركات والمؤسسات التي تحتاج حضوراً قانونياً دائماً.", 1: "It is an annual contract that grants our client comprehensive legal coverage including: ongoing consultations, contract drafting and review, protecting interests before official authorities, and periodic reports. Ideal for companies and institutions that need a permanent legal presence.", 2: "这是一份年度合同，为我们的客户提供全面的法律保障，包括：持续咨询、合同起草和审查、在官方机构面前保护利益以及定期报告。非常适合需要永久法律存在的公司和机构。" },
 
-  faq_q_5: {0: "هل تتولون تأسيس الشركات والمنشآت التجارية؟", 1: "Do you handle company and commercial establishment formation?", 2: "您是否负责公司和商业机构的成立？"},
+            faq_q_5: { 0: "هل تتولون تأسيس الشركات والمنشآت التجارية؟", 1: "Do you handle company and commercial establishment formation?", 2: "您是否负责公司和商业机构的成立？" },
 
-  faq_a_5: {0: "نعم، نتولى تأسيس مختلف أنواع الكيانات القانونية من شركات ذات مسؤولية محدودة، شركات مساهمة، مؤسسات فردية، وجمعيات. نشمل إعداد عقد التأسيس والنظام الأساسي واستيفاء جميع الإجراءات الرسمية.", 1: "Yes, we handle the formation of various types of legal entities including limited liability companies, joint-stock companies, sole proprietorships, and associations. We cover drafting the incorporation contract, articles of association, and fulfilling all official procedures.", 2: "是的，我们负责各类法律实体的成立，包括有限责任公司、股份公司、独资企业和协会。我们涵盖起草公司章程、公司章程细则以及履行所有官方程序。"},
+            faq_a_5: { 0: "نعم، نتولى تأسيس مختلف أنواع الكيانات القانونية من شركات ذات مسؤولية محدودة، شركات مساهمة، مؤسسات فردية، وجمعيات. نشمل إعداد عقد التأسيس والنظام الأساسي واستيفاء جميع الإجراءات الرسمية.", 1: "Yes, we handle the formation of various types of legal entities including limited liability companies, joint-stock companies, sole proprietorships, and associations. We cover drafting the incorporation contract, articles of association, and fulfilling all official procedures.", 2: "是的，我们负责各类法律实体的成立，包括有限责任公司、股份公司、独资企业和协会。我们涵盖起草公司章程、公司章程细则以及履行所有官方程序。" },
 
-  faq_q_6: {0: "ما أنواع القضايا التي تترافعون فيها؟", 1: "What types of cases do you litigate?", 2: "您代理哪些类型的案件？"},
+            faq_q_6: { 0: "ما أنواع القضايا التي تترافعون فيها؟", 1: "What types of cases do you litigate?", 2: "您代理哪些类型的案件？" },
 
-  faq_a_6: {0: "نترافع في طيف واسع من القضايا: التجارية، الجنائية، العمالية، الأحوال الشخصية، العقارية، الإدارية، المصرفية والمالية، قضايا الزكاة والضريبة والجمارك، وقضايا هيئة سوق المال — أمام كافة درجات المحاكم والهيئات المتخصصة.", 1: "We litigate a wide range of cases: commercial, criminal, labor, personal status, real estate, administrative, banking and financial, zakat, tax and customs cases, and Capital Market Authority cases — before all court levels and specialized tribunals.", 2: "我们代理各类案件：商业、刑事、劳动、人身状况、房地产、行政、银行和金融、天课、税务和海关案件以及资本市场局案件——在所有法院级别和专业法庭前进行诉讼。"},
+            faq_a_6: { 0: "نترافع في طيف واسع من القضايا: التجارية، الجنائية، العمالية، الأحوال الشخصية، العقارية، الإدارية، المصرفية والمالية، قضايا الزكاة والضريبة والجمارك، وقضايا هيئة سوق المال — أمام كافة درجات المحاكم والهيئات المتخصصة.", 1: "We litigate a wide range of cases: commercial, criminal, labor, personal status, real estate, administrative, banking and financial, zakat, tax and customs cases, and Capital Market Authority cases — before all court levels and specialized tribunals.", 2: "我们代理各类案件：商业、刑事、劳动、人身状况、房地产、行政、银行和金融、天课、税务和海关案件以及资本市场局案件——在所有法院级别和专业法庭前进行诉讼。" },
 
-  faq_q_7: {0: "هل تضمنون سرية المعلومات والقضايا؟", 1: "Do you guarantee confidentiality of information and cases?", 2: "您是否保证信息和案件的保密性？"},
+            faq_q_7: { 0: "هل تضمنون سرية المعلومات والقضايا؟", 1: "Do you guarantee confidentiality of information and cases?", 2: "您是否保证信息和案件的保密性？" },
 
-  faq_a_7: {0: "السرية التامة من أساسيات عملنا وهي التزام مهني وأخلاقي ثابت. جميع المعلومات التي يشاركها عملاؤنا تُعامَل بسرية مطلقة ولا تُفصح لأي طرف ثالث دون موافقة صريحة من العميل.", 1: "Complete confidentiality is a fundamental principle of our work and an unwavering professional and ethical commitment. All information shared by our clients is treated with absolute confidentiality and is not disclosed to any third party without the client\'s explicit consent.", 2: "完全保密是我们工作的基本原则，也是坚定不移的职业和道德承诺。客户分享的所有信息都以绝对保密的方式处理，未经客户明确同意，不会向任何第三方披露。"},
+            faq_a_7: { 0: "السرية التامة من أساسيات عملنا وهي التزام مهني وأخلاقي ثابت. جميع المعلومات التي يشاركها عملاؤنا تُعامَل بسرية مطلقة ولا تُفصح لأي طرف ثالث دون موافقة صريحة من العميل.", 1: "Complete confidentiality is a fundamental principle of our work and an unwavering professional and ethical commitment. All information shared by our clients is treated with absolute confidentiality and is not disclosed to any third party without the client\'s explicit consent.", 2: "完全保密是我们工作的基本原则，也是坚定不移的职业和道德承诺。客户分享的所有信息都以绝对保密的方式处理，未经客户明确同意，不会向任何第三方披露。" },
 
-  faq_q_8: {0: "هل تخدمون العملاء خارج مدينة عنيزة؟", 1: "Do you serve clients outside the city of Unaizah?", 2: "您是否为乌奈扎市以外的客户提供服务？"},
+            faq_q_8: { 0: "هل تخدمون العملاء خارج مدينة عنيزة؟", 1: "Do you serve clients outside the city of Unaizah?", 2: "您是否为乌奈扎市以外的客户提供服务？" },
 
-  faq_a_8: {0: "نعم، نقدم خدماتنا لعملاء من مختلف مناطق المملكة العربية السعودية، سواء عبر الاستشارات الإلكترونية أو بالتنقل حسب طبيعة القضية ومتطلباتها.", 1: "Yes, we provide our services to clients from various regions of Saudi Arabia, whether through electronic consultations or by traveling according to the nature and requirements of the case.", 2: "是的，我们为来自沙特阿拉伯各地区的客户提供服务，无论是通过电子咨询还是根据案件的性质和要求出行。"},
+            faq_a_8: { 0: "نعم، نقدم خدماتنا لعملاء من مختلف مناطق المملكة العربية السعودية، سواء عبر الاستشارات الإلكترونية أو بالتنقل حسب طبيعة القضية ومتطلباتها.", 1: "Yes, we provide our services to clients from various regions of Saudi Arabia, whether through electronic consultations or by traveling according to the nature and requirements of the case.", 2: "是的，我们为来自沙特阿拉伯各地区的客户提供服务，无论是通过电子咨询还是根据案件的性质和要求出行。" },
 
-  faq_q_9: {0: "كيف يتم تحديد أتعاب المحاماة؟", 1: "How are attorney fees determined?", 2: "律师费如何确定？"},
+            faq_q_9: { 0: "كيف يتم تحديد أتعاب المحاماة؟", 1: "How are attorney fees determined?", 2: "律师费如何确定？" },
 
-  faq_a_9: {0: "تُحدَّد الأتعاب بناءً على طبيعة الخدمة المطلوبة ودرجة تعقيدها. نؤمن بالشفافية الكاملة في التسعير ونوضح لعميلنا التكلفة بدقة قبل البدء في أي عمل، دون رسوم مخفية أو مفاجآت.", 1: "Fees are determined based on the nature of the requested service and its complexity. We believe in complete pricing transparency and clearly communicate the cost to our clients before starting any work, with no hidden fees or surprises.", 2: "费用根据所需服务的性质及其复杂程度确定。我们相信完全的价格透明度，在开始任何工作之前清楚地向客户传达费用，没有隐藏费用或意外。"},
+            faq_a_9: { 0: "تُحدَّد الأتعاب بناءً على طبيعة الخدمة المطلوبة ودرجة تعقيدها. نؤمن بالشفافية الكاملة في التسعير ونوضح لعميلنا التكلفة بدقة قبل البدء في أي عمل، دون رسوم مخفية أو مفاجآت.", 1: "Fees are determined based on the nature of the requested service and its complexity. We believe in complete pricing transparency and clearly communicate the cost to our clients before starting any work, with no hidden fees or surprises.", 2: "费用根据所需服务的性质及其复杂程度确定。我们相信完全的价格透明度，在开始任何工作之前清楚地向客户传达费用，没有隐藏费用或意外。" },
 
-  breadcrumb_faq: {0: "الأسئلة الشائعة", 1: "FAQ", 2: "常见问题"},
-};
+            breadcrumb_faq: { 0: "الأسئلة الشائعة", 1: "FAQ", 2: "常见问题" },
+        };
 
-</script>
-<script src="lang.js"></script>
+    </script>
+    <script src="lang.js"></script>
 </body>
+
 </html>

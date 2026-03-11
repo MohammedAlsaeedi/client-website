@@ -186,6 +186,27 @@
             .page-breadcrumb{font-size:.75rem;flex-wrap:wrap}
             .cta-btns{flex-direction:column;align-items:center}
         }
+        /* FORM STYLES */
+        .form-container { background: var(--off-white); border: 1px solid var(--border); border-radius: 20px; padding: 40px; box-shadow: 0 10px 40px rgba(27,44,107,.05); max-width: 800px; margin: 0 auto; }
+        .contract-form { display: flex; flex-direction: column; gap: 24px; }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .input-group { display: flex; flex-direction: column; gap: 8px; text-align: start; }
+        .input-group.full-width { grid-column: 1 / -1; }
+        .input-group label { font-size: .95rem; font-weight: 700; color: var(--navy); }
+        .input-group input, .input-group select, .input-group textarea { width: 100%; padding: 14px 18px; border: 1px solid #d1d5db; border-radius: 12px; font-family: inherit; font-size: 1rem; color: var(--gray-dark); transition: all .3s; background: var(--white); }
+        .input-group input:focus, .input-group select:focus, .input-group textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 4px rgba(184,147,90,.1); }
+        .file-upload { position: relative; }
+        .file-upload input[type="file"] { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+        .file-label { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 30px; border: 2px dashed #d1d5db; border-radius: 12px; background: var(--white); cursor: pointer; transition: all .3s; color: var(--gray); text-align: center; }
+        .file-label:hover { border-color: var(--gold); color: var(--gold); background: var(--gold-pale); }
+        .file-label svg { color: var(--gold); }
+        .file-list { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+        .file-item { display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 10px 16px; border-radius: 8px; border: 1px solid var(--border); font-size: .85rem; color: var(--navy); }
+        .file-remove { color: #ef4444; cursor: pointer; font-weight: bold; padding: 4px; }
+        @media (max-width: 600px) {
+            .form-grid { grid-template-columns: 1fr; }
+            .form-container { padding: 24px; }
+        }
         </style>
 </head>
 <body>
@@ -365,6 +386,77 @@
 </div>
 </div>
 </section>
+<!-- SUBMISSION FORM -->
+<section class="section-pad">
+<div class="container">
+<div class="section-header">
+<div class="tag" data-i18n="form_tag">طلب خدمة</div>
+<h2 class="section-title" data-i18n="form_title">نموذج طلب صياغة أو مراجعة عقد</h2>
+<div class="gold-bar"></div>
+<p class="section-desc" data-i18n="form_desc" style="margin: 0 auto;">يرجى تعبئة النموذج أدناه بكافة التفاصيل، وسيقوم فريقنا القانوني بالتواصل معكم في أقرب وقت.</p>
+</div>
+<div class="form-container">
+<form class="contract-form" action="#" method="POST" enctype="multipart/form-data">
+    <div class="form-grid">
+        <div class="input-group">
+            <label data-i18n="form_name">الاسم الكامل *</label>
+            <input type="text" data-i18n="cf_ph_name" placeholder="اسمك الكامل" required>
+        </div>
+        <div class="input-group">
+            <label data-i18n="form_phone">رقم الجوال *</label>
+            <input type="tel" required>
+        </div>
+        <div class="input-group">
+            <label data-i18n="form_email">البريد الإلكتروني</label>
+            <input type="email">
+        </div>
+        <div class="input-group">
+            <label data-i18n="form_company">اسم الشركة / المؤسسة</label>
+            <input type="text">
+        </div>
+    </div>
+    <div class="input-group full-width">
+        <label data-i18n="form_ctype">نوع العقد المطلوب صياغته أو مراجعته *</label>
+        <select required>
+            <option value="" disabled selected data-i18n="form_ctype_ph">اختر نوع العقد...</option>
+            <option value="تأسيس" data-i18n="h3_0">عقود تأسيس الشركات</option>
+            <option value="بيع" data-i18n="h3_sale">عقود البيع</option>
+            <option value="شراكة" data-i18n="h3_1">عقود الشراكة التجارية</option>
+            <option value="حماية" data-i18n="h3_2">عقود الحماية والسرية</option>
+            <option value="عمل" data-i18n="h3_3">عقود العمل والتوظيف</option>
+            <option value="ايجار" data-i18n="h3_4">عقود الإيجار التجاري</option>
+            <option value="امتياز" data-i18n="h3_5">عقود الامتياز التجاري</option>
+            <option value="تقنية" data-i18n="h3_6">عقود التقنية والبرمجيات</option>
+            <option value="توريد" data-i18n="h3_7">عقود التوريد والمشتريات</option>
+            <option value="وكالة" data-i18n="h3_8">عقود الوكالة والتمثيل</option>
+            <option value="أخرى" data-i18n="form_ctype_other">أخرى</option>
+        </select>
+    </div>
+    <div class="input-group full-width">
+        <label data-i18n="form_details">تفاصيل طلب العقد *</label>
+        <textarea rows="4" placeholder="يرجى كتابة أية تفاصيل أو متطلبات خاصة بالعقد هنا..." data-i18n="form_details_ph" required></textarea>
+    </div>
+    <div class="input-group full-width">
+        <label data-i18n="form_attach">المرفقات (اختياري)</label>
+        <div class="file-upload">
+            <input type="file" id="contract-file" multiple>
+            <label for="contract-file" class="file-label">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="32" height="32"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                <span data-i18n="form_attach_btn" style="font-weight: 600;">اضغط هنا لإضافة ملفات أو اسحبها وأفلتها هنا</span>
+            </label>
+            <div class="file-list" id="fileList"></div>
+        </div>
+    </div>
+    <div class="form-submit" style="margin-top: 10px;">
+        <button type="submit" class="btn-gold" style="width: 100%; justify-content: center; font-size: 1.1rem; padding: 16px; border: none; cursor: pointer;">
+            <svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
+            <span data-i18n="form_submit">إرسال الطلب</span>
+        </button>
+    </div>
+</form>
+</div>
+</div>
+</section>
 <!-- CTA -->
 <div class="cta-section">
 <h2 data-i18n="h2_2">هل تحتاج صياغة أو مراجعة عقد؟</h2>
@@ -461,8 +553,45 @@ const pageTranslations = {
   ctag_مراجعة_قانونية: {0: "مراجعة قانونية", 1: "Legal Review", 2: "法律审查"},
 
   breadcrumb_contracts: {0: "عقود الشركات", 1: "Corporate Contracts", 2: "公司合同"},
+  form_tag: {0: "طلب خدمة", 1: "Service Request", 2: "服务请求"},
+  form_title: {0: "نموذج طلب صياغة أو مراجعة عقد", 1: "Contract Drafting or Review Request Form", 2: "合同起草或审查请求表"},
+  form_desc: {0: "يرجى تعبئة النموذج أدناه بكافة التفاصيل، وسيقوم فريقنا القانوني بالتواصل معكم في أقرب وقت.", 1: "Please fill out the form below with all details, and our legal team will contact you shortly.", 2: "请填写以下表格并提供所有详细信息，我们的法律团队将很快与您联系。"},
+  form_name: {0: "الاسم الكامل *", 1: "Full Name *", 2: "全名 *"},
+  form_phone: {0: "رقم الجوال *", 1: "Mobile Number *", 2: "手机号码 *"},
+  form_email: {0: "البريد الإلكتروني", 1: "Email Address", 2: "电子邮件地址"},
+  form_company: {0: "اسم الشركة / المؤسسة", 1: "Company / Establishment Name", 2: "公司/机构名称"},
+  form_ctype: {0: "نوع العقد المطلوب صياغته أو مراجعته *", 1: "Type of contract to be drafted or reviewed *", 2: "需起草或审查的合同类型 *"},
+  form_ctype_ph: {0: "اختر نوع العقد...", 1: "Select contract type...", 2: "选择合同类型..."},
+  form_ctype_other: {0: "أخرى", 1: "Other", 2: "其他"},
+  form_details: {0: "تفاصيل طلب العقد *", 1: "Contract Request Details *", 2: "合同请求详情 *"},
+  form_attach: {0: "المرفقات (اختياري)", 1: "Attachments (Optional)", 2: "附件（可选）"},
+  form_attach_btn: {0: "اضغط هنا لإضافة ملفات أو اسحبها وأفلتها هنا", 1: "Click here to add files or drag and drop them here", 2: "点击此处添加文件或将文件拖放到此处"},
+  form_submit: {0: "إرسال الطلب", 1: "Submit Request", 2: "提交请求"},
+  form_details_ph: {0: "يرجى كتابة أية تفاصيل أو متطلبات خاصة بالعقد هنا...", 1: "Please write any contract details or special requirements here...", 2: "请在此处写下任何合同细节或特殊要求..."},
 };
 
+// Handle file input display
+document.getElementById('contract-file') && document.getElementById('contract-file').addEventListener('change', function(e) {
+    const fileList = document.getElementById('fileList');
+    fileList.innerHTML = '';
+    Array.from(this.files).forEach((file, index) => {
+        const fileItem = document.createElement('div');
+        fileItem.className = 'file-item';
+        fileItem.innerHTML = '<span>📎 ' + file.name + '</span><span class="file-remove" onclick="removeFile('+index+')">✕</span>';
+        fileList.appendChild(fileItem);
+    });
+});
+function removeFile(index) {
+    const input = document.getElementById('contract-file');
+    const dt = new DataTransfer();
+    Array.from(input.files).forEach((file, i) => {
+        if (i !== index) dt.items.add(file);
+    });
+    input.files = dt.files;
+    // trigger change to visually update list
+    const event = new Event('change');
+    input.dispatchEvent(event);
+}
 </script>
 <script src="lang.js"></script>
 </body>
