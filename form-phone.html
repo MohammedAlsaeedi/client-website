@@ -241,25 +241,7 @@ const pageTranslations = {
 };
 
 function handleServiceForm(e, serviceName) {
-    e.preventDefault();
-    const form = e.target;
-    const card = form.closest('.form-card');
-    const successDiv = card.querySelector('.form-success');
-    const formData = new FormData(form);
-    let bodyParts = [];
-    bodyParts.push('الخدمة المطلوبة: ' + serviceName);
-    bodyParts.push('---');
-    for (let [key, value] of formData.entries()) {
-        if (key === 'documents') continue;
-        const label = form.querySelector('[name="' + key + '"]')?.closest('.form-group')?.querySelector('label')?.textContent || key;
-        if (value) bodyParts.push(label + ': ' + value);
-    }
-    const subject = encodeURIComponent('طلب خدمة إلكترونية — ' + serviceName);
-    const body = encodeURIComponent(bodyParts.join('\n'));
-    window.location.href = 'mailto:info@lawmeshari.com?subject=' + subject + '&body=' + body;
-    form.style.display = 'none';
-    successDiv.style.display = 'block';
-    setTimeout(() => { form.style.display = ''; successDiv.style.display = 'none'; form.reset(); }, 6000);
+    submitToGAS(e, serviceName);
 }
 function applyFormPlaceholders() {
     const lang = parseInt(localStorage.getItem('siteLang') || '0');

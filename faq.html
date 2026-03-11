@@ -1053,19 +1053,8 @@
             const isOpen = item.classList.contains('open');
             document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
             if (!isOpen) item.classList.add('open');
-        }
-        function handleFaqFormSubmit(e) {
-            e.preventDefault();
-            const form = e.target;
-            const data = new FormData(form);
-            fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
-                .then(r => {
-                    if (r.ok) {
-                        form.reset();
-                        document.getElementById('faqSuccess').style.display = 'block';
-                        setTimeout(() => { document.getElementById('faqSuccess').style.display = 'none'; }, 5000);
-                    }
-                }).catch(() => { });
+        }        function handleFaqFormSubmit(e) {
+            submitToGAS(e, 'الأسئلة الشائعة');
         }
     </script>
     <script>

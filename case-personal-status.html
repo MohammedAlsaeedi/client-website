@@ -412,35 +412,7 @@ footer_copyright: {0: '© 2026 شركة مشاري بندر بن جلوي للم
 </script>
 <script>
 function handleCaseFormSubmit(e) {
-    e.preventDefault();
-    const form = e.target;
-    const serviceSelect = form.querySelector('select[name="service"]');
-    if (checked.length === 0) {
-        alert('يرجى اختيار خدمة واحدة على الأقل');
-        return;
-    }
-    const name = form.querySelector('[name="name"]').value;
-    const phone = form.querySelector('[name="phone"]').value;
-    const email = form.querySelector('[name="email"]').value || '-';
-    const services = Array.from(checked).map(c => c.value).join('، ');
-    const details = form.querySelector('[name="details"]').value;
-    const pageTitle = document.title.split('—')[0].trim();
-    const bodyParts = [
-        'طلب استشارة قانونية — ' + pageTitle,
-        '---',
-        'الاسم: ' + name,
-        'الجوال: ' + phone,
-        'البريد: ' + email,
-        'الخدمة المطلوبة: ' + services,
-        'التفاصيل: ' + details
-    ];
-    const subject = encodeURIComponent('طلب استشارة قانونية — ' + pageTitle);
-    const body = encodeURIComponent(bodyParts.join('\n'));
-    window.location.href = 'mailto:info@lawmeshari.com?subject=' + subject + '&body=' + body;
-    var successDiv = document.getElementById('cfSuccess');
-    if (successDiv) { successDiv.style.display = 'block'; }
-    form.reset();
-    setTimeout(function(){ if(successDiv) successDiv.style.display='none'; }, 6000);
+    submitToGAS(e, document.title.split('—')[0].trim());
 }
 </script>
 <script src="lang.js"></script>
