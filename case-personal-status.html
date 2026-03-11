@@ -411,6 +411,47 @@ footer_copyright: {0: '© 2026 شركة مشاري بندر بن جلوي للم
 };
 </script>
 <script>
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyj673pfAHa7b2lx8SqEbPT02M3Hqr7aTc6R9VupQdt-P60RPQNTCjIeAhDjDC-4dUI/exec';
+async function submitToGAS(e, formNameParam) {
+    e.preventDefault();
+    const form = e.target;
+    const submitBtn = form.querySelector('button[type="submit"]') || form.querySelector('input[type="submit"]');
+    let originalBtnText = 'إرسال';
+    if (submitBtn) { originalBtnText = submitBtn.innerHTML; submitBtn.disabled = true; submitBtn.innerHTML = '<span style="display:inline-block; margin-left:8px; animation: spin 1s linear infinite;">↻</span> جاري الإرسال...'; }
+    let formData = new FormData(form);
+    let payload = { formName: formNameParam || document.title.split('—')[0].trim(), name: formData.get('name') || 'غير متوفر', phone: formData.get('phone') || 'غير متوفر', email: formData.get('email') || '-', files: [] };
+    let detailsArr = [];
+    for (let [key, value] of formData.entries()) {
+        if (['name','phone','email','docs','documents','_subject','terms'].includes(key)) continue;
+        const inputEl = form.querySelector('[name="'+key+'"]'); let label = key;
+        if (inputEl) { const labelEl = inputEl.closest('.cf-group, .form-group')?.querySelector('label'); if (labelEl) label = labelEl.textContent.replace('*','').trim(); }
+        if (value) detailsArr.push(label+': '+value);
+    }
+    payload.details = detailsArr.join('\n') || 'لا توجد تفاصيل إضافية';
+    const sendPayload = () => {
+        fetch(SCRIPT_URL, { method:'POST', body:JSON.stringify(payload), headers:{'Content-Type':'text/plain;charset=utf-8'} })
+        .then(r => r.json())
+        .then(data => {
+            if (data.result === 'success') {
+                const successDiv = form.parentElement.querySelector('.cf-success, .form-success') || form.nextElementSibling;
+                if (successDiv && (successDiv.classList.contains('cf-success') || successDiv.classList.contains('form-success'))) { form.style.display='none'; successDiv.style.display='block'; setTimeout(()=>{form.style.display='block';successDiv.style.display='none';form.reset();},6000); }
+                else { alert('✅ تم إرسال طلبك بنجاح'); form.reset(); }
+            } else { alert('❌ حدث خطأ: '+data.error); }
+        })
+        .catch(err => { alert('❌ خطأ في الاتصال. يرجى المراسلة عبر واتساب.'); })
+        .finally(() => { if(submitBtn){submitBtn.disabled=false;submitBtn.innerHTML=originalBtnText;} });
+    };
+    const fileInput = form.querySelector('input[type="file"]');
+    if (fileInput && fileInput.files.length > 0) {
+        if(submitBtn) submitBtn.innerHTML='<span style="display:inline-block; margin-left:8px; animation: spin 1s linear infinite;">↻</span> جاري رفع الملفات...';
+        const files = Array.from(fileInput.files);
+        if (files.reduce((a,f)=>a+f.size,0) > 8*1024*1024) { alert('❌ حجم المرفقات كبير جداً (الحد 8MB).'); if(submitBtn){submitBtn.disabled=false;submitBtn.innerHTML=originalBtnText;} return; }
+        try {
+            const base64Files = await Promise.all(files.map(file => new Promise((resolve,reject) => { const reader=new FileReader(); reader.onload=()=>resolve({name:file.name,type:file.type,base64:reader.result.split(',')[1]}); reader.onerror=reject; reader.readAsDataURL(file); })));
+            payload.files = base64Files; sendPayload();
+        } catch(error) { alert('❌ خطأ أثناء معالجة المرفقات.'); if(submitBtn){submitBtn.disabled=false;submitBtn.innerHTML=originalBtnText;} }
+    } else { sendPayload(); }
+}
 function handleCaseFormSubmit(e) {
     submitToGAS(e, document.title.split('—')[0].trim());
 }
