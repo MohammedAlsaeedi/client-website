@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 
 <html dir="rtl" lang="ar">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>عقود الشركات — شركة مشاري بندر بن جلوي للمحاماة</title>
-<meta content="خدمات صياغة ومراجعة عقود الشركات — شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية" name="description"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-<style>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>عقود الشركات — شركة مشاري بندر بن جلوي للمحاماة</title>
+    <meta content="خدمات صياغة ومراجعة عقود الشركات — شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية"
+        name="description" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <style>
         :root {
             --navy: #1B2C6B;
             --navy-dark: #111d4a;
@@ -24,12 +27,42 @@
             --gray-dark: #374151;
             --border: #e5e1d9;
         }
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; overflow-x: hidden; }
-        body { font-family: 'Cairo', sans-serif; color: var(--gray-dark); background: var(--white); overflow-x: hidden; line-height: 1.6; }
-        img { max-width: 100%; display: block; }
-        a { text-decoration: none; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            color: var(--gray-dark);
+            background: var(--white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
 
         /* NAVBAR */
         .navbar {
@@ -44,6 +77,7 @@
             align-items: center;
             padding: 0 5%;
         }
+
         .nav-inner {
             width: 100%;
             display: flex;
@@ -51,29 +85,142 @@
             justify-content: space-between;
             gap: 20px;
         }
+
         .nav-logo {
             display: flex;
             align-items: center;
             gap: 11px;
         }
-        .nav-logo img { width: 60px; height: 60px; flex-shrink: 0; }
-        .nav-firm-name { font-size: 1.2rem; font-weight: 800; color: var(--gold-light); line-height: 1.2; }
-        .nav-firm-sub { font-size: .8rem; color: rgba(255,255,255,.55); }
-        .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; flex: 1; justify-content: center; }
-        .nav-links a { color: rgba(255,255,255,.82); font-size: 1rem; font-weight: 600; transition: color .2s; position: relative; padding-bottom: 2px; }
-        .nav-links a:hover { color: var(--gold-light); }
-        .nav-links a.active { color: var(--gold-light); }
-        .nav-links a::after { content: ''; position: absolute; bottom: -2px; right: 0; left: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: right; transition: transform .25s; }
-        .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
-        .nav-cta { background: var(--gold); color: var(--white); padding: 8px 20px; border-radius: 25px; font-size: .85rem; font-weight: 800; transition: all .25s; white-space: nowrap; }
-        .nav-cta:hover { background: var(--gold-light); box-shadow: 0 6px 20px rgba(184,147,90,.4); }
-        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
-        .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; }
-        .mobile-drawer { position: fixed; top: 90px; inset-inline: 0; background: var(--navy-dark); border-top: 1px solid rgba(184,147,90,.25); padding: 24px 5%; z-index: 999; transform: translateY(-8px); opacity: 0; visibility: hidden; transition: all .3s; }
-        .mobile-drawer.open { transform: translateY(0); opacity: 1; visibility: visible; }
-        .mobile-drawer ul { list-style: none; }
-        .mobile-drawer li { border-bottom: 1px solid rgba(255,255,255,.07); }
-        .mobile-drawer a { display: block; padding: 12px 0; color: rgba(255,255,255,.85); font-size: .95rem; font-weight: 600; }
+
+        .nav-logo img {
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0;
+        }
+
+        .nav-firm-name {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--gold-light);
+            line-height: 1.2;
+        }
+
+        .nav-firm-sub {
+            font-size: .8rem;
+            color: rgba(255, 255, 255, .55);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            list-style: none;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, .82);
+            font-size: 1rem;
+            font-weight: 600;
+            transition: color .2s;
+            position: relative;
+            padding-bottom: 2px;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-light);
+        }
+
+        .nav-links a.active {
+            color: var(--gold-light);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            left: 0;
+            height: 2px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform .25s;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            transform: scaleX(1);
+        }
+
+        .nav-cta {
+            background: var(--gold);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: .85rem;
+            font-weight: 800;
+            transition: all .25s;
+            white-space: nowrap;
+        }
+
+        .nav-cta:hover {
+            background: var(--gold-light);
+            box-shadow: 0 6px 20px rgba(184, 147, 90, .4);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: white;
+            border-radius: 2px;
+        }
+
+        .mobile-drawer {
+            position: fixed;
+            top: 90px;
+            inset-inline: 0;
+            background: var(--navy-dark);
+            border-top: 1px solid rgba(184, 147, 90, .25);
+            padding: 24px 5%;
+            z-index: 999;
+            transform: translateY(-8px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s;
+        }
+
+        .mobile-drawer.open {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-drawer ul {
+            list-style: none;
+        }
+
+        .mobile-drawer li {
+            border-bottom: 1px solid rgba(255, 255, 255, .07);
+        }
+
+        .mobile-drawer a {
+            display: block;
+            padding: 12px 0;
+            color: rgba(255, 255, 255, .85);
+            font-size: .95rem;
+            font-weight: 600;
+        }
 
         /* PAGE HERO */
         .page-hero {
@@ -82,517 +229,1103 @@
             position: relative;
             overflow: hidden;
         }
+
         .page-hero::before {
             content: '';
             position: absolute;
             inset: 0;
-            background-image: radial-gradient(rgba(184,147,90,.08) 1px, transparent 1px);
+            background-image: radial-gradient(rgba(184, 147, 90, .08) 1px, transparent 1px);
             background-size: 40px 40px;
         }
-        .page-hero-content { position: relative; z-index: 2; max-width: 700px; }
-        .page-breadcrumb { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.55); font-size: .85rem; margin-bottom: 18px; }
-        .page-breadcrumb a { color: rgba(255,255,255,.55); transition: color .2s; }
-        .page-breadcrumb a:hover { color: var(--gold-light); }
-        .page-breadcrumb span { color: var(--gold-light); }
-        .page-hero h1 { font-size: clamp(1.8rem, 3.5vw, 3rem); font-weight: 900; color: var(--white); margin-bottom: 16px; line-height: 1.25; }
-        .page-hero h1 em { color: var(--gold-light); font-style: normal; }
-        .page-hero-desc { font-size: 1rem; color: rgba(255,255,255,.75); line-height: 1.9; max-width: 600px; }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+        }
+
+        .page-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, .55);
+            font-size: .85rem;
+            margin-bottom: 18px;
+        }
+
+        .page-breadcrumb a {
+            color: rgba(255, 255, 255, .55);
+            transition: color .2s;
+        }
+
+        .page-breadcrumb a:hover {
+            color: var(--gold-light);
+        }
+
+        .page-breadcrumb span {
+            color: var(--gold-light);
+        }
+
+        .page-hero h1 {
+            font-size: clamp(1.8rem, 3.5vw, 3rem);
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 16px;
+            line-height: 1.25;
+        }
+
+        .page-hero h1 em {
+            color: var(--gold-light);
+            font-style: normal;
+        }
+
+        .page-hero-desc {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, .75);
+            line-height: 1.9;
+            max-width: 600px;
+        }
 
         /* CONTENT */
-        .section-pad { padding: 80px 5%; }
-        .section-pad.alt { background: var(--off-white); }
-        .gold-bar { width: 50px; height: 3px; background: linear-gradient(90deg, var(--gold), var(--gold-light)); border-radius: 2px; }
-        .section-header { text-align: center; margin-bottom: 50px; }
-        .section-header .gold-bar { margin: 12px auto 18px; }
-        .tag { display: inline-block; background: var(--gold-pale); color: var(--gold); border: 1px solid var(--gold-light); padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 700; }
-        .section-title { font-size: clamp(1.5rem, 2.8vw, 2.2rem); font-weight: 900; color: var(--navy); margin: 12px 0 6px; line-height: 1.25; }
-        .section-desc { color: var(--gray); font-size: 1rem; max-width: 580px; line-height: 1.85; }
+        .section-pad {
+            padding: 80px 5%;
+        }
+
+        .section-pad.alt {
+            background: var(--off-white);
+        }
+
+        .gold-bar {
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            border-radius: 2px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header .gold-bar {
+            margin: 12px auto 18px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--gold-pale);
+            color: var(--gold);
+            border: 1px solid var(--gold-light);
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: .8rem;
+            font-weight: 700;
+        }
+
+        .section-title {
+            font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+            font-weight: 900;
+            color: var(--navy);
+            margin: 12px 0 6px;
+            line-height: 1.25;
+        }
+
+        .section-desc {
+            color: var(--gray);
+            font-size: 1rem;
+            max-width: 580px;
+            line-height: 1.85;
+        }
 
         /* CONTRACTS CARDS */
-        .contracts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px; }
+        .contracts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 28px;
+        }
+
         .contract-card {
             background: var(--white);
             border: 1px solid var(--border);
             border-radius: 18px;
             padding: 32px 28px;
             transition: transform .3s, box-shadow .3s;
-            box-shadow: 0 4px 18px rgba(27,44,107,.06);
+            box-shadow: 0 4px 18px rgba(27, 44, 107, .06);
         }
-        .contract-card:hover { transform: translateY(-5px); box-shadow: 0 14px 40px rgba(184,147,90,.15); }
+
+        .contract-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 40px rgba(184, 147, 90, .15);
+        }
+
         .contract-icon {
-            width: 56px; height: 56px; border-radius: 14px;
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
             background: linear-gradient(135deg, var(--navy), var(--navy-mid));
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-bottom: 18px;
         }
-        .contract-card h3 { font-size: 1.1rem; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
-        .contract-card p { font-size: .88rem; color: var(--gray); line-height: 1.85; }
-        .contract-tag { display: inline-block; margin-top: 14px; background: var(--gold-pale); color: var(--gold); border: 1px solid var(--gold-light); padding: 3px 12px; border-radius: 14px; font-size: .75rem; font-weight: 700; }
+
+        .contract-card h3 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+
+        .contract-card p {
+            font-size: .88rem;
+            color: var(--gray);
+            line-height: 1.85;
+        }
+
+        .contract-tag {
+            display: inline-block;
+            margin-top: 14px;
+            background: var(--gold-pale);
+            color: var(--gold);
+            border: 1px solid var(--gold-light);
+            padding: 3px 12px;
+            border-radius: 14px;
+            font-size: .75rem;
+            font-weight: 700;
+        }
 
         /* WHY SECTION */
-        .why-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
-        .why-item { display: flex; gap: 14px; align-items: flex-start; background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 22px 20px; }
-        .why-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 6px; }
-        .why-item p { font-size: .9rem; color: var(--gray-dark); line-height: 1.7; }
+        .why-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .why-item {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 22px 20px;
+        }
+
+        .why-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--gold);
+            flex-shrink: 0;
+            margin-top: 6px;
+        }
+
+        .why-item p {
+            font-size: .9rem;
+            color: var(--gray-dark);
+            line-height: 1.7;
+        }
 
         /* CTA SECTION */
-        .cta-section { background: linear-gradient(135deg, var(--navy-dark), var(--navy)); padding: 70px 5%; text-align: center; }
-        .cta-section h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 900; color: var(--white); margin-bottom: 14px; }
-        .cta-section p { color: rgba(255,255,255,.7); font-size: .95rem; margin-bottom: 32px; max-width: 500px; margin-inline: auto; }
-        .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-        .btn-gold { background: var(--gold); color: var(--white); padding: 13px 32px; border-radius: 30px; font-size: .95rem; font-weight: 800; transition: all .25s; display: inline-flex; align-items: center; gap: 8px; }
-        .btn-gold:hover { background: var(--gold-light); box-shadow: 0 8px 25px rgba(184,147,90,.4); }
-        .btn-outline { border: 2px solid var(--gold); color: var(--gold); padding: 11px 28px; border-radius: 30px; font-size: .95rem; font-weight: 800; transition: all .25s; }
-        .btn-outline:hover { background: var(--gold); color: var(--white); }
+        .cta-section {
+            background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+            padding: 70px 5%;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(1.4rem, 2.5vw, 2rem);
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 14px;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, .7);
+            font-size: .95rem;
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-inline: auto;
+        }
+
+        .cta-btns {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: var(--white);
+            padding: 13px 32px;
+            border-radius: 30px;
+            font-size: .95rem;
+            font-weight: 800;
+            transition: all .25s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-gold:hover {
+            background: var(--gold-light);
+            box-shadow: 0 8px 25px rgba(184, 147, 90, .4);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            padding: 11px 28px;
+            border-radius: 30px;
+            font-size: .95rem;
+            font-weight: 800;
+            transition: all .25s;
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: var(--white);
+        }
 
         /* FOOTER */
-        footer { background: var(--navy-dark); color: rgba(255,255,255,.6); text-align: center; padding: 30px 5%; font-size: .85rem; border-top: 1px solid rgba(184,147,90,.2); }
-        footer a { color: var(--gold-light); }
+        footer {
+            background: var(--navy-dark);
+            color: rgba(255, 255, 255, .6);
+            text-align: center;
+            padding: 30px 5%;
+            font-size: .85rem;
+            border-top: 1px solid rgba(184, 147, 90, .2);
+        }
+
+        footer a {
+            color: var(--gold-light);
+        }
 
         /* WHATSAPP FAB */
-        .whatsapp-fab { position: fixed; bottom: 28px; left: 28px; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 999; box-shadow: 0 6px 20px rgba(37,211,102,.4); transition: transform .25s; }
-        .whatsapp-fab:hover { transform: scale(1.1); }
+        .whatsapp-fab {
+            position: fixed;
+            bottom: 28px;
+            left: 28px;
+            width: 56px;
+            height: 56px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, .4);
+            transition: transform .25s;
+        }
+
+        .whatsapp-fab:hover {
+            transform: scale(1.1);
+        }
 
         @media (max-width: 900px) {
-            .nav-links { display: none; }
-            .hamburger { display: flex; }
-            .contracts-grid { grid-template-columns: 1fr 1fr; }
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .contracts-grid {
+                grid-template-columns: 1fr 1fr;
+            }
         }
+
         @media (max-width: 600px) {
-            .contracts-grid { grid-template-columns: 1fr; }
-            .nav-cta { display: none; }
+            .contracts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-cta {
+                display: none;
+            }
         }
-            .lang-switcher{display:flex;align-items:center;gap:5px}
-        .flag-btn{background:none;border:2px solid rgba(255,255,255,.2);border-radius:7px;cursor:pointer;font-size:1.2rem;line-height:1;padding:3px 5px;transition:all .2s;display:flex;align-items:center}
-        .flag-btn:hover{border-color:var(--gold-light);transform:scale(1.08)}
-        .flag-btn.active{border-color:var(--gold);background:rgba(184,147,90,.2)}
-    /* Language Dropdown */
-        .lang-drop { position: relative; display: flex; align-items: center; }
-        .lang-drop-btn { background: none; border: 2px solid rgba(255,255,255,.25); border-radius: 10px; cursor: pointer; font-size: 1.4rem; line-height: 1; padding: 4px 8px; transition: all .2s; color: #fff; }
-        .lang-drop-btn:hover { border-color: var(--gold); transform: scale(1.05); }
-        .lang-drop-menu { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--navy); border: 1px solid var(--gold); border-radius: 10px; padding: 6px; display: none; flex-direction: column; gap: 4px; min-width: 130px; z-index: 9999; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
-        .lang-drop-menu.open { display: flex; }
-        .lang-drop-menu button { background: none; border: none; cursor: pointer; font-size: 1rem; padding: 6px 10px; border-radius: 6px; text-align: right; color: #fff; white-space: nowrap; font-family: inherit; transition: background .15s; }
-        .lang-drop-menu button:hover { background: rgba(184,147,90,.2); }
-        
+
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 5px
+        }
+
+        .flag-btn {
+            background: none;
+            border: 2px solid rgba(255, 255, 255, .2);
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            line-height: 1;
+            padding: 3px 5px;
+            transition: all .2s;
+            display: flex;
+            align-items: center
+        }
+
+        .flag-btn:hover {
+            border-color: var(--gold-light);
+            transform: scale(1.08)
+        }
+
+        .flag-btn.active {
+            border-color: var(--gold);
+            background: rgba(184, 147, 90, .2)
+        }
+
+        /* Language Dropdown */
+        .lang-drop {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .lang-drop-btn {
+            background: none;
+            border: 2px solid rgba(255, 255, 255, .25);
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.4rem;
+            line-height: 1;
+            padding: 4px 8px;
+            transition: all .2s;
+            color: #fff;
+        }
+
+        .lang-drop-btn:hover {
+            border-color: var(--gold);
+            transform: scale(1.05);
+        }
+
+        .lang-drop-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--navy);
+            border: 1px solid var(--gold);
+            border-radius: 10px;
+            padding: 6px;
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            min-width: 130px;
+            z-index: 9999;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .4);
+        }
+
+        .lang-drop-menu.open {
+            display: flex;
+        }
+
+        .lang-drop-menu button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 6px 10px;
+            border-radius: 6px;
+            text-align: right;
+            color: #fff;
+            white-space: nowrap;
+            font-family: inherit;
+            transition: background .15s;
+        }
+
+        .lang-drop-menu button:hover {
+            background: rgba(184, 147, 90, .2);
+        }
+
         /* ─── MOBILE RESPONSIVE ─── */
-        @media(max-width:768px){
-            .page-hero{padding:110px 5% 50px}
-            .page-hero h1{font-size:clamp(1.3rem,5vw,1.9rem)}
-            .section-pad{padding:50px 5%}
-            .section-title{font-size:1.3rem}
+        @media(max-width:768px) {
+            .page-hero {
+                padding: 110px 5% 50px
+            }
+
+            .page-hero h1 {
+                font-size: clamp(1.3rem, 5vw, 1.9rem)
+            }
+
+            .section-pad {
+                padding: 50px 5%
+            }
+
+            .section-title {
+                font-size: 1.3rem
+            }
         }
-        @media(max-width:480px){
-            .page-breadcrumb{font-size:.75rem;flex-wrap:wrap}
-            .cta-btns{flex-direction:column;align-items:center}
+
+        @media(max-width:480px) {
+            .page-breadcrumb {
+                font-size: .75rem;
+                flex-wrap: wrap
+            }
+
+            .cta-btns {
+                flex-direction: column;
+                align-items: center
+            }
         }
+
         /* FORM STYLES */
-        .form-container { background: var(--off-white); border: 1px solid var(--border); border-radius: 20px; padding: 40px; box-shadow: 0 10px 40px rgba(27,44,107,.05); max-width: 800px; margin: 0 auto; }
-        .contract-form { display: flex; flex-direction: column; gap: 24px; }
-        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-        .input-group { display: flex; flex-direction: column; gap: 8px; text-align: start; }
-        .input-group.full-width { grid-column: 1 / -1; }
-        .input-group label { font-size: .95rem; font-weight: 700; color: var(--navy); }
-        .input-group input, .input-group select, .input-group textarea { width: 100%; padding: 14px 18px; border: 1px solid #d1d5db; border-radius: 12px; font-family: inherit; font-size: 1rem; color: var(--gray-dark); transition: all .3s; background: var(--white); }
-        .input-group input:focus, .input-group select:focus, .input-group textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 4px rgba(184,147,90,.1); }
-        .file-upload { position: relative; }
-        .file-upload input[type="file"] { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
-        .file-label { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 30px; border: 2px dashed #d1d5db; border-radius: 12px; background: var(--white); cursor: pointer; transition: all .3s; color: var(--gray); text-align: center; }
-        .file-label:hover { border-color: var(--gold); color: var(--gold); background: var(--gold-pale); }
-        .file-label svg { color: var(--gold); }
-        .file-list { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
-        .file-item { display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 10px 16px; border-radius: 8px; border: 1px solid var(--border); font-size: .85rem; color: var(--navy); }
-        .file-remove { color: #ef4444; cursor: pointer; font-weight: bold; padding: 4px; }
-        @media (max-width: 600px) {
-            .form-grid { grid-template-columns: 1fr; }
-            .form-container { padding: 24px; }
+        .form-container {
+            background: var(--off-white);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(27, 44, 107, .05);
+            max-width: 800px;
+            margin: 0 auto;
         }
-        </style>
+
+        .contract-form {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            text-align: start;
+        }
+
+        .input-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .input-group label {
+            font-size: .95rem;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .input-group input,
+        .input-group select,
+        .input-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid #d1d5db;
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            color: var(--gray-dark);
+            transition: all .3s;
+            background: var(--white);
+        }
+
+        .input-group input:focus,
+        .input-group select:focus,
+        .input-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 4px rgba(184, 147, 90, .1);
+        }
+
+        .file-upload {
+            position: relative;
+        }
+
+        .file-upload input[type="file"] {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        .file-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 30px;
+            border: 2px dashed #d1d5db;
+            border-radius: 12px;
+            background: var(--white);
+            cursor: pointer;
+            transition: all .3s;
+            color: var(--gray);
+            text-align: center;
+        }
+
+        .file-label:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            background: var(--gold-pale);
+        }
+
+        .file-label svg {
+            color: var(--gold);
+        }
+
+        .file-list {
+            margin-top: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .file-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--white);
+            padding: 10px 16px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            font-size: .85rem;
+            color: var(--navy);
+        }
+
+        .file-remove {
+            color: #ef4444;
+            cursor: pointer;
+            font-weight: bold;
+            padding: 4px;
+        }
+
+        @media (max-width: 600px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-container {
+                padding: 24px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<!-- NAVBAR -->
-<nav class="navbar">
-<div class="nav-inner">
-<a class="nav-logo" href="index.html">
-<img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png"/>
-<div>
-<div class="nav-firm-name" data-i18n="firm_name">شركة مشاري بندر بن جلوي</div>
-<div class="nav-firm-sub" data-i18n="firm_sub">للمحاماة والاستشارات القانونية</div>
-</div>
-</a>
-<ul class="nav-links">
-<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
-<li><a class="active" data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
-<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
-<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
-<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
-<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
-<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
-<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
-<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
-<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
-</ul>
-<div style="display:flex;align-items:center;gap:10px;">
-<div class="lang-drop" id="langDrop">
-<button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
-<div class="lang-drop-menu" id="langDropMenu">
-<button data-i18n="lang_btn_ar" data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦 العربية</button>
-<button data-lang="1" onclick="setLang(1);toggleLangDrop()">🇬🇧 English</button>
-<button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
-</div>
-</div>
-<a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank"><span data-i18n="nav_cta">احجز استشارة</span></a>
-<div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
-<span></span><span></span><span></span>
-</div>
-</div>
-</div>
-</nav>
-<div class="mobile-drawer" id="drawer">
-<ul>
-<li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
-<li data-i18n="li_0"><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
-<li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
-<li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
-<li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
-<li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
-<li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
-<li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
-<li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
-<li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
-</ul>
-</div>
-<!-- PAGE HERO -->
-<div class="page-hero">
-<div class="page-hero-content">
-<div class="page-breadcrumb">
-<a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
-<span>←</span>
-<span data-i18n="breadcrumb_contracts">عقود الشركات</span>
-</div>
-<h1 data-i18n="hero_h1">عقود الشركات <em>الاحترافية</em></h1>
-<p class="page-hero-desc" data-i18n="p_0">نقدم خدمات قانونية متكاملة في صياغة ومراجعة وتوثيق عقود الشركات بما يضمن حماية حقوقكم وفق أحدث الأنظمة والتشريعات في المملكة العربية السعودية.</p>
-</div>
-</div>
-<!-- CONTRACTS SECTION -->
-<section class="section-pad">
-<div class="container">
-<div class="section-header">
-<div class="tag" data-i18n="contracts_tag">عقودنا القانونية</div>
-<h2 class="section-title" data-i18n="h2_0">أنواع العقود التي نتولاها</h2>
-<div class="gold-bar"></div>
-<p class="section-desc" data-i18n="p_1">نغطي طيفاً واسعاً من العقود التجارية والمدنية لحماية مصالحكم في كل مرحلة</p>
-</div>
-<div class="contracts-grid">
-<div class="contract-card">
-<div class="contract-icon">
-<svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="26">
-<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline>
-<line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline>
-</svg>
-</div>
-<h3 data-i18n="h3_0">عقود تأسيس الشركات</h3>
-<p data-i18n="p_2">صياغة عقود التأسيس بما يتوافق مع نظام الشركات السعودي وتحديد حقوق الشركاء والمساهمين بوضوح قانوني تام.</p>
-<span class="contract-tag" data-i18n="ctag_تأسيس_الأعمال">تأسيس الأعمال</span>
-</div>
-<div class="contract-card">
-<div class="contract-icon">
-<svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="26">
-<path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"></path><rect x="9" y="3" width="6" height="4" rx="1"></rect><path d="M9 14l2 2 4-4"></path>
-</svg>
-</div>
-<h3 data-i18n="h3_sale">عقود البيع</h3>
-<p data-i18n="p_sale">صياغة ومراجعة عقود البيع والشراء بمختلف أنواعها لضمان حماية حقوق البائع والمشتري وفق الأنظمة السعودية.</p>
-<span class="contract-tag" data-i18n="ctag_بيع_وشراء">بيع وشراء</span>
-</div>
-<div class="contract-card">
-<div class="contract-icon">
-<svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="26">
-<rect height="14" rx="2" ry="2" width="20" x="2" y="7"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-</svg>
-</div>
-<h3 data-i18n="h3_1">عقود الشراكة التجارية</h3>
-<p data-i18n="p_3">تنظيم العلاقات بين الشركاء التجاريين وتحديد آليات اتخاذ القرار وتوزيع الأرباح والخسائر بصورة واضحة وملزمة.</p>
-<span class="contract-tag" data-i18n="ctag_شراكات">شراكات</span>
-</div>
-<div class="contract-card">
-<div class="contract-icon">
-<svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="26">
-<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-</svg>
-</div>
-<h3 data-i18n="h3_2">عقود الحماية والسرية</h3>
-<p data-i18n="p_4">صياغة اتفاقيات عدم الإفصاح وحماية المعلومات السرية والملكية الفكرية لضمان سرية بياناتكم التجارية.</p>
-<span class="contract-tag" data-i18n="ctag_حماية_المعلومات">حماية المعلومات</span>
-</div>
-<div class="contract-card">
-<div class="contract-icon">
-<svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="26">
-<circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line>
-</svg>
-</div>
-<h3 data-i18n="h3_5">عقود الامتياز التجاري</h3>
-<p data-i18n="p_7">تنظيم علاقات الفرانشايز وصياغة عقود منح الامتياز التجاري بما يضمن حماية العلامة التجارية وحقوق الطرفين.</p>
-<span class="contract-tag" data-i18n="ctag_فرانشايز">فرانشايز</span>
-</div>
-<div class="contract-card">
-<div class="contract-icon">
-<svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="26">
-<polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>
-</svg>
-</div>
-<h3 data-i18n="h3_6">عقود التقنية والبرمجيات</h3>
-<p data-i18n="p_8">صياغة عقود تطوير التقنية وترخيص البرمجيات والخدمات الرقمية وفق المتطلبات القانونية الحديثة.</p>
-<span class="contract-tag" data-i18n="ctag_تقنية_المعلومات">تقنية المعلومات</span>
-</div>
-<div class="contract-card">
-<div class="contract-icon">
-<svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="26">
-<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-</svg>
-</div>
-<h3 data-i18n="h3_7">عقود التوريد والمشتريات</h3>
-<p data-i18n="p_9">إعداد عقود توريد السلع والخدمات بصياغة قانونية واضحة تحدد آليات التسليم والدفع والضمانات والمسؤوليات.</p>
-<span class="contract-tag" data-i18n="ctag_توريد_وخدمات">توريد وخدمات</span>
-</div>
-<div class="contract-card">
-<div class="contract-icon">
-<svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="26">
-<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline>
-</svg>
-</div>
-<h3 data-i18n="h3_8">مراجعة وتدقيق العقود</h3>
-<p data-i18n="p_10">فحص ومراجعة العقود القائمة للكشف عن الثغرات القانونية وتقديم توصيات للتعديل قبل التوقيع أو عند النزاع.</p>
-<span class="contract-tag" data-i18n="ctag_مراجعة_قانونية">مراجعة قانونية</span>
-</div>
-</div>
-</div>
-</section>
-<!-- WHY US -->
-<section class="section-pad alt">
-<div class="container">
-<div class="section-header">
-<div class="tag" data-i18n="contracts_why_tag">لماذا نحن؟</div>
-<h2 class="section-title" data-i18n="h2_1">مميزات خدمتنا في العقود</h2>
-<div class="gold-bar"></div>
-</div>
-<div class="why-list">
-<div class="why-item"><div class="why-dot"></div><p data-i18n="p_11">إلمام تام بأحدث أنظمة الشركات والتجارة والعمل في المملكة العربية السعودية</p></div>
-<div class="why-item"><div class="why-dot"></div><p data-i18n="p_12">صياغة دقيقة تراعي جميع الاحتمالات وتغلق الثغرات القانونية من البداية</p></div>
-<div class="why-item"><div class="why-dot"></div><p data-i18n="p_13">سرعة في التنفيذ مع الحفاظ على أعلى معايير الجودة القانونية</p></div>
-<div class="why-item"><div class="why-dot"></div><p data-i18n="p_14">توثيق العقود وفق الإجراءات الرسمية المعتمدة لدى الجهات السعودية</p></div>
-<div class="why-item"><div class="why-dot"></div><p data-i18n="p_15">متابعة مستمرة وتحديث العقود عند تغيير الأنظمة واللوائح</p></div>
-<div class="why-item"><div class="why-dot"></div><p data-i18n="p_16">أسعار شفافة وتنافسية مع ضمان جودة الخدمة القانونية</p></div>
-</div>
-</div>
-</section>
-<!-- SUBMISSION FORM -->
-<section class="section-pad">
-<div class="container">
-<div class="section-header">
-<div class="tag" data-i18n="form_tag">طلب خدمة</div>
-<h2 class="section-title" data-i18n="form_title">نموذج طلب صياغة أو مراجعة عقد</h2>
-<div class="gold-bar"></div>
-<p class="section-desc" data-i18n="form_desc" style="margin: 0 auto;">يرجى تعبئة النموذج أدناه بكافة التفاصيل، وسيقوم فريقنا القانوني بالتواصل معكم في أقرب وقت.</p>
-</div>
-<div class="form-container">
-<form class="contract-form" action="#" method="POST" enctype="multipart/form-data">
-    <div class="form-grid">
-        <div class="input-group">
-            <label data-i18n="form_name">الاسم الكامل *</label>
-            <input type="text" data-i18n="cf_ph_name" placeholder="اسمك الكامل" required>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a class="nav-logo" href="index.html">
+                <img alt="شعار شركة مشاري بندر بن جلوي" src="logo.png" />
+                <div>
+                    <div class="nav-firm-name" data-i18n="firm_name">شركة مشاري بندر بن جلوي</div>
+                    <div class="nav-firm-sub" data-i18n="firm_sub">للمحاماة والاستشارات القانونية</div>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+                <li><a class="active" data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+                <li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+                <li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+                <li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+                <li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+                <li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+                <li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
+                <li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+                <li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+            </ul>
+            <div style="display:flex;align-items:center;gap:10px;">
+                <div class="lang-drop" id="langDrop">
+                    <button class="lang-drop-btn" id="langDropBtn" onclick="toggleLangDrop()">🇸🇦</button>
+                    <div class="lang-drop-menu" id="langDropMenu">
+                        <button data-i18n="lang_btn_ar" data-lang="0" onclick="setLang(0);toggleLangDrop()">🇸🇦
+                            العربية</button>
+                        <button data-lang="1" onclick="setLang(1);toggleLangDrop()">🇬🇧 English</button>
+                        <button data-lang="2" onclick="setLang(2);toggleLangDrop()">🇨🇳 中文</button>
+                    </div>
+                </div>
+                <a class="nav-cta" href="https://wa.me/966533532153" rel="noopener" target="_blank"><span
+                        data-i18n="nav_cta">احجز استشارة</span></a>
+                <div class="hamburger" onclick="document.getElementById('drawer').classList.toggle('open')">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
         </div>
-        <div class="input-group">
-            <label data-i18n="form_phone">رقم الجوال *</label>
-            <input type="tel" required>
-        </div>
-        <div class="input-group">
-            <label data-i18n="form_email">البريد الإلكتروني</label>
-            <input type="email">
-        </div>
-        <div class="input-group">
-            <label data-i18n="form_company">اسم الشركة / المؤسسة</label>
-            <input type="text">
+    </nav>
+    <div class="mobile-drawer" id="drawer">
+        <ul>
+            <li><a data-i18n="nav_services" href="index.html#services">خدماتنا</a></li>
+            <li data-i18n="li_0"><a data-i18n="nav_contracts" href="contracts.html">عقود الشركات</a></li>
+            <li><a data-i18n="nav_faq" href="faq.html">الأسئلة الشائعة</a></li>
+            <li><a data-i18n="nav_team" href="team.html">فريقنا</a></li>
+            <li><a data-i18n="nav_blog" href="blog.html">المدونة</a></li>
+            <li><a data-i18n="nav_eservices" href="e-services.html">الخدمات الإلكترونية</a></li>
+            <li><a data-i18n="nav_events" href="events.html">فعاليتنا</a></li>
+            <li><a data-i18n="nav_cases_stats" href="cases-stats.html">القضايا المنجزة</a></li>
+            <li><a data-i18n="nav_careers" href="careers.html">التوظيف</a></li>
+            <li><a data-i18n="nav_contact" href="index.html#booking">تواصل معنا</a></li>
+        </ul>
+    </div>
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+        <div class="page-hero-content">
+            <div class="page-breadcrumb">
+                <a data-i18n="breadcrumb_home" href="index.html">الرئيسية</a>
+                <span>←</span>
+                <span data-i18n="breadcrumb_contracts">عقود الشركات</span>
+            </div>
+            <h1 data-i18n="hero_h1">عقود الشركات <em>الاحترافية</em></h1>
+            <p class="page-hero-desc" data-i18n="p_0">نقدم خدمات قانونية متكاملة في صياغة ومراجعة وتوثيق عقود الشركات
+                بما يضمن حماية حقوقكم وفق أحدث الأنظمة والتشريعات في المملكة العربية السعودية.</p>
         </div>
     </div>
-    <div class="input-group full-width">
-        <label data-i18n="form_ctype">نوع العقد المطلوب صياغته أو مراجعته *</label>
-        <select required>
-            <option value="" disabled selected data-i18n="form_ctype_ph">اختر نوع العقد...</option>
-            <option value="تأسيس" data-i18n="h3_0">عقود تأسيس الشركات</option>
-            <option value="بيع" data-i18n="h3_sale">عقود البيع</option>
-            <option value="شراكة" data-i18n="h3_1">عقود الشراكة التجارية</option>
-            <option value="حماية" data-i18n="h3_2">عقود الحماية والسرية</option>
-            <option value="عمل" data-i18n="h3_3">عقود العمل والتوظيف</option>
-            <option value="ايجار" data-i18n="h3_4">عقود الإيجار التجاري</option>
-            <option value="امتياز" data-i18n="h3_5">عقود الامتياز التجاري</option>
-            <option value="تقنية" data-i18n="h3_6">عقود التقنية والبرمجيات</option>
-            <option value="توريد" data-i18n="h3_7">عقود التوريد والمشتريات</option>
-            <option value="وكالة" data-i18n="h3_8">عقود الوكالة والتمثيل</option>
-            <option value="أخرى" data-i18n="form_ctype_other">أخرى</option>
-        </select>
-    </div>
-    <div class="input-group full-width">
-        <label data-i18n="form_details">تفاصيل طلب العقد *</label>
-        <textarea rows="4" placeholder="يرجى كتابة أية تفاصيل أو متطلبات خاصة بالعقد هنا..." data-i18n="form_details_ph" required></textarea>
-    </div>
-    <div class="input-group full-width">
-        <label data-i18n="form_attach">المرفقات (اختياري)</label>
-        <div class="file-upload">
-            <input type="file" id="contract-file" multiple>
-            <label for="contract-file" class="file-label">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="32" height="32"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
-                <span data-i18n="form_attach_btn" style="font-weight: 600;">اضغط هنا لإضافة ملفات أو اسحبها وأفلتها هنا</span>
-            </label>
-            <div class="file-list" id="fileList"></div>
+    <!-- CONTRACTS SECTION -->
+    <section class="section-pad">
+        <div class="container">
+            <div class="section-header">
+                <div class="tag" data-i18n="contracts_tag">عقودنا القانونية</div>
+                <h2 class="section-title" data-i18n="h2_0">أنواع العقود التي نتولاها</h2>
+                <div class="gold-bar"></div>
+                <p class="section-desc" data-i18n="p_1">نغطي طيفاً واسعاً من العقود التجارية والمدنية لحماية مصالحكم في
+                    كل مرحلة</p>
+            </div>
+            <div class="contracts-grid">
+                <div class="contract-card">
+                    <div class="contract-icon">
+                        <svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.8" viewbox="0 0 24 24" width="26">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" x2="8" y1="13" y2="13"></line>
+                            <line x1="16" x2="8" y1="17" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="h3_0">عقود تأسيس الشركات</h3>
+                    <p data-i18n="p_2">صياغة عقود التأسيس بما يتوافق مع نظام الشركات السعودي وتحديد حقوق الشركاء
+                        والمساهمين بوضوح قانوني تام.</p>
+                    <span class="contract-tag" data-i18n="ctag_تأسيس_الأعمال">تأسيس الأعمال</span>
+                </div>
+                <div class="contract-card">
+                    <div class="contract-icon">
+                        <svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.8" viewbox="0 0 24 24" width="26">
+                            <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"></path>
+                            <rect x="9" y="3" width="6" height="4" rx="1"></rect>
+                            <path d="M9 14l2 2 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="h3_sale">عقود البيع</h3>
+                    <p data-i18n="p_sale">صياغة ومراجعة عقود البيع والشراء بمختلف أنواعها لضمان حماية حقوق البائع
+                        والمشتري وفق الأنظمة السعودية.</p>
+                    <span class="contract-tag" data-i18n="ctag_بيع_وشراء">بيع وشراء</span>
+                </div>
+                <div class="contract-card">
+                    <div class="contract-icon">
+                        <svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.8" viewbox="0 0 24 24" width="26">
+                            <rect height="14" rx="2" ry="2" width="20" x="2" y="7"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="h3_1">عقود الشراكة التجارية</h3>
+                    <p data-i18n="p_3">تنظيم العلاقات بين الشركاء التجاريين وتحديد آليات اتخاذ القرار وتوزيع الأرباح
+                        والخسائر بصورة واضحة وملزمة.</p>
+                    <span class="contract-tag" data-i18n="ctag_شراكات">شراكات</span>
+                </div>
+                <div class="contract-card">
+                    <div class="contract-icon">
+                        <svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.8" viewbox="0 0 24 24" width="26">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="h3_2">عقود الحماية والسرية</h3>
+                    <p data-i18n="p_4">صياغة اتفاقيات عدم الإفصاح وحماية المعلومات السرية والملكية الفكرية لضمان سرية
+                        بياناتكم التجارية.</p>
+                    <span class="contract-tag" data-i18n="ctag_حماية_المعلومات">حماية المعلومات</span>
+                </div>
+                <div class="contract-card">
+                    <div class="contract-icon">
+                        <svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.8" viewbox="0 0 24 24" width="26">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" x2="12" y1="8" y2="12"></line>
+                            <line x1="12" x2="12.01" y1="16" y2="16"></line>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="h3_5">عقود الامتياز التجاري</h3>
+                    <p data-i18n="p_7">تنظيم علاقات الفرانشايز وصياغة عقود منح الامتياز التجاري بما يضمن حماية العلامة
+                        التجارية وحقوق الطرفين.</p>
+                    <span class="contract-tag" data-i18n="ctag_فرانشايز">فرانشايز</span>
+                </div>
+                <div class="contract-card">
+                    <div class="contract-icon">
+                        <svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.8" viewbox="0 0 24 24" width="26">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="h3_6">عقود التقنية والبرمجيات</h3>
+                    <p data-i18n="p_8">صياغة عقود تطوير التقنية وترخيص البرمجيات والخدمات الرقمية وفق المتطلبات
+                        القانونية الحديثة.</p>
+                    <span class="contract-tag" data-i18n="ctag_تقنية_المعلومات">تقنية المعلومات</span>
+                </div>
+                <div class="contract-card">
+                    <div class="contract-icon">
+                        <svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.8" viewbox="0 0 24 24" width="26">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="h3_7">عقود التوريد والمشتريات</h3>
+                    <p data-i18n="p_9">إعداد عقود توريد السلع والخدمات بصياغة قانونية واضحة تحدد آليات التسليم والدفع
+                        والضمانات والمسؤوليات.</p>
+                    <span class="contract-tag" data-i18n="ctag_توريد_وخدمات">توريد وخدمات</span>
+                </div>
+                <div class="contract-card">
+                    <div class="contract-icon">
+                        <svg fill="none" height="26" stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.8" viewbox="0 0 24 24" width="26">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="h3_8">مراجعة وتدقيق العقود</h3>
+                    <p data-i18n="p_10">فحص ومراجعة العقود القائمة للكشف عن الثغرات القانونية وتقديم توصيات للتعديل قبل
+                        التوقيع أو عند النزاع.</p>
+                    <span class="contract-tag" data-i18n="ctag_مراجعة_قانونية">مراجعة قانونية</span>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="form-submit" style="margin-top: 10px;">
-        <button type="submit" class="btn-gold" style="width: 100%; justify-content: center; font-size: 1.1rem; padding: 16px; border: none; cursor: pointer;">
-            <svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
-            <span data-i18n="form_submit">إرسال الطلب</span>
-        </button>
-    </div>
-</form>
-</div>
-</div>
-</section>
-<!-- CTA -->
-<div class="cta-section">
-<h2 data-i18n="h2_2">هل تحتاج صياغة أو مراجعة عقد؟</h2>
-<p data-i18n="p_17">تواصل معنا الآن للحصول على استشارة قانونية متخصصة في عقود الشركات</p>
-<div class="cta-btns">
-<a class="btn-gold" data-i18n="cta_btn1" href="https://wa.me/966533532153?text=أرغب%20في%20الاستفسار%20عن%20خدمات%20عقود%20الشركات" rel="noopener" target="_blank">
-<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path></svg>
+    </section>
+    <!-- WHY US -->
+    <section class="section-pad alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="tag" data-i18n="contracts_why_tag">لماذا نحن؟</div>
+                <h2 class="section-title" data-i18n="h2_1">مميزات خدمتنا في العقود</h2>
+                <div class="gold-bar"></div>
+            </div>
+            <div class="why-list">
+                <div class="why-item">
+                    <div class="why-dot"></div>
+                    <p data-i18n="p_11">إلمام تام بأحدث أنظمة الشركات والتجارة والعمل في المملكة العربية السعودية</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-dot"></div>
+                    <p data-i18n="p_12">صياغة دقيقة تراعي جميع الاحتمالات وتغلق الثغرات القانونية من البداية</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-dot"></div>
+                    <p data-i18n="p_13">سرعة في التنفيذ مع الحفاظ على أعلى معايير الجودة القانونية</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-dot"></div>
+                    <p data-i18n="p_14">توثيق العقود وفق الإجراءات الرسمية المعتمدة لدى الجهات السعودية</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-dot"></div>
+                    <p data-i18n="p_15">متابعة مستمرة وتحديث العقود عند تغيير الأنظمة واللوائح</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-dot"></div>
+                    <p data-i18n="p_16">أسعار شفافة وتنافسية مع ضمان جودة الخدمة القانونية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SUBMISSION FORM -->
+    <section class="section-pad">
+        <div class="container">
+            <div class="section-header">
+                <div class="tag" data-i18n="form_tag">طلب خدمة</div>
+                <h2 class="section-title" data-i18n="form_title">نموذج طلب صياغة أو مراجعة عقد</h2>
+                <div class="gold-bar"></div>
+                <p class="section-desc" data-i18n="form_desc" style="margin: 0 auto;">يرجى تعبئة النموذج أدناه بكافة
+                    التفاصيل، وسيقوم فريقنا القانوني بالتواصل معكم في أقرب وقت.</p>
+            </div>
+            <div class="form-container">
+                <form id="contracts-form" class="contract-form" action="#" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="formName" value="طلب صياغة عقود الشركات">
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label data-i18n="form_name">الاسم الكامل *</label>
+                            <input type="text" name="name" data-i18n="cf_ph_name" placeholder="اسمك الكامل" required>
+                        </div>
+                        <div class="input-group">
+                            <label data-i18n="form_phone">رقم الجوال *</label>
+                            <input type="tel" name="phone" required>
+                        </div>
+                        <div class="input-group">
+                            <label data-i18n="form_email">البريد الإلكتروني</label>
+                            <input type="email" name="email">
+                        </div>
+                        <div class="input-group">
+                            <label data-i18n="form_company">اسم الشركة / المؤسسة</label>
+                            <input type="text" name="company">
+                        </div>
+                    </div>
+                    <div class="input-group full-width">
+                        <label data-i18n="form_ctype">نوع العقد المطلوب صياغته أو مراجعته *</label>
+                        <select name="contract_type" required>
+                            <option value="" disabled selected data-i18n="form_ctype_ph">اختر نوع العقد...</option>
+                            <option value="تأسيس" data-i18n="h3_0">عقود تأسيس الشركات</option>
+                            <option value="بيع" data-i18n="h3_sale">عقود البيع</option>
+                            <option value="شراكة" data-i18n="h3_1">عقود الشراكة التجارية</option>
+                            <option value="حماية" data-i18n="h3_2">عقود الحماية والسرية</option>
+                            <option value="عمل" data-i18n="h3_3">عقود العمل والتوظيف</option>
+                            <option value="ايجار" data-i18n="h3_4">عقود الإيجار التجاري</option>
+                            <option value="امتياز" data-i18n="h3_5">عقود الامتياز التجاري</option>
+                            <option value="تقنية" data-i18n="h3_6">عقود التقنية والبرمجيات</option>
+                            <option value="توريد" data-i18n="h3_7">عقود التوريد والمشتريات</option>
+                            <option value="وكالة" data-i18n="h3_8">عقود الوكالة والتمثيل</option>
+                            <option value="أخرى" data-i18n="form_ctype_other">أخرى</option>
+                        </select>
+                    </div>
+                    <div class="input-group full-width">
+                        <label data-i18n="form_details">تفاصيل طلب العقد *</label>
+                        <textarea name="additional_info" rows="4"
+                            placeholder="يرجى كتابة أية تفاصيل أو متطلبات خاصة بالعقد هنا..."
+                            data-i18n="form_details_ph" required></textarea>
+                    </div>
+                    <div class="input-group full-width">
+                        <label data-i18n="form_attach">المرفقات (اختياري)</label>
+                        <div class="file-upload">
+                            <input type="file" id="contract-file" multiple>
+                            <label for="contract-file" class="file-label">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="32"
+                                    height="32">
+                                    <path
+                                        d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+                                </svg>
+                                <span data-i18n="form_attach_btn" style="font-weight: 600;">اضغط هنا لإضافة ملفات أو
+                                    اسحبها وأفلتها هنا</span>
+                            </label>
+                            <div class="file-list" id="fileList"></div>
+                        </div>
+                    </div>
+                    <div class="form-submit" style="margin-top: 10px;">
+                        <button type="submit" id="c-submit" class="btn-gold"
+                            style="width: 100%; justify-content: center; font-size: 1.1rem; padding: 16px; border: none; cursor: pointer;">
+                            <svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20">
+                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                            </svg>
+                            <span data-i18n="form_submit">إرسال الطلب</span>
+                        </button>
+                    </div>
+                </form>
+                <div id="form-message" style="display:none; margin-top:15px; text-align:center; font-weight:bold;">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA -->
+    <div class="cta-section">
+        <h2 data-i18n="h2_2">هل تحتاج صياغة أو مراجعة عقد؟</h2>
+        <p data-i18n="p_17">تواصل معنا الآن للحصول على استشارة قانونية متخصصة في عقود الشركات</p>
+        <div class="cta-btns">
+            <a class="btn-gold" data-i18n="cta_btn1"
+                href="https://wa.me/966533532153?text=أرغب%20في%20الاستفسار%20عن%20خدمات%20عقود%20الشركات"
+                rel="noopener" target="_blank">
+                <svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z">
+                    </path>
+                </svg>
                 تواصل عبر واتساب
             </a>
-<a class="btn-outline" data-i18n="cta_btn2" href="index.html">العودة للرئيسية</a>
-</div>
-</div>
-<footer>
-<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px 22px;margin-bottom:18px;">
-<a data-i18n="nav_services" href="index.html#services" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">خدماتنا</a>
-<a data-i18n="nav_contracts" href="contracts.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">عقود الشركات</a>
-<a data-i18n="nav_faq" href="faq.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">الأسئلة الشائعة</a>
-<a data-i18n="nav_team" href="team.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">فريقنا</a>
-<a data-i18n="nav_blog" href="blog.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">المدونة</a>
-<a data-i18n="nav_eservices" href="e-services.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">الخدمات الإلكترونية</a>
-<a data-i18n="nav_events" href="events.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">فعاليتنا</a>
-<a data-i18n="nav_cases_stats" href="cases-stats.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">القضايا المنجزة</a>
-<a data-i18n="nav_careers" href="careers.html" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">التوظيف</a>
-<a data-i18n="nav_contact" href="index.html#booking" style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">تواصل معنا</a>
-</div>
-<p data-i18n="footer_copyright">© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة</p>
-</footer>
-<a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank" title="تواصل عبر واتساب">
-<svg fill="white" height="28" viewbox="0 0 24 24" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"></path></svg>
-</a>
-<script>
-const pageTranslations = {
-    breadcrumb_home: {0: "الرئيسية", 1: "Home", 2: "主页"},
-    cta_btn_0: {0: "احجز استشارة عقود الآن", 1: "Book Contract Consultation Now", 2: "立即预订合同咨询"},
-    cta_btn_1: {0: "تواصل معنا", 1: "Contact Us", 2: "联系我们"},
-    cta_h2: {0: "هل تحتاج صياغة أو مراجعة عقد احترافية؟", 1: "Do You Need Professional Contract Drafting or Review?", 2: "您需要专业的合同起草或审查吗？"},
-    cta_p: {0: "فريقنا القانوني المتخصص جاهز لمساعدتك في جميع احتياجات العقود", 1: "Our specialized legal team is ready to help with all your contract needs", 2: "我们的专业法律团队随时准备帮助满足您的所有合同需求"},
-    footer_copyright: {0: "© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة", 1: "© 2026 Al Meshary Bin Bandar Bin Jaloui Law Firm and Legal Consultations — All rights reserved", 2: "© 2026 美沙里·本·班达尔·本·贾卢伊律师事务所和法律咨询——版权所有"},
-    footer_home: {0: "الرئيسية", 1: "Home", 2: "主页"},
-    h2_0: {0: "أنواع العقود التي نتولاها", 1: "Types of Contracts We Handle", 2: "我们处理的合同类型"},
-    h2_1: {0: "مميزات خدمتنا في العقود", 1: "Advantages of Our Contract Services", 2: "我们合同服务的优势"},
-    h2_2: {0: "هل تحتاج صياغة أو مراجعة عقد؟", 1: "Do You Need Contract Drafting or Review?", 2: "您需要起草或审查合同吗？"},
-    h3_0: {0: "عقود تأسيس الشركات", 1: "Company Formation Contracts", 2: "公司成立合同"},
-    h3_sale: {0: "عقود البيع", 1: "Sales Contracts", 2: "销售合同"},
-    p_sale: {0: "صياغة ومراجعة عقود البيع والشراء بمختلف أنواعها لضمان حماية حقوق البائع والمشتري وفق الأنظمة السعودية.", 1: "Drafting and reviewing various types of sales and purchase contracts to ensure the protection of both buyer and seller rights under Saudi regulations.", 2: "起草和审查各类买卖合同，以确保根据沙特法规保护买卖双方的权利。"},
-    ctag_بيع_وشراء: {0: "بيع وشراء", 1: "Sales & Purchase", 2: "买卖"},
-    h3_1: {0: "عقود الشراكة التجارية", 1: "Commercial Partnership Contracts", 2: "商业合伙合同"},
-    h3_2: {0: "عقود الحماية والسرية", 1: "Confidentiality and Protection Contracts", 2: "保密和保护合同"},
-    h3_3: {0: "عقود العمل والتوظيف", 1: "Employment Contracts", 2: "雇佣合同"},
-    h3_4: {0: "عقود الإيجار التجاري", 1: "Commercial Lease Contracts", 2: "商业租赁合同"},
-    h3_5: {0: "عقود الامتياز التجاري", 1: "Franchise Contracts", 2: "特许经营合同"},
-    h3_6: {0: "عقود التقنية والبرمجيات", 1: "Technology and Software Contracts", 2: "技术和软件合同"},
-    h3_7: {0: "عقود التوريد والمشتريات", 1: "Supply and Procurement Contracts", 2: "供应和采购合同"},
-    h3_8: {0: "عقود الوكالة والتمثيل", 1: "Agency and Representation Contracts", 2: "代理和代表合同"},
-    p_0: {0: "نقدم خدمات قانونية متكاملة في صياغة ومراجعة وتوثيق عقود الشركات بما يضمن حماية حقوقكم وفق أحدث الأنظمة والتشريعات في المملكة العربية السعودية.", 1: "We provide comprehensive legal services in drafting, reviewing, and documenting company contracts to ensure protection of your rights under the latest regulations and legislations in Saudi Arabia.", 2: "我们提供全面的法律服务，包括起草、审查和证明公司合同，以确保根据沙特阿拉伯最新的法规和立法保护您的权利。"},
-    p_1: {0: "نغطي طيفاً واسعاً من العقود التجارية والمدنية لحماية مصالحكم في كل مرحلة", 1: "We cover a wide range of commercial and civil contracts to protect your interests at every stage", 2: "我们涵盖广泛的商业和民事合同，以在每个阶段保护您的利益"},
-    p_10: {0: "الخبرة العميقة في صياغة العقود الدولية والاتفاقيات بين الشركات السعودية والأجنبية", 1: "Deep expertise in drafting international contracts and agreements between Saudi and foreign companies", 2: "在起草沙特和外国公司之间的国际合同和协议方面拥有深厚专业知识"},
-    p_11: {0: "مراجعة شاملة لجميع العقود قبل التوقيع لضمان عدم وجود ثغرات قانونية", 1: "Comprehensive review of all contracts before signing to ensure no legal gaps", 2: "签署前对所有合同进行全面审查，以确保没有法律漏洞"},
-    p_12: {0: "تعديل وتطوير العقود الموجودة بما يتوافق مع التغييرات والأنظمة الجديدة", 1: "Modifying and developing existing contracts to comply with new changes and regulations", 2: "修改和开发现有合同以符合新的变化和法规"},
-    p_13: {0: "توثيق العقود لدى الجهات المختصة وضمان سلامة جميع الإجراءات", 1: "Documenting contracts with competent authorities and ensuring proper procedures", 2: "向有关当局证明合同并确保所有程序正确"},
-    p_14: {0: "متابعة تنفيذ العقود وحل أي نزاعات قد تنشأ بين الطرفين", 1: "Following up on contract execution and resolving any disputes that may arise between parties", 2: "跟进合同执行情况并解决各方之间可能出现的任何纠纷"},
-    p_15: {0: "الاستشارة الفورية في أي استفسارات تتعلق بالعقود والشروط القانونية", 1: "Immediate consultation on any questions related to contracts and legal terms", 2: "就有关合同和法律条款的任何问题进行立即咨询"},
-    p_16: {0: "فريقنا المتخصص يضمن الجودة والدقة والسرعة في إنجاز جميع خدمات العقود", 1: "Our specialized team ensures quality, accuracy, and speed in delivering all contract services", 2: "我们的专业团队确保在提供所有合同服务时的质量、准确性和速度"},
-    p_17: {0: "نحافظ على السرية الكاملة لجميع بيانات عملائنا والعقود التي نتولاها", 1: "We maintain complete confidentiality of all client data and contracts we handle", 2: "我们对所有客户数据和我们处理的合同保持完全保密"},
-    p_2: {0: "صياغة عقود التأسيس بما يتوافق مع نظام الشركات السعودي وتحديد حقوق الشركاء والمساهمين بوضوح قانوني تام.", 1: "Drafting formation contracts in accordance with the Saudi Companies System and clearly defining the rights of partners and shareholders.", 2: "根据沙特公司制度起草成立合同，并清楚地定义合伙人和股东的权利。"},
-    p_3: {0: "تنظيم العلاقات بين الشركاء التجاريين وتحديد آليات اتخاذ القرار وتوزيع الأرباح والخسائر بصورة واضحة وملزمة.", 1: "Organizing relationships between commercial partners and clearly defining decision-making mechanisms and profit-loss distribution.", 2: "组织商业伙伴之间的关系，并清楚地定义决策机制和利润损失分配。"},
-    p_4: {0: "صياغة اتفاقيات عدم الإفصاح وحماية المعلومات السرية والملكية الفكرية لضمان سرية بياناتكم التجارية.", 1: "Drafting non-disclosure agreements and protecting trade secrets and intellectual property to ensure confidentiality of your business data.", 2: "起草保密协议并保护商业秘密和知识产权，以确保您的业务数据的机密性。"},
-    p_5: {0: "إعداد عقود عمل محكمة تحمي حقوق صاحب العمل والموظف وفق نظام العمل السعودي ولوائح الوزارة.", 1: "Preparing comprehensive employment contracts that protect the rights of both employers and employees under Saudi labor laws.", 2: "准备全面的雇佣合同，根据沙特劳动法保护雇主和员工的权利。"},
-    p_6: {0: "صياغة عقود إيجار تجارية متوازنة تحمي حقوق المؤجر والمستأجر وتنظم شروط التجديد والإخلاء بدقة قانونية.", 1: "Drafting balanced commercial lease contracts protecting landlord and tenant rights with precise legal terms for renewal and termination.", 2: "起草平衡的商业租赁合同，保护房东和租户权利，并对续期和终止条款进行精确的法律规定。"},
-    p_7: {0: "تنظيم علاقات الفرانشايز وصياغة عقود منح الامتياز التجاري بما يضمن حماية العلامة التجارية وحقوق الطرفين.", 1: "Organizing franchise relationships and drafting franchise agreements that protect the trademark and the rights of both parties.", 2: "组织特许经营关系并起草特许经营协议，以保护商标和双方的权利。"},
-    p_8: {0: "صياغة عقود تطوير التقنية وترخيص البرمجيات والخدمات الرقمية وفق المتطلبات القانونية الحديثة.", 1: "Drafting technology development and software licensing contracts for digital services according to modern legal requirements.", 2: "起草技术开发和软件许可合同，用于根据现代法律要求的数字服务。"},
-    p_9: {0: "تنظيم اتفاقيات التوريد والمشتريات وتحديد الكميات والأسعار والشروط والجودة والتسليم بدقة قانونية عالية.", 1: "Organizing supply and procurement agreements with precise legal definition of quantities, prices, terms, quality, and delivery.", 2: "组织供应和采购协议，精确地定义数量、价格、条款、质量和交付。"},
-  cta_btn1: {0: 'تواصل عبر واتساب', 1: 'Contact via WhatsApp', 2: '通过WhatsApp联系'},
-  cta_btn2: {0: 'العودة للرئيسية', 1: 'Back to Home', 2: '返回主页'},
-  hero_h1: {0: 'عقود الشركات الاحترافية', 1: 'Professional Corporate Contracts', 2: '专业公司合同'},
-  li_0: {0: 'عقود الشركات', 1: 'Corporate Contracts', 2: '公司合同'},
+            <a class="btn-outline" data-i18n="cta_btn2" href="index.html">العودة للرئيسية</a>
+        </div>
+    </div>
+    <footer>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px 22px;margin-bottom:18px;">
+            <a data-i18n="nav_services" href="index.html#services"
+                style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">خدماتنا</a>
+            <a data-i18n="nav_contracts" href="contracts.html"
+                style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">عقود
+                الشركات</a>
+            <a data-i18n="nav_faq" href="faq.html"
+                style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">الأسئلة
+                الشائعة</a>
+            <a data-i18n="nav_team" href="team.html"
+                style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">فريقنا</a>
+            <a data-i18n="nav_blog" href="blog.html"
+                style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">المدونة</a>
+            <a data-i18n="nav_eservices" href="e-services.html"
+                style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">الخدمات
+                الإلكترونية</a>
+            <a data-i18n="nav_events" href="events.html"
+                style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">فعاليتنا</a>
+            <a data-i18n="nav_cases_stats" href="cases-stats.html"
+                style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">القضايا
+                المنجزة</a>
+            <a data-i18n="nav_careers" href="careers.html"
+                style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">التوظيف</a>
+            <a data-i18n="nav_contact" href="index.html#booking"
+                style="color:rgba(255,255,255,.75);font-size:.85rem;font-weight:600;transition:color .2s;">تواصل
+                معنا</a>
+        </div>
+        <p data-i18n="footer_copyright">© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق
+            محفوظة</p>
+    </footer>
+    <a class="whatsapp-fab" href="https://wa.me/966533532153" rel="noopener" target="_blank" title="تواصل عبر واتساب">
+        <svg fill="white" height="28" viewbox="0 0 24 24" width="28">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z">
+            </path>
+        </svg>
+    </a>
+    <script>
+        const pageTranslations = {
+            breadcrumb_home: { 0: "الرئيسية", 1: "Home", 2: "主页" },
+            cta_btn_0: { 0: "احجز استشارة عقود الآن", 1: "Book Contract Consultation Now", 2: "立即预订合同咨询" },
+            cta_btn_1: { 0: "تواصل معنا", 1: "Contact Us", 2: "联系我们" },
+            cta_h2: { 0: "هل تحتاج صياغة أو مراجعة عقد احترافية؟", 1: "Do You Need Professional Contract Drafting or Review?", 2: "您需要专业的合同起草或审查吗？" },
+            cta_p: { 0: "فريقنا القانوني المتخصص جاهز لمساعدتك في جميع احتياجات العقود", 1: "Our specialized legal team is ready to help with all your contract needs", 2: "我们的专业法律团队随时准备帮助满足您的所有合同需求" },
+            footer_copyright: { 0: "© 2026 شركة مشاري بندر بن جلوي للمحاماة والاستشارات القانونية — جميع الحقوق محفوظة", 1: "© 2026 Al Meshary Bin Bandar Bin Jaloui Law Firm and Legal Consultations — All rights reserved", 2: "© 2026 美沙里·本·班达尔·本·贾卢伊律师事务所和法律咨询——版权所有" },
+            footer_home: { 0: "الرئيسية", 1: "Home", 2: "主页" },
+            h2_0: { 0: "أنواع العقود التي نتولاها", 1: "Types of Contracts We Handle", 2: "我们处理的合同类型" },
+            h2_1: { 0: "مميزات خدمتنا في العقود", 1: "Advantages of Our Contract Services", 2: "我们合同服务的优势" },
+            h2_2: { 0: "هل تحتاج صياغة أو مراجعة عقد؟", 1: "Do You Need Contract Drafting or Review?", 2: "您需要起草或审查合同吗？" },
+            h3_0: { 0: "عقود تأسيس الشركات", 1: "Company Formation Contracts", 2: "公司成立合同" },
+            h3_sale: { 0: "عقود البيع", 1: "Sales Contracts", 2: "销售合同" },
+            p_sale: { 0: "صياغة ومراجعة عقود البيع والشراء بمختلف أنواعها لضمان حماية حقوق البائع والمشتري وفق الأنظمة السعودية.", 1: "Drafting and reviewing various types of sales and purchase contracts to ensure the protection of both buyer and seller rights under Saudi regulations.", 2: "起草和审查各类买卖合同，以确保根据沙特法规保护买卖双方的权利。" },
+            ctag_بيع_وشراء: { 0: "بيع وشراء", 1: "Sales & Purchase", 2: "买卖" },
+            h3_1: { 0: "عقود الشراكة التجارية", 1: "Commercial Partnership Contracts", 2: "商业合伙合同" },
+            h3_2: { 0: "عقود الحماية والسرية", 1: "Confidentiality and Protection Contracts", 2: "保密和保护合同" },
+            h3_3: { 0: "عقود العمل والتوظيف", 1: "Employment Contracts", 2: "雇佣合同" },
+            h3_4: { 0: "عقود الإيجار التجاري", 1: "Commercial Lease Contracts", 2: "商业租赁合同" },
+            h3_5: { 0: "عقود الامتياز التجاري", 1: "Franchise Contracts", 2: "特许经营合同" },
+            h3_6: { 0: "عقود التقنية والبرمجيات", 1: "Technology and Software Contracts", 2: "技术和软件合同" },
+            h3_7: { 0: "عقود التوريد والمشتريات", 1: "Supply and Procurement Contracts", 2: "供应和采购合同" },
+            h3_8: { 0: "عقود الوكالة والتمثيل", 1: "Agency and Representation Contracts", 2: "代理和代表合同" },
+            p_0: { 0: "نقدم خدمات قانونية متكاملة في صياغة ومراجعة وتوثيق عقود الشركات بما يضمن حماية حقوقكم وفق أحدث الأنظمة والتشريعات في المملكة العربية السعودية.", 1: "We provide comprehensive legal services in drafting, reviewing, and documenting company contracts to ensure protection of your rights under the latest regulations and legislations in Saudi Arabia.", 2: "我们提供全面的法律服务，包括起草、审查和证明公司合同，以确保根据沙特阿拉伯最新的法规和立法保护您的权利。" },
+            p_1: { 0: "نغطي طيفاً واسعاً من العقود التجارية والمدنية لحماية مصالحكم في كل مرحلة", 1: "We cover a wide range of commercial and civil contracts to protect your interests at every stage", 2: "我们涵盖广泛的商业和民事合同，以在每个阶段保护您的利益" },
+            p_10: { 0: "الخبرة العميقة في صياغة العقود الدولية والاتفاقيات بين الشركات السعودية والأجنبية", 1: "Deep expertise in drafting international contracts and agreements between Saudi and foreign companies", 2: "在起草沙特和外国公司之间的国际合同和协议方面拥有深厚专业知识" },
+            p_11: { 0: "مراجعة شاملة لجميع العقود قبل التوقيع لضمان عدم وجود ثغرات قانونية", 1: "Comprehensive review of all contracts before signing to ensure no legal gaps", 2: "签署前对所有合同进行全面审查，以确保没有法律漏洞" },
+            p_12: { 0: "تعديل وتطوير العقود الموجودة بما يتوافق مع التغييرات والأنظمة الجديدة", 1: "Modifying and developing existing contracts to comply with new changes and regulations", 2: "修改和开发现有合同以符合新的变化和法规" },
+            p_13: { 0: "توثيق العقود لدى الجهات المختصة وضمان سلامة جميع الإجراءات", 1: "Documenting contracts with competent authorities and ensuring proper procedures", 2: "向有关当局证明合同并确保所有程序正确" },
+            p_14: { 0: "متابعة تنفيذ العقود وحل أي نزاعات قد تنشأ بين الطرفين", 1: "Following up on contract execution and resolving any disputes that may arise between parties", 2: "跟进合同执行情况并解决各方之间可能出现的任何纠纷" },
+            p_15: { 0: "الاستشارة الفورية في أي استفسارات تتعلق بالعقود والشروط القانونية", 1: "Immediate consultation on any questions related to contracts and legal terms", 2: "就有关合同和法律条款的任何问题进行立即咨询" },
+            p_16: { 0: "فريقنا المتخصص يضمن الجودة والدقة والسرعة في إنجاز جميع خدمات العقود", 1: "Our specialized team ensures quality, accuracy, and speed in delivering all contract services", 2: "我们的专业团队确保在提供所有合同服务时的质量、准确性和速度" },
+            p_17: { 0: "نحافظ على السرية الكاملة لجميع بيانات عملائنا والعقود التي نتولاها", 1: "We maintain complete confidentiality of all client data and contracts we handle", 2: "我们对所有客户数据和我们处理的合同保持完全保密" },
+            p_2: { 0: "صياغة عقود التأسيس بما يتوافق مع نظام الشركات السعودي وتحديد حقوق الشركاء والمساهمين بوضوح قانوني تام.", 1: "Drafting formation contracts in accordance with the Saudi Companies System and clearly defining the rights of partners and shareholders.", 2: "根据沙特公司制度起草成立合同，并清楚地定义合伙人和股东的权利。" },
+            p_3: { 0: "تنظيم العلاقات بين الشركاء التجاريين وتحديد آليات اتخاذ القرار وتوزيع الأرباح والخسائر بصورة واضحة وملزمة.", 1: "Organizing relationships between commercial partners and clearly defining decision-making mechanisms and profit-loss distribution.", 2: "组织商业伙伴之间的关系，并清楚地定义决策机制和利润损失分配。" },
+            p_4: { 0: "صياغة اتفاقيات عدم الإفصاح وحماية المعلومات السرية والملكية الفكرية لضمان سرية بياناتكم التجارية.", 1: "Drafting non-disclosure agreements and protecting trade secrets and intellectual property to ensure confidentiality of your business data.", 2: "起草保密协议并保护商业秘密和知识产权，以确保您的业务数据的机密性。" },
+            p_5: { 0: "إعداد عقود عمل محكمة تحمي حقوق صاحب العمل والموظف وفق نظام العمل السعودي ولوائح الوزارة.", 1: "Preparing comprehensive employment contracts that protect the rights of both employers and employees under Saudi labor laws.", 2: "准备全面的雇佣合同，根据沙特劳动法保护雇主和员工的权利。" },
+            p_6: { 0: "صياغة عقود إيجار تجارية متوازنة تحمي حقوق المؤجر والمستأجر وتنظم شروط التجديد والإخلاء بدقة قانونية.", 1: "Drafting balanced commercial lease contracts protecting landlord and tenant rights with precise legal terms for renewal and termination.", 2: "起草平衡的商业租赁合同，保护房东和租户权利，并对续期和终止条款进行精确的法律规定。" },
+            p_7: { 0: "تنظيم علاقات الفرانشايز وصياغة عقود منح الامتياز التجاري بما يضمن حماية العلامة التجارية وحقوق الطرفين.", 1: "Organizing franchise relationships and drafting franchise agreements that protect the trademark and the rights of both parties.", 2: "组织特许经营关系并起草特许经营协议，以保护商标和双方的权利。" },
+            p_8: { 0: "صياغة عقود تطوير التقنية وترخيص البرمجيات والخدمات الرقمية وفق المتطلبات القانونية الحديثة.", 1: "Drafting technology development and software licensing contracts for digital services according to modern legal requirements.", 2: "起草技术开发和软件许可合同，用于根据现代法律要求的数字服务。" },
+            p_9: { 0: "تنظيم اتفاقيات التوريد والمشتريات وتحديد الكميات والأسعار والشروط والجودة والتسليم بدقة قانونية عالية.", 1: "Organizing supply and procurement agreements with precise legal definition of quantities, prices, terms, quality, and delivery.", 2: "组织供应和采购协议，精确地定义数量、价格、条款、质量和交付。" },
+            cta_btn1: { 0: 'تواصل عبر واتساب', 1: 'Contact via WhatsApp', 2: '通过WhatsApp联系' },
+            cta_btn2: { 0: 'العودة للرئيسية', 1: 'Back to Home', 2: '返回主页' },
+            hero_h1: { 0: 'عقود الشركات الاحترافية', 1: 'Professional Corporate Contracts', 2: '专业公司合同' },
+            li_0: { 0: 'عقود الشركات', 1: 'Corporate Contracts', 2: '公司合同' },
 
-  ctag_تأسيس_الأعمال: {0: "تأسيس الأعمال", 1: "Business Formation", 2: "企业成立"},
+            ctag_تأسيس_الأعمال: { 0: "تأسيس الأعمال", 1: "Business Formation", 2: "企业成立" },
 
-  ctag_شراكات: {0: "شراكات", 1: "Partnerships", 2: "合伙关系"},
+            ctag_شراكات: { 0: "شراكات", 1: "Partnerships", 2: "合伙关系" },
 
-  ctag_حماية_المعلومات: {0: "حماية المعلومات", 1: "Information Protection", 2: "信息保护"},
+            ctag_حماية_المعلومات: { 0: "حماية المعلومات", 1: "Information Protection", 2: "信息保护" },
 
-  ctag_عمالة_وتوظيف: {0: "عمالة وتوظيف", 1: "Employment & Hiring", 2: "雇佣与招聘"},
+            ctag_عمالة_وتوظيف: { 0: "عمالة وتوظيف", 1: "Employment & Hiring", 2: "雇佣与招聘" },
 
-  ctag_عقارات_تجارية: {0: "عقارات تجارية", 1: "Commercial Real Estate", 2: "商业房地产"},
+            ctag_عقارات_تجارية: { 0: "عقارات تجارية", 1: "Commercial Real Estate", 2: "商业房地产" },
 
-  ctag_فرانشايز: {0: "فرانشايز", 1: "Franchise", 2: "特许经营"},
+            ctag_فرانشايز: { 0: "فرانشايز", 1: "Franchise", 2: "特许经营" },
 
-  ctag_تقنية_المعلومات: {0: "تقنية المعلومات", 1: "Information Technology", 2: "信息技术"},
+            ctag_تقنية_المعلومات: { 0: "تقنية المعلومات", 1: "Information Technology", 2: "信息技术" },
 
-  ctag_توريد_وخدمات: {0: "توريد وخدمات", 1: "Supply & Services", 2: "供应与服务"},
+            ctag_توريد_وخدمات: { 0: "توريد وخدمات", 1: "Supply & Services", 2: "供应与服务" },
 
-  ctag_مراجعة_قانونية: {0: "مراجعة قانونية", 1: "Legal Review", 2: "法律审查"},
+            ctag_مراجعة_قانونية: { 0: "مراجعة قانونية", 1: "Legal Review", 2: "法律审查" },
 
-  breadcrumb_contracts: {0: "عقود الشركات", 1: "Corporate Contracts", 2: "公司合同"},
-  form_tag: {0: "طلب خدمة", 1: "Service Request", 2: "服务请求"},
-  form_title: {0: "نموذج طلب صياغة أو مراجعة عقد", 1: "Contract Drafting or Review Request Form", 2: "合同起草或审查请求表"},
-  form_desc: {0: "يرجى تعبئة النموذج أدناه بكافة التفاصيل، وسيقوم فريقنا القانوني بالتواصل معكم في أقرب وقت.", 1: "Please fill out the form below with all details, and our legal team will contact you shortly.", 2: "请填写以下表格并提供所有详细信息，我们的法律团队将很快与您联系。"},
-  form_name: {0: "الاسم الكامل *", 1: "Full Name *", 2: "全名 *"},
-  form_phone: {0: "رقم الجوال *", 1: "Mobile Number *", 2: "手机号码 *"},
-  form_email: {0: "البريد الإلكتروني", 1: "Email Address", 2: "电子邮件地址"},
-  form_company: {0: "اسم الشركة / المؤسسة", 1: "Company / Establishment Name", 2: "公司/机构名称"},
-  form_ctype: {0: "نوع العقد المطلوب صياغته أو مراجعته *", 1: "Type of contract to be drafted or reviewed *", 2: "需起草或审查的合同类型 *"},
-  form_ctype_ph: {0: "اختر نوع العقد...", 1: "Select contract type...", 2: "选择合同类型..."},
-  form_ctype_other: {0: "أخرى", 1: "Other", 2: "其他"},
-  form_details: {0: "تفاصيل طلب العقد *", 1: "Contract Request Details *", 2: "合同请求详情 *"},
-  form_attach: {0: "المرفقات (اختياري)", 1: "Attachments (Optional)", 2: "附件（可选）"},
-  form_attach_btn: {0: "اضغط هنا لإضافة ملفات أو اسحبها وأفلتها هنا", 1: "Click here to add files or drag and drop them here", 2: "点击此处添加文件或将文件拖放到此处"},
-  form_submit: {0: "إرسال الطلب", 1: "Submit Request", 2: "提交请求"},
-  form_details_ph: {0: "يرجى كتابة أية تفاصيل أو متطلبات خاصة بالعقد هنا...", 1: "Please write any contract details or special requirements here...", 2: "请在此处写下任何合同细节或特殊要求..."},
-};
+            breadcrumb_contracts: { 0: "عقود الشركات", 1: "Corporate Contracts", 2: "公司合同" },
+            form_tag: { 0: "طلب خدمة", 1: "Service Request", 2: "服务请求" },
+            form_title: { 0: "نموذج طلب صياغة أو مراجعة عقد", 1: "Contract Drafting or Review Request Form", 2: "合同起草或审查请求表" },
+            form_desc: { 0: "يرجى تعبئة النموذج أدناه بكافة التفاصيل، وسيقوم فريقنا القانوني بالتواصل معكم في أقرب وقت.", 1: "Please fill out the form below with all details, and our legal team will contact you shortly.", 2: "请填写以下表格并提供所有详细信息，我们的法律团队将很快与您联系。" },
+            form_name: { 0: "الاسم الكامل *", 1: "Full Name *", 2: "全名 *" },
+            form_phone: { 0: "رقم الجوال *", 1: "Mobile Number *", 2: "手机号码 *" },
+            form_email: { 0: "البريد الإلكتروني", 1: "Email Address", 2: "电子邮件地址" },
+            form_company: { 0: "اسم الشركة / المؤسسة", 1: "Company / Establishment Name", 2: "公司/机构名称" },
+            form_ctype: { 0: "نوع العقد المطلوب صياغته أو مراجعته *", 1: "Type of contract to be drafted or reviewed *", 2: "需起草或审查的合同类型 *" },
+            form_ctype_ph: { 0: "اختر نوع العقد...", 1: "Select contract type...", 2: "选择合同类型..." },
+            form_ctype_other: { 0: "أخرى", 1: "Other", 2: "其他" },
+            form_details: { 0: "تفاصيل طلب العقد *", 1: "Contract Request Details *", 2: "合同请求详情 *" },
+            form_attach: { 0: "المرفقات (اختياري)", 1: "Attachments (Optional)", 2: "附件（可选）" },
+            form_attach_btn: { 0: "اضغط هنا لإضافة ملفات أو اسحبها وأفلتها هنا", 1: "Click here to add files or drag and drop them here", 2: "点击此处添加文件或将文件拖放到此处" },
+            form_submit: { 0: "إرسال الطلب", 1: "Submit Request", 2: "提交请求" },
+            form_details_ph: { 0: "يرجى كتابة أية تفاصيل أو متطلبات خاصة بالعقد هنا...", 1: "Please write any contract details or special requirements here...", 2: "请在此处写下任何合同细节或特殊要求..." },
+        };
 
-// Handle file input display
-document.getElementById('contract-file') && document.getElementById('contract-file').addEventListener('change', function(e) {
-    const fileList = document.getElementById('fileList');
-    fileList.innerHTML = '';
-    Array.from(this.files).forEach((file, index) => {
-        const fileItem = document.createElement('div');
-        fileItem.className = 'file-item';
-        fileItem.innerHTML = '<span>📎 ' + file.name + '</span><span class="file-remove" onclick="removeFile('+index+')">✕</span>';
-        fileList.appendChild(fileItem);
-    });
-});
-function removeFile(index) {
-    const input = document.getElementById('contract-file');
-    const dt = new DataTransfer();
-    Array.from(input.files).forEach((file, i) => {
-        if (i !== index) dt.items.add(file);
-    });
-    input.files = dt.files;
-    // trigger change to visually update list
-    const event = new Event('change');
-    input.dispatchEvent(event);
-}
-</script>
-<script src="lang.js"></script>
+        // Handle file input display
+        document.getElementById('contract-file') && document.getElementById('contract-file').addEventListener('change', function (e) {
+            const fileList = document.getElementById('fileList');
+            fileList.innerHTML = '';
+            Array.from(this.files).forEach((file, index) => {
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                fileItem.innerHTML = '<span>📎 ' + file.name + '</span><span class="file-remove" onclick="removeFile(' + index + ')">✕</span>';
+                fileList.appendChild(fileItem);
+            });
+        });
+        function removeFile(index) {
+            const input = document.getElementById('contract-file');
+            const dt = new DataTransfer();
+            Array.from(input.files).forEach((file, i) => {
+                if (i !== index) dt.items.add(file);
+            });
+            input.files = dt.files;
+            // trigger change to visually update list
+            const event = new Event('change');
+            input.dispatchEvent(event);
+        }
+        // Form Submission via Google Apps Script
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyj673pfAHa7b2lx8SqEbPT02M3Hqr7aTc6R9VupQdt-P60RPQNTCjIeAhDjDC-4dUI/exec';
+        const form = document.getElementById('contracts-form');
+        const submitBtn = document.getElementById('c-submit');
+        const msg = document.getElementById('form-message');
+
+        if (form) {
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<span style="display:inline-block; margin-left:8px; animation: spin 1s linear infinite;">↻</span> جاري الإرسال...';
+
+                let formData = new FormData(form);
+
+                let company = form.querySelector('[name="company"]').value;
+                let ctype = form.querySelector('[name="contract_type"]').value;
+                let addInfo = form.querySelector('[name="additional_info"]').value;
+
+                let fullDetails = "النوع: " + (ctype || "غير محدد") + "\nالشركة/المؤسسة: " + (company || "غير محدد") + "\nالتفاصيل: " + addInfo;
+                formData.append('details', fullDetails);
+
+                fetch(scriptURL, { method: 'POST', body: formData })
+                    .then(response => {
+                        msg.innerHTML = '✅ تم إرسال طلبك بنجاح! سنتواصل معك في أقرب وقت.';
+                        msg.style.color = 'green';
+                        msg.style.display = 'block';
+                        form.reset();
+                        document.getElementById('fileList').innerHTML = '';
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = '<svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg><span data-i18n="form_submit">إرسال الطلب</span>';
+                    })
+                    .catch(error => {
+                        msg.innerHTML = '❌ عذراً، حدث خطأ أثناء الإرسال. يرجى المحاولة لاحقاً أو مراسلتنا عبر واتساب.';
+                        msg.style.color = 'red';
+                        msg.style.display = 'block';
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = '<svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg><span data-i18n="form_submit">إرسال الطلب</span>';
+                    });
+            });
+        }
+    </script>
+    <script src="lang.js"></script>
 </body>
+
 </html>
