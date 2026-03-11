@@ -1284,45 +1284,116 @@
             const event = new Event('change');
             input.dispatchEvent(event);
         }
-        // Form Submission via Google Apps Script
+        // Form Submission via Google Apps Script (With Base64 File Support)
         const scriptURL = 'https://script.google.com/macros/s/AKfycbyj673pfAHa7b2lx8SqEbPT02M3Hqr7aTc6R9VupQdt-P60RPQNTCjIeAhDjDC-4dUI/exec';
         const form = document.getElementById('contracts-form');
         const submitBtn = document.getElementById('c-submit');
         const msg = document.getElementById('form-message');
 
         if (form) {
-            form.addEventListener('submit', e => {
+            form.addEventListener('submit', async e => {
                 e.preventDefault();
                 submitBtn.disabled = true;
-                submitBtn.innerHTML = '<span style="display:inline-block; margin-left:8px; animation: spin 1s linear infinite;">↻</span> جاري الإرسال...';
+                submitBtn.innerHTML = '<span style="display:inline-block; margin-left:8px; animation: spin 1s linear infinite;">↻</span> جاري رفع الملفات والإرسال...';
 
-                let formData = new FormData(form);
-
+                // 1. Collect standard text data
+                let formName = form.querySelector('[name="formName"]').value;
+                let name = form.querySelector('[name="name"]').value;
+                let phone = form.querySelector('[name="phone"]').value;
+                let email = form.querySelector('[name="email"]').value;
                 let company = form.querySelector('[name="company"]').value;
                 let ctype = form.querySelector('[name="contract_type"]').value;
                 let addInfo = form.querySelector('[name="additional_info"]').value;
 
-                let fullDetails = "النوع: " + (ctype || "غير محدد") + "\nالشركة/المؤسسة: " + (company || "غير محدد") + "\nالتفاصيل: " + addInfo;
-                formData.append('details', fullDetails);
+                let fullDetails = "النوع: " + (ctype || "غير محدد") + "\nالشركة/المؤسسة: " + (company || "غير متوفر") + "\nالتفاصيل: " + addInfo;
 
-                fetch(scriptURL, { method: 'POST', body: formData })
-                    .then(response => {
-                        msg.innerHTML = '✅ تم إرسال طلبك بنجاح! سنتواصل معك في أقرب وقت.';
-                        msg.style.color = 'green';
-                        msg.style.display = 'block';
-                        form.reset();
-                        document.getElementById('fileList').innerHTML = '';
-                        submitBtn.disabled = false;
-                        submitBtn.innerHTML = '<svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg><span data-i18n="form_submit">إرسال الطلب</span>';
-                    })
-                    .catch(error => {
-                        msg.innerHTML = '❌ عذراً، حدث خطأ أثناء الإرسال. يرجى المحاولة لاحقاً أو مراسلتنا عبر واتساب.';
+                // 2. Prepare JSON Payload
+                let payload = {
+                    formName: formName,
+                    name: name,
+                    phone: phone,
+                    email: email,
+                    details: fullDetails,
+                    files: []
+                };
+
+                // 3. Process Files into Base64
+                const fileInput = document.getElementById('contract-file');
+                if (fileInput && fileInput.files.length > 0) {
+                    const files = Array.from(fileInput.files);
+
+                    // Maximum payload size roughly 10MB to avoid timeout
+                    let totalSize = files.reduce((acc, file) => acc + file.size, 0);
+                    if (totalSize > 8 * 1024 * 1024) {
+                        msg.innerHTML = '❌ عذراً، حجم المرفقات كبير جداً. يرجى إرسال ملفات أصغر حجمًا (الحد الأقصى 8MB).';
                         msg.style.color = 'red';
                         msg.style.display = 'block';
-                        submitBtn.disabled = false;
-                        submitBtn.innerHTML = '<svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg><span data-i18n="form_submit">إرسال الطلب</span>';
+                        resetBtn();
+                        return;
+                    }
+
+                    try {
+                        const base64Files = await Promise.all(files.map(file => {
+                            return new Promise((resolve, reject) => {
+                                const reader = new FileReader();
+                                reader.onload = () => {
+                                    resolve({
+                                        name: file.name,
+                                        type: file.type,
+                                        base64: reader.result.split(',')[1] // Extract base64 part only
+                                    });
+                                };
+                                reader.onerror = error => reject(error);
+                                reader.readAsDataURL(file);
+                            });
+                        }));
+                        payload.files = base64Files;
+                    } catch (error) {
+                        console.error("Error reading files:", error);
+                        msg.innerHTML = '❌ حدث خطأ أثناء معالجة المرفقات.';
+                        msg.style.color = 'red';
+                        msg.style.display = 'block';
+                        resetBtn();
+                        return;
+                    }
+                }
+
+                // 4. Send JSON string to the Google Apps Script
+                // We use text/plain because cross-origin (CORS) preflight blocks application/json for simple GAS deployments.
+                // GAS doPost can read text/plain from e.postData.contents
+                fetch(scriptURL, {
+                    method: 'POST',
+                    body: JSON.stringify(payload),
+                    headers: { 'Content-Type': 'text/plain;charset=utf-8' }
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.result === "success") {
+                            msg.innerHTML = '✅ تم إرسال طلبك بنجاح شامل المرفقات! سنتواصل معك قريباً.';
+                            msg.style.color = 'green';
+                            msg.style.display = 'block';
+                            form.reset();
+                            document.getElementById('fileList').innerHTML = '';
+                        } else {
+                            msg.innerHTML = '❌ عذراً، واجه النظام مشكلة: ' + (data.error || 'خطأ غير معروف');
+                            msg.style.color = 'red';
+                            msg.style.display = 'block';
+                        }
+                        resetBtn();
+                    })
+                    .catch(error => {
+                        console.error("Fetch Error:", error);
+                        msg.innerHTML = '❌ عذراً، خطأ في الاتصال. يرجى مراسلتنا عبر واتساب.';
+                        msg.style.color = 'red';
+                        msg.style.display = 'block';
+                        resetBtn();
                     });
             });
+        }
+
+        function resetBtn() {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg><span data-i18n="form_submit">إرسال الطلب</span>';
         }
     </script>
     <script src="lang.js"></script>
